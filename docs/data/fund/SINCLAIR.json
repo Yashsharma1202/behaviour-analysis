@@ -1,0 +1,1 @@
+{"symbol": "SINCLAIR", "have": ["pnl", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 19.63, "sales_g": null, "net_profit": 2.5, "net_profit_g": null, "opm": 26.69, "roce": null, "de": 0.21}, "annual": {"labels": ["2009", "2012"], "sales": [13.29, 19.63], "net_profit": [3.37, 2.5]}, "quarterly": {"labels": [], "net_profit": [], "yoy": []}}

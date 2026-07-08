@@ -1,0 +1,1 @@
+{"symbol": "SGL", "have": ["pnl", "quarterly"], "cards": {"sales": null, "sales_g": null, "net_profit": null, "net_profit_g": null, "opm": null, "roce": null, "de": null}, "annual": {"labels": [], "sales": [], "net_profit": []}, "quarterly": {"labels": ["Jun-06", "Sep-06", "Dec-06", "Mar-07"], "net_profit": [3.38, 3.23, 3.22, 0.73], "yoy": []}}

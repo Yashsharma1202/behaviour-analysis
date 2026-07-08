@@ -1,0 +1,1 @@
+{"symbol": "NEOCHEM", "have": ["pnl", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 84.17, "sales_g": 37.65, "net_profit": 7.75, "net_profit_g": 330.0, "opm": 15.59, "roce": 27.2, "de": 1.8}, "annual": {"labels": ["2023", "2024", "2025"], "sales": [48.19, 61.15, 84.17], "net_profit": [1.07, 1.8, 7.75]}, "quarterly": {"labels": [], "net_profit": [], "yoy": []}}

@@ -1,0 +1,1 @@
+{"symbol": "INFLUX", "have": ["pnl", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 147.0, "sales_g": null, "net_profit": 21.0, "net_profit_g": null, "opm": 20.0, "roce": null, "de": null}, "annual": {"labels": ["2026"], "sales": [147.0], "net_profit": [21.0]}, "quarterly": {"labels": [], "net_profit": [], "yoy": []}}

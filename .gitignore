@@ -1,0 +1,15 @@
+# Whitelist approach: ignore everything at root, then re-include what we publish.
+# This keeps the ~59 MB of raw per-stock data and downloaded NSE feeds OUT of git;
+# the static site under docs/ already contains the baked-down JSON it needs.
+/*
+
+!.gitignore
+!README.md
+!requirements.txt
+!*.py
+!docs/
+
+# never commit these even if matched above
+__pycache__/
+*.pyc
+docs/**/__pycache__/

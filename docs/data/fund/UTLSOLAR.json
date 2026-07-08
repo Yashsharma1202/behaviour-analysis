@@ -1,0 +1,1 @@
+{"symbol": "UTLSOLAR", "have": ["pnl", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 405.0, "sales_g": 35.28, "net_profit": 20.0, "net_profit_g": 87.0, "opm": 9.0, "roce": 17.0, "de": 3.23}, "annual": {"labels": ["2020", "2021"], "sales": [299.0, 405.0], "net_profit": [11.0, 20.0]}, "quarterly": {"labels": [], "net_profit": [], "yoy": []}}

@@ -1,0 +1,1 @@
+{"symbol": "FAALCON", "have": ["pnl", "quarterly", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 33.87, "sales_g": null, "net_profit": 3.37, "net_profit_g": null, "opm": 19.49, "roce": null, "de": 0.19}, "annual": {"labels": ["2026"], "sales": [33.87], "net_profit": [3.37]}, "quarterly": {"labels": ["Sep-25", "Mar-26"], "net_profit": [1.73, 2.11], "yoy": []}}

@@ -1,0 +1,1 @@
+{"symbol": "HVAX", "have": ["pnl", "quarterly", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 164.0, "sales_g": null, "net_profit": 15.0, "net_profit_g": null, "opm": 10.0, "roce": null, "de": 0.47}, "annual": {"labels": ["2026"], "sales": [164.0], "net_profit": [15.0]}, "quarterly": {"labels": ["Mar-26"], "net_profit": [10.0], "yoy": []}}

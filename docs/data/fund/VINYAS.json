@@ -1,0 +1,1 @@
+{"symbol": "VINYAS", "have": ["pnl", "quarterly", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 514.0, "sales_g": null, "net_profit": 31.0, "net_profit_g": null, "opm": 12.0, "roce": null, "de": 0.55}, "annual": {"labels": ["2026"], "sales": [514.0], "net_profit": [31.0]}, "quarterly": {"labels": ["Mar-26"], "net_profit": [22.0], "yoy": []}}

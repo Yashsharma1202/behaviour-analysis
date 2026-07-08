@@ -1,0 +1,1 @@
+{"symbol": "MAANALU", "have": ["pnl", "quarterly", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 42.16, "sales_g": null, "net_profit": 0.76, "net_profit_g": null, "opm": 6.29, "roce": null, "de": 0.06}, "annual": {"labels": ["2009"], "sales": [42.16], "net_profit": [0.76]}, "quarterly": {"labels": ["Dec-08", "Mar-09"], "net_profit": [0.16, -0.24], "yoy": []}}

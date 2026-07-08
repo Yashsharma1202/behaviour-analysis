@@ -1,0 +1,1 @@
+{"symbol": "KALAMANDIR", "have": ["pnl", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 1136.0, "sales_g": 67.0, "net_profit": 54.0, "net_profit_g": 816.0, "opm": 12.0, "roce": null, "de": null}, "annual": {"labels": ["2020", "2021", "2022"], "sales": [1176.0, 679.0, 1136.0], "net_profit": [44.0, 6.0, 54.0]}, "quarterly": {"labels": [], "net_profit": [], "yoy": []}}

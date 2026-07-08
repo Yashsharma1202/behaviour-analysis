@@ -1,0 +1,1 @@
+{"symbol": "UNITEDTEA", "have": ["pnl", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 62.0, "sales_g": 13.14, "net_profit": 12.0, "net_profit_g": 28.51, "opm": 21.0, "roce": 14.0, "de": -0.0}, "annual": {"labels": ["2017", "2018"], "sales": [54.0, 62.0], "net_profit": [9.0, 12.0]}, "quarterly": {"labels": [], "net_profit": [], "yoy": []}}

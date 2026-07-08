@@ -1,0 +1,1 @@
+{"symbol": "PFIZER", "have": ["pnl", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 678.0, "sales_g": 0.35, "net_profit": 300.0, "net_profit_g": 6.0, "opm": -12.0, "roce": 27.0, "de": 0.0}, "annual": {"labels": ["2006", "2007", "2008"], "sales": [664.0, 676.0, 678.0], "net_profit": [106.0, 340.0, 300.0]}, "quarterly": {"labels": [], "net_profit": [], "yoy": []}}

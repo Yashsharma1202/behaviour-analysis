@@ -1,0 +1,1 @@
+{"symbol": "ORIENTTECH", "have": ["pnl", "quarterly", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 870.0, "sales_g": null, "net_profit": 5.0, "net_profit_g": null, "opm": 5.0, "roce": null, "de": 0.18}, "annual": {"labels": ["2026"], "sales": [870.0], "net_profit": [5.0]}, "quarterly": {"labels": ["Dec-25", "Mar-26"], "net_profit": [-14.64, -4.99], "yoy": []}}

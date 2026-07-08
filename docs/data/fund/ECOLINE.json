@@ -1,0 +1,1 @@
+{"symbol": "ECOLINE", "have": ["pnl", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 272.0, "sales_g": -10.23, "net_profit": 23.0, "net_profit_g": 2.55, "opm": 9.0, "roce": 25.0, "de": 0.62}, "annual": {"labels": ["2022", "2023", "2024"], "sales": [198.0, 303.0, 272.0], "net_profit": [4.0, 19.0, 23.0]}, "quarterly": {"labels": [], "net_profit": [], "yoy": []}}

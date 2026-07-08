@@ -1,0 +1,1 @@
+{"symbol": "BLUEJET", "have": ["pnl", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 499.0, "sales_g": -7.3, "net_profit": 136.0, "net_profit_g": -3.0, "opm": 41.0, "roce": 57.0, "de": 0.16}, "annual": {"labels": ["2020", "2021"], "sales": [538.0, 499.0], "net_profit": [145.0, 136.0]}, "quarterly": {"labels": [], "net_profit": [], "yoy": []}}

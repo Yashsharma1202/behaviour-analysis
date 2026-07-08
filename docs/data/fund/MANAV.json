@@ -1,0 +1,1 @@
+{"symbol": "MANAV", "have": ["pnl", "quarterly", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 5.05, "sales_g": null, "net_profit": -6.59, "net_profit_g": null, "opm": -76.04, "roce": null, "de": 36.61}, "annual": {"labels": ["2021"], "sales": [5.05], "net_profit": [-6.59]}, "quarterly": {"labels": ["Mar-21", "Mar-22"], "net_profit": [], "yoy": []}}

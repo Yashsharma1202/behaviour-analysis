@@ -1,0 +1,1 @@
+{"symbol": "MAKS", "have": ["pnl", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 25.54, "sales_g": 23.32, "net_profit": -1.07, "net_profit_g": -79.0, "opm": 6.34, "roce": 13.25, "de": 1.64}, "annual": {"labels": ["2020", "2021", "2022"], "sales": [42.17, 20.71, 25.54], "net_profit": [1.69, -0.33, -1.07]}, "quarterly": {"labels": [], "net_profit": [], "yoy": []}}

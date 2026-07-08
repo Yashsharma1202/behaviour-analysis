@@ -1,0 +1,1 @@
+{"symbol": "JARO", "have": ["pnl", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 199.0, "sales_g": 63.0, "net_profit": 38.0, "net_profit_g": 250.0, "opm": 31.0, "roce": 40.0, "de": 0.35}, "annual": {"labels": ["2022", "2023", "2024"], "sales": [85.0, 122.0, 199.0], "net_profit": [33.0, 12.0, 38.0]}, "quarterly": {"labels": [], "net_profit": [], "yoy": []}}

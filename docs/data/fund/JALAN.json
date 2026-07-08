@@ -1,0 +1,1 @@
+{"symbol": "JALAN", "have": ["pnl", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 137.0, "sales_g": 17.61, "net_profit": 5.0, "net_profit_g": 77.0, "opm": 19.0, "roce": 19.0, "de": 4.58}, "annual": {"labels": ["2016", "2017"], "sales": [117.0, 137.0], "net_profit": [3.0, 5.0]}, "quarterly": {"labels": [], "net_profit": [], "yoy": []}}

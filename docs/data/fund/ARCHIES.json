@@ -1,0 +1,1 @@
+{"symbol": "ARCHIES", "have": ["pnl", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": 117.0, "sales_g": 12.82, "net_profit": 8.0, "net_profit_g": 7.32, "opm": 13.0, "roce": 16.0, "de": 0.23}, "annual": {"labels": ["2006", "2007", "2008"], "sales": [87.0, 103.0, 117.0], "net_profit": [8.0, 8.0, 8.0]}, "quarterly": {"labels": [], "net_profit": [], "yoy": []}}

@@ -1,0 +1,1 @@
+{"symbol": "STARPAPER", "have": ["pnl", "ratios", "balance_sheet", "cash_flow"], "cards": {"sales": null, "sales_g": 13.78, "net_profit": null, "net_profit_g": 467.0, "opm": null, "roce": 20.0, "de": 0.3}, "annual": {"labels": ["2007", "2009"], "sales": [null, null], "net_profit": [null, null]}, "quarterly": {"labels": [], "net_profit": [], "yoy": []}}
