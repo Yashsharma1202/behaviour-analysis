@@ -1,0 +1,22 @@
+Metric,Mar 2009,Mar 2010
+Cash from Operating Activity,,0.57
+  └─ Profit from operations,,0.37
+  └─ Receivables,,-0.64
+  └─ Inventory,,0.35
+  └─ Payables,,1.23
+  └─ Loans Advances,,-0.23
+  └─ Other WC items,,-0.26
+  └─ Working capital changes,,0.45
+  └─ Direct taxes,,-0.25
+Cash from Investing Activity,,-1.67
+  └─ Fixed assets purchased,,-1.76
+  └─ Investments purchased,,-0.25
+  └─ Interest received,,0.34
+Cash from Financing Activity,,2.99
+  └─ Proceeds from borrowings,,4.21
+  └─ Repayment of borrowings,,-0.44
+  └─ Interest paid fin,,-0.45
+  └─ Dividends paid,,-0.33
+Net Cash Flow,,1.89
+  └─ Free Cash Flow,,-1.19
+  └─ CFO/OP,,186%

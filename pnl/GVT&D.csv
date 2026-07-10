@@ -1,0 +1,25 @@
+Metric,Dec 2010
+Sales,4020
+Expenses,3547
+  └─ Material Cost %,68%
+    └─ Raw material cost,2876
+    └─ Change in inventory,-123
+  └─ Manufacturing Cost %,2%
+  └─ Employee Cost %,9%
+  └─ Other Cost %,9%
+Operating Profit,473
+OPM %,12%
+Other Income,17
+  └─ Exceptional items,0.02
+  └─ Other income normal,17.11
+Interest,115
+Depreciation,94
+Profit before tax,282
+Tax %,34%
+Net Profit,187
+  └─ Exceptional items AT,0
+  └─ Profit excl Excep,187
+  └─ Profit for PE,187
+  └─ Profit for EPS,187
+EPS in Rs,7.81
+Dividend Payout %,23%

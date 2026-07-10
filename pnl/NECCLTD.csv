@@ -1,0 +1,24 @@
+Metric,Mar 2014,Mar 2015,Mar 2016,Mar 2017,TTM
+Sales,572,531,538,548,503
+  └─ Sales Growth %,,-7.19%,1.45%,1.79%,
+Expenses,550,511,518,528,486
+  └─ Manufacturing Cost %,93%,92%,92%,92%,
+  └─ Employee Cost %,2%,2%,2%,2%,
+  └─ Other Cost %,2%,2%,2%,2%,
+Operating Profit,21,20,21,20,17
+OPM %,4%,4%,4%,4%,3%
+Other Income,0,1,1,1,1
+  └─ Exceptional items,0.25,1.20,0.02,0.10,
+  └─ Other income normal,0.13,0.08,1.38,0.60,
+Interest,9,9,10,9,8
+Depreciation,4,3,3,3,3
+Profit before tax,9,9,9,9,7
+Tax %,32%,35%,37%,38%,
+Net Profit,6,6,6,6,4
+  └─ Exceptional items AT,0.15,0.80,0.01,0.06,
+  └─ Profit excl Excep,6.12,4.74,5.63,5.54,
+  └─ Profit for PE,6.12,4.74,5.63,5.54,
+  └─ Profit for EPS,6.27,5.54,5.64,5.60,
+  └─ Profit Growth %,,-22.55%,18.78%,-1.60%,
+EPS in Rs,0.66,0.58,0.59,0.59,0.47
+Dividend Payout %,0%,0%,0%,0%,

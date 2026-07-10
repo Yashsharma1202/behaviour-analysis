@@ -1,0 +1,26 @@
+Metric,Mar 2015,Mar 2016,Mar 2017,Mar 2018
+Sales,3.32,2.81,2.70,1.65
+  └─ Sales Growth %,,-15.36%,-3.91%,-38.89%
+Expenses,1.84,2.47,2.47,1.52
+  └─ Material Cost %,37%,67%,70%,53%
+    └─ Raw material cost,1.30,2.00,2.00,0.52
+    └─ Change in inventory,-0.07,-0.11,-0.11,0.35
+  └─ Manufacturing Cost %,1%,2%,2%,1%
+  └─ Employee Cost %,4%,8%,9%,20%
+  └─ Other Cost %,13%,11%,11%,18%
+Operating Profit,1.48,0.34,0.23,0.13
+OPM %,44.58%,12.10%,8.52%,7.88%
+Other Income,-0.00,-0.00,0.11,-0.00
+  └─ Other income normal,0.00,0.00,0.11,0.00
+Interest,0.02,0.04,0.04,0.03
+Depreciation,0.09,0.16,0.16,0.11
+Profit before tax,1.37,0.14,0.14,-0.01
+Tax %,21.17%,28.57%,28.57%,1500.00%
+Net Profit,1.07,0.15,0.15,-0.14
+  └─ Profit from Associates,0,0,0,0
+  └─ Profit excl Excep,1,0,0,-0
+  └─ Profit for PE,1,0,0,-0
+  └─ Profit for EPS,1,0,0,-0
+  └─ Profit Growth %,,-86%,0%,-193%
+EPS in Rs,0.06,0.01,0.01,-0.01
+Dividend Payout %,71.03%,-0.00%,-0.00%,-0.00%

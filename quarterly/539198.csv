@@ -1,0 +1,22 @@
+Metric,Jun 2010,Sep 2010,Jun 2011,Sep 2011,Jun 2013
+Revenue,0.04,0.03,0.04,0.04,0.04
+  └─ YOY Sales Growth %,,,0.00%,33.33%,
+Interest,0.00,0.00,0.00,0.00,0.00
+Expenses,0.03,0.02,0.02,0.03,0.03
+  └─ Employee Cost %,25.00%,33.33%,25.00%,50.00%,25.00%
+Financing Profit,0.01,0.01,0.02,0.01,0.01
+Financing Margin %,25.00%,33.33%,50.00%,25.00%,25.00%
+Other Income,0.00,0.01,0.01,0.00,0.00
+  └─ Other income normal,0.00,0.01,0.01,0.00,0.00
+Depreciation,0.00,0.00,0.00,0.00,0.00
+Profit before tax,0.01,0.02,0.03,0.01,0.01
+Tax %,0.00%,50.00%,0.00%,0.00%,0.00%
+Net Profit,0.01,0.01,0.03,0.01,0.01
+  └─ Profit excl Excep,0.01,0.01,0.03,0.01,0.01
+  └─ Profit for PE,0.01,0.01,0.03,0.01,0.01
+  └─ Profit for EPS,0.01,0.01,0.03,0.01,0.01
+  └─ YOY Profit Growth %,,,200.00%,0.00%,
+EPS in Rs,0.03,0.03,0.09,0.03,0.03
+Gross NPA %,,,,,
+Net NPA %,,,,,
+Raw PDF,,,,,

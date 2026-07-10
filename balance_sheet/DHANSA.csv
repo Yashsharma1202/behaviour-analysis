@@ -1,0 +1,21 @@
+Metric,Mar 2026
+Equity Capital,25
+Reserves,74
+Borrowings,40
+  └─ Long term Borrowings,18.93
+  └─ Short term Borrowings,20.75
+Other Liabilities,12
+  └─ Trade Payables,6.28
+  └─ Other liability items,6.11
+Total Liabilities,151
+Fixed Assets,24
+  └─ Intangible Assets,0.44
+CWIP,23
+Investments,0
+Other Assets,104
+  └─ Inventories,32
+  └─ Trade receivables,54
+  └─ Cash Equivalents,2
+  └─ Loans n Advances,9
+  └─ Other asset items,6
+Total Assets,151

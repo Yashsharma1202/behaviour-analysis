@@ -1,0 +1,24 @@
+Metric,Mar 2023,Mar 2024,TTM
+Sales,3.93,19.30,8.77
+  └─ Sales Growth %,,391%,
+Expenses,2.98,18.00,8.50
+  └─ Material Cost %,58%,79%,
+    └─ Raw material cost,1.50,22.82,
+    └─ Change in inventory,0.76,-7.49,
+  └─ Employee Cost %,9%,2%,
+  └─ Other Cost %,9%,12%,
+Operating Profit,0.95,1.30,0.27
+OPM %,24.17%,6.74%,3.08%
+Other Income,0.82,2.34,1.59
+  └─ Other income normal,0.82,2.34,
+Interest,0.09,0.26,0.26
+Depreciation,0.00,0.02,0.02
+Profit before tax,1.68,3.36,1.58
+Tax %,2.98%,28.57%,
+Net Profit,1.63,2.39,0.45
+  └─ Profit excl Excep,1.63,2.39,
+  └─ Profit for PE,1.63,2.39,
+  └─ Profit for EPS,1.63,2.39,
+  └─ Profit Growth %,,46.63%,
+EPS in Rs,0.44,0.95,0.17
+Dividend Payout %,0.00%,0.00%,

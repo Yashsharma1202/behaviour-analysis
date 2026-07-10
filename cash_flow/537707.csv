@@ -1,0 +1,27 @@
+Metric,Mar 2008,Mar 2012,Mar 2013,Mar 2014,Mar 2015,Mar 2016
+Cash from Operating Activity,11,,,,16,3
+  └─ Profit from operations,12,,,,7,4
+  └─ Receivables,-3,,,,-1,-1
+  └─ Inventory,0,,,,8,-125
+  └─ Payables,4,,,,-1,1
+  └─ Loans Advances,0,,,,-1,0
+  └─ Other WC items,0,,,,3,125
+  └─ Working capital changes,1,,,,9,-0
+  └─ Direct taxes,-1,,,,-0,-0
+Cash from Investing Activity,-17,,,,2,-6
+  └─ Fixed assets purchased,-4.09,,,,-4.16,-0.39
+  └─ Fixed assets sold,11.95,,,,0.00,0.00
+  └─ Capital WIP,-23.59,,,,0.00,0.00
+  └─ Investments purchased,-1.16,,,,3.76,-5.51
+  └─ Interest received,0.22,,,,0.01,0.04
+  └─ Dividends received,0.00,,,,0.02,0.03
+  └─ Other investing items,-0.78,,,,2.04,-0.02
+Cash from Financing Activity,3,,,,-18,3
+  └─ Proceeds from shares,2.09,,,,0.00,0.00
+  └─ Proceeds from borrowings,8.77,,,,-16.56,3.00
+  └─ Repayment of borrowings,-4.65,,,,-0.43,-0.10
+  └─ Interest paid fin,-3.63,,,,-0.52,-0.02
+  └─ Other financing items,0.57,,,,0.00,-0.10
+Net Cash Flow,-3,,,,-0,0
+  └─ Free Cash Flow,-5,,,,11,3
+  └─ CFO/OP,116%,,,,339%,102%

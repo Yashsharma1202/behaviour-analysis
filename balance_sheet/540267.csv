@@ -1,0 +1,23 @@
+Metric,Mar 2017,Mar 2018
+Equity Capital,9,9
+Reserves,-5,-5
+Borrowings,1,0
+  └─ Long term Borrowings,0.45,0.09
+  └─ Short term Borrowings,0.25,0.25
+Other Liabilities,2,31
+  └─ Trade Payables,1.61,30.50
+  └─ Other liability items,0.04,0.02
+Total Liabilities,6,35
+Fixed Assets,0,0
+  └─ Other fixed assets,0.01,0.10
+  └─ Gross Block,0.01,0.10
+  └─ Accumulated Depreciation,0.01,0.03
+CWIP,0,0
+Investments,1,0
+Other Assets,5,35
+  └─ Inventories,0.00,1.67
+  └─ Trade receivables,1.87,29.09
+  └─ Cash Equivalents,0.01,3.39
+  └─ Loans n Advances,0.00,0.12
+  └─ Other asset items,3.44,0.55
+Total Assets,6,35

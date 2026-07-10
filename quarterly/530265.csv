@@ -1,0 +1,20 @@
+Metric,Mar 2021,Dec 2021,Mar 2022
+Sales,0.25,5.82,-1.29
+  └─ YOY Sales Growth %,,,-616%
+Expenses,7.25,1.21,4.72
+  └─ Employee Cost %,60.00%,3.95%,
+Operating Profit,-7.00,4.61,-6.01
+OPM %,-2800.00%,79.21%,
+Other Income,0.00,0.00,0.18
+  └─ Other income normal,0.00,0.00,0.18
+Interest,3.71,4.36,4.40
+Depreciation,0.00,0.00,0.00
+Profit before tax,-10.71,0.25,-10.23
+Tax %,-28.20%,24.00%,-13.29%
+Net Profit,-7.69,0.18,-8.87
+  └─ Profit excl Excep,-7.69,0.18,-8.87
+  └─ Profit for PE,-7.69,0.18,-8.87
+  └─ Profit for EPS,-7.69,0.18,-8.87
+  └─ YOY Profit Growth %,,,-15.34%
+EPS in Rs,-7.07,0.17,-8.15
+Raw PDF,,,

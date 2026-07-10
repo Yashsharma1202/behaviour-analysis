@@ -1,0 +1,15 @@
+Metric,Mar 2015,Mar 2016
+Cash from Operating Activity,0.02,-0.06
+  └─ Profit from operations,0.05,-0.03
+  └─ Receivables,0.01,-0.02
+  └─ Payables,-0.01,0.00
+  └─ Working capital changes,0.00,-0.02
+  └─ Direct taxes,-0.02,-0.01
+Cash from Investing Activity,0.04,0.11
+  └─ Interest received,0.03,0.03
+  └─ Dividends received,0.01,0.01
+  └─ Other investing items,0.00,0.07
+Cash from Financing Activity,0.00,0.00
+Net Cash Flow,0.06,0.05
+  └─ Free Cash Flow,0.02,-0.06
+  └─ CFO/OP,-400%,62%

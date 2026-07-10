@@ -1,0 +1,28 @@
+Metric,Mar 2023,Mar 2024,Mar 2025,Mar 2026
+Cash from Operating Activity,53,82,7,37
+  └─ Profit from operations,48.65,50.89,45.62,49.13
+  └─ Receivables,12.45,17.60,13.96,-10.15
+  └─ Inventory,-34.59,-16.88,7.95,-0.51
+  └─ Payables,-1.61,-10.38,1.30,-0.97
+  └─ Loans Advances,20.47,40.20,0.00,0.00
+  └─ Operating investments,0.26,0.00,0.00,0.00
+  └─ Operating borrowings,0.00,0.00,-51.19,9.77
+  └─ Other WC items,12.73,6.19,-5.43,-2.59
+  └─ Working capital changes,9.73,36.74,-33.41,-4.45
+  └─ Direct taxes,-5.08,-6.02,-5.22,-7.59
+Cash from Investing Activity,-32,-30,-15,-38
+  └─ Fixed assets purchased,-33.01,-12.82,-19.27,-24.37
+  └─ Fixed assets sold,5.79,0.55,0.03,0.01
+  └─ Investments purchased,-4.18,-15.77,-5.23,-0.68
+  └─ Investments sold,0.75,1.96,11.22,2.72
+  └─ Interest received,1.37,1.30,1.39,1.18
+  └─ Investment in group cos,-2.00,0.00,0.00,0.00
+  └─ Other investing items,-0.70,-4.95,-3.18,-16.69
+Cash from Financing Activity,-33,-30,-14,-5
+  └─ Proceeds from shares,0.00,14.03,0.00,0.00
+  └─ Repayment of borrowings,-13.99,-33.71,-5.80,0.00
+  └─ Interest paid fin,-19.31,-9.99,-8.19,-8.47
+  └─ Other financing items,0.00,0.00,0.00,3.96
+Net Cash Flow,-12,22,-22,-5
+  └─ Free Cash Flow,26,69,-12,13
+  └─ CFO/OP,119%,183%,27%,91%

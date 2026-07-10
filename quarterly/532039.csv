@@ -1,0 +1,19 @@
+Metric,Jun 2006,Sep 2006
+Sales,2.83,5.27
+Expenses,4.30,3.98
+  └─ Material Cost %,60.07%,30.74%
+  └─ Employee Cost %,43.11%,16.89%
+Operating Profit,-1.47,1.29
+OPM %,-51.94%,24.48%
+Other Income,0.10,0.23
+  └─ Other income normal,0.10,0.23
+Interest,0.30,0.45
+Depreciation,0.12,0.34
+Profit before tax,-1.79,0.73
+Tax %,0.00%,0.00%
+Net Profit,-1.79,0.73
+  └─ Profit excl Excep,-1.79,0.73
+  └─ Profit for PE,-1.79,0.73
+  └─ Profit for EPS,-1.79,0.73
+EPS in Rs,,0.14
+Raw PDF,,

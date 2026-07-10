@@ -1,0 +1,27 @@
+Metric,Mar 2024,Mar 2025,Mar 2026
+Sales,329,424,629
+  └─ Sales Growth %,,28.83%,48.14%
+Expenses,253,323,482
+  └─ Material Cost %,50.20%,42.62%,43.08%
+    └─ Raw material cost,161,181,267
+    └─ Change in inventory,4,-0,4
+  └─ Manufacturing Cost %,11.77%,12.40%,0.00%
+  └─ Employee Cost %,8.39%,11.87%,11.44%
+  └─ Other Cost %,6.39%,9.15%,22.08%
+Operating Profit,77,102,147
+OPM %,23%,24%,23%
+Other Income,4,3,16
+  └─ Exceptional items,0.01,0.01,0.00
+  └─ Other income normal,3.65,3.15,15.71
+Interest,10,15,15
+Depreciation,3,7,12
+Profit before tax,67,83,136
+Tax %,24%,25%,29%
+Net Profit,51,62,96
+  └─ Exceptional items AT,0,0,0
+  └─ Profit excl Excep,51,62,96
+  └─ Profit for PE,51,62,96
+  └─ Profit for EPS,51,62,96
+  └─ Profit Growth %,,23%,54%
+EPS in Rs,12.09,13.14,18.16
+Dividend Payout %,17%,15%,0%

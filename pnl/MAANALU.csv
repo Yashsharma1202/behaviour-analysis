@@ -1,0 +1,22 @@
+Metric,Mar 2009
+Sales,42.16
+Expenses,39.51
+  └─ Material Cost %,78%
+    └─ Raw material cost,32.49
+    └─ Change in inventory,0.56
+  └─ Manufacturing Cost %,7%
+  └─ Employee Cost %,4%
+  └─ Other Cost %,5%
+Operating Profit,2.65
+OPM %,6.29%
+Other Income,0.00
+Interest,0.46
+Depreciation,1.10
+Profit before tax,1.09
+Tax %,30.28%
+Net Profit,0.76
+  └─ Profit excl Excep,0.76
+  └─ Profit for PE,0.76
+  └─ Profit for EPS,0.76
+EPS in Rs,0.14
+Dividend Payout %,0.00%

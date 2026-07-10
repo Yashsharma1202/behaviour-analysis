@@ -1,0 +1,18 @@
+Metric,Jun 2020,Mar 2021,Jun 2021
+Sales,0.00,0.05,0.00
+Expenses,0.00,0.09,0.00
+  └─ Material Cost %,,60.00%,
+  └─ Employee Cost %,,20.00%,
+Operating Profit,0.00,-0.04,0.00
+OPM %,,-80.00%,
+Other Income,0.00,0.00,0.00
+Interest,0.00,0.00,0.00
+Depreciation,0.00,0.00,0.00
+Profit before tax,0.00,-0.04,0.00
+Tax %,,0.00%,
+Net Profit,0.00,-0.04,0.00
+  └─ Profit excl Excep,-0.00,-0.04,-0.00
+  └─ Profit for PE,-0.00,-0.04,-0.00
+  └─ Profit for EPS,-0.00,-0.04,-0.00
+EPS in Rs,0.00,-0.03,0.00
+Raw PDF,,,

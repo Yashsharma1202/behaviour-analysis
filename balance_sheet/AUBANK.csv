@@ -1,0 +1,22 @@
+Metric,Mar 2014,Mar 2015,Mar 2016,Mar 2017
+Equity Capital,43,44,44,284
+Reserves,606,794,1022,1703
+Borrowing,2478,3588,6232,7071
+Other Liabilities,249,397,634,753
+  └─ Non controlling int,0,0,4,0
+  └─ Other liability items,249,397,630,753
+Total Liabilities,3377,4823,7933,9812
+Fixed Assets,23,24,30,36
+  └─ Building,9,9,9,7
+  └─ Equipments,8,13,22,29
+  └─ Furniture n fittings,7,9,12,12
+  └─ Other fixed assets,9,11,14,18
+  └─ Gross Block,33,42,58,66
+  └─ Accumulated Depreciation,10,18,27,30
+CWIP,0,0,0,240
+Investments,65,65,89,2150
+Other Assets,3289,4733,7813,7386
+  └─ Cash Equivalents,3,225,430,624
+  └─ Loans n Advances,13,12,8,27
+  └─ Other asset items,3272,4496,7375,6734
+Total Assets,3377,4823,7933,9812

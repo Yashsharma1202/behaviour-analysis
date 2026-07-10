@@ -1,0 +1,33 @@
+Metric,Dec 2015,Dec 2016,Dec 2017,Dec 2018,Dec 2019,Mar 2020,Dec 2020,Dec 2021,Dec 2022,Dec 2023,Dec 2024,Dec 2025,Dec 2014
+Cash from Operating Activity,45,44,37,31,64,,125,87,96,211,235,220,
+  └─ Profit from operations,75,75,42,64,81,,116,171,219,253,297,320,90
+  └─ Receivables,8,-4,-12,-14,8,,4,-48,-72,26,-6,-111,-26
+  └─ Payables,12,-5,18,2,-5,,13,19,17,-24,10,62,17
+  └─ Loans Advances,-5,-2,0,0,0,,0,0,0,0,0,0,1
+  └─ Other WC items,-9,2,3,-8,-7,,12,-27,-28,10,-5,28,16
+  └─ Working capital changes,5,-9,10,-19,-3,,30,-56,-83,12,-0,-21,9
+  └─ Interest paid,0,0,1,0,0,,0,0,0,0,0,0,0
+  └─ Direct taxes,-36,-22,-16,-13,-13,,-21,-28,-39,-54,-62,-80,-27
+Cash from Investing Activity,41,11,-58,-31,8,,-32,19,-8,-219,14,-311,
+  └─ Fixed assets purchased,-16,-14,-66,-46,-19,,-18,-28,-36,-20,-12,-44,-10
+  └─ Fixed assets sold,0,0,0,0,0,,0,0,1,2,1,37,0
+  └─ Investments purchased,0,0,-5,-14,-12,,0,0,0,0,0,0,-2
+  └─ Investments sold,2,16,9,18,0,,23,0,0,14,0,0,1
+  └─ Investment income,0,1,0,0,0,,0,0,0,0,0,0,0
+  └─ Interest received,4,6,6,6,6,,3,7,4,7,3,4,4
+  └─ Redemp n Canc of Shares,27,0,0,0,0,,0,0,0,0,0,0,23
+  └─ Acquisition of companies,-2,0,0,0,-8,,0,0,0,-248,-6,-328,0
+  └─ Other investing items,25,3,-1,5,41,,-40,40,23,27,27,20,-9
+Cash from Financing Activity,-113,-19,-1,-9,-46,,10,-116,-86,-41,-216,209,
+  └─ Proceeds from shares,0,0,0,0,0,,0,0,0,0,0,0,1
+  └─ Proceeds from debentures,0,0,0,0,0,,0,0,0,0,0,267,0
+  └─ Proceeds from borrowings,1,1,0,0,1,,23,1,2,57,1,41,1
+  └─ Repayment of borrowings,-1,-0,0,-0,-1,,-1,-1,-1,-1,-51,-1,-1
+  └─ Proceeds from deposits,0,0,0,0,0,,1,0,1,1,0,0,0
+  └─ Interest paid fin,-0,-0,-0,-0,-0,,-0,-0,-0,-2,-3,-7,-0
+  └─ Dividends paid,-95,-0,0,-9,-22,,-1,-68,-77,-80,-148,-71,-42
+  └─ Financial liabilities,0,0,0,0,0,,-12,-11,-12,-15,-16,-19,0
+  └─ Other financing items,-19,-20,-1,-0,-24,,0,-37,0,0,-0,0,-12
+Net Cash Flow,-27,35,-22,-9,26,,103,-9,2,-49,33,118,
+  └─ Free Cash Flow,29,30,-29,-15,46,,108,60,61,193,224,213,
+  └─ CFO/OP,111%,93%,159%,78%,106%,,126%,72%,68%,105%,116%,98%,

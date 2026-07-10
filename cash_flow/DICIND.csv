@@ -1,0 +1,22 @@
+Metric,Dec 2005,Dec 2006,Dec 2007,Dec 2008,Dec 2009
+Cash from Operating Activity,7,-4,40,-7,35
+  └─ Profit from operations,27,30,39,42,50
+  └─ Receivables,-23,-19,-11,-20,3
+  └─ Inventory,-7,-13,7,-20,6
+  └─ Payables,16,5,12,1,-13
+  └─ Working capital changes,-13,-27,8,-39,-4
+  └─ Direct taxes,-6,-7,-8,-10,-11
+Cash from Investing Activity,-9,-10,-22,-14,-9
+  └─ Fixed assets purchased,-10.36,-14.94,-23.84,-16.05,-9.59
+  └─ Fixed assets sold,1.38,4.23,1.28,1.89,0.18
+  └─ Interest received,0.06,0.41,0.38,0.27,0.28
+Cash from Financing Activity,0,15,-8,18,-15
+  └─ Proceeds from borrowings,53,74,75,423,710
+  └─ Repayment of borrowings,-46,-51,-122,-395,-715
+  └─ Interest paid fin,-4,-6,-9,-6,-5
+  └─ Dividends paid,-3,-3,-3,-4,-5
+  └─ Share application money,0,0,52,0,0
+  └─ Other financing items,0,0,-1,0,0
+Net Cash Flow,-1,0,10,-3,11
+  └─ Free Cash Flow,-2,-15,17,-21,25
+  └─ CFO/OP,57%,11%,153%,8%,110%

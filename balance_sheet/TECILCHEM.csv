@@ -1,0 +1,22 @@
+Metric,Mar 2015,Mar 2016
+Equity Capital,18.96,18.96
+Reserves,-24.13,-24.77
+Borrowings,0.00,0.00
+Other Liabilities,15.27,15.21
+  └─ Other liability items,15.27,15.21
+Total Liabilities,10.10,9.40
+Fixed Assets,4.61,3.98
+  └─ Land,2.68,2.68
+  └─ Building,4.75,2.37
+  └─ Furniture n fittings,0.23,0.14
+  └─ Vehicles,0.46,0.35
+  └─ Other fixed assets,0.01,0.01
+  └─ Gross Block,8.13,5.55
+  └─ Accumulated Depreciation,3.52,1.57
+CWIP,0.00,0.00
+Investments,0.38,1.04
+Other Assets,5.11,4.38
+  └─ Cash Equivalents,0.22,0.69
+  └─ Loans n Advances,0.55,0.00
+  └─ Other asset items,4.34,3.69
+Total Assets,10.10,9.40

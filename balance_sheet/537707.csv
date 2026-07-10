@@ -1,0 +1,34 @@
+Metric,Mar 2008,Mar 2012,Mar 2013,Mar 2014,Mar 2015,Mar 2016
+Equity Capital,7,10,10,10,10,10
+Reserves,17,18,148,147,148,280
+Borrowings,105,170,15,32,15,18
+  └─ Long term Borrowings,,120.80,0.00,0.00,5.13,8.12
+  └─ Short term Borrowings,,20.66,0.00,0.00,0.00,0.00
+  └─ Preference Capital,10.00,10.00,10.00,10.00,10.00,10.00
+  └─ Other Borrowings,94.77,18.97,5.25,22.22,0.10,0.01
+Other Liabilities,16,54,13,14,16,10
+  └─ Trade Payables,4.83,5.60,1.16,1.35,0.30,0.82
+  └─ Advance from Customers,0.00,6.58,7.60,8.35,9.77,0.19
+  └─ Other liability items,11.11,41.82,4.62,4.01,5.78,9.02
+Total Liabilities,144,253,187,204,189,318
+Fixed Assets,60,61,7,55,56,52
+  └─ Land,16,31,4,13,17,17
+  └─ Building,34,34,0,37,37,37
+  └─ Plant Machinery,10,10,0,0,0,0
+  └─ Equipments,0,0,0,0,4,4
+  └─ Computers,0,0,0,0,0,0
+  └─ Furniture n fittings,3,4,1,2,2,2
+  └─ Vehicles,0,0,0,0,0,0
+  └─ Intangible Assets,2,0,2,1,1,0
+  └─ Other fixed assets,0,0,0,4,0,0
+  └─ Gross Block,65,81,8,58,62,61
+  └─ Accumulated Depreciation,5,19,1,3,6,9
+CWIP,24,35,40,0,0,0
+Investments,1,0,3,8,2,8
+Other Assets,59,157,137,141,132,258
+  └─ Inventories,0,142,117,107,99,224
+  └─ Trade receivables,0,1,2,1,2,3
+  └─ Cash Equivalents,4,1,2,1,1,1
+  └─ Loans n Advances,2,2,0,0,3,1
+  └─ Other asset items,52,11,16,33,28,29
+Total Assets,144,253,187,204,189,318

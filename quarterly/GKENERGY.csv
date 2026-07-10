@@ -1,0 +1,21 @@
+Metric,Dec 2024,Mar 2025,Jun 2025,Sep 2025,Dec 2025,Mar 2026
+Sales,320,353,325,404,510,477
+  └─ YOY Sales Growth %,,,,,59.09%,35.24%
+Expenses,265,286,267,331,415,393
+  └─ Material Cost %,65%,61%,69%,72%,68%,67%
+  └─ Employee Cost %,2%,1%,2%,2%,1%,2%
+Operating Profit,55,66,57,73,95,84
+OPM %,17%,19%,18%,18%,19%,18%
+Other Income,2,1,2,2,3,3
+  └─ Other income normal,1.57,1.08,1.61,1.87,3.29,2.51
+Interest,6,7,8,11,11,11
+Depreciation,0,0,1,1,1,1
+Profit before tax,50,60,51,63,86,75
+Tax %,25%,25%,26%,25%,30%,21%
+Net Profit,37,45,37,47,61,59
+  └─ Profit excl Excep,37,45,37,47,61,59
+  └─ Profit for PE,37,45,37,47,61,59
+  └─ Profit for EPS,37,45,37,47,61,59
+  └─ YOY Profit Growth %,,,,,63%,32%
+EPS in Rs,2.19,2.63,2.19,2.31,3.00,2.92
+Raw PDF,,,,,,

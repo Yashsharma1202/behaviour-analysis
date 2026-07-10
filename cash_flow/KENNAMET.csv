@@ -1,0 +1,24 @@
+Metric,Jun 2019,Jun 2020,Jun 2021,Jun 2022
+Cash from Operating Activity,71,34,166,49
+  └─ Profit from operations,154,79,140,189
+  └─ Receivables,-19,77,-14,-24
+  └─ Inventory,-53,3,1,-62
+  └─ Payables,0,0,57,-14
+  └─ Other WC items,28,-108,1,-1
+  └─ Working capital changes,-45,-28,46,-101
+  └─ Direct taxes,-38,-17,-20,-39
+Cash from Investing Activity,-106,-54,-25,-62
+  └─ Fixed assets purchased,-112,-58,-26,-65
+  └─ Fixed assets sold,1,0,0,0
+  └─ Investments sold,0,0,1,1
+  └─ Interest received,3,4,0,2
+  └─ Dividends received,1,0,0,0
+Cash from Financing Activity,4,1,-57,-53
+  └─ Proceeds from borrowings,10,3,0,0
+  └─ Repayment of borrowings,0,0,-13,0
+  └─ Interest paid fin,-0,-2,-0,0
+  └─ Dividends paid,-4,-0,-44,-53
+  └─ Other financing items,-1,0,0,0
+Net Cash Flow,-31,-19,84,-65
+  └─ Free Cash Flow,-40,-24,140,-16
+  └─ CFO/OP,75%,71%,142%,49%

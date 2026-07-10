@@ -1,0 +1,37 @@
+Metric,Mar 2010,Mar 2011,Mar 2012,Mar 2013,Mar 2014,Mar 2015,Mar 2016
+Equity Capital,237,251,360,497,599,639,639
+Reserves,356,488,868,1308,1523,1576,1482
+Borrowings,1131,1244,1716,2422,3679,4055,4114
+  └─ Long term Borrowings,,555,1145,1465,2480,2982,3046
+  └─ Short term Borrowings,,543,429,777,1001,845,896
+  └─ Other Borrowings,1131,146,143,180,198,228,172
+Other Liabilities,240,825,664,701,779,958,863
+  └─ Non controlling int,0,0,0,0,0,0,0
+  └─ Trade Payables,60,358,343,358,369,432,383
+  └─ Advance from Customers,18,23,20,25,52,50,61
+  └─ Other liability items,162,443,301,318,358,476,418
+Total Liabilities,1965,2807,3608,4929,6580,7228,7098
+Fixed Assets,1130,1098,1166,1268,1481,1410,2207
+  └─ Land,22,29,43,65,87,91,60
+  └─ Building,191,200,190,197,245,246,278
+  └─ Plant Machinery,1247,1277,1411,1560,1847,1860,2766
+  └─ Equipments,3,3,4,4,5,5,6
+  └─ Furniture n fittings,4,4,4,5,5,5,5
+  └─ Railway sidings,32,32,32,32,32,32,32
+  └─ Vehicles,6,7,7,8,9,9,9
+  └─ Intangible Assets,6,6,17,7,7,7,7
+  └─ Other fixed assets,39,44,48,78,103,106,15
+  └─ Gross Block,1551,1604,1755,1955,2339,2362,3178
+  └─ Accumulated Depreciation,421,505,589,686,858,952,971
+CWIP,39,199,635,1062,2058,3163,2852
+Investments,0,0,0,1,1,1,1
+Other Assets,796,1510,1808,2597,3040,2654,2038
+  └─ Inventories,347,558,694,802,782,925,630
+  └─ Trade receivables,155,257,291,302,411,314,313
+    └─ Receivables over 6m,15,18,17,22,22,39,36
+    └─ Receivables under 6m,146,245,279,285,394,285,288
+    └─ Prov for Doubtful,-6,-6,-5,-5,-6,-10,-10
+  └─ Cash Equivalents,35,73,123,152,255,60,48
+  └─ Loans n Advances,36,60,67,41,45,31,19
+  └─ Other asset items,222,563,633,1301,1548,1324,1026
+Total Assets,1965,2807,3608,4929,6580,7228,7098

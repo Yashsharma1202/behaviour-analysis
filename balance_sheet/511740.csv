@@ -1,0 +1,20 @@
+Metric,Mar 2023,Mar 2024,Mar 2025,Mar 2026
+Equity Capital,3.08,3.08,3.08,3.08
+Reserves,0.96,0.83,0.61,1.31
+Borrowings,0.00,0.00,0.00,0.00
+Other Liabilities,0.16,0.04,0.04,0.03
+  └─ Trade Payables,0.00,0.00,0.00,0.01
+  └─ Other liability items,0.16,0.04,0.04,0.02
+Total Liabilities,4.20,3.95,3.73,4.42
+Fixed Assets,0.00,0.00,0.00,0.00
+CWIP,0.00,0.00,0.00,0.00
+Investments,0.98,0.91,0.82,1.68
+Other Assets,3.22,3.04,2.91,2.74
+  └─ Inventories,0.00,2.01,0.00,0.01
+  └─ Trade receivables,0.46,0.46,2.13,2.52
+    └─ Receivables over 6m,0.46,0.46,0.13,
+    └─ Receivables under 6m,0.00,0.00,2.00,
+  └─ Cash Equivalents,0.21,0.15,0.59,0.02
+  └─ Loans n Advances,0.00,0.00,0.00,0.07
+  └─ Other asset items,2.55,0.42,0.19,0.12
+Total Assets,4.20,3.95,3.73,4.42

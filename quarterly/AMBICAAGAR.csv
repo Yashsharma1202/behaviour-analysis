@@ -1,0 +1,21 @@
+Metric,Mar 2016
+Sales,29.88
+Expenses,24.71
+  └─ Material Cost %,56%
+  └─ Employee Cost %,4%
+Operating Profit,5.17
+OPM %,17.30%
+Other Income,-2.64
+  └─ Exceptional items,-1.32
+  └─ Other income normal,-1.32
+Interest,2.17
+Depreciation,0.03
+Profit before tax,0.33
+Tax %,203.03%
+Net Profit,-0.33
+  └─ Exceptional items AT,-0.65
+  └─ Profit excl Excep,0.32
+  └─ Profit for PE,0.32
+  └─ Profit for EPS,-0.33
+EPS in Rs,-0.19
+Raw PDF,

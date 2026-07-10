@@ -1,0 +1,16 @@
+Metric,Mar 2014,Mar 2015,Mar 2016
+Cash from Operating Activity,,-0.43,0.85
+  └─ Profit from operations,,0.05,-0.01
+  └─ Receivables,,-0.79,0.65
+  └─ Inventory,,0.01,0.00
+  └─ Payables,,0.29,-0.14
+  └─ Other WC items,,0.02,0.35
+  └─ Working capital changes,,-0.47,0.86
+Cash from Investing Activity,,-2.22,-1.43
+  └─ Other investing items,,-2.22,-1.43
+Cash from Financing Activity,,2.70,0.51
+  └─ Proceeds from borrowings,,-0.28,0.52
+  └─ Other financing items,,2.98,-0.02
+Net Cash Flow,,0.05,-0.08
+  └─ Free Cash Flow,,-0.43,0.85
+  └─ CFO/OP,,358%,944%

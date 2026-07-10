@@ -1,0 +1,18 @@
+Metric,Dec 2012,Mar 2013
+Sales,1.25,0.90
+Expenses,1.97,0.36
+  └─ Material Cost %,98%,-757%
+  └─ Employee Cost %,24%,16%
+Operating Profit,-0.72,0.54
+OPM %,-57.60%,60.00%
+Other Income,0.00,0.00
+Interest,0.21,0.21
+Depreciation,0.61,0.86
+Profit before tax,-1.54,-0.53
+Tax %,-7.79%,-73.58%
+Net Profit,-1.43,-0.14
+  └─ Profit excl Excep,-1.43,-0.14
+  └─ Profit for PE,-1.43,-0.14
+  └─ Profit for EPS,-1.43,-0.14
+EPS in Rs,-2.20,-0.22
+Raw PDF,,

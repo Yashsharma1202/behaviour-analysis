@@ -1,0 +1,36 @@
+Metric,Mar 2022,Mar 2023,Mar 2024,Mar 2025,Mar 2026
+Equity Capital,11,11,37,37,37
+Reserves,105,119,117,125,143
+Borrowings,50,88,87,116,123
+  └─ Long term Borrowings,12,20,15,25,23
+  └─ Short term Borrowings,26,54,58,79,84
+  └─ Lease Liabilities,12,14,13,12,17
+  └─ Other Borrowings,-0,0,0,0,
+Other Liabilities,26,45,41,43,38
+  └─ Trade Payables,16.26,21.18,15.09,23.96,20.58
+  └─ Other liability items,9.97,23.57,25.58,18.66,17.56
+Total Liabilities,192,263,281,320,342
+Fixed Assets,105,126,122,128,139
+  └─ Land,9.94,10.05,10.32,10.57,
+  └─ Building,16.83,20.35,20.26,21.52,
+  └─ Plant Machinery,79.00,102.43,106.61,118.46,
+  └─ Equipments,12.35,18.16,23.35,32.92,
+  └─ Computers,0.38,0.41,0.53,0.64,
+  └─ Furniture n fittings,3.09,3.35,3.82,3.90,
+  └─ Vehicles,1.05,1.46,1.83,2.04,
+  └─ Intangible Assets,0.00,0.00,0.00,0.00,0.38
+  └─ Other fixed assets,1.29,1.11,1.17,1.21,
+  └─ Gross Block,123.93,157.32,167.89,191.26,
+  └─ Accumulated Depreciation,18.75,31.64,45.79,63.11,
+CWIP,2,0,0,2,0
+Investments,0,2,6,0,42
+Other Assets,85,135,152,190,161
+  └─ Inventories,43,66,72,68,86
+  └─ Trade receivables,29,41,41,64,57
+    └─ Receivables over 6m,1,4,4,3,
+    └─ Receivables under 6m,30,39,41,64,
+    └─ Prov for Doubtful,-2,-3,-4,-3,
+  └─ Cash Equivalents,1,9,4,9,5
+  └─ Loans n Advances,4,2,3,4,6
+  └─ Other asset items,8,17,33,45,7
+Total Assets,192,263,281,320,342

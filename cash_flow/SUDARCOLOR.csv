@@ -1,0 +1,27 @@
+Metric,Mar 2006,Dec 2006,Dec 2007,Dec 2008,Dec 2009,Dec 2010,Dec 2011
+Cash from Operating Activity,62,65,46,81,170,164,21
+  └─ Profit from operations,96,68,74,144,177,176,153
+  └─ Receivables,5,16,9,6,-11,17,1
+  └─ Inventory,-17,-4,15,8,29,-14,-25
+  └─ Payables,5,2,-23,-45,37,52,-25
+  └─ Other WC items,0,-2,0,0,0,0,0
+  └─ Working capital changes,-7,12,0,-30,54,55,-49
+  └─ Direct taxes,-27,-15,-28,-33,-61,-67,-83
+Cash from Investing Activity,-1,46,-11,-52,-71,-80,142
+  └─ Fixed assets purchased,-36,-24,-39,-27,-10,-36,-49
+  └─ Fixed assets sold,2,1,5,0,1,15,245
+  └─ Investments purchased,-421,-136,-381,-426,-952,-1818,-1883
+  └─ Investments sold,410,204,398,397,885,1751,1811
+  └─ Interest received,7,1,4,2,1,1,4
+  └─ Dividends received,3,1,2,2,4,7,15
+  └─ Invest in subsidiaries,-3,-1,0,0,0,0,0
+  └─ Other investing items,37,0,0,0,0,0,-0
+Cash from Financing Activity,-52,-85,-61,-34,-92,-80,-156
+  └─ Proceeds from borrowings,127,0,0,0,0,0,0
+  └─ Repayment of borrowings,-126,-16,-1,-1,-1,-1,-1
+  └─ Interest paid fin,-5,-2,-3,-1,-1,-1,-1
+  └─ Dividends paid,-23,-33,-56,-31,-90,-77,-154
+  └─ Other financing items,-25,-33,-1,0,0,0,0
+Net Cash Flow,9,25,-26,-4,8,4,7
+  └─ Free Cash Flow,29,42,12,54,161,143,217
+  └─ CFO/OP,160%,196%,107%,117%,137%,153%,-92%

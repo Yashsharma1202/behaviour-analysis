@@ -1,0 +1,19 @@
+Metric,Mar 2006,Mar 2007,Mar 2008,Mar 2009,Mar 2010
+Cash from Operating Activity,12,18,1,-0,10
+  └─ Profit from operations,20.37,5.40,-0.24,0.30,0.52
+  └─ Receivables,2.22,-1.25,0.64,-0.17,-2.41
+  └─ Inventory,0.25,0.00,0.00,0.00,0.00
+  └─ Payables,-17.89,0.26,0.91,-0.58,0.84
+  └─ Working capital changes,-15.42,-0.99,1.55,-0.75,-1.57
+  └─ Exceptional CF items,6.76,13.19,0.00,0.00,11.17
+Cash from Investing Activity,5,0,0,-0,-0
+  └─ Fixed assets purchased,0.00,0.00,0.00,-0.11,0.00
+  └─ Fixed assets sold,5.31,0.00,0.12,0.00,0.02
+  └─ Investments purchased,0.00,0.00,0.00,0.00,-0.04
+Cash from Financing Activity,-17,-18,-1,1,-10
+  └─ Proceeds from borrowings,1.84,0.00,0.00,1.76,0.00
+  └─ Repayment of borrowings,-15.68,-16.03,-0.35,0.00,-9.04
+  └─ Interest paid fin,-3.05,-1.74,-1.09,-1.15,-1.11
+Net Cash Flow,0,-0,-0,0,-0
+  └─ Free Cash Flow,17,18,1,-1,10
+  └─ CFO/OP,-109%,-132%,-298%,225%,-1467%

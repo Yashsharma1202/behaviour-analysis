@@ -1,0 +1,34 @@
+Metric,Mar 2015,Mar 2016,Mar 2017,Mar 2018,Mar 2019,Mar 2020,Mar 2021,Mar 2022,Mar 2023,Mar 2024,Mar 2025,Mar 2026
+Cash from Operating Activity,27,-48,-34,12,95,85,294,191,119,227,343,254
+  └─ Profit from operations,63,57,84,130,163,183,158,203,280,271,309,410
+  └─ Receivables,-47,-83,-234,-145,-167,-68,-87,-42,-197,-74,-21,-58
+  └─ Inventory,0,0,0,0,0,0,0,-1,1,0,0,0
+  └─ Payables,25,16,169,97,141,3,171,94,108,42,30,2
+  └─ Working capital changes,-21,-67,-66,-48,-27,-65,84,51,-87,-31,9,-56
+  └─ Direct taxes,-15,-38,-53,-70,-42,-32,51,-63,-74,-13,25,-100
+Cash from Investing Activity,-165,1,-3,0,-95,36,-108,-140,-310,-53,-155,-316
+  └─ Fixed assets purchased,-11,-35,-23,-38,-34,-62,-71,-106,-71,-71,-181,-139
+  └─ Fixed assets sold,0,0,0,0,0,1,2,15,9,9,5,3
+  └─ Investments purchased,-160,0,-1562,-1802,-1898,-649,-713,-1236,-940,-1101,-189,-1273
+  └─ Investments sold,0,26,1572,1810,1873,728,658,1187,992,1164,174,1172
+  └─ Interest received,7,9,9,3,3,4,5,1,5,4,1,5
+  └─ Dividends received,0,2,1,0,0,0,0,0,0,0,0,0
+  └─ Invest in subsidiaries,0,0,0,0,-4,0,-4,0,-50,0,0,-0
+  └─ Investment in group cos,0,0,0,0,-4,0,0,0,-35,-15,-2,0
+  └─ Redemp n Canc of Shares,0,0,0,0,0,0,0,0,0,0,0,0
+  └─ Acquisition of companies,-1,0,0,0,0,0,0,0,0,0,0,0
+  └─ Inter corporate deposits,0,0,0,0,-30,0,15,0,0,0,0,0
+  └─ Other investing items,0,0,0,25,0,15,0,0,-218,-43,36,-83
+Cash from Financing Activity,103,18,4,4,-11,-76,-87,-117,183,-276,-148,105
+  └─ Proceeds from shares,101,0,1,7,3,0,0,0,0,0,0,27
+  └─ Proceeds from borrowings,2,20,0,0,11,7,112,8,361,0,283,23
+  └─ Repayment of borrowings,-0,0,0,0,-8,-9,-119,0,0,-66,-197,-406
+  └─ Proceeds from deposits,0,0,0,0,0,0,0,0,0,0,0,6
+  └─ Interest paid fin,-0,-1,-3,-4,-3,-4,-4,-4,-17,-32,-43,-25
+  └─ Dividends paid,0,0,0,0,-13,-16,-11,-18,-14,-18,-18,-18
+  └─ Financial liabilities,0,0,0,0,0,-56,-66,-104,-146,-161,-173,-218
+  └─ Application money refund,0,0,0,0,0,0,0,0,0,0,0,0
+  └─ Other financing items,0,0,6,0,0,0,0,0,0,0,0,715
+Net Cash Flow,-35,-28,-33,16,-11,45,98,-66,-8,-102,41,42
+  └─ Free Cash Flow,16,-83,-57,-25,61,24,225,100,57,165,167,118
+  └─ CFO/OP,73%,-19%,24%,68%,90%,74%,180%,138%,74%,104%,112%,94%

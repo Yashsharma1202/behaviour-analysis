@@ -1,0 +1,28 @@
+Metric,Mar 2015,Mar 2016,Mar 2017,Mar 2018,Mar 2019,Mar 2020,TTM
+Sales,116,114,91,124,133,87,121
+  └─ Sales Growth %,,-1.99%,-19.83%,35.73%,7.85%,-34.55%,
+Expenses,99,106,80,105,116,87,107
+  └─ Material Cost %,24%,33%,27%,27%,29%,37%,
+    └─ Raw material cost,35.35,29.46,24.14,33.72,43.04,29.16,
+    └─ Change in inventory,-7.80,8.18,0.44,0.21,-4.76,3.08,
+  └─ Manufacturing Cost %,50%,48%,46%,46%,48%,52%,
+  └─ Employee Cost %,5%,5%,6%,5%,5%,5%,
+  └─ Other Cost %,7%,7%,8%,6%,5%,5%,
+Operating Profit,17,7,11,19,18,1,14
+OPM %,15%,7%,12%,15%,13%,1%,12%
+Other Income,-0,0,0,1,1,2,1
+  └─ Exceptional items,-0.28,0.00,0.00,0.00,0.00,0.00,
+  └─ Other income normal,0.00,0.03,0.25,1.41,1.12,1.88,
+Interest,3,3,1,2,1,0,1
+Depreciation,5,3,2,2,3,2,2
+Profit before tax,9,2,8,16,15,-0,13
+Tax %,40%,33%,33%,35%,29%,-67%,
+Net Profit,8,6,12,16,17,2,15
+  └─ Profit from Associates,3,5,6,6,6,2,
+  └─ Exceptional items AT,-0,0,0,0,0,0,
+  └─ Profit excl Excep,8,6,12,16,17,2,
+  └─ Profit for PE,8,6,12,16,17,2,
+  └─ Profit for EPS,8,6,12,16,17,2,
+  └─ Profit Growth %,,-22%,82%,38%,4%,-90%,
+EPS in Rs,159.60,0.29,0.52,0.72,0.75,0.08,0.66
+Dividend Payout %,0%,0%,0%,0%,0%,0%,

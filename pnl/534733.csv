@@ -1,0 +1,19 @@
+Metric,Mar 2023,Mar 2024,Mar 2025,Mar 2026
+Sales,0,0,0,0
+Expenses,2,2,6,14
+Operating Profit,-2,-2,-6,-14
+OPM %,,,,
+Other Income,2,0,1,0
+  └─ Other income normal,2.04,0.33,0.59,0.22
+Interest,0,0,0,1
+Depreciation,0,0,1,2
+Profit before tax,0,-2,-8,-17
+Tax %,7%,3%,-2%,-1%
+Net Profit,0,-2,-7,-16
+  └─ Minority share,0,0,1,1
+  └─ Profit excl Excep,0,-2,-7,-16
+  └─ Profit for PE,0,-1,-7,-15
+  └─ Profit for EPS,0,-1,-7,-15
+  └─ Profit Growth %,,-1169%,-373%,-131%
+EPS in Rs,0.01,-0.10,-0.43,-0.99
+Dividend Payout %,0%,0%,0%,0%

@@ -1,0 +1,32 @@
+Metric,Mar 2022
+Equity Capital,11.38
+Reserves,1.52
+Borrowings,16.77
+  └─ Long term Borrowings,8.49
+  └─ Short term Borrowings,8.29
+  └─ Other Borrowings,-0.01
+Other Liabilities,5.83
+  └─ Non controlling int,-0.01
+  └─ Trade Payables,0.82
+  └─ Advance from Customers,0.86
+  └─ Other liability items,4.16
+Total Liabilities,35.50
+Fixed Assets,0.40
+  └─ Building,0.65
+  └─ Equipments,0.18
+  └─ Computers,0.14
+  └─ Furniture n fittings,0.13
+  └─ Vehicles,0.18
+  └─ Gross Block,1.28
+  └─ Accumulated Depreciation,0.88
+CWIP,0.00
+Investments,0.00
+Other Assets,35.10
+  └─ Inventories,12.49
+  └─ Trade receivables,1.92
+    └─ Receivables over 6m,1.55
+    └─ Receivables under 6m,0.37
+  └─ Cash Equivalents,0.04
+  └─ Loans n Advances,0.05
+  └─ Other asset items,20.60
+Total Assets,35.50

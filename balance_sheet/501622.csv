@@ -1,0 +1,27 @@
+Metric,Mar 2009,Mar 2010,Mar 2011,Mar 2012,Mar 2013
+Equity Capital,1.39,1.39,1.39,1.39,1.39
+Reserves,-0.56,-0.54,-0.53,-0.51,-0.53
+Borrowings,0.00,0.00,0.00,0.00,0.00
+Other Liabilities,0.50,0.39,0.36,0.33,0.33
+  └─ Non controlling int,-0.01,0.01,0.03,0.04,0.06
+  └─ Trade Payables,0.01,-0.00,-0.00,-0.00,-0.00
+  └─ Other liability items,0.50,0.38,0.33,0.29,0.27
+Total Liabilities,1.33,1.24,1.22,1.21,1.19
+Fixed Assets,0.00,0.00,0.00,0.01,0.01
+  └─ Plant Machinery,0.03,0.03,0.04,0.04,0.02
+  └─ Equipments,0.01,0.01,0.00,0.00,0.00
+  └─ Computers,0.01,0.01,0.00,0.00,0.00
+  └─ Furniture n fittings,0.01,0.01,0.02,0.02,0.01
+  └─ Other fixed assets,0.00,0.00,0.00,0.01,0.00
+  └─ Gross Block,0.06,0.06,0.06,0.07,0.03
+  └─ Accumulated Depreciation,0.06,0.06,0.06,0.06,0.02
+CWIP,0.00,0.00,0.00,0.00,0.00
+Investments,0.67,0.00,0.00,0.00,0.65
+Other Assets,0.66,1.24,1.22,1.20,0.53
+  └─ Trade receivables,0.03,0.75,0.41,0.38,0.06
+    └─ Receivables over 6m,0.03,0.75,0.41,0.37,0.05
+    └─ Receivables under 6m,0.00,0.00,0.00,0.01,0.01
+  └─ Cash Equivalents,0.02,0.01,0.00,0.01,0.01
+  └─ Loans n Advances,0.07,0.05,0.02,0.00,0.00
+  └─ Other asset items,0.54,0.43,0.79,0.81,0.46
+Total Assets,1.33,1.24,1.22,1.21,1.19

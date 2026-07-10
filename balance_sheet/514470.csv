@@ -1,0 +1,31 @@
+Metric,Mar 2012,Mar 2013,Mar 2014
+Equity Capital,20,20,20
+Reserves,72,87,105
+Borrowings,237,362,417
+  └─ Long term Borrowings,104,231,231
+  └─ Short term Borrowings,116,109,152
+  └─ Other Borrowings,18,22,34
+Other Liabilities,117,158,233
+  └─ Trade Payables,85,114,170
+  └─ Advance from Customers,2,1,2
+  └─ Other liability items,31,43,61
+Total Liabilities,446,627,775
+Fixed Assets,158,165,350
+  └─ Land,15,17,17
+  └─ Building,26,26,63
+  └─ Plant Machinery,206,221,383
+  └─ Equipments,2,2,3
+  └─ Furniture n fittings,1,1,2
+  └─ Vehicles,3,3,3
+  └─ Other fixed assets,-0,0,0
+  └─ Gross Block,253,270,472
+  └─ Accumulated Depreciation,95,105,121
+CWIP,18,155,46
+Investments,0,42,0
+Other Assets,271,266,378
+  └─ Inventories,106,116,193
+  └─ Trade receivables,37,41,58
+  └─ Cash Equivalents,60,10,18
+  └─ Loans n Advances,38,52,81
+  └─ Other asset items,30,48,27
+Total Assets,446,627,775

@@ -1,0 +1,24 @@
+Metric,Mar 2011,Mar 2012,Mar 2013,Mar 2014,Mar 2025,Mar 2026
+Sales,0,0,0,0,688,1312
+  └─ Sales Growth %,,,,,,91%
+Expenses,1,0,0,0,655,1192
+  └─ Material Cost %,,,,,-7%,0%
+    └─ Change in inventory,0.00,0.00,0.00,0.00,-46.26,0.00
+  └─ Employee Cost %,,,,,2%,2%
+  └─ Other Cost %,,,,,100%,89%
+Operating Profit,-1,-0,-0,-0,33,120
+OPM %,,,,,5%,9%
+Other Income,1,0,0,0,8,13
+  └─ Other income normal,1.04,0.01,0.02,0.02,8.32,12.96
+Interest,0,0,0,0,11,27
+Depreciation,0,0,0,0,2,5
+Profit before tax,1,-0,-0,-0,28,101
+Tax %,0%,0%,0%,0%,27%,27%
+Net Profit,1,-0,-0,-0,20,74
+  └─ Minority share,0,0,0,0,0,0
+  └─ Profit excl Excep,1,-0,-0,-0,20,74
+  └─ Profit for PE,1,-0,-0,-0,20,75
+  └─ Profit for EPS,1,-0,-0,-0,20,75
+  └─ Profit Growth %,,-143%,23%,24%,,270%
+EPS in Rs,3.64,-1.57,-1.21,-0.93,143.70,4.54
+Dividend Payout %,0%,0%,0%,0%,0%,0%

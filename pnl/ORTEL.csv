@@ -1,0 +1,24 @@
+Metric,Mar 2018,Mar 2019,Mar 2020,Mar 2021,TTM
+Sales,184,111,87,68,60
+  └─ Sales Growth %,,-39.92%,-21.16%,-22.03%,
+Expenses,146,117,98,67,65
+  └─ Manufacturing Cost %,40%,52%,50%,55%,
+  └─ Employee Cost %,11%,14%,14%,15%,
+  └─ Other Cost %,28%,40%,49%,28%,
+Operating Profit,38,-7,-11,1,-5
+OPM %,20%,-6%,-12%,1%,-8%
+Other Income,-77,4,2,3,1
+  └─ Exceptional items,-78.83,0.00,0.00,0.00,
+  └─ Other income normal,2.10,4.19,2.16,2.73,
+Interest,29,21,0,0,0
+Depreciation,27,28,26,26,25
+Profit before tax,-95,-51,-35,-22,-29
+Tax %,0%,0%,0%,0%,
+Net Profit,-95,-51,-35,-22,-29
+  └─ Exceptional items AT,-78.83,0.00,0.00,0.00,
+  └─ Profit excl Excep,-16.50,-51.23,-34.86,-21.96,
+  └─ Profit for PE,-16.50,-51.23,-34.86,-21.96,
+  └─ Profit for EPS,-95.33,-51.23,-34.86,-21.96,
+  └─ Profit Growth %,,-210.48%,31.95%,37.01%,
+EPS in Rs,-31.28,-15.54,-10.57,-6.66,-8.73
+Dividend Payout %,0%,0%,0%,0%,

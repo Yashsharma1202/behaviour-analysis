@@ -1,0 +1,23 @@
+Metric,Mar 2020
+Sales,38.97
+Expenses,37.18
+  └─ Material Cost %,60%
+    └─ Raw material cost,24.26
+    └─ Change in inventory,-1.07
+  └─ Manufacturing Cost %,5%
+  └─ Employee Cost %,16%
+  └─ Other Cost %,15%
+Operating Profit,1.79
+OPM %,4.59%
+Other Income,1.60
+  └─ Other income normal,1.60
+Interest,2.99
+Depreciation,1.44
+Profit before tax,-1.04
+Tax %,3.85%
+Net Profit,-1.08
+  └─ Profit excl Excep,-1.08
+  └─ Profit for PE,-1.08
+  └─ Profit for EPS,-1.08
+EPS in Rs,-1.94
+Dividend Payout %,0.00%

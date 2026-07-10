@@ -1,0 +1,21 @@
+Metric,Mar 2016,Mar 2017,Mar 2023
+Cash from Operating Activity,-0.25,0.84,0.00
+  └─ Profit from operations,0.11,0.14,0.00
+  └─ Receivables,1.19,0.41,0.00
+  └─ Inventory,-0.82,0.08,0.00
+  └─ Payables,-0.67,0.21,0.00
+  └─ Loans Advances,0.28,0.00,0.00
+  └─ Operating borrowings,-0.14,0.00,0.00
+  └─ Other WC items,-0.18,0.00,0.00
+  └─ Working capital changes,-0.35,0.70,0.00
+  └─ Interest paid,-0.01,0.00,0.00
+Cash from Investing Activity,-1.21,-0.49,0.00
+  └─ Investments purchased,-1.28,-0.59,0.00
+  └─ Investment income,0.06,0.09,0.00
+  └─ Dividends received,0.02,0.00,0.00
+Cash from Financing Activity,1.51,-0.01,0.00
+  └─ Proceeds from shares,1.50,0.00,0.00
+  └─ Repayment of borrowings,0.02,-0.01,0.00
+Net Cash Flow,0.05,0.33,0.00
+  └─ Free Cash Flow,-0.25,0.84,0.00
+  └─ CFO/OP,-357%,764%,0%

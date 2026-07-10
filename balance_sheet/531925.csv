@@ -1,0 +1,29 @@
+Metric,Mar 2016,Mar 2017,Mar 2018,Mar 2015
+Equity Capital,34.88,34.88,34.88,
+Reserves,-18.22,-14.53,-11.60,
+Borrowings,13.45,23.21,19.46,
+  └─ Long term Borrowings,10.69,10.87,0.08,10.24
+  └─ Short term Borrowings,2.76,12.26,19.29,2.35
+  └─ Other Borrowings,0.00,0.08,0.09,
+Other Liabilities,12.66,10.90,21.22,
+  └─ Non controlling int,-0.00,-0.77,0.49,-0.00
+  └─ Trade Payables,8.99,9.00,19.92,0.19
+  └─ Other liability items,3.67,2.67,0.81,0.32
+Total Liabilities,42.77,54.46,63.96,
+Fixed Assets,1.64,3.41,3.28,
+  └─ Equipments,0.10,0.14,0.16,
+  └─ Computers,0.19,0.29,0.39,
+  └─ Furniture n fittings,0.09,0.20,0.23,
+  └─ Vehicles,0.00,0.35,0.36,
+  └─ Intangible Assets,1.49,2.78,2.78,0.00
+  └─ Gross Block,1.87,3.76,3.92,
+  └─ Accumulated Depreciation,0.23,0.35,0.63,
+CWIP,0.00,0.00,0.00,
+Investments,0.01,0.00,0.00,
+Other Assets,41.12,51.05,60.68,
+  └─ Inventories,0.32,4.10,16.39,0.00
+  └─ Trade receivables,2.86,12.67,13.45,0.00
+  └─ Cash Equivalents,0.22,0.62,0.08,0.01
+  └─ Loans n Advances,1.19,3.81,22.88,27.93
+  └─ Other asset items,36.53,29.85,7.88,0.10
+Total Assets,42.77,54.46,63.96,

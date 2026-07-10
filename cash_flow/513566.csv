@@ -1,0 +1,20 @@
+Metric,Mar 2016,Mar 2017,Mar 2018
+Cash from Operating Activity,12.72,33.26,-2.94
+  └─ Profit from operations,3.13,10.47,10.03
+  └─ Receivables,-1.43,2.54,-9.19
+  └─ Inventory,-14.82,22.15,2.27
+  └─ Payables,25.84,-1.90,-6.05
+  └─ Working capital changes,9.59,22.79,-12.97
+Cash from Investing Activity,-27.91,-31.37,-32.26
+  └─ Fixed assets purchased,-3.79,-0.02,0.00
+  └─ Fixed assets sold,0.09,0.00,0.00
+  └─ Capital WIP,-24.28,-31.42,-32.29
+  └─ Investments sold,0.03,0.00,0.00
+  └─ Interest received,0.03,0.06,0.03
+  └─ Other investing items,0.01,0.00,0.00
+Cash from Financing Activity,15.22,-1.74,34.79
+  └─ Proceeds from borrowings,21.24,4.92,41.57
+  └─ Interest paid fin,-6.01,-6.66,-6.78
+Net Cash Flow,0.03,0.15,-0.40
+  └─ Free Cash Flow,-15.26,1.82,-35.23
+  └─ CFO/OP,1235%,320%,-35%

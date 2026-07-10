@@ -1,0 +1,33 @@
+Metric,Mar 2009,Mar 2011,Mar 2012,Mar 2016,Mar 2017
+Equity Capital,816,957,957,2336,2460
+Reserves,449,441,-248,-3216,-3889
+Borrowings,3548,11352,11987,4935,4895
+  └─ Long term Borrowings,,10168,8615,4716,3073
+  └─ Short term Borrowings,,1021,2182,0,0
+  └─ Other Borrowings,3548,163,1189,219,1821
+Other Liabilities,410,3251,3369,485,607
+  └─ Non controlling int,0,1547,1239,0,0
+  └─ Trade Payables,289,154,129,19,41
+  └─ Advance from Customers,0,0,7,4,6
+  └─ Other liability items,121,1550,1995,462,560
+Total Liabilities,5223,16002,16065,4540,4073
+Fixed Assets,2158,11597,12333,3261,3138
+  └─ Land,5,6,6,6,6
+  └─ Building,86,741,780,198,198
+  └─ Plant Machinery,2328,10873,12354,3295,3397
+  └─ Equipments,0,7,7,0,0
+  └─ Furniture n fittings,7,6,6,0,0
+  └─ Vehicles,1,1,1,0,0
+  └─ Intangible Assets,0,2,2,0,0
+  └─ Other fixed assets,1,999,999,1,1
+  └─ Gross Block,2429,12634,14155,3502,3604
+  └─ Accumulated Depreciation,272,1037,1822,241,465
+CWIP,1047,977,285,46,43
+Investments,0,33,802,836,531
+Other Assets,2018,3395,2646,398,360
+  └─ Inventories,2,1,1,0,0
+  └─ Trade receivables,55,72,93,85,65
+  └─ Cash Equivalents,1365,471,151,49,40
+  └─ Loans n Advances,27,149,153,43,16
+  └─ Other asset items,570,2701,2248,221,238
+Total Assets,5223,16002,16065,4540,4073

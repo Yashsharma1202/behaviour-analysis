@@ -1,0 +1,27 @@
+Metric,Mar 2017,Mar 2018,Mar 2019,TTM
+Revenue,5.27,22.78,54.43,41.89
+  └─ Sales Growth %,,332%,139%,
+Interest,0.14,0.29,0.11,0.18
+Expenses,5.21,21.95,54.10,42.07
+  └─ Material Cost %,78%,93%,98%,
+    └─ Raw material cost,5,19,53,
+    └─ Change in inventory,-1,2,0,
+  └─ Manufacturing Cost %,7%,1%,0%,
+  └─ Employee Cost %,5%,1%,1%,
+  └─ Other Cost %,8%,1%,1%,
+Financing Profit,-0.08,0.54,0.22,-0.36
+Financing Margin %,-1.52%,2.37%,0.40%,-0.86%
+Other Income,0.07,-0.03,0.07,0.08
+  └─ Exceptional items,0.00,-0.07,-0.23,
+  └─ Other income normal,0.07,0.04,0.30,
+Depreciation,0.21,0.45,0.38,0.33
+Profit before tax,-0.22,0.06,-0.09,-0.61
+Tax %,4.55%,116.67%,-144.44%,
+Net Profit,-0.22,0.00,0.04,-0.55
+  └─ Exceptional items AT,0,0,-0,
+  └─ Profit excl Excep,-0,-0,0,
+  └─ Profit for PE,-0,-0,0,
+  └─ Profit for EPS,-0,0,0,
+  └─ Profit Growth %,,91%,800%,
+EPS in Rs,-0.36,0.00,0.07,-0.91
+Dividend Payout %,0.00%,,0.00%,

@@ -1,0 +1,25 @@
+Metric,Mar 2014,Mar 2015,Mar 2016,Mar 2017
+Revenue,667,813,1206,1429
+  └─ Sales Growth %,,21.87%,48.43%,18.50%
+Interest,317,334,492,531
+Expenses,201,227,339,422
+  └─ Manufacturing Cost %,0.19%,0.19%,0.14%,0.66%
+  └─ Employee Cost %,12.38%,13.80%,15.93%,14.07%
+  └─ Other Cost %,17.59%,13.94%,12.04%,14.80%
+Financing Profit,148,252,375,476
+Financing Margin %,22%,31%,31%,33%
+Other Income,4,-4,8,612
+  └─ Exceptional items,-4,-6,0,596
+  └─ Other income normal,8,3,8,17
+Depreciation,4,8,10,6
+Profit before tax,149,241,373,1082
+Tax %,32%,33%,34%,30%
+Net Profit,101,163,247,762
+  └─ Profit from Associates,0,1,1,1
+  └─ Exceptional items AT,-2,-4,0,421
+  └─ Profit excl Excep,103,167,247,341
+  └─ Profit for PE,103,167,247,341
+  └─ Profit for EPS,101,163,247,762
+  └─ Profit Growth %,,62%,48%,38%
+EPS in Rs,11.65,18.49,27.95,13.40
+Dividend Payout %,0%,0%,0%,0%

@@ -1,0 +1,26 @@
+Metric,Jun 2006
+Cash from Operating Activity,-16
+  └─ Profit from operations,30.29
+  └─ Receivables,-6.75
+  └─ Inventory,-14.75
+  └─ Payables,-11.14
+  └─ Loans Advances,-4.42
+  └─ Working capital changes,-37.06
+  └─ Interest paid,-7.94
+  └─ Direct taxes,-0.80
+  └─ Exceptional CF items,-0.37
+Cash from Investing Activity,-9
+  └─ Fixed assets purchased,-10.09
+  └─ Fixed assets sold,1.10
+  └─ Investments purchased,-0.01
+  └─ Interest received,0.09
+  └─ Dividends received,0.02
+  └─ Other investing items,-0.03
+Cash from Financing Activity,20
+  └─ Proceeds from borrowings,25.34
+  └─ Repayment of borrowings,-4.59
+  └─ Dividends paid,-2.53
+  └─ Share application money,1.61
+Net Cash Flow,-5
+  └─ Free Cash Flow,-25
+  └─ CFO/OP,-59%

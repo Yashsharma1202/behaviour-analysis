@@ -1,0 +1,20 @@
+Metric,Mar 2016,Mar 2017,Mar 2018
+Sales,0,0,0
+Expenses,0,9,5
+Operating Profit,-0,-9,-5
+OPM %,,,
+Other Income,0,12,-13
+  └─ Exceptional items,0.01,8.91,-13.27
+  └─ Other income normal,0.07,2.67,0.01
+Interest,4,3,3
+Depreciation,1,1,1
+Profit before tax,-5,-1,-22
+Tax %,0%,0%,0%
+Net Profit,-5,-1,-22
+  └─ Exceptional items AT,0.01,8.91,-13.27
+  └─ Profit excl Excep,-5.27,-10.00,-8.55
+  └─ Profit for PE,-5.27,-10.00,-8.55
+  └─ Profit for EPS,-5.26,-1.09,-21.82
+  └─ Profit Growth %,,-89.75%,14.50%
+EPS in Rs,-11.97,-2.48,-49.65
+Dividend Payout %,0%,0%,0%

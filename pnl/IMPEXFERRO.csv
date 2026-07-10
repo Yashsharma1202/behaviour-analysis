@@ -1,0 +1,23 @@
+Metric,Mar 2015
+Sales,506
+Expenses,531
+  └─ Material Cost %,81%
+    └─ Raw material cost,408
+    └─ Change in inventory,3
+  └─ Manufacturing Cost %,20%
+  └─ Employee Cost %,1%
+  └─ Other Cost %,3%
+Operating Profit,-26
+OPM %,-5%
+Other Income,3
+  └─ Other income normal,3.05
+Interest,30
+Depreciation,9
+Profit before tax,-61
+Tax %,0%
+Net Profit,-61
+  └─ Profit excl Excep,-61
+  └─ Profit for PE,-61
+  └─ Profit for EPS,-61
+EPS in Rs,-7.54
+Dividend Payout %,0%

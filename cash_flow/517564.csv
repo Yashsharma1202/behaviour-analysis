@@ -1,0 +1,23 @@
+Metric,Sep 2006,Sep 2007,Mar 2025,Mar 2026
+Cash from Operating Activity,-1.53,-0.79,-0.36,-1.17
+  └─ Profit from operations,2.05,-2.81,-2.18,-2.15
+  └─ Receivables,0.15,4.52,0.00,0.00
+  └─ Inventory,-1.12,0.49,0.00,0.00
+  └─ Payables,-4.11,-3.05,0.00,0.00
+  └─ Other WC items,1.51,0.06,1.83,0.99
+  └─ Working capital changes,-3.57,2.02,1.83,0.99
+  └─ Other operating items,-0.01,0.00,0.00,0.00
+Cash from Investing Activity,0.02,0.24,1.85,-0.04
+  └─ Fixed assets purchased,-0.48,-0.02,-0.12,0.00
+  └─ Fixed assets sold,0.00,0.00,1.96,0.00
+  └─ Interest received,0.50,0.26,0.01,0.01
+  └─ Invest in subsidiaries,0.00,0.00,0.00,-0.05
+Cash from Financing Activity,1.54,0.53,0.16,1.35
+  └─ Proceeds from shares,0.45,0.00,0.00,0.00
+  └─ Proceeds from borrowings,1.06,0.24,0.35,0.00
+  └─ Repayment of borrowings,0.00,0.00,0.00,-0.95
+  └─ Interest paid fin,0.00,0.00,-0.18,-0.02
+  └─ Other financing items,0.03,0.29,0.00,2.33
+Net Cash Flow,0.03,-0.02,1.65,0.15
+  └─ Free Cash Flow,-2.01,-0.81,1.48,-1.17
+  └─ CFO/OP,-57%,29%,16%,54%

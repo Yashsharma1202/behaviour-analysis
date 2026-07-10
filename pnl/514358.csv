@@ -1,0 +1,27 @@
+Metric,Mar 2010,Mar 2011,Mar 2012
+Revenue,7.99,26.20,42.60
+  └─ Sales Growth %,,228%,63%
+Interest,0.38,0.45,0.62
+Expenses,8.35,24.63,41.39
+  └─ Material Cost %,77%,81%,84%
+    └─ Raw material cost,5.95,22.42,35.84
+    └─ Change in inventory,0.20,-1.29,0.02
+  └─ Manufacturing Cost %,12%,11%,12%
+  └─ Employee Cost %,2%,1%,1%
+  └─ Other Cost %,14%,1%,1%
+Financing Profit,-0.74,1.12,0.59
+Financing Margin %,-9.26%,4.27%,1.38%
+Other Income,2.13,0.13,0.07
+  └─ Exceptional items,1.04,0.10,0.68
+  └─ Other income normal,1.09,0.03,-0.61
+Depreciation,0.39,0.55,-0.36
+Profit before tax,1.00,0.70,1.02
+Tax %,2.00%,18.57%,19.61%
+Net Profit,0.98,0.57,0.82
+  └─ Exceptional items AT,1.02,0.08,0.55
+  └─ Profit excl Excep,-0.04,0.49,0.27
+  └─ Profit for PE,-0.04,0.49,0.27
+  └─ Profit for EPS,0.98,0.57,0.82
+  └─ Profit Growth %,,1325.00%,-44.90%
+EPS in Rs,,,
+Dividend Payout %,0.00%,0.00%,0.00%

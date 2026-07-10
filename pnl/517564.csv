@@ -1,0 +1,27 @@
+Metric,Sep 200615m,Sep 2007,Mar 2025,Mar 2026,Sep 2006
+Sales,24.10,9.13,0.00,3.54,
+  └─ Sales Growth %,,-62.12%,,,
+Expenses,21.41,11.90,2.25,5.69,
+  └─ Material Cost %,,97%,,100%,74%
+    └─ Raw material cost,,8.43,0.00,3.53,20.38
+    └─ Change in inventory,,0.40,0.00,0.00,-2.51
+  └─ Manufacturing Cost %,,5%,,0%,4%
+  └─ Employee Cost %,,9%,,4%,5%
+  └─ Other Cost %,,20%,,57%,6%
+Operating Profit,2.69,-2.77,-2.25,-2.15,
+OPM %,11.16%,-30.34%,,-60.73%,
+Other Income,0.69,2.21,1.96,0.01,
+  └─ Exceptional items,,0.07,0.00,0.00,0.00
+  └─ Other income normal,,2.14,1.96,0.01,0.69
+Interest,1.07,0.67,0.18,0.02,
+Depreciation,2.26,2.03,0.24,0.24,
+Profit before tax,0.05,-3.26,-0.71,-2.40,
+Tax %,1100.00%,39.26%,0.00%,0.00%,
+Net Profit,-0.50,-4.54,-0.71,-2.40,
+  └─ Exceptional items AT,,0,0,0,0
+  └─ Profit excl Excep,,-5,-1,-2,-0
+  └─ Profit for PE,,-5,-1,-2,-0
+  └─ Profit for EPS,,-5,-1,-2,-0
+  └─ Profit Growth %,,-816%,,-238%,
+EPS in Rs,-0.17,-1.57,-0.82,-2.19,
+Dividend Payout %,0.00%,0.00%,0.00%,0.00%,

@@ -1,0 +1,20 @@
+Metric,Mar 2023
+Cash from Operating Activity,8
+  └─ Profit from operations,14.22
+  └─ Receivables,-4.88
+  └─ Inventory,3.39
+  └─ Payables,-0.21
+  └─ Other WC items,-2.13
+  └─ Working capital changes,-3.83
+  └─ Direct taxes,-1.99
+Cash from Investing Activity,-12
+  └─ Fixed assets purchased,-11.48
+  └─ Fixed assets sold,0.30
+  └─ Investments purchased,-0.51
+  └─ Interest received,0.09
+Cash from Financing Activity,10
+  └─ Proceeds from borrowings,12.78
+  └─ Interest paid fin,-2.53
+Net Cash Flow,7
+  └─ Free Cash Flow,-3
+  └─ CFO/OP,77%

@@ -1,0 +1,23 @@
+Metric,Mar 2022
+Sales,4.59
+Expenses,11.04
+  └─ Material Cost %,66%
+    └─ Raw material cost,2.38
+    └─ Change in inventory,0.64
+  └─ Manufacturing Cost %,112%
+  └─ Employee Cost %,41%
+  └─ Other Cost %,22%
+Operating Profit,-6.45
+OPM %,-140.52%
+Other Income,1.62
+  └─ Other income normal,1.62
+Interest,1.74
+Depreciation,0.05
+Profit before tax,-6.62
+Tax %,-25.38%
+Net Profit,-4.94
+  └─ Profit excl Excep,-4.94
+  └─ Profit for PE,-4.94
+  └─ Profit for EPS,-4.94
+EPS in Rs,-4.34
+Dividend Payout %,0.00%

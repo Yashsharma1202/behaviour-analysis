@@ -1,0 +1,33 @@
+Metric,Mar 2009,Mar 2010,Mar 2011,Mar 2012,Mar 2013,Mar 2014,Mar 2015,Mar 2016,Mar 2017,Mar 2018,Mar 2019,Mar 2020
+Cash from Operating Activity,203,33,69,250,153,177,231,174,220,192,209,139
+  └─ Profit from operations,161,126,164,85,128,150,191,173,212,-9,-0,-46
+  └─ Receivables,-14,-21,-66,165,5,-4,17,-17,-7,-7,-4,44
+  └─ Inventory,-3,-1,-11,-5,-11,7,11,9,14,-1,0,1
+  └─ Payables,73,-51,-2,18,38,21,5,1,6,17,-0,-1
+  └─ Other WC items,2,-2,0,0,0,0,0,12,-1,-18,13,-8
+  └─ Working capital changes,57,-76,-79,177,32,24,34,5,11,-9,8,36
+  └─ Direct taxes,-15,-17,-16,-11,-7,3,6,-4,-3,-4,-10,-4
+  └─ Exceptional CF items,0,0,0,0,0,0,0,0,0,214,211,152
+Cash from Investing Activity,-604,-547,-876,-307,-52,-14,-64,697,3,27,129,3824
+  └─ Fixed assets purchased,-655,-599,-879,-720,-277,-75,0,-29,0,0,0,-32
+  └─ Fixed assets sold,1,1,0,501,2,44,5,19,12,11,136,0
+  └─ Investments purchased,-0,0,0,0,0,0,0,-0,-0,0,0,0
+  └─ Investments sold,0,0,0,3,102,0,16,706,0,0,0,115
+  └─ Interest received,49,51,3,9,1,16,2,2,3,2,1,1
+  └─ Dividends received,0,0,0,0,0,0,0,0,0,0,0,0
+  └─ Other investing items,0,0,0,-100,120,0,-87,0,-12,14,-9,3740
+Cash from Financing Activity,137,497,849,17,-83,-171,-169,-852,-233,-214,-327,-3976
+  └─ Proceeds from shares,0,0,48,0,100,65,0,0,0,0,0,0
+  └─ Proceeds from debentures,150,0,0,0,0,0,0,0,0,0,0,0
+  └─ Redemption of debentures,0,-245,-299,0,-352,0,0,0,0,0,0,0
+  └─ Proceeds from borrowings,130,805,1172,256,409,0,6,0,0,0,0,4
+  └─ Repayment of borrowings,-15,0,-8,0,0,-20,-74,-769,-147,0,-252,-3582
+  └─ Investment subsidy,0,0,0,0,0,0,0,-1,0,0,0,0
+  └─ Interest paid fin,-20,-25,-55,-249,-242,-199,-98,-81,-86,-0,-0,-0
+  └─ Dividends paid,-22,-18,-9,-7,-0,-0,-0,-0,-0,-0,-0,0
+  └─ Financial liabilities,-0,0,0,0,0,-48,0,0,0,0,0,-2
+  └─ Share application money,0,0,0,0,0,35,0,0,0,0,0,0
+  └─ Other financing items,-85,-21,-0,16,2,-4,-3,0,0,-214,-75,-397
+Net Cash Flow,-264,-17,43,-40,18,-8,-2,20,-9,4,11,-14
+  └─ Free Cash Flow,-450,-565,-809,32,-122,146,236,164,232,203,346,107
+  └─ CFO/OP,138%,41%,65%,412%,140%,120%,245%,116%,128%,-1662%,-262%,-385%

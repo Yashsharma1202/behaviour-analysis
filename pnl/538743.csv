@@ -1,0 +1,25 @@
+Metric,Mar 2014,Mar 2015,Mar 2016,TTM
+Sales,8.00,8.58,10.03,15.79
+  └─ Sales Growth %,,7.25%,16.90%,
+Expenses,7.16,6.97,8.32,14.64
+  └─ Material Cost %,0.00%,0.00%,1.20%,
+    └─ Raw material cost,0.00,0.00,0.12,
+  └─ Manufacturing Cost %,77.62%,62.94%,49.05%,
+  └─ Employee Cost %,7.88%,9.21%,15.85%,
+  └─ Other Cost %,4.00%,9.09%,16.85%,
+Operating Profit,0.84,1.61,1.71,1.15
+OPM %,10.50%,18.76%,17.05%,7.28%
+Other Income,0.00,0.01,0.00,-0.14
+  └─ Other income normal,0.00,0.01,0.00,
+Interest,0.00,0.02,0.04,0.02
+Depreciation,0.39,1.04,1.14,0.82
+Profit before tax,0.45,0.56,0.53,0.17
+Tax %,-4.44%,-7.14%,41.51%,
+Net Profit,0.47,0.59,0.32,0.33
+  └─ Minority share,0.00,0.12,0.20,
+  └─ Profit excl Excep,0.47,0.59,0.32,
+  └─ Profit for PE,0.47,0.71,0.52,
+  └─ Profit for EPS,0.47,0.71,0.52,
+  └─ Profit Growth %,,51.06%,-26.76%,
+EPS in Rs,0.20,0.30,0.22,0.14
+Dividend Payout %,0.00%,0.00%,0.00%,

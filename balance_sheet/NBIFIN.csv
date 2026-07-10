@@ -1,0 +1,20 @@
+Metric,Mar 2016,Mar 2025,Sep 2025
+Equity Capital,1,1,1
+Reserves,30,3307,3216
+Borrowing,-0,-0,-0
+Other Liabilities,0,205,189
+  └─ Other liability items,0,205,189
+Total Liabilities,31,3513,3406
+Fixed Assets,0,-0,-0
+  └─ Equipments,0.01,0.02,
+  └─ Furniture n fittings,0.01,0.01,
+  └─ Other fixed assets,0.00,-0.01,
+  └─ Gross Block,0.02,0.02,
+  └─ Accumulated Depreciation,0.02,0.02,
+CWIP,-0,-0,-0
+Investments,27,3512,3404
+Other Assets,5,1,2
+  └─ Cash Equivalents,1.68,0.43,0.55
+  └─ Loans n Advances,2.78,0.83,0.00
+  └─ Other asset items,0.20,0.01,1.04
+Total Assets,31,3513,3406

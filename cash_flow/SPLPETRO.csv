@@ -1,0 +1,29 @@
+Metric,Jun 2006,Jun 2007,Jun 2008,Jun 2009,Jun 2010,Mar 2026
+Cash from Operating Activity,33,70,58,54,45,247
+  └─ Profit from operations,56,85,53,73,125,526
+  └─ Receivables,-30,18,-76,-1,-97,-110
+  └─ Inventory,39,2,9,-20,-38,0
+  └─ Payables,-32,-25,78,15,90,-160
+  └─ Operating investments,0,0,0,0,0,1
+  └─ Other WC items,0,0,0,-2,0,94
+  └─ Working capital changes,-22,-6,11,-7,-45,-175
+  └─ Direct taxes,-0,-9,-12,-9,-36,-105
+  └─ Exceptional CF items,0,0,6,-2,0,0
+Cash from Investing Activity,-11,-0,-13,-29,-17,-190
+  └─ Fixed assets purchased,-17,-5,-19,-35,-21,-211
+  └─ Fixed assets sold,2,0,0,0,0,0
+  └─ Investments purchased,0,0,0,0,0,-3807
+  └─ Investments sold,1,0,0,0,0,3801
+  └─ Interest received,1,2,3,3,2,27
+  └─ Dividends received,0,2,3,3,2,0
+  └─ Other investing items,0,0,0,0,0,0
+Cash from Financing Activity,-8,-71,-34,-37,-11,-228
+  └─ Proceeds from borrowings,14,0,0,0,17,0
+  └─ Repayment of borrowings,0,-37,-3,-2,0,-1
+  └─ Interest paid fin,-22,-23,-19,-22,-17,-15
+  └─ Dividends paid,0,-11,-11,-12,-11,-188
+  └─ Financial liabilities,0,0,0,0,0,-25
+  └─ Other financing items,0,0,0,-2,0,1
+Net Cash Flow,14,-1,11,-12,17,-171
+  └─ Free Cash Flow,18,66,39,20,24,36
+  └─ CFO/OP,73%,110%,152%,94%,65%,67%

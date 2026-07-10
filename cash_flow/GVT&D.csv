@@ -1,0 +1,19 @@
+Metric,Dec 2010
+Cash from Operating Activity,108
+  └─ Profit from operations,519
+  └─ Receivables,-671
+  └─ Inventory,-102
+  └─ Payables,420
+  └─ Working capital changes,-352
+  └─ Direct taxes,-60
+Cash from Investing Activity,-113
+  └─ Fixed assets purchased,-114
+  └─ Fixed assets sold,0
+  └─ Interest received,0
+Cash from Financing Activity,-7
+  └─ Proceeds from borrowings,108
+  └─ Interest paid fin,-65
+  └─ Dividends paid,-50
+Net Cash Flow,-13
+  └─ Free Cash Flow,-6
+  └─ CFO/OP,35%

@@ -1,0 +1,19 @@
+Metric,Mar 2012,Mar 2013,Mar 2014
+Cash from Operating Activity,-2.52,1.65,10.21
+  └─ Profit from operations,2.28,4.05,5.18
+  └─ Receivables,-5.70,6.93,9.02
+  └─ Inventory,0.06,0.02,-1.47
+  └─ Payables,0.88,-9.33,-2.52
+  └─ Working capital changes,-4.76,-2.38,5.03
+  └─ Direct taxes,-0.04,-0.02,0.00
+Cash from Investing Activity,-2.16,16.51,0.39
+  └─ Fixed assets purchased,-2.35,-1.49,-0.22
+  └─ Fixed assets sold,0.19,18.00,0.28
+  └─ Investments sold,0.00,0.00,0.33
+Cash from Financing Activity,4.53,-18.17,-10.64
+  └─ Proceeds from borrowings,30.63,0.00,0.00
+  └─ Repayment of borrowings,-24.73,-17.80,-8.98
+  └─ Interest paid fin,-1.37,-0.37,-1.66
+Net Cash Flow,-0.15,-0.01,-0.04
+  └─ Free Cash Flow,-4.68,18.16,10.27
+  └─ CFO/OP,-109%,41%,199%

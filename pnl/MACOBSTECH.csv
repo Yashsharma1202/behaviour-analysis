@@ -1,0 +1,25 @@
+Metric,Mar 2025,Mar 2026
+Sales,23.61,41.37
+  └─ Sales Growth %,,75%
+Expenses,19.96,37.93
+  └─ Material Cost %,25%,59%
+    └─ Raw material cost,11.11,20.23
+    └─ Change in inventory,-5.13,4.12
+  └─ Employee Cost %,4%,3%
+  └─ Other Cost %,55%,30%
+Operating Profit,3.65,3.44
+OPM %,15.46%,8.32%
+Other Income,0.33,1.25
+  └─ Other income normal,0.33,1.25
+Interest,0.24,0.26
+Depreciation,0.21,0.26
+Profit before tax,3.53,4.17
+Tax %,26.06%,24.70%
+Net Profit,2.61,3.15
+  └─ Minority share,0.00,-0.25
+  └─ Profit excl Excep,2.61,3.15
+  └─ Profit for PE,2.61,2.90
+  └─ Profit for EPS,2.61,2.90
+  └─ Profit Growth %,,11.11%
+EPS in Rs,2.66,2.96
+Dividend Payout %,0.00%,0.00%

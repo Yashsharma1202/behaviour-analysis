@@ -1,0 +1,23 @@
+Metric,Mar 2018
+Sales,4.33
+Expenses,4.15
+  └─ Material Cost %,66%
+    └─ Raw material cost,3.20
+    └─ Change in inventory,-0.34
+  └─ Manufacturing Cost %,2%
+  └─ Employee Cost %,17%
+  └─ Other Cost %,11%
+Operating Profit,0.18
+OPM %,4.16%
+Other Income,0.01
+  └─ Other income normal,0.01
+Interest,0.03
+Depreciation,0.09
+Profit before tax,0.07
+Tax %,128.57%
+Net Profit,-0.03
+  └─ Profit excl Excep,-0.03
+  └─ Profit for PE,-0.03
+  └─ Profit for EPS,-0.03
+EPS in Rs,-0.02
+Dividend Payout %,0.00%

@@ -1,0 +1,22 @@
+Metric,Mar 2024
+Sales,373
+Expenses,339
+  └─ Material Cost %,58%
+    └─ Raw material cost,219
+    └─ Change in inventory,-4
+  └─ Employee Cost %,12%
+  └─ Other Cost %,21%
+Operating Profit,34
+OPM %,9%
+Other Income,2
+  └─ Other income normal,2.49
+Interest,18
+Depreciation,10
+Profit before tax,10
+Tax %,26%
+Net Profit,7
+  └─ Profit excl Excep,7.21
+  └─ Profit for PE,7.21
+  └─ Profit for EPS,7.21
+EPS in Rs,9.17
+Dividend Payout %,0%

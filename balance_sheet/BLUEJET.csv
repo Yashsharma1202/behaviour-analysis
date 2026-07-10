@@ -1,0 +1,34 @@
+Metric,Mar 2020,Mar 2021
+Equity Capital,0.60,10
+Reserves,201,330
+Borrowings,79,53
+  └─ Long term Borrowings,36.93,28.67
+  └─ Short term Borrowings,40.64,22.88
+  └─ Lease Liabilities,0.01,0.06
+  └─ Other Borrowings,1.50,1.50
+Other Liabilities,95,143
+  └─ Non controlling int,1,0
+  └─ Trade Payables,52,60
+  └─ Advance from Customers,0,0
+  └─ Other liability items,42,84
+Total Liabilities,375,536
+Fixed Assets,107,139
+  └─ Land,3,20
+  └─ Building,30,42
+  └─ Plant Machinery,87,106
+  └─ Equipments,1,2
+  └─ Computers,0,0
+  └─ Furniture n fittings,1,2
+  └─ Vehicles,3,5
+  └─ Other fixed assets,0,0
+  └─ Gross Block,125,177
+  └─ Accumulated Depreciation,18,38
+CWIP,2,3
+Investments,34,37
+Other Assets,232,358
+  └─ Inventories,69,118
+  └─ Trade receivables,118,144
+  └─ Cash Equivalents,15,70
+  └─ Loans n Advances,5,1
+  └─ Other asset items,25,24
+Total Assets,375,536

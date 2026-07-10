@@ -1,0 +1,27 @@
+Metric,Jun 2019,Jun 2020,Jun 2021,Jun 2022,TTM
+Sales,945,705,854,991,1021
+  └─ Sales Growth %,,-25.41%,21.09%,16.05%,
+Expenses,800,634,723,812,840
+  └─ Material Cost %,53%,54%,53%,50%,
+    └─ Raw material cost,535,393,452,546,
+    └─ Change in inventory,-36,-11,4,-46,
+  └─ Manufacturing Cost %,8%,8%,8%,9%,
+  └─ Employee Cost %,14%,17%,15%,15%,
+  └─ Other Cost %,10%,11%,8%,8%,
+Operating Profit,145,71,131,179,180
+OPM %,15%,10%,15%,18%,18%
+Other Income,10,7,6,9,9
+  └─ Exceptional items,0.50,-5.30,0.40,1.40,
+  └─ Other income normal,10.00,12.60,5.50,8.00,
+Interest,0,2,0,0,0
+Depreciation,28,34,38,36,35
+Profit before tax,127,42,98,153,154
+Tax %,29%,19%,26%,25%,
+Net Profit,90,34,73,114,117
+  └─ Exceptional items AT,0,-4,0,1,
+  └─ Profit excl Excep,90,38,73,113,
+  └─ Profit for PE,90,38,73,113,
+  └─ Profit for EPS,90,34,73,114,
+  └─ Profit Growth %,,-58%,92%,55%,
+EPS in Rs,41.13,15.42,33.35,51.92,53.28
+Dividend Payout %,5%,0%,60%,46%,

@@ -1,0 +1,22 @@
+Metric,Mar 2025,Mar 2026
+Cash from Operating Activity,-6,-10
+  └─ Profit from operations,8.16,19.66
+  └─ Receivables,0.10,-17.73
+  └─ Inventory,-14.76,-11.47
+  └─ Payables,15.29,-7.36
+  └─ Other WC items,-12.76,4.94
+  └─ Working capital changes,-12.13,-31.61
+  └─ Direct taxes,-1.97,1.82
+Cash from Investing Activity,-113,17
+  └─ Fixed assets purchased,-73.10,-6.80
+  └─ Capital WIP,9.52,-2.27
+  └─ Interest received,3.30,2.76
+  └─ Other investing items,-53.21,23.80
+Cash from Financing Activity,119,10
+  └─ Proceeds from shares,138.81,0.00
+  └─ Proceeds from borrowings,0.00,14.75
+  └─ Repayment of borrowings,-14.46,0.00
+  └─ Interest paid fin,-5.40,-4.27
+Net Cash Flow,-0,18
+  └─ Free Cash Flow,-70,-19
+  └─ CFO/OP,-49%,-66%

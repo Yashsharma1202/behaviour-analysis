@@ -1,0 +1,18 @@
+Metric,Dec 2008,Mar 2009
+Sales,10.83,7.60
+Expenses,10.17,7.61
+  └─ Material Cost %,77%,74%
+  └─ Employee Cost %,5%,6%
+Operating Profit,0.66,-0.01
+OPM %,6.09%,-0.13%
+Other Income,0.00,0.00
+Interest,0.15,0.11
+Depreciation,0.30,0.29
+Profit before tax,0.21,-0.41
+Tax %,23.81%,-41.46%
+Net Profit,0.16,-0.24
+  └─ Profit excl Excep,0.16,-0.24
+  └─ Profit for PE,0.16,-0.24
+  └─ Profit for EPS,0.16,-0.24
+EPS in Rs,0.03,-0.04
+Raw PDF,,

@@ -1,15 +1,7 @@
-# Whitelist approach: ignore everything at root, then re-include what we publish.
-# This keeps the ~59 MB of raw per-stock data and downloaded NSE feeds OUT of git;
-# the static site under docs/ already contains the baked-down JSON it needs.
-/*
-
-!.gitignore
-!README.md
-!requirements.txt
-!*.py
-!docs/
-
-# never commit these even if matched above
+# Include everything (all raw per-stock data + downloaded NSE feeds + outputs),
+# except build artifacts and the personal chat log.
 __pycache__/
 *.pyc
-docs/**/__pycache__/
+
+# personal chat history (also references the separate ML Regime project — keep out)
+all_user_requests.md

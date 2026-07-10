@@ -1,0 +1,33 @@
+Metric,Mar 2016,Mar 2017,Mar 2018
+Equity Capital,4,4,4
+Reserves,-41,-39,-60
+Borrowings,39,33,43
+  └─ Long term Borrowings,30.63,32.65,35.01
+  └─ Short term Borrowings,8.51,0.00,8.32
+  └─ Other Borrowings,0.00,0.00,0.01
+Other Liabilities,55,50,65
+  └─ Trade Payables,22.69,21.51,22.35
+  └─ Advance from Customers,0.92,0.00,0.00
+  └─ Other liability items,30.98,28.90,42.92
+Total Liabilities,57,48,53
+Fixed Assets,12,9,7
+  └─ Land,7,4,4
+  └─ Building,8,8,7
+  └─ Plant Machinery,57,57,57
+  └─ Equipments,1,1,1
+  └─ Furniture n fittings,0,0,0
+  └─ Vehicles,2,2,2
+  └─ Other fixed assets,0,0,-0
+  └─ Gross Block,75,73,72
+  └─ Accumulated Depreciation,64,64,64
+CWIP,12,13,14
+Investments,12,14,16
+Other Assets,21,12,16
+  └─ Inventories,13.90,4.77,5.15
+  └─ Trade receivables,0.79,0.79,0.79
+    └─ Receivables over 6m,1.59,0.79,0.79
+    └─ Prov for Doubtful,-0.79,0.00,0.00
+  └─ Cash Equivalents,1.25,1.21,1.22
+  └─ Loans n Advances,0.00,0.79,2.89
+  └─ Other asset items,5.24,4.86,5.74
+Total Assets,57,48,53

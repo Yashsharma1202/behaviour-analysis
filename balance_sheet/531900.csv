@@ -1,0 +1,30 @@
+Metric,Mar 2017,Mar 2018,Mar 2019,Sep 2019
+Equity Capital,19.19,19.19,19.19,19.19
+Reserves,21.29,21.99,23.89,24.01
+Borrowings,13.59,12.98,20.90,21.13
+  └─ Long term Borrowings,0.56,4.08,3.94,3.94
+  └─ Short term Borrowings,9.22,6.57,12.88,17.19
+  └─ Other Borrowings,3.81,2.33,4.08,
+Other Liabilities,16.35,10.56,5.15,8.01
+  └─ Trade Payables,10.14,7.98,2.02,3.03
+  └─ Advance from Customers,4.82,1.50,1.25,
+  └─ Other liability items,1.39,1.08,1.88,4.98
+Total Liabilities,70.42,64.72,69.13,72.34
+Fixed Assets,23.34,22.75,24.46,24.01
+  └─ Land,8.90,5.40,4.59,
+  └─ Plant Machinery,17.69,22.38,26.91,
+  └─ Equipments,0.14,0.18,0.19,
+  └─ Computers,0.12,0.14,0.14,
+  └─ Furniture n fittings,0.08,0.08,0.09,
+  └─ Vehicles,1.78,1.56,1.78,
+  └─ Gross Block,28.71,29.74,33.70,
+  └─ Accumulated Depreciation,5.37,6.98,9.24,
+CWIP,0.00,0.00,0.00,0.00
+Investments,2.36,2.98,3.42,3.73
+Other Assets,44.72,38.99,41.25,44.60
+  └─ Inventories,15.05,9.35,8.53,10.72
+  └─ Trade receivables,11.73,7.20,11.11,13.12
+  └─ Cash Equivalents,6.29,9.93,5.92,5.49
+  └─ Loans n Advances,4.19,3.64,4.86,0.18
+  └─ Other asset items,7.46,8.87,10.83,15.09
+Total Assets,70.42,64.72,69.13,72.34

@@ -1,0 +1,27 @@
+Metric,Mar 2015,Mar 2016,Mar 2017,Mar 2018,Mar 2019,Mar 2020,Mar 2021,Mar 2023,Mar 2024,Mar 2025,Mar 2026
+Cash from Operating Activity,61,50,67,56,31,135,148,102,168,67,268
+  └─ Profit from operations,51,72,58,72,96,128,259,247,180,164,277
+  └─ Receivables,8,-3,0,-14,-4,17,-54,-93,-64,-51,-1
+  └─ Inventory,-5,9,-26,7,-17,-29,3,-49,-31,-20,-78
+  └─ Payables,-1,-4,32,-6,-0,13,10,80,100,114,60
+  └─ Loans Advances,1,-19,0,0,0,0,0,0,0,0,0
+  └─ Other WC items,7,-3,6,-2,-35,17,-36,-51,21,-138,33
+  └─ Working capital changes,10,-21,12,-14,-57,19,-77,-114,26,-95,13
+  └─ Direct taxes,-0,-1,-3,-3,-9,-12,-34,-31,-38,-2,-22
+Cash from Investing Activity,-95,-141,-72,-10,-14,-37,-87,-197,-163,-208,-185
+  └─ Fixed assets purchased,-97,-124,-75,-22,-30,-39,-89,-206,-175,-208,-200
+  └─ Fixed assets sold,0,0,0,0,0,0,0,0,0,0,3
+  └─ Investments sold,0,0,0,3,13,0,0,0,0,0,0
+  └─ Interest received,2,0,3,2,2,2,3,5,5,6,5
+  └─ Other investing items,0,-18,-0,7,0,0,-1,4,7,-6,7
+Cash from Financing Activity,34,94,0,-47,-17,-80,-23,71,-6,142,-88
+  └─ Proceeds from shares,0,0,0,0,0,0,0,0,0,0,0
+  └─ Proceeds from borrowings,60,112,0,0,10,81,132,175,126,255,317
+  └─ Repayment of borrowings,-18,-1,0,0,0,-134,-153,-74,-84,-54,-334
+  └─ Interest paid fin,-14,-17,-19,-26,-27,-26,-19,-18,-27,-45,-59
+  └─ Dividends paid,-2,0,0,0,0,0,-3,-9,-17,-10,-8
+  └─ Financial liabilities,0,0,0,0,0,0,-3,-4,-4,-5,-4
+  └─ Other financing items,8,0,19,-20,0,-1,23,0,0,0,0
+Net Cash Flow,0,2,-5,-1,-0,18,38,-24,-1,1,-5
+  └─ Free Cash Flow,-36,-74,-8,34,1,96,59,-104,-7,-141,70
+  └─ CFO/OP,125%,76%,129%,86%,44%,118%,72%,54%,121%,45%,112%

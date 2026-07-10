@@ -1,0 +1,25 @@
+Metric,Mar 2018,Mar 2019,Mar 2023,Mar 2024,Mar 2025
+Equity Capital,783,786,791,793,796
+Reserves,5257,6393,10646,12950,15024
+Borrowing,35753,45105,54865,74331,87398
+Other Liabilities,3653,4257,3748,4483,5446
+  └─ Trade Payables,280,395,292,509,453
+  └─ Other liability items,3373,3862,3456,3974,4993
+Total Liabilities,45447,56540,70050,92557,108663
+Fixed Assets,137,123,387,511,735
+  └─ Building,60,68,89,101,144
+  └─ Equipments,45,48,71,82,108
+  └─ Computers,89,107,210,258,302
+  └─ Furniture n fittings,81,85,98,103,119
+  └─ Vehicles,5,7,9,13,19
+  └─ Other fixed assets,18,26,314,410,572
+  └─ Gross Block,297,341,790,967,1264
+  └─ Accumulated Depreciation,160,218,403,456,529
+CWIP,-0,-0,-0,-0,-0
+Investments,402,568,1243,3380,2060
+Other Assets,44908,55849,68420,88665,105868
+  └─ Trade receivables,126,120,66,125,225
+  └─ Cash Equivalents,137,489,654,703,984
+  └─ Loans n Advances,44291,54754,32,52,90
+  └─ Other asset items,353,487,67668,87786,104568
+Total Assets,45447,56540,70050,92557,108663

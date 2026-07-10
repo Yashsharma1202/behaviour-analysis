@@ -1,0 +1,21 @@
+Metric,Jun 2007,Sep 2007,Jun 2008,Sep 2008
+Sales,13.17,26.18,15.72,18.25
+  └─ YOY Sales Growth %,,,19.36%,-30.29%
+Expenses,14.04,24.32,14.35,14.00
+  └─ Material Cost %,80%,80%,65%,56%
+  └─ Employee Cost %,11%,5%,7%,6%
+Operating Profit,-0.87,1.86,1.37,4.25
+OPM %,-6.61%,7.10%,8.72%,23.29%
+Other Income,0.24,0.02,0.02,0.10
+  └─ Other income normal,0.24,0.02,0.02,0.10
+Interest,1.40,1.78,1.47,1.97
+Depreciation,0.40,0.40,0.48,0.25
+Profit before tax,-2.43,-0.30,-0.56,2.13
+Tax %,0.00%,0.00%,0.00%,42.25%
+Net Profit,-2.43,-0.31,-0.56,1.22
+  └─ Profit excl Excep,-2,-0,-1,1
+  └─ Profit for PE,-2,-0,-1,1
+  └─ Profit for EPS,-2,-0,-1,1
+  └─ YOY Profit Growth %,,,77%,494%
+EPS in Rs,-3.63,-0.46,-0.84,1.82
+Raw PDF,,,,

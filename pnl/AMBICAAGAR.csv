@@ -1,0 +1,27 @@
+Metric,Mar 2009,Mar 2010,Mar 2016
+Sales,50.18,53.77,98.07
+  └─ Sales Growth %,,7.15%,
+Expenses,43.50,46.39,85.37
+  └─ Material Cost %,53%,59%,63%
+    └─ Raw material cost,27,32,62
+    └─ Change in inventory,-0,0,-0
+  └─ Manufacturing Cost %,17%,16%,9%
+  └─ Employee Cost %,2%,2%,5%
+  └─ Other Cost %,14%,10%,10%
+Operating Profit,6.68,7.38,12.70
+OPM %,13.31%,13.73%,12.95%
+Other Income,1.90,1.87,1.45
+  └─ Exceptional items,0.16,-0.07,0.01
+  └─ Other income normal,1.74,1.94,1.44
+Interest,4.00,4.38,8.97
+Depreciation,2.77,2.93,3.24
+Profit before tax,1.81,1.94,1.94
+Tax %,13.81%,31.44%,34.54%
+Net Profit,1.56,1.33,1.27
+  └─ Exceptional items AT,0.11,-0.04,0.00
+  └─ Profit excl Excep,1.45,1.37,1.27
+  └─ Profit for PE,1.45,1.37,1.27
+  └─ Profit for EPS,1.56,1.33,1.27
+  └─ Profit Growth %,,-5.52%,
+EPS in Rs,,0.81,0.74
+Dividend Payout %,0.00%,0.00%,0.00%

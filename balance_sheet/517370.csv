@@ -1,0 +1,30 @@
+Metric,Mar 2009,Mar 2010
+Equity Capital,4.65,4.65
+Reserves,1.96,1.03
+Borrowings,2.71,6.48
+  └─ Other Borrowings,2.71,6.48
+Other Liabilities,3.40,4.49
+  └─ Non controlling int,0.15,0.00
+  └─ Trade Payables,1.09,2.02
+  └─ Other liability items,2.16,2.47
+Total Liabilities,12.72,16.65
+Fixed Assets,3.38,4.48
+  └─ Land,0.13,0.13
+  └─ Building,1.21,1.21
+  └─ Plant Machinery,9.67,10.78
+  └─ Equipments,0.25,0.45
+  └─ Computers,0.16,0.18
+  └─ Furniture n fittings,0.51,0.78
+  └─ Vehicles,0.14,0.29
+  └─ Intangible Assets,0.06,0.07
+  └─ Gross Block,12.13,13.89
+  └─ Accumulated Depreciation,8.75,9.41
+CWIP,0.00,0.00
+Investments,0.26,0.50
+Other Assets,9.08,11.67
+  └─ Inventories,4.18,3.83
+  └─ Trade receivables,2.50,3.14
+  └─ Cash Equivalents,0.55,2.37
+  └─ Loans n Advances,1.31,1.51
+  └─ Other asset items,0.54,0.82
+Total Assets,12.72,16.65

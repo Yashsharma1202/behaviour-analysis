@@ -1,0 +1,30 @@
+Metric,Mar 2010,Mar 2011,Mar 2012,Mar 2013,Mar 2014,Mar 2015,Mar 2016
+Cash from Operating Activity,84,410,179,195,184,332,521
+  └─ Profit from operations,317,363,347,324,396,278,246
+  └─ Receivables,-17,-51,-45,-19,-169,105,50
+  └─ Inventory,-69,-211,-136,-108,30,-143,294
+  └─ Payables,-137,328,48,7,-54,104,-70
+  └─ Working capital changes,-222,65,-133,-121,-192,66,273
+  └─ Direct taxes,-12,-18,-35,-9,-21,-12,1
+  └─ Other operating items,0,0,0,-0,-0,-0,-0
+  └─ Exceptional CF items,-0,0,0,0,0,0,0
+Cash from Investing Activity,12,-554,-516,-1114,-976,-515,-27
+  └─ Fixed assets purchased,-64,-631,-529,-1121,-982,-522,-151
+  └─ Fixed assets sold,0,0,0,0,0,0,0
+  └─ Investments purchased,0,0,-0,-0,-0,-0,-1
+  └─ Investments sold,0,0,0,0,0,0,2
+  └─ Investment income,0,11,0,0,0,0,0
+  └─ Interest received,17,0,12,8,6,8,39
+  └─ Inter corporate deposits,0,0,-0,-0,0,0,0
+  └─ Other investing items,60,66,0,0,0,0,85
+Cash from Financing Activity,-92,152,408,947,889,-9,-506
+  └─ Proceeds from shares,0,268,215,550,172,100,0
+  └─ Proceeds from borrowings,241,253,873,875,1325,711,107
+  └─ Repayment of borrowings,-119,-139,-413,-168,-206,-334,-72
+  └─ Proceeds from deposits,0,0,0,0,0,0,20
+  └─ Interest paid fin,-144,-196,-283,-305,-386,-481,-556
+  └─ Financial liabilities,-5,-4,-4,-4,-9,-9,-4
+  └─ Other financing items,-65,-30,19,-1,-7,3,-1
+Net Cash Flow,4,8,70,28,96,-192,-13
+  └─ Free Cash Flow,20,-221,-350,-927,-799,-190,370
+  └─ CFO/OP,33%,120%,64%,64%,52%,96%,226%

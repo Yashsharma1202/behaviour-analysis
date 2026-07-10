@@ -1,0 +1,23 @@
+Metric,Mar 2006,Mar 2007,Mar 2008
+Cash from Operating Activity,6.00,6.38,-0.66
+  └─ Profit from operations,4.76,4.17,2.57
+  └─ Receivables,-0.70,0.37,-0.05
+  └─ Inventory,10.55,13.89,1.75
+  └─ Payables,-8.86,-12.40,-4.66
+  └─ Loans Advances,0.39,0.51,0.00
+  └─ Working capital changes,1.38,2.37,-2.96
+  └─ Direct taxes,-0.14,-0.15,-0.27
+  └─ Other operating items,0.00,-0.01,0.00
+Cash from Investing Activity,-0.08,-2.47,-0.79
+  └─ Fixed assets purchased,-0.78,-3.49,-0.45
+  └─ Fixed assets sold,0.76,1.08,0.05
+  └─ Investments purchased,-0.06,-0.06,-0.40
+  └─ Investments sold,0.00,0.00,0.01
+Cash from Financing Activity,-1.48,1.39,1.71
+  └─ Proceeds from borrowings,1.24,14.34,6.06
+  └─ Repayment of borrowings,-2.70,-12.72,-3.87
+  └─ Interest paid fin,-0.01,-0.26,-0.50
+  └─ Other financing items,-0.01,0.03,0.02
+Net Cash Flow,4.44,5.30,0.26
+  └─ Free Cash Flow,5.98,3.97,-1.06
+  └─ CFO/OP,-758%,-295%,11%

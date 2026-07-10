@@ -1,0 +1,24 @@
+Metric,Mar 2016
+Equity Capital,8.44
+Reserves,-5.05
+Borrowings,0.00
+Other Liabilities,0.99
+  └─ Trade Payables,0.10
+  └─ Advance from Customers,0.40
+  └─ Other liability items,0.49
+Total Liabilities,4.38
+Fixed Assets,0.41
+  └─ Equipments,0.05
+  └─ Computers,0.08
+  └─ Furniture n fittings,0.01
+  └─ Other fixed assets,0.55
+  └─ Gross Block,0.69
+  └─ Accumulated Depreciation,0.27
+CWIP,0.00
+Investments,0.01
+Other Assets,3.96
+  └─ Inventories,0.29
+  └─ Trade receivables,0.01
+  └─ Cash Equivalents,0.05
+  └─ Other asset items,3.61
+Total Assets,4.38

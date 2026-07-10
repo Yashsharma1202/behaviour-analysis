@@ -1,0 +1,32 @@
+Metric,Mar 2006
+Equity Capital,8
+Reserves,33
+Borrowings,184
+  └─ Preference Capital,1
+  └─ Other Borrowings,183
+Other Liabilities,161
+  └─ Trade Payables,113
+  └─ Other liability items,48
+Total Liabilities,386
+Fixed Assets,105
+  └─ Land,13
+  └─ Building,26
+  └─ Plant Machinery,290
+  └─ Equipments,12
+  └─ Furniture n fittings,5
+  └─ Vehicles,10
+  └─ Other fixed assets,1
+  └─ Gross Block,357
+  └─ Accumulated Depreciation,251
+CWIP,0
+Investments,2
+Other Assets,278
+  └─ Inventories,95
+  └─ Trade receivables,99
+    └─ Receivables over 6m,102
+    └─ Receivables under 6m,3
+    └─ Prov for Doubtful,-6
+  └─ Cash Equivalents,30
+  └─ Loans n Advances,-2
+  └─ Other asset items,56
+Total Assets,386

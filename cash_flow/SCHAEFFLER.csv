@@ -1,0 +1,21 @@
+Metric,Dec 2022,Dec 2023,Dec 2024,Dec 2025
+Cash from Operating Activity,751,884,840,1290
+  └─ Profit from operations,1310,1337,1474,1834
+  └─ Receivables,-237,-38,-243,-449
+  └─ Inventory,-160,-49,-132,-337
+  └─ Payables,161,-53,71,585
+  └─ Other WC items,-9,-15,-17,61
+  └─ Working capital changes,-246,-155,-320,-140
+  └─ Direct taxes,-314,-297,-314,-403
+Cash from Investing Activity,-535,-595,-25,-341
+  └─ Fixed assets purchased,-483,-520,-744,-464
+  └─ Fixed assets sold,4,1,1,1
+  └─ Interest received,53,91,88,117
+  └─ Other investing items,-108,-167,630,5
+Cash from Financing Activity,-257,-386,-421,-449
+  └─ Interest paid fin,-4,-5,-4,-5
+  └─ Dividends paid,-250,-375,-406,-438
+  └─ Financial liabilities,-3,-6,-10,-7
+Net Cash Flow,-41,-96,394,500
+  └─ Free Cash Flow,272,365,97,827
+  └─ CFO/OP,82%,89%,80%,96%

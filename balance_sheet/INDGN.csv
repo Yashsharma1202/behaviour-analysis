@@ -1,0 +1,33 @@
+Metric,Mar 2019,Mar 2020,Mar 2021,Mar 2022,Mar 2023,Mar 2024,Mar 2025,Mar 2026
+Equity Capital,0.31,0.31,0.31,0.35,44,44,48,48
+Reserves,73,-105,324,764,1020,1385,2568,3091
+Borrowings,147,483,51,66,502,490,102,144
+  └─ Long term Borrowings,8,341,18,11,394,333,0,0
+  └─ Short term Borrowings,45,110,7,7,0,70,0,0
+  └─ Lease Liabilities,0,32,27,48,108,86,102,144
+  └─ Preference Capital,79,315,0,0,0,0,0,0
+  └─ Other Borrowings,16,-315,-0,0,0,0,0,
+Other Liabilities,108,222,220,524,638,627,609,1337
+  └─ Non controlling int,0,89,9,0,0,0,0,0
+  └─ Trade Payables,47,31,50,74,73,118,93,181
+  └─ Advance from Customers,4,4,1,10,4,4,6,
+  └─ Other liability items,57,98,160,439,561,505,509,1156
+Total Liabilities,329,600,596,1353,2204,2546,3326,4620
+Fixed Assets,104,119,86,138,664,646,678,1812
+  └─ Building,12,53,62,99,191,192,231,
+  └─ Equipments,5,5,6,7,8,6,8,
+  └─ Computers,27,39,55,74,92,91,98,
+  └─ Furniture n fittings,3,4,4,5,8,7,8,
+  └─ Vehicles,0,0,0,0,0,0,1,
+  └─ Intangible Assets,69,69,35,51,354,452,478,1618
+  └─ Other fixed assets,77,89,29,36,211,246,270,
+  └─ Gross Block,194,259,191,271,863,995,1096,
+  └─ Accumulated Depreciation,90,140,105,134,199,349,418,
+CWIP,0,0,0,0,0,0,4,12
+Investments,0,13,0,120,614,796,1290,1100
+Other Assets,225,468,510,1096,926,1103,1355,1697
+  └─ Trade receivables,90,224,285,444,642,648,751,770
+  └─ Cash Equivalents,37,180,140,517,86,191,375,382
+  └─ Loans n Advances,12,13,26,39,62,94,66,80
+  └─ Other asset items,86,51,59,96,136,170,163,465
+Total Assets,329,600,596,1353,2204,2546,3326,4620

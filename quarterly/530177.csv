@@ -1,0 +1,19 @@
+Metric,Jun 2011
+Sales,3.21
+Expenses,3.09
+  └─ Material Cost %,59%
+  └─ Employee Cost %,20%
+Operating Profit,0.12
+OPM %,3.74%
+Other Income,0.15
+  └─ Other income normal,0.15
+Interest,0.11
+Depreciation,0.10
+Profit before tax,0.06
+Tax %,50.00%
+Net Profit,0.03
+  └─ Profit excl Excep,0.03
+  └─ Profit for PE,0.03
+  └─ Profit for EPS,0.03
+EPS in Rs,0.09
+Raw PDF,

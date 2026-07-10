@@ -1,0 +1,17 @@
+Metric,Mar 2014,Mar 2015,Mar 2016,Mar 2017
+Equity Capital,0.10,1.10,1.10,1.10
+Reserves,0.21,2.00,1.97,2.01
+Borrowing,0.00,0.00,0.00,0.00
+Other Liabilities,0.01,0.35,0.01,0.01
+  └─ Trade Payables,0.00,0.09,0.00,0.00
+  └─ Other liability items,0.01,0.26,0.01,0.01
+Total Liabilities,0.32,3.45,3.08,3.12
+Fixed Assets,0.00,0.00,0.00,0.00
+CWIP,0.00,0.00,0.00,0.00
+Investments,0.10,0.00,0.27,0.11
+Other Assets,0.22,3.45,2.81,3.01
+  └─ Inventories,-0.00,-0.00,-0.00,1.80
+  └─ Trade receivables,-0.00,-0.00,0.44,-0.00
+  └─ Cash Equivalents,0.21,0.35,0.83,0.03
+  └─ Other asset items,0.01,3.10,1.54,1.18
+Total Assets,0.32,3.45,3.08,3.12

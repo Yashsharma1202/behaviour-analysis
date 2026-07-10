@@ -1,0 +1,19 @@
+Metric,Mar 2016,Mar 2025
+Cash from Operating Activity,-3,5
+  └─ Profit from operations,-0.51,9.97
+  └─ Loans Advances,-2.58,0.00
+  └─ Other WC items,0.04,0.42
+  └─ Working capital changes,-2.54,0.42
+  └─ Direct taxes,0.01,-5.43
+Cash from Investing Activity,3,-5
+  └─ Investments purchased,-8,-227
+  └─ Investments sold,8,223
+  └─ Interest received,0,0
+  └─ Dividends received,3,0
+  └─ Other investing items,0,-0
+Cash from Financing Activity,-0,-0
+  └─ Repayment of borrowings,-0.03,0.00
+  └─ Dividends paid,0.00,-0.12
+Net Cash Flow,0,0
+  └─ Free Cash Flow,-3,5
+  └─ CFO/OP,-92%,96%

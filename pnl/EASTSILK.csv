@@ -1,0 +1,26 @@
+Metric,Mar 2007
+Sales,434
+Expenses,367
+  └─ Material Cost %,60%
+    └─ Raw material cost,258
+    └─ Change in inventory,4
+  └─ Manufacturing Cost %,10%
+  └─ Employee Cost %,1%
+  └─ Other Cost %,13%
+Operating Profit,67
+OPM %,15%
+Other Income,40
+  └─ Exceptional items,8.86
+  └─ Other income normal,31.11
+Interest,23
+Depreciation,11
+Profit before tax,73
+Tax %,17%
+Net Profit,61
+  └─ Minority share,-3
+  └─ Exceptional items AT,7
+  └─ Profit excl Excep,53
+  └─ Profit for PE,51
+  └─ Profit for EPS,58
+EPS in Rs,7.30
+Dividend Payout %,12%

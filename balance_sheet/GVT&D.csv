@@ -1,0 +1,31 @@
+Metric,Dec 2010
+Equity Capital,48
+Reserves,955
+Borrowings,896
+  └─ Other Borrowings,896
+Other Liabilities,2570
+  └─ Trade Payables,908
+  └─ Advance from Customers,495
+  └─ Other liability items,1167
+Total Liabilities,4468
+Fixed Assets,872
+  └─ Land,63
+  └─ Building,430
+  └─ Plant Machinery,552
+  └─ Furniture n fittings,116
+  └─ Vehicles,2
+  └─ Intangible Assets,32
+  └─ Gross Block,1195
+  └─ Accumulated Depreciation,323
+CWIP,22
+Investments,0
+Other Assets,3574
+  └─ Inventories,481
+  └─ Trade receivables,2140
+    └─ Receivables over 6m,191
+    └─ Receivables under 6m,1996
+    └─ Prov for Doubtful,-47
+  └─ Cash Equivalents,120
+  └─ Loans n Advances,16
+  └─ Other asset items,817
+Total Assets,4468

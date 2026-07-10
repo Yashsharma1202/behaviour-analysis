@@ -1,0 +1,20 @@
+Metric,Dec 2020,Sep 2021,Dec 2021
+Sales,1.74,1.28,1.26
+  └─ YOY Sales Growth %,,,-27.59%
+Expenses,1.77,1.24,1.20
+  └─ Material Cost %,71%,59%,56%
+  └─ Employee Cost %,10%,12%,12%
+Operating Profit,-0.03,0.04,0.06
+OPM %,-1.72%,3.12%,4.76%
+Other Income,0.00,0.00,0.00
+Interest,0.03,0.03,0.03
+Depreciation,0.02,0.02,0.02
+Profit before tax,-0.08,-0.01,0.01
+Tax %,0.00%,0.00%,0.00%
+Net Profit,-0.09,-0.01,0.01
+  └─ Profit excl Excep,-0,-0,0
+  └─ Profit for PE,-0,-0,0
+  └─ Profit for EPS,-0,-0,0
+  └─ YOY Profit Growth %,,,111%
+EPS in Rs,-0.18,-0.02,0.02
+Raw PDF,,,

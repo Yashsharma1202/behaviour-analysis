@@ -1,0 +1,31 @@
+Metric,Mar 2023,Mar 2024,Mar 2025,Mar 2026
+Cash from Operating Activity,2055,-678,-10083,-15439
+  └─ Profit from operations,36,-139,-112,-19
+  └─ Receivables,0,-66,2,-340
+  └─ Payables,0,96,291,758
+  └─ Loans Advances,0,-175,-9875,-15634
+  └─ Operating borrowings,2011,0,0,0
+  └─ Operating Deposits,0,-59,-109,0
+  └─ Other WC items,0,0,0,66
+  └─ Working capital changes,2011,-204,-9691,-15150
+  └─ Direct taxes,0,-335,-280,-270
+  └─ Other operating items,8,0,0,0
+Cash from Investing Activity,-1110,1441,6406,-5697
+  └─ Fixed assets purchased,0,-1,-42,-105
+  └─ Investments purchased,-3471,-17049,-28924,-69014
+  └─ Investments sold,2304,21882,27427,62470
+  └─ Interest received,0,960,860,598
+  └─ Dividends received,0,217,403,441
+  └─ Investment in group cos,0,-6,-428,-857
+  └─ Redemp n Canc of Shares,0,0,0,0
+  └─ Other investing items,56,-4562,7110,770
+Cash from Financing Activity,-889,-753,3962,21454
+  └─ Proceeds from shares,0,0,0,3956
+  └─ Proceeds from borrowings,0,0,3968,46101
+  └─ Repayment of borrowings,0,-743,0,-28284
+  └─ Interest paid fin,0,-10,-5,0
+  └─ Dividends paid,-889,0,0,-318
+  └─ Financial liabilities,0,0,0,-2
+Net Cash Flow,56,11,285,318
+  └─ Free Cash Flow,2055,-678,-10125,-15544
+  └─ CFO/OP,5231%,-22%,-633%,-658%

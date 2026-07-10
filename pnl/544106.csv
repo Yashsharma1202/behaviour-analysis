@@ -1,0 +1,26 @@
+Metric,Mar 2025,TTM
+Sales,391,400
+Expenses,378,386
+  └─ Material Cost %,92%,
+    └─ Raw material cost,366,
+    └─ Change in inventory,-6,
+  └─ Manufacturing Cost %,3%,
+  └─ Employee Cost %,1%,
+  └─ Other Cost %,0%,
+Operating Profit,13,14
+OPM %,3%,3%
+Other Income,0,0
+  └─ Exceptional items,0.03,
+  └─ Other income normal,0.34,
+Interest,4,3
+Depreciation,3,2
+Profit before tax,7,8
+Tax %,30%,
+Net Profit,5,6
+  └─ Minority share,-0.04,
+  └─ Exceptional items AT,0.02,
+  └─ Profit excl Excep,5.06,
+  └─ Profit for PE,5.02,
+  └─ Profit for EPS,5.04,
+EPS in Rs,9.33,10.21
+Dividend Payout %,0%,

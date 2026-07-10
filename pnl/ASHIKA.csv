@@ -1,0 +1,29 @@
+Metric,Mar 2006,Mar 2007,Mar 2008,Mar 2024,Mar 2025,Mar 2026
+Revenue,48,4,29,18,4,240
+  └─ Sales Growth %,,-91%,582%,,-77%,5562%
+Interest,1,0,0,1,8,33
+Expenses,46,4,28,5,63,112
+  └─ Material Cost %,93.30%,54.33%,86.79%,0.00%,0.00%,0.00%
+    └─ Raw material cost,43.38,2.12,25.55,0.00,0.00,0.00
+    └─ Change in inventory,1.19,0.20,-0.26,0.00,0.00,0.00
+  └─ Manufacturing Cost %,0.13%,1.64%,0.38%,0.38%,1190.33%,0.00%
+  └─ Employee Cost %,1.19%,16.86%,2.99%,15.74%,82.55%,19.90%
+  └─ Other Cost %,1.38%,16.16%,5.46%,11.24%,221.93%,26.89%
+Financing Profit,1,0,1,13,-67,95
+Financing Margin %,2%,6%,3%,69%,-1573%,40%
+Other Income,0,-0,0,0,0,14
+  └─ Exceptional items,0.00,-0.02,0.00,0.00,0.00,0.00
+  └─ Other income normal,0.08,0.00,0.00,0.13,0.05,14.04
+Depreciation,0,0,0,0,0,17
+Profit before tax,1,0,1,13,-67,92
+Tax %,14%,26%,36%,16%,-23%,36%
+Net Profit,1,0,1,11,-51,59
+  └─ Profit from Associates,0,0,0,0,0,0
+  └─ Minority share,0,0,0,0,0,1
+  └─ Exceptional items AT,0,-0,0,0,0,0
+  └─ Profit excl Excep,1,0,1,11,-51,59
+  └─ Profit for PE,1,0,1,11,-51,60
+  └─ Profit for EPS,1,0,1,11,-51,60
+  └─ Profit Growth %,,-84%,281%,,-581%,217%
+EPS in Rs,,,,9.01,-15.55,13.48
+Dividend Payout %,0%,0%,0%,0%,0%,4%

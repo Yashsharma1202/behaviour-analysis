@@ -1,0 +1,20 @@
+Metric,Mar 2021,Mar 2022
+Equity Capital,6.84,
+Reserves,-6.53,
+Borrowings,11.35,
+  └─ Long term Borrowings,5.71,5.02
+  └─ Short term Borrowings,5.64,6.94
+Other Liabilities,2.53,
+  └─ Trade Payables,1.48,1.21
+  └─ Other liability items,1.05,0.87
+Total Liabilities,14.19,
+Fixed Assets,3.79,
+CWIP,0.00,
+Investments,0.06,
+Other Assets,10.34,
+  └─ Inventories,2.23,0.00
+  └─ Trade receivables,3.55,3.58
+  └─ Cash Equivalents,0.28,0.06
+  └─ Loans n Advances,2.63,2.30
+  └─ Other asset items,1.65,1.74
+Total Assets,14.19,

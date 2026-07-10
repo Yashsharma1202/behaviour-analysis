@@ -1,0 +1,32 @@
+Metric,Mar 2023,Mar 2024,Mar 2025,Mar 2026
+Equity Capital,22,22,22,25
+Reserves,26,42,56,84
+Borrowings,19,26,24,39
+  └─ Long term Borrowings,7.39,6.09,4.20,20.43
+  └─ Short term Borrowings,11.45,20.05,19.34,18.14
+  └─ Other Borrowings,-0.00,-0.00,0.01,
+Other Liabilities,26,24,21,20
+  └─ Trade Payables,21.21,20.68,10.15,10.58
+  └─ Advance from Customers,3.39,0.48,4.58,
+  └─ Other liability items,1.31,2.91,6.75,9.88
+Total Liabilities,93,114,123,168
+Fixed Assets,26,30,35,31
+  └─ Land,1.84,1.87,1.87,
+  └─ Building,13.40,16.36,19.88,
+  └─ Plant Machinery,38.98,42.94,48.45,
+  └─ Equipments,0.28,0.29,0.29,
+  └─ Computers,0.18,0.20,0.20,
+  └─ Furniture n fittings,1.76,2.00,2.00,
+  └─ Vehicles,8.54,8.80,8.80,
+  └─ Other fixed assets,-0.01,0.00,0.00,
+  └─ Gross Block,64.97,72.46,81.49,
+  └─ Accumulated Depreciation,38.92,42.62,46.58,
+CWIP,4,10,1,1
+Investments,0,0,0,0
+Other Assets,63,75,88,135
+  └─ Inventories,29,28,34,39
+  └─ Trade receivables,5,22,28,41
+  └─ Cash Equivalents,11,4,1,5
+  └─ Loans n Advances,11,11,13,50
+  └─ Other asset items,7,10,11,0
+Total Assets,93,114,123,168

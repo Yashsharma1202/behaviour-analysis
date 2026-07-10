@@ -1,0 +1,19 @@
+Metric,Mar 2019,Mar 2020
+Equity Capital,3.00,3.00
+Reserves,-0.11,0.03
+Borrowing,7.21,27.89
+Other Liabilities,0.15,0.43
+  └─ Trade Payables,0.00,0.05
+  └─ Other liability items,0.15,0.38
+Total Liabilities,10.25,31.35
+Fixed Assets,0.00,0.03
+  └─ Furniture n fittings,0.00,0.01
+  └─ Other fixed assets,0.00,0.02
+  └─ Gross Block,0.00,0.03
+CWIP,0.00,0.00
+Investments,0.79,2.52
+Other Assets,9.46,28.80
+  └─ Cash Equivalents,0.29,1.87
+  └─ Loans n Advances,0.03,0.05
+  └─ Other asset items,9.14,26.88
+Total Assets,10.25,31.35

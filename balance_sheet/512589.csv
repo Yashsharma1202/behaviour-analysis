@@ -1,0 +1,20 @@
+Metric,Mar 2016,Mar 2017,Mar 2018
+Equity Capital,3.00,3.00,3.00
+Reserves,8.31,8.80,9.07
+Borrowings,0.00,0.00,0.00
+Other Liabilities,0.22,0.13,0.20
+  └─ Advance from Customers,0.18,0.00,0.00
+  └─ Other liability items,0.04,0.13,0.20
+Total Liabilities,11.53,11.93,12.27
+Fixed Assets,0.00,2.15,2.96
+  └─ Equipments,0.07,0.00,0.00
+  └─ Other fixed assets,0.00,2.15,2.96
+  └─ Gross Block,0.07,2.15,2.96
+  └─ Accumulated Depreciation,0.07,0.00,0.00
+CWIP,0.00,0.00,0.00
+Investments,9.86,6.99,6.78
+Other Assets,1.67,2.79,2.53
+  └─ Cash Equivalents,0.02,0.04,0.02
+  └─ Loans n Advances,1.66,2.75,1.63
+  └─ Other asset items,-0.01,0.00,0.88
+Total Assets,11.53,11.93,12.27

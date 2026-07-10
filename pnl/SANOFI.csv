@@ -1,0 +1,27 @@
+Metric,Dec 2023,Dec 2024
+Sales,1996,2013
+  └─ Sales Growth %,,0.86%
+Expenses,1508,1522
+  └─ Material Cost %,47.77%,48.64%
+    └─ Raw material cost,1237,919
+    └─ Change in inventory,-284,60
+  └─ Manufacturing Cost %,1.72%,2.27%
+  └─ Employee Cost %,14.06%,11.93%
+  └─ Other Cost %,12.01%,12.77%
+Operating Profit,488,491
+OPM %,24%,24%
+Other Income,317,78
+  └─ Exceptional items,256,62
+  └─ Other income normal,61,16
+Interest,2,2
+Depreciation,36,37
+Profit before tax,767,531
+Tax %,21%,22%
+Net Profit,603,413
+  └─ Exceptional items AT,14,-29
+  └─ Profit excl Excep,589,442
+  └─ Profit for PE,589,442
+  └─ Profit for EPS,603,413
+  └─ Profit Growth %,,-25%
+EPS in Rs,262.13,179.70
+Dividend Payout %,64%,65%

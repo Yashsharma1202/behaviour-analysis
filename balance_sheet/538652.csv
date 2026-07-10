@@ -1,0 +1,18 @@
+Metric,Mar 2013,Mar 2014,Mar 2015
+Equity Capital,3.00,3.00,3.00
+Reserves,3.56,3.82,4.08
+Borrowings,0.10,0.10,0.10
+  └─ Short term Borrowings,0.10,0.10,0.10
+Other Liabilities,0.15,0.07,0.27
+  └─ Advance from Customers,0.00,0.00,0.22
+  └─ Other liability items,0.15,0.07,0.05
+Total Liabilities,6.81,6.99,7.45
+Fixed Assets,0.00,0.00,0.00
+CWIP,0.00,0.00,0.00
+Investments,6.56,5.33,5.97
+Other Assets,0.25,1.66,1.48
+  └─ Trade receivables,0.00,0.05,0.79
+  └─ Cash Equivalents,0.06,0.04,0.27
+  └─ Loans n Advances,0.14,1.53,0.28
+  └─ Other asset items,0.05,0.04,0.14
+Total Assets,6.81,6.99,7.45

@@ -1,0 +1,23 @@
+Metric,Mar 2012,Dec 2012,Mar 2013
+Sales,26.38,19.75,22.67
+  └─ YOY Sales Growth %,,,-14.06%
+Expenses,25.41,18.57,21.30
+  └─ Material Cost %,76%,79%,71%
+  └─ Employee Cost %,4%,4%,5%
+Operating Profit,0.97,1.18,1.37
+OPM %,3.68%,5.97%,6.04%
+Other Income,0.27,0.10,0.00
+  └─ Exceptional items,-0.01,0.00,0.00
+  └─ Other income normal,0.28,0.10,0.00
+Interest,0.50,0.84,0.18
+Depreciation,0.44,0.38,0.38
+Profit before tax,0.30,0.06,0.81
+Tax %,30.00%,33.33%,34.57%
+Net Profit,0.21,0.04,0.53
+  └─ Exceptional items AT,-0,0,0
+  └─ Profit excl Excep,0,0,1
+  └─ Profit for PE,0,0,1
+  └─ Profit for EPS,0,0,1
+  └─ YOY Profit Growth %,,,141%
+EPS in Rs,0.11,0.02,0.27
+Raw PDF,,,

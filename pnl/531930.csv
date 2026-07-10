@@ -1,0 +1,26 @@
+Metric,Mar 2017
+Sales,161
+Expenses,162
+  └─ Material Cost %,95%
+    └─ Raw material cost,142
+    └─ Change in inventory,12
+  └─ Manufacturing Cost %,1%
+  └─ Employee Cost %,2%
+  └─ Other Cost %,2%
+Operating Profit,-1
+OPM %,-1%
+Other Income,5
+  └─ Exceptional items,1.93
+  └─ Other income normal,2.60
+Interest,2
+Depreciation,1
+Profit before tax,1
+Tax %,17%
+Net Profit,1
+  └─ Profit from Associates,-0.19
+  └─ Exceptional items AT,1.66
+  └─ Profit excl Excep,-0.75
+  └─ Profit for PE,-0.75
+  └─ Profit for EPS,0.91
+EPS in Rs,0.98
+Dividend Payout %,0%

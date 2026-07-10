@@ -1,0 +1,24 @@
+Metric,Dec 2025
+Sales,962
+Expenses,1001
+  └─ Material Cost %,49.07%
+    └─ Raw material cost,435
+    └─ Change in inventory,37
+  └─ Employee Cost %,24.16%
+  └─ Other Cost %,30.78%
+Operating Profit,-39
+OPM %,-4%
+Other Income,55
+  └─ Exceptional items,-11
+  └─ Other income normal,67
+Interest,21
+Depreciation,11
+Profit before tax,-15
+Tax %,95%
+Net Profit,-29
+  └─ Exceptional items AT,-0.54
+  └─ Profit excl Excep,-28.64
+  └─ Profit for PE,-28.64
+  └─ Profit for EPS,-29.18
+EPS in Rs,-59.10
+Dividend Payout %,0%

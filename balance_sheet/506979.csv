@@ -1,0 +1,29 @@
+Metric,Mar 2006,Mar 2007,Mar 2008,Mar 2009,Mar 2010,Mar 2011
+Equity Capital,7.45,7.45,3.99,3.30,3.30,5.80
+Reserves,-24.07,-23.46,-5.85,3.65,1.98,-0.84
+Borrowings,40.27,43.15,29.72,17.79,30.55,33.04
+  └─ Other Borrowings,40.27,43.15,29.72,17.79,30.55,33.04
+Other Liabilities,6.91,4.42,3.80,3.31,4.61,3.66
+  └─ Trade Payables,3.49,2.16,1.56,1.36,2.34,2.08
+  └─ Advance from Customers,1.86,1.36,1.13,1.01,1.07,0.14
+  └─ Other liability items,1.56,0.90,1.11,0.94,1.20,1.44
+Total Liabilities,30.56,31.56,31.66,28.05,40.44,41.66
+Fixed Assets,20.92,21.50,20.40,18.04,30.55,30.65
+  └─ Land,0,1,1,1,1,1
+  └─ Building,5,5,5,4,6,7
+  └─ Plant Machinery,34,36,37,33,47,48
+  └─ Equipments,0,0,0,0,0,0
+  └─ Computers,0,0,0,0,0,0
+  └─ Furniture n fittings,0,0,0,0,0,1
+  └─ Vehicles,0,0,0,0,0,1
+  └─ Gross Block,41,43,45,40,55,58
+  └─ Accumulated Depreciation,20,22,24,22,25,28
+CWIP,0.01,0.05,0.13,0.84,1.54,1.82
+Investments,0.53,0.01,0.01,0.01,0.01,0.03
+Other Assets,9.10,10.00,11.12,9.16,8.34,9.16
+  └─ Inventories,1.80,2.73,2.94,2.43,2.65,3.47
+  └─ Trade receivables,4.44,4.50,4.18,2.08,3.16,3.18
+  └─ Cash Equivalents,0.30,0.35,0.55,0.21,0.30,0.31
+  └─ Loans n Advances,0.71,0.49,0.74,0.65,1.07,1.05
+  └─ Other asset items,1.85,1.93,2.71,3.79,1.16,1.15
+Total Assets,30.56,31.56,31.66,28.05,40.44,41.66

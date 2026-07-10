@@ -1,0 +1,21 @@
+Metric,Mar 2015,Mar 2016,Mar 2017
+Sales,0.00,0.11,0.12
+  └─ Sales Growth %,,,9.09%
+Expenses,0.07,0.10,0.26
+  └─ Employee Cost %,,45%,42%
+  └─ Other Cost %,,45%,175%
+Operating Profit,-0.07,0.01,-0.14
+OPM %,,9.09%,-116.67%
+Other Income,0.02,0.00,0.00
+  └─ Other income normal,0.02,0.00,0.00
+Interest,-0.09,0.00,0.00
+Depreciation,0.00,0.00,0.00
+Profit before tax,0.04,0.01,-0.14
+Tax %,25.00%,0.00%,0.00%
+Net Profit,0.03,0.01,-0.14
+  └─ Profit excl Excep,0,0,-0
+  └─ Profit for PE,0,0,-0
+  └─ Profit for EPS,0,0,-0
+  └─ Profit Growth %,,-67%,-1500%
+EPS in Rs,0.09,0.03,-0.42
+Dividend Payout %,0.00%,0.00%,0.00%

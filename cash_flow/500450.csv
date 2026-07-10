@@ -1,0 +1,16 @@
+Metric,Mar 2003,Mar 2004,Mar 2005
+Cash from Operating Activity,,,-0.98
+  └─ Profit from operations,,,-2.30
+  └─ Receivables,,,0.91
+  └─ Inventory,,,0.71
+  └─ Payables,,,-0.99
+  └─ Working capital changes,,,0.63
+  └─ Direct taxes,,,0.69
+Cash from Investing Activity,,,0.23
+  └─ Interest received,,,0.28
+  └─ Other investing items,,,-0.05
+Cash from Financing Activity,,,-0.10
+  └─ Interest paid fin,,,-0.10
+Net Cash Flow,,,-0.85
+  └─ Free Cash Flow,,,-0.98
+  └─ CFO/OP,,,23%

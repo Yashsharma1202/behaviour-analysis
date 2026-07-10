@@ -1,0 +1,17 @@
+Metric,Mar 2016
+Equity Capital,1.50
+Reserves,2.17
+Borrowings,0.00
+Other Liabilities,0.20
+  └─ Other liability items,0.20
+Total Liabilities,3.87
+Fixed Assets,0.00
+  └─ Vehicles,0.09
+  └─ Gross Block,0.09
+  └─ Accumulated Depreciation,0.08
+CWIP,0.00
+Investments,0.02
+Other Assets,3.85
+  └─ Cash Equivalents,0.44
+  └─ Other asset items,3.41
+Total Assets,3.87

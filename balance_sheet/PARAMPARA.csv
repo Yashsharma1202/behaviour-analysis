@@ -1,0 +1,33 @@
+Metric,Mar 2019,Mar 2020,Mar 2021,Mar 2022,Mar 2023
+Equity Capital,1.75,7.01,10.50,10.50,10.50
+Reserves,5.36,0.18,0.29,0.01,-1.79
+Borrowings,9.12,9.27,6.73,6.64,6.67
+  └─ Long term Borrowings,7.19,7.12,4.53,4.90,4.93
+  └─ Short term Borrowings,1.76,1.74,1.78,1.74,1.74
+  └─ Preference Capital,3.32,3.32,0.00,0.00,0.00
+  └─ Other Borrowings,-3.15,-2.91,0.42,0.00,0.00
+Other Liabilities,1.23,2.53,1.22,1.01,1.01
+  └─ Trade Payables,0.55,0.50,0.31,0.29,0.29
+  └─ Advance from Customers,0.02,0.02,0.02,0.02,0.02
+  └─ Other liability items,0.66,2.01,0.89,0.70,0.70
+Total Liabilities,17.46,18.99,18.74,18.16,16.39
+Fixed Assets,4.17,4.01,4.16,4.05,4.05
+  └─ Land,3.55,3.55,3.55,3.55,3.55
+  └─ Building,0.03,0.03,0.36,0.36,0.36
+  └─ Plant Machinery,0.43,0.45,0.44,0.44,0.44
+  └─ Equipments,0.00,0.00,0.00,0.01,0.01
+  └─ Computers,0.01,0.01,0.01,0.01,0.01
+  └─ Furniture n fittings,0.08,0.08,0.10,0.09,0.09
+  └─ Vehicles,0.47,0.47,0.42,0.42,0.42
+  └─ Other fixed assets,-0.01,0.00,0.00,0.01,0.01
+  └─ Gross Block,4.56,4.59,4.88,4.89,4.89
+  └─ Accumulated Depreciation,0.39,0.58,0.72,0.84,0.84
+CWIP,0.00,0.00,0.00,0.00,0.00
+Investments,0.00,0.00,0.00,2.00,2.00
+Other Assets,13.29,14.98,14.58,12.11,10.34
+  └─ Inventories,2.03,2.24,1.89,1.76,0.00
+  └─ Trade receivables,1.99,1.46,0.42,0.05,0.05
+  └─ Cash Equivalents,0.47,0.23,0.36,0.27,0.27
+  └─ Loans n Advances,3.72,0.79,2.07,0.34,0.34
+  └─ Other asset items,5.08,10.26,9.84,9.69,9.68
+Total Assets,17.46,18.99,18.74,18.16,16.39

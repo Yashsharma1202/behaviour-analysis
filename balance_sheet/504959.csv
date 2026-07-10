@@ -1,0 +1,30 @@
+Metric,Dec 2013,Dec 2014,Dec 2015,Dec 2016,Dec 2017,Dec 2018
+Equity Capital,2,2,2,2,2,2
+Reserves,48,56,71,88,115,139
+Borrowings,0,0,0,0,0,0
+Other Liabilities,20,34,49,59,39,35
+  └─ Trade Payables,7.83,17.02,21.12,27.23,29.10,23.62
+  └─ Advance from Customers,1.77,4.67,9.73,10.66,2.51,2.60
+  └─ Other liability items,10.78,12.42,17.85,20.81,7.73,9.20
+Total Liabilities,71,92,121,149,156,177
+Fixed Assets,13,25,26,24,37,29
+  └─ Land,0.05,0.03,0.03,0.03,0.05,0.05
+  └─ Building,5.27,3.82,4.02,4.11,9.39,9.44
+  └─ Plant Machinery,15.53,21.41,25.89,27.78,25.54,21.90
+  └─ Equipments,0.42,0.45,0.61,0.75,1.28,1.43
+  └─ Computers,0.87,0.99,1.29,1.78,1.12,1.47
+  └─ Furniture n fittings,1.28,1.36,1.39,1.41,1.27,1.25
+  └─ Vehicles,0.39,0.64,0.55,0.55,0.34,0.60
+  └─ Intangible Assets,-0.00,3.95,3.95,3.95,3.84,-0.00
+  └─ Other fixed assets,3.28,9.45,9.61,9.94,0.62,0.70
+  └─ Gross Block,27.09,42.10,47.34,50.30,43.45,36.84
+  └─ Accumulated Depreciation,14.42,16.88,21.78,26.64,6.05,7.60
+CWIP,0,0,0,6,0,0
+Investments,3,0,0,1,1,1
+Other Assets,55,67,96,118,117,146
+  └─ Inventories,11,22,30,38,34,25
+  └─ Trade receivables,13,23,28,25,32,27
+  └─ Cash Equivalents,27,15,28,27,42,90
+  └─ Loans n Advances,0,0,0,0,0,0
+  └─ Other asset items,4,7,10,27,10,4
+Total Assets,71,92,121,149,156,177

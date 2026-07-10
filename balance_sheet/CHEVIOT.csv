@@ -1,0 +1,29 @@
+Metric,Mar 2002
+Equity Capital,3
+Reserves,114
+Borrowings,4
+  └─ Other Borrowings,4.29
+Other Liabilities,15
+  └─ Non controlling int,0.51
+  └─ Trade Payables,4.67
+  └─ Other liability items,10.07
+Total Liabilities,137
+Fixed Assets,81
+  └─ Land,16
+  └─ Building,22
+  └─ Plant Machinery,61
+  └─ Equipments,2
+  └─ Furniture n fittings,4
+  └─ Vehicles,0
+  └─ Other fixed assets,1
+  └─ Gross Block,106
+  └─ Accumulated Depreciation,25
+CWIP,2
+Investments,6
+Other Assets,48
+  └─ Inventories,15.96
+  └─ Trade receivables,13.14
+  └─ Cash Equivalents,5.17
+  └─ Loans n Advances,2.72
+  └─ Other asset items,10.62
+Total Assets,137

@@ -1,0 +1,24 @@
+Metric,Mar 2015,Mar 2016,Mar 2017,Mar 2018,Mar 2019
+Equity Capital,40.17,40.17,40.17,40.17,40.17
+Reserves,-218.59,-218.48,-219.03,-218.35,-218.67
+Borrowings,9.50,9.50,9.50,9.50,9.50
+  └─ Long term Borrowings,0.00,9.50,0.00,0.00,0.00
+  └─ Short term Borrowings,0.00,0.00,9.50,9.50,9.50
+  └─ Preference Capital,9.50,0.00,0.00,0.00,0.00
+Other Liabilities,176.15,176.10,176.11,173.81,173.87
+  └─ Other liability items,176,176,176,174,174
+Total Liabilities,7.23,7.29,6.75,5.13,4.87
+Fixed Assets,0.00,0.00,0.00,0.00,0.00
+  └─ Equipments,0.22,0.15,0.15,0.15,0.15
+  └─ Furniture n fittings,0.01,0.01,0.01,0.01,0.01
+  └─ Other fixed assets,0.01,0.00,0.00,0.00,0.00
+  └─ Gross Block,0.24,0.16,0.16,0.16,0.16
+  └─ Accumulated Depreciation,0.24,0.16,0.16,0.16,0.16
+CWIP,0.00,0.00,0.00,0.00,0.00
+Investments,4.00,3.74,3.25,2.71,2.84
+Other Assets,3.23,3.55,3.50,2.42,2.03
+  └─ Receivables over 6m,8.47,0.00,0.00,0.00,0.00
+  └─ Cash Equivalents,0.03,0.35,0.30,0.31,0.05
+  └─ Loans n Advances,0.60,0.00,0.00,0.13,0.14
+  └─ Other asset items,2.60,3.20,3.20,1.98,1.84
+Total Assets,7.23,7.29,6.75,5.13,4.87

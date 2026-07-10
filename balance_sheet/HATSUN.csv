@@ -1,0 +1,38 @@
+Metric,Mar 2009,Mar 2010,Mar 2024,Mar 2025,Sep 2025
+Equity Capital,7,7,22,22,22
+Reserves,45,47,1550,1695,1807
+Borrowings,235,314,2698,2570,2011
+  └─ Long term Borrowings,0,0,956,934,920
+  └─ Short term Borrowings,0,0,1316,1162,605
+  └─ Lease Liabilities,0,0,427,474,487
+  └─ Preference Capital,5,0,0,0,0
+  └─ Other Borrowings,230,314,0,0,
+Other Liabilities,73,98,464,577,589
+  └─ Trade Payables,37,48,188,253,255
+  └─ Advance from Customers,1,3,18,29,
+  └─ Other liability items,35,47,258,295,334
+Total Liabilities,359,466,4735,4865,4429
+Fixed Assets,166,322,2767,3274,3542
+  └─ Land,20,20,233,245,
+  └─ Building,48,115,1682,1898,
+  └─ Plant Machinery,176,290,2332,2766,
+  └─ Equipments,3,3,28,29,
+  └─ Computers,0,0,19,25,
+  └─ Furniture n fittings,3,4,40,50,
+  └─ Vehicles,6,6,6,10,
+  └─ Intangible Assets,0,0,8,146,156
+  └─ Other fixed assets,1,1,19,41,
+  └─ Gross Block,257,438,4367,5210,
+  └─ Accumulated Depreciation,91,116,1600,1936,
+CWIP,128,33,238,284,35
+Investments,0,0,30,37,57
+Other Assets,65,111,1699,1270,795
+  └─ Inventories,28,57,1452,996,577
+  └─ Trade receivables,9,14,10,8,10
+    └─ Receivables over 6m,0.20,0.21,0.00,2.93,
+    └─ Receivables under 6m,8.37,13.45,10.06,8.05,
+    └─ Prov for Doubtful,0.00,0.00,0.00,-2.82,
+  └─ Cash Equivalents,6,14,53,71,50
+  └─ Loans n Advances,5,7,17,16,74
+  └─ Other asset items,17,19,167,178,84
+Total Assets,359,466,4735,4865,4429

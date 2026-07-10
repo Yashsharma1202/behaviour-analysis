@@ -1,0 +1,25 @@
+Metric,Mar 2019,TTM
+Sales,855,681
+Expenses,820,649
+  └─ Material Cost %,81%,
+    └─ Raw material cost,703,
+    └─ Change in inventory,-9,
+  └─ Manufacturing Cost %,3%,
+  └─ Employee Cost %,9%,
+  └─ Other Cost %,2%,
+Operating Profit,35,32
+OPM %,4%,5%
+Other Income,10,11
+  └─ Exceptional items,1.33,
+  └─ Other income normal,8.45,
+Interest,16,18
+Depreciation,16,18
+Profit before tax,13,7
+Tax %,9%,
+Net Profit,12,8
+  └─ Exceptional items AT,1.13,
+  └─ Profit excl Excep,10.38,
+  └─ Profit for PE,10.38,
+  └─ Profit for EPS,11.51,
+EPS in Rs,29.78,19.64
+Dividend Payout %,10%,

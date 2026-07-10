@@ -1,0 +1,27 @@
+Metric,Mar 2006,Mar 2007,Mar 2008
+Sales,83,107,159
+  └─ Sales Growth %,,28.55%,48.54%
+Expenses,67,86,134
+  └─ Material Cost %,53%,57%,66%
+    └─ Raw material cost,45,63,106
+    └─ Change in inventory,-1,-2,-1
+  └─ Manufacturing Cost %,14%,12%,8%
+  └─ Employee Cost %,8%,8%,7%
+  └─ Other Cost %,5%,4%,3%
+Operating Profit,17,21,25
+OPM %,20%,20%,16%
+Other Income,1,2,3
+  └─ Exceptional items,0.16,-0.08,0.00
+  └─ Other income normal,1.03,2.06,2.56
+Interest,2,3,4
+Depreciation,4,5,8
+Profit before tax,11,14,15
+Tax %,35%,33%,35%
+Net Profit,7,10,10
+  └─ Exceptional items AT,0.10,-0.05,0.00
+  └─ Profit excl Excep,7.29,9.72,9.84
+  └─ Profit for PE,7.29,9.72,9.84
+  └─ Profit for EPS,7.39,9.67,9.84
+  └─ Profit Growth %,,33.33%,1.23%
+EPS in Rs,30.07,39.34,40.03
+Dividend Payout %,17%,13%,15%

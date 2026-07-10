@@ -1,0 +1,25 @@
+Metric,Jun 2006,Jun 2007,Jun 2008,Mar 2009,Mar 2010,Mar 2011,Mar 2012
+Cash from Operating Activity,-4,12,10,35,17,26,35
+  └─ Profit from operations,16.87,11.70,19.03,11.42,15.59,34.15,39.29
+  └─ Receivables,-4.77,-5.09,-11.20,19.05,-1.69,-7.28,3.84
+  └─ Inventory,-14.07,4.46,-0.48,7.67,1.21,-11.61,-0.78
+  └─ Payables,0.01,1.00,6.07,-2.99,2.57,11.61,-1.88
+  └─ Working capital changes,-18.83,0.37,-5.61,23.73,2.09,-7.28,1.18
+  └─ Direct taxes,-0.70,-0.53,-0.44,-0.56,-0.27,-0.99,-5.07
+  └─ Other operating items,-0.91,0.48,-2.84,0.00,0.00,0.00,0.00
+Cash from Investing Activity,-35,-32,-20,1,-24,-24,-7
+  └─ Fixed assets purchased,-36.79,-34.08,-22.67,-31.45,-25.93,-31.80,-8.27
+  └─ Fixed assets sold,0.60,0.48,0.53,27.92,0.95,7.38,0.44
+  └─ Interest received,1.21,1.15,0.73,1.03,0.77,1.10,1.17
+  └─ Other investing items,0.00,0.00,1.18,3.76,-0.13,-0.34,-0.16
+Cash from Financing Activity,39,24,10,-37,7,-2,-29
+  └─ Proceeds from shares,0.05,1.38,0.00,1.00,7.70,0.00,1.91
+  └─ Proceeds from borrowings,44.31,30.66,19.66,0.00,8.40,10.52,1.04
+  └─ Repayment of borrowings,0.00,0.00,0.00,-29.32,0.00,0.00,-20.13
+  └─ Interest paid fin,-4.81,-7.47,-9.17,-8.39,-9.30,-12.78,-14.66
+  └─ Dividends paid,-0.98,-0.63,-0.42,0.00,0.00,-0.16,-0.13
+  └─ Share application money,0.00,0.35,0.00,0.00,0.00,0.00,0.00
+  └─ Other financing items,0.00,0.00,0.00,0.00,0.00,0.00,3.32
+Net Cash Flow,0,4,-0,-1,-0,-0,-0
+  └─ Free Cash Flow,-40,-22,-12,31,-8,1,28
+  └─ CFO/OP,-24%,202%,196%,449%,147%,83%,112%

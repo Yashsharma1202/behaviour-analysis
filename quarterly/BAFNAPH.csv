@@ -1,0 +1,21 @@
+Metric,Jun 2018,Sep 2018,Jun 2019,Sep 2019
+Sales,11.95,8.84,6.85,11.57
+  └─ YOY Sales Growth %,,,-42.68%,30.88%
+Expenses,13.77,8.66,9.71,11.95
+  └─ Material Cost %,92%,64%,93%,77%
+  └─ Employee Cost %,16%,25%,34%,21%
+Operating Profit,-1.82,0.18,-2.86,-0.38
+OPM %,-15.23%,2.04%,-41.75%,-3.28%
+Other Income,0.09,-0.03,0.30,0.59
+  └─ Other income normal,0.09,-0.03,0.30,0.59
+Interest,0.83,0.62,0.13,0.04
+Depreciation,1.00,0.75,1.02,0.72
+Profit before tax,-3.56,-1.22,-3.71,-0.55
+Tax %,-1.12%,4.10%,-42.59%,7.27%
+Net Profit,-3.52,-1.28,-2.13,-0.59
+  └─ Profit excl Excep,-4,-1,-2,-1
+  └─ Profit for PE,-4,-1,-2,-1
+  └─ Profit for EPS,-4,-1,-2,-1
+  └─ YOY Profit Growth %,,,39%,54%
+EPS in Rs,-1.49,-0.54,-0.90,-2.49
+Raw PDF,,,,

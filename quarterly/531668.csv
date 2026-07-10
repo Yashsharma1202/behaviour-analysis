@@ -1,0 +1,22 @@
+Metric,Jun 2008,Sep 2008
+Sales,12.26,9.85
+Expenses,11.59,9.33
+  └─ Material Cost %,94%,90%
+  └─ Employee Cost %,0%,1%
+Operating Profit,0.67,0.52
+OPM %,5.46%,5.28%
+Other Income,-0.10,-0.16
+  └─ Exceptional items,-0.11,-0.23
+  └─ Other income normal,0.01,0.07
+Interest,0.00,0.00
+Depreciation,0.04,0.04
+Profit before tax,0.53,0.32
+Tax %,0.00%,0.00%
+Net Profit,0.53,0.32
+  └─ Minority share,0.06,0.11
+  └─ Exceptional items AT,-0.11,-0.23
+  └─ Profit excl Excep,0.64,0.55
+  └─ Profit for PE,0.70,0.66
+  └─ Profit for EPS,0.59,0.43
+EPS in Rs,0.30,0.22
+Raw PDF,,

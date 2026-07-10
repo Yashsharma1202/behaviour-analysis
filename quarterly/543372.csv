@@ -1,0 +1,21 @@
+Metric,Sep 2021,Mar 2022,Sep 2022,Mar 2023
+Sales,47.63,,,
+Expenses,48.23,,,
+  └─ Material Cost %,98%,92%,94%,86%
+  └─ Employee Cost %,0%,0%,1%,0%
+Operating Profit,-0.60,,,
+OPM %,-1.26%,,,
+Other Income,3.77,,,
+  └─ Exceptional items,0.00,0.00,0.00,-2.39
+  └─ Other income normal,3.77,2.34,8.23,2.70
+Interest,0.00,,,
+Depreciation,0.00,,,
+Profit before tax,3.17,,,
+Tax %,25.24%,,,
+Net Profit,2.37,,,
+  └─ Exceptional items AT,0.00,0.00,0.00,-2.39
+  └─ Profit excl Excep,2.37,-0.92,-1.28,1.18
+  └─ Profit for PE,2.37,-0.92,-1.28,1.18
+  └─ Profit for EPS,2.37,-0.92,-1.28,-1.21
+EPS in Rs,2.19,,,
+Raw PDF,,,,

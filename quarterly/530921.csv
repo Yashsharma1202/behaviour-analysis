@@ -1,0 +1,19 @@
+Metric,Sep 2022,Jun 2023,Sep 2023
+Sales,0.00,0.05,1.03
+Expenses,1.05,1.38,3.19
+  └─ Material Cost %,,400%,190%
+  └─ Employee Cost %,,1300%,76%
+Operating Profit,-1.05,-1.33,-2.16
+OPM %,,-2660.00%,-209.71%
+Other Income,0.00,0.00,0.00
+Interest,0.00,0.00,0.01
+Depreciation,0.13,0.13,0.13
+Profit before tax,-1.18,-1.46,-2.30
+Tax %,0.00%,0.00%,6.52%
+Net Profit,-1.18,-1.46,-2.45
+  └─ Profit excl Excep,-1,-1,-2
+  └─ Profit for PE,-1,-1,-2
+  └─ Profit for EPS,-1,-1,-2
+  └─ YOY Profit Growth %,,,-108%
+EPS in Rs,-1.88,-2.32,-3.90
+Raw PDF,,,

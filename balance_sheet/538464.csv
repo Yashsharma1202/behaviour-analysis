@@ -1,0 +1,18 @@
+Metric,Mar 2012,Mar 2013
+Equity Capital,20.21,20.21
+Reserves,5.74,5.79
+Borrowing,0.00,0.00
+Other Liabilities,5.42,0.24
+  └─ Advance from Customers,5.27,0.00
+  └─ Other liability items,0.15,0.24
+Total Liabilities,31.37,26.24
+Fixed Assets,5.88,5.88
+  └─ Intangible Assets,5.88,5.88
+  └─ Gross Block,5.88,5.88
+CWIP,0.00,0.00
+Investments,14.10,12.80
+Other Assets,11.39,7.56
+  └─ Cash Equivalents,0.40,0.57
+  └─ Loans n Advances,0.04,1.86
+  └─ Other asset items,10.95,5.13
+Total Assets,31.37,26.24

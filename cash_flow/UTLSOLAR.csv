@@ -1,0 +1,22 @@
+Metric,Mar 2020,Mar 2021
+Cash from Operating Activity,-7,-11
+  └─ Profit from operations,32.10,40.60
+  └─ Receivables,-23.04,-8.55
+  └─ Inventory,-10.65,-31.00
+  └─ Payables,5.23,7.71
+  └─ Other WC items,-8.03,-13.27
+  └─ Working capital changes,-36.49,-45.11
+  └─ Interest paid,-0.68,-0.21
+  └─ Direct taxes,-1.78,-5.82
+Cash from Investing Activity,-3,-7
+  └─ Fixed assets purchased,-3.86,-7.29
+  └─ Interest received,0.68,0.21
+  └─ Invest in subsidiaries,-0.01,0.00
+Cash from Financing Activity,8,16
+  └─ Proceeds from shares,0.01,0.00
+  └─ Proceeds from borrowings,10.64,22.40
+  └─ Repayment of borrowings,-0.23,-5.40
+  └─ Interest paid fin,-1.99,-1.01
+Net Cash Flow,-2,-2
+  └─ Free Cash Flow,-11,-18
+  └─ CFO/OP,-18%,-13%

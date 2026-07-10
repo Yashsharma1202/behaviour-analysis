@@ -1,0 +1,19 @@
+Metric,Mar 2019,Mar 2020
+Cash from Operating Activity,-6.08,-18.14
+  └─ Profit from operations,-0.13,-0.55
+  └─ Receivables,0.00,-0.42
+  └─ Payables,0.00,0.05
+  └─ Loans Advances,-5.91,-17.31
+  └─ Other WC items,-0.01,0.17
+  └─ Working capital changes,-5.92,-17.51
+  └─ Direct taxes,-0.04,-0.08
+Cash from Investing Activity,0.08,-0.92
+  └─ Fixed assets purchased,0.00,-0.03
+  └─ Investments purchased,-0.18,-1.90
+  └─ Interest received,0.26,1.01
+Cash from Financing Activity,6.21,20.64
+  └─ Proceeds from borrowings,6.21,20.68
+  └─ Interest paid fin,0.00,-0.04
+Net Cash Flow,0.21,1.58
+  └─ Free Cash Flow,-6.08,-18.17
+  └─ CFO/OP,-4646%,-6946%

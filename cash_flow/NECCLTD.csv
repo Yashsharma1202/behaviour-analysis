@@ -1,0 +1,17 @@
+Metric,Mar 2014,Mar 2015,Mar 2016,Mar 2017
+Cash from Operating Activity,-6,1,2,-2
+  └─ Profit from operations,12.53,10.61,11.97,11.57
+  └─ Receivables,15.14,0.55,-6.56,-6.51
+  └─ Loans Advances,-2.82,-10.33,5.81,-2.75
+  └─ Other WC items,-26.75,3.22,-5.87,-0.93
+  └─ Working capital changes,-14.43,-6.55,-6.62,-10.19
+  └─ Direct taxes,-4.00,-3.02,-3.26,-3.41
+Cash from Investing Activity,-3,-2,-7,-3
+  └─ Fixed assets purchased,-3.37,-3.46,-7.21,-2.96
+  └─ Fixed assets sold,0.35,1.21,0.57,0.22
+  └─ Interest received,0.09,0.03,0.04,0.04
+Cash from Financing Activity,7,2,4,5
+  └─ Other financing items,7.27,1.65,4.06,5.08
+Net Cash Flow,-2,0,-0,0
+  └─ Free Cash Flow,-9,-1,-5,-5
+  └─ CFO/OP,-9%,20%,26%,7%

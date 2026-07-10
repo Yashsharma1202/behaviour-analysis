@@ -1,0 +1,21 @@
+bcEndDate,bcStartDate,caBroadcastDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,event_type,amount,ratio
+-,-,,Reliance Industries Limited,2026-06-05,10,-,INE002A01018,-,-,2026-06-05,EQ,Dividend - Rs 6 Per Share,RELIANCE,DIVIDEND,6.0,
+-,-,,Reliance Industries Limited,2025-08-14,10,-,INE002A01018,-,-,2025-08-14,EQ,Dividend - Rs 5.5 Per Share,RELIANCE,DIVIDEND,5.5,
+-,-,,Reliance Industries Limited,2024-10-28,10,-,INE002A01018,-,-,2024-10-28,EQ,Bonus 1:1,RELIANCE,BONUS,,1:1
+-,-,,Reliance Industries Limited,2024-08-19,10,-,INE002A01018,-,-,2024-08-19,EQ,Dividend - Rs 10 Per Share,RELIANCE,DIVIDEND,10.0,
+-,-,,Reliance Industries Limited,2023-08-21,10,-,INE002A01018,-,-,2023-08-21,EQ,Dividend - Rs 9 Per Share,RELIANCE,DIVIDEND,9.0,
+-,-,,Reliance Industries Limited,2023-07-20,10,-,INE002A01018,-,-,2023-07-20,EQ,Demerger,RELIANCE,DEMERGER,,
+-,-,,Reliance Industries Limited,2022-08-18,10,-,INE002A01018,-,-,2022-08-19,EQ,Dividend - Rs 8 Per Share,RELIANCE,DIVIDEND,8.0,
+-,-,,Reliance Industries Limited,2021-06-11,10,-,INE002A01018,-,-,2021-06-14,EQ,Dividend - Rs 7 Per Share,RELIANCE,DIVIDEND,7.0,
+-,-,,Reliance Industries Limited,2020-07-02,10,-,INE002A01018,-,-,2020-07-03,EQ,Dividend - Rs 6.50 Per Share,RELIANCE,DIVIDEND,6.5,
+-,-,,Reliance Industries Limited,2020-05-13,10,-,INE002A01018,-,-,2020-05-14,EQ,Rights 1:15 @ Premium Rs 1247,RELIANCE,RIGHTS,1247.0,1:15
+-,-,,Reliance Industries Limited,2019-08-02,10,-,INE002A01018,-,-,2019-08-05,EQ,Annual General Meeting/Dividend - Rs 6.50 Per Share,RELIANCE,DIVIDEND,6.5,
+-,-,,Reliance Industries Limited,2018-06-27,10,-,INE002A01018,-,-,2018-06-28,EQ,Dividend- Rs 6 Per Share,RELIANCE,DIVIDEND,6.0,
+-,-,,Reliance Industries Limited,2017-09-07,10,-,INE002A01018,-,-,2017-09-09,EQ,Bonus 1:1,RELIANCE,BONUS,,1:1
+-,-,,Reliance Industries Limited,2017-07-13,10,-,INE002A01018,-,-,2017-07-14,EQ,Dividend - Rs 11/- Per Share,RELIANCE,DIVIDEND,11.0,
+-,-,,Reliance Industries Limited,2016-03-17,10,-,INE002A01018,-,-,2016-03-18,EQ,Interim Dividend - Rs 10.50/- Per Share (Purpose Revised),RELIANCE,DIVIDEND,10.5,
+15-May-2015,12-May-2015,,Reliance Industries Limited,2015-05-08,10,-,INE002A01018,-,-,,EQ,Dividend - Rs 10/- Per Share,RELIANCE,DIVIDEND,10.0,
+23-May-2014,20-May-2014,,Reliance Industries Limited,2014-05-16,10,-,INE002A01018,-,-,,EQ,Dividend Rs. 9.50 Per Equity Share,RELIANCE,DIVIDEND,9.5,
+18-May-2013,14-May-2013,,Reliance Industries Limited,2013-05-10,10,-,INE002A01018,-,-,,EQ,Annual General Meeting/ Dividend Rs. 9 Per Equity Share,RELIANCE,DIVIDEND,9.0,
+07-Jun-2012,02-Jun-2012,,Reliance Industries Limited,2012-05-31,10,-,INE002A01018,-,-,,EQ,Annual General Meeting And Dividend Rs.8.50 Per Share,RELIANCE,DIVIDEND,8.5,
+14-May-2011,09-May-2011,,Reliance Industries Limited,2011-05-05,10,-,INE002A01018,-,-,,EQ,Dividend-Rs.8/- Per Share,RELIANCE,DIVIDEND,8.0,

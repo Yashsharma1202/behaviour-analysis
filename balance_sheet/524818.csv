@@ -1,0 +1,32 @@
+Metric,Mar 2014,Mar 2015,Mar 2016,Mar 2017,Mar 2018
+Equity Capital,3.03,3.03,3.03,3.03,3.03
+Reserves,31.23,32.94,33.86,35.27,38.33
+Borrowings,15.50,6.62,2.44,4.58,10.20
+  └─ Long term Borrowings,0.84,0.69,0.44,0.25,2.27
+  └─ Short term Borrowings,13.92,5.68,1.76,4.14,7.41
+  └─ Other Borrowings,0.74,0.25,0.24,0.19,0.52
+Other Liabilities,36.93,7.40,8.66,8.19,11.53
+  └─ Trade Payables,33.22,4.88,6.37,6.05,10.08
+  └─ Advance from Customers,0.00,0.04,0.00,0.03,0.05
+  └─ Other liability items,3.71,2.48,2.29,2.11,1.40
+Total Liabilities,86.69,49.99,47.99,51.07,63.09
+Fixed Assets,24.89,23.70,22.88,22.15,24.40
+  └─ Land,17.43,17.43,17.43,16.63,16.63
+  └─ Building,3.98,3.98,3.98,2.22,2.22
+  └─ Plant Machinery,8.67,8.47,8.48,3.21,6.37
+  └─ Equipments,0.15,0.15,0.15,0.03,0.04
+  └─ Computers,0.33,0.33,0.34,0.05,0.05
+  └─ Furniture n fittings,0.57,0.59,0.59,0.18,0.18
+  └─ Vehicles,1.54,1.42,1.38,0.61,0.70
+  └─ Other fixed assets,0.00,0.00,0.01,0.01,0.00
+  └─ Gross Block,32.67,32.37,32.36,22.94,26.19
+  └─ Accumulated Depreciation,7.78,8.68,9.48,0.79,1.79
+CWIP,0.03,0.00,0.00,0.31,0.00
+Investments,0.00,0.00,0.00,0.60,1.16
+Other Assets,61.77,26.29,25.11,28.01,37.53
+  └─ Inventories,23.60,12.53,9.97,12.28,15.23
+  └─ Trade receivables,32.36,9.04,9.13,12.88,17.94
+  └─ Cash Equivalents,1.43,1.51,2.30,0.39,0.40
+  └─ Loans n Advances,0.25,0.11,0.13,0.18,0.50
+  └─ Other asset items,4.13,3.10,3.58,2.28,3.46
+Total Assets,86.69,49.99,47.99,51.07,63.09

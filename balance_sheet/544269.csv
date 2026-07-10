@@ -1,0 +1,28 @@
+Metric,Mar 2024
+Equity Capital,11.00
+Reserves,4.91
+Borrowings,0.59
+  └─ Long term Borrowings,0.59
+Other Liabilities,5.88
+  └─ Trade Payables,2.43
+  └─ Advance from Customers,2.38
+  └─ Other liability items,1.07
+Total Liabilities,22.38
+Fixed Assets,1.98
+  └─ Equipments,0.01
+  └─ Furniture n fittings,3.99
+  └─ Vehicles,0.02
+  └─ Other fixed assets,0.43
+  └─ Gross Block,4.45
+  └─ Accumulated Depreciation,2.47
+CWIP,-0.00
+Investments,3.00
+Other Assets,17.40
+  └─ Inventories,4.28
+  └─ Trade receivables,7.72
+    └─ Receivables over 6m,0.83
+    └─ Receivables under 6m,6.89
+  └─ Cash Equivalents,0.40
+  └─ Loans n Advances,4.66
+  └─ Other asset items,0.34
+Total Assets,22.38

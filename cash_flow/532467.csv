@@ -1,0 +1,31 @@
+Metric,Aug 2007,Aug 2008,Aug 2009,Aug 2010,Mar 2011,Mar 2012,Mar 2013,Mar 2014,Mar 2015,Mar 2024,Mar 2025,Mar 2026
+Cash from Operating Activity,2,1,-17,-2,-3,1,2,5,-0,-123,-145,97
+  └─ Profit from operations,9,1,-3,2,-2,-0,0,0,0,42,93,274
+  └─ Receivables,-0,-4,9,1,1,0,-0,-0,0,-6,-163,132
+  └─ Inventory,-5,-4,-5,8,-0,1,0,0,0,0,11,20
+  └─ Payables,-1,-6,-2,-8,1,-0,0,-0,0,93,178,-181
+  └─ Loans Advances,-0,14,-14,-4,-3,0,2,5,-0,-330,-136,0
+  └─ Other WC items,0,0,0,0,0,0,0,0,0,78,-115,-147
+  └─ Working capital changes,-7,-0,-13,-4,-1,1,2,4,-0,-164,-224,-176
+  └─ Direct taxes,0,0,0,-0,-0,-0,0,0,-0,-1,-15,0
+Cash from Investing Activity,-5,-3,17,0,-0,-1,-0,0,0,20,-105,-440
+  └─ Fixed assets purchased,-2,-3,0,0,0,0,0,0,0,-0,-97,-3
+  └─ Fixed assets sold,0,0,17,0,0,0,0,0,0,0,0,0
+  └─ Capital WIP,-2,-2,0,0,0,0,0,0,0,0,0,-64
+  └─ Investments purchased,-2,0,-1,0,0,-1,0,0,0,0,-5,-1
+  └─ Investments sold,0,1,0,0,0,0,0,0,0,0,0,0
+  └─ Interest received,0,0,0,0,0,0,0,0,0,0,1,2
+  └─ Dividends received,0,0,0,0,0,0,0,0,0,0,0,0
+  └─ Invest in subsidiaries,0,0,0,0,0,0,0,0,0,-5,-4,0
+  └─ Other investing items,1,1,1,-0,-0,0,-0,-0,0,24,0,-373
+Cash from Financing Activity,2,3,-0,1,2,-1,-2,-6,-0,171,188,339
+  └─ Proceeds from shares,2,1,1,0,0,0,0,0,0,63,108,195
+  └─ Proceeds from borrowings,1,1,0,0,-0,1,1,0,0,110,31,260
+  └─ Repayment of borrowings,0,0,-1,-1,0,0,0,-3,0,0,0,0
+  └─ Interest paid fin,-0,-0,0,-0,-0,-0,-1,0,0,-2,-14,-45
+  └─ Dividends paid,-0,0,0,0,0,0,0,0,0,0,-4,-4
+  └─ Share application money,0,1,0,0,0,0,0,0,0,0,0,0
+  └─ Other financing items,-0,0,0,1,3,-2,-2,-3,-0,0,67,-67
+Net Cash Flow,-1,1,0,-1,-0,-0,0,-1,-0,67,-62,-4
+  └─ Free Cash Flow,-2,-4,1,-2,-3,1,2,5,-0,-123,-242,30
+  └─ CFO/OP,21%,58%,686%,-152%,180%,-2820%,-2273%,2589%,-440%,-146%,-147%,38%

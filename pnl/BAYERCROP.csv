@@ -1,0 +1,27 @@
+Metric,Dec 2005,Dec 2006
+Sales,667,727
+  └─ Sales Growth %,,8.94%
+Expenses,610,692
+  └─ Material Cost %,52%,59%
+    └─ Raw material cost,363,421
+    └─ Change in inventory,-15,6
+  └─ Manufacturing Cost %,15%,12%
+  └─ Employee Cost %,10%,10%
+  └─ Other Cost %,15%,15%
+Operating Profit,57,35
+OPM %,9%,5%
+Other Income,50,84
+  └─ Exceptional items,-7,10
+  └─ Other income normal,57,74
+Interest,8,9
+Depreciation,23,23
+Profit before tax,77,87
+Tax %,50%,36%
+Net Profit,38,55
+  └─ Exceptional items AT,-5,6
+  └─ Profit excl Excep,43,49
+  └─ Profit for PE,43,49
+  └─ Profit for EPS,38,55
+  └─ Profit Growth %,,15%
+EPS in Rs,9.71,14.03
+Dividend Payout %,23%,17%

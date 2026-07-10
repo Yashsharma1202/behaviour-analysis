@@ -1,0 +1,21 @@
+Metric,Mar 2016,Dec 2016,Mar 2017
+Sales,37.87,26.63,31.27
+  └─ YOY Sales Growth %,,,-17.43%
+Expenses,34.26,27.20,31.12
+  └─ Material Cost %,51.07%,44.61%,45.47%
+  └─ Employee Cost %,13.28%,23.06%,23.98%
+Operating Profit,3.61,-0.57,0.15
+OPM %,9.53%,-2.14%,0.48%
+Other Income,0.11,0.07,0.05
+  └─ Other income normal,0.11,0.07,0.05
+Interest,1.75,1.27,1.57
+Depreciation,1.06,1.25,0.91
+Profit before tax,0.91,-3.02,-2.28
+Tax %,-182.42%,-25.83%,-54.82%
+Net Profit,2.57,-2.24,-1.04
+  └─ Profit excl Excep,3,-2,-1
+  └─ Profit for PE,3,-2,-1
+  └─ Profit for EPS,3,-2,-1
+  └─ YOY Profit Growth %,,,-140%
+EPS in Rs,0.59,-0.51,-0.24
+Raw PDF,,,

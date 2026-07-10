@@ -1,0 +1,32 @@
+Metric,Mar 2015,Mar 2016,Mar 2017,Mar 2018,Mar 2019,Mar 2020,Mar 2021,Mar 2022,Mar 2023,Mar 2024,Mar 2025,Mar 2026
+Cash from Operating Activity,7,-1,21,-203,-221,-76,6,-281,-718,-302,493,-476
+  └─ Profit from operations,21,27,36,50,-40,-49,-59,-79,-108,-111,-323,-364
+  └─ Receivables,-1,-1,-7,-7,0,0,0,0,0,0,0,0
+  └─ Payables,0,0,0,0,1,-0,-0,0,0,0,-1,1
+  └─ Loans Advances,-25,-56,-5,-244,-248,-119,2,-336,-486,-504,324,-496
+  └─ Operating borrowings,0,0,0,0,0,0,0,0,3,-1,-5,0
+  └─ Other WC items,14,33,1,3,-3,-4,-37,12,-301,42,155,27
+  └─ Working capital changes,-11,-24,-11,-248,-250,-123,-35,-324,-785,-463,474,-468
+  └─ Interest paid,0,0,0,0,77,114,106,140,202,329,372,379
+  └─ Direct taxes,-3,-4,-3,-4,-8,-18,-6,-18,-27,-58,-30,-24
+Cash from Investing Activity,-1,-7,-2,-12,-1,2,2,-2,-13,18,-49,-50
+  └─ Fixed assets purchased,-0,-1,-1,-1,-2,-1,-0,-1,-2,-2,-25,-3
+  └─ Fixed assets sold,-1,0,0,0,1,0,0,0,0,0,0,0
+  └─ Investments purchased,0,-2,-1,-0,-170,-553,-330,-508,-488,-925,-975,-1769
+  └─ Investments sold,0,0,0,0,171,556,332,507,477,946,951,1722
+  └─ Other investing items,0,-5,0,-11,0,0,0,0,0,0,0,0
+Cash from Financing Activity,-5,1,-9,205,252,94,22,270,681,376,-495,546
+  └─ Proceeds from shares,0,0,0,0,0,0,0,0,0,230,1,1
+  └─ Proceeds from debentures,0,0,33,0,0,0,0,0,77,0,0,0
+  └─ Redemption of debentures,0,0,0,0,0,0,0,0,-5,-10,0,0
+  └─ Proceeds from borrowings,29,50,16,304,424,542,406,722,1412,1821,651,1506
+  └─ Repayment of borrowings,-24,-38,-35,-60,-171,-447,-383,-452,-841,-1658,-1146,-961
+  └─ Interest paid fin,-10,-14,-22,-32,0,0,0,0,0,0,0,0
+  └─ Dividends paid,-1,-1,-2,-1,-1,-1,-0,0,0,0,0,0
+  └─ Financial liabilities,0,0,0,0,0,-0,-0,-0,-0,-0,-0,-0
+  └─ Share application money,0,0,0,0,0,0,0,0,0,0,0,0
+  └─ Application money refund,0,-0,0,0,0,0,0,0,0,0,0,0
+  └─ Other financing items,0,5,-0,-5,0,-0,0,0,38,-7,0,0
+Net Cash Flow,1,-7,10,-9,30,20,30,-12,-49,92,-51,20
+  └─ Free Cash Flow,6,-2,21,-203,-222,-77,5,-282,-720,-305,467,-480
+  └─ CFO/OP,49%,12%,74%,-447%,-223%,-41%,13%,-194%,-232%,-49%,168%,-159%

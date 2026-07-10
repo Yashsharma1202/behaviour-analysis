@@ -1,0 +1,20 @@
+Metric,Mar 2014,Mar 2015,Mar 2024,Mar 2025,Mar 2026
+Equity Capital,0.24,16.51,16.51,19.01,20.91
+Reserves,17.94,1.63,12.07,37.59,35.37
+Borrowings,0.00,0.00,0.00,1.65,3.72
+  └─ Long term Borrowings,0.00,0.00,0.00,1.44,3.51
+  └─ Short term Borrowings,0.00,0.00,0.00,0.21,0.21
+Other Liabilities,0.00,4.24,6.17,8.01,36.57
+  └─ Trade Payables,0.00,4.22,0.00,0.87,1.45
+  └─ Other liability items,0.00,0.02,6.17,7.14,35.12
+Total Liabilities,18.18,22.38,34.75,66.26,96.57
+Fixed Assets,0.00,0.00,0.00,0.00,0.70
+CWIP,0.00,0.00,0.00,0.00,0.00
+Investments,7.60,2.49,21.09,40.02,45.31
+Other Assets,10.58,19.89,13.66,26.24,50.56
+  └─ Inventories,6.00,8.08,0.57,12.57,38.29
+  └─ Trade receivables,0.81,2.44,0.00,0.00,0.00
+  └─ Cash Equivalents,0.02,0.09,0.05,3.64,1.60
+  └─ Loans n Advances,0.00,0.03,13.02,5.22,7.86
+  └─ Other asset items,3.75,9.25,0.02,4.81,2.81
+Total Assets,18.18,22.38,34.75,66.26,96.57

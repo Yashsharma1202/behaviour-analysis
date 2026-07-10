@@ -1,0 +1,25 @@
+Metric,Mar 2009,Mar 2010,Mar 2011
+Cash from Operating Activity,388,590,246
+  └─ Profit from operations,602,562,481
+  └─ Receivables,-51,-40,-3
+  └─ Inventory,0,-4,3
+  └─ Payables,-56,96,-49
+  └─ Loans Advances,-106,-23,-186
+  └─ Working capital changes,-213,28,-235
+  └─ Direct taxes,-1,-0,-0
+Cash from Investing Activity,-816,-840,-536
+  └─ Fixed assets purchased,-807,-890,-1908
+  └─ Fixed assets sold,1,40,499
+  └─ Investments purchased,-10,-77,-5183
+  └─ Investments sold,0,87,6057
+  └─ Invest in subsidiaries,-0,0,0
+  └─ Other investing items,0,0,0
+Cash from Financing Activity,421,245,342
+  └─ Proceeds from shares,0,0,0
+  └─ Proceeds from borrowings,1312,3351,4018
+  └─ Repayment of borrowings,-752,-2755,-3305
+  └─ Interest paid fin,-290,-351,-371
+  └─ Other financing items,151,0,0
+Net Cash Flow,-7,-4,52
+  └─ Free Cash Flow,-418,-260,-1164
+  └─ CFO/OP,79%,169%,-39%

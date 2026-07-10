@@ -1,0 +1,34 @@
+Metric,Mar 2013,Mar 2014,Mar 2015,Mar 2016
+Equity Capital,3,4,4,4
+Reserves,24,20,19,4
+Borrowings,50,5,15,16
+  └─ Long term Borrowings,7.20,0.08,14.65,16.29
+  └─ Short term Borrowings,43.22,4.54,0.00,0.00
+Other Liabilities,12,3,6,1
+  └─ Non controlling int,5.10,1.59,3.56,-3.47
+  └─ Trade Payables,3.77,1.14,0.85,0.81
+  └─ Advance from Customers,0.14,0.22,0.25,0.25
+  └─ Other liability items,3.30,0.03,1.24,3.57
+Total Liabilities,90,32,44,25
+Fixed Assets,9,10,10,10
+  └─ Land,2.08,0.00,0.00,0.00
+  └─ Building,3.58,0.14,0.14,0.14
+  └─ Equipments,0.06,0.06,0.07,0.08
+  └─ Computers,0.36,0.36,0.40,0.61
+  └─ Furniture n fittings,0.38,0.38,0.38,0.38
+  └─ Vehicles,0.34,0.36,0.41,0.41
+  └─ Intangible Assets,0.00,0.32,0.32,0.32
+  └─ Other fixed assets,3.24,9.20,9.17,9.18
+  └─ Gross Block,10.04,10.82,10.89,11.12
+  └─ Accumulated Depreciation,1.42,0.86,1.04,1.26
+CWIP,2,2,2,0
+Investments,0,5,16,1
+Other Assets,79,14,15,15
+  └─ Inventories,0.06,0.05,0.02,0.02
+  └─ Trade receivables,57.46,6.98,7.42,1.17
+    └─ Receivables over 6m,5.71,5.97,6.14,1.17
+    └─ Receivables under 6m,51.75,1.01,1.28,0.00
+  └─ Cash Equivalents,2.02,0.03,0.72,0.05
+  └─ Loans n Advances,5.46,4.06,4.04,9.54
+  └─ Other asset items,13.60,3.10,3.12,3.77
+Total Assets,90,32,44,25

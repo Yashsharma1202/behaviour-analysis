@@ -1,0 +1,23 @@
+Metric,Mar 2006
+Cash from Operating Activity,-20
+  └─ Profit from operations,12.01
+  └─ Receivables,-31.38
+  └─ Inventory,1.01
+  └─ Payables,1.66
+  └─ Working capital changes,-28.71
+  └─ Interest paid,-2.74
+  └─ Direct taxes,-0.29
+Cash from Investing Activity,-51
+  └─ Fixed assets purchased,-55
+  └─ Fixed assets sold,0
+  └─ Investments purchased,-48
+  └─ Investments sold,51
+  └─ Interest received,1
+  └─ Dividends received,1
+Cash from Financing Activity,72
+  └─ Proceeds from shares,7
+  └─ Proceeds from borrowings,67
+  └─ Dividends paid,-1
+Net Cash Flow,2
+  └─ Free Cash Flow,-74
+  └─ CFO/OP,109%

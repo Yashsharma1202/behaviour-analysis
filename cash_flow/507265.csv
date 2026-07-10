@@ -1,0 +1,26 @@
+Metric,Mar 2002,Mar 2003,Mar 2004,Mar 2005,Mar 2006,Mar 2024,Mar 2025,Mar 2026
+Cash from Operating Activity,,,,0.04,1.02,,-18.34,-6.25
+  └─ Profit from operations,,,,-0.52,-0.52,,4.53,7.33
+  └─ Receivables,,,,1.32,0.07,,0.07,-0.09
+  └─ Inventory,,,,0.00,0.00,,-21.79,-13.36
+  └─ Payables,,,,-0.77,1.50,,-0.10,-0.07
+  └─ Loans Advances,,,,0.01,-0.03,,0.00,0.00
+  └─ Other WC items,,,,0.00,0.00,,-0.94,0.10
+  └─ Working capital changes,,,,0.56,1.54,,-22.76,-13.42
+  └─ Direct taxes,,,,0.00,0.00,,-0.12,-0.16
+Cash from Investing Activity,,,,0.90,1.51,,0.00,-0.79
+  └─ Fixed assets purchased,,,,0.00,-0.04,,-0.03,-0.40
+  └─ Fixed assets sold,,,,0.88,1.50,,0.00,0.00
+  └─ Investments purchased,,,,0.00,0.00,,-7.06,-2.95
+  └─ Investments sold,,,,0.00,0.05,,7.08,2.95
+  └─ Interest received,,,,0.01,0.00,,0.02,0.00
+  └─ Other investing items,,,,0.01,0.00,,0.00,-0.40
+Cash from Financing Activity,,,,-1.00,-2.85,,18.04,6.63
+  └─ Proceeds from shares,,,,0.00,0.00,,12.19,0.00
+  └─ Proceeds from borrowings,,,,0.28,0.38,,11.71,17.42
+  └─ Repayment of borrowings,,,,-1.22,-3.23,,0.00,-8.32
+  └─ Interest paid fin,,,,-0.06,0.00,,-5.90,-6.68
+  └─ Other financing items,,,,0.00,0.00,,0.05,4.21
+Net Cash Flow,,,,-0.06,-0.32,,-0.31,-0.40
+  └─ Free Cash Flow,,,,0.92,2.48,,-18.37,-6.65
+  └─ CFO/OP,,,,-3%,-24%,,-409%,-84%

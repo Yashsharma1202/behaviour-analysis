@@ -1,0 +1,21 @@
+Metric,Mar 2016,Mar 2025,TTM
+Revenue,4,14,25
+Interest,-0,-0,0
+Expenses,1,3,3
+  └─ Manufacturing Cost %,0.00%,0.07%,
+  └─ Employee Cost %,10.44%,14.99%,
+  └─ Other Cost %,2.87%,7.39%,
+Financing Profit,3,11,22
+Financing Margin %,87%,78%,88%
+Other Income,-0,0,0
+  └─ Other income normal,0.00,0.05,
+Depreciation,-0,-0,0
+Profit before tax,3,11,22
+Tax %,-3%,22%,
+Net Profit,4,8,16
+  └─ Profit from Associates,0.67,0.00,
+  └─ Profit excl Excep,4.09,8.48,
+  └─ Profit for PE,4.09,8.48,
+  └─ Profit for EPS,4.09,8.48,
+EPS in Rs,16.36,28.70,54.76
+Dividend Payout %,-0%,2%,

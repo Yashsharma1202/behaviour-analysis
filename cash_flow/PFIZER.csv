@@ -1,0 +1,21 @@
+Metric,Nov 2006,Nov 2007,Nov 2008
+Cash from Operating Activity,123,17,238
+  └─ Profit from operations,177,170,162
+  └─ Receivables,10,1,-7
+  └─ Inventory,-9,3,-29
+  └─ Payables,17,-38,29
+  └─ Other WC items,-7,0,0
+  └─ Working capital changes,12,-33,-8
+  └─ Direct taxes,-66,-113,-127
+  └─ Exceptional CF items,0,-7,211
+Cash from Investing Activity,7,232,-79
+  └─ Fixed assets purchased,-23,-14,-27
+  └─ Fixed assets sold,20,280,2
+  └─ Investments purchased,0,-67,-108
+  └─ Interest received,11,33,54
+Cash from Financing Activity,-34,-76,-95
+  └─ Interest paid fin,-0,-0,0
+  └─ Dividends paid,-34,-76,-95
+Net Cash Flow,97,173,64
+  └─ Free Cash Flow,120,283,213
+  └─ CFO/OP,148%,-93%,-446%

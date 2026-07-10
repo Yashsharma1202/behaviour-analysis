@@ -1,0 +1,31 @@
+Metric,Mar 2017,Mar 2018,Mar 2019,Mar 2020
+Cash from Operating Activity,-0.66,-3.07,6.43,-0.45
+  └─ Profit from operations,12.71,0.50,0.78,3.32
+  └─ Receivables,-14.95,10.60,0.24,-2.63
+  └─ Inventory,0.00,0.00,-0.50,0.50
+  └─ Payables,2.41,-6.83,-1.39,0.60
+  └─ Loans Advances,-1.31,-2.28,0.13,-1.89
+  └─ Operating borrowings,0.05,0.00,2.29,0.00
+  └─ Other WC items,2.10,-4.66,5.67,0.69
+  └─ Working capital changes,-11.70,-3.16,6.44,-2.74
+  └─ Direct taxes,-1.68,-0.41,-0.79,-1.03
+Cash from Investing Activity,0.01,-13.50,1.80,9.30
+  └─ Fixed assets purchased,-0.19,-0.49,-0.68,-0.94
+  └─ Investments purchased,-0.48,-14.33,0.00,-0.14
+  └─ Investments sold,0.00,0.00,0.97,8.64
+  └─ Interest received,0.68,1.37,1.51,1.66
+  └─ Dividends received,0.00,0.00,0.01,0.00
+  └─ Invest in subsidiaries,0.00,0.00,0.00,-3.31
+  └─ Redemp n Canc of Shares,0.01,0.00,0.00,2.91
+  └─ Acquisition of companies,0.00,-0.05,0.00,0.00
+  └─ Other investing items,0.00,0.00,0.00,0.48
+Cash from Financing Activity,0.45,17.29,-1.87,-5.99
+  └─ Proceeds from shares,0.00,12.35,0.00,0.00
+  └─ Proceeds from borrowings,0.46,7.32,0.14,0.00
+  └─ Repayment of borrowings,-0.11,-2.02,-1.24,-5.47
+  └─ Interest paid fin,-0.07,-0.36,-0.69,-0.52
+  └─ Dividends paid,0.00,0.00,-0.07,0.00
+  └─ Other financing items,0.17,0.00,-0.01,0.00
+Net Cash Flow,-0.21,0.72,6.36,2.86
+  └─ Free Cash Flow,-0.85,-3.56,5.75,-1.39
+  └─ CFO/OP,37%,-246%,401%,16%

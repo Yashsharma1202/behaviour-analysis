@@ -1,0 +1,20 @@
+Metric,Sep 2024,Mar 2025,Sep 2025
+Sales,179,213,187
+Expenses,174,206,181
+  └─ Material Cost %,93%,91%,92%
+  └─ Employee Cost %,1%,1%,1%
+Operating Profit,6,7,6
+OPM %,3%,3%,3%
+Other Income,0,0,0
+  └─ Other income normal,0.12,0.26,0.08
+Interest,2,2,2
+Depreciation,1,1,1
+Profit before tax,3,4,4
+Tax %,27%,32%,28%
+Net Profit,2,3,3
+  └─ Minority share,-0.01,-0.02,0.00
+  └─ Profit excl Excep,2.05,3.01,2.52
+  └─ Profit for PE,2.04,2.99,2.52
+  └─ Profit for EPS,2.04,2.99,2.52
+EPS in Rs,3.78,5.54,4.67
+Raw PDF,,,

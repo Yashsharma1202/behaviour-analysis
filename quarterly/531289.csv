@@ -1,0 +1,19 @@
+Metric,Jun 2018,Sep 2018,Dec 2018
+Sales,15.77,16.41,12.84
+Expenses,12.98,13.58,12.05
+  └─ Material Cost %,44.01%,47.35%,49.30%
+  └─ Employee Cost %,9.64%,9.32%,12.54%
+Operating Profit,2.79,2.83,0.79
+OPM %,17.69%,17.25%,6.15%
+Other Income,0.43,1.24,1.18
+  └─ Other income normal,0.43,1.24,1.18
+Interest,0.38,0.38,0.36
+Depreciation,0.50,0.54,0.54
+Profit before tax,2.34,3.15,1.07
+Tax %,32.05%,29.21%,50.47%
+Net Profit,1.59,2.23,0.53
+  └─ Profit excl Excep,1.59,2.23,0.53
+  └─ Profit for PE,1.59,2.23,0.53
+  └─ Profit for EPS,1.59,2.23,0.53
+EPS in Rs,1.91,2.68,0.64
+Raw PDF,,,

@@ -1,0 +1,19 @@
+Metric,Mar 2013,Dec 2013,Mar 2014
+Sales,0.00,0.01,0.06
+Expenses,0.02,0.02,0.07
+  └─ Employee Cost %,,100.00%,16.67%
+Operating Profit,-0.02,-0.01,-0.01
+OPM %,,-100.00%,-16.67%
+Other Income,0.10,0.06,0.04
+  └─ Other income normal,0.10,0.06,0.04
+Interest,0.00,0.00,0.00
+Depreciation,0.01,0.01,0.02
+Profit before tax,0.07,0.04,0.01
+Tax %,0.00%,0.00%,0.00%
+Net Profit,0.08,0.05,0.02
+  └─ Profit excl Excep,0,0,0
+  └─ Profit for PE,0,0,0
+  └─ Profit for EPS,0,0,0
+  └─ YOY Profit Growth %,,,-75%
+EPS in Rs,0.22,0.14,0.05
+Raw PDF,,,

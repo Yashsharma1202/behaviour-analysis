@@ -1,0 +1,28 @@
+Metric,Mar 2011,Mar 2012,Mar 2013,Mar 2014,Mar 2025,Mar 2026
+Equity Capital,1,1,1,1,,116
+Reserves,1,1,1,0,,179
+Borrowings,0,0,0,0,,203
+  └─ Long term Borrowings,0,0,0,0,,50
+  └─ Short term Borrowings,0,0,0,0,,152
+  └─ Lease Liabilities,0,0,0,0,,0
+Other Liabilities,4,4,4,4,,1236
+  └─ Non controlling int,0,0,0,0,,-0
+  └─ Trade Payables,1,0,0,0,,861
+  └─ Advance from Customers,0,0,0,0,,
+  └─ Other liability items,3,3,3,3,,375
+Total Liabilities,6,6,5,5,,1734
+Fixed Assets,1,1,1,1,,68
+  └─ Land,1.05,1.05,1.05,1.05,,
+  └─ Equipments,0.03,0.03,0.03,0.03,,
+  └─ Furniture n fittings,0.07,0.08,0.07,0.07,,
+  └─ Other fixed assets,0.01,0.00,0.01,0.01,,
+  └─ Gross Block,1.16,1.16,1.16,1.16,,
+  └─ Accumulated Depreciation,0.10,0.10,0.10,0.10,,
+CWIP,0,0,0,0,,0
+Investments,0,0,0,0,,0
+Other Assets,5,4,4,4,,1666
+  └─ Trade receivables,0,0,0,0,,693
+  └─ Cash Equivalents,5,4,4,4,,126
+  └─ Loans n Advances,0,0,0,0,,153
+  └─ Other asset items,0,0,0,0,,694
+Total Assets,6,6,5,5,,1734

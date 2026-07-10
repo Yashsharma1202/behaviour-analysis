@@ -1,0 +1,20 @@
+Metric,Mar 2018
+Cash from Operating Activity,476
+  └─ Profit from operations,589
+  └─ Receivables,-24
+  └─ Inventory,-63
+  └─ Payables,45
+  └─ Other WC items,-23
+  └─ Working capital changes,-66
+  └─ Direct taxes,-47
+Cash from Investing Activity,-480
+  └─ Fixed assets purchased,-475
+  └─ Fixed assets sold,1
+  └─ Interest received,14
+  └─ Other investing items,-20
+Cash from Financing Activity,10
+  └─ Interest paid fin,-83
+  └─ Other financing items,93
+Net Cash Flow,7
+  └─ Free Cash Flow,2
+  └─ CFO/OP,90%

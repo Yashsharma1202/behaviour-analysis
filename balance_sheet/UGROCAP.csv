@@ -1,0 +1,24 @@
+Metric,Mar 2026
+Equity Capital,153
+Reserves,2753
+Borrowing,10782
+Other Liabilities,387
+  └─ Trade Payables,45
+  └─ Other liability items,342
+Total Liabilities,14075
+Fixed Assets,512
+  └─ Building,188
+  └─ Equipments,27
+  └─ Furniture n fittings,15
+  └─ Vehicles,0
+  └─ Intangible Assets,342
+  └─ Other fixed assets,103
+  └─ Gross Block,675
+  └─ Accumulated Depreciation,163
+CWIP,24
+Investments,737
+Other Assets,12802
+  └─ Cash Equivalents,1825
+  └─ Loans n Advances,144
+  └─ Other asset items,10833
+Total Assets,14075

@@ -1,0 +1,27 @@
+Metric,Mar 2009,Mar 2010,Mar 2011,TTM
+Revenue,32.51,38.14,41.74,39.26
+  └─ Sales Growth %,,17.32%,9.44%,
+Interest,0.16,0.03,0.00,0.00
+Expenses,31.32,40.06,36.16,35.42
+  └─ Material Cost %,5%,5%,4%,
+    └─ Raw material cost,1.81,1.84,1.60,
+    └─ Change in inventory,-0.03,0.08,-0.12,
+  └─ Manufacturing Cost %,56%,59%,56%,
+  └─ Employee Cost %,9%,9%,7%,
+  └─ Other Cost %,26%,32%,20%,
+Financing Profit,1.03,-1.95,5.58,3.84
+Financing Margin %,3.17%,-5.11%,13.37%,9.78%
+Other Income,3.40,10.55,3.26,2.92
+  └─ Exceptional items,-1.32,4.76,1.01,
+  └─ Other income normal,4.72,5.79,2.25,
+Depreciation,3.53,3.59,3.60,3.57
+Profit before tax,0.90,5.01,5.24,3.19
+Tax %,34.44%,18.76%,20.80%,
+Net Profit,0.59,4.07,4.15,2.61
+  └─ Exceptional items AT,-1,4,1,
+  └─ Profit excl Excep,2,0,3,
+  └─ Profit for PE,2,0,3,
+  └─ Profit for EPS,1,4,4,
+  └─ Profit Growth %,,-88%,1590%,
+EPS in Rs,39.33,271.33,276.67,174.00
+Dividend Payout %,50.85%,7.37%,7.23%,

@@ -1,0 +1,20 @@
+Metric,Mar 2005,Jun 2005,Sep 2005,Dec 2005,Mar 2006
+Sales,58,58,60,62,68
+  └─ YOY Sales Growth %,,,,,17.66%
+Expenses,66,43,50,49,59
+Operating Profit,-8,14,10,13,9
+OPM %,-14%,25%,17%,21%,13%
+Other Income,-31,-0,-0,-0,-0
+  └─ Exceptional items,-31.23,0.00,0.00,0.00,0.00
+Interest,9,8,8,10,13
+Depreciation,18,18,17,20,18
+Profit before tax,-67,-11,-15,-18,-22
+Tax %,0%,1%,5%,2%,2%
+Net Profit,-67,-12,-16,-18,-23
+  └─ Exceptional items AT,-31.22,0.00,0.00,0.00,0.00
+  └─ Profit excl Excep,-35.40,-11.50,-15.84,-17.90,-22.76
+  └─ Profit for PE,-35.40,-11.50,-15.84,-17.90,-22.76
+  └─ Profit for EPS,-66.62,-11.50,-15.84,-17.90,-22.76
+  └─ YOY Profit Growth %,,,,,35.71%
+EPS in Rs,,,,,
+Raw PDF,,,,,

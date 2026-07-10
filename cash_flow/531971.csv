@@ -1,0 +1,13 @@
+Metric,Mar 2022,Mar 2023
+Cash from Operating Activity,-0.15,-0.20
+  └─ Profit from operations,-0.06,-0.11
+  └─ Payables,-0.02,-0.01
+  └─ Other WC items,-0.07,-0.08
+  └─ Working capital changes,-0.09,-0.09
+Cash from Investing Activity,0.00,-0.53
+  └─ Fixed assets purchased,0.00,-0.53
+Cash from Financing Activity,0.00,0.78
+  └─ Proceeds from borrowings,0.00,0.78
+Net Cash Flow,-0.15,0.05
+  └─ Free Cash Flow,-0.15,-0.73
+  └─ CFO/OP,250%,182%

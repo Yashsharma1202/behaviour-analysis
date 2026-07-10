@@ -1,0 +1,25 @@
+Metric,Mar 2011,Mar 2012
+Equity Capital,4.00,4.00
+Reserves,3.07,2.72
+Borrowing,4.48,5.74
+Other Liabilities,2.62,3.40
+  └─ Trade Payables,0.12,0.19
+  └─ Advance from Customers,2.28,2.86
+  └─ Other liability items,0.22,0.35
+Total Liabilities,14.17,15.86
+Fixed Assets,0.69,0.58
+  └─ Building,0.37,0.37
+  └─ Equipments,0.02,0.02
+  └─ Computers,0.07,0.07
+  └─ Furniture n fittings,0.23,0.23
+  └─ Vehicles,0.44,0.44
+  └─ Gross Block,1.13,1.13
+  └─ Accumulated Depreciation,0.44,0.55
+CWIP,0.00,0.00
+Investments,0.03,0.03
+Other Assets,13.45,15.25
+  └─ Inventories,5.96,6.71
+  └─ Cash Equivalents,0.12,0.78
+  └─ Loans n Advances,5.47,1.00
+  └─ Other asset items,1.90,6.76
+Total Assets,14.17,15.86

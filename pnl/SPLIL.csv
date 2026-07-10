@@ -1,0 +1,28 @@
+Metric,Mar 2006,Mar 2007,Mar 2008,Mar 2009,Mar 2010,Mar 2011
+Sales,245,231,296,340,258,149
+  └─ Sales Growth %,,-5.71%,28.36%,14.72%,-24.02%,-42.11%
+Expenses,221,219,309,334,296,213
+  └─ Material Cost %,51%,43%,52%,44%,63%,81%
+    └─ Raw material cost,142,127,173,174,110,69
+    └─ Change in inventory,-17,-27,-18,-25,52,52
+  └─ Manufacturing Cost %,18%,25%,26%,27%,25%,29%
+  └─ Employee Cost %,9%,12%,12%,11%,11%,13%
+  └─ Other Cost %,12%,15%,14%,16%,17%,20%
+Operating Profit,23,12,-13,6,-38,-63
+OPM %,10%,5%,-4%,2%,-15%,-42%
+Other Income,12,18,36,2,24,10
+  └─ Exceptional items,-0.49,-0.86,-0.08,-27.83,-10.43,0.03
+  └─ Other income normal,12.03,19.19,36.26,29.99,34.08,10.09
+Interest,8,10,10,15,14,10
+Depreciation,8,10,9,8,8,6
+Profit before tax,19,10,5,-15,-36,-69
+Tax %,21%,33%,40%,-6%,1%,2%
+Net Profit,15,7,3,-14,-36,-70
+  └─ Profit from Associates,0,0,0,0,-0,0
+  └─ Exceptional items AT,-0,-1,-0,-28,-10,0
+  └─ Profit excl Excep,15,7,3,14,-26,-70
+  └─ Profit for PE,15,7,3,14,-26,-70
+  └─ Profit for EPS,15,7,3,-14,-36,-70
+  └─ Profit Growth %,,-52%,-62%,380%,-292%,-170%
+EPS in Rs,5.18,2.32,0.95,-4.94,-12.52,-24.17
+Dividend Payout %,0%,43%,0%,0%,0%,0%

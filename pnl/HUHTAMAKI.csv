@@ -1,0 +1,28 @@
+Metric,Dec 2012,Dec 2013,Dec 2014,Dec 2015,TTM
+Sales,901,1086,1225,2037,2178
+  └─ Sales Growth %,,21%,13%,66%,
+Expenses,810,970,1106,1802,1931
+  └─ Material Cost %,69%,69%,71%,67%,
+    └─ Raw material cost,621,750,877,1386,
+    └─ Change in inventory,4,2,-5,-19,
+  └─ Manufacturing Cost %,7%,7%,6%,7%,
+  └─ Employee Cost %,8%,8%,8%,9%,
+  └─ Other Cost %,6%,5%,5%,5%,
+Operating Profit,90,115,120,235,247
+OPM %,10%,11%,10%,12%,11%
+Other Income,8,12,16,14,17
+  └─ Exceptional items,0.07,7.16,6.88,-0.30,
+  └─ Other income normal,8.19,4.79,8.65,14.24,
+Interest,1,4,4,43,33
+Depreciation,36,42,44,91,91
+Profit before tax,62,81,88,116,140
+Tax %,27%,28%,22%,32%,
+Net Profit,45,58,68,79,89
+  └─ Minority share,-0,-2,-2,-2,
+  └─ Exceptional items AT,0,5,5,-0,
+  └─ Profit excl Excep,45,53,63,79,
+  └─ Profit for PE,45,51,61,77,
+  └─ Profit for EPS,45,56,67,77,
+  └─ Profit Growth %,,14%,20%,26%,
+EPS in Rs,7.19,8.96,9.16,10.58,11.63
+Dividend Payout %,36%,31%,31%,26%,

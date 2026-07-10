@@ -1,0 +1,31 @@
+Metric,Mar 2015,Mar 2016
+Equity Capital,28,28
+Reserves,14,19
+Borrowings,5,22
+  └─ Long term Borrowings,0.00,0.05
+  └─ Short term Borrowings,5.29,21.44
+  └─ Other Borrowings,0.03,0.04
+Other Liabilities,95,89
+  └─ Trade Payables,62,54
+  └─ Advance from Customers,25,29
+  └─ Other liability items,9,7
+Total Liabilities,143,158
+Fixed Assets,16,15
+  └─ Land,0.20,0.20
+  └─ Building,4.50,4.50
+  └─ Plant Machinery,39.66,40.57
+  └─ Equipments,0.45,0.45
+  └─ Furniture n fittings,2.11,2.11
+  └─ Vehicles,2.29,1.91
+  └─ Other fixed assets,0.01,0.00
+  └─ Gross Block,49.22,49.74
+  └─ Accumulated Depreciation,32.95,34.38
+CWIP,0,0
+Investments,5,5
+Other Assets,122,138
+  └─ Inventories,47,40
+  └─ Trade receivables,43,70
+  └─ Cash Equivalents,5,6
+  └─ Loans n Advances,14,12
+  └─ Other asset items,12,9
+Total Assets,143,158

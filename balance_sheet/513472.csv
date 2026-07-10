@@ -1,0 +1,31 @@
+Metric,Mar 2019,Mar 2020,Mar 2021,Sep 2021
+Equity Capital,6.13,6.13,6.13,6.13
+Reserves,68.72,37.75,39.30,39.49
+Borrowings,79.63,67.58,74.63,63.69
+  └─ Long term Borrowings,24.27,23.24,30.57,28.38
+  └─ Short term Borrowings,54.10,43.85,43.61,35.31
+  └─ Other Borrowings,1.26,67.58,74.63,
+Other Liabilities,174.90,61.81,52.53,66.77
+  └─ Trade Payables,112.00,40.92,28.20,31.50
+  └─ Advance from Customers,11.21,5.41,5.33,
+  └─ Other liability items,51.69,15.48,19.00,35.27
+Total Liabilities,329.38,173.27,172.59,176.08
+Fixed Assets,55.97,52.54,46.14,43.42
+  └─ Land,4.86,4.86,4.86,
+  └─ Building,13.84,13.84,13.84,
+  └─ Plant Machinery,49.63,53.70,53.91,
+  └─ Furniture n fittings,0.20,0.20,0.20,
+  └─ Vehicles,0.91,0.91,0.81,
+  └─ Intangible Assets,0.00,0.00,0.00,0.51
+  └─ Other fixed assets,4.46,4.12,3.43,
+  └─ Gross Block,73.90,77.63,77.05,
+  └─ Accumulated Depreciation,17.93,25.08,30.91,
+CWIP,0.12,1.14,2.07,2.09
+Investments,0.16,0.11,0.16,0.00
+Other Assets,273.13,119.48,124.22,130.57
+  └─ Inventories,52,48,56,62
+  └─ Trade receivables,105,27,22,21
+  └─ Cash Equivalents,6,5,5,4
+  └─ Loans n Advances,27,13,14,0
+  └─ Other asset items,82,27,27,44
+Total Assets,329.38,173.27,172.59,176.08

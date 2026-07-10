@@ -1,0 +1,24 @@
+Metric,Mar 2012,Mar 2013,Mar 2014
+Sales,3.55,3.35,3.47
+  └─ Sales Growth %,,-5.63%,3.58%
+Expenses,2.57,2.36,2.48
+  └─ Manufacturing Cost %,31%,1%,2%
+  └─ Employee Cost %,32%,40%,52%
+  └─ Other Cost %,9%,30%,18%
+Operating Profit,0.98,0.99,0.99
+OPM %,27.61%,29.55%,28.53%
+Other Income,0.09,0.15,0.15
+  └─ Exceptional items,0.01,0.00,0.00
+  └─ Other income normal,0.08,0.15,0.15
+Interest,0.01,0.04,0.07
+Depreciation,0.06,0.00,0.00
+Profit before tax,1.00,1.10,1.07
+Tax %,30.00%,23.64%,24.30%
+Net Profit,0.69,0.84,0.80
+  └─ Exceptional items AT,0.01,0.00,0.00
+  └─ Profit excl Excep,0.68,0.84,0.80
+  └─ Profit for PE,0.68,0.84,0.80
+  └─ Profit for EPS,0.69,0.84,0.80
+  └─ Profit Growth %,,23.53%,-4.76%
+EPS in Rs,2.30,2.80,2.67
+Dividend Payout %,43.48%,35.71%,37.50%

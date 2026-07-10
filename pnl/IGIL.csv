@@ -1,0 +1,27 @@
+Metric,Dec 2022,Dec 2023,Dec 2024,Dec 2025,TTM
+Sales,491,639,1053,1229,1293
+  └─ Sales Growth %,,30.05%,64.94%,16.71%,
+Expenses,156,188,453,492,516
+  └─ Material Cost %,0.42%,0.52%,0.36%,-0.14%,
+    └─ Raw material cost,2.02,3.91,3.66,0.27,
+    └─ Change in inventory,0.02,-0.61,0.10,-2.04,
+  └─ Manufacturing Cost %,0.69%,0.48%,0.86%,0.00%,
+  └─ Employee Cost %,17.85%,15.21%,25.17%,22.74%,
+  └─ Other Cost %,12.74%,13.28%,16.61%,17.46%,
+Operating Profit,335,450,600,737,777
+OPM %,68%,71%,57%,60%,60%
+Other Income,8,10,35,46,56
+  └─ Exceptional items,0.00,-0.13,-0.03,0.00,
+  └─ Other income normal,8.34,10.13,35.33,45.99,
+Interest,3,3,9,10,10
+Depreciation,12,13,41,43,46
+Profit before tax,329,444,585,730,777
+Tax %,27%,27%,27%,27%,
+Net Profit,242,325,427,532,570
+  └─ Exceptional items AT,0,-0,-0,0,
+  └─ Profit excl Excep,242,325,427,532,
+  └─ Profit for PE,242,325,427,532,
+  └─ Profit for EPS,242,325,427,532,
+  └─ Profit Growth %,,34%,32%,24%,
+EPS in Rs,,,9.89,12.30,13.20
+Dividend Payout %,0%,0%,25%,0%,

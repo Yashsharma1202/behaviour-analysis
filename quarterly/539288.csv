@@ -1,0 +1,20 @@
+Metric,Mar 2025,Dec 2025,Mar 2026
+Sales,0,132,150
+Expenses,0,122,137
+  └─ Material Cost %,,91%,91%
+  └─ Employee Cost %,,0%,0%
+Operating Profit,-0,11,14
+OPM %,,8%,9%
+Other Income,1,0,0
+  └─ Other income normal,1.04,0.09,0.20
+Interest,0,0,0
+Depreciation,0,0,0
+Profit before tax,1,11,14
+Tax %,25%,36%,26%
+Net Profit,1,7,10
+  └─ Profit excl Excep,1,7,10
+  └─ Profit for PE,1,7,10
+  └─ Profit for EPS,1,7,10
+  └─ YOY Profit Growth %,,,1284%
+EPS in Rs,0.08,0.74,1.09
+Raw PDF,,,

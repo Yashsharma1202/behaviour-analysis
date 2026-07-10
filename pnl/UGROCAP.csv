@@ -1,0 +1,20 @@
+Metric,Mar 2026
+Revenue,1960
+Interest,954
+Expenses,753
+  └─ Manufacturing Cost %,1.92%
+  └─ Employee Cost %,15.23%
+  └─ Other Cost %,21.26%
+Financing Profit,253
+Financing Margin %,13%
+Other Income,61
+  └─ Other income normal,61
+Depreciation,70
+Profit before tax,244
+Tax %,28%
+Net Profit,175
+  └─ Profit excl Excep,175
+  └─ Profit for PE,175
+  └─ Profit for EPS,175
+EPS in Rs,11.26
+Dividend Payout %,0%

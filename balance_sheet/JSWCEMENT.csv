@@ -1,0 +1,40 @@
+Metric,Mar 2020,Mar 2021,Mar 2022,Mar 2023,Mar 2024,Mar 2025,Mar 2026
+Equity Capital,986,986,986,986,986,986,1341
+Reserves,540,839,1144,1306,1478,1366,5209
+Borrowings,2969,3189,4622,5641,6254,6563,4464
+  └─ Long term Borrowings,2184,2124,4051,4646,4157,5010,3092
+  └─ Short term Borrowings,347,1065,571,776,1679,1156,990
+  └─ Lease Liabilities,0,0,0,220,418,396,383
+  └─ Preference Capital,0,0,0,1610,1747,1898,0
+  └─ Other Borrowings,438,0,0,-1610,-1747,-1898,
+Other Liabilities,1675,1895,2468,2203,2498,2966,3521
+  └─ Non controlling int,3,-7,-19,-51,-79,20,-23
+  └─ Trade Payables,788,914,1083,1084,1222,1238,1439
+  └─ Advance from Customers,12,19,4,1,47,49,
+  └─ Other liability items,872,970,1400,1169,1308,1660,2104
+Total Liabilities,6169,6909,9221,10136,11216,11881,14535
+Fixed Assets,3293,4224,4573,4645,6189,6785,8498
+  └─ Land,40,41,74,264,303,432,
+  └─ Building,1320,872,1132,996,1254,1467,
+  └─ Plant Machinery,2362,3172,3232,3372,4841,5237,
+  └─ Equipments,16,11,11,12,15,17,
+  └─ Computers,0,11,13,13,20,22,
+  └─ Furniture n fittings,6,10,13,10,13,15,
+  └─ Railway sidings,0,0,19,22,22,22,
+  └─ Vehicles,0,17,19,21,28,33,
+  └─ Intangible Assets,217,230,233,233,217,217,957
+  └─ Other fixed assets,26,436,635,771,810,870,
+  └─ Gross Block,3989,4800,5381,5713,7522,8332,
+  └─ Accumulated Depreciation,696,576,808,1069,1334,1548,
+CWIP,920,294,876,1591,770,1038,958
+Investments,320,354,484,714,759,345,290
+Other Assets,1636,2036,3288,3186,3498,3714,4789
+  └─ Inventories,459,349,460,448,475,428,602
+  └─ Trade receivables,424,619,766,711,783,782,854
+    └─ Receivables over 6m,0,0,0,40,48,85,
+    └─ Receivables under 6m,424,621,769,673,745,716,
+    └─ Prov for Doubtful,0,-2,-3,-3,-10,-20,
+  └─ Cash Equivalents,114,136,555,55,316,124,500
+  └─ Loans n Advances,153,170,301,458,413,675,704
+  └─ Other asset items,486,762,1205,1514,1511,1705,2130
+Total Assets,6169,6909,9221,10136,11216,11881,14535

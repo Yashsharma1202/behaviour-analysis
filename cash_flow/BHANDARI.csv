@@ -1,0 +1,20 @@
+Metric,Mar 2003,Mar 2004,Mar 2020
+Cash from Operating Activity,,,
+  └─ Profit from operations,,,21.40
+  └─ Receivables,,,-10.93
+  └─ Inventory,,,-3.31
+  └─ Payables,,,1.76
+  └─ Working capital changes,,,-12.48
+  └─ Interest paid,,,-10.23
+  └─ Direct taxes,,,-0.75
+  └─ Other operating items,,,-0.18
+Cash from Investing Activity,,,
+  └─ Fixed assets purchased,,,-17.67
+  └─ Fixed assets sold,,,1.09
+  └─ Interest received,,,0.10
+  └─ Other investing items,,,-0.15
+Cash from Financing Activity,,,
+  └─ Proceeds from borrowings,,,18.29
+Net Cash Flow,,,
+  └─ Free Cash Flow,,,
+  └─ CFO/OP,,,

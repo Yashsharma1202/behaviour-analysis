@@ -1,0 +1,24 @@
+Metric,Mar 2016,Mar 2017,TTM
+Revenue,4.76,2.54,2.61
+  └─ Sales Growth %,,-46.64%,
+Interest,0.00,0.00,0.00
+Expenses,4.70,3.07,3.64
+  └─ Material Cost %,91%,60%,
+    └─ Raw material cost,5.77,0.07,
+    └─ Change in inventory,-1.46,1.46,
+  └─ Manufacturing Cost %,0%,2%,
+  └─ Employee Cost %,4%,36%,
+  └─ Other Cost %,4%,23%,
+Financing Profit,0.06,-0.53,-1.03
+Financing Margin %,1.26%,-20.87%,-39.46%
+Other Income,0.00,0.00,0.77
+Depreciation,0.01,0.11,0.17
+Profit before tax,0.05,-0.64,-0.43
+Tax %,40.00%,3.12%,
+Net Profit,0.04,-0.67,-0.43
+  └─ Profit excl Excep,0,-1,
+  └─ Profit for PE,0,-1,
+  └─ Profit for EPS,0,-1,
+  └─ Profit Growth %,,-1775%,
+EPS in Rs,0.10,-1.63,-1.04
+Dividend Payout %,0.00%,0.00%,

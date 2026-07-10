@@ -1,0 +1,32 @@
+Metric,Mar 2019,Mar 2020,Mar 2021,Mar 2022,Mar 2023,Mar 2024,Mar 2025,Mar 2026,Sep 2020
+Equity Capital,,12,12,13,13,13,13,13,
+Reserves,,45,65,117,143,155,169,190,
+Borrowings,,49,50,51,35,43,35,50,
+  └─ Long term Borrowings,,35.73,44.94,46.44,28.80,11.41,9.52,26.64,42.44
+  └─ Short term Borrowings,,12.98,4.73,4.69,6.50,28.29,23.58,22.32,1.07
+  └─ Lease Liabilities,,0.00,0.00,0.00,0.00,3.17,2.29,1.15,0.00
+  └─ Other Borrowings,,0.00,0.00,0.00,0.01,0.00,0.01,,
+Other Liabilities,,63,47,66,46,25,31,34,
+  └─ Non controlling int,,0.00,0.00,0.00,0.00,0.00,7.40,6.93,0.00
+  └─ Trade Payables,,7.38,9.29,9.77,10.44,9.17,10.89,13.41,5.42
+  └─ Advance from Customers,,0.00,-0.32,13.01,-0.08,0.00,0.00,,
+  └─ Other liability items,,55.78,38.04,43.14,35.29,15.91,12.99,13.95,91.82
+Total Liabilities,,169,173,248,237,237,249,288,
+Fixed Assets,,41,44,110,106,106,135,136,
+  └─ Land,,2,2,3,3,3,3,,
+  └─ Building,,12,12,67,67,70,70,,
+  └─ Equipments,,1,1,2,2,2,2,,
+  └─ Computers,,22,29,42,43,43,43,,
+  └─ Furniture n fittings,,2,2,3,3,3,3,,
+  └─ Intangible Assets,,15,16,15,15,15,51,53,15
+  └─ Other fixed assets,,7,7,10,12,18,21,,
+  └─ Gross Block,,62,70,141,144,154,193,,
+  └─ Accumulated Depreciation,,20,26,31,38,48,58,,
+CWIP,,39,59,10,18,0,0,0,
+Investments,,0,0,34,36,37,0,0,
+Other Assets,,88,70,94,77,93,114,152,
+  └─ Trade receivables,,41,41,63,61,41,42,41,29
+  └─ Cash Equivalents,,20,13,14,3,3,11,16,26
+  └─ Loans n Advances,,11,10,12,10,10,19,29,4
+  └─ Other asset items,,15,6,6,3,39,42,66,53
+Total Assets,,169,173,248,237,237,249,288,

@@ -1,0 +1,25 @@
+Metric,Dec 2013,Dec 2014,Dec 2015,Dec 2016,Dec 2017,Dec 2018
+Cash from Operating Activity,9,1,23,28,23,38
+  └─ Profit from operations,15.29,18.60,38.17,43.15,45.51,42.91
+  └─ Receivables,-0.94,-8.42,-5.39,3.24,-6.50,0.89
+  └─ Inventory,-0.91,-11.54,-7.84,-8.20,4.60,7.93
+  └─ Payables,-0.44,11.28,9.86,5.34,4.14,-1.64
+  └─ Loans Advances,-0.27,-2.45,-1.38,-1.00,0.00,0.00
+  └─ Other WC items,0.05,-0.40,0.09,-0.71,-9.99,3.22
+  └─ Working capital changes,-2.51,-11.53,-4.67,-1.33,-7.76,10.40
+  └─ Direct taxes,-4.05,-5.80,-10.58,-14.13,-14.30,-15.69
+Cash from Investing Activity,1,-6,-18,-19,-9,-38
+  └─ Fixed assets purchased,-1,-15,-6,-7,-16,-3
+  └─ Fixed assets sold,0,0,0,0,0,10
+  └─ Investments purchased,-1,-0,0,-1,-0,0
+  └─ Investments sold,0,3,0,0,0,0
+  └─ Interest received,2,2,1,2,3,4
+  └─ Redemp n Canc of Shares,0,0,0,0,0,10
+  └─ Other investing items,1,4,-14,-13,5,-57
+Cash from Financing Activity,-3,-4,-4,-8,-8,-9
+  └─ Interest paid fin,-0.08,-0.08,-0.22,-0.36,0.00,0.00
+  └─ Dividends paid,-2.23,-3.13,-3.24,-6.06,-6.47,-7.52
+  └─ Other financing items,-0.38,-0.54,-0.66,-1.23,-1.48,-1.78
+Net Cash Flow,7,-8,0,1,7,-9
+  └─ Free Cash Flow,7,-13,17,20,7,44
+  └─ CFO/OP,96%,42%,95%,106%,86%,131%

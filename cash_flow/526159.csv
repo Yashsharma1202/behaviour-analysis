@@ -1,0 +1,25 @@
+Metric,Mar 2010,Mar 2011,Mar 2012,Mar 2013,Mar 2014
+Cash from Operating Activity,4,10,2,8,-2
+  └─ Profit from operations,7.34,7.12,4.62,7.15,7.26
+  └─ Receivables,-6.69,3.39,-10.66,2.64,-16.04
+  └─ Inventory,1.92,-8.34,4.01,-3.22,-6.70
+  └─ Payables,2.08,10.55,7.87,4.71,15.23
+  └─ Loans Advances,0.00,-1.15,-2.48,-1.88,-2.50
+  └─ Other WC items,0.04,0.00,-0.56,-0.91,1.04
+  └─ Working capital changes,-2.65,4.45,-1.82,1.34,-8.97
+  └─ Direct taxes,-0.78,-1.59,-0.78,-0.44,-0.34
+Cash from Investing Activity,-2,-2,-10,-9,-3
+  └─ Fixed assets purchased,-1.78,-2.50,-8.78,-6.94,-3.41
+  └─ Investments sold,0.23,0.00,0.00,0.00,0.00
+  └─ Interest received,0.00,0.00,0.01,0.00,0.00
+  └─ Dividends received,0.00,0.01,0.00,0.00,0.00
+  └─ Other investing items,0.00,0.44,-1.31,-2.10,0.00
+Cash from Financing Activity,-4,-7,8,1,5
+  └─ Proceeds from borrowings,7.87,0.58,1.72,5.04,10.83
+  └─ Repayment of borrowings,-8.66,-4.70,0.00,-0.04,0.00
+  └─ Interest paid fin,-2.65,-2.58,-2.25,-3.78,-5.39
+  └─ Dividends paid,-0.34,-0.54,-0.55,-0.36,-0.36
+  └─ Other financing items,0.00,0.00,8.75,0.00,0.00
+Net Cash Flow,-1,1,-0,-0,-0
+  └─ Free Cash Flow,2,7,-7,1,-5
+  └─ CFO/OP,64%,177%,34%,98%,-14%

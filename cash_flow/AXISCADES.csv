@@ -1,0 +1,33 @@
+Metric,Mar 2015,Mar 2016,Mar 2017,Mar 2018,Mar 2019,Mar 2020,Mar 2021,Mar 2022,Mar 2023,Mar 2024,Mar 2025,Mar 2026
+Cash from Operating Activity,31,31,9,-38,37,65,122,31,71,79,88,-1
+  └─ Profit from operations,42,57,40,26,40,103,69,82,160,148,136,189
+  └─ Receivables,11,-21,16,-53,-2,-14,38,-27,-32,-41,-68,-111
+  └─ Inventory,0,0,1,-11,7,-1,-4,-28,-14,-3,9,-18
+  └─ Payables,0,0,-62,5,9,24,-12,42,9,-13,-8,114
+  └─ Loans Advances,3,-5,27,-1,2,2,0,0,0,0,0,0
+  └─ Other WC items,-19,13,10,5,-7,-34,30,-25,-39,9,44,-142
+  └─ Working capital changes,-6,-14,-8,-55,10,-23,52,-38,-77,-47,-23,-157
+  └─ Direct taxes,-6,-12,-23,-9,-12,-15,1,-13,-13,-22,-24,-33
+Cash from Investing Activity,-9,-20,1,-32,-13,-2,-21,30,-199,-162,8,-71
+  └─ Fixed assets purchased,-5,-8,-29,-17,-15,-6,-6,-14,-11,-20,-38,-134
+  └─ Fixed assets sold,0,0,0,4,7,0,0,0,0,0,11,1
+  └─ Investments purchased,0,-4,-6,-5,-21,-4,-10,0,-15,0,-20,0
+  └─ Investments sold,0,5,6,0,0,0,0,32,0,4,0,51
+  └─ Interest received,1,1,2,9,2,3,3,4,1,1,11,5
+  └─ Dividends received,0,0,0,0,0,0,0,0,0,0,0,0
+  └─ Redemp n Canc of Shares,0,0,0,0,0,0,0,0,2,0,0,0
+  └─ Acquisition of companies,0,0,0,-35,-2,0,0,0,0,-56,0,0
+  └─ Inter corporate deposits,0,-16,1,0,0,4,0,0,0,0,0,0
+  └─ Other investing items,-5,3,28,13,16,1,-9,8,-177,-91,44,7
+Cash from Financing Activity,-9,-1,2,47,-7,-48,-93,-42,133,64,-100,38
+  └─ Proceeds from shares,0,0,10,0,0,0,0,1,2,222,3,0
+  └─ Proceeds from borrowings,7,2,0,0,7,5,0,11,225,231,69,96
+  └─ Repayment of borrowings,0,0,0,0,0,-23,-68,-35,-23,-318,-119,-10
+  └─ Proceeds from deposits,0,0,12,2,0,0,0,0,0,0,0,0
+  └─ Interest paid fin,-2,-2,-6,-8,-14,-15,-12,-6,-57,-38,-29,-22
+  └─ Dividends paid,0,0,0,0,0,0,0,0,0,-0,0,0
+  └─ Financial liabilities,0,0,0,0,0,-16,-13,-13,-14,-20,-23,-27
+  └─ Other financing items,-14,-2,-13,53,0,0,0,0,0,-13,0,0
+Net Cash Flow,13,10,12,-23,17,14,8,18,4,-19,-3,-34
+  └─ Free Cash Flow,26,22,-20,-51,30,59,117,18,60,59,61,-135
+  └─ CFO/OP,87%,80%,81%,-160%,376%,86%,186%,62%,57%,78%,78%,18%

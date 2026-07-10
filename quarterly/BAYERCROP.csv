@@ -1,0 +1,23 @@
+Metric,Dec 2005,Dec 2006
+Sales,223,242
+  └─ YOY Sales Growth %,,8.95%
+Expenses,194,225
+  └─ Material Cost %,59%,64%
+  └─ Employee Cost %,6%,7%
+Operating Profit,29,18
+OPM %,13%,7%
+Other Income,7,18
+  └─ Exceptional items,0.00,-0.42
+  └─ Other income normal,6.51,17.97
+Interest,2,3
+Depreciation,6,6
+Profit before tax,27,27
+Tax %,71%,36%
+Net Profit,8,17
+  └─ Exceptional items AT,0,-0
+  └─ Profit excl Excep,8,18
+  └─ Profit for PE,8,18
+  └─ Profit for EPS,8,17
+  └─ YOY Profit Growth %,,125%
+EPS in Rs,1.97,4.37
+Raw PDF,,

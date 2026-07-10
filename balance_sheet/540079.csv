@@ -1,0 +1,37 @@
+Metric,Mar 2023,Mar 2024,Mar 2025,Mar 2026
+Equity Capital,,11,21,21
+Reserves,,19,11,37
+Borrowings,,34,47,24
+  └─ Long term Borrowings,,5.34,6.93,9.06
+  └─ Short term Borrowings,,29.10,39.00,15.22
+  └─ Lease Liabilities,,0.00,0.77,0.00
+  └─ Other Borrowings,,0.00,-0.01,
+Other Liabilities,,33,27,37
+  └─ Non controlling int,,3.80,5.83,23.53
+  └─ Trade Payables,,15.66,12.30,7.96
+  └─ Advance from Customers,,8.85,1.10,
+  └─ Other liability items,,4.35,7.48,5.74
+Total Liabilities,,97,105,119
+Fixed Assets,,17,26,29
+  └─ Building,,0.12,0.12,
+  └─ Plant Machinery,,14.48,12.19,
+  └─ Equipments,,0.13,0.02,
+  └─ Computers,,0.01,0.11,
+  └─ Furniture n fittings,,0.71,11.40,
+  └─ Vehicles,,0.15,0.44,
+  └─ Intangible Assets,,2.78,2.78,2.78
+  └─ Other fixed assets,,0.01,-0.01,
+  └─ Gross Block,,18.39,27.05,
+  └─ Accumulated Depreciation,,1.32,0.61,
+CWIP,,0,0,0
+Investments,,1,1,1
+Other Assets,,79,78,89
+  └─ Inventories,,26.85,28.09,42.90
+  └─ Trade receivables,,9.72,20.85,16.33
+    └─ Receivables over 6m,,4.39,4.39,
+    └─ Receivables under 6m,,15.55,25.25,
+    └─ Prov for Doubtful,,-10.21,-8.79,
+  └─ Cash Equivalents,,3.43,0.04,0.10
+  └─ Loans n Advances,,19.02,18.07,15.36
+  └─ Other asset items,,19.54,10.58,14.45
+Total Assets,,97,105,119

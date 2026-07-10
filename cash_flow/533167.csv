@@ -1,0 +1,21 @@
+Metric,Mar 2006,Mar 2024
+Cash from Operating Activity,-0.72,
+  └─ Profit from operations,0.90,0.77
+  └─ Receivables,-1.36,-4.46
+  └─ Inventory,-0.55,1.08
+  └─ Payables,0.37,14.57
+  └─ Working capital changes,-1.54,11.18
+  └─ Direct taxes,-0.08,-1.23
+Cash from Investing Activity,0.03,
+  └─ Fixed assets purchased,-0.65,-0.20
+  └─ Fixed assets sold,0.08,0.00
+  └─ Investments sold,0.60,0.00
+  └─ Interest received,0.00,0.03
+  └─ Dividends received,0.00,0.21
+Cash from Financing Activity,0.67,
+  └─ Proceeds from borrowings,0.63,0.00
+  └─ Interest paid fin,0.04,-3.02
+  └─ Financial liabilities,0.00,-7.74
+Net Cash Flow,-0.02,
+  └─ Free Cash Flow,-1.29,
+  └─ CFO/OP,-37%,

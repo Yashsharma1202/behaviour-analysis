@@ -1,0 +1,22 @@
+Metric,Mar 2015
+Cash from Operating Activity,-255
+  └─ Profit from operations,-7
+  └─ Receivables,-7
+  └─ Inventory,-226
+  └─ Payables,60
+  └─ Loans Advances,-43
+  └─ Other WC items,-31
+  └─ Working capital changes,-246
+  └─ Exceptional CF items,-1
+Cash from Investing Activity,17
+  └─ Fixed assets purchased,-0.40
+  └─ Subsidy received,2.02
+  └─ Interest received,2.46
+  └─ Other investing items,12.68
+Cash from Financing Activity,243
+  └─ Proceeds from borrowings,267
+  └─ Repayment of borrowings,-3
+  └─ Interest paid fin,-21
+Net Cash Flow,5
+  └─ Free Cash Flow,-255
+  └─ CFO/OP,1513%

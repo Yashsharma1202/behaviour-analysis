@@ -1,0 +1,29 @@
+Metric,Mar 2003,Mar 2004,Mar 2005
+Equity Capital,0.57,0.57,0.57
+Reserves,17.30,8.75,1.59
+Borrowings,1.25,3.78,3.87
+  └─ Other Borrowings,1.25,3.78,3.87
+Other Liabilities,50.66,12.36,11.09
+  └─ Non controlling int,0.38,0.00,0.00
+  └─ Trade Payables,10.05,7.36,6.75
+  └─ Advance from Customers,1.73,1.02,0.92
+  └─ Other liability items,38.50,3.98,3.42
+Total Liabilities,69.78,25.46,17.12
+Fixed Assets,13.81,13.96,13.76
+  └─ Building,8.01,8.01,8.01
+  └─ Plant Machinery,0.90,0.78,0.57
+  └─ Furniture n fittings,1.08,0.94,0.94
+  └─ Intangible Assets,7.62,7.98,7.98
+  └─ Gross Block,17.61,17.71,17.50
+  └─ Accumulated Depreciation,3.80,3.75,3.74
+CWIP,0.00,0.00,0.00
+Investments,1.91,0.00,0.00
+Other Assets,54.06,11.50,3.36
+  └─ Inventories,1.55,0.90,0.19
+  └─ Trade receivables,8.47,7.14,1.42
+    └─ Receivables over 6m,2.53,5.01,1.41
+    └─ Receivables under 6m,5.94,2.13,0.01
+  └─ Cash Equivalents,0.62,1.56,0.89
+  └─ Loans n Advances,39.58,1.47,0.59
+  └─ Other asset items,3.84,0.43,0.27
+Total Assets,69.78,25.46,17.12

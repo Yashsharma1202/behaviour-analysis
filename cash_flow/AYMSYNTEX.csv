@@ -1,0 +1,31 @@
+Metric,Mar 2007,Mar 2008,Mar 2023,Mar 2024,Mar 2025,Mar 2026
+Cash from Operating Activity,14,13,118,64,108,151
+  └─ Profit from operations,13,12,106,99,124,107
+  └─ Receivables,-0,-11,8,-19,-8,-3
+  └─ Inventory,5,-8,-11,-15,-36,13
+  └─ Payables,-3,20,11,45,-13,32
+  └─ Loans Advances,0,0,0,0,0,-3
+  └─ Other WC items,0,0,14,-47,44,5
+  └─ Working capital changes,2,1,21,-36,-13,45
+  └─ Direct taxes,-1,1,-8,-0,-3,-1
+Cash from Investing Activity,-8,-11,-74,-55,-69,-119
+  └─ Fixed assets purchased,-9,-14,-78,-58,-74,-123
+  └─ Fixed assets sold,1,2,0,6,0,0
+  └─ Investments purchased,-8,-1,0,0,0,0
+  └─ Investments sold,8,1,0,0,0,0
+  └─ Interest received,2,1,1,1,2,1
+  └─ Dividends received,0,0,0,0,0,0
+  └─ Invest in subsidiaries,-0,0,0,0,0,0
+  └─ Other investing items,-0,0,3,-5,3,2
+Cash from Financing Activity,-16,-1,-39,-10,-28,-45
+  └─ Proceeds from shares,0.00,0.00,0.20,0.28,141.96,0.12
+  └─ Redemption of debentures,-0.37,-0.62,0.00,0.00,0.00,0.00
+  └─ Proceeds from borrowings,16.22,44.07,7.69,74.11,0.00,18.91
+  └─ Repayment of borrowings,-22.09,-39.82,-17.03,-36.13,-121.05,-16.17
+  └─ Proceeds from deposits,0.00,0.00,12.00,0.00,20.00,0.00
+  └─ Interest paid fin,-7.07,-8.62,-35.66,-41.89,-42.91,-31.30
+  └─ Financial liabilities,0.00,0.00,-6.15,-6.64,-6.13,-6.89
+  └─ Other financing items,-2.27,3.88,0.00,0.00,-20.00,-9.82
+Net Cash Flow,-9,1,5,-2,11,-13
+  └─ Free Cash Flow,6,1,40,12,34,29
+  └─ CFO/OP,110%,144%,131%,63%,93%,164%
