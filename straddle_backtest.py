@@ -45,7 +45,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import matplotlib.patches as mpatches
 
-warnings.filterwarnings("ignore")
+warnings.filterwarnings(" ignore ", category=UserWarning, module="matplotlib")
 
 # ╔══════════════════════════════════════════════════════════════════════════╗
 # ║                        CONFIGURATION                                    ║
@@ -85,7 +85,7 @@ BLUE     = "#58a6ff"
 GREEN    = "#3fb950"
 AMBER    = "#d29922"
 RED      = "#f85149"
-PURPLE   = "#bc8cff"
+PURPLE   = "#8c8eff"
 
 
 # ╔══════════════════════════════════════════════════════════════════════════╗

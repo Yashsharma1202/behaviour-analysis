@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Behaviour Analysis — Work Documentation</title>
+<style>
+  :root{
+    --bg:#f7f8fa; --panel:#ffffff; --ink:#12161d; --mute:#5b6472; --line:#e4e7ec;
+    --blue:#2563eb; --green:#15803d; --red:#b91c1c; --amber:#b45309;
+    --code-bg:#f0f2f5; --shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.1);
+    --mono:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#0c0f14; --panel:#141922; --ink:#e6e9ef; --mute:#98a2b3; --line:#232a35;
+      --blue:#5b9bff; --green:#5ec98a; --red:#f87171; --amber:#fbbf5b;
+      --code-bg:#1b212c; --shadow:none;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0c0f14; --panel:#141922; --ink:#e6e9ef; --mute:#98a2b3; --line:#232a35;
+    --blue:#5b9bff; --green:#5ec98a; --red:#f87171; --amber:#fbbf5b; --code-bg:#1b212c; --shadow:none;
+  }
+  :root[data-theme="light"]{
+    --bg:#f7f8fa; --panel:#ffffff; --ink:#12161d; --mute:#5b6472; --line:#e4e7ec;
+    --blue:#2563eb; --green:#15803d; --red:#b91c1c; --amber:#b45309; --code-bg:#f0f2f5;
+    --shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.1);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;font-size:16px}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px 96px}
+  header.hero{padding:56px 0 32px;border-bottom:1px solid var(--line);margin-bottom:8px}
+  .kicker{font-family:var(--mono);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:600}
+  h1{font-size:2.15rem;line-height:1.15;margin:.35em 0 .25em;letter-spacing:-.02em}
+  .lede{font-size:1.12rem;color:var(--mute);margin:0;max-width:70ch}
+  .meta{margin-top:18px;font-family:var(--mono);font-size:.8rem;color:var(--mute)}
+  h2{font-size:1.4rem;margin:52px 0 6px;letter-spacing:-.01em;scroll-margin-top:20px}
+  h2 .num{color:var(--blue);font-family:var(--mono);font-size:1rem;margin-right:.5em}
+  h3{font-size:1.06rem;margin:26px 0 6px}
+  p{margin:.6em 0}
+  a{color:var(--blue)}
+  code{font-family:var(--mono);font-size:.85em;background:var(--code-bg);padding:.12em .4em;border-radius:5px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:16px 0}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow)}
+  .stat .v{font-size:1.7rem;font-weight:700;letter-spacing:-.02em;line-height:1.1}
+  .stat .l{font-size:.82rem;color:var(--mute);margin-top:4px}
+  .verdict{border-left:4px solid var(--blue);background:var(--panel);border-radius:0 12px 12px 0;
+    padding:16px 20px;margin:16px 0;box-shadow:var(--shadow)}
+  .verdict.bad{border-left-color:var(--red)}
+  .verdict.good{border-left-color:var(--green)}
+  .verdict.warn{border-left-color:var(--amber)}
+  .tag{display:inline-block;font-family:var(--mono);font-size:.72rem;font-weight:600;
+    padding:.15em .6em;border-radius:20px;vertical-align:middle}
+  .tag.red{background:rgba(185,28,28,.12);color:var(--red)}
+  .tag.green{background:rgba(21,128,61,.14);color:var(--green)}
+  .tag.amber{background:rgba(180,83,9,.14);color:var(--amber)}
+  .tag.blue{background:rgba(37,99,235,.12);color:var(--blue)}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+  .tblscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.76rem;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);font-weight:600;white-space:nowrap}
+  td.num,th.num{text-align:right;font-family:var(--mono);white-space:nowrap}
+  .pos{color:var(--green);font-weight:600}
+  .neg{color:var(--red);font-weight:600}
+  ul,ol{margin:.5em 0;padding-left:1.3em}
+  li{margin:.3em 0}
+  .toc{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:22px 0;box-shadow:var(--shadow)}
+  .toc ol{columns:2;column-gap:32px;font-size:.92rem;margin:.4em 0}
+  @media(max-width:640px){.toc ol{columns:1}h1{font-size:1.7rem}}
+  .toc a{text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+  .file{font-family:var(--mono);font-size:.82rem;color:var(--ink);background:var(--code-bg);
+    padding:.15em .5em;border-radius:5px;white-space:nowrap}
+  hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+  .foot{color:var(--mute);font-size:.85rem;margin-top:40px;font-family:var(--mono)}
+  .callout{font-size:.9rem;color:var(--mute)}
+  .pill-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+
+  /* ── PDF / print: force light theme, A4 pages, no element split across pages ── */
+  @media print{
+    :root{
+      --bg:#ffffff; --panel:#ffffff; --ink:#12161d; --mute:#4b5563; --line:#d7dbe0;
+      --blue:#1d4ed8; --green:#15803d; --red:#b91c1c; --amber:#b45309; --code-bg:#f2f3f5; --shadow:none;
+    }
+    @page{ size:A4; margin:16mm 15mm; }
+    html,body{background:#fff !important;font-size:11.5pt}
+    .wrap{max-width:100%;padding:0}
+    a{color:var(--ink);text-decoration:none}
+    .toc{display:none}                       /* nav is useless on paper */
+    header.hero{padding:0 0 18px;break-after:avoid}
+    h1{font-size:22pt}
+    h2{font-size:15pt;margin-top:22px;break-after:avoid;break-inside:avoid}
+    h3{font-size:12pt;break-after:avoid}
+    p,li{orphans:3;widows:3}
+    .panel,.stat,.verdict,.grid,table,.tblscroll,tr,img,.pill-row{break-inside:avoid}
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .stat,.panel,.verdict{box-shadow:none}
+    .tblscroll{overflow:visible}
+    table{font-size:9.5pt}
+    /* start each major section on a fresh page for a clean deck-style flow */
+    #pipeline,#rails,#bugs,#survive,#coverage,#download,#dashboard,#next{break-before:page}
+    .foot{break-inside:avoid}
+  }
+
+  /* figures / charts — always-light card so screen & PDF match */
+  .fig{background:#fff;border:1px solid var(--line);border-radius:12px;
+    padding:16px 18px 14px;margin:20px 0;box-shadow:var(--shadow)}
+  .fig .ftitle{font-weight:600;font-size:.98rem;color:#12161d;margin-bottom:12px;line-height:1.3}
+  .fig figcaption{font-size:.82rem;color:#5b6472;margin-top:10px;line-height:1.5}
+  @media print{ .fig{break-inside:avoid} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">NSE Behaviour Analysis · Investigation Log</div>
+  <h1>Does the event-behaviour edge actually exist?</h1>
+  <p class="lede">A full audit of the buy/sell backtest — how its rules are generated, every
+    place look-ahead and bias creep in, and what survives once the trades are made honest.
+    Plus the data pipeline, the fundamentals top-up to a complete Nifty 50, and the dashboard change.</p>
+  <div class="meta">Scope: Nifty 50 · Data through Jul 2026 · Prices from Yahoo, events from NSE, fundamentals from Screener</div>
+</header>
+
+<div class="toc">
+  <strong>Contents</strong>
+  <ol>
+    <li><a href="#tldr">Bottom line</a></li>
+    <li><a href="#pipeline">The pipeline &amp; scripts</a></li>
+    <li><a href="#rules">How buy/sell rules are made</a></li>
+    <li><a href="#rails">The honesty rails</a></li>
+    <li><a href="#bugs">Look-ahead &amp; biases found</a></li>
+    <li><a href="#survive">Does any edge survive?</a></li>
+    <li><a href="#coverage">Data coverage &amp; regime change</a></li>
+    <li><a href="#download">Fundamentals top-up (52/52)</a></li>
+    <li><a href="#dashboard">Dashboard change</a></li>
+    <li><a href="#next">Open questions / next</a></li>
+  </ol>
+</div>
+
+<!-- ───────────────────────────── TL;DR ───────────────────────────── -->
+<h2 id="tldr"><span class="num">01</span>Bottom line</h2>
+<div class="verdict bad">
+  <strong>No tradeable event edge survives honest testing on the Nifty 50.</strong>
+  Every apparently-profitable rule either (a) requires buying <em>before</em> news nobody could
+  have known was coming, (b) sits on a data bug, or (c) fails to beat buying on random dates once
+  the market is stripped out and the rule is tested on events it never saw.
+</div>
+<div class="grid">
+  <div class="stat"><div class="v">0</div><div class="l">rules that beat random dates out-of-sample with t&gt;2 in a way that replicates</div></div>
+  <div class="stat"><div class="v">~40%</div><div class="l">of announcement dates were silently corrupted by a date-parsing bug</div></div>
+  <div class="stat"><div class="v">~80%</div><div class="l">of the announcement "edge" lived in the un-tradeable pre-news window</div></div>
+  <div class="stat"><div class="v">52/52</div><div class="l">Nifty 50 stocks now have complete fundamentals (was 49)</div></div>
+</div>
+<figure class="fig"><div class="ftitle">The announcement “edge” evaporates out-of-sample</div><svg viewBox="0 0 640 300" style="width:100%;height:auto" role="img"><line x1="64" y1="246.0" x2="620" y2="246.0" stroke="#e4e7ec" stroke-width="1"/><text x="54.0" y="250.0" fill="#667085" font-size="11" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">-1</text><line x1="64" y1="193.6" x2="620" y2="193.6" stroke="#e4e7ec" stroke-width="1"/><text x="54.0" y="197.6" fill="#667085" font-size="11" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+0</text><line x1="64" y1="141.2" x2="620" y2="141.2" stroke="#e4e7ec" stroke-width="1"/><text x="54.0" y="145.2" fill="#667085" font-size="11" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+1</text><line x1="64" y1="88.9" x2="620" y2="88.9" stroke="#e4e7ec" stroke-width="1"/><text x="54.0" y="92.9" fill="#667085" font-size="11" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+2</text><line x1="64" y1="36.5" x2="620" y2="36.5" stroke="#e4e7ec" stroke-width="1"/><text x="54.0" y="40.5" fill="#667085" font-size="11" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+3</text><text transform="rotate(-90 16 136)" x="16.0" y="136.0" fill="#667085" font-size="11" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">t-stat</text><line x1="64" y1="193.6" x2="620" y2="193.6" stroke="#1f2733" stroke-width="1.5"/><line x1="64" y1="88.9" x2="620" y2="88.9" stroke="#b45309" stroke-width="1.4" stroke-dasharray="5 4"/><text x="618.0" y="82.9" fill="#b45309" font-size="11" text-anchor="end" font-weight="600" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">significance  |t| = 2</text><rect x="170.8" y="51.7" width="120" height="142.0" rx="4" fill="#2563eb"/><text x="230.8" y="43.7" fill="#2563eb" font-size="15" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+2.71</text><text x="230.8" y="266.0" fill="#1f2733" font-size="12.5" text-anchor="middle" font-weight="600" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">In-sample</text><text x="230.8" y="283.0" fill="#667085" font-size="10.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">"REAL EDGE" — but the rule was fitted here</text><rect x="404.3" y="193.6" width="120" height="14.7" rx="4" fill="#b91c1c"/><text x="464.3" y="224.3" fill="#b91c1c" font-size="15" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">-0.28</text><text x="464.3" y="266.0" fill="#1f2733" font-size="12.5" text-anchor="middle" font-weight="600" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">Out-of-sample</text><text x="464.3" y="283.0" fill="#667085" font-size="10.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">unseen events — the edge is gone</text></svg><figcaption>Month-clustered t-statistic for the best ANNOUNCEMENT rule. In-sample it clears the |t|=2 bar and prints “REAL EDGE”; on events it never saw, it is indistinguishable from zero. The whole edge was curve-fitting.</figcaption></figure>
+<p>The statistical scaffolding in the backtest (train/test split, market-adjustment, month-clustered
+t-stats) is genuinely careful work. The problem is <em>upstream</em> of the statistics: the events
+aren't tradeable in advance and the universe is survivorship-selected. No amount of clean t-testing
+rescues a signal you couldn't have acted on.</p>
+
+<!-- ───────────────────────────── PIPELINE ───────────────────────────── -->
+<h2 id="pipeline"><span class="num">02</span>The pipeline &amp; scripts</h2>
+<p>Everything is driven off two data sources — daily <strong>adjusted prices</strong> from Yahoo
+(cached in <span class="file">processed/price_cache/</span>) and <strong>corporate event feeds</strong>
+from NSE (per-stock <span class="file">&lt;SYMBOL&gt;/*.csv</span>), plus <strong>Screener fundamentals</strong>
+in five folders.</p>
+<div class="tblscroll">
+<table>
+  <thead><tr><th>Script</th><th>What it does</th><th>Output</th></tr></thead>
+  <tbody>
+    <tr><td><span class="file">event_behaviour.py</span></td><td>Grid-searches buy T-N / sell T+M for every event, aggregates per event type, picks the "best" rule</td><td><span class="file">event_behaviour_summary.csv</span></td></tr>
+    <tr><td><span class="file">nifty_backtest.py</span></td><td>Honest version: train/test split, market-adjusted, month-clustered t-stats, verdict</td><td><span class="file">nifty_backtest.csv</span></td></tr>
+    <tr><td><span class="file">optimal_rules.py</span> <span class="tag blue">new</span></td><td>Per-stock optimal rule, two passes (descriptive vs tradeable), train/test + random-date placebo</td><td><span class="file">optimal_rules.csv</span></td></tr>
+    <tr><td><span class="file">fundamental_buckets.py</span> <span class="tag blue">new</span></td><td>Pools all stocks, buckets events by the company's fundamentals <em>at the time</em>, finds a rule per bucket</td><td><span class="file">fundamental_buckets.csv</span></td></tr>
+    <tr><td><span class="file">earnings_surprise.py</span> <span class="tag blue">new</span></td><td>Post-earnings drift (PEAD): do quarterly beats drift up and misses drift down?</td><td><span class="file">earnings_surprise.csv</span></td></tr>
+    <tr><td><span class="file">download_fundamentals.py</span> <span class="tag blue">new</span></td><td>Scrapes Screener statements + schedules API into the exact folder CSV format</td><td>5 folders × CSV</td></tr>
+    <tr><td><span class="file">stock_server.py</span> / <span class="file">nifty_dash.py</span></td><td>The web dashboard (Fundamentals, Behaviour, Financial Results tabs)</td><td>localhost:8090</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="callout">The five fundamentals folders — <span class="file">pnl</span>, <span class="file">balance_sheet</span>,
+<span class="file">cash_flow</span>, <span class="file">ratios</span> (annual, Mar-2015→Mar-2026) and
+<span class="file">quarterly</span> (Mar-2023→Mar-2026) — hold one CSV per stock, Screener format.</p>
+
+<!-- ───────────────────────────── RULES ───────────────────────────── -->
+<h2 id="rules"><span class="num">03</span>How the buy/sell rules are made — not hardcoded</h2>
+<p>The "buy N days before / sell M days after" recommendation is <strong>computed by brute-force
+grid search</strong>, not written into the code. For every event it prices all 8×8 combinations of
+entry and exit day, averages each cell across every event of that type, and picks the winning cell.
+Nothing about "buy 7 days before" is a constant; it falls out of the data.</p>
+<div class="verdict warn">
+  <strong>Three things <em>are</em> effectively hardcoded</strong> — the ±8-day search window
+  (<code>N_BEFORE = N_AFTER = 8</code>, so the rule can never point outside that range), a
+  drill-in report frozen at "6 days before / 3 days after", and a selection rule that quietly
+  disagrees between files (highest win-rate vs highest average return).
+</div>
+
+<!-- ───────────────────────────── RAILS ───────────────────────────── -->
+<h2 id="rails"><span class="num">04</span>The honesty rails</h2>
+<p>Every new analysis applies the same defences, so a good-looking number has to survive all of them:</p>
+<div class="grid">
+  <div class="panel"><strong>Train / test split</strong><br><span class="callout">Fit the rule on the oldest 70% of events, report only on the newest 30% it never saw.</span></div>
+  <div class="panel"><strong>Market-adjusted</strong><br><span class="callout">Subtract the NIFTY's move over the exact same days. If the edge vanishes, it was just market drift.</span></div>
+  <div class="panel"><strong>Random-date placebo</strong><br><span class="callout">Same holding period on random dates. A rule that can't beat random days isn't a rule.</span></div>
+  <div class="panel"><strong>Month-clustered t</strong><br><span class="callout">Trades on 50 stocks share market days — the naive t is 3-5× inflated. Cluster by calendar month.</span></div>
+  <div class="panel"><strong>Knowability constraint</strong><br><span class="callout">Entry is forbidden before the event was <em>public</em> (intimation date for results, disclosure time for news).</span></div>
+  <div class="panel"><strong>Costs</strong><br><span class="callout">0.10% round-trip charged on every trade (still optimistic vs real ~0.25% delivery cost).</span></div>
+</div>
+
+<!-- ───────────────────────────── BUGS ───────────────────────────── -->
+<h2 id="bugs"><span class="num">05</span>Look-ahead &amp; biases found</h2>
+
+<h3>① The date-parsing bug <span class="tag red">critical</span></h3>
+<p>Announcements are dated from <code>sort_date</code>, which is ISO (<code>2026-07-10</code>), but parsed
+with <code>dayfirst=True</code>. So <strong>10 July silently becomes 7 October</strong> — every announcement
+whose day-of-month is ≤ 12 (roughly 40%) is priced against the wrong days. The other feeds use month-name
+dates and are safe. This alone invalidates the announcement results, which were 77% of the test trades.</p>
+
+<h3>② You can't buy before an unscheduled announcement <span class="tag red">critical</span></h3>
+<p>Press releases, acquisitions, credit ratings — nobody knows these are coming. The optimizer's rule
+"buy 8 days before the announcement" is physically impossible to place. When entry is <em>allowed</em> to
+cheat, the optimizer cheats <strong>81% of the time</strong> (44 of 54 stocks put entry before the event).</p>
+
+<h3>③ Results entry lands before the date was public</h3>
+<p>Board-meeting/results dates are only knowable from the <em>intimation</em>, which the feeds show arrives
+~7 calendar days (≈5 trading days) ahead. The fitted rules buy at T-7 / T-8 — <em>before</em> the intimation
+was filed.</p>
+
+<h3>④ More biases</h3>
+<div class="tblscroll">
+<table>
+  <thead><tr><th>Bias</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Survivorship</td><td>Universe is <em>today's</em> Nifty 50 back to 2007 — every stock that fell out for underperforming is absent. Market-adjustment doesn't fix it.</td></tr>
+    <tr><td>Corner solutions</td><td>Winning rules sit at the grid boundary (8/8, 7/8…). A real event effect peaks at an interior cell; a boundary hit means it's harvesting drift, not the event.</td></tr>
+    <tr><td>Non-independent events</td><td>One quarterly result spawns a BOARD_MEETING + ANNOUNCEMENT + RESULTS row within days — the same trade counted three times.</td></tr>
+    <tr><td>Leaky split</td><td>Train/test cut was computed <em>per symbol</em>, so 2023 test events sit beside other stocks' 2023 train events; ~0.8 correlation leaks the fit.</td></tr>
+    <tr><td>Adjusted close</td><td>Yahoo adjclose back-adjusts dividends out, so the ex-date drop doesn't exist in the series used.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ───────────────────────────── SURVIVE ───────────────────────────── -->
+<h2 id="survive"><span class="num">06</span>Does any edge survive?</h2>
+
+<h3>Reliance, honestly tested (19.5 years)</h3>
+<p>Results, annual results and dividends were each tested with entry forbidden before the event was
+public, net of cost, market-adjusted, against a placebo.</p>
+<div class="tblscroll">
+<table>
+  <thead><tr><th>Event</th><th class="num">trades</th><th class="num">vs NIFTY</th><th class="num">t</th><th class="num">win%</th><th class="num">placebo</th><th>verdict</th></tr></thead>
+  <tbody>
+    <tr><td>Quarterly results</td><td class="num">56</td><td class="num">+0.10%</td><td class="num">+0.18</td><td class="num">42%</td><td class="num">+0.08%</td><td><span class="tag red">no edge</span></td></tr>
+    <tr><td>Annual results</td><td class="num">16</td><td class="num">−0.10%</td><td class="num">−0.08</td><td class="num">40%</td><td class="num">+0.27%</td><td><span class="tag red">no edge</span></td></tr>
+    <tr><td>Dividends (full)</td><td class="num">16</td><td class="num">+1.03%</td><td class="num">+1.56</td><td class="num">75%</td><td class="num">+0.35%</td><td><span class="tag amber">died post-2018</span></td></tr>
+  </tbody>
+</table>
+</div>
+<p>The dividend "edge" was <strong>+2.86% (7/7 wins) in 2011–2017 and −0.40% in 2018–2026</strong> — gone for
+the last nine years, and a single COVID-rebound trade (+13.8%, Apr-2020) carries much of the historical average.</p>
+
+<div class="verdict"><strong>The one genuinely interesting shape:</strong> Reliance <em>drifts up into</em> its
+results (+0.8% vs market over the 5 days before) and <em>sells off after</em> (−0.6% in the two days after) —
+classic "buy the rumour, sell the news". The optimizer independently landed on <strong>buy&nbsp;T-5,&nbsp;sell&nbsp;T-1</strong>
+(sell before the result is out). It's inside the knowable window, so it's legal — but only 16 events, t≈1.8, unproven.</p></div>
+
+<figure class="fig"><div class="ftitle">Reliance drifts up into results, then sells off — “buy the rumour, sell the news”</div><svg viewBox="0 0 660 320" style="width:100%;height:auto" role="img"><line x1="46" y1="26.0" x2="642" y2="26.0" stroke="#e4e7ec" stroke-width="1"/><text x="38.0" y="30.0" fill="#667085" font-size="10.5" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+0.5%</text><line x1="46" y1="103.5" x2="642" y2="103.5" stroke="#e4e7ec" stroke-width="1"/><text x="38.0" y="107.5" fill="#667085" font-size="10.5" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+0.0%</text><line x1="46" y1="181.0" x2="642" y2="181.0" stroke="#e4e7ec" stroke-width="1"/><text x="38.0" y="185.0" fill="#667085" font-size="10.5" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">-0.5%</text><line x1="46" y1="258.5" x2="642" y2="258.5" stroke="#e4e7ec" stroke-width="1"/><text x="38.0" y="262.5" fill="#667085" font-size="10.5" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">-1.0%</text><line x1="344.0" y1="26" x2="344.0" y2="274" stroke="#667085" stroke-width="1.2" stroke-dasharray="4 4"/><text x="344.0" y="18.0" fill="#667085" font-size="10.5" text-anchor="middle" font-weight="600" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">EVENT (result out)</text><rect x="157.8" y="26" width="149.0" height="248" fill="#2563eb" opacity="0.07"/><text x="46.0" y="294.0" fill="#667085" font-size="10" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">T-8</text><text x="120.5" y="294.0" fill="#667085" font-size="10" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">T-6</text><text x="195.0" y="294.0" fill="#667085" font-size="10" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">T-4</text><text x="269.5" y="294.0" fill="#667085" font-size="10" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">T-2</text><text x="344.0" y="294.0" fill="#667085" font-size="10" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">T</text><text x="418.5" y="294.0" fill="#667085" font-size="10" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">T+2</text><text x="493.0" y="294.0" fill="#667085" font-size="10" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">T+4</text><text x="567.5" y="294.0" fill="#667085" font-size="10" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">T+6</text><text x="642.0" y="294.0" fill="#667085" font-size="10" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">T+8</text><text x="344.0" y="312.0" fill="#667085" font-size="11" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">trading days relative to the result</text><polyline points="46.0,176.3 83.2,154.7 120.5,125.2 157.8,173.2 195.0,146.9 232.2,98.8 269.5,74.0 306.8,55.5 344.0,103.5 381.2,194.9 418.5,219.8 455.8,157.8 493.0,143.8 530.2,122.1 567.5,150.0 604.8,216.6 642.0,255.4" fill="none" stroke="#2563eb" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="157.8" cy="173.2" r="5" fill="#fff" stroke="#2563eb" stroke-width="2.5"/><text x="157.8" y="193.2" fill="#2563eb" font-size="11" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">BUY  T-5</text><circle cx="306.8" cy="55.5" r="5" fill="#fff" stroke="#b45309" stroke-width="2.5"/><text x="306.8" y="43.5" fill="#b45309" font-size="11" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">SELL  T-1</text><text x="232.2" y="40.0" fill="#2563eb" font-size="11" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+0.76% run-up captured</text></svg><figcaption>Average market-adjusted move around 56 quarterly results, measured from the event-day close. The stock climbs into the announcement and gives it back after. The only legal, profitable window is buy T-5 / sell T-1 — before the news — though at 16 net events it is unproven.</figcaption></figure>
+<h3>The dividend ex-date "discount recovery"</h3>
+<p>Tested on <strong>raw</strong> prices (adjclose hides the drop) with split-corrected dividend amounts —
+after catching a bug where the raw historical ₹ dividend was added onto a 8×-split-adjusted price.</p>
+<div class="verdict bad">There is <strong>no discount to recover.</strong> Reliance's dividend is ~0.4% of price;
+its daily volatility is ~1.5%. The stock drops <strong>0.03× its dividend</strong> on the ex-date — statistically
+zero — and the median recovery is <strong>0 days</strong> because half the time there was never a dip. The signal
+is 4× smaller than the noise it hides in.</div>
+<p class="callout">This trade could exist in high-yield names (COALINDIA ~6%, ONGC/POWERGRID/ITC ~3-5%) where
+the discount is large relative to daily noise — not in a 0.4%-yield growth stock.</p>
+
+<h3>Per-stock optimal rules (55 stocks)</h3>
+<p>"Beat random dates" landed at 26–30 of ~49 stocks — a coin flip. Forcing entry after the news, the average
+announcement edge collapsed to <strong>+0.05%</strong> (zero). Only 2 of 53 cleared t&gt;2 in tradeable mode —
+exactly the false-positive rate expected from testing 53 stocks.</p>
+
+<h3>Fundamental buckets — the most interesting negative</h3>
+<p><strong>Results:</strong> nothing in any bucket. <strong>Announcements:</strong> a clean, monotonic pattern —
+post-news drift exists in <em>low-quality, low-margin, high-debt</em> companies and is absent in high-quality ones.</p>
+<div class="tblscroll">
+<table>
+  <thead><tr><th>Dimension (edge over random)</th><th class="num">LOW</th><th class="num">MID</th><th class="num">HIGH</th></tr></thead>
+  <tbody>
+    <tr><td>Sales Growth %</td><td class="num pos">+0.64%</td><td class="num">+0.05%</td><td class="num neg">−0.11%</td></tr>
+    <tr><td>ROCE %</td><td class="num pos">+0.60%</td><td class="num">+0.02%</td><td class="num neg">−0.16%</td></tr>
+    <tr><td>OPM %</td><td class="num pos">+0.58%</td><td class="num">+0.00%</td><td class="num neg">−0.06%</td></tr>
+    <tr><td>Debt / Reserves</td><td class="num neg">−0.10%</td><td class="num">−0.19%</td><td class="num pos">+0.60%</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Strongest cell: high-leverage, buy&nbsp;T+0 / sell&nbsp;T+12 → +0.85% vs market, t(month)=3.01, n=829.
+<span class="tag amber">but</span> the four dimensions select the <em>same</em> stocks (one finding, not four),
+it's a corner solution (always sell T+12), and ~0.6% barely clears realistic costs. Not a green light — a
+single hypothesis worth a targeted test.</p>
+
+<figure class="fig"><div class="ftitle">Post-announcement drift lives in low-quality, high-debt firms</div><svg viewBox="0 0 680 360" style="width:100%;height:auto" role="img"><line x1="48" y1="80.0" x2="662" y2="80.0" stroke="#e4e7ec" stroke-width="1"/><text x="40.0" y="84.0" fill="#667085" font-size="10.5" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+0.6</text><line x1="48" y1="128.0" x2="662" y2="128.0" stroke="#e4e7ec" stroke-width="1"/><text x="40.0" y="132.0" fill="#667085" font-size="10.5" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+0.4</text><line x1="48" y1="176.0" x2="662" y2="176.0" stroke="#e4e7ec" stroke-width="1"/><text x="40.0" y="180.0" fill="#667085" font-size="10.5" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+0.2</text><line x1="48" y1="224.0" x2="662" y2="224.0" stroke="#e4e7ec" stroke-width="1"/><text x="40.0" y="228.0" fill="#667085" font-size="10.5" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+0.0</text><line x1="48" y1="272.0" x2="662" y2="272.0" stroke="#e4e7ec" stroke-width="1"/><text x="40.0" y="276.0" fill="#667085" font-size="10.5" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">-0.2</text><line x1="48" y1="224.0" x2="662" y2="224.0" stroke="#1f2733" stroke-width="1.5"/><text transform="rotate(-90 15 170)" x="15.0" y="170.0" fill="#667085" font-size="10.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">edge vs random, %</text><rect x="68.7" y="70.4" width="33.4" height="153.6" rx="3" fill="#2563eb"/><text x="85.4" y="65.4" fill="#2563eb" font-size="9.5" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+0.64</text><text x="85.4" y="318.0" fill="#667085" font-size="8.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">LOW</text><rect x="108.1" y="212.0" width="33.4" height="12.0" rx="3" fill="#2563eb"/><text x="124.8" y="207.0" fill="#2563eb" font-size="9.5" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+0.05</text><text x="124.8" y="318.0" fill="#667085" font-size="8.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">MID</text><rect x="147.4" y="224.0" width="33.4" height="26.4" rx="3" fill="#b91c1c"/><text x="164.1" y="262.4" fill="#b91c1c" font-size="9.5" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">-0.11</text><text x="164.1" y="318.0" fill="#667085" font-size="8.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">HIGH</text><text x="124.8" y="336.0" fill="#1f2733" font-size="11.5" text-anchor="middle" font-weight="600" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">Sales Growth</text><rect x="222.2" y="80.0" width="33.4" height="144.0" rx="3" fill="#2563eb"/><text x="238.9" y="75.0" fill="#2563eb" font-size="9.5" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+0.60</text><text x="238.9" y="318.0" fill="#667085" font-size="8.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">LOW</text><rect x="261.6" y="219.2" width="33.4" height="4.8" rx="3" fill="#2563eb"/><text x="278.2" y="214.2" fill="#2563eb" font-size="9.5" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+0.02</text><text x="278.2" y="318.0" fill="#667085" font-size="8.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">MID</text><rect x="300.9" y="224.0" width="33.4" height="38.4" rx="3" fill="#b91c1c"/><text x="317.6" y="274.4" fill="#b91c1c" font-size="9.5" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">-0.16</text><text x="317.6" y="318.0" fill="#667085" font-size="8.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">HIGH</text><text x="278.2" y="336.0" fill="#1f2733" font-size="11.5" text-anchor="middle" font-weight="600" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">ROCE</text><rect x="375.7" y="84.8" width="33.4" height="139.2" rx="3" fill="#2563eb"/><text x="392.4" y="79.8" fill="#2563eb" font-size="9.5" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+0.58</text><text x="392.4" y="318.0" fill="#667085" font-size="8.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">LOW</text><rect x="415.1" y="224.0" width="33.4" height="0.6" rx="3" fill="#2563eb"/><text x="431.8" y="219.0" fill="#2563eb" font-size="9.5" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+0.00</text><text x="431.8" y="318.0" fill="#667085" font-size="8.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">MID</text><rect x="454.4" y="224.0" width="33.4" height="14.4" rx="3" fill="#b91c1c"/><text x="471.1" y="250.4" fill="#b91c1c" font-size="9.5" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">-0.06</text><text x="471.1" y="318.0" fill="#667085" font-size="8.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">HIGH</text><text x="431.8" y="336.0" fill="#1f2733" font-size="11.5" text-anchor="middle" font-weight="600" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">OPM</text><rect x="529.2" y="224.0" width="33.4" height="24.0" rx="3" fill="#b91c1c"/><text x="545.9" y="260.0" fill="#b91c1c" font-size="9.5" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">-0.10</text><text x="545.9" y="318.0" fill="#667085" font-size="8.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">LOW</text><rect x="568.6" y="224.0" width="33.4" height="45.6" rx="3" fill="#b91c1c"/><text x="585.2" y="281.6" fill="#b91c1c" font-size="9.5" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">-0.19</text><text x="585.2" y="318.0" fill="#667085" font-size="8.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">MID</text><rect x="607.9" y="80.0" width="33.4" height="144.0" rx="3" fill="#2563eb"/><text x="624.6" y="75.0" fill="#2563eb" font-size="9.5" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">+0.60</text><text x="624.6" y="318.0" fill="#667085" font-size="8.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">HIGH</text><text x="585.2" y="336.0" fill="#1f2733" font-size="11.5" text-anchor="middle" font-weight="600" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">Debt/Reserves</text><rect x="48" y="346" width="12" height="12" rx="2" fill="#2563eb"/><text x="66.0" y="356.0" fill="#667085" font-size="10.5" text-anchor="start" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">positive edge</text><rect x="168" y="346" width="12" height="12" rx="2" fill="#b91c1c"/><text x="186.0" y="356.0" fill="#667085" font-size="10.5" text-anchor="start" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">negative edge</text></svg><figcaption>Out-of-sample edge over random dates, by the company’s fundamentals at the time (each split LOW/MID/HIGH vs peers that month). It is monotonic: strong in the weakest, cheapest, most-levered names and gone in the best — the same finding seen through four correlated lenses, not four independent ones.</figcaption></figure>
+<h3>Earnings surprise / PEAD (quarterly, 2023–2026)</h3>
+<div class="verdict bad">No post-earnings drift in the Nifty 50. The market-neutral long-beat/short-miss spread
+is flat-to-negative (the one "significant" cell is <em>negative</em>, t=−2.11 — noise). Beats don't even pop on
+day 1. The 50 most liquid, most-covered stocks in India price results efficiently within the day.</div>
+<p class="callout">PEAD lives in small, neglected stocks and down markets — the opposite of a Nifty-50 bull-run
+sample. Absence here doesn't prove absence everywhere.</p>
+
+<!-- ───────────────────────────── COVERAGE ───────────────────────────── -->
+<h2 id="coverage"><span class="num">07</span>Data coverage &amp; the regime change</h2>
+<p>Reliance has <strong>19.5 years of prices</strong> (2007→2026) and 21.6 years of announcements. But the
+announcement count is deeply skewed by regulation, not reality — <strong>56% of all announcements are from 2020
+onward</strong>, and per-stock filings grew ~5× (33 → 168 per year).</p>
+<div class="tblscroll">
+<table>
+  <thead><tr><th>Era</th><th class="num">filings / stock / yr</th><th>What actually changed</th></tr></thead>
+  <tbody>
+    <tr><td>2004–2011</td><td class="num">33</td><td>baseline</td></tr>
+    <tr><td>2015→2016 jump</td><td class="num">65</td><td>SEBI LODR 2015 (Reg 30 / Schedule III enumerates disclosable events)</td></tr>
+    <tr><td>2018–2021</td><td class="num">127</td><td>mandatory "Loss of Share Certificates", newspaper copies, etc. appear</td></tr>
+    <tr><td>2022→2024 jump</td><td class="num">168</td><td>LODR 2nd Amendment 2023 — 12-hour deadlines, disclosure regardless of materiality</td></tr>
+  </tbody>
+</table>
+</div>
+<figure class="fig"><div class="ftitle">Announcement volume grew ~5× — regulation, not more news</div><svg viewBox="0 0 620 300" style="width:100%;height:auto" role="img"><line x1="44" y1="250.0" x2="602" y2="250.0" stroke="#e4e7ec" stroke-width="1"/><text x="36.0" y="254.0" fill="#667085" font-size="10.5" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">0</text><line x1="44" y1="188.9" x2="602" y2="188.9" stroke="#e4e7ec" stroke-width="1"/><text x="36.0" y="192.9" fill="#667085" font-size="10.5" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">50</text><line x1="44" y1="127.8" x2="602" y2="127.8" stroke="#e4e7ec" stroke-width="1"/><text x="36.0" y="131.8" fill="#667085" font-size="10.5" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">100</text><line x1="44" y1="66.7" x2="602" y2="66.7" stroke="#e4e7ec" stroke-width="1"/><text x="36.0" y="70.7" fill="#667085" font-size="10.5" text-anchor="end" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">150</text><text transform="rotate(-90 14 140)" x="14.0" y="140.0" fill="#667085" font-size="10.5" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">filings / stock / yr</text><rect x="78.9" y="209.7" width="69.8" height="40.3" rx="4" fill="#9cc0f0"/><text x="113.8" y="201.7" fill="#1f2733" font-size="14" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">33</text><text x="113.8" y="272.0" fill="#1f2733" font-size="12" text-anchor="middle" font-weight="600" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">’04–’11</text><rect x="218.4" y="170.6" width="69.8" height="79.4" rx="4" fill="#5f97e6"/><text x="253.2" y="162.6" fill="#1f2733" font-size="14" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">65</text><text x="253.2" y="272.0" fill="#1f2733" font-size="12" text-anchor="middle" font-weight="600" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">’12–’17</text><rect x="357.9" y="94.8" width="69.8" height="155.2" rx="4" fill="#2f6fd6"/><text x="392.8" y="86.8" fill="#1f2733" font-size="14" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">127</text><text x="392.8" y="272.0" fill="#1f2733" font-size="12" text-anchor="middle" font-weight="600" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">’18–’21</text><rect x="497.4" y="44.7" width="69.8" height="205.3" rx="4" fill="#1b4aa0"/><text x="532.2" y="36.7" fill="#1f2733" font-size="14" text-anchor="middle" font-weight="700" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">168</text><text x="532.2" y="272.0" fill="#1f2733" font-size="12" text-anchor="middle" font-weight="600" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">’22–’26</text><text x="323.0" y="291.0" fill="#667085" font-size="11" text-anchor="middle" font-weight="400" font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">SEBI LODR 2015 → 2023 amendments drove the climb</text></svg><figcaption>Per-stock disclosures per year by era. “Press Release” (real company news) stayed flat at ~13/yr; the growth is new mandatory categories. A chronological train/test split on announcements therefore trains and tests on two different disclosure regimes.</figcaption></figure>
+<p>The growth is <em>more categories</em>, not more news — "Press Release" (real company news) plateaued at
+~13/yr while whole new administrative categories appeared from zero. A chronological train/test split on
+announcements therefore trains on a pre-2016, 33-filings world and tests on a post-2023, 200-filings world —
+<strong>two different populations</strong>, which is exactly why fitted announcement rules don't transfer.</p>
+<p class="callout">Verified against SEBI's LODR 2015 and the June-2023 Second Amendment. Two unexplained items
+flagged: 2025 announcement volume drops 28% (possible feed gap), and Reliance's results feed truncates at Jan-2025.</p>
+
+<!-- ───────────────────────────── DOWNLOAD ───────────────────────────── -->
+<h2 id="download"><span class="num">08</span>Fundamentals top-up — now 52/52</h2>
+<p>Three Nifty names were missing from all five folders. Built <span class="file">download_fundamentals.py</span>
+to scrape Screener's public company page plus its <code>/api/company/&lt;id&gt;/schedules/</code> endpoint,
+reproducing the exact folder format (validated to <strong>zero value differences</strong> against the existing
+Reliance files before writing anything).</p>
+<div class="tblscroll">
+<table>
+  <thead><tr><th>Stock</th><th>Screener source</th><th>FY26 sanity check</th><th>Caveat</th></tr></thead>
+  <tbody>
+    <tr><td>LTIM</td><td>code 540005 ("LTM Ltd")</td><td>Sales ₹42,308 cr · EPS 169 · ROCE 30%</td><td>—</td></tr>
+    <tr><td>SBILIFE</td><td>SBILIFE (standalone)</td><td>Premium ₹1.12 L cr · EPS 24.6</td><td>insurer — no growth% rows</td></tr>
+    <tr><td>TATAMOTORS</td><td>TMPV (id 3370)</td><td>Sales ₹3.36 L cr (full JLR-era group)</td><td>FY26 distorted by 2025 demerger</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="callout">Fixing this exposed why care was needed: the schedule API uses an internal warehouse id (not
+the URL slug), insurers leave the consolidated P&amp;L empty, and Tata's 2025 demerger split the history onto
+the TMPV entity while a 2-quarter stub (TMCV) carries the "Tata Motors Ltd" name.</p>
+
+<!-- ───────────────────────────── DASHBOARD ───────────────────────────── -->
+<h2 id="dashboard"><span class="num">09</span>Dashboard change — offline Excel export</h2>
+<p>The Financial Results "Download Excel" used to fetch the raw XBRL filing online. It now builds the workbook
+straight from the local folders — a new <code>/api/statements_excel</code> endpoint and
+<code>build_statements_excel()</code> in <span class="file">stock_server.py</span>. One click →
+<span class="file">&lt;SYMBOL&gt;_financials.xlsx</span> with five sheets (P&amp;L · Balance Sheet · Cash Flow ·
+Ratios · Quarterly), fully offline. Works for all 52 Nifty stocks.</p>
+<div class="pill-row">
+  <span class="tag green">live on :8090</span>
+  <span class="tag blue">offline / no online fetch</span>
+  <span class="tag amber">uncommitted working-tree code</span>
+</div>
+
+<!-- ───────────────────────────── NEXT ───────────────────────────── -->
+<h2 id="next"><span class="num">10</span>Open questions &amp; what's next</h2>
+<ol>
+  <li><strong>Fix the date bug</strong> in <span class="file">event_behaviour.py</span> — switch the announcements feed from <code>sort_date</code> to <code>an_dt</code>. It mis-dates ~40% of announcements across all 50 stocks regardless of the strategy question.</li>
+  <li><strong>Test the two live hypotheses</strong> that aren't yet dismissed: (a) Reliance's buy-T5/sell-T1 pre-result drift, across all 50 stocks for a real sample; (b) the high-leverage post-announcement drift — extend the exit past T+12 to see if it plateaus (real drift) or keeps rising (just leveraged beta).</li>
+  <li><strong>Dividend capture on high-yield names</strong> (COALINDIA, ONGC, POWERGRID) where the discount is big enough to measure.</li>
+  <li><strong>PEAD on small/mid-caps</strong> — 3,400 stocks have fundamentals; the anomaly has room to exist where coverage is thin.</li>
+  <li><strong>Clamp the dashboard Behaviour tab to tradeable mode</strong> so it stops surfacing rules that buy before un-knowable news.</li>
+</ol>
+
+<hr>
+<p class="foot">Generated documentation of the investigation to date · Behaviour Analysis project ·
+open this file in any browser. Figures are point-in-time from the runs described above; re-run the
+scripts to refresh.</p>
+
+<script>
+  // respect a manual theme toggle if the host sets data-theme; otherwise follow the OS.
+  (function(){
+    try{
+      var t = localStorage.getItem('ba-doc-theme');
+      if(t) document.documentElement.setAttribute('data-theme', t);
+    }catch(e){}
+  })();
+</script>
+</div>
+</body>
+</html>

@@ -1,5 +1,6 @@
 """
-dashboard_gui.py      
+dashboard_gui.py
+"""
 import tkinter as tk
 from pathlib import Path
 from tkinter import ttk

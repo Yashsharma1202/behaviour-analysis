@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  html,body,div,span,h1,h2,h3,h4,p,ol,ul,li,table,thead,tbody,tr,th,td,pre,code,kbd,em,b,i,u,section,header,footer,nav,main,figure{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}
+  ol,ul{list-style:none}
+  table{border-collapse:collapse;border-spacing:0}
+  img{max-width:100%;display:block}
+  html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+<title>Behaviour Analysis — Architecture &amp; Workflow</title>
+
+<style>
+  /* ─────────────────────────────────────────────────────────────
+     TOKENS — cool blue-biased neutrals, one deep ledger-blue accent,
+     semantic P&L colours kept separate from the accent.
+     ───────────────────────────────────────────────────────────── */
+  :root {
+    --paper:    #F4F6F9;
+    --surface:  #FFFFFF;
+    --sunken:   #EDF0F5;
+    --rule:     #DCE1E9;
+    --rule-soft:#E8ECF2;
+    --ink:      #131822;
+    --ink-2:    #4A5567;
+    --ink-3:    #7C8798;
+    --accent:   #2E4F82;
+    --accent-w: #E3EAF5;
+    --pos:      #136B47;
+    --pos-w:    #E0F0E8;
+    --neg:      #A32B22;
+    --neg-w:    #F7E5E3;
+    --warn:     #8A6516;
+    --warn-w:   #F6EEDC;
+    --shadow:   0 1px 2px rgba(19,24,34,.05), 0 4px 16px -8px rgba(19,24,34,.12);
+
+    --serif: Constantia, Charter, "Bitstream Charter", Cambria, "Iowan Old Style", Georgia, serif;
+    --sans:  "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    --mono:  "Cascadia Mono", Consolas, "SF Mono", "Roboto Mono", Menlo, "DejaVu Sans Mono", monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:    #0E1219;
+      --surface:  #161C26;
+      --sunken:   #1B222E;
+      --rule:     #28313F;
+      --rule-soft:#212936;
+      --ink:      #DDE3ED;
+      --ink-2:    #9BA7B8;
+      --ink-3:    #6D7889;
+      --accent:   #7CA6DF;
+      --accent-w: #1C2A3D;
+      --pos:      #4FBF8E;
+      --pos-w:    #14291F;
+      --neg:      #E8756A;
+      --neg-w:    #2E1A18;
+      --warn:     #D6A542;
+      --warn-w:   #2B2314;
+      --shadow:   0 1px 2px rgba(0,0,0,.3), 0 4px 18px -10px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#0E1219; --surface:#161C26; --sunken:#1B222E; --rule:#28313F; --rule-soft:#212936;
+    --ink:#DDE3ED; --ink-2:#9BA7B8; --ink-3:#6D7889;
+    --accent:#7CA6DF; --accent-w:#1C2A3D;
+    --pos:#4FBF8E; --pos-w:#14291F; --neg:#E8756A; --neg-w:#2E1A18; --warn:#D6A542; --warn-w:#2B2314;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 4px 18px -10px rgba(0,0,0,.6);
+  }
+  :root[data-theme="light"] {
+    --paper:#F4F6F9; --surface:#FFFFFF; --sunken:#EDF0F5; --rule:#DCE1E9; --rule-soft:#E8ECF2;
+    --ink:#131822; --ink-2:#4A5567; --ink-3:#7C8798;
+    --accent:#2E4F82; --accent-w:#E3EAF5;
+    --pos:#136B47; --pos-w:#E0F0E8; --neg:#A32B22; --neg-w:#F7E5E3; --warn:#8A6516; --warn-w:#F6EEDC;
+    --shadow:0 1px 2px rgba(19,24,34,.05), 0 4px 16px -8px rgba(19,24,34,.12);
+  }
+
+  /* ── base ── */
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  * { box-sizing: border-box; }
+
+  .shell {
+    display: grid;
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 56px;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 32px 120px;
+  }
+  @media (max-width: 900px) {
+    .shell { grid-template-columns: minmax(0,1fr); gap: 0; padding: 0 20px 80px; }
+    .rail { display: none; }
+  }
+
+  /* ── index rail ── */
+  .rail { position: sticky; top: 0; align-self: start; padding-top: 48px; height: 100vh; overflow-y: auto; }
+  .rail-title {
+    font-family: var(--mono); font-size: 10px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px;
+  }
+  .rail ol { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+  .rail a {
+    display: flex; gap: 10px; align-items: baseline;
+    padding: 5px 8px; margin-left: -8px; border-radius: 3px;
+    color: var(--ink-2); text-decoration: none; font-size: 13.5px; line-height: 1.35;
+  }
+  .rail a:hover { background: var(--sunken); color: var(--ink); }
+  .rail a:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .rail a.on { color: var(--accent); font-weight: 600; }
+  .rail a.on .rn { color: var(--accent); }
+  .rn { font-family: var(--mono); font-size: 11px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+
+  /* ── masthead ── */
+  header.mast { padding: 72px 0 40px; border-bottom: 1px solid var(--rule); }
+  .eyebrow {
+    font-family: var(--mono); font-size: 11px; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 18px;
+  }
+  h1 {
+    font-family: var(--serif); font-weight: 700; font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.08; letter-spacing: -0.015em; text-wrap: balance; margin-bottom: 20px;
+  }
+  .deck { font-size: 18.5px; line-height: 1.62; color: var(--ink-2); max-width: 62ch; }
+  .deck strong { color: var(--ink); font-weight: 600; }
+
+  .stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1px; background: var(--rule); border: 1px solid var(--rule);
+    margin-top: 40px; border-radius: 4px; overflow: hidden;
+  }
+  .stat { background: var(--surface); padding: 16px 18px; }
+  .stat b {
+    display: block; font-family: var(--mono); font-size: 22px; font-weight: 600;
+    font-variant-numeric: tabular-nums; letter-spacing: -0.01em; color: var(--ink);
+  }
+  .stat span {
+    display: block; font-family: var(--mono); font-size: 10px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-3); margin-top: 5px;
+  }
+
+  /* ── sections ── */
+  section { padding-top: 64px; scroll-margin-top: 24px; }
+  h2 {
+    font-family: var(--serif); font-size: 27px; font-weight: 700; letter-spacing: -0.01em;
+    display: flex; align-items: baseline; gap: 12px; text-wrap: balance; margin-bottom: 8px;
+  }
+  h2 .rn { font-size: 13px; }
+  h3 {
+    font-family: var(--mono); font-size: 11px; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--ink-3); margin: 34px 0 12px;
+  }
+  .lede { color: var(--ink-2); max-width: 68ch; margin-bottom: 26px; }
+  p { max-width: 68ch; margin-bottom: 14px; }
+  p:last-child { margin-bottom: 0; }
+  code {
+    font-family: var(--mono); font-size: .875em; background: var(--sunken);
+    padding: 1.5px 5px; border-radius: 3px; color: var(--ink); white-space: nowrap;
+  }
+  a.lnk { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+
+  /* ── layer stack ── */
+  .layers { display: flex; flex-direction: column; gap: 10px; }
+  .layer {
+    display: grid; grid-template-columns: 118px minmax(0,1fr);
+    background: var(--surface); border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent); border-radius: 4px; box-shadow: var(--shadow);
+  }
+  @media (max-width: 700px) { .layer { grid-template-columns: minmax(0,1fr); } }
+  .layer-tag {
+    padding: 18px 16px; border-right: 1px solid var(--rule-soft);
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--accent); line-height: 1.5;
+  }
+  @media (max-width: 700px) { .layer-tag { border-right: 0; border-bottom: 1px solid var(--rule-soft); padding-bottom: 10px; } }
+  .layer-body { padding: 16px 20px 18px; }
+  .layer-body h4 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+  .layer-body p { font-size: 14.5px; color: var(--ink-2); margin: 0 0 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    font-family: var(--mono); font-size: 11.5px; padding: 3px 8px;
+    background: var(--sunken); border: 1px solid var(--rule-soft);
+    border-radius: 3px; color: var(--ink-2); white-space: nowrap;
+  }
+
+  /* ── pipeline ── */
+  .pipe { display: flex; flex-direction: column; gap: 0; }
+  .stage {
+    display: grid; grid-template-columns: 34px minmax(0,1fr);
+    gap: 18px; padding-bottom: 22px; position: relative;
+  }
+  .stage:not(:last-child)::before {
+    content: ""; position: absolute; left: 16.5px; top: 34px; bottom: -2px;
+    width: 1px; background: var(--rule);
+  }
+  .stage-n {
+    width: 34px; height: 34px; border-radius: 50%;
+    display: grid; place-items: center; position: relative; z-index: 1;
+    background: var(--accent-w); border: 1px solid var(--accent);
+    color: var(--accent); font-family: var(--mono); font-size: 12px;
+    font-weight: 600; font-variant-numeric: tabular-nums;
+  }
+  .stage-b { padding-top: 3px; }
+  .stage-b h4 { font-size: 15.5px; font-weight: 600; margin-bottom: 4px; }
+  .stage-b p { font-size: 14.5px; color: var(--ink-2); margin-bottom: 8px; }
+  .io {
+    font-family: var(--mono); font-size: 12px; color: var(--ink-3);
+    display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center;
+  }
+  .io b { color: var(--ink-2); font-weight: 600; }
+
+  /* ── tables ── */
+  .tw { overflow-x: auto; border: 1px solid var(--rule); border-radius: 4px; background: var(--surface); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  thead th {
+    text-align: left; padding: 10px 14px; background: var(--sunken);
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--mono); font-size: 10px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-3); font-weight: 600; white-space: nowrap;
+  }
+  tbody td { padding: 10px 14px; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+  tbody tr:last-child td { border-bottom: 0; }
+  tbody tr:hover { background: var(--sunken); }
+  td.mono, th.mono { font-family: var(--mono); font-size: 13px; white-space: nowrap; }
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  .grp td {
+    background: var(--sunken); font-family: var(--mono); font-size: 10px;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3);
+    padding: 7px 14px; font-weight: 600;
+  }
+  .grp:hover td { background: var(--sunken); }
+
+  .pill {
+    display: inline-block; font-family: var(--mono); font-size: 11px;
+    padding: 2px 7px; border-radius: 3px; white-space: nowrap; font-weight: 600;
+  }
+  .p-pos  { background: var(--pos-w);  color: var(--pos); }
+  .p-neg  { background: var(--neg-w);  color: var(--neg); }
+  .p-warn { background: var(--warn-w); color: var(--warn); }
+  .p-acc  { background: var(--accent-w); color: var(--accent); }
+
+  /* ── tree ── */
+  pre.tree {
+    font-family: var(--mono); font-size: 13px; line-height: 1.75;
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 4px;
+    padding: 20px 22px; overflow-x: auto; color: var(--ink-2);
+  }
+  pre.tree b { color: var(--ink); font-weight: 600; }
+  pre.tree i { color: var(--ink-3); font-style: normal; }
+  pre.tree u { color: var(--accent); text-decoration: none; }
+
+  /* ── T-N x T+M grid ── */
+  .gridwrap { display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start; }
+  .gtable { border-collapse: collapse; font-family: var(--mono); font-size: 11px; }
+  .gtable th {
+    padding: 4px 6px; color: var(--ink-3); font-weight: 600; font-size: 10px;
+    background: none; border: 0; letter-spacing: 0; text-transform: none;
+  }
+  .gtable td {
+    width: 26px; height: 22px; border: 1px solid var(--surface);
+    background: var(--accent-w); border-radius: 2px; padding: 0;
+  }
+  .gtable td.hit {
+    background: var(--accent); position: relative;
+  }
+  .gtable td.hit::after {
+    content: "★"; position: absolute; inset: 0; display: grid; place-items: center;
+    color: var(--surface); font-size: 10px;
+  }
+  .glegend { flex: 1; min-width: 260px; }
+
+  /* ── callout ── */
+  .callout {
+    border: 1px solid var(--rule); border-left: 3px solid var(--warn);
+    background: var(--surface); border-radius: 4px; padding: 18px 22px;
+    box-shadow: var(--shadow); margin-top: 24px;
+  }
+  .callout.bad { border-left-color: var(--neg); }
+  .callout h4 {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--warn); margin-bottom: 8px;
+  }
+  .callout.bad h4 { color: var(--neg); }
+  .callout p { font-size: 14.5px; color: var(--ink-2); }
+  .callout p strong { color: var(--ink); font-weight: 600; }
+
+  /* ── commands ── */
+  .cmds { display: flex; flex-direction: column; gap: 1px; background: var(--rule);
+          border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
+  .cmd { background: var(--surface); padding: 13px 16px; display: grid;
+         grid-template-columns: minmax(0, 340px) minmax(0,1fr); gap: 18px; align-items: baseline; }
+  @media (max-width: 700px) { .cmd { grid-template-columns: minmax(0,1fr); gap: 4px; } }
+  .cmd kbd {
+    font-family: var(--mono); font-size: 13px; color: var(--accent);
+    background: none; padding: 0; white-space: pre; overflow-x: auto; display: block;
+  }
+  .cmd span { font-size: 13.5px; color: var(--ink-2); }
+
+  footer {
+    margin-top: 72px; padding-top: 22px; border-top: 1px solid var(--rule);
+    font-family: var(--mono); font-size: 11.5px; color: var(--ink-3);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  }
+</style>
+
+<div class="shell">
+
+  <nav class="rail" aria-label="Contents">
+    <div class="rail-title">Contents</div>
+    <ol id="idx">
+      <li><a href="#s1"><span class="rn">1</span>What it is</a></li>
+      <li><a href="#s2"><span class="rn">2</span>Architecture</a></li>
+      <li><a href="#s3"><span class="rn">3</span>Workflow</a></li>
+      <li><a href="#s4"><span class="rn">4</span>Modules</a></li>
+      <li><a href="#s5"><span class="rn">5</span>Storage</a></li>
+      <li><a href="#s6"><span class="rn">6</span>HTTP surface</a></li>
+      <li><a href="#s7"><span class="rn">7</span>Methodology</a></li>
+      <li><a href="#s8"><span class="rn">8</span>Validation</a></li>
+      <li><a href="#s9"><span class="rn">9</span>Runbook</a></li>
+      <li><a href="#s10"><span class="rn">10</span>Open items</a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <header class="mast">
+      <div class="eyebrow">Behaviour Analysis · d:\behaviour analysis · as of 14 Jul 2026</div>
+      <h1>How Indian stocks move around corporate events</h1>
+      <p class="deck">
+        A self-contained research stack that pulls NSE corporate-event feeds and price history,
+        asks <strong>how many days before an event you should buy and how many days after you should sell</strong>,
+        and then — this is the part that matters — <strong>tries hard to prove its own answer wrong.</strong>
+        Pure Python standard library plus pandas. No web framework, no charting library, no cloud.
+      </p>
+      <div class="stats">
+        <div class="stat"><b>24</b><span>Python modules</span></div>
+        <div class="stat"><b>7,509</b><span>Lines of code</span></div>
+        <div class="stat"><b>2,363</b><span>NSE symbols</span></div>
+        <div class="stat"><b>54</b><span>With event feeds</span></div>
+        <div class="stat"><b>3</b><span>Dashboards</span></div>
+        <div class="stat"><b>0</b><span>Web frameworks</span></div>
+      </div>
+    </header>
+
+    <!-- ══════════════════════════════════════════════ 1 -->
+    <section id="s1">
+      <h2><span class="rn">1</span>What this project is</h2>
+      <p class="lede">One research question, three layers of machinery built to answer it.</p>
+
+      <p>
+        Indian listed companies broadcast four kinds of scheduled corporate event to the NSE:
+        <b>quarterly results</b>, <b>board meetings</b>, <b>corporate actions</b> (dividends, splits, bonuses)
+        and <b>announcements</b> (press releases, acquisitions, order wins). Each has a known or
+        knowable date. The question this project exists to answer:
+      </p>
+      <p>
+        <em>If an event is coming on day T, is there a T&minus;N entry and a T+M exit that reliably makes money?</em>
+      </p>
+      <p>
+        Everything else — the downloaders, the two web dashboards, the XBRL-to-Excel converter,
+        the price cache — is scaffolding around that one question. The final section of this
+        document is the answer, and it is not the answer the dashboard originally gave.
+      </p>
+    </section>
+
+    <!-- ══════════════════════════════════════════════ 2 -->
+    <section id="s2">
+      <h2><span class="rn">2</span>Architecture</h2>
+      <p class="lede">
+        Four layers, strictly one-directional. Nothing downstream ever writes back upstream,
+        so any stage can be re-run from scratch without corrupting the one before it.
+      </p>
+
+      <div class="layers">
+
+        <div class="layer">
+          <div class="layer-tag">Layer 1<br>Ingestion</div>
+          <div class="layer-body">
+            <h4>Pull from two external sources, survive their defences</h4>
+            <p>
+              NSE sits behind an Akamai bot wall that returns 403 unless you carry a primed cookie jar.
+              A single long-lived session is kept alive process-wide, re-primed only on failure, with
+              exponential backoff (0s → 2s → 5s) and per-feed isolation so one dead feed doesn't kill
+              the other three. Prices come from the Yahoo chart API and are cached to disk on first fetch.
+            </p>
+            <div class="chips">
+              <span class="chip">stock_server.fetch_nse_feeds()</span>
+              <span class="chip">download_feeds.py</span>
+              <span class="chip">event_behaviour.fetch_prices_yahoo()</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="layer">
+          <div class="layer-tag">Layer 2<br>Storage</div>
+          <div class="layer-body">
+            <h4>Flat CSV on disk — the whole database</h4>
+            <p>
+              There is no database. Fundamentals live in five statement folders keyed by symbol;
+              event feeds live in one folder per symbol; every derived artefact lands in
+              <code>processed/</code>. This makes every intermediate result inspectable in Excel,
+              which is the entire point.
+            </p>
+            <div class="chips">
+              <span class="chip">balance_sheet/ pnl/ cash_flow/ quarterly/ ratios/</span>
+              <span class="chip">&lt;SYMBOL&gt;/*.csv</span>
+              <span class="chip">processed/price_cache/</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="layer">
+          <div class="layer-tag">Layer 3<br>Analytics</div>
+          <div class="layer-body">
+            <h4>Event study, then adversarial validation</h4>
+            <p>
+              The behaviour engine grids every entry T&minus;1…T&minus;8 against every exit T+1…T+8
+              and scores all 64 cells per event type. The backtest engine then takes that same
+              machinery and attacks it: train/test split, market adjustment against the Nifty,
+              and month-clustered t-statistics to stop overlapping trades from faking significance.
+            </p>
+            <div class="chips">
+              <span class="chip">event_behaviour.py</span>
+              <span class="chip">nifty_backtest.py</span>
+              <span class="chip">results_tracker.py</span>
+              <span class="chip">next_result.py</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="layer">
+          <div class="layer-tag">Layer 4<br>Presentation</div>
+          <div class="layer-body">
+            <h4>Three surfaces, one engine</h4>
+            <p>
+              <code>stock_server.py</code> holds all the logic and serves the full 2,363-stock
+              dashboard. <code>nifty_dash.py</code> imports it, swaps the symbol universe for the
+              Nifty 50, and binds a different port — the two never share state.
+              <code>build_static.py</code> bakes a JSON snapshot for GitHub Pages, which cannot run Python.
+            </p>
+            <div class="chips">
+              <span class="chip">:8000 / :8080 — full</span>
+              <span class="chip">:8090 — Nifty 50</span>
+              <span class="chip">docs/ — static Pages</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════ 3 -->
+    <section id="s3">
+      <h2><span class="rn">3</span>The workflow, end to end</h2>
+      <p class="lede">
+        This <em>is</em> a sequence — each stage consumes the previous stage's file on disk,
+        so you can stop, inspect, and restart anywhere.
+      </p>
+
+      <div class="pipe">
+
+        <div class="stage">
+          <div class="stage-n">1</div>
+          <div class="stage-b">
+            <h4>Download event feeds</h4>
+            <p>
+              Four NSE JSON endpoints per symbol. Resumable — a symbol is considered done once its
+              <code>financial_results.csv</code> exists, so a rate-limited run just gets re-run.
+              Two-second pause between symbols.
+            </p>
+            <div class="io"><b>in</b> NSE corporate APIs <span>&rarr;</span> <b>out</b> <code>&lt;SYMBOL&gt;/announcements.csv</code>, <code>board_meetings.csv</code>, <code>corporate_actions.csv</code>, <code>financial_results.csv</code></div>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-n">2</div>
+          <div class="stage-b">
+            <h4>Normalise events into one table</h4>
+            <p>
+              Each feed has its own date column — <code>broadCastDate</code>, <code>bm_date</code>,
+              <code>exDate</code>, <code>sort_date</code> — and its own idea of what a row means.
+              These collapse to a single <code>(symbol, event_date, event_type)</code> spine.
+              Announcements are filtered to major categories only; the rest is noise.
+            </p>
+            <div class="io"><b>in</b> raw feed CSVs <span>&rarr;</span> <b>out</b> unified event table (in memory / <code>processed/unified_events.csv</code>)</div>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-n">3</div>
+          <div class="stage-b">
+            <h4>Fetch and cache prices</h4>
+            <p>
+              Adjusted daily closes from the Yahoo chart API, written once to
+              <code>processed/price_cache/</code> and never re-fetched. Adjusted, so dividends and
+              splits don't masquerade as returns.
+            </p>
+            <div class="io"><b>in</b> Yahoo chart API <span>&rarr;</span> <b>out</b> <code>processed/price_cache/&lt;SYMBOL&gt;.csv</code></div>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-n">4</div>
+          <div class="stage-b">
+            <h4>Grid every entry against every exit</h4>
+            <p>
+              For each event, walk back 1–8 trading days for the entry and forward 1–8 for the exit.
+              64 candidate rules per event, scored on return %, return ₹, and win/loss. Cells with
+              fewer than 10 events are discarded.
+            </p>
+            <div class="io"><b>out</b> <code>processed/event_behaviour_detail.csv</code>, <code>event_behaviour_summary.csv</code></div>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-n">5</div>
+          <div class="stage-b">
+            <h4>Serve it — and this is where it gets dangerous</h4>
+            <p>
+              The dashboard reads the summary and prints the winning cell per event type as a card:
+              <em>"buy 7 days before, sell 5 days after, 68% win rate."</em> Everything up to here is
+              honest arithmetic. But the number on that card was <b>fitted on the same data it is
+              being reported on</b>. It is a description of the past, not a prediction.
+            </p>
+            <div class="io"><b>out</b> <code>/api/behaviour</code> &rarr; Behaviour tab</div>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-n">6</div>
+          <div class="stage-b">
+            <h4>Attack the result</h4>
+            <p>
+              Fit the rule on the oldest 70% of events. Apply it, untouched, to the newest 30%.
+              Subtract the Nifty. Charge 0.10% round-trip cost. Cluster the t-statistic by calendar
+              month, because 49 stocks trading the same days are not 5,382 independent bets.
+            </p>
+            <div class="io"><b>out</b> <code>processed/nifty_backtest.csv</code> <span>&rarr;</span> <b>see</b> <a class="lnk" href="#s8">§8</a></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════ 4 -->
+    <section id="s4">
+      <h2><span class="rn">4</span>Module reference</h2>
+      <p class="lede">
+        24 files, 7,509 lines. <code>stock_server.py</code> is the centre of gravity — it holds the
+        shared engine that four other modules import rather than reimplement.
+      </p>
+
+      <div class="tw">
+        <table>
+          <thead>
+            <tr>
+              <th>Module</th><th class="num">LOC</th><th>Responsibility</th><th>Entry point</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="grp"><td colspan="4">Serving</td></tr>
+            <tr>
+              <td class="mono">stock_server.py</td><td class="num">1,628</td>
+              <td>The engine. Symbol discovery, NSE session management, feed fetching, event building,
+                  behaviour computation, XBRL&rarr;Excel, XML&rarr;HTML, the inline HTML/CSS/JS page, and the request handler.</td>
+              <td class="mono">:8000 / :8080</td>
+            </tr>
+            <tr>
+              <td class="mono">nifty_dash.py</td><td class="num">73</td>
+              <td>Imports <code>stock_server</code>, overrides <code>S.SYMBOLS</code> with the Nifty 50, rebrands the page title. Deliberately thin — a separate port, never a fork.</td>
+              <td class="mono">:8090</td>
+            </tr>
+            <tr>
+              <td class="mono">build_static.py</td><td class="num">104</td>
+              <td>Bakes every symbol's payload to JSON and swaps the page's data-source marker block, so GitHub Pages (which can't run Python) serves a working snapshot.</td>
+              <td class="mono">&rarr; docs/</td>
+            </tr>
+
+            <tr class="grp"><td colspan="4">Ingestion</td></tr>
+            <tr>
+              <td class="mono">download_feeds.py</td><td class="num">111</td>
+              <td>Bulk feed downloader. Live Nifty-50 constituent fetch with a hardcoded fallback list. Polite (2s gap), resumable, <code>--force</code> to re-pull.</td>
+              <td class="mono">python download_feeds.py nifty50</td>
+            </tr>
+            <tr>
+              <td class="mono">xbrl_parser.py</td><td class="num">252</td>
+              <td>Pulls facts out of NSE's XBRL result filings by matching concept name against context period.</td>
+              <td class="mono">library</td>
+            </tr>
+            <tr>
+              <td class="mono">fund_loader.py</td><td class="num">136</td>
+              <td>Reads the five fundamentals statement folders into tidy frames.</td>
+              <td class="mono">library</td>
+            </tr>
+
+            <tr class="grp"><td colspan="4">Analytics — the core question</td></tr>
+            <tr>
+              <td class="mono">event_behaviour.py</td><td class="num">347</td>
+              <td><b>The heart.</b> The T&minus;N &times; T+M grid. <code>N_BEFORE=8</code>, <code>N_AFTER=8</code>, <code>MIN_EVENTS=10</code>, <code>COST=0</code>.</td>
+              <td class="mono">python event_behaviour.py</td>
+            </tr>
+            <tr>
+              <td class="mono">nifty_backtest.py</td><td class="num">314</td>
+              <td><b>The referee.</b> Train/test split (<code>SPLIT=0.70</code>), market adjustment vs <code>^NSEI</code>, <code>COST=0.001</code>, month-clustered t-statistics.</td>
+              <td class="mono">python nifty_backtest.py</td>
+            </tr>
+            <tr>
+              <td class="mono">event_study.py</td><td class="num">249</td>
+              <td>Classical event study — abnormal returns around dividends, earnings, acquisitions.</td>
+              <td class="mono">python event_study.py</td>
+            </tr>
+            <tr>
+              <td class="mono">straddle_backtest.py</td><td class="num">964</td>
+              <td>Options straddle backtest around events — the volatility side of the same question.</td>
+              <td class="mono">python straddle_backtest.py</td>
+            </tr>
+            <tr>
+              <td class="mono">backtest.py</td><td class="num">224</td>
+              <td>Earlier general-purpose backtest harness (variants A/B/C).</td>
+              <td class="mono">python backtest.py</td>
+            </tr>
+            <tr>
+              <td class="mono">ml_model.py</td><td class="num">261</td>
+              <td>Feature table + model over the event dataset.</td>
+              <td class="mono">python ml_model.py</td>
+            </tr>
+
+            <tr class="grp"><td colspan="4">Analytics — reporting</td></tr>
+            <tr>
+              <td class="mono">results_tracker.py</td><td class="num">134</td>
+              <td>Price 6 trading days before the result, on the day, and 3 days after.</td>
+              <td class="mono">python results_tracker.py</td>
+            </tr>
+            <tr>
+              <td class="mono">next_result.py</td><td class="num">180</td>
+              <td>Last quarterly result snapshot + a projection for the next one, using the historical average move and the next result date read from the board-meeting feed.</td>
+              <td class="mono">python next_result.py</td>
+            </tr>
+            <tr>
+              <td class="mono">recent_events.py</td><td class="num">133</td>
+              <td>What has just happened across the universe.</td>
+              <td class="mono">python recent_events.py</td>
+            </tr>
+            <tr>
+              <td class="mono">earnings_surprise.py</td><td class="num">144</td>
+              <td>Actual vs expected earnings, and the drift after.</td>
+              <td class="mono">python earnings_surprise.py</td>
+            </tr>
+            <tr>
+              <td class="mono">dividend_recovery.py</td><td class="num">205</td>
+              <td>How long a stock takes to recover the ex-dividend drop.</td>
+              <td class="mono">python dividend_recovery.py</td>
+            </tr>
+            <tr>
+              <td class="mono">playbook.py</td><td class="num">192</td>
+              <td>Rolls findings into a per-event-type playbook.</td>
+              <td class="mono">python playbook.py</td>
+            </tr>
+
+            <tr class="grp"><td colspan="4">Plumbing</td></tr>
+            <tr>
+              <td class="mono">clean_events.py</td><td class="num">327</td>
+              <td>Normalises the four raw feeds into <code>*_clean.csv</code>.</td>
+              <td class="mono">python clean_events.py</td>
+            </tr>
+            <tr>
+              <td class="mono">event_records.py</td><td class="num">152</td>
+              <td>Builds the unified event spine.</td>
+              <td class="mono">python event_records.py</td>
+            </tr>
+            <tr>
+              <td class="mono">inspect_csv.py</td><td class="num">281</td>
+              <td>Columns, dtypes, date ranges, sample rows — used before writing any analysis logic.</td>
+              <td class="mono">python inspect_csv.py</td>
+            </tr>
+            <tr>
+              <td class="mono">inspect_event_data.py</td><td class="num">163</td>
+              <td>Same, for the event feeds specifically.</td>
+              <td class="mono">python inspect_event_data.py</td>
+            </tr>
+            <tr>
+              <td class="mono">dashboard_gui.py</td><td class="num">492</td>
+              <td>Tkinter desktop dashboard (superseded by the web dashboards).</td>
+              <td class="mono">python dashboard_gui.py</td>
+            </tr>
+            <tr>
+              <td class="mono">stock_browser_gui.py</td><td class="num">443</td>
+              <td>Tkinter one-stock-at-a-time browser (superseded).</td>
+              <td class="mono">python stock_browser_gui.py</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════ 5 -->
+    <section id="s5">
+      <h2><span class="rn">5</span>Storage layout</h2>
+      <p class="lede">
+        Everything is a CSV on disk. Symbols are discovered by globbing the statement folders —
+        3,407 files, of which purely-numeric BSE scrip codes (delisted, stale) are dropped, leaving
+        <b>2,363 usable NSE symbols</b>.
+      </p>
+
+      <pre class="tree"><b>d:\behaviour analysis\</b>
+│
+├─ <u>balance_sheet/</u>  <u>pnl/</u>  <u>cash_flow/</u>  <u>quarterly/</u>  <u>ratios/</u>
+│     └─ &lt;SYMBOL&gt;.csv          <i>· 3,407 files each · the fundamentals corpus</i>
+│                              <i>· symbol universe is discovered from these folders</i>
+│
+├─ <b>&lt;SYMBOL&gt;/</b>                  <i>· 54 folders · only stocks with downloaded NSE feeds</i>
+│     ├─ announcements.csv     <i>· date col: sort_date</i>
+│     ├─ board_meetings.csv    <i>· date col: bm_date</i>
+│     ├─ corporate_actions.csv <i>· date col: exDate</i>
+│     └─ financial_results.csv <i>· date col: broadCastDate  ⚠ stale — see §10</i>
+│
+├─ <b>processed/</b>                 <i>· every derived artefact</i>
+│     ├─ <u>price_cache/</u>          <i>· Yahoo adjusted closes, fetched once</i>
+│     ├─ <u>xbrl_cache/</u>  <u>nse_files/</u>
+│     ├─ event_behaviour_summary.csv   <i>· the winning rule per event type</i>
+│     ├─ event_behaviour_detail.csv    <i>· all 64 grid cells</i>
+│     ├─ <b>nifty_backtest.csv</b>            <i>· the out-of-sample verdict</i>
+│     ├─ next_result.csv  ·  results_tracker.csv  ·  recent_events.csv
+│     └─ unified_events.csv  ·  fundamentals.csv  ·  playbook.csv  ·  …
+│
+├─ <b>docs/</b>                      <i>· baked static snapshot for GitHub Pages</i>
+│     ├─ index.html
+│     └─ data/                 <i>· one JSON per symbol</i>
+│
+└─ <i>*.py</i>                      <i>· 24 modules, 7,509 lines</i></pre>
+    </section>
+
+    <!-- ══════════════════════════════════════════════ 6 -->
+    <section id="s6">
+      <h2><span class="rn">6</span>HTTP surface</h2>
+      <p class="lede">
+        Eight routes on a stdlib <code>ThreadingHTTPServer</code>. No Flask, no FastAPI — nothing to
+        install. <code>--lan</code> binds <code>0.0.0.0</code> so other devices on the network can reach it.
+      </p>
+
+      <div class="tw">
+        <table>
+          <thead>
+            <tr><th>Route</th><th>Returns</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mono">GET /</td>
+              <td>The dashboard</td>
+              <td>Single inline HTML page — CSS, JS and canvas charts all embedded. Zero external requests.</td>
+            </tr>
+            <tr>
+              <td class="mono">GET /api/symbols</td>
+              <td>The symbol universe</td>
+              <td>2,363 on the full dashboard; 50 on <code>nifty_dash</code>, which simply overrides <code>S.SYMBOLS</code>.</td>
+            </tr>
+            <tr>
+              <td class="mono">GET /api/stock?sym=</td>
+              <td>Fundamentals payload</td>
+              <td>P&amp;L, balance sheet, cash flow, quarterly, ratios for one symbol.</td>
+            </tr>
+            <tr>
+              <td class="mono">GET /api/events?sym=</td>
+              <td>The four event feeds</td>
+              <td>Drives the announcement / board-meeting / corporate-action / results tabs.</td>
+            </tr>
+            <tr>
+              <td class="mono">GET /api/behaviour?sym=</td>
+              <td>Best entry &amp; exit per event type</td>
+              <td><span class="pill p-warn">in-sample</span> Fitted on all history. See <a class="lnk" href="#s8">§8</a> before trusting it.</td>
+            </tr>
+            <tr>
+              <td class="mono">GET /api/fetch?sym=</td>
+              <td>Triggers an NSE download</td>
+              <td>On-demand feed pull for a symbol that has none yet.</td>
+            </tr>
+            <tr>
+              <td class="mono">GET /api/file?url=</td>
+              <td>Proxied NSE attachment</td>
+              <td>Server-side proxy — NSE blocks direct browser hits. <code>&amp;raw=1</code> serves XML as readable HTML instead of a raw dump.</td>
+            </tr>
+            <tr>
+              <td class="mono">GET /api/xbrl_excel?sym=&amp;url=</td>
+              <td>An .xlsx workbook</td>
+              <td>Parses the XBRL filing and streams a real Excel file, so "Open" opens Excel.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════ 7 -->
+    <section id="s7">
+      <h2><span class="rn">7</span>The method</h2>
+      <p class="lede">
+        For every event, 64 candidate rules. Buy somewhere in the eight trading days before,
+        sell somewhere in the eight after.
+      </p>
+
+      <div class="gridwrap">
+        <div>
+          <table class="gtable" aria-label="Entry by exit grid, 8 by 8">
+            <tr>
+              <th></th>
+              <th colspan="8" style="padding-bottom:6px;">exit &nbsp;T+1 &rarr; T+8</th>
+            </tr>
+            <tr>
+              <th style="text-align:right;padding-right:8px;">T&minus;8</th>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;padding-right:8px;">T&minus;7</th>
+              <td></td><td></td><td></td><td></td><td class="hit"></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;padding-right:8px;">T&minus;6</th>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;padding-right:8px;">T&minus;5</th>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;padding-right:8px;">T&minus;4</th>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;padding-right:8px;">T&minus;3</th>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;padding-right:8px;">T&minus;2</th>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;padding-right:8px;">T&minus;1</th>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="glegend">
+          <h3 style="margin-top:0;">Reading the grid</h3>
+          <p style="font-size:14.5px;">
+            Each square is one rule. The starred cell is the winner the dashboard reports for
+            RESULTS events: <b>buy 7 trading days before, sell 5 days after</b>.
+          </p>
+          <p style="font-size:14.5px;">
+            Each cell is scored on <b>average return %</b>, <b>average return ₹</b> and
+            <b>win rate</b>, across every event of that type. Cells backed by fewer than
+            <code>MIN_EVENTS=10</code> events are thrown away — with too few samples, the
+            "best" cell is just the luckiest one.
+          </p>
+          <p style="font-size:14.5px;">
+            Selection is <b>win-rate first, then average return</b>. That is a deliberate choice:
+            a rule that wins 68% of the time and makes a little is more believable than one
+            that wins 40% of the time and got saved by two enormous outliers.
+          </p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <h4>The trap built into this design</h4>
+        <p>
+          Picking the best of 64 cells on the same data you then report is <strong>selection on noise</strong>.
+          With 64 tries, something will look good even if nothing is. That is exactly what §8 sets out
+          to measure — and it found what it was looking for.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════ 8 -->
+    <section id="s8">
+      <h2><span class="rn">8</span>Validation — the honest result</h2>
+      <p class="lede">
+        Fit on the oldest 70% of events. Apply, untouched, to the newest 30%. Subtract the Nifty.
+        Charge 0.10% cost. Cluster the t-statistic by month. Then look.
+      </p>
+
+      <h3>Out-of-sample, market-adjusted, per event type</h3>
+      <div class="tw">
+        <table>
+          <thead>
+            <tr>
+              <th>Event type</th><th>Rule fitted on train</th>
+              <th class="num">OOS mkt-adj</th><th class="num">t (month)</th><th>Verdict</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mono">ANNOUNCEMENT</td><td class="mono">buy T&minus;8 · sell T+4</td>
+              <td class="num">+0.29%</td><td class="num">+1.28</td>
+              <td><span class="pill p-warn">not significant</span></td>
+            </tr>
+            <tr>
+              <td class="mono">CORPORATE_ACTION</td><td class="mono">buy T&minus;7 · sell T+6</td>
+              <td class="num">&minus;0.17%</td><td class="num">&minus;0.05</td>
+              <td><span class="pill p-neg">no edge</span></td>
+            </tr>
+            <tr>
+              <td class="mono">RESULTS</td><td class="mono">buy T&minus;7 · sell T+5</td>
+              <td class="num">+0.65%</td><td class="num">+0.23</td>
+              <td><span class="pill p-warn">not significant</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Pooled, across 48 Nifty stocks</h3>
+      <div class="stats" style="margin-top:0;">
+        <div class="stat"><b>5,382</b><span>OOS trades</span></div>
+        <div class="stat"><b>57%</b><span>Win rate</span></div>
+        <div class="stat"><b>+1.12%</b><span>Avg return (raw)</span></div>
+        <div class="stat"><b>+0.34%</b><span>Avg return (mkt-adj)</span></div>
+        <div class="stat"><b>32 / 48</b><span>Stocks positive</span></div>
+      </div>
+
+      <h3>Two things collapsed under scrutiny</h3>
+      <p>
+        <b>The t-statistic was inflated 13&times; by pretending trades were independent.</b>
+        Forty-nine stocks trading the same calendar days are not 5,382 independent bets — they are
+        a few hundred correlated market days. Averaging trades within each month first, then testing,
+        dropped the RESULTS t-statistic from <b>+3.03 to +0.23</b>.
+      </p>
+      <p>
+        <b>The edge did not survive leaving the training window.</b> Market-adjusted RESULTS went
+        from an in-sample <b>t = +2.44</b> to an out-of-sample <b>t = +0.23</b>. The raw
+        out-of-sample number still looks handsome (<b>+1.64%</b>) — but only because the test
+        window happened to be a bull market. That is the market's return, not the event's.
+      </p>
+
+      <div class="callout bad">
+        <h4>And one flaw I found in my own control</h4>
+        <p>
+          32 of 48 stocks showing a positive market-adjusted edge looks encouraging — better than a
+          coin flip. <strong>It probably isn't.</strong> Look at who tops the list: <b>BEL +3.07%</b>,
+          <b>APOLLOHOSP +1.97%</b>, <b>ADANIENT +1.74%</b>, <b>ADANIPORTS +1.58%</b> — precisely the
+          stocks that massively outran the Nifty over the test window. Subtracting the <em>index's</em>
+          return does not remove the <em>stock's own</em> drift. For a stock that tripled, <em>any</em>
+          long position over <em>any</em> twelve-day window shows a positive "market-adjusted" return,
+          and the event has nothing to do with it.
+        </p>
+        <p style="margin-top:12px;">
+          The mirror image confirms it: the bottom of the table is <b>HINDUNILVR &minus;1.30%</b>,
+          <b>BRITANNIA &minus;1.18%</b>, <b>ASIANPAINT &minus;0.89%</b> — the FMCG names that
+          underperformed over the same period. This is measuring <strong>stock selection, not event
+          behaviour</strong>.
+        </p>
+        <p style="margin-top:12px;">
+          <strong>The decisive test is still outstanding:</strong> compare each event window against
+          <em>the same stock's</em> return over random windows of the same length. That removes the
+          stock's own drift and leaves only the event effect. My expectation is that the edge shrinks
+          to roughly zero.
+        </p>
+      </div>
+
+      <p style="margin-top:26px;">
+        <b>Where this leaves the dashboard.</b> The Behaviour tab's cards are arithmetically correct
+        and analytically misleading. They describe what already happened; they do not forecast.
+        The tab needs a banner carrying these out-of-sample numbers alongside the in-sample ones.
+      </p>
+    </section>
+
+    <!-- ══════════════════════════════════════════════ 9 -->
+    <section id="s9">
+      <h2><span class="rn">9</span>Runbook</h2>
+      <p class="lede">In order. Each step's output is the next step's input.</p>
+
+      <div class="cmds">
+        <div class="cmd"><kbd>python download_feeds.py nifty50</kbd><span>Pull all four NSE feeds for the Nifty 50. Resumable — re-run it if NSE rate-limits you.</span></div>
+        <div class="cmd"><kbd>python inspect_event_data.py</kbd><span>Columns, date ranges, sample rows. Always look before you analyse.</span></div>
+        <div class="cmd"><kbd>python event_behaviour.py</kbd><span>Run the 64-cell grid. Writes the detail and summary CSVs.</span></div>
+        <div class="cmd"><kbd>python nifty_backtest.py</kbd><span>The referee: train/test, market-adjusted, month-clustered. Writes <code>nifty_backtest.csv</code>.</span></div>
+        <div class="cmd"><kbd>python results_tracker.py</kbd><span>Price 6 days before / on the day / 3 days after each result.</span></div>
+        <div class="cmd"><kbd>python next_result.py</kbd><span>Last result snapshot plus the projection for the next one.</span></div>
+        <div class="cmd"><kbd>python stock_server.py 8080</kbd><span>Full dashboard, all 2,363 stocks.</span></div>
+        <div class="cmd"><kbd>python nifty_dash.py</kbd><span>Nifty 50 dashboard on :8090 — separate host, never mixed.</span></div>
+        <div class="cmd"><kbd>python stock_server.py 8080 --lan</kbd><span>Bind 0.0.0.0 so phones and other machines on the network can reach it.</span></div>
+        <div class="cmd"><kbd>python build_static.py</kbd><span>Bake <code>docs/</code> for GitHub Pages, which cannot run Python.</span></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════ 10 -->
+    <section id="s10">
+      <h2><span class="rn">10</span>Open items</h2>
+      <p class="lede">Known, unfixed, and ranked by how much they'd change a conclusion.</p>
+
+      <div class="tw">
+        <table>
+          <thead>
+            <tr><th>Item</th><th>Impact</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Random-window placebo control.</b> Compare event windows against the same stock's own random windows, not against the Nifty.</td>
+              <td>Decides whether <em>any</em> event edge exists at all. Everything in §8 is provisional until this runs.</td>
+              <td><span class="pill p-neg">blocking</span></td>
+            </tr>
+            <tr>
+              <td><b>Behaviour tab carries no warning.</b> The in-sample cards are presented as if they were forecasts.</td>
+              <td>The dashboard actively misleads its only user.</td>
+              <td><span class="pill p-warn">proposed</span></td>
+            </tr>
+            <tr>
+              <td><b>Financial-results feeds stale.</b> Every symbol's <code>broadCastDate</code> maxes out at Jan 2025, while announcements and board meetings carry 2026 dates.</td>
+              <td>"Last quarterly result" reads Jan 2025 everywhere. <code>--force</code> re-download did not fix it — likely an NSE API change.</td>
+              <td><span class="pill p-warn">unresolved</span></td>
+            </tr>
+            <tr>
+              <td><b>Only 54 of 2,363 symbols have event feeds.</b></td>
+              <td>Behaviour analysis is effectively Nifty-50-only. Widening it is just download time.</td>
+              <td><span class="pill p-acc">by design</span></td>
+            </tr>
+            <tr>
+              <td><b><code>COST=0</code> in <code>event_behaviour.py</code></b> while the backtest charges 0.10%.</td>
+              <td>The dashboard's numbers are gross; the backtest's are net. Not wrong, but not comparable.</td>
+              <td><span class="pill p-acc">noted</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout" style="border-left-color: var(--accent);">
+        <h4 style="color: var(--accent);">Standing constraint</h4>
+        <p>
+          <strong>Behaviour Analysis and ML Regime are separate projects.</strong>
+          Different directories, different repositories, different deployments. Nothing in this
+          document, and nothing in <code>d:\behaviour analysis</code>, touches the ML Regime work.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <span>Behaviour Analysis · architecture as of 14 Jul 2026</span>
+      <span>24 modules · 7,509 lines · 2,363 symbols</span>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('#idx a'));
+    var secs  = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+    if (!('IntersectionObserver' in window)) return;
+
+    var visible = new Set();
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) visible.add(e.target); else visible.delete(e.target);
+      });
+      var top = null;
+      secs.forEach(function (s) {
+        if (s && visible.has(s) && (top === null || s.offsetTop < top.offsetTop)) top = s;
+      });
+      links.forEach(function (a, i) {
+        a.classList.toggle('on', top !== null && secs[i] === top);
+      });
+    }, { rootMargin: '-10% 0px -70% 0px', threshold: 0 });
+
+    secs.forEach(function (s) { if (s) io.observe(s); });
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Concept — Buy Before / Sell After an Event</title>
+<style>
+  :root{
+    --bg:#f7f8fa; --panel:#ffffff; --ink:#12161d; --mute:#5b6472; --line:#e4e7ec;
+    --blue:#2563eb; --green:#15803d; --red:#b91c1c; --amber:#b45309;
+    --code-bg:#f0f2f5; --shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.1);
+    --mono:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#0c0f14; --panel:#141922; --ink:#e6e9ef; --mute:#98a2b3; --line:#232a35;
+      --blue:#5b9bff; --green:#5ec98a; --red:#f87171; --amber:#fbbf5b; --code-bg:#1b212c; --shadow:none;}
+  }
+  :root[data-theme="dark"]{--bg:#0c0f14; --panel:#141922; --ink:#e6e9ef; --mute:#98a2b3; --line:#232a35;
+    --blue:#5b9bff; --green:#5ec98a; --red:#f87171; --amber:#fbbf5b; --code-bg:#1b212c; --shadow:none;}
+  :root[data-theme="light"]{--bg:#f7f8fa; --panel:#ffffff; --ink:#12161d; --mute:#5b6472; --line:#e4e7ec;
+    --blue:#2563eb; --green:#15803d; --red:#b91c1c; --amber:#b45309; --code-bg:#f0f2f5;
+    --shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.1);}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;font-size:16px}
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px 96px}
+  header.hero{padding:54px 0 30px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:600}
+  h1{font-size:2.05rem;line-height:1.15;margin:.35em 0 .25em;letter-spacing:-.02em}
+  .lede{font-size:1.1rem;color:var(--mute);margin:0;max-width:66ch}
+  h2{font-size:1.35rem;margin:48px 0 6px;letter-spacing:-.01em}
+  h2 .num{color:var(--blue);font-family:var(--mono);font-size:1rem;margin-right:.5em}
+  h3{font-size:1.05rem;margin:22px 0 4px}
+  p{margin:.6em 0}
+  a{color:var(--blue)}
+  code{font-family:var(--mono);font-size:.85em;background:var(--code-bg);padding:.12em .4em;border-radius:5px}
+  strong{color:var(--ink)}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:16px 0;box-shadow:var(--shadow)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+  @media(max-width:640px){.two{grid-template-columns:1fr}h1{font-size:1.7rem}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow)}
+  .card .h{font-weight:700;margin-bottom:4px}
+  .card.buy{border-top:3px solid var(--blue)}
+  .card.sell{border-top:3px solid var(--red)}
+  .callout{border-left:4px solid var(--amber);background:var(--panel);border-radius:0 10px 10px 0;
+    padding:14px 18px;margin:16px 0;box-shadow:var(--shadow)}
+  .callout.blue{border-left-color:var(--blue)}
+  .callout.red{border-left-color:var(--red)}
+  .fig{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px 12px;margin:20px 0;box-shadow:var(--shadow)}
+  .fig .ft{font-weight:600;font-size:.96rem;color:#12161d;margin-bottom:10px}
+  .fig figcaption{font-size:.82rem;color:#5b6472;margin-top:8px;line-height:1.5}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.92rem}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.74rem;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);font-weight:600}
+  .tl{display:flex;align-items:stretch;gap:0;margin:14px 0;border-radius:10px;overflow:hidden;border:1px solid var(--line);font-size:.82rem}
+  .tl div{padding:10px 12px;flex:1;text-align:center}
+  .tl .no{background:rgba(185,28,28,.12);color:var(--red)}
+  .tl .yes{background:rgba(21,128,61,.14);color:var(--green)}
+  .tl .ev{background:rgba(37,99,235,.14);color:var(--blue);font-weight:700}
+  .tl .mono{font-family:var(--mono);font-size:.72rem;display:block;margin-top:2px;opacity:.8}
+  .gloss dt{font-weight:700;margin-top:12px}
+  .gloss dd{margin:0 0 4px;color:var(--mute)}
+  hr{border:0;border-top:1px solid var(--line);margin:36px 0}
+  .foot{color:var(--mute);font-size:.85rem;margin-top:36px;font-family:var(--mono)}
+  @media print{
+    :root{--bg:#fff;--panel:#fff;--ink:#12161d;--mute:#4b5563;--line:#d7dbe0;--shadow:none;}
+    @page{size:A4;margin:16mm 15mm}
+    html,body{background:#fff!important;font-size:11.5pt}.wrap{max-width:100%;padding:0}
+    a{color:var(--ink);text-decoration:none}
+    h2{break-after:avoid}.fig,.card,.callout,.panel,table,.tl{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">Concept Note · Event-Driven Trading</div>
+  <h1>Why “buy before / sell after” an event — the study behind it</h1>
+  <p class="lede">The finance theory the Behaviour dashboard is built on: what makes a stock move around
+    its corporate events, how you can know the event date in advance, and why the pattern is real in
+    academic studies but usually arbitraged away on large, liquid stocks.</p>
+</header>
+
+<!-- 1 -->
+<h2><span class="num">01</span>It’s called an “event study”</h2>
+<p>The formal name for “how does a stock behave around an event” is an <strong>event study</strong>
+(Fama, Fisher, Jensen &amp; Roll, 1969). The recipe is exactly what the dashboard does:</p>
+<div class="panel">
+  <ol>
+    <li>Pick an <strong>event type</strong> — quarterly results, dividend, board meeting.</li>
+    <li>Line up <em>every</em> past occurrence so <strong>day 0 = the event day</strong>.</li>
+    <li>Measure each day’s <strong>abnormal return</strong> — the stock’s move <em>minus the market’s</em>
+      move over the same days. (Raw returns are contaminated by the whole market rising or falling.)</li>
+    <li>Average across all events to see the typical <strong>path</strong>: does the stock drift up
+      <em>before</em>, react <em>on</em>, or keep drifting <em>after</em> the event?</li>
+  </ol>
+  The “buy N days before / sell M days after” rule is simply: <em>find the window on that average path
+  with the biggest gain.</em>
+</p>
+</div>
+
+<!-- 2 -->
+<h2><span class="num">02</span>Two opposite forces move the price</h2>
+<p>There isn’t one reason a stock moves around an event — there are <strong>two, timed oppositely</strong>.
+This is the core concept, and the reason a naive grid search gets confused.</p>
+
+<div class="two">
+  <div class="card buy">
+    <div class="h" style="color:var(--blue)">① BEFORE — Anticipation (“buy the rumour”)</div>
+    For a <strong>scheduled</strong> event you know is coming, traders position <em>ahead of time</em>.
+    If a good result is expected, buyers accumulate in the days before → price drifts <strong>up into</strong>
+    the event. You buy 5–7 days before to ride that build-up.
+  </div>
+  <div class="card sell">
+    <div class="h" style="color:var(--red)">② AFTER — Under-reaction drift (PEAD)</div>
+    When news is genuinely <em>surprising</em>, markets <strong>under-react</strong>: the price jumps on
+    the day but keeps drifting in the surprise’s direction for days–weeks as slow investors digest it
+    (Ball &amp; Brown 1968; Bernard &amp; Thomas 1989). You buy <em>after</em> the surprise and hold.
+  </div>
+</div>
+
+<div class="fig">
+  <div class="ft">The typical abnormal-return path — and why timing splits the outcome</div>
+  <svg viewBox="0 0 760 380" style="width:100%;height:auto" role="img"
+       font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+    <!-- gridlines -->
+    <g stroke="#e4e7ec" stroke-width="1">
+      <line x1="56" y1="67" x2="736" y2="67"/><line x1="56" y1="141" x2="736" y2="141"/>
+      <line x1="56" y1="215" x2="736" y2="215"/><line x1="56" y1="289" x2="736" y2="289"/>
+    </g>
+    <g fill="#667085" font-size="10" text-anchor="end">
+      <text x="48" y="71">+2%</text><text x="48" y="145">+1%</text>
+      <text x="48" y="219">0</text><text x="48" y="293">−1%</text>
+    </g>
+    <text transform="rotate(-90 16 190)" x="16" y="190" fill="#667085" font-size="10.5" text-anchor="middle">cumulative abnormal return</text>
+    <!-- zero baseline -->
+    <line x1="56" y1="215" x2="736" y2="215" stroke="#1f2733" stroke-width="1.4"/>
+    <!-- buy window shade T-5..T-1 -->
+    <rect x="144.7" y="30" width="118.3" height="296" fill="#2563eb" opacity="0.07"/>
+    <text x="204" y="46" fill="#2563eb" font-size="11" text-anchor="middle" font-weight="700">BUY window</text>
+    <!-- event line -->
+    <line x1="292.6" y1="30" x2="292.6" y2="326" stroke="#667085" stroke-width="1.3" stroke-dasharray="4 4"/>
+    <text x="292.6" y="24" fill="#667085" font-size="10.5" text-anchor="middle" font-weight="600">EVENT — news public (T0)</text>
+    <!-- anticipation (pre-event) solid ink -->
+    <polyline points="56,215 144.7,196.5 203.85,174.3 263,148.4 292.6,141" fill="none" stroke="#1f2733" stroke-width="2.6" stroke-linejoin="round"/>
+    <!-- PEAD up branch (blue dashed) -->
+    <polyline points="292.6,141 381.3,111.4 529.1,74.4 736,48.5" fill="none" stroke="#2563eb" stroke-width="2.4" stroke-dasharray="6 4" stroke-linejoin="round"/>
+    <!-- reversal down branch (red dashed) -->
+    <polyline points="292.6,141 351.7,185.4 440.4,222.4 529.1,240.9" fill="none" stroke="#b91c1c" stroke-width="2.4" stroke-dasharray="6 4" stroke-linejoin="round"/>
+    <!-- markers -->
+    <circle cx="144.7" cy="196.5" r="5" fill="#fff" stroke="#2563eb" stroke-width="2.5"/>
+    <text x="140" y="214" fill="#2563eb" font-size="10.5" text-anchor="end" font-weight="700">buy T-5</text>
+    <circle cx="263" cy="148.4" r="5" fill="#fff" stroke="#b45309" stroke-width="2.5"/>
+    <text x="263" y="136" fill="#b45309" font-size="10.5" text-anchor="middle" font-weight="700">sell T-1</text>
+    <!-- branch labels -->
+    <text x="700" y="42" fill="#2563eb" font-size="10.5" text-anchor="end" font-weight="600">PEAD drift up · small / illiquid</text>
+    <text x="533" y="256" fill="#b91c1c" font-size="10.5" text-anchor="start" font-weight="600">“sell the news” reversal · large caps</text>
+    <!-- x ticks -->
+    <g fill="#667085" font-size="9.5" text-anchor="middle">
+      <text x="56" y="345">T-8</text><text x="144.7" y="345">T-5</text><text x="263" y="345">T-1</text>
+      <text x="292.6" y="345">T0</text><text x="381.3" y="345">T+3</text><text x="529.1" y="345">T+8</text><text x="736" y="345">T+15</text>
+    </g>
+    <text x="396" y="368" fill="#667085" font-size="10.5" text-anchor="middle">trading days relative to the event</text>
+  </svg>
+  <figcaption>The stock drifts <b>up into</b> a scheduled event (anticipation). What happens <b>after</b> splits
+    by stock type: efficient large-caps tend to <span style="color:#b91c1c">reverse</span> (“sell the news”),
+    while small, slow-to-digest stocks keep <span style="color:#2563eb">drifting</span> (PEAD). The dashboard’s
+    grid search can’t tell these apart — it just picks whichever window paid the most in the past.</figcaption>
+</div>
+
+<!-- 3 -->
+<h2><span class="num">03</span>“Buy the rumour, sell the news”</h2>
+<p>This old market saying <em>is</em> the mechanism. By the time the news actually lands, the run-up has
+<strong>already priced it in</strong>, so the announcement is often a non-event or a <strong>reversal</strong> —
+the people who bought in anticipation take profits and the stock sells off. That is exactly why, on Reliance,
+the only honest profitable window was <strong>buy T-5, sell T-1</strong> — get in for the anticipation, get
+out <em>before</em> the news, because the news itself tends to disappoint those already positioned.</p>
+<div class="callout blue">
+  <strong>Reliance, from our own data:</strong> +0.8% vs the market in the 5 days <em>before</em> results,
+  then −0.6% in the 2 days <em>after</em>. A textbook run-up-then-reversal.
+</div>
+
+<!-- 4 -->
+<h2><span class="num">04</span>How you “predict” the event day — you don’t, you read it</h2>
+<p>This is the make-or-break detail. You never guess the date; for scheduled events the law <em>tells</em> you,
+and for unscheduled events you simply cannot — which is what makes one tradeable and the other fiction.</p>
+
+<div class="two">
+  <div class="card">
+    <div class="h" style="color:var(--green)">Scheduled — date is KNOWN in advance</div>
+    <ul>
+      <li><strong>Results / board meetings:</strong> SEBI LODR <strong>Regulation 29</strong> requires the
+        company to intimate the exchange <strong>≥ 5 clear days before</strong> the board meeting that
+        considers results. So ~5 trading days out, the market knows the exact date.</li>
+      <li><strong>Dividends:</strong> declared at that meeting; the ex-date &amp; record date are set weeks ahead.</li>
+      <li><strong>AGM, bonus, split:</strong> all announced well in advance.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="h" style="color:var(--red)">Unscheduled — NOT predictable</div>
+    <ul>
+      <li><strong>Press releases, acquisitions, credit-rating changes, clarifications.</strong> Nobody knows
+        these are coming.</li>
+      <li>So “buy 6 days before an announcement” is <strong>impossible</strong> — you’d need to know a press
+        release lands next Tuesday.</li>
+      <li>In our audit, <strong>81%</strong> of the apparent announcement edge lived in this un-tradeable
+        pre-news window.</li>
+    </ul>
+  </div>
+</div>
+
+<p>The tradeable timeline for a scheduled result looks like this:</p>
+<div class="tl">
+  <div class="no">✗ can’t act<span class="mono">before intimation</span></div>
+  <div class="yes">✓ tradeable buy window<span class="mono">intimation (T-5) → event</span></div>
+  <div class="ev">EVENT<span class="mono">T0 · result out</span></div>
+  <div class="yes">✓ hold / drift<span class="mono">T0 → T+N</span></div>
+</div>
+
+<!-- 5 -->
+<h2><span class="num">05</span>Why it’s usually not free money</h2>
+<p>The <strong>Efficient Market Hypothesis</strong> (semi-strong form) says: if “buy 5 days before results”
+reliably paid, traders would front-run it earlier and earlier until the edge is arbitraged to zero. On
+<strong>liquid, heavily-covered stocks like the Nifty 50, that is exactly what happens.</strong></p>
+<div class="panel">
+  What our honest tests found on the Nifty 50:
+  <ul>
+    <li>The pre-event run-up exists but is <strong>tiny and eaten by costs</strong>.</li>
+    <li>Post-event drift (PEAD) is <strong>absent</strong> — beats didn’t even pop on day 1.</li>
+    <li>The “profitable” grid cells were mostly <strong>market drift</strong> (window-edge/corner solutions)
+      or a <strong>date bug</strong>, not a real event effect.</li>
+  </ul>
+</div>
+
+<!-- 6 -->
+<h2><span class="num">06</span>Where the effect actually survives</h2>
+<p>PEAD lives where information diffuses <strong>slowly</strong>: <strong>small, neglected, illiquid stocks</strong>
+— few analysts, slow investors, genuine under-reaction. That is the one place “buy the surprise and hold”
+works, and it’s why the promising direction is the wider small/mid-cap universe, not the efficient Nifty 50.</p>
+<div class="callout">
+  <strong>Rule of thumb:</strong> the edge you can capture ≈ how <em>slowly</em> the information spreads.
+  Blue-chips price it in minutes; a thinly-traded small-cap can take weeks.
+</div>
+
+<!-- glossary -->
+<h2><span class="num">07</span>Key terms</h2>
+<dl class="gloss">
+  <dt>Abnormal return</dt><dd>Stock return minus the market’s return over the same period — the part attributable to the event, not the market.</dd>
+  <dt>Event window</dt><dd>The days around day 0 you study (e.g. T-8 … T+8).</dd>
+  <dt>Run-up / anticipation</dt><dd>Price drifting toward the expected outcome <em>before</em> a scheduled event.</dd>
+  <dt>Buy the rumour, sell the news</dt><dd>The run-up prices in the expectation, so the actual announcement often reverses.</dd>
+  <dt>PEAD (Post-Earnings-Announcement Drift)</dt><dd>The market under-reacts to a surprise; price keeps drifting in the surprise’s direction for days–weeks after.</dd>
+  <dt>Surprise</dt><dd>Reported result minus what was expected. The driver of PEAD — no surprise, no drift.</dd>
+  <dt>Intimation (SEBI Reg 29)</dt><dd>The mandatory advance notice of a board meeting — the reason a result date is knowable ~5 trading days ahead.</dd>
+  <dt>Efficient Market Hypothesis</dt><dd>Prices already reflect public information; any repeatable edge gets arbitraged away — strongest on liquid, well-covered stocks.</dd>
+</dl>
+
+<div class="callout blue">
+  <strong>One-line summary.</strong> Buy-<em>before</em> harvests <em>anticipation</em> of a scheduled event
+  (you know the date from the mandatory intimation); sell-/hold-<em>after</em> harvests <em>under-reaction</em>
+  to a surprise (PEAD). Both are real academic effects — but on efficient large-caps they’re arbitraged away,
+  so what a naive backtest “finds” is mostly market drift, and the announcement version is untradeable because
+  you can’t know unscheduled news in advance.
+</div>
+
+<hr>
+<p class="foot">Concept note for the NSE Behaviour Analysis project · open in any browser · references:
+Fama–Fisher–Jensen–Roll 1969, Ball &amp; Brown 1968, Bernard &amp; Thomas 1989, SEBI LODR Reg 29.</p>
+
+</div>
+</body>
+</html>
