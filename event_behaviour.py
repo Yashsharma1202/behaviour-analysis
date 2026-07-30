@@ -113,7 +113,12 @@ def load_events_from_feeds(symbols: list[str]) -> pd.DataFrame:
                 continue
             if sigcol and sigcol in df.columns:          # keep only 'major' announcements
                 df = df[df[sigcol].isin(SIGNAL_DESC)]
-            dates = pd.to_datetime(df[datecol], errors="coerce", dayfirst=True)
+            # format="mixed" parses each date on its own — the feeds mix
+            # "DD-Mon-YYYY" (month-name, unambiguous) with ISO "YYYY-MM-DD".
+            # A blanket dayfirst=True both drops month-name dates under vectorised
+            # inference (LT/ITC/SBIN corporate actions) AND swaps ISO dates
+            # (announcements). Per-element parsing avoids both.
+            dates = pd.to_datetime(df[datecol], errors="coerce", format="mixed")
             for d in dates.dropna():
                 rows.append({"symbol": sym, "event_date": d.normalize(),
                              "event_type": label})

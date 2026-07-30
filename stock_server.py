@@ -232,7 +232,7 @@ def build_events(sym: str) -> dict:
                 continue
             dc = spec["date"]
             if dc in df.columns:
-                df["_sort"] = pd.to_datetime(df[dc], errors="coerce", dayfirst=True)
+                df["_sort"] = pd.to_datetime(df[dc], errors="coerce", format="mixed")
                 df = df.sort_values("_sort", ascending=False, na_position="last")
             entry["total"] = int(len(df))
             df = df.head(MAX_EVENT_ROWS)
