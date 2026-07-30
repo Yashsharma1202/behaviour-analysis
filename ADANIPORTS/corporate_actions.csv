@@ -1,21 +1,21 @@
-bcEndDate,bcStartDate,caBroadcastDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol
--,-,,Adani Ports and Special Economic Zone Limited,12-Jun-2026,2,-,INE742F01042,-,-,12-Jun-2026,EQ,Dividend - Rs 7.50 Per Share,ADANIPORTS
--,-,,Adani Ports and Special Economic Zone Limited,13-Jun-2025,2,-,INE742F01042,-,-,13-Jun-2025,EQ,Dividend - Rs 7 Per Share,ADANIPORTS
--,-,,Adani Ports and Special Economic Zone Limited,14-Jun-2024,2,-,INE742F01042,-,-,14-Jun-2024,EQ,Dividend - Rs 6 Per Share,ADANIPORTS
--,-,,Adani Ports and Special Economic Zone Limited,28-Jul-2023,2,-,INE742F01042,-,-,28-Jul-2023,EQ,Dividend - Rs 5 Per Share,ADANIPORTS
--,-,,Adani Ports and Special Economic Zone Limited,14-Jul-2022,2,-,INE742F01042,-,-,15-Jul-2022,EQ,Dividend - Rs 5 Per Share,ADANIPORTS
--,-,,Adani Ports and Special Economic Zone Limited,24-Jun-2021,2,-,INE742F01042,-,-,25-Jun-2021,EQ, Dividend - Rs 5 Per Sh,ADANIPORTS
-26-Jun-2020,19-Jun-2020,,Adani Ports and Special Economic Zone Limited,17-Jun-2020,2,-,INE742F01042,-,-,-,EQ, Annual General Meeting,ADANIPORTS
--,-,,Adani Ports and Special Economic Zone Limited,16-Mar-2020,2,-,INE742F01042,-,-,17-Mar-2020,EQ, Interim Dividend - Rs 3.20 Per Share,ADANIPORTS
-06-Aug-2019,30-Jul-2019,,Adani Ports and Special Economic Zone Limited,26-Jul-2019,2,-,INE742F01042,-,-,-,EQ, Annual General Meeting/Dividend - Rs 0.20 Per Share,ADANIPORTS
--,-,,Adani Ports and Special Economic Zone Limited,20-Jun-2019,2,-,INE742F01042,-,-,21-Jun-2019,EQ, Buyback,ADANIPORTS
-06-Aug-2018,30-Jul-2018,,Adani Ports and Special Economic Zone Limited,26-Jul-2018,2,-,INE742F01042,-,-,-,EQ, Annual General Meeting/Dividend- Rs 2 Per Share,ADANIPORTS
-09-Aug-2017,02-Aug-2017,,Adani Ports and Special Economic Zone Limited,31-Jul-2017,2,-,INE742F01042,-,-,-,EQ, Annual General Meeting/Dividend - Rs 1.30 Per Share,ADANIPORTS
-09-Aug-2016,02-Aug-2016,,Adani Ports and Special Economic Zone Limited,29-Jul-2016,2,-,INE742F01042,-,-,-,EQ, Annual General Meeting,ADANIPORTS
--,-,,Adani Ports and Special Economic Zone Limited,22-Mar-2016,2,-,INE742F01042,-,-,23-Mar-2016,EQ, Interim Dividend - Rs 1.10/- Per Share (Purpose Revised),ADANIPORTS
-30-May-2015,26-May-2015,,Adani Ports and Special Economic Zone Limited,22-May-2015,2,-,INE742F01042,-,-,-,EQ,Dividend - Rs 1.10/- Per Share,ADANIPORTS
-09-Aug-2014,02-Aug-2014,,Adani Ports and Special Economic Zone Limited,31-Jul-2014,2,-,INE742F01042,-,-,-,EQ,Annual General Meeting/Dividend Re 1/- Per Share,ADANIPORTS
-08-Aug-2013,01-Aug-2013,,Adani Ports and Special Economic Zone Limited,30-Jul-2013,2,-,INE742F01042,-,-,-,EQ,Annual General Meeting And Dividend Re.1/- Per Share,ADANIPORTS
-09-Aug-2012,01-Aug-2012,,Adani Ports and Special Economic Zone Limited,30-Jul-2012,2,-,INE742F01042,-,-,-,EQ,Annual General Meeting/ Dividend Rs 0.70 Per Share,ADANIPORTS
--,-,,Adani Ports and Special Economic Zone Limited,13-Feb-2012,2,-,INE742F01042,-,-,14-Feb-2012,EQ,Interim Dividend Re.0.30 Per Share (Purpose Revised),ADANIPORTS
-10-Aug-2011,05-Aug-2011,,Adani Ports and Special Economic Zone Limited,03-Aug-2011,2,-,INE742F01042,-,-,-,EQ,Annual General Meeting,ADANIPORTS
+bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate
+-,-,Adani Ports and Special Economic Zone Limited,12-Jun-2026,2,-,INE742F01042,-,-,12-Jun-2026,EQ,Dividend - Rs 7.50 Per Share,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+-,-,Adani Ports and Special Economic Zone Limited,13-Jun-2025,2,-,INE742F01042,-,-,13-Jun-2025,EQ,Dividend - Rs 7 Per Share,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+-,-,Adani Ports and Special Economic Zone Limited,14-Jun-2024,2,-,INE742F01042,-,-,14-Jun-2024,EQ,Dividend - Rs 6 Per Share,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+-,-,Adani Ports and Special Economic Zone Limited,28-Jul-2023,2,-,INE742F01042,-,-,28-Jul-2023,EQ,Dividend - Rs 5 Per Share,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+-,-,Adani Ports and Special Economic Zone Limited,14-Jul-2022,2,-,INE742F01042,-,-,15-Jul-2022,EQ,Dividend - Rs 5 Per Share,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+-,-,Adani Ports and Special Economic Zone Limited,24-Jun-2021,2,-,INE742F01042,-,-,25-Jun-2021,EQ, Dividend - Rs 5 Per Sh,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+26-Jun-2020,19-Jun-2020,Adani Ports and Special Economic Zone Limited,17-Jun-2020,2,-,INE742F01042,-,-,-,EQ, Annual General Meeting,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+-,-,Adani Ports and Special Economic Zone Limited,16-Mar-2020,2,-,INE742F01042,-,-,17-Mar-2020,EQ, Interim Dividend - Rs 3.20 Per Share,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+06-Aug-2019,30-Jul-2019,Adani Ports and Special Economic Zone Limited,26-Jul-2019,2,-,INE742F01042,-,-,-,EQ, Annual General Meeting/Dividend - Rs 0.20 Per Share,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+-,-,Adani Ports and Special Economic Zone Limited,20-Jun-2019,2,-,INE742F01042,-,-,21-Jun-2019,EQ, Buyback,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+06-Aug-2018,30-Jul-2018,Adani Ports and Special Economic Zone Limited,26-Jul-2018,2,-,INE742F01042,-,-,-,EQ, Annual General Meeting/Dividend- Rs 2 Per Share,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+09-Aug-2017,02-Aug-2017,Adani Ports and Special Economic Zone Limited,31-Jul-2017,2,-,INE742F01042,-,-,-,EQ, Annual General Meeting/Dividend - Rs 1.30 Per Share,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+09-Aug-2016,02-Aug-2016,Adani Ports and Special Economic Zone Limited,29-Jul-2016,2,-,INE742F01042,-,-,-,EQ, Annual General Meeting,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+-,-,Adani Ports and Special Economic Zone Limited,22-Mar-2016,2,-,INE742F01042,-,-,23-Mar-2016,EQ, Interim Dividend - Rs 1.10/- Per Share (Purpose Revised),ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+30-May-2015,26-May-2015,Adani Ports and Special Economic Zone Limited,22-May-2015,2,-,INE742F01042,-,-,-,EQ,Dividend - Rs 1.10/- Per Share,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+09-Aug-2014,02-Aug-2014,Adani Ports and Special Economic Zone Limited,31-Jul-2014,2,-,INE742F01042,-,-,-,EQ,Annual General Meeting/Dividend Re 1/- Per Share,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+08-Aug-2013,01-Aug-2013,Adani Ports and Special Economic Zone Limited,30-Jul-2013,2,-,INE742F01042,-,-,-,EQ,Annual General Meeting And Dividend Re.1/- Per Share,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+09-Aug-2012,01-Aug-2012,Adani Ports and Special Economic Zone Limited,30-Jul-2012,2,-,INE742F01042,-,-,-,EQ,Annual General Meeting/ Dividend Rs 0.70 Per Share,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+-,-,Adani Ports and Special Economic Zone Limited,13-Feb-2012,2,-,INE742F01042,-,-,14-Feb-2012,EQ,Interim Dividend Re.0.30 Per Share (Purpose Revised),ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,
+10-Aug-2011,05-Aug-2011,Adani Ports and Special Economic Zone Limited,03-Aug-2011,2,-,INE742F01042,-,-,-,EQ,Annual General Meeting,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,

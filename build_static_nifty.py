@@ -68,7 +68,8 @@ def build_index() -> None:
     page = S.PAGE
     # 1) rebrand to the Nifty 50 (mirror nifty_dash.py)
     page = (page.replace("<title>NSE Stock Browser</title>", "<title>Nifty 50 Browser</title>")
-                .replace("NSE Stock Browser", "Nifty 50 Browser"))
+                .replace("NSE Stock Browser", "Nifty 50 Browser")
+                .replace("search any of 2,363 stocks", f"search any of {len(S.SYMBOLS)} stocks"))
     # 2) swap the symbols/stock/events data source to static files
     page = re.sub(r"/\*__DATA_SOURCE__\*/.*?/\*__END_DATA_SOURCE__\*/",
                   STATIC_BLOCK, page, flags=re.DOTALL)

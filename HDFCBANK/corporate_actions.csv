@@ -1,21 +1,21 @@
-bcEndDate,bcStartDate,caBroadcastDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol
--,-,,HDFC Bank Limited,19-Jun-2026,1,-,INE040A01018,-,-,19-Jun-2026,EQ,Dividend - Rs 13 Per Share,HDFCBANK
--,-,,HDFC Bank Limited,26-Aug-2025,1,-,INE040A01018,-,-,27-Aug-2025,EQ,Bonus 1:1,HDFCBANK
--,-,,HDFC Bank Limited,25-Jul-2025,1,-,INE040A01018,-,-,25-Jul-2025,EQ,Special Dividend - Rs 5 Per Share,HDFCBANK
--,-,,HDFC Bank Limited,27-Jun-2025,1,-,INE040A01018,-,-,27-Jun-2025,EQ,Dividend - Rs 22 Per Share,HDFCBANK
--,-,,HDFC Bank Limited,10-May-2024,1,-,INE040A01018,-,-,10-May-2024,EQ,Dividend - Rs 19.50 Per Share,HDFCBANK
--,-,,HDFC Bank Limited,16-May-2023,1,-,INE040A01018,-,-,16-May-2023,EQ,Dividend - Rs 19 Per Share,HDFCBANK
--,-,,HDFC Bank Limited,12-May-2022,1,-,INE040A01018,-,-,13-May-2022,EQ,Dividend - Rs 15.50 Per Share,HDFCBANK
--,-,,HDFC Bank Limited,29-Jun-2021,1,-,INE040A01018,-,-,30-Jun-2021,EQ, Dividend - Rs 6.50 Per Share,HDFCBANK
--,-,,HDFC Bank Limited,19-Sep-2019,1,-,INE040A01018,-,-,20-Sep-2019,EQ, Face Value Split (Sub-Division) - From Rs 2 Per Share To Rs 1 Per Share,HDFCBANK
--,-,,HDFC Bank Limited,01-Aug-2019,1,-,INE040A01018,-,-,02-Aug-2019,EQ, Special Dividend - Rs 5 Per Share,HDFCBANK
--,-,,HDFC Bank Limited,20-Jun-2019,1,-,INE040A01018,-,-,21-Jun-2019,EQ, Dividend Rs 15 Per Sh,HDFCBANK
--,-,,HDFC Bank Limited,31-May-2018,1,-,INE040A01018,-,-,01-Jun-2018,EQ, Dividend- Rs 13 Per Share,HDFCBANK
--,-,,HDFC Bank Limited,29-Jun-2017,1,-,INE040A01018,-,-,30-Jun-2017,EQ, Dividend - Rs 11/- Per Share,HDFCBANK
--,-,,HDFC Bank Limited,29-Jun-2016,1,-,INE040A01018,-,-,30-Jun-2016,EQ, Dividend - Rs 9.50/- Per Share,HDFCBANK
-21-Jul-2015,04-Jul-2015,,HDFC Bank Limited,02-Jul-2015,1,-,INE040A01018,-,-,-,EQ,Annual General Meeting/ Dividend - Rs 8/- Per Share,HDFCBANK
-25-Jun-2014,07-Jun-2014,,HDFC Bank Limited,05-Jun-2014,1,-,INE040A01018,-,-,-,EQ,Annual General Meeting And Dividend - Rs.6.85/- Per Share,HDFCBANK
-27-Jun-2013,15-Jun-2013,,HDFC Bank Limited,13-Jun-2013,1,-,INE040A01018,-,-,-,EQ,Annual General Meeting / Final Dividend Rs.5.50/- Per Equity Share,HDFCBANK
-13-Jul-2012,01-Jul-2012,,HDFC Bank Limited,28-Jun-2012,1,-,INE040A01018,-,-,-,EQ,Annual General Meeting And Dividend Rs.4.30 Per Share,HDFCBANK
--,-,,HDFC Bank Limited,14-Jul-2011,1,-,INE040A01018,-,-,16-Jul-2011,EQ,Face Value Split From Rs.10/- To Rs.2/-,HDFCBANK
-10-Jun-2011,04-Jun-2011,,HDFC Bank Limited,02-Jun-2011,1,-,INE040A01018,-,-,-,EQ,Annual General Meeting And Dividend Rs.16.50 Per Share,HDFCBANK
+bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate
+-,-,HDFC Bank Limited,19-Jun-2026,1,-,INE040A01018,-,-,19-Jun-2026,EQ,Dividend - Rs 13 Per Share,HDFCBANK,HDFC Bank Ltd.,
+-,-,HDFC Bank Limited,26-Aug-2025,1,-,INE040A01018,-,-,27-Aug-2025,EQ,Bonus 1:1,HDFCBANK,HDFC Bank Ltd.,
+-,-,HDFC Bank Limited,25-Jul-2025,1,-,INE040A01018,-,-,25-Jul-2025,EQ,Special Dividend - Rs 5 Per Share,HDFCBANK,HDFC Bank Ltd.,
+-,-,HDFC Bank Limited,27-Jun-2025,1,-,INE040A01018,-,-,27-Jun-2025,EQ,Dividend - Rs 22 Per Share,HDFCBANK,HDFC Bank Ltd.,
+-,-,HDFC Bank Limited,10-May-2024,1,-,INE040A01018,-,-,10-May-2024,EQ,Dividend - Rs 19.50 Per Share,HDFCBANK,HDFC Bank Ltd.,
+-,-,HDFC Bank Limited,16-May-2023,1,-,INE040A01018,-,-,16-May-2023,EQ,Dividend - Rs 19 Per Share,HDFCBANK,HDFC Bank Ltd.,
+-,-,HDFC Bank Limited,12-May-2022,1,-,INE040A01018,-,-,13-May-2022,EQ,Dividend - Rs 15.50 Per Share,HDFCBANK,HDFC Bank Ltd.,
+-,-,HDFC Bank Limited,29-Jun-2021,1,-,INE040A01018,-,-,30-Jun-2021,EQ, Dividend - Rs 6.50 Per Share,HDFCBANK,HDFC Bank Ltd.,
+-,-,HDFC Bank Limited,19-Sep-2019,1,-,INE040A01018,-,-,20-Sep-2019,EQ, Face Value Split (Sub-Division) - From Rs 2 Per Share To Rs 1 Per Share,HDFCBANK,HDFC Bank Ltd.,
+-,-,HDFC Bank Limited,01-Aug-2019,1,-,INE040A01018,-,-,02-Aug-2019,EQ, Special Dividend - Rs 5 Per Share,HDFCBANK,HDFC Bank Ltd.,
+-,-,HDFC Bank Limited,20-Jun-2019,1,-,INE040A01018,-,-,21-Jun-2019,EQ, Dividend Rs 15 Per Sh,HDFCBANK,HDFC Bank Ltd.,
+-,-,HDFC Bank Limited,31-May-2018,1,-,INE040A01018,-,-,01-Jun-2018,EQ, Dividend- Rs 13 Per Share,HDFCBANK,HDFC Bank Ltd.,
+-,-,HDFC Bank Limited,29-Jun-2017,1,-,INE040A01018,-,-,30-Jun-2017,EQ, Dividend - Rs 11/- Per Share,HDFCBANK,HDFC Bank Ltd.,
+-,-,HDFC Bank Limited,29-Jun-2016,1,-,INE040A01018,-,-,30-Jun-2016,EQ, Dividend - Rs 9.50/- Per Share,HDFCBANK,HDFC Bank Ltd.,
+21-Jul-2015,04-Jul-2015,HDFC Bank Limited,02-Jul-2015,1,-,INE040A01018,-,-,-,EQ,Annual General Meeting/ Dividend - Rs 8/- Per Share,HDFCBANK,HDFC Bank Ltd.,
+25-Jun-2014,07-Jun-2014,HDFC Bank Limited,05-Jun-2014,1,-,INE040A01018,-,-,-,EQ,Annual General Meeting And Dividend - Rs.6.85/- Per Share,HDFCBANK,HDFC Bank Ltd.,
+27-Jun-2013,15-Jun-2013,HDFC Bank Limited,13-Jun-2013,1,-,INE040A01018,-,-,-,EQ,Annual General Meeting / Final Dividend Rs.5.50/- Per Equity Share,HDFCBANK,HDFC Bank Ltd.,
+13-Jul-2012,01-Jul-2012,HDFC Bank Limited,28-Jun-2012,1,-,INE040A01018,-,-,-,EQ,Annual General Meeting And Dividend Rs.4.30 Per Share,HDFCBANK,HDFC Bank Ltd.,
+-,-,HDFC Bank Limited,14-Jul-2011,1,-,INE040A01018,-,-,16-Jul-2011,EQ,Face Value Split From Rs.10/- To Rs.2/-,HDFCBANK,HDFC Bank Ltd.,
+10-Jun-2011,04-Jun-2011,HDFC Bank Limited,02-Jun-2011,1,-,INE040A01018,-,-,-,EQ,Annual General Meeting And Dividend Rs.16.50 Per Share,HDFCBANK,HDFC Bank Ltd.,

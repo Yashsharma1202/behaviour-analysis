@@ -1,0 +1,223 @@
+no <!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Win-Rate Methodology — Quarterly Results &amp; Corporate Actions</title>
+<style>
+:root{--bg:#f7f8fa;--panel:#fff;--ink:#12161d;--mute:#5b6472;--line:#e4e7ec;--blue:#2563eb;
+  --pos:#15803d;--neg:#b91c1c;--amb:#b45309;--shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.1);
+  --mono:'SFMono-Regular',Consolas,Menlo,monospace;}
+@media (prefers-color-scheme:dark){:root{--bg:#0c0f14;--panel:#141922;--ink:#e6e9ef;--mute:#98a2b3;
+  --line:#232a35;--blue:#5b9bff;--pos:#5ec98a;--neg:#f87171;--amb:#fbbf5b;--shadow:none;}}
+:root[data-theme="dark"]{--bg:#0c0f14;--panel:#141922;--ink:#e6e9ef;--mute:#98a2b3;--line:#232a35;
+  --blue:#5b9bff;--pos:#5ec98a;--neg:#f87171;--amb:#fbbf5b;--shadow:none;}
+:root[data-theme="light"]{--bg:#f7f8fa;--panel:#fff;--ink:#12161d;--mute:#5b6472;--line:#e4e7ec;
+  --blue:#2563eb;--pos:#15803d;--neg:#b91c1c;--amb:#b45309;--shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.1);}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.62;font-size:15px;
+  font-family:'Inter',-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px 90px}
+header{padding:46px 0 24px;border-bottom:1px solid var(--line)}
+.kicker{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:600}
+h1{font-size:1.95rem;margin:.3em 0 .2em;letter-spacing:-.02em}
+.lede{font-size:1.05rem;color:var(--mute);margin:0;max-width:72ch}
+h2{font-size:1.32rem;margin:46px 0 6px;letter-spacing:-.01em}
+h2 .n{color:var(--blue);font-family:var(--mono);font-size:.92rem;margin-right:.5em}
+h3{font-size:1.05rem;margin:24px 0 4px}
+p{margin:.6em 0}
+b{color:var(--ink)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:16px 0;box-shadow:var(--shadow)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+@media(max-width:680px){.grid2{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow)}
+.card h3{margin-top:0}
+.tag{display:inline-block;font-family:var(--mono);font-size:.7rem;font-weight:600;padding:.16em .6em;border-radius:20px;
+  background:rgba(37,99,235,.12);color:var(--blue);margin-bottom:6px}
+.callout{border-left:4px solid var(--amb);background:var(--panel);border-radius:0 10px 10px 0;padding:13px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.callout.warn{border-left-color:var(--neg)}
+.callout b{color:var(--ink)}
+.formula{font-family:var(--mono);font-size:.92rem;background:var(--panel);border:1px solid var(--line);
+  border-radius:10px;padding:14px 18px;margin:12px 0;overflow-x:auto;box-shadow:var(--shadow)}
+.formula .c{color:var(--mute)}
+table{width:100%;border-collapse:collapse;font-size:.88rem;background:var(--panel);margin:6px 0}
+.tblscroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:16px 0;box-shadow:var(--shadow)}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);font-weight:600}
+td.mono,th.mono{font-family:var(--mono);font-size:.84rem}
+.num{text-align:right;font-family:var(--mono)}
+.pos{color:var(--pos)}.neg{color:var(--neg)}
+tr:last-child td{border-bottom:none}
+ol,ul{margin:.5em 0;padding-left:1.4em}
+li{margin:.32em 0}
+code{font-family:var(--mono);font-size:.86em;background:rgba(37,99,235,.10);padding:.08em .4em;border-radius:5px}
+.step{display:flex;gap:12px;margin:12px 0}
+.step .no{flex:0 0 28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--mono);
+  font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center}
+.step .bd{flex:1}
+.foot{color:var(--mute);font-size:.82rem;margin-top:38px;font-family:var(--mono)}
+svg{max-width:100%;height:auto;display:block}
+.tl-cap{font-size:.82rem;color:var(--mute);margin:2px 0 0}
+@media print{:root{--bg:#fff;--panel:#fff;--ink:#12161d;--mute:#4b5563;--line:#d7dbe0;--shadow:none;}
+  @page{size:A4;margin:14mm}html,body{background:#fff!important;font-size:10.5pt}
+  .wrap{max-width:100%;padding:0}h2{break-after:avoid}.card,.callout,.panel,.tblscroll{break-inside:avoid}}
+</style></head><body><div class="wrap">
+
+<header>
+  <div class="kicker">NSE Behaviour Analysis · Methodology</div>
+  <h1>What the “win rate” means — and how the event is known in advance</h1>
+  <p class="lede">This note documents, exactly as the code computes it, the win rate shown for
+    <b>Quarterly Results</b> and <b>Corporate Actions</b> in the Rankings, Screener and Playbook —
+    where the event date comes from, why you can act <em>before</em> it, the precise win-rate formula,
+    how the “best rule” is chosen, and the honest limits of the number.</p>
+</header>
+
+<h2><span class="n">01</span>The two events at a glance</h2>
+<div class="tblscroll"><table>
+<thead><tr><th>Event</th><th>Date used</th><th>Source file</th><th>How you know it ahead of time</th></tr></thead>
+<tbody>
+<tr><td><b>Quarterly Results</b><br><span class="mono" style="color:var(--mute)">RESULTS</span></td>
+    <td class="mono">broadCastDate</td>
+    <td class="mono">&lt;SYM&gt;/financial_results.csv</td>
+    <td>SEBI LODR <b>Reg 29</b>: the board meeting to approve results must be intimated to the exchange <b>≥ 5 clear days</b> in advance.</td></tr>
+<tr><td><b>Corporate Action</b><br><span class="mono" style="color:var(--mute)">CORPORATE_ACTION</span></td>
+    <td class="mono">exDate</td>
+    <td class="mono">&lt;SYM&gt;/corporate_actions.csv</td>
+    <td>The <b>ex-date</b> and record date are declared and broadcast by NSE <b>days-to-weeks</b> before they take effect.</td></tr>
+</tbody></table></div>
+<p>The win rate is computed <b>identically</b> for both — only the anchor date differs. Everything in
+  sections 3–5 applies to both events; the difference is purely <em>which calendar date each event is pinned to</em>.</p>
+
+<h2><span class="n">02</span>Why we can “predict” the event — it isn’t a guess</h2>
+<p>We never forecast that an event will happen from price action. We <b>read the scheduled date off the
+  regulatory calendar</b> and position around a date that is already public. That is what makes a
+  “buy N days before” rule actionable rather than hindsight.</p>
+
+<div class="grid2">
+  <div class="card">
+    <span class="tag">Quarterly Results</span>
+    <h3>The date is legally pre-announced</h3>
+    <p>Under <b>SEBI LODR Regulation 29</b>, a listed company must notify the exchange of the board meeting
+      that will consider financial results at least <b>5 clear working days</b> beforehand. That intimation is
+      public. So roughly a week ahead you already know “results are coming on/around this date” — which is your
+      entry window.</p>
+    <svg viewBox="0 0 420 96" role="img" aria-label="Results timeline">
+      <line x1="20" y1="60" x2="400" y2="60" stroke="var(--line)" stroke-width="2"/>
+      <circle cx="70" cy="60" r="5" fill="var(--blue)"/>
+      <text x="70" y="48" text-anchor="middle" font-size="10" fill="var(--mute)">Reg 29 notice</text>
+      <text x="70" y="78" text-anchor="middle" font-size="9" fill="var(--mute)">date is public</text>
+      <rect x="150" y="55" width="150" height="10" rx="3" fill="var(--blue)" opacity=".18"/>
+      <text x="225" y="48" text-anchor="middle" font-size="10" fill="var(--blue)">buy-before window</text>
+      <circle cx="330" cy="60" r="6" fill="var(--amb)"/>
+      <text x="330" y="48" text-anchor="middle" font-size="10" fill="var(--ink)">broadcast day (T)</text>
+      <line x1="150" y1="60" x2="150" y2="60" /><text x="210" y="90" font-size="9" fill="var(--mute)">≈ 5 trading days</text>
+    </svg>
+  </div>
+  <div class="card">
+    <span class="tag">Corporate Action</span>
+    <h3>The ex-date is fixed in advance</h3>
+    <p>When a board declares a dividend / bonus / split, the company fixes a <b>record date</b> and the exchange
+      publishes the corresponding <b>ex-date</b> — typically two-plus weeks out. Files carry
+      <code>caBroadcastDate</code> (when NSE announced it) well before <code>exDate</code> (when it takes effect),
+      so the ex-date is known long before you must act.</p>
+    <svg viewBox="0 0 420 96" role="img" aria-label="Corporate action timeline">
+      <line x1="20" y1="60" x2="400" y2="60" stroke="var(--line)" stroke-width="2"/>
+      <circle cx="70" cy="60" r="5" fill="var(--blue)"/>
+      <text x="70" y="48" text-anchor="middle" font-size="10" fill="var(--mute)">caBroadcastDate</text>
+      <text x="70" y="78" text-anchor="middle" font-size="9" fill="var(--mute)">ex-date published</text>
+      <rect x="150" y="55" width="150" height="10" rx="3" fill="var(--blue)" opacity=".18"/>
+      <text x="225" y="48" text-anchor="middle" font-size="10" fill="var(--blue)">buy-before window</text>
+      <circle cx="330" cy="60" r="6" fill="var(--amb)"/>
+      <text x="330" y="48" text-anchor="middle" font-size="10" fill="var(--ink)">ex-date (T)</text>
+      <text x="210" y="90" font-size="9" fill="var(--mute)">days → weeks</text>
+    </svg>
+  </div>
+</div>
+
+<h2><span class="n">03</span>How one event becomes a set of trades</h2>
+<p>For a single event pinned to trading day <b>T</b> (the first trading day on/after the event date), we test
+  every combination of an entry <b>N days before</b> and an exit <b>M days after</b> — with
+  N = 1…8 and M = 1…8, i.e. an <b>8 × 8 = 64-cell grid</b> of candidate rules:</p>
+<div class="formula">
+  entry price&nbsp;&nbsp;= close at day&nbsp; <b>T − N</b>&nbsp;&nbsp;<span class="c">// buy N trading days before the event</span><br>
+  exit price&nbsp;&nbsp;&nbsp;= close at day&nbsp; <b>T + M</b>&nbsp;&nbsp;<span class="c">// sell M trading days after the event</span><br>
+  return%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= ( exit / entry − 1 − cost ) × 100<br>
+  outcome&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <span class="pos">WIN</span> if return% &gt; 0&nbsp; else&nbsp; <span class="neg">LOSS</span>
+</div>
+<ul>
+  <li><b>Prices</b> are daily <b>adjusted close</b> from Yahoo Finance (cached). “Days” are <b>trading days</b>
+      (weekends/holidays skipped) — the code steps by index position, not calendar days.</li>
+  <li><b>cost</b> is a round-trip cost fraction, currently <code>0</code> (gross returns). Set it to model brokerage/slippage.</li>
+  <li>Every historical event of that type on that stock produces its own 64 rows — one per (N, M) pair.</li>
+</ul>
+
+<h2><span class="n">04</span>The win-rate formula</h2>
+<p>We now <b>pool all events</b> of one type for the stock and, <b>for each (N, M) cell</b>, ask: across all those
+  past events, what fraction made money?</p>
+<div class="formula">
+  win rate(N, M)&nbsp;&nbsp;=&nbsp;&nbsp; <b>number of events where return% &gt; 0</b>
+  &nbsp;÷&nbsp; <b>total number of events</b> &nbsp;× 100<br>
+  avg return(N, M)&nbsp;=&nbsp; mean of return% across those same events
+</div>
+<p>So a win rate of <b>67%</b> for “buy 3 before / sell 2 after” means: of all the stock’s past quarterly results,
+  that specific rule closed green on <b>two out of every three</b> of them. It is a <b>hit rate over historical
+  events</b>, not a probability of future profit (see §6).</p>
+
+<h2><span class="n">05</span>Choosing the single “best” rule that gets displayed</h2>
+<p>The dashboard shows one headline rule per stock-event. It is picked from the 64 cells like this:</p>
+<div class="step"><div class="no">1</div><div class="bd"><b>Require enough events.</b> Keep only cells backed by at least
+  <code>max(3, min(5, n))</code> events (≈ 5 when history is ample; all of them when a stock has very few) — so the
+  headline rule isn’t built on one or two lucky quarters.</div></div>
+<div class="step"><div class="no">2</div><div class="bd"><b>Prefer profitable rules.</b> Among the survivors, restrict to
+  cells whose <b>average return is positive</b>. If none are positive, fall back to the full set.</div></div>
+<div class="step"><div class="no">3</div><div class="bd"><b>Rank by win rate, then average.</b> Sort those by
+  <b>win rate first</b>, breaking ties by average return. The top cell’s N, M, win rate and average become the
+  displayed “buy N before / sell M after”.</div></div>
+<p class="tl-cap">Code path: <code>event_behaviour.analyse_event</code> → <code>aggregate</code> →
+  <code>build_behaviour</code> (selection) → <code>build_rankings</code> (ordering). Same engine feeds the dashboard, the playbook, and the static site.</p>
+
+<h2><span class="n">06</span>Worked example</h2>
+<p>Suppose a stock has <b>6 past quarterly results</b>, and we test the rule “buy 2 days before, sell 1 day after”:</p>
+<div class="tblscroll"><table>
+<thead><tr><th>Result #</th><th class="num">Entry (T−2)</th><th class="num">Exit (T+1)</th><th class="num">Return %</th><th>Outcome</th></tr></thead>
+<tbody>
+<tr><td>1</td><td class="num">1,000</td><td class="num">1,032</td><td class="num pos">+3.2</td><td class="pos">WIN</td></tr>
+<tr><td>2</td><td class="num">1,120</td><td class="num">1,109</td><td class="num neg">−1.0</td><td class="neg">LOSS</td></tr>
+<tr><td>3</td><td class="num">980</td><td class="num">1,005</td><td class="num pos">+2.6</td><td class="pos">WIN</td></tr>
+<tr><td>4</td><td class="num">1,210</td><td class="num">1,228</td><td class="num pos">+1.5</td><td class="pos">WIN</td></tr>
+<tr><td>5</td><td class="num">1,150</td><td class="num">1,142</td><td class="num neg">−0.7</td><td class="neg">LOSS</td></tr>
+<tr><td>6</td><td class="num">1,300</td><td class="num">1,339</td><td class="num pos">+3.0</td><td class="pos">WIN</td></tr>
+</tbody></table></div>
+<div class="formula">
+  wins = 4&nbsp;&nbsp;(#1, #3, #4, #6)&nbsp;&nbsp;·&nbsp;&nbsp;total = 6<br>
+  <b>win rate = 4 / 6 × 100 = 66.7%</b><br>
+  avg return = (3.2 − 1.0 + 2.6 + 1.5 − 0.7 + 3.0) / 6 = <b>+1.43%</b>
+</div>
+<p>This (N=2, M=1) cell is compared against the other 63 cells by the §5 rules; if it wins, the stock shows
+  <b>“buy 2d before · sell 1d after · 67% · +1.4%”</b>.</p>
+
+<h2><span class="n">07</span>What the win rate does <span class="neg">not</span> mean — read before trading</h2>
+<div class="callout warn"><b>It is in-sample.</b> The best (N, M) is chosen on the <em>same</em> events it is then scored
+  on. That upward-biases the number — a rule picked from 64 tries will look good on the history that picked it, and
+  will not repeat as cleanly out-of-sample. Treat it as a description of the past, not a forecast.</div>
+<div class="callout warn"><b>Corporate actions use adjusted close — the ex-date drop is already removed.</b> Yahoo’s
+  adjusted price back-adjusts for dividends/bonuses/splits, so the mechanical fall on the ex-date is <em>not</em> in
+  the data. The corporate-action win rate therefore measures <b>residual drift on a total-return basis</b>, not
+  “the stock recovering the dividend.” Do not read it as capturing the ex-date discount itself.</div>
+<div class="callout"><b>Small samples are noisy.</b> A 100% win rate on 3 events is far weaker evidence than 60% on
+  30. Always read the win rate next to the <b>event count</b> shown beside it.</div>
+<div class="callout"><b>Results anchor on the broadcast day.</b> <code>broadCastDate</code> is when the result actually
+  hit the tape. The <em>knowability</em> argument rests on the separate Reg 29 board-meeting intimation preceding it
+  by ~5 days; the return itself is measured around the broadcast day T.</div>
+
+<h2><span class="n">08</span>Reproduce it yourself</h2>
+<ul>
+  <li><b>One stock, full grid:</b> <code>python event_behaviour.py RELIANCE</code> → writes
+    <code>processed/event_behaviour_detail.csv</code> (every event × cell) and
+    <code>event_behaviour_summary.csv</code> (the aggregated win-rate grid + best cells).</li>
+  <li><b>All stocks, ranked:</b> the dashboard’s 🏆 Rankings tab calls <code>build_rankings()</code>, which runs the
+    above for every stock and sorts by win rate.</li>
+  <li><b>Knobs</b> live at the top of <code>event_behaviour.py</code>: <code>N_BEFORE</code>, <code>N_AFTER</code>
+    (grid size), <code>COST</code> (round-trip cost), <code>MIN_EVENTS</code>.</li>
+</ul>
+
+<p class="foot">Generated from the same code path as the dashboard · win rate = share of past events where the chosen
+  rule closed positive · numbers are in-sample and for study, not investment advice.</p>
+</div></body></html>

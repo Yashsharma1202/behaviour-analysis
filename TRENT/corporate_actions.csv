@@ -1,21 +1,21 @@
-bcEndDate,bcStartDate,caBroadcastDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol
--,-,,Trent Limited,12-Jun-2026,1,-,INE849A01012,-,-,12-Jun-2026,EQ,Dividend - Rs 4 Per Share,TRENT
--,-,,Trent Limited,04-Jun-2026,1,-,INE849A01012,-,-,04-Jun-2026,EQ,Bonus 1:2,TRENT
--,-,,Trent Limited,12-Jun-2025,1,-,INE849A01012,-,-,12-Jun-2025,EQ,Dividend - Rs 5 Per Share,TRENT
--,-,,Trent Limited,22-May-2024,1,-,INE849A01012,-,-,22-May-2024,EQ,Dividend - Rs 3.20 Per Share,TRENT
--,-,,Trent Limited,25-May-2023,1,-,INE849A01012,-,-,25-May-2023,EQ,Dividend - Rs 2.20 Per Share,TRENT
--,-,,Trent Limited,20-May-2022,1,-,INE849A01012,-,-,23-May-2022,EQ,Dividend- Rs 1.1 Per Share,TRENT
--,-,,Trent Limited,22-Feb-2022,1,-,INE849A01012,-,-,23-Feb-2022,EQ,Interim Dividend - Rs 0.60 Per Share,TRENT
-15-Jul-2021,13-Jul-2021,,Trent Limited,09-Jul-2021,1,-,INE849A01012,-,-,-,EQ, Annual General Meeting/Dividend - Re 0.60 Per Share,TRENT
-30-Jul-2020,28-Jul-2020,,Trent Limited,24-Jul-2020,1,-,INE849A01012,-,-,-,EQ, Annual General Meeting/Dividend - Re 1 Per Share,TRENT
-25-Jul-2019,23-Jul-2019,,Trent Limited,19-Jul-2019,1,-,INE849A01012,-,-,-,EQ, Annual General Meeting/Dividend - Rs 1.30 Per Share,TRENT
-02-Aug-2018,31-Jul-2018,,Trent Limited,27-Jul-2018,1,-,INE849A01012,-,-,-,EQ, Annual General Meeting/Dividend- Rs 1.15 Per Share,TRENT
-25-Jul-2017,21-Jul-2017,,Trent Limited,19-Jul-2017,1,-,INE849A01012,-,-,-,EQ, Annual General Meeting/Dividend - Re 1/- Per Share,TRENT
--,-,,Trent Limited,12-Sep-2016,1,-,INE849A01012,-,-,14-Sep-2016,EQ, Face Value Split From Rs 10 To Re 1,TRENT
-05-Aug-2016,03-Aug-2016,,Trent Limited,01-Aug-2016,1,-,INE849A01012,-,-,-,EQ, Annual General Meeting,TRENT
--,-,,Trent Limited,17-Mar-2016,1,-,INE849A01012,-,-,19-Mar-2016,EQ, Interim Dividend - Rs 9/- Per Share (Purpose Revised),TRENT
-31-Jul-2015,29-Jul-2015,,Trent Limited,27-Jul-2015,1,-,INE849A01012,-,-,-,EQ,Annual General Meeting/Final Dividend Rs.7.50/- Per Share/Special Dividend Rs.2.50/- Per Share,TRENT
-08-Aug-2014,06-Aug-2014,,Trent Limited,04-Aug-2014,1,-,INE849A01012,-,-,-,EQ,Annual General Meeting / Dividend - Rs 7/- Per Share,TRENT
-19-Jul-2013,17-Jul-2013,,Trent Limited,15-Jul-2013,1,-,INE849A01012,-,-,-,EQ,Annual General Meeting/Dividend Rs 7/- Per Equity Share,TRENT
-27-Jul-2012,25-Jul-2012,,Trent Limited,23-Jul-2012,1,-,INE849A01012,-,-,-,EQ,Annual General Meeting/ Dividend Rs 6.50 Per Share,TRENT
-22-Jul-2011,20-Jul-2011,,Trent Limited,18-Jul-2011,1,-,INE849A01012,-,-,-,EQ,Annual General Meeting And Dividend Rs.7.50 Per Share,TRENT
+bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate
+-,-,Trent Limited,12-Jun-2026,1,-,INE849A01012,-,-,12-Jun-2026,EQ,Dividend - Rs 4 Per Share,TRENT,Trent Ltd.,
+-,-,Trent Limited,04-Jun-2026,1,-,INE849A01012,-,-,04-Jun-2026,EQ,Bonus 1:2,TRENT,Trent Ltd.,
+-,-,Trent Limited,12-Jun-2025,1,-,INE849A01012,-,-,12-Jun-2025,EQ,Dividend - Rs 5 Per Share,TRENT,Trent Ltd.,
+-,-,Trent Limited,22-May-2024,1,-,INE849A01012,-,-,22-May-2024,EQ,Dividend - Rs 3.20 Per Share,TRENT,Trent Ltd.,
+-,-,Trent Limited,25-May-2023,1,-,INE849A01012,-,-,25-May-2023,EQ,Dividend - Rs 2.20 Per Share,TRENT,Trent Ltd.,
+-,-,Trent Limited,20-May-2022,1,-,INE849A01012,-,-,23-May-2022,EQ,Dividend- Rs 1.1 Per Share,TRENT,Trent Ltd.,
+-,-,Trent Limited,22-Feb-2022,1,-,INE849A01012,-,-,23-Feb-2022,EQ,Interim Dividend - Rs 0.60 Per Share,TRENT,Trent Ltd.,
+15-Jul-2021,13-Jul-2021,Trent Limited,09-Jul-2021,1,-,INE849A01012,-,-,-,EQ, Annual General Meeting/Dividend - Re 0.60 Per Share,TRENT,Trent Ltd.,
+30-Jul-2020,28-Jul-2020,Trent Limited,24-Jul-2020,1,-,INE849A01012,-,-,-,EQ, Annual General Meeting/Dividend - Re 1 Per Share,TRENT,Trent Ltd.,
+25-Jul-2019,23-Jul-2019,Trent Limited,19-Jul-2019,1,-,INE849A01012,-,-,-,EQ, Annual General Meeting/Dividend - Rs 1.30 Per Share,TRENT,Trent Ltd.,
+02-Aug-2018,31-Jul-2018,Trent Limited,27-Jul-2018,1,-,INE849A01012,-,-,-,EQ, Annual General Meeting/Dividend- Rs 1.15 Per Share,TRENT,Trent Ltd.,
+25-Jul-2017,21-Jul-2017,Trent Limited,19-Jul-2017,1,-,INE849A01012,-,-,-,EQ, Annual General Meeting/Dividend - Re 1/- Per Share,TRENT,Trent Ltd.,
+-,-,Trent Limited,12-Sep-2016,1,-,INE849A01012,-,-,14-Sep-2016,EQ, Face Value Split From Rs 10 To Re 1,TRENT,Trent Ltd.,
+05-Aug-2016,03-Aug-2016,Trent Limited,01-Aug-2016,1,-,INE849A01012,-,-,-,EQ, Annual General Meeting,TRENT,Trent Ltd.,
+-,-,Trent Limited,17-Mar-2016,1,-,INE849A01012,-,-,19-Mar-2016,EQ, Interim Dividend - Rs 9/- Per Share (Purpose Revised),TRENT,Trent Ltd.,
+31-Jul-2015,29-Jul-2015,Trent Limited,27-Jul-2015,1,-,INE849A01012,-,-,-,EQ,Annual General Meeting/Final Dividend Rs.7.50/- Per Share/Special Dividend Rs.2.50/- Per Share,TRENT,Trent Ltd.,
+08-Aug-2014,06-Aug-2014,Trent Limited,04-Aug-2014,1,-,INE849A01012,-,-,-,EQ,Annual General Meeting / Dividend - Rs 7/- Per Share,TRENT,Trent Ltd.,
+19-Jul-2013,17-Jul-2013,Trent Limited,15-Jul-2013,1,-,INE849A01012,-,-,-,EQ,Annual General Meeting/Dividend Rs 7/- Per Equity Share,TRENT,Trent Ltd.,
+27-Jul-2012,25-Jul-2012,Trent Limited,23-Jul-2012,1,-,INE849A01012,-,-,-,EQ,Annual General Meeting/ Dividend Rs 6.50 Per Share,TRENT,Trent Ltd.,
+22-Jul-2011,20-Jul-2011,Trent Limited,18-Jul-2011,1,-,INE849A01012,-,-,-,EQ,Annual General Meeting And Dividend Rs.7.50 Per Share,TRENT,Trent Ltd.,

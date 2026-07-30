@@ -1,2 +1,2 @@
-bcEndDate,bcStartDate,caBroadcastDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol
--,-,,Jio Financial Services Limited,11-Aug-2025,10,-,INE758E01017,-,-,11-Aug-2025,EQ,Dividend - Re 0.50 Per Share,JIOFIN
+bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate
+-,-,Jio Financial Services Limited,11-Aug-2025,10,-,INE758E01017,-,-,11-Aug-2025,EQ,Dividend - Re 0.50 Per Share,JIOFIN,Jio Financial Services Ltd.,

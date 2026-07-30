@@ -1,0 +1,354 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buy-Before / Sell-After — The Logic</title>
+<style>
+:root{
+  --bg:#ffffff;--panel:#ffffff;--soft:#f6f8fb;--ink:#111726;--mute:#5a6474;--faint:#8a94a6;
+  --line:#e2e6ec;--blue:#2563eb;--blue-soft:#dbe6ff;--amb:#c2761a;--amb-soft:#fbecd4;
+  --pos:#15803d;--pos-soft:#d8f0e0;--neg:#c2334d;--neg-soft:#f7dbe1;
+  --mono:'SFMono-Regular',Consolas,Menlo,monospace;
+  --shadow:0 1px 2px rgba(16,24,40,.05),0 4px 14px rgba(16,24,40,.06);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:'Inter',-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;font-size:14.5px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.wrap{max-width:820px;margin:0 auto;padding:0 26px 60px}
+
+/* ---- cover ---- */
+.cover{padding:64px 0 40px;border-bottom:2px solid var(--ink)}
+.kicker{font-family:var(--mono);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:700}
+h1{font-size:2.35rem;line-height:1.12;margin:.34em 0 .28em;letter-spacing:-.025em}
+.sub{font-size:1.06rem;color:var(--mute);margin:0;max-width:64ch}
+.meta{margin-top:26px;font-family:var(--mono);font-size:.76rem;color:var(--faint);letter-spacing:.03em}
+
+h2{font-size:1.34rem;margin:40px 0 8px;letter-spacing:-.015em;padding-top:6px}
+h2 .n{display:inline-block;min-width:1.9em;color:var(--blue);font-family:var(--mono);font-size:.86rem;font-weight:700}
+h3{font-size:1rem;margin:20px 0 4px;color:var(--ink)}
+p{margin:.6em 0}b{color:var(--ink)}
+.lead{color:var(--mute)}
+
+.fig{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:20px 22px 14px;margin:18px 0;box-shadow:var(--shadow)}
+.fig svg{display:block;width:100%;height:auto}
+.figcap{font-size:.8rem;color:var(--mute);margin:10px 2px 0;text-align:center}
+.figcap b{color:var(--ink)}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow)}
+.card h3{margin-top:0}
+.tag{display:inline-block;font-family:var(--mono);font-size:.68rem;font-weight:700;letter-spacing:.04em;
+  padding:.18em .62em;border-radius:20px;margin-bottom:8px;text-transform:uppercase}
+.tag.b{background:var(--blue-soft);color:var(--blue)}
+.tag.a{background:var(--amb-soft);color:var(--amb)}
+
+.formula{font-family:var(--mono);font-size:.9rem;background:#0e1524;color:#e7ecf5;border-radius:12px;
+  padding:16px 18px;margin:14px 0;overflow-x:auto;line-height:1.75}
+.formula .c{color:#7f8ba3}
+.formula .k{color:#8fd3ff}.formula .g{color:#7ee0a6}.formula .r{color:#ff9aa8}
+
+table{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--panel)}
+.tbl{overflow:hidden;border:1px solid var(--line);border-radius:12px;margin:16px 0;box-shadow:var(--shadow)}
+th,td{padding:9px 13px;border-bottom:1px solid var(--line);text-align:left}
+th{font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);font-weight:700;background:var(--soft)}
+tr:last-child td{border-bottom:none}
+td.mono,th.mono{font-family:var(--mono);font-size:.82rem}
+.hi td{background:var(--amb-soft)}
+.pos{color:var(--pos);font-weight:600}.neg{color:var(--neg);font-weight:600}
+
+.callout{border-left:4px solid var(--amb);background:var(--soft);border-radius:0 12px 12px 0;padding:13px 18px;margin:16px 0}
+.callout.warn{border-left-color:var(--neg);background:var(--neg-soft)}
+.callout.good{border-left-color:var(--pos);background:var(--pos-soft)}
+.callout b{color:var(--ink)}
+
+.steps{counter-reset:s;margin:14px 0}
+.stp{display:flex;gap:14px;align-items:flex-start;margin:12px 0}
+.stp .no{counter-increment:s;flex:0 0 30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;
+  font-family:var(--mono);font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center}
+.stp .no::before{content:counter(s)}
+.stp .bd{flex:1;padding-top:2px}
+code{font-family:var(--mono);font-size:.85em;background:#eef2f9;color:#1b3a6b;padding:.1em .42em;border-radius:5px}
+ul{margin:.5em 0;padding-left:1.2em}li{margin:.3em 0}
+
+@media print{
+  @page{size:A4;margin:15mm 0}
+  html,body{font-size:10.6pt}
+  .wrap{max-width:100%;padding:0 16mm}
+  .cover{padding:8mm 0 7mm}
+  h1{font-size:26pt}
+  .sec{break-inside:avoid}
+  h2{break-after:avoid}
+  .fig,.card,.callout,.tbl,.formula{break-inside:avoid}
+  .pagebreak{break-before:page}
+}
+@media(max-width:640px){.two{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+
+<!-- ============ COVER ============ -->
+<section class="cover">
+  <div class="kicker">NSE Behaviour Analysis · Methodology</div>
+  <h1>Buy-Before / Sell-After<br>The logic, end to end</h1>
+  <p class="sub">How the strategy positions around a corporate event whose date is already known —
+    the two-leg trade, why you buy before and sell after, exactly when each leg fires, and how the
+    before/after timing is chosen from history. Worked for <b>Quarterly Results</b> and
+    <b>Corporate Actions</b>.</p>
+  <div class="meta">NSE India · Yahoo Finance prices (adjusted close) · in-sample study, not investment advice</div>
+</section>
+
+<!-- ============ 1. MENTAL MODEL ============ -->
+<section class="sec">
+<h2><span class="n">01</span>The idea: don’t predict the event — position around a known date</h2>
+<p class="lead">We never forecast <em>whether</em> a result or dividend will happen. We read the date off the
+  regulatory calendar — it is a public fact — and predict only <b>how the price tends to move around that fixed
+  date</b>, using the stock’s own history as the base rate.</p>
+
+<div class="fig">
+<svg viewBox="0 0 760 150" role="img" aria-label="Prediction flow: read the date, look up base rate, position">
+  <!-- box 1 -->
+  <rect x="8" y="34" width="220" height="82" rx="12" fill="#fff" stroke="var(--line)"/>
+  <text x="118" y="60" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">1 · Read the date</text>
+  <text x="118" y="82" text-anchor="middle" font-size="11" fill="var(--mute)">SEBI / NSE calendar</text>
+  <text x="118" y="99" text-anchor="middle" font-size="11" fill="var(--mute)">(known in advance)</text>
+  <!-- arrow -->
+  <path d="M232 75 h40" stroke="var(--faint)" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  <!-- box 2 -->
+  <rect x="278" y="34" width="220" height="82" rx="12" fill="#fff" stroke="var(--line)"/>
+  <text x="388" y="60" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">2 · Look up history</text>
+  <text x="388" y="82" text-anchor="middle" font-size="11" fill="var(--mute)">how the stock moved</text>
+  <text x="388" y="99" text-anchor="middle" font-size="11" fill="var(--mute)">around past events</text>
+  <path d="M502 75 h40" stroke="var(--faint)" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  <!-- box 3 -->
+  <rect x="548" y="34" width="204" height="82" rx="12" fill="var(--blue-soft)" stroke="var(--blue)"/>
+  <text x="650" y="60" text-anchor="middle" font-size="13" font-weight="700" fill="var(--blue)">3 · Position</text>
+  <text x="650" y="82" text-anchor="middle" font-size="11" fill="#37507e">buy before,</text>
+  <text x="650" y="99" text-anchor="middle" font-size="11" fill="#37507e">sell after</text>
+  <defs><marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+    <path d="M0 0 L8 4 L0 8 z" fill="var(--faint)"/></marker></defs>
+</svg>
+<div class="figcap"><b>Figure 1.</b> The event date is an input we read; the only thing predicted is the direction of the move.</div>
+</div>
+</section>
+
+<!-- ============ 2. THE TWO-LEG TRADE ============ -->
+<section class="sec">
+<h2><span class="n">02</span>The trade is two legs — buy before, hold through, sell after</h2>
+<p>One buy, one sell. You enter <b>N trading days before</b> the event at the closing price, hold straight
+  <b>through</b> the announcement, and exit <b>M trading days after</b> at the close. You are never flat during
+  the event.</p>
+
+<div class="fig">
+<svg viewBox="0 0 760 210" role="img" aria-label="Two-leg trade timeline">
+  <!-- hold band -->
+  <rect x="120" y="96" width="520" height="16" rx="8" fill="var(--blue-soft)"/>
+  <!-- axis -->
+  <line x1="40" y1="104" x2="720" y2="104" stroke="var(--line)" stroke-width="2"/>
+  <!-- anticipation brace -->
+  <path d="M120 78 q0 -14 14 -14 h100 q14 0 14 14" fill="none" stroke="var(--blue)" stroke-width="1.5"/>
+  <text x="188" y="52" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--blue)">anticipation</text>
+  <text x="188" y="68" text-anchor="middle" font-size="10.5" fill="var(--mute)">market prices in the known event</text>
+  <!-- reaction brace -->
+  <path d="M400 78 q0 -14 14 -14 h212 q14 0 14 14" fill="none" stroke="var(--amb)" stroke-width="1.5"/>
+  <text x="520" y="52" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--amb)">reaction / drift</text>
+  <text x="520" y="68" text-anchor="middle" font-size="10.5" fill="var(--mute)">market digests the news</text>
+  <!-- BUY marker -->
+  <circle cx="120" cy="104" r="9" fill="var(--blue)"/>
+  <text x="120" y="140" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--blue)">BUY</text>
+  <text x="120" y="158" text-anchor="middle" font-size="11" fill="var(--mute)">close, T − N</text>
+  <!-- EVENT marker -->
+  <rect x="391" y="95" width="18" height="18" rx="3" transform="rotate(45 400 104)" fill="var(--amb)"/>
+  <text x="400" y="140" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--amb)">EVENT</text>
+  <text x="400" y="158" text-anchor="middle" font-size="11" fill="var(--mute)">day T</text>
+  <!-- SELL marker -->
+  <circle cx="640" cy="104" r="9" fill="var(--pos)"/>
+  <text x="640" y="140" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--pos)">SELL</text>
+  <text x="640" y="158" text-anchor="middle" font-size="11" fill="var(--mute)">close, T + M</text>
+  <!-- hold label -->
+  <text x="380" y="190" text-anchor="middle" font-size="11" fill="var(--faint)">hold the position the whole time — through the event</text>
+</svg>
+<div class="figcap"><b>Figure 2.</b> The two legs. Buy-before catches the run-up; sell-after catches the post-event drift; the event sits in the middle.</div>
+</div>
+</section>
+
+<!-- ============ 3. WHY EACH LEG ============ -->
+<section class="sec">
+<h2><span class="n">03</span>Why buy <em>before</em>, and why sell <em>after</em></h2>
+<div class="two">
+  <div class="card">
+    <span class="tag b">Buy before</span>
+    <h3>To catch the anticipation</h3>
+    <p>Because the date is public, traders position ahead of the catalyst and price tends to drift up
+      <em>into</em> it — the “buy the rumour” run-up. Wait until the event day and that move is already gone.
+      <b>N</b> is how far back you reach to sit inside the run-up.</p>
+  </div>
+  <div class="card">
+    <span class="tag a">Sell after</span>
+    <h3>To catch the drift</h3>
+    <p>The reaction doesn’t finish in one tick — prices keep drifting for several days as the market digests
+      the news (post-event drift). Exiting on the event day sells into the first spike; holding <b>M</b> days
+      lets the digestion play out.</p>
+  </div>
+</div>
+
+<div class="fig">
+<svg viewBox="0 0 760 220" role="img" aria-label="Price path: run-up into event then drift after">
+  <!-- baseline grid -->
+  <line x1="60" y1="180" x2="720" y2="180" stroke="var(--line)"/>
+  <!-- shaded before/after -->
+  <rect x="120" y="30" width="280" height="150" fill="var(--blue-soft)" opacity=".5"/>
+  <rect x="400" y="30" width="240" height="150" fill="var(--amb-soft)" opacity=".6"/>
+  <!-- price path -->
+  <path d="M120 150 C200 140 300 96 400 80 C480 66 560 54 640 44"
+        fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+  <!-- event line -->
+  <line x1="400" y1="24" x2="400" y2="188" stroke="var(--amb)" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="400" y="18" text-anchor="middle" font-size="11" font-weight="700" fill="var(--amb)">EVENT (T)</text>
+  <!-- buy dot -->
+  <circle cx="120" cy="150" r="7" fill="var(--blue)"/>
+  <text x="120" y="205" text-anchor="middle" font-size="11" font-weight="700" fill="var(--blue)">BUY (T−N)</text>
+  <!-- sell dot -->
+  <circle cx="640" cy="44" r="7" fill="var(--pos)"/>
+  <text x="640" y="205" text-anchor="middle" font-size="11" font-weight="700" fill="var(--pos)">SELL (T+M)</text>
+  <!-- region labels -->
+  <text x="255" y="205" text-anchor="middle" font-size="11" fill="var(--mute)">run-up you buy into</text>
+  <text x="520" y="205" text-anchor="middle" font-size="11" fill="var(--mute)">drift you hold for</text>
+  <text x="76" y="46" font-size="10" fill="var(--faint)">price</text>
+</svg>
+<div class="figcap"><b>Figure 3.</b> Schematic price path. Buying at T−N and selling at T+M captures both the anticipation run-up and the post-event drift. Illustrative shape, not a specific stock.</div>
+</div>
+</section>
+
+<!-- ============ 4. EXACT TIMING ============ -->
+<section class="sec pagebreak">
+<h2><span class="n">04</span>Exactly when each leg fires (from the code)</h2>
+<div class="steps">
+  <div class="stp"><div class="no"></div><div class="bd"><b>Anchor the event to a trading day T.</b>
+    T = the first trading day on or after the event date, so weekends/holidays snap forward to a real price day.</div></div>
+  <div class="stp"><div class="no"></div><div class="bd"><b>Buy leg — step back N <em>trading</em> days.</b>
+    <code>entry = close[T − N]</code>. Trading days, not calendar days, so “3 before” automatically skips the weekend.</div></div>
+  <div class="stp"><div class="no"></div><div class="bd"><b>Sell leg — step forward M trading days.</b>
+    <code>exit = close[T + M]</code>.</div></div>
+  <div class="stp"><div class="no"></div><div class="bd"><b>Score the trade.</b> Compute the return and label it a win or loss:</div></div>
+</div>
+<div class="formula">
+  entry&nbsp;&nbsp;= <span class="k">close[T − N]</span>&nbsp;&nbsp;<span class="c">// buy N trading days before, at the close</span><br>
+  exit&nbsp;&nbsp;&nbsp;= <span class="k">close[T + M]</span>&nbsp;&nbsp;<span class="c">// sell M trading days after, at the close</span><br>
+  return% = ( exit / entry − 1 ) × 100<br>
+  outcome = <span class="g">WIN</span> if return% &gt; 0&nbsp; else&nbsp; <span class="r">LOSS</span>
+</div>
+</section>
+
+<!-- ============ 5. CALENDAR WALK ============ -->
+<section class="sec">
+<h2><span class="n">05</span>Calendar walk-through — “buy 3 before, sell 2 after”</h2>
+<p>Results broadcast on <b>Thursday 24 July</b>. Note the sell lands on <b>Monday</b>, not Saturday — because it
+  counts trading days, skipping the weekend.</p>
+<div class="tbl"><table>
+<thead><tr><th>Offset</th><th>Date</th><th>Weekday</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td class="mono">T−3</td><td>21 Jul</td><td>Mon</td><td class="pos">BUY at close</td></tr>
+<tr><td class="mono">T−2</td><td>22 Jul</td><td>Tue</td><td>hold</td></tr>
+<tr><td class="mono">T−1</td><td>23 Jul</td><td>Wed</td><td>hold</td></tr>
+<tr class="hi"><td class="mono">T</td><td>24 Jul</td><td>Thu</td><td><b>EVENT — results out (hold through)</b></td></tr>
+<tr><td class="mono">T+1</td><td>25 Jul</td><td>Fri</td><td>hold</td></tr>
+<tr><td class="mono" style="color:var(--faint)">—</td><td>26–27 Jul</td><td>Sat–Sun</td><td style="color:var(--faint)">market closed — not counted</td></tr>
+<tr><td class="mono">T+2</td><td>28 Jul</td><td>Mon</td><td class="neg">SELL at close</td></tr>
+</tbody></table></div>
+<p class="lead">One clean trade: bought Monday’s close, held over Thursday’s result, sold the following Monday’s close.</p>
+</section>
+
+<!-- ============ 6. THE TWO EVENTS ============ -->
+<section class="sec">
+<h2><span class="n">06</span>The two events — same machinery, different anchor date</h2>
+<p>Everything above is identical for both events. The <b>only</b> thing that changes is which calendar date T is
+  pinned to, and how you know that date in advance.</p>
+<div class="two">
+  <div class="card">
+    <span class="tag b">Quarterly Results</span>
+    <h3>T = broadcast date</h3>
+    <p>Date column <code>broadCastDate</code> from <code>financial_results.csv</code>. Knowable ahead because
+      <b>SEBI LODR Reg 29</b> forces the company to intimate the results board meeting <b>≥ 5 clear days</b> in
+      advance — that public notice is your buy-before window.</p>
+  </div>
+  <div class="card">
+    <span class="tag a">Corporate Action</span>
+    <h3>T = ex-date</h3>
+    <p>Date column <code>exDate</code> from <code>corporate_actions.csv</code>. The ex-date and record date are
+      broadcast by NSE (<code>caBroadcastDate</code>) <b>days-to-weeks</b> beforehand, so the date is fixed and
+      public long before you must act.</p>
+  </div>
+</div>
+<div class="callout warn"><b>Corporate actions use adjusted prices — the ex-date drop is already removed.</b>
+  Yahoo’s adjusted close back-corrects for dividends/bonuses/splits, so holding through the ex-date does
+  <em>not</em> capture the mechanical price fall or a “recovery” of it. The corporate-action result measures the
+  <b>residual total-return drift</b> around the ex-date, not dividend capture.</div>
+</section>
+
+<!-- ============ 7. CHOOSING N & M ============ -->
+<section class="sec pagebreak">
+<h2><span class="n">07</span>How the before/after timing (N, M) is chosen — not by hand</h2>
+<p>We don’t guess “3 and 2.” We test <b>every</b> combination of N = 1…8 days before × M = 1…8 days after — an
+  <b>8 × 8 = 64-rule grid</b> — against all of the stock’s past events, then let the data pick the winner.</p>
+
+<div class="fig">
+<svg viewBox="0 0 520 300" role="img" aria-label="8 by 8 grid of candidate rules with the best cell highlighted">
+  <text x="260" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">The 64 candidate rules</text>
+  <!-- y axis label -->
+  <text x="24" y="160" text-anchor="middle" font-size="11" fill="var(--mute)" transform="rotate(-90 24 160)">days BEFORE (buy) →</text>
+  <text x="270" y="292" text-anchor="middle" font-size="11" fill="var(--mute)">days AFTER (sell) →</text>
+  <!-- grid -->
+  <g>
+    <!-- generated cells: 8x8 -->
+    <!-- row/col from 44,44 step 26 -->
+    <!-- We draw a light matrix; highlight one cell as the winner -->
+    <!-- background cells -->
+    <g fill="#e9eef6" stroke="#fff" stroke-width="2">
+      <!-- 8 rows x 8 cols -->
+      <!-- row 0 --><rect x="60" y="40" width="52" height="26"/><rect x="112" y="40" width="52" height="26"/><rect x="164" y="40" width="52" height="26"/><rect x="216" y="40" width="52" height="26"/><rect x="268" y="40" width="52" height="26"/><rect x="320" y="40" width="52" height="26"/><rect x="372" y="40" width="52" height="26"/><rect x="424" y="40" width="52" height="26"/>
+      <!-- row 1 --><rect x="60" y="66" width="52" height="26"/><rect x="112" y="66" width="52" height="26"/><rect x="164" y="66" width="52" height="26"/><rect x="216" y="66" width="52" height="26"/><rect x="268" y="66" width="52" height="26"/><rect x="320" y="66" width="52" height="26"/><rect x="372" y="66" width="52" height="26"/><rect x="424" y="66" width="52" height="26"/>
+      <!-- row 2 --><rect x="60" y="92" width="52" height="26"/><rect x="164" y="92" width="52" height="26"/><rect x="216" y="92" width="52" height="26"/><rect x="268" y="92" width="52" height="26"/><rect x="320" y="92" width="52" height="26"/><rect x="372" y="92" width="52" height="26"/><rect x="424" y="92" width="52" height="26"/>
+      <!-- row 3 --><rect x="60" y="118" width="52" height="26"/><rect x="112" y="118" width="52" height="26"/><rect x="164" y="118" width="52" height="26"/><rect x="216" y="118" width="52" height="26"/><rect x="268" y="118" width="52" height="26"/><rect x="320" y="118" width="52" height="26"/><rect x="372" y="118" width="52" height="26"/><rect x="424" y="118" width="52" height="26"/>
+      <!-- row 4 --><rect x="60" y="144" width="52" height="26"/><rect x="112" y="144" width="52" height="26"/><rect x="164" y="144" width="52" height="26"/><rect x="216" y="144" width="52" height="26"/><rect x="268" y="144" width="52" height="26"/><rect x="320" y="144" width="52" height="26"/><rect x="372" y="144" width="52" height="26"/><rect x="424" y="144" width="52" height="26"/>
+      <!-- row 5 --><rect x="60" y="170" width="52" height="26"/><rect x="112" y="170" width="52" height="26"/><rect x="164" y="170" width="52" height="26"/><rect x="216" y="170" width="52" height="26"/><rect x="268" y="170" width="52" height="26"/><rect x="320" y="170" width="52" height="26"/><rect x="372" y="170" width="52" height="26"/><rect x="424" y="170" width="52" height="26"/>
+      <!-- row 6 --><rect x="60" y="196" width="52" height="26"/><rect x="112" y="196" width="52" height="26"/><rect x="164" y="196" width="52" height="26"/><rect x="216" y="196" width="52" height="26"/><rect x="268" y="196" width="52" height="26"/><rect x="320" y="196" width="52" height="26"/><rect x="372" y="196" width="52" height="26"/><rect x="424" y="196" width="52" height="26"/>
+      <!-- row 7 --><rect x="60" y="222" width="52" height="26"/><rect x="112" y="222" width="52" height="26"/><rect x="164" y="222" width="52" height="26"/><rect x="216" y="222" width="52" height="26"/><rect x="268" y="222" width="52" height="26"/><rect x="320" y="222" width="52" height="26"/><rect x="372" y="222" width="52" height="26"/><rect x="424" y="222" width="52" height="26"/>
+    </g>
+    <!-- the winning cell (row2,col1 -> "buy 3 / sell 2" area) -->
+    <rect x="112" y="92" width="52" height="26" fill="var(--pos)" stroke="#fff" stroke-width="2"/>
+    <text x="138" y="109" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">best</text>
+  </g>
+  <!-- callout to best -->
+  <text x="138" y="270" text-anchor="middle" font-size="10.5" fill="var(--pos)" font-weight="700">highest historical win rate</text>
+</svg>
+<div class="figcap"><b>Figure 4.</b> Each square is one “buy N before / sell M after” rule. All 64 are scored on the stock’s history; the highlighted cell is the one that gets displayed.</div>
+</div>
+
+<h3>The selection rule</h3>
+<div class="steps">
+  <div class="stp"><div class="no"></div><div class="bd"><b>Require enough events.</b> Keep only rules backed by
+    roughly <b>5+</b> past events (or all of them if the stock has very few) — so the winner isn’t one lucky quarter.</div></div>
+  <div class="stp"><div class="no"></div><div class="bd"><b>Keep the profitable ones.</b> Restrict to rules whose
+    <b>average return is positive</b> (fall back to all if none are).</div></div>
+  <div class="stp"><div class="no"></div><div class="bd"><b>Rank by win rate, then average.</b> The top rule’s
+    N, M, win rate and average return become the displayed “buy N before / sell M after.”</div></div>
+</div>
+</section>
+
+<!-- ============ 8. WIN RATE + CAVEATS ============ -->
+<section class="sec">
+<h2><span class="n">08</span>What the win rate means — and its limits</h2>
+<div class="formula">
+  win rate = ( <span class="g">#events where return% &gt; 0</span> ) ÷ ( total events ) × 100
+</div>
+<p>A <b>70% win rate</b> for the chosen rule means: across the stock’s past events of that type, buying-before /
+  selling-after finished green on <b>7 of every 10</b>. It is a <b>historical hit rate</b>, and the prediction for
+  the next (known-date) event is simply that this base rate tends to repeat.</p>
+<div class="callout warn"><b>In-sample bias.</b> The winning rule was chosen from 64 tries on the <em>same</em>
+  history it’s scored on, so the number flatters. The true forward win rate is lower — read it as a description of
+  the past, not a promise about the future.</div>
+<div class="callout"><b>Read it with the event count.</b> 100% on 3 events is far weaker than 60% on 30.
+  The number is only as trustworthy as the sample behind it.</div>
+<div class="callout good"><b>The honest one-liner.</b> Buy N trading days before a known event date at the close,
+  hold through the announcement, sell M days after at the close — where N and M are the before/after pair with the
+  best historical win rate. Buy-before harvests anticipation; sell-after harvests drift.</div>
+</section>
+
+</div></body></html>

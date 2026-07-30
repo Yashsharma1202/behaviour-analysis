@@ -1,21 +1,21 @@
-bcEndDate,bcStartDate,caBroadcastDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol
--,-,,Axis Bank Limited,10-Jul-2026,2,-,INE238A01026,-,-,10-Jul-2026,EQ,Dividend - Re 1 Per Share,AXISBANK
--,-,,Axis Bank Limited,04-Jul-2025,2,-,INE238A01026,-,-,04-Jul-2025,EQ,Dividend - Re 1 Per Sh,AXISBANK
--,-,,Axis Bank Limited,12-Jul-2024,2,-,INE238A01026,-,-,12-Jul-2024,EQ,Dividend - Re 1 Per Share,AXISBANK
--,-,,Axis Bank Limited,07-Jul-2023,2,-,INE238A01026,-,-,07-Jul-2023,EQ,Dividend - Re 1 Per Share,AXISBANK
--,-,,Axis Bank Limited,07-Jul-2022,2,-,INE238A01026,-,-,08-Jul-2022,EQ,Dividend - Rs 1 Per Share,AXISBANK
-20-Jul-2019,06-Jul-2019,,Axis Bank Limited,04-Jul-2019,2,-,INE238A01026,-,-,-,EQ, Annual General Meeting/ Dividend - Re 1 Per Share,AXISBANK
-20-Jun-2018,02-Jun-2018,,Axis Bank Limited,31-May-2018,2,-,INE238A01026,-,-,-,EQ, Annual General Meeting,AXISBANK
-26-Jul-2017,08-Jul-2017,,Axis Bank Limited,06-Jul-2017,2,-,INE238A01026,-,-,-,EQ, Annual General Meeting/Dividend - Rs 5/- Per Share,AXISBANK
-22-Jul-2016,09-Jul-2016,,Axis Bank Limited,07-Jul-2016,2,-,INE238A01026,-,-,-,EQ, Annual General Meeting/ Dividend-Rs 5/- Per Share,AXISBANK
-24-Jul-2015,13-Jul-2015,,Axis Bank Limited,09-Jul-2015,2,-,INE238A01026,-,-,-,EQ,Annual General Meeting/Dividend Rs 4.60/- Per Share,AXISBANK
--,-,,Axis Bank Limited,28-Jul-2014,2,-,INE238A01026,-,-,30-Jul-2014,EQ,Face Value Split From Rs 10/- To Rs 2/- Per Share,AXISBANK
-27-Jun-2014,16-Jun-2014,,Axis Bank Limited,12-Jun-2014,2,-,INE238A01026,-,-,-,EQ,Annual General Meeting / Dividend Rs.20/- Per Equity Share,AXISBANK
-19-Jul-2013,09-Jul-2013,,Axis Bank Limited,05-Jul-2013,2,-,INE238A01026,-,-,-,EQ,Annual General Meeting / Dividend Rs.18/- Per Equity Share,AXISBANK
-22-Jun-2012,16-Jun-2012,,Axis Bank Limited,14-Jun-2012,2,-,INE238A01026,-,-,-,EQ,Annual General Meeting And Dividend Rs.16/- Per Share,AXISBANK
-17-Jun-2011,10-Jun-2011,,Axis Bank Limited,08-Jun-2011,2,-,INE238A01026,-,-,-,EQ,Annual General Meeting And Dividend Rs.14/- Per Share,AXISBANK
-08-Jun-2010,24-May-2010,,Axis Bank Limited,20-May-2010,2,-,INE238A01026,-,-,-,EQ,Agm/Div-Rs.12/- Per Share,AXISBANK
-01-Jun-2009,18-May-2009,,Axis Bank Limited,14-May-2009,2,-,INE238A01026,-,-,-,EQ,Agm/Dividend - 100%,AXISBANK
-06-Jun-2008,26-May-2008,,Axis Bank Limited,22-May-2008,2,-,INE238A01026,-,-,-,EQ,Agm/Dividend - 60%,AXISBANK
-01-Jun-2007,21-May-2007,,Axis Bank Limited,17-May-2007,2,-,INE238A01026,-,-,-,EQ,Agm/Dividend-45%,AXISBANK
-02-Jun-2006,18-May-2006,,Axis Bank Limited,16-May-2006,2,-,INE238A01026,-,-,-,EQ,Agm/Dividend-35%,AXISBANK
+bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate
+-,-,Axis Bank Limited,10-Jul-2026,2,-,INE238A01026,-,-,10-Jul-2026,EQ,Dividend - Re 1 Per Share,AXISBANK,Axis Bank Ltd.,
+-,-,Axis Bank Limited,04-Jul-2025,2,-,INE238A01026,-,-,04-Jul-2025,EQ,Dividend - Re 1 Per Sh,AXISBANK,Axis Bank Ltd.,
+-,-,Axis Bank Limited,12-Jul-2024,2,-,INE238A01026,-,-,12-Jul-2024,EQ,Dividend - Re 1 Per Share,AXISBANK,Axis Bank Ltd.,
+-,-,Axis Bank Limited,07-Jul-2023,2,-,INE238A01026,-,-,07-Jul-2023,EQ,Dividend - Re 1 Per Share,AXISBANK,Axis Bank Ltd.,
+-,-,Axis Bank Limited,07-Jul-2022,2,-,INE238A01026,-,-,08-Jul-2022,EQ,Dividend - Rs 1 Per Share,AXISBANK,Axis Bank Ltd.,
+20-Jul-2019,06-Jul-2019,Axis Bank Limited,04-Jul-2019,2,-,INE238A01026,-,-,-,EQ, Annual General Meeting/ Dividend - Re 1 Per Share,AXISBANK,Axis Bank Ltd.,
+20-Jun-2018,02-Jun-2018,Axis Bank Limited,31-May-2018,2,-,INE238A01026,-,-,-,EQ, Annual General Meeting,AXISBANK,Axis Bank Ltd.,
+26-Jul-2017,08-Jul-2017,Axis Bank Limited,06-Jul-2017,2,-,INE238A01026,-,-,-,EQ, Annual General Meeting/Dividend - Rs 5/- Per Share,AXISBANK,Axis Bank Ltd.,
+22-Jul-2016,09-Jul-2016,Axis Bank Limited,07-Jul-2016,2,-,INE238A01026,-,-,-,EQ, Annual General Meeting/ Dividend-Rs 5/- Per Share,AXISBANK,Axis Bank Ltd.,
+24-Jul-2015,13-Jul-2015,Axis Bank Limited,09-Jul-2015,2,-,INE238A01026,-,-,-,EQ,Annual General Meeting/Dividend Rs 4.60/- Per Share,AXISBANK,Axis Bank Ltd.,
+-,-,Axis Bank Limited,28-Jul-2014,2,-,INE238A01026,-,-,30-Jul-2014,EQ,Face Value Split From Rs 10/- To Rs 2/- Per Share,AXISBANK,Axis Bank Ltd.,
+27-Jun-2014,16-Jun-2014,Axis Bank Limited,12-Jun-2014,2,-,INE238A01026,-,-,-,EQ,Annual General Meeting / Dividend Rs.20/- Per Equity Share,AXISBANK,Axis Bank Ltd.,
+19-Jul-2013,09-Jul-2013,Axis Bank Limited,05-Jul-2013,2,-,INE238A01026,-,-,-,EQ,Annual General Meeting / Dividend Rs.18/- Per Equity Share,AXISBANK,Axis Bank Ltd.,
+22-Jun-2012,16-Jun-2012,Axis Bank Limited,14-Jun-2012,2,-,INE238A01026,-,-,-,EQ,Annual General Meeting And Dividend Rs.16/- Per Share,AXISBANK,Axis Bank Ltd.,
+17-Jun-2011,10-Jun-2011,Axis Bank Limited,08-Jun-2011,2,-,INE238A01026,-,-,-,EQ,Annual General Meeting And Dividend Rs.14/- Per Share,AXISBANK,Axis Bank Ltd.,
+08-Jun-2010,24-May-2010,Axis Bank Limited,20-May-2010,2,-,INE238A01026,-,-,-,EQ,Agm/Div-Rs.12/- Per Share,AXISBANK,Axis Bank Ltd.,
+01-Jun-2009,18-May-2009,Axis Bank Limited,14-May-2009,2,-,INE238A01026,-,-,-,EQ,Agm/Dividend - 100%,AXISBANK,Axis Bank Ltd.,
+06-Jun-2008,26-May-2008,Axis Bank Limited,22-May-2008,2,-,INE238A01026,-,-,-,EQ,Agm/Dividend - 60%,AXISBANK,Axis Bank Ltd.,
+01-Jun-2007,21-May-2007,Axis Bank Limited,17-May-2007,2,-,INE238A01026,-,-,-,EQ,Agm/Dividend-45%,AXISBANK,Axis Bank Ltd.,
+02-Jun-2006,18-May-2006,Axis Bank Limited,16-May-2006,2,-,INE238A01026,-,-,-,EQ,Agm/Dividend-35%,AXISBANK,Axis Bank Ltd.,

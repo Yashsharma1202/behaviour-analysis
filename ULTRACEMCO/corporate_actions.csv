@@ -1,21 +1,22 @@
-bcEndDate,bcStartDate,caBroadcastDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol
--,-,,UltraTech Cement Limited,25-Jul-2025,10,-,INE481G01011,-,-,25-Jul-2025,EQ,Dividend - Rs 77.50 Per Sh,ULTRACEMCO
-14-Aug-2024,31-Jul-2024,,UltraTech Cement Limited,30-Jul-2024,10,-,INE481G01011,-,-,-,EQ,Annual General Meeting/Dividend - Rs 70 Per Share,ULTRACEMCO
-11-Aug-2023,28-Jul-2023,,UltraTech Cement Limited,27-Jul-2023,10,-,INE481G01011,-,-,-,EQ,Annual General Meeting/Dividend - Rs  38 Per Share,ULTRACEMCO
-17-Aug-2022,04-Aug-2022,,UltraTech Cement Limited,02-Aug-2022,10,-,INE481G01011,-,-,-,EQ,Annual General Meeting/Dividend - Rs 38 Per Share,ULTRACEMCO
-18-Aug-2021,04-Aug-2021,,UltraTech Cement Limited,02-Aug-2021,10,-,INE481G01011,-,-,-,EQ, Annual General Meeting/Dividend - Rs 37 Per Share,ULTRACEMCO
-12-Aug-2020,31-Jul-2020,,UltraTech Cement Limited,29-Jul-2020,10,-,INE481G01011,-,-,-,EQ, Annual General Meeting/Dividend - Rs 13 Per Share,ULTRACEMCO
-18-Jul-2019,12-Jul-2019,,UltraTech Cement Limited,10-Jul-2019,10,-,INE481G01011,-,-,-,EQ, Annual General Meeting/Dividend - Rs 11.50 Per Share,ULTRACEMCO
-18-Jul-2018,12-Jul-2018,,UltraTech Cement Limited,10-Jul-2018,10,-,INE481G01011,-,-,-,EQ, Annual General Meeting/Dividend- Rs 10.50 Per Share,ULTRACEMCO
-18-Jul-2017,12-Jul-2017,,UltraTech Cement Limited,10-Jul-2017,10,-,INE481G01011,-,-,-,EQ, Annual General Meeting/Dividend  - Rs 10 Per Share,ULTRACEMCO
-19-Jul-2016,07-Jul-2016,,UltraTech Cement Limited,04-Jul-2016,10,-,INE481G01011,-,-,-,EQ, Annual General Meeting/ Dividend  -Rs 9.50/- Per Share,ULTRACEMCO
-28-Aug-2015,18-Aug-2015,,UltraTech Cement Limited,14-Aug-2015,10,-,INE481G01011,-,-,-,EQ,Annual General Meeting/ Dividend - Rs 9/- Per Share,ULTRACEMCO
-06-Aug-2014,26-Jul-2014,,UltraTech Cement Limited,24-Jul-2014,10,-,INE481G01011,-,-,-,EQ,Annual General Meeting/Dividend - Rs.9/- Per Share,ULTRACEMCO
-29-Jul-2013,19-Jul-2013,,UltraTech Cement Limited,17-Jul-2013,10,-,INE481G01011,-,-,-,EQ,Annual General Meeting And Dividend Rs.9/- Per Share,ULTRACEMCO
-30-Aug-2012,22-Aug-2012,,UltraTech Cement Limited,17-Aug-2012,10,-,INE481G01011,-,-,-,EQ,Annual General Meeting And Dividend Rs.8/- Per Share,ULTRACEMCO
-09-Sep-2011,27-Aug-2011,,UltraTech Cement Limited,25-Aug-2011,10,-,INE481G01011,-,-,-,EQ,Dividend Rs 6 Per Share,ULTRACEMCO
-30-Jun-2010,23-Jun-2010,,UltraTech Cement Limited,21-Jun-2010,10,-,INE481G01011,-,-,-,EQ,Final Dividend-Rs.6/- Per Share,ULTRACEMCO
-21-Jul-2009,11-Jul-2009,,UltraTech Cement Limited,09-Jul-2009,10,-,INE481G01011,-,-,-,EQ,Agm/Div-Rs.5/- Per Share,ULTRACEMCO
-18-Jul-2008,11-Jul-2008,,UltraTech Cement Limited,09-Jul-2008,10,-,INE481G01011,-,-,-,EQ,Agm/Dividend - 50%,ULTRACEMCO
-20-Jul-2007,13-Jul-2007,,UltraTech Cement Limited,11-Jul-2007,10,-,INE481G01011,-,-,-,EQ,Agm,ULTRACEMCO
--,-,,UltraTech Cement Limited,15-Mar-2007,10,-,INE481G01011,-,-,19-Mar-2007,EQ,Int Div-Rs.4/- Per Share Purpose Revised,ULTRACEMCO
+bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate
+-,-,UltraTech Cement Limited,30-Jul-2026,10,-,INE481G01011,-,-,30-Jul-2026,EQ,Dividend - Rs 240 Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+-,-,UltraTech Cement Limited,25-Jul-2025,10,-,INE481G01011,-,-,25-Jul-2025,EQ,Dividend - Rs 77.50 Per Sh,ULTRACEMCO,UltraTech Cement Ltd.,
+14-Aug-2024,31-Jul-2024,UltraTech Cement Limited,30-Jul-2024,10,-,INE481G01011,-,-,-,EQ,Annual General Meeting/Dividend - Rs 70 Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+11-Aug-2023,28-Jul-2023,UltraTech Cement Limited,27-Jul-2023,10,-,INE481G01011,-,-,-,EQ,Annual General Meeting/Dividend - Rs  38 Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+17-Aug-2022,04-Aug-2022,UltraTech Cement Limited,02-Aug-2022,10,-,INE481G01011,-,-,-,EQ,Annual General Meeting/Dividend - Rs 38 Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+18-Aug-2021,04-Aug-2021,UltraTech Cement Limited,02-Aug-2021,10,-,INE481G01011,-,-,-,EQ, Annual General Meeting/Dividend - Rs 37 Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+12-Aug-2020,31-Jul-2020,UltraTech Cement Limited,29-Jul-2020,10,-,INE481G01011,-,-,-,EQ, Annual General Meeting/Dividend - Rs 13 Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+18-Jul-2019,12-Jul-2019,UltraTech Cement Limited,10-Jul-2019,10,-,INE481G01011,-,-,-,EQ, Annual General Meeting/Dividend - Rs 11.50 Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+18-Jul-2018,12-Jul-2018,UltraTech Cement Limited,10-Jul-2018,10,-,INE481G01011,-,-,-,EQ, Annual General Meeting/Dividend- Rs 10.50 Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+18-Jul-2017,12-Jul-2017,UltraTech Cement Limited,10-Jul-2017,10,-,INE481G01011,-,-,-,EQ, Annual General Meeting/Dividend  - Rs 10 Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+19-Jul-2016,07-Jul-2016,UltraTech Cement Limited,04-Jul-2016,10,-,INE481G01011,-,-,-,EQ, Annual General Meeting/ Dividend  -Rs 9.50/- Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+28-Aug-2015,18-Aug-2015,UltraTech Cement Limited,14-Aug-2015,10,-,INE481G01011,-,-,-,EQ,Annual General Meeting/ Dividend - Rs 9/- Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+06-Aug-2014,26-Jul-2014,UltraTech Cement Limited,24-Jul-2014,10,-,INE481G01011,-,-,-,EQ,Annual General Meeting/Dividend - Rs.9/- Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+29-Jul-2013,19-Jul-2013,UltraTech Cement Limited,17-Jul-2013,10,-,INE481G01011,-,-,-,EQ,Annual General Meeting And Dividend Rs.9/- Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+30-Aug-2012,22-Aug-2012,UltraTech Cement Limited,17-Aug-2012,10,-,INE481G01011,-,-,-,EQ,Annual General Meeting And Dividend Rs.8/- Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+09-Sep-2011,27-Aug-2011,UltraTech Cement Limited,25-Aug-2011,10,-,INE481G01011,-,-,-,EQ,Dividend Rs 6 Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+30-Jun-2010,23-Jun-2010,UltraTech Cement Limited,21-Jun-2010,10,-,INE481G01011,-,-,-,EQ,Final Dividend-Rs.6/- Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+21-Jul-2009,11-Jul-2009,UltraTech Cement Limited,09-Jul-2009,10,-,INE481G01011,-,-,-,EQ,Agm/Div-Rs.5/- Per Share,ULTRACEMCO,UltraTech Cement Ltd.,
+18-Jul-2008,11-Jul-2008,UltraTech Cement Limited,09-Jul-2008,10,-,INE481G01011,-,-,-,EQ,Agm/Dividend - 50%,ULTRACEMCO,UltraTech Cement Ltd.,
+20-Jul-2007,13-Jul-2007,UltraTech Cement Limited,11-Jul-2007,10,-,INE481G01011,-,-,-,EQ,Agm,ULTRACEMCO,UltraTech Cement Ltd.,
+-,-,UltraTech Cement Limited,15-Mar-2007,10,-,INE481G01011,-,-,19-Mar-2007,EQ,Int Div-Rs.4/- Per Share Purpose Revised,ULTRACEMCO,,

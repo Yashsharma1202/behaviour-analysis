@@ -1,21 +1,21 @@
-bcEndDate,bcStartDate,caBroadcastDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol
--,-,,Bajaj Finserv Limited,30-Jun-2026,1,-,INE918I01018,-,-,30-Jun-2026,EQ,Dividend - Rs 1.50 Per Share,BAJAJFINSV
--,-,,Bajaj Finserv Limited,27-Jun-2025,1,-,INE918I01018,-,-,27-Jun-2025,EQ,Dividend - Re 1 Per Share,BAJAJFINSV
--,-,,Bajaj Finserv Limited,21-Jun-2024,1,-,INE918I01018,-,-,21-Jun-2024,EQ,Dividend - Re 1 Per Share,BAJAJFINSV
--,-,,Bajaj Finserv Limited,30-Jun-2023,1,-,INE918I01018,-,-,30-Jun-2023,EQ,Dividend - Rs 0.80 Per Share,BAJAJFINSV
--,-,,Bajaj Finserv Limited,13-Sep-2022,1,-,INE918I01018,-,-,14-Sep-2022,EQ,Face Value Split (Sub-Division) - From Rs 5/- Per Share To Re 1/- Per Share,BAJAJFINSV
--,-,,Bajaj Finserv Limited,13-Sep-2022,1,-,INE918I01018,-,-,14-Sep-2022,EQ,Bonus 1:1,BAJAJFINSV
--,-,,Bajaj Finserv Limited,30-Jun-2022,1,-,INE918I01018,-,-,01-Jul-2022,EQ,Dividend - Rs 4 Per Share,BAJAJFINSV
-21-Jul-2021,10-Jul-2021,,Bajaj Finserv Limited,08-Jul-2021,1,-,INE918I01018,-,-,-,EQ, Annual General Meeting/Dividend - Rs 3 Per Share,BAJAJFINSV
--,-,,Bajaj Finserv Limited,03-Mar-2020,1,-,INE918I01018,-,-,04-Mar-2020,EQ, Interim Dividend - Rs 5 Per Share,BAJAJFINSV
-25-Jul-2019,13-Jul-2019,,Bajaj Finserv Limited,11-Jul-2019,1,-,INE918I01018,-,-,-,EQ, Annual General Meeting/ Dividend - Rs 2.50 Per Share,BAJAJFINSV
-19-Jul-2018,07-Jul-2018,,Bajaj Finserv Limited,05-Jul-2018,1,-,INE918I01018,-,-,-,EQ, Annual General Meeting / Dividend- Rs 1.75 Per Share,BAJAJFINSV
-19-Jul-2017,08-Jul-2017,,Bajaj Finserv Limited,06-Jul-2017,1,-,INE918I01018,-,-,-,EQ, Annual General Meeting/Div-Rs 1.75 Per Share,BAJAJFINSV
--,-,,Bajaj Finserv Limited,16-Mar-2016,1,-,INE918I01018,-,-,17-Mar-2016,EQ, Interim Dividend - Rs 1.75/- Per Share (Purpose Revised),BAJAJFINSV
-22-Jul-2015,11-Jul-2015,,Bajaj Finserv Limited,09-Jul-2015,1,-,INE918I01018,-,-,-,EQ,Annual General Meeting/Dividend Rs 1.75 Per Share,BAJAJFINSV
-16-Jul-2014,05-Jul-2014,,Bajaj Finserv Limited,03-Jul-2014,1,-,INE918I01018,-,-,-,EQ,Annual General Meeting / Dividend - Rs 1.75/- Per Share,BAJAJFINSV
-18-Jul-2013,06-Jul-2013,,Bajaj Finserv Limited,04-Jul-2013,1,-,INE918I01018,-,-,-,EQ,Annual General Meeting / Dividend Rs.1.50/- Per Equity Share,BAJAJFINSV
--,-,,Bajaj Finserv Limited,06-Sep-2012,1,-,INE918I01018,-,-,08-Sep-2012,EQ,Rights 1:10 @ Premium Rs.645/- Per Share,BAJAJFINSV
-17-Jul-2012,07-Jul-2012,,Bajaj Finserv Limited,05-Jul-2012,1,-,INE918I01018,-,-,-,EQ,Annual General Meeting And Dividend - Rs.1.50 Per Share,BAJAJFINSV
-13-Jul-2011,01-Jul-2011,,Bajaj Finserv Limited,29-Jun-2011,1,-,INE918I01018,-,-,-,EQ,Annual General Meeting And Dividend Rs.1.25 Per Share,BAJAJFINSV
-21-Jul-2010,10-Jul-2010,,Bajaj Finserv Limited,08-Jul-2010,1,-,INE918I01018,-,-,-,EQ,Annual General Meeting / Dividend Re. 1 Per Share,BAJAJFINSV
+bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate
+-,-,Bajaj Finserv Limited,30-Jun-2026,1,-,INE918I01018,-,-,30-Jun-2026,EQ,Dividend - Rs 1.50 Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+-,-,Bajaj Finserv Limited,27-Jun-2025,1,-,INE918I01018,-,-,27-Jun-2025,EQ,Dividend - Re 1 Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+-,-,Bajaj Finserv Limited,21-Jun-2024,1,-,INE918I01018,-,-,21-Jun-2024,EQ,Dividend - Re 1 Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+-,-,Bajaj Finserv Limited,30-Jun-2023,1,-,INE918I01018,-,-,30-Jun-2023,EQ,Dividend - Rs 0.80 Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+-,-,Bajaj Finserv Limited,13-Sep-2022,1,-,INE918I01018,-,-,14-Sep-2022,EQ,Face Value Split (Sub-Division) - From Rs 5/- Per Share To Re 1/- Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+-,-,Bajaj Finserv Limited,13-Sep-2022,1,-,INE918I01018,-,-,14-Sep-2022,EQ,Bonus 1:1,BAJAJFINSV,Bajaj Finserv Ltd.,
+-,-,Bajaj Finserv Limited,30-Jun-2022,1,-,INE918I01018,-,-,01-Jul-2022,EQ,Dividend - Rs 4 Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+21-Jul-2021,10-Jul-2021,Bajaj Finserv Limited,08-Jul-2021,1,-,INE918I01018,-,-,-,EQ, Annual General Meeting/Dividend - Rs 3 Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+-,-,Bajaj Finserv Limited,03-Mar-2020,1,-,INE918I01018,-,-,04-Mar-2020,EQ, Interim Dividend - Rs 5 Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+25-Jul-2019,13-Jul-2019,Bajaj Finserv Limited,11-Jul-2019,1,-,INE918I01018,-,-,-,EQ, Annual General Meeting/ Dividend - Rs 2.50 Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+19-Jul-2018,07-Jul-2018,Bajaj Finserv Limited,05-Jul-2018,1,-,INE918I01018,-,-,-,EQ, Annual General Meeting / Dividend- Rs 1.75 Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+19-Jul-2017,08-Jul-2017,Bajaj Finserv Limited,06-Jul-2017,1,-,INE918I01018,-,-,-,EQ, Annual General Meeting/Div-Rs 1.75 Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+-,-,Bajaj Finserv Limited,16-Mar-2016,1,-,INE918I01018,-,-,17-Mar-2016,EQ, Interim Dividend - Rs 1.75/- Per Share (Purpose Revised),BAJAJFINSV,Bajaj Finserv Ltd.,
+22-Jul-2015,11-Jul-2015,Bajaj Finserv Limited,09-Jul-2015,1,-,INE918I01018,-,-,-,EQ,Annual General Meeting/Dividend Rs 1.75 Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+16-Jul-2014,05-Jul-2014,Bajaj Finserv Limited,03-Jul-2014,1,-,INE918I01018,-,-,-,EQ,Annual General Meeting / Dividend - Rs 1.75/- Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+18-Jul-2013,06-Jul-2013,Bajaj Finserv Limited,04-Jul-2013,1,-,INE918I01018,-,-,-,EQ,Annual General Meeting / Dividend Rs.1.50/- Per Equity Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+-,-,Bajaj Finserv Limited,06-Sep-2012,1,-,INE918I01018,-,-,08-Sep-2012,EQ,Rights 1:10 @ Premium Rs.645/- Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+17-Jul-2012,07-Jul-2012,Bajaj Finserv Limited,05-Jul-2012,1,-,INE918I01018,-,-,-,EQ,Annual General Meeting And Dividend - Rs.1.50 Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+13-Jul-2011,01-Jul-2011,Bajaj Finserv Limited,29-Jun-2011,1,-,INE918I01018,-,-,-,EQ,Annual General Meeting And Dividend Rs.1.25 Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,
+21-Jul-2010,10-Jul-2010,Bajaj Finserv Limited,08-Jul-2010,1,-,INE918I01018,-,-,-,EQ,Annual General Meeting / Dividend Re. 1 Per Share,BAJAJFINSV,Bajaj Finserv Ltd.,

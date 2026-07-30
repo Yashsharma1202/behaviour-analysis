@@ -1,21 +1,21 @@
-bcEndDate,bcStartDate,caBroadcastDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol
--,-,,Tech Mahindra Limited,03-Jul-2026,5,-,INE669C01028,-,-,03-Jul-2026,EQ,Dividend - Rs 36 Per Share,TECHM
--,-,,Tech Mahindra Limited,20-Oct-2025,5,-,INE669C01028,-,-,21-Oct-2025,EQ,Interim Dividend - Rs 15 Per Share,TECHM
--,-,,Tech Mahindra Limited,04-Jul-2025,5,-,INE669C01028,-,-,04-Jul-2025,EQ,Dividend - Rs 30 Per Share,TECHM
--,-,,Tech Mahindra Limited,31-Oct-2024,5,-,INE669C01028,-,-,01-Nov-2024,EQ,Interim Dividend - Rs 15 Per Share,TECHM
-26-Jul-2024,20-Jul-2024,,Tech Mahindra Limited,19-Jul-2024,5,-,INE669C01028,-,-,-,EQ,Annual General Meeting/Dividend - Rs 28 Per Share,TECHM
--,-,,Tech Mahindra Limited,02-Nov-2023,5,-,INE669C01028,-,-,02-Nov-2023,EQ,Interim Dividend - Rs 12 Per Share,TECHM
-27-Jul-2023,22-Jul-2023,,Tech Mahindra Limited,21-Jul-2023,5,-,INE669C01028,-,-,-,EQ,Annual General Meeting/Dividend - Rs  32 Per Share,TECHM
--,-,,Tech Mahindra Limited,09-Nov-2022,5,-,INE669C01028,-,-,10-Nov-2022,EQ,Special Dividend - Rs 18 Per Share,TECHM
-26-Jul-2022,23-Jul-2022,,Tech Mahindra Limited,21-Jul-2022,5,-,INE669C01028,-,-,-,EQ,Annual General Meeting/Special Dividend - Rs 15 Per Share/Dividend - Rs 15 Per Share,TECHM
--,-,,Tech Mahindra Limited,02-Nov-2021,5,-,INE669C01028,-,-,05-Nov-2021,EQ, Special Dividend - Rs 15 Per Share,TECHM
-30-Jul-2021,27-Jul-2021,,Tech Mahindra Limited,23-Jul-2021,5,-,INE669C01028,-,-,-,EQ, Annual General Meeting/Dividend - Rs 15 Per Share Special Dividend 15 Per Share,TECHM
--,-,,Tech Mahindra Limited,29-Oct-2020,5,-,INE669C01028,-,-,02-Nov-2020,EQ, Special Dividend - Rs 15 Per Share,TECHM
-28-Jul-2020,25-Jul-2020,,Tech Mahindra Limited,23-Jul-2020,5,-,INE669C01028,-,-,-,EQ, Annual General Meeting/Dividend - Rs 5 Per Share,TECHM
--,-,,Tech Mahindra Limited,02-Mar-2020,5,-,INE669C01028,-,-,03-Mar-2020,EQ, Interim Dividend - Rs 10 Per Share,TECHM
-31-Jul-2019,27-Jul-2019,,Tech Mahindra Limited,25-Jul-2019,5,-,INE669C01028,-,-,-,EQ, Annual General Meeting/Dividend Rs 14 Per Share,TECHM
--,-,,Tech Mahindra Limited,05-Mar-2019,5,-,INE669C01028,-,-,06-Mar-2019,EQ, Buy Back,TECHM
-31-Jul-2018,28-Jul-2018,,Tech Mahindra Limited,26-Jul-2018,5,-,INE669C01028,-,-,-,EQ, Annual General Meeting/Dividend- Rs 14 Per Share,TECHM
-01-Aug-2017,29-Jul-2017,,Tech Mahindra Limited,27-Jul-2017,5,-,INE669C01028,-,-,-,EQ, Annual General Meeting/ Dividend -Rs 9/- Per Share,TECHM
-02-Aug-2016,30-Jul-2016,,Tech Mahindra Limited,28-Jul-2016,5,-,INE669C01028,-,-,-,EQ, Annual General Meeting/Final Dividend Rs 6/- Per Share And Special Dividend Rs 6/- Per Share,TECHM
-28-Jul-2015,25-Jul-2015,,Tech Mahindra Limited,23-Jul-2015,5,-,INE669C01028,-,-,-,EQ,Annual General Meeting/ Dividend - Rs 6/- Per Share,TECHM
+bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate
+-,-,Tech Mahindra Limited,03-Jul-2026,5,-,INE669C01028,-,-,03-Jul-2026,EQ,Dividend - Rs 36 Per Share,TECHM,Tech Mahindra Ltd.,
+-,-,Tech Mahindra Limited,20-Oct-2025,5,-,INE669C01028,-,-,21-Oct-2025,EQ,Interim Dividend - Rs 15 Per Share,TECHM,Tech Mahindra Ltd.,
+-,-,Tech Mahindra Limited,04-Jul-2025,5,-,INE669C01028,-,-,04-Jul-2025,EQ,Dividend - Rs 30 Per Share,TECHM,Tech Mahindra Ltd.,
+-,-,Tech Mahindra Limited,31-Oct-2024,5,-,INE669C01028,-,-,01-Nov-2024,EQ,Interim Dividend - Rs 15 Per Share,TECHM,Tech Mahindra Ltd.,
+26-Jul-2024,20-Jul-2024,Tech Mahindra Limited,19-Jul-2024,5,-,INE669C01028,-,-,-,EQ,Annual General Meeting/Dividend - Rs 28 Per Share,TECHM,Tech Mahindra Ltd.,
+-,-,Tech Mahindra Limited,02-Nov-2023,5,-,INE669C01028,-,-,02-Nov-2023,EQ,Interim Dividend - Rs 12 Per Share,TECHM,Tech Mahindra Ltd.,
+27-Jul-2023,22-Jul-2023,Tech Mahindra Limited,21-Jul-2023,5,-,INE669C01028,-,-,-,EQ,Annual General Meeting/Dividend - Rs  32 Per Share,TECHM,Tech Mahindra Ltd.,
+-,-,Tech Mahindra Limited,09-Nov-2022,5,-,INE669C01028,-,-,10-Nov-2022,EQ,Special Dividend - Rs 18 Per Share,TECHM,Tech Mahindra Ltd.,
+26-Jul-2022,23-Jul-2022,Tech Mahindra Limited,21-Jul-2022,5,-,INE669C01028,-,-,-,EQ,Annual General Meeting/Special Dividend - Rs 15 Per Share/Dividend - Rs 15 Per Share,TECHM,Tech Mahindra Ltd.,
+-,-,Tech Mahindra Limited,02-Nov-2021,5,-,INE669C01028,-,-,05-Nov-2021,EQ, Special Dividend - Rs 15 Per Share,TECHM,Tech Mahindra Ltd.,
+30-Jul-2021,27-Jul-2021,Tech Mahindra Limited,23-Jul-2021,5,-,INE669C01028,-,-,-,EQ, Annual General Meeting/Dividend - Rs 15 Per Share Special Dividend 15 Per Share,TECHM,Tech Mahindra Ltd.,
+-,-,Tech Mahindra Limited,29-Oct-2020,5,-,INE669C01028,-,-,02-Nov-2020,EQ, Special Dividend - Rs 15 Per Share,TECHM,Tech Mahindra Ltd.,
+28-Jul-2020,25-Jul-2020,Tech Mahindra Limited,23-Jul-2020,5,-,INE669C01028,-,-,-,EQ, Annual General Meeting/Dividend - Rs 5 Per Share,TECHM,Tech Mahindra Ltd.,
+-,-,Tech Mahindra Limited,02-Mar-2020,5,-,INE669C01028,-,-,03-Mar-2020,EQ, Interim Dividend - Rs 10 Per Share,TECHM,Tech Mahindra Ltd.,
+31-Jul-2019,27-Jul-2019,Tech Mahindra Limited,25-Jul-2019,5,-,INE669C01028,-,-,-,EQ, Annual General Meeting/Dividend Rs 14 Per Share,TECHM,Tech Mahindra Ltd.,
+-,-,Tech Mahindra Limited,05-Mar-2019,5,-,INE669C01028,-,-,06-Mar-2019,EQ, Buy Back,TECHM,Tech Mahindra Ltd.,
+31-Jul-2018,28-Jul-2018,Tech Mahindra Limited,26-Jul-2018,5,-,INE669C01028,-,-,-,EQ, Annual General Meeting/Dividend- Rs 14 Per Share,TECHM,Tech Mahindra Ltd.,
+01-Aug-2017,29-Jul-2017,Tech Mahindra Limited,27-Jul-2017,5,-,INE669C01028,-,-,-,EQ, Annual General Meeting/ Dividend -Rs 9/- Per Share,TECHM,Tech Mahindra Ltd.,
+02-Aug-2016,30-Jul-2016,Tech Mahindra Limited,28-Jul-2016,5,-,INE669C01028,-,-,-,EQ, Annual General Meeting/Final Dividend Rs 6/- Per Share And Special Dividend Rs 6/- Per Share,TECHM,Tech Mahindra Ltd.,
+28-Jul-2015,25-Jul-2015,Tech Mahindra Limited,23-Jul-2015,5,-,INE669C01028,-,-,-,EQ,Annual General Meeting/ Dividend - Rs 6/- Per Share,TECHM,Tech Mahindra Ltd.,

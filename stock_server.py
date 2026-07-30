@@ -699,6 +699,44 @@ def build_behaviour(sym: str) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Disk cache — persist the expensive rankings/screener payloads so a restart (or
+# a first tab-load) serves instantly instead of recomputing for ~30-40 s. The
+# cache key folds in a data fingerprint (the latest mtime of the feed/price
+# files), so it auto-refreshes whenever the underlying data actually changes.
+# ---------------------------------------------------------------------------
+_CACHE_DIR = ROOT / "processed" / "cache"
+
+
+def _disk_cached(name: str, universe, paths, compute):
+    import hashlib
+    key = hashlib.md5("|".join(universe).encode()).hexdigest()[:10]
+    fp = 0
+    for p in paths:
+        try:
+            fp = max(fp, int(p.stat().st_mtime))
+        except OSError:
+            pass
+    path = _CACHE_DIR / f"{name}_{key}_{fp}.json"
+    if path.exists():
+        try:
+            return json.loads(path.read_text(encoding="utf-8"))
+        except Exception:                          # noqa: BLE001
+            pass
+    result = compute()
+    try:
+        _CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        for old in _CACHE_DIR.glob(f"{name}_{key}_*.json"):   # drop stale versions
+            try:
+                old.unlink()
+            except OSError:
+                pass
+        path.write_text(json.dumps(result, ensure_ascii=False), encoding="utf-8")
+    except Exception:                              # noqa: BLE001
+        pass
+    return result
+
+
+# ---------------------------------------------------------------------------
 # Rankings — every stock ordered by win-rate, per event type (cached)
 # ---------------------------------------------------------------------------
 RANK_EVENTS = ["RESULTS", "BOARD_MEETING", "CORPORATE_ACTION", "ANNOUNCEMENT"]
@@ -707,33 +745,40 @@ _RANK_CACHE: dict = {}
 
 def build_rankings() -> dict:
     """For each event type, all stocks (with feeds) ranked by the best rule's
-    win-rate, highest first. Reuses build_behaviour; cached per symbol universe."""
+    win-rate, highest first. Reuses build_behaviour; cached in memory + on disk."""
     universe = [s for s in SYMBOLS if s in set(downloaded_symbols())]
     key = tuple(universe)
     if key in _RANK_CACHE:
         return _RANK_CACHE[key]
 
-    out = {et: [] for et in RANK_EVENTS}
-    for sym in universe:
-        try:
-            d = build_behaviour(sym)
-        except Exception:                          # noqa: BLE001
-            continue
-        if not d.get("available"):
-            continue
-        for et, t in d["types"].items():
-            b = t.get("best")
-            if not b:
+    def _compute():
+        import event_behaviour as EB
+        out = {et: [] for et in RANK_EVENTS}
+        for sym in universe:
+            try:
+                d = build_behaviour(sym)
+            except Exception:                      # noqa: BLE001
                 continue
-            out.setdefault(et, []).append({
-                "symbol": sym,
-                "win": b["win_rate_pct"], "avg": b["avg_return_pct"],
-                "db": b["days_before"], "da": b["days_after"],
-                "n": b["n"], "events": t.get("n_events", b["n"]),
-            })
-    for et in out:
-        out[et].sort(key=lambda r: (r["win"], r["avg"]), reverse=True)
-    result = {"events": RANK_EVENTS, "ranks": out, "n_stocks": len(universe)}
+            if not d.get("available"):
+                continue
+            for et, t in d["types"].items():
+                b = t.get("best")
+                if not b:
+                    continue
+                out.setdefault(et, []).append({
+                    "symbol": sym,
+                    "win": b["win_rate_pct"], "avg": b["avg_return_pct"],
+                    "db": b["days_before"], "da": b["days_after"],
+                    "n": b["n"], "events": t.get("n_events", b["n"]),
+                })
+        for et in out:
+            out[et].sort(key=lambda r: (r["win"], r["avg"]), reverse=True)
+        return {"events": RANK_EVENTS, "ranks": out, "n_stocks": len(universe)}
+
+    import event_behaviour as EB
+    paths = ([ROOT / s / f"{k}.csv" for s in universe for k in EVENT_FEEDS]
+             + [EB.PRICE_CACHE / f"{s}.csv" for s in universe])
+    result = _disk_cached("rankings", universe, paths, _compute)
     _RANK_CACHE[key] = result
     return result
 
@@ -762,39 +807,45 @@ def build_screener() -> dict:
         except (TypeError, ValueError):
             return None
 
-    out = []
-    for sym in universe:
-        try:
-            d = fund_loader.load_stock(sym)
-        except Exception:                          # noqa: BLE001
-            continue
-        pnl, bs, rat = d.get("pnl"), d.get("balance_sheet"), d.get("ratios")
-        if pnl is None or pnl.empty:
-            continue
-        L = pnl.iloc[-1]
-        eps = f(L.get("EPS in Rs"))
-        px = EB.fetch_prices_yahoo(sym)
-        price = f(px.iloc[-1]) if (px is not None and len(px)) else None
-        pe = round(price / eps, 1) if (price and eps and eps > 0) else None
-        roce = f(rat.iloc[-1].get("ROCE %")) if (rat is not None and not rat.empty) else None
-        de = None
-        if bs is not None and not bs.empty:
-            B = bs.iloc[-1]
-            bor, eq, res = B.get("Borrowings"), B.get("Equity Capital"), B.get("Reserves")
+    def _compute():
+        out = []
+        for sym in universe:
             try:
-                base = (float(eq) if eq == eq else 0) + (float(res) if res == res else 0)
-                if bor == bor and base:
-                    de = round(float(bor) / base, 2)
-            except (TypeError, ValueError):
-                pass
-        out.append({
-            "symbol": sym, "price": price, "pe": pe, "roce": roce,
-            "opm": f(L.get("OPM %")), "sales_g": f(L.get("Sales Growth %")),
-            "profit_g": f(L.get("Profit Growth %")), "de": de,
-            "sales": f(L.get("Sales")), "npat": f(L.get("Net Profit")), "eps": eps,
-        })
-    _SCREEN_CACHE[key] = {"stocks": out, "n": len(out)}
-    return _SCREEN_CACHE[key]
+                d = fund_loader.load_stock(sym)
+            except Exception:                      # noqa: BLE001
+                continue
+            pnl, bs, rat = d.get("pnl"), d.get("balance_sheet"), d.get("ratios")
+            if pnl is None or pnl.empty:
+                continue
+            L = pnl.iloc[-1]
+            eps = f(L.get("EPS in Rs"))
+            px = EB.fetch_prices_yahoo(sym)
+            price = f(px.iloc[-1]) if (px is not None and len(px)) else None
+            pe = round(price / eps, 1) if (price and eps and eps > 0) else None
+            roce = f(rat.iloc[-1].get("ROCE %")) if (rat is not None and not rat.empty) else None
+            de = None
+            if bs is not None and not bs.empty:
+                B = bs.iloc[-1]
+                bor, eq, res = B.get("Borrowings"), B.get("Equity Capital"), B.get("Reserves")
+                try:
+                    base = (float(eq) if eq == eq else 0) + (float(res) if res == res else 0)
+                    if bor == bor and base:
+                        de = round(float(bor) / base, 2)
+                except (TypeError, ValueError):
+                    pass
+            out.append({
+                "symbol": sym, "price": price, "pe": pe, "roce": roce,
+                "opm": f(L.get("OPM %")), "sales_g": f(L.get("Sales Growth %")),
+                "profit_g": f(L.get("Profit Growth %")), "de": de,
+                "sales": f(L.get("Sales")), "npat": f(L.get("Net Profit")), "eps": eps,
+            })
+        return {"stocks": out, "n": len(out)}
+
+    paths = ([ROOT / d / f"{s}.csv" for s in universe for d in ("pnl", "ratios", "balance_sheet")]
+             + [EB.PRICE_CACHE / f"{s}.csv" for s in universe])
+    result = _disk_cached("screener", universe, paths, _compute)
+    _SCREEN_CACHE[key] = result
+    return result
 
 
 # ---------------------------------------------------------------------------

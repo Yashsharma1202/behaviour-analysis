@@ -1,21 +1,21 @@
-bcEndDate,bcStartDate,caBroadcastDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol
--,-,,Dr. Reddy's Laboratories Limited,10-Jul-2026,1,-,INE089A01023,-,-,10-Jul-2026,EQ,Dividend - Rs 8 Per Share,DRREDDY
--,-,,Dr. Reddy's Laboratories Limited,10-Jul-2025,1,-,INE089A01023,-,-,10-Jul-2025,EQ,Dividend - Rs 8 Per Share,DRREDDY
--,-,,Dr. Reddy's Laboratories Limited,28-Oct-2024,1,-,INE089A01023,-,-,28-Oct-2024,EQ,Face Value Split (Sub-Division) - From Rs 5/- Per Share To Re 1/- Per Share,DRREDDY
-19-Jul-2024,17-Jul-2024,,Dr. Reddy's Laboratories Limited,16-Jul-2024,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting/Dividend - Rs 40 Per Share,DRREDDY
-14-Jul-2023,12-Jul-2023,,Dr. Reddy's Laboratories Limited,11-Jul-2023,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting/Dividend - Rs 40 Per Share,DRREDDY
-15-Jul-2022,13-Jul-2022,,Dr. Reddy's Laboratories Limited,11-Jul-2022,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting/Dividend - Rs 30 Per Share,DRREDDY
-15-Jul-2021,13-Jul-2021,,Dr. Reddy's Laboratories Limited,09-Jul-2021,1,-,INE089A01023,-,-,-,EQ, Annual General Meeting/Dividend - Rs 25 Per Share,DRREDDY
-17-Jul-2020,15-Jul-2020,,Dr. Reddy's Laboratories Limited,13-Jul-2020,1,-,INE089A01023,-,-,-,EQ, Annual General Meeting/Dividend - Rs 25 Per Share,DRREDDY
-19-Jul-2019,17-Jul-2019,,Dr. Reddy's Laboratories Limited,15-Jul-2019,1,-,INE089A01023,-,-,-,EQ, Annual General Meeting/Dividend - Rs 20 Per Share,DRREDDY
-20-Jul-2018,18-Jul-2018,,Dr. Reddy's Laboratories Limited,16-Jul-2018,1,-,INE089A01023,-,-,-,EQ, Annual General Meeting/Dividend- Rs 20 Per Share,DRREDDY
-21-Jul-2017,19-Jul-2017,,Dr. Reddy's Laboratories Limited,17-Jul-2017,1,-,INE089A01023,-,-,-,EQ, Annual General Meeting/Dividend - Rs 20/- Per Share,DRREDDY
-22-Jul-2016,20-Jul-2016,,Dr. Reddy's Laboratories Limited,18-Jul-2016,1,-,INE089A01023,-,-,-,EQ, Annual General Meeting/ Dividend - Rs 20/- Per Share,DRREDDY
-17-Jul-2015,14-Jul-2015,,Dr. Reddy's Laboratories Limited,10-Jul-2015,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting/Dividend Rs 20/- Per Share,DRREDDY
-18-Jul-2014,15-Jul-2014,,Dr. Reddy's Laboratories Limited,11-Jul-2014,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting / Final Dividend - Rs 18/- Per Share,DRREDDY
-19-Jul-2013,16-Jul-2013,,Dr. Reddy's Laboratories Limited,12-Jul-2013,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting And Dividend Rs.15/- Per Share,DRREDDY
-06-Jul-2012,03-Jul-2012,,Dr. Reddy's Laboratories Limited,28-Jun-2012,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting And Dividend - Rs.13.75 Per Share,DRREDDY
-09-Jul-2011,05-Jul-2011,,Dr. Reddy's Laboratories Limited,30-Jun-2011,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting And Dividend Rs.11.25 Per Share,DRREDDY
--,-,,Dr. Reddy's Laboratories Limited,17-Mar-2011,1,-,INE089A01023,-,-,18-Mar-2011,EQ,Scheme Of Arrangement - Bonus Debentures 6:1,DRREDDY
-10-Jul-2010,06-Jul-2010,,Dr. Reddy's Laboratories Limited,02-Jul-2010,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting And Final Dividend Rs.11.25 Per Share,DRREDDY
-11-Jul-2009,07-Jul-2009,,Dr. Reddy's Laboratories Limited,03-Jul-2009,1,-,INE089A01023,-,-,-,EQ,Agm/Div-Rs.6.25 Per Share,DRREDDY
+bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate
+-,-,Dr. Reddy's Laboratories Limited,10-Jul-2026,1,-,INE089A01023,-,-,10-Jul-2026,EQ,Dividend - Rs 8 Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+-,-,Dr. Reddy's Laboratories Limited,10-Jul-2025,1,-,INE089A01023,-,-,10-Jul-2025,EQ,Dividend - Rs 8 Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+-,-,Dr. Reddy's Laboratories Limited,28-Oct-2024,1,-,INE089A01023,-,-,28-Oct-2024,EQ,Face Value Split (Sub-Division) - From Rs 5/- Per Share To Re 1/- Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+19-Jul-2024,17-Jul-2024,Dr. Reddy's Laboratories Limited,16-Jul-2024,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting/Dividend - Rs 40 Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+14-Jul-2023,12-Jul-2023,Dr. Reddy's Laboratories Limited,11-Jul-2023,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting/Dividend - Rs 40 Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+15-Jul-2022,13-Jul-2022,Dr. Reddy's Laboratories Limited,11-Jul-2022,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting/Dividend - Rs 30 Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+15-Jul-2021,13-Jul-2021,Dr. Reddy's Laboratories Limited,09-Jul-2021,1,-,INE089A01023,-,-,-,EQ, Annual General Meeting/Dividend - Rs 25 Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+17-Jul-2020,15-Jul-2020,Dr. Reddy's Laboratories Limited,13-Jul-2020,1,-,INE089A01023,-,-,-,EQ, Annual General Meeting/Dividend - Rs 25 Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+19-Jul-2019,17-Jul-2019,Dr. Reddy's Laboratories Limited,15-Jul-2019,1,-,INE089A01023,-,-,-,EQ, Annual General Meeting/Dividend - Rs 20 Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+20-Jul-2018,18-Jul-2018,Dr. Reddy's Laboratories Limited,16-Jul-2018,1,-,INE089A01023,-,-,-,EQ, Annual General Meeting/Dividend- Rs 20 Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+21-Jul-2017,19-Jul-2017,Dr. Reddy's Laboratories Limited,17-Jul-2017,1,-,INE089A01023,-,-,-,EQ, Annual General Meeting/Dividend - Rs 20/- Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+22-Jul-2016,20-Jul-2016,Dr. Reddy's Laboratories Limited,18-Jul-2016,1,-,INE089A01023,-,-,-,EQ, Annual General Meeting/ Dividend - Rs 20/- Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+17-Jul-2015,14-Jul-2015,Dr. Reddy's Laboratories Limited,10-Jul-2015,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting/Dividend Rs 20/- Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+18-Jul-2014,15-Jul-2014,Dr. Reddy's Laboratories Limited,11-Jul-2014,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting / Final Dividend - Rs 18/- Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+19-Jul-2013,16-Jul-2013,Dr. Reddy's Laboratories Limited,12-Jul-2013,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting And Dividend Rs.15/- Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+06-Jul-2012,03-Jul-2012,Dr. Reddy's Laboratories Limited,28-Jun-2012,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting And Dividend - Rs.13.75 Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+09-Jul-2011,05-Jul-2011,Dr. Reddy's Laboratories Limited,30-Jun-2011,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting And Dividend Rs.11.25 Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+-,-,Dr. Reddy's Laboratories Limited,17-Mar-2011,1,-,INE089A01023,-,-,18-Mar-2011,EQ,Scheme Of Arrangement - Bonus Debentures 6:1,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+10-Jul-2010,06-Jul-2010,Dr. Reddy's Laboratories Limited,02-Jul-2010,1,-,INE089A01023,-,-,-,EQ,Annual General Meeting And Final Dividend Rs.11.25 Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,
+11-Jul-2009,07-Jul-2009,Dr. Reddy's Laboratories Limited,03-Jul-2009,1,-,INE089A01023,-,-,-,EQ,Agm/Div-Rs.6.25 Per Share,DRREDDY,Dr. Reddy's Laboratories Ltd.,

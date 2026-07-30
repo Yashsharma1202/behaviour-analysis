@@ -24,10 +24,13 @@ from urllib.parse import urlparse
 import stock_server as S                      # reuse the whole dashboard engine
 from download_feeds import NIFTY50_FALLBACK   # the Nifty 50 symbol list
 
-# rebrand the page header/title so it's clearly the Nifty 50 dashboard
+_N = len(set(NIFTY50_FALLBACK))
+# rebrand the page header/title so it's clearly the Nifty 50 dashboard, and fix
+# the full-universe stock-count hint to the Nifty 50 count.
 NIFTY_PAGE = (S.PAGE
               .replace("<title>NSE Stock Browser</title>", "<title>Nifty 50 Browser</title>")
-              .replace("NSE Stock Browser", "Nifty 50 Browser"))
+              .replace("NSE Stock Browser", "Nifty 50 Browser")
+              .replace("search any of 2,363 stocks", f"search any of {_N} stocks"))
 
 
 class NiftyHandler(S.Handler):
@@ -47,6 +50,16 @@ def main():
 
     # override the symbol universe -> only Nifty 50 (everything else reused as-is)
     S.SYMBOLS = sorted(set(NIFTY50_FALLBACK))
+
+    # warm the expensive rankings/screener caches in the background so the
+    # Rankings/Screener tabs return instantly instead of hanging on first click.
+    def _warm():
+        try:
+            S.build_rankings(); S.build_screener()
+            print("  caches warm — Rankings & Screener ready.")
+        except Exception as e:                       # noqa: BLE001
+            print(f"  cache warm failed: {e}")
+    threading.Thread(target=_warm, daemon=True).start()
 
     lan = "--lan" in sys.argv
     host = "0.0.0.0" if lan else "127.0.0.1"

@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nifty 50 Behaviour Analysis — What We Used &amp; From Where</title>
+<style>
+:root{--bg:#fff;--panel:#fff;--soft:#f6f8fb;--ink:#111726;--mute:#5a6474;--faint:#8a94a6;--line:#e2e6ec;
+  --blue:#2563eb;--blue-soft:#dbe6ff;--amb:#c2761a;--amb-soft:#fbecd4;--pos:#15803d;--pos-soft:#d8f0e0;
+  --neg:#c2334d;--viol:#6d4bd8;--viol-soft:#e7e0fb;--mono:'SFMono-Regular',Consolas,Menlo,monospace;
+  --shadow:0 1px 2px rgba(16,24,40,.05),0 4px 14px rgba(16,24,40,.06);}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);line-height:1.6;font-size:14.5px;
+  font-family:'Inter',-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+.wrap{max-width:840px;margin:0 auto;padding:0 26px 60px}
+.cover{padding:56px 0 30px;border-bottom:2px solid var(--ink)}
+.kicker{font-family:var(--mono);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:700}
+h1{font-size:2.3rem;line-height:1.12;margin:.3em 0 .28em;letter-spacing:-.025em}
+.sub{font-size:1.05rem;color:var(--mute);margin:0;max-width:64ch}
+.meta{margin-top:22px;font-family:var(--mono);font-size:.76rem;color:var(--faint);line-height:1.9}
+h2{font-size:1.34rem;margin:38px 0 6px;letter-spacing:-.015em;padding-top:8px;border-top:1px solid var(--line)}
+h2 .n{display:inline-block;min-width:1.7em;color:var(--blue);font-family:var(--mono);font-size:.85rem;font-weight:700}
+p{margin:.55em 0}b{color:var(--ink)}.lead{color:var(--mute)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0 4px;font-size:.8rem;color:var(--mute)}
+.chip{display:inline-block;font-family:var(--mono);font-size:.66rem;font-weight:700;padding:.14em .55em;border-radius:20px}
+.chip.std{background:var(--pos-soft);color:var(--pos)}
+.chip.pip{background:var(--blue-soft);color:var(--blue)}
+.chip.ext{background:var(--amb-soft);color:var(--amb)}
+.chip.own{background:var(--viol-soft);color:var(--viol)}
+table{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--panel)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0;box-shadow:var(--shadow)}
+th,td{padding:8px 12px;border-bottom:1px solid var(--line);text-align:left;white-space:normal;vertical-align:top}
+th{font-size:.67rem;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);font-weight:700;background:var(--soft);white-space:nowrap}
+td.mono,th.mono{font-family:var(--mono);font-size:.79rem;white-space:nowrap}
+.file{font-family:var(--mono);font-size:.78rem;color:var(--blue)}
+tr:last-child td{border-bottom:none}
+.callout{border-left:4px solid var(--amb);background:var(--soft);border-radius:0 12px 12px 0;padding:12px 18px;margin:16px 0}
+.callout b{color:var(--ink)}
+.fig{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:18px 20px 12px;margin:16px 0;box-shadow:var(--shadow)}
+.fig svg{display:block;width:100%;height:auto}.figcap{font-size:.8rem;color:var(--mute);margin:9px 2px 0;text-align:center}.figcap b{color:var(--ink)}
+code{font-family:var(--mono);font-size:.85em;background:#eef2f9;color:#1b3a6b;padding:.08em .42em;border-radius:5px}
+.foot{color:var(--mute);font-size:.82rem;margin-top:34px;font-family:var(--mono);border-top:1px solid var(--line);padding-top:14px}
+@media print{@page{size:A4;margin:14mm 0}html,body{font-size:10.4pt}.wrap{max-width:100%;padding:0 15mm}
+  .cover{padding:5mm 0 6mm}h1{font-size:25pt}h2{break-after:avoid}.tbl,.callout,.fig{break-inside:avoid;overflow:visible}
+  table{font-size:9.2pt}th,td{padding:6px 9px}td.mono,th.mono,.file{font-size:8.4pt}}
+</style></head><body><div class="wrap">
+
+<section class="cover">
+  <div class="kicker">Nifty 50 Behaviour Analysis · Reference</div>
+  <h1>What we used — and from where</h1>
+  <p class="sub">The complete inventory: the analytical methods, the technology &amp; libraries (with where each
+    is used in the code and where it comes from), and the external data sources with their exact origins.</p>
+  <div class="meta">Pure Python · no web framework · no database · no machine learning in the live system</div>
+</section>
+
+<!-- 1 METHODS -->
+<section><h2><span class="n">01</span>Methods — the techniques we used</h2>
+<p class="lead">The system is built on plain statistics and exhaustive search — nothing learned or fitted.</p>
+<div class="tbl"><table>
+<thead><tr><th>Method</th><th>What it does</th><th>Used in</th></tr></thead>
+<tbody>
+<tr><td><b>Event-study window</b></td><td>Measures price change in a window around each corporate event.</td><td class="file">event_behaviour.py</td></tr>
+<tr><td><b>Exhaustive grid search</b></td><td>Tests all 64 buy-before / sell-after timing rules (N,M = 1…8) — no optimiser, just try them all.</td><td class="file">event_behaviour.py</td></tr>
+<tr><td><b>Descriptive statistics</b></td><td>Win rate (share of events that finished positive), average, median, best/worst case.</td><td class="file">event_behaviour.py · stock_server.py</td></tr>
+<tr><td><b>Trading-day indexing</b></td><td>Counts in market days, skipping weekends &amp; holidays.</td><td class="file">event_behaviour.py</td></tr>
+<tr><td><b>Market adjustment</b></td><td>Subtracts the NIFTY index move to isolate stock-specific reaction.</td><td class="file">nifty_backtest.py · event_study.py</td></tr>
+<tr><td><b>Train / test + placebo</b></td><td>Splits history and tests random dates to check an edge isn't just curve-fitting.</td><td class="file">nifty_backtest.py</td></tr>
+<tr><td><b>Fingerprinted disk cache</b></td><td>Persists rankings/screener keyed by a data fingerprint → instant loads, auto-refresh on change.</td><td class="file">stock_server.py</td></tr>
+</tbody></table></div>
+</section>
+
+<!-- 2 TECH -->
+<section><h2><span class="n">02</span>Technology &amp; libraries — what, from where, used where</h2>
+<div class="legend">
+  <span><span class="chip std">STDLIB</span> ships with Python</span>
+  <span><span class="chip pip">PyPI</span> installed via pip</span>
+  <span><span class="chip ext">EXTERNAL</span> separate program</span>
+  <span><span class="chip own">OWN</span> written in this project</span>
+</div>
+<div class="tbl"><table>
+<thead><tr><th>Tool</th><th>Purpose</th><th>From where</th><th>Used in</th></tr></thead>
+<tbody>
+<tr><td><b>Python 3</b></td><td>The whole backend language.</td><td><span class="chip ext">EXTERNAL</span> python.org</td><td class="file">all 32 scripts</td></tr>
+<tr><td><b>pandas</b></td><td>Every table, CSV read/write, grouping, dates.</td><td><span class="chip pip">PyPI</span> <span class="mono">pip install pandas</span></td><td class="file">~all scripts</td></tr>
+<tr><td><b>numpy</b></td><td>Numeric arrays &amp; math.</td><td><span class="chip pip">PyPI</span> <span class="mono">numpy</span></td><td class="file">event/optimal/earnings scripts</td></tr>
+<tr><td><b>matplotlib</b></td><td>A few static plot images.</td><td><span class="chip pip">PyPI</span> <span class="mono">matplotlib</span></td><td class="file">straddle_backtest.py</td></tr>
+<tr><td><b>openpyxl</b></td><td>Builds the downloadable Excel workbooks.</td><td><span class="chip pip">PyPI</span> <span class="mono">openpyxl</span></td><td class="file">stock_server.py</td></tr>
+<tr><td><b>scikit-learn</b></td><td>ML <em>experiment only</em> — not in the live system.</td><td><span class="chip pip">PyPI</span> <span class="mono">scikit-learn</span></td><td class="file">ml_model.py (standalone)</td></tr>
+<tr><td><b>urllib · ssl · json</b></td><td>Fetch from Yahoo/NSE/Screener; parse responses.</td><td><span class="chip std">STDLIB</span></td><td class="file">fetchers + server</td></tr>
+<tr><td><b>http.server</b></td><td>The web server behind the dashboard — no framework.</td><td><span class="chip std">STDLIB</span></td><td class="file">stock_server.py</td></tr>
+<tr><td><b>HTML · CSS · JS · SVG</b></td><td>The dashboard UI &amp; charts, hand-written (no React).</td><td><span class="chip own">OWN</span></td><td class="file">stock_server.py (PAGE)</td></tr>
+<tr><td><b>Headless Chrome</b></td><td>Renders the HTML docs to PDF.</td><td><span class="chip ext">EXTERNAL</span> Google Chrome</td><td class="file">documentation / report PDFs</td></tr>
+<tr><td><b>Git + GitHub Pages</b></td><td>Version control &amp; the always-on static host.</td><td><span class="chip ext">EXTERNAL</span> github.com</td><td class="file">docs/nifty/</td></tr>
+</tbody></table></div>
+<div class="callout"><b>No web framework, no database, no ML in the product.</b> The dashboard is Python's built-in
+  <code>http.server</code> serving hand-written HTML/JS; data lives in plain CSV files plus a JSON disk-cache.</div>
+</section>
+
+<!-- 3 DATA SOURCES -->
+<section><h2><span class="n">03</span>Data sources — where the data comes from</h2>
+<div class="fig">
+<svg viewBox="0 0 760 116" role="img" aria-label="Data sources">
+  <rect x="10" y="40" width="150" height="40" rx="9" fill="var(--blue-soft)" stroke="var(--blue)"/><text x="85" y="65" text-anchor="middle" font-size="12" font-weight="700" fill="var(--blue)">Yahoo Finance</text>
+  <rect x="180" y="40" width="150" height="40" rx="9" fill="var(--amb-soft)" stroke="var(--amb)"/><text x="255" y="65" text-anchor="middle" font-size="12" font-weight="700" fill="var(--amb)">NSE India</text>
+  <rect x="350" y="40" width="150" height="40" rx="9" fill="var(--viol-soft)" stroke="var(--viol)"/><text x="425" y="65" text-anchor="middle" font-size="12" font-weight="700" fill="var(--viol)">Screener.in</text>
+  <path d="M500 60 h40" stroke="var(--faint)" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="548" y="36" width="206" height="48" rx="10" fill="#fff" stroke="var(--ink)"/><text x="651" y="56" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">cached to disk</text><text x="651" y="73" text-anchor="middle" font-size="10.5" fill="var(--mute)">CSV + JSON · runs offline</text>
+  <text x="85" y="30" text-anchor="middle" font-size="10" fill="var(--mute)">prices</text>
+  <text x="255" y="30" text-anchor="middle" font-size="10" fill="var(--mute)">events + index list</text>
+  <text x="425" y="30" text-anchor="middle" font-size="10" fill="var(--mute)">fundamentals</text>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="var(--faint)"/></marker></defs>
+</svg>
+<div class="figcap"><b>Figure 1.</b> Three external sources, all cached locally so the analysis runs without internet.</div>
+</div>
+<div class="tbl"><table>
+<thead><tr><th>Data</th><th>Source</th><th>From where (endpoint / file)</th><th>Cached as</th></tr></thead>
+<tbody>
+<tr><td>Daily prices</td><td>Yahoo Finance</td><td class="mono">query1.finance.yahoo.com/v8/finance/chart/&lt;SYM&gt;.NS</td><td class="mono">processed/price_cache/</td></tr>
+<tr><td>NIFTY index</td><td>Yahoo Finance</td><td class="mono">…/chart/^NSEI</td><td class="mono">price_cache/_NSEI.csv</td></tr>
+<tr><td>Event feeds</td><td>NSE India</td><td class="mono">nseindia.com/api/corporates-*  +  the NSE export (new data/*.xlsx)</td><td class="mono">&lt;SYM&gt;/*.csv</td></tr>
+<tr><td>Fundamentals</td><td>Screener.in</td><td class="mono">screener.in/company/&lt;SYM&gt;/  +  /api/company/&lt;id&gt;/schedules/</td><td class="mono">pnl/ balance_sheet/ cash_flow/ ratios/ quarterly/</td></tr>
+<tr><td>Nifty 50 list</td><td>NSE India</td><td class="mono">equity-stockIndices?index=NIFTY 50  ·  Company Directory export</td><td class="file">download_feeds.py</td></tr>
+</tbody></table></div>
+<div class="callout"><b>Prices are adjusted close</b> (corrected for splits/bonuses) and everything is snapshotted to disk —
+  so once downloaded the whole system, dashboard included, works fully offline.</div>
+</section>
+
+<!-- 4 OWN SCRIPTS -->
+<section><h2><span class="n">04</span>What we built ourselves</h2>
+<div class="tbl"><table>
+<thead><tr><th>Our script</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td class="file">event_behaviour.py</td><td>The engine — the 64-rule grid of returns &amp; win rates per event.</td></tr>
+<tr><td class="file">stock_server.py</td><td>The dashboard app — payloads, feeds, rankings, screener, compare, caching.</td></tr>
+<tr><td class="file">nifty_dash.py</td><td>The Nifty-50 front end (port 8090) — rebrands + warms caches.</td></tr>
+<tr><td class="file">download_feeds.py</td><td>The Nifty 50 list + NSE feed downloader.</td></tr>
+<tr><td class="file">import_new_data.py</td><td>Splits the NSE Excel export into per-stock CSVs.</td></tr>
+<tr><td class="file">merge_event_history.py</td><td>Unions the export with the archive (recovers full history).</td></tr>
+<tr><td class="file">enrich_board_meetings.py</td><td>Backfills board meetings from the announcements archive.</td></tr>
+<tr><td class="file">build_static_nifty.py</td><td>Bakes the dashboard into a static GitHub Pages site.</td></tr>
+<tr><td class="file">fund_loader.py</td><td>Loads the Screener fundamentals folders.</td></tr>
+</tbody></table></div>
+</section>
+
+<p class="foot">Nifty 50 Behaviour Analysis · pure-Python statistics &amp; grid-search event study · data from Yahoo Finance,
+NSE India &amp; Screener.in · for study and education, not investment advice.</p>
+</div></body></html>

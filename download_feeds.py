@@ -26,16 +26,22 @@ from pathlib import Path
 import stock_server as S          # reuse the NSE fetcher + session handling
 
 # Fallback Nifty-50 list (used only if the live fetch from NSE fails).
+# Current Nifty 50 constituents, synced 2026-07-23 from the official NSE export
+# (new data/08_Company_Directory.xlsx). Exactly 50 symbols.
+# Ex-members removed in this sync (still on disk under their <SYMBOL>/ folders,
+# just no longer part of the index): BPCL, BRITANNIA, HEROMOTOCO, INDUSINDBK,
+# LTIM, TATAMOTORS. Added this sync: ETERNAL (ex-Zomato), INDIGO, MAXHEALTH,
+# TMPV (Tata Motors Passenger Vehicles).
 NIFTY50_FALLBACK = [
     "ADANIENT", "ADANIPORTS", "APOLLOHOSP", "ASIANPAINT", "AXISBANK",
     "BAJAJ-AUTO", "BAJAJFINSV", "BAJFINANCE", "BEL", "BHARTIARTL",
-    "BPCL", "BRITANNIA", "CIPLA", "COALINDIA", "DRREDDY", "EICHERMOT",
-    "GRASIM", "HCLTECH", "HDFCBANK", "HDFCLIFE", "HEROMOTOCO", "HINDALCO",
-    "HINDUNILVR", "ICICIBANK", "INDUSINDBK", "INFY", "ITC", "JIOFIN",
-    "JSWSTEEL", "KOTAKBANK", "LT", "LTIM", "M&M", "MARUTI", "NESTLEIND",
+    "CIPLA", "COALINDIA", "DRREDDY", "EICHERMOT", "ETERNAL",
+    "GRASIM", "HCLTECH", "HDFCBANK", "HDFCLIFE", "HINDALCO",
+    "HINDUNILVR", "ICICIBANK", "INDIGO", "INFY", "ITC", "JIOFIN",
+    "JSWSTEEL", "KOTAKBANK", "LT", "M&M", "MARUTI", "MAXHEALTH", "NESTLEIND",
     "NTPC", "ONGC", "POWERGRID", "RELIANCE", "SBILIFE", "SBIN", "SHRIRAMFIN",
-    "SUNPHARMA", "TATACONSUM", "TATAMOTORS", "TATASTEEL", "TCS", "TECHM",
-    "TITAN", "TRENT", "ULTRACEMCO", "WIPRO",
+    "SUNPHARMA", "TATACONSUM", "TATASTEEL", "TCS", "TECHM",
+    "TITAN", "TMPV", "TRENT", "ULTRACEMCO", "WIPRO",
 ]
 
 WAIT_BETWEEN = 2.0        # seconds between stocks (be polite to NSE)

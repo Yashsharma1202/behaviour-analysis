@@ -1,21 +1,21 @@
-bcEndDate,bcStartDate,caBroadcastDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol
--,-,,JSW Steel Limited,07-Jul-2026,1,-,INE019A01020,-,-,07-Jul-2026,EQ,Dividend - Rs 7.10 Per Share,JSWSTEEL
--,-,,JSW Steel Limited,08-Jul-2025,1,-,INE019A01020,-,-,08-Jul-2025,EQ,Dividend - Rs 2.80 Per Share,JSWSTEEL
-12-Jul-2024,10-Jul-2024,,JSW Steel Limited,09-Jul-2024,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting/Dividend - Rs 7.30 Per Share,JSWSTEEL
-14-Jul-2023,12-Jul-2023,,JSW Steel Limited,11-Jul-2023,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting/Dividend - Rs 3.40 Per Share,JSWSTEEL
-08-Jul-2022,06-Jul-2022,,JSW Steel Limited,04-Jul-2022,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting/Dividend - Rs 17.35 Per Share,JSWSTEEL
-09-Jul-2021,07-Jul-2021,,JSW Steel Limited,05-Jul-2021,1,-,INE019A01020,-,-,-,EQ, Annual General Meeting/Dividend - Rs 6.50 Per Share,JSWSTEEL
-10-Jul-2020,08-Jul-2020,,JSW Steel Limited,06-Jul-2020,1,-,INE019A01020,-,-,-,EQ, Dividend - Rs 2 Per Share,JSWSTEEL
-12-Jul-2019,10-Jul-2019,,JSW Steel Limited,08-Jul-2019,1,-,INE019A01020,-,-,-,EQ, Annual General Meeting/Dividend Rs 4.10 Per Share,JSWSTEEL
-12-Jul-2018,10-Jul-2018,,JSW Steel Limited,06-Jul-2018,1,-,INE019A01020,-,-,-,EQ, Annual General Meeting / Dividend- Rs 3.20 Per Share,JSWSTEEL
-16-Jun-2017,14-Jun-2017,,JSW Steel Limited,12-Jun-2017,1,-,INE019A01020,-,-,-,EQ, Annual General Meeting/Dividend - Rs 2.25/- Per Share,JSWSTEEL
--,-,,JSW Steel Limited,04-Jan-2017,1,-,INE019A01020,-,-,05-Jan-2017,EQ, Fv Splt Frm Rs 10 To Re 1,JSWSTEEL
-08-Jul-2016,06-Jul-2016,,JSW Steel Limited,04-Jul-2016,1,-,INE019A01020,-,-,-,EQ, Annual General Meeting/ Dividend - Rs 7.50/- Per Share,JSWSTEEL
-10-Jul-2015,08-Jul-2015,,JSW Steel Limited,06-Jul-2015,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting/ Dividend - Rs 11/- Per Share,JSWSTEEL
-11-Jul-2014,09-Jul-2014,,JSW Steel Limited,07-Jul-2014,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting / Dividend - Rs 11/- Per Share,JSWSTEEL
-19-Jul-2013,17-Jul-2013,,JSW Steel Limited,15-Jul-2013,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting / Dividend - Rs.10/- Per Equity Share,JSWSTEEL
-16-Jul-2012,14-Jul-2012,,JSW Steel Limited,12-Jul-2012,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting / Dividend - Rs. 7.50 Per Share,JSWSTEEL
-15-Jul-2011,13-Jul-2011,,JSW Steel Limited,11-Jul-2011,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting And Dividend Rs.12.25 Per Share,JSWSTEEL
-18-Jun-2010,16-Jun-2010,,JSW Steel Limited,14-Jun-2010,1,-,INE019A01020,-,-,-,EQ,Agm/Dividend Rs 9.50 Per Share,JSWSTEEL
-03-Jul-2009,01-Jul-2009,,JSW Steel Limited,29-Jun-2009,1,-,INE019A01020,-,-,-,EQ,Agm/Div-Re.1/- Per Share,JSWSTEEL
-27-May-2008,23-May-2008,,JSW Steel Limited,21-May-2008,1,-,INE019A01020,-,-,-,EQ,Agm/Dividend - 140%,JSWSTEEL
+bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate
+-,-,JSW Steel Limited,07-Jul-2026,1,-,INE019A01020,-,-,07-Jul-2026,EQ,Dividend - Rs 7.10 Per Share,JSWSTEEL,JSW Steel Ltd.,
+-,-,JSW Steel Limited,08-Jul-2025,1,-,INE019A01020,-,-,08-Jul-2025,EQ,Dividend - Rs 2.80 Per Share,JSWSTEEL,JSW Steel Ltd.,
+12-Jul-2024,10-Jul-2024,JSW Steel Limited,09-Jul-2024,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting/Dividend - Rs 7.30 Per Share,JSWSTEEL,JSW Steel Ltd.,
+14-Jul-2023,12-Jul-2023,JSW Steel Limited,11-Jul-2023,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting/Dividend - Rs 3.40 Per Share,JSWSTEEL,JSW Steel Ltd.,
+08-Jul-2022,06-Jul-2022,JSW Steel Limited,04-Jul-2022,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting/Dividend - Rs 17.35 Per Share,JSWSTEEL,JSW Steel Ltd.,
+09-Jul-2021,07-Jul-2021,JSW Steel Limited,05-Jul-2021,1,-,INE019A01020,-,-,-,EQ, Annual General Meeting/Dividend - Rs 6.50 Per Share,JSWSTEEL,JSW Steel Ltd.,
+10-Jul-2020,08-Jul-2020,JSW Steel Limited,06-Jul-2020,1,-,INE019A01020,-,-,-,EQ, Dividend - Rs 2 Per Share,JSWSTEEL,JSW Steel Ltd.,
+12-Jul-2019,10-Jul-2019,JSW Steel Limited,08-Jul-2019,1,-,INE019A01020,-,-,-,EQ, Annual General Meeting/Dividend Rs 4.10 Per Share,JSWSTEEL,JSW Steel Ltd.,
+12-Jul-2018,10-Jul-2018,JSW Steel Limited,06-Jul-2018,1,-,INE019A01020,-,-,-,EQ, Annual General Meeting / Dividend- Rs 3.20 Per Share,JSWSTEEL,JSW Steel Ltd.,
+16-Jun-2017,14-Jun-2017,JSW Steel Limited,12-Jun-2017,1,-,INE019A01020,-,-,-,EQ, Annual General Meeting/Dividend - Rs 2.25/- Per Share,JSWSTEEL,JSW Steel Ltd.,
+-,-,JSW Steel Limited,04-Jan-2017,1,-,INE019A01020,-,-,05-Jan-2017,EQ, Fv Splt Frm Rs 10 To Re 1,JSWSTEEL,JSW Steel Ltd.,
+08-Jul-2016,06-Jul-2016,JSW Steel Limited,04-Jul-2016,1,-,INE019A01020,-,-,-,EQ, Annual General Meeting/ Dividend - Rs 7.50/- Per Share,JSWSTEEL,JSW Steel Ltd.,
+10-Jul-2015,08-Jul-2015,JSW Steel Limited,06-Jul-2015,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting/ Dividend - Rs 11/- Per Share,JSWSTEEL,JSW Steel Ltd.,
+11-Jul-2014,09-Jul-2014,JSW Steel Limited,07-Jul-2014,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting / Dividend - Rs 11/- Per Share,JSWSTEEL,JSW Steel Ltd.,
+19-Jul-2013,17-Jul-2013,JSW Steel Limited,15-Jul-2013,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting / Dividend - Rs.10/- Per Equity Share,JSWSTEEL,JSW Steel Ltd.,
+16-Jul-2012,14-Jul-2012,JSW Steel Limited,12-Jul-2012,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting / Dividend - Rs. 7.50 Per Share,JSWSTEEL,JSW Steel Ltd.,
+15-Jul-2011,13-Jul-2011,JSW Steel Limited,11-Jul-2011,1,-,INE019A01020,-,-,-,EQ,Annual General Meeting And Dividend Rs.12.25 Per Share,JSWSTEEL,JSW Steel Ltd.,
+18-Jun-2010,16-Jun-2010,JSW Steel Limited,14-Jun-2010,1,-,INE019A01020,-,-,-,EQ,Agm/Dividend Rs 9.50 Per Share,JSWSTEEL,JSW Steel Ltd.,
+03-Jul-2009,01-Jul-2009,JSW Steel Limited,29-Jun-2009,1,-,INE019A01020,-,-,-,EQ,Agm/Div-Re.1/- Per Share,JSWSTEEL,JSW Steel Ltd.,
+27-May-2008,23-May-2008,JSW Steel Limited,21-May-2008,1,-,INE019A01020,-,-,-,EQ,Agm/Dividend - 140%,JSWSTEEL,JSW Steel Ltd.,

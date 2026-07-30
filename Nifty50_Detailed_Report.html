@@ -1,0 +1,442 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nifty 50 Behaviour Analysis — Detailed Report</title>
+<style>
+:root{--bg:#fff;--panel:#fff;--soft:#f6f8fb;--ink:#111726;--mute:#59626f;--faint:#8a94a6;--line:#e2e6ec;
+  --blue:#2563eb;--blue-soft:#dbe6ff;--amb:#c2761a;--amb-soft:#fbecd4;--pos:#15803d;--pos-soft:#d8f0e0;
+  --neg:#c2334d;--neg-soft:#f7dbe1;--viol:#6d4bd8;--viol-soft:#e7e0fb;--mono:'SFMono-Regular',Consolas,Menlo,monospace;
+  --shadow:0 1px 2px rgba(16,24,40,.05),0 4px 14px rgba(16,24,40,.06);}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);line-height:1.6;font-size:14.5px;
+  font-family:'Inter',-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+.wrap{max-width:840px;margin:0 auto;padding:0 26px 60px}
+/* cover */
+.cover{min-height:88vh;display:flex;flex-direction:column;justify-content:center;border-bottom:2px solid var(--ink)}
+.cover .kicker{font-family:var(--mono);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:700}
+.cover h1{font-size:3rem;line-height:1.08;margin:.28em 0 .3em;letter-spacing:-.03em}
+.cover .sub{font-size:1.12rem;color:var(--mute);max-width:60ch;margin:0}
+.cover .meta{margin-top:34px;font-family:var(--mono);font-size:.78rem;color:var(--faint);line-height:2}
+.cover .rule{width:60px;height:4px;background:var(--blue);border-radius:3px;margin:26px 0}
+/* toc */
+.toc{margin:26px 0}
+.toc h2{border:none;margin:0 0 10px}
+.toc ol{list-style:none;counter-reset:t;padding:0;columns:2;column-gap:36px}
+@media(max-width:620px){.toc ol{columns:1}}
+.toc li{break-inside:avoid;padding:5px 0;font-size:.92rem;border-bottom:1px dotted var(--line)}
+.toc li .tn{font-family:var(--mono);color:var(--blue);font-weight:700;margin-right:.6em}
+.toc a{color:var(--ink);text-decoration:none}
+/* headings */
+h2{font-size:1.42rem;margin:34px 0 8px;letter-spacing:-.015em;padding-top:10px;border-top:2px solid var(--ink)}
+h2 .n{color:var(--blue);font-family:var(--mono);font-size:.9rem;font-weight:700;margin-right:.6em}
+h3{font-size:1.06rem;margin:22px 0 4px;color:var(--ink)}
+h3 .sn{font-family:var(--mono);color:var(--blue);font-size:.82rem;margin-right:.5em}
+p{margin:.58em 0}b{color:var(--ink)}.lead{color:var(--mute)}
+/* components */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+@media(max-width:640px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center;box-shadow:var(--shadow)}
+.kpi .v{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;color:var(--blue)}.kpi .l{font-size:.72rem;color:var(--mute);margin-top:2px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:15px 0}@media(max-width:640px){.two{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px 18px;box-shadow:var(--shadow)}.card h3{margin-top:0}
+.tag{display:inline-block;font-family:var(--mono);font-size:.66rem;font-weight:700;letter-spacing:.04em;padding:.16em .6em;border-radius:20px;margin-bottom:7px;text-transform:uppercase}
+.tag.b{background:var(--blue-soft);color:var(--blue)}.tag.a{background:var(--amb-soft);color:var(--amb)}.tag.n{background:var(--neg-soft);color:var(--neg)}
+.formula{font-family:var(--mono);font-size:.88rem;background:#0e1524;color:#e7ecf5;border-radius:12px;padding:16px 18px;margin:13px 0;overflow-x:auto;line-height:1.75}
+.formula .c{color:#7f8ba3}.formula .k{color:#8fd3ff}.formula .g{color:#7ee0a6}.formula .r{color:#ff9aa8}
+table{width:100%;border-collapse:collapse;font-size:.85rem;background:var(--panel)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0;box-shadow:var(--shadow)}
+th,td{padding:8px 12px;border-bottom:1px solid var(--line);text-align:left;white-space:normal;vertical-align:top}
+th{font-size:.67rem;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);font-weight:700;background:var(--soft);white-space:nowrap}
+td.mono,th.mono{font-family:var(--mono);font-size:.79rem;white-space:nowrap}
+.file{font-family:var(--mono);font-size:.78rem;color:var(--blue);white-space:nowrap}
+.num{text-align:right;font-family:var(--mono);white-space:nowrap}
+.pos{color:var(--pos);font-weight:600}.neg{color:var(--neg);font-weight:600}
+.hi td{background:var(--amb-soft)}tr:last-child td{border-bottom:none}
+.medal{font-family:var(--mono);text-align:center;white-space:nowrap}
+.callout{border-left:4px solid var(--amb);background:var(--soft);border-radius:0 12px 12px 0;padding:12px 18px;margin:15px 0}
+.callout.warn{border-left-color:var(--neg);background:var(--neg-soft)}.callout.good{border-left-color:var(--pos);background:var(--pos-soft)}.callout b{color:var(--ink)}
+.steps{margin:12px 0}.stp{display:flex;gap:13px;align-items:flex-start;margin:10px 0}
+.stp .no{flex:0 0 27px;height:27px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--mono);font-weight:700;font-size:.8rem;display:flex;align-items:center;justify-content:center}
+.stp .bd{flex:1;padding-top:3px}
+.fig{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:18px 20px 12px;margin:15px 0;box-shadow:var(--shadow)}
+.fig svg{display:block;width:100%;height:auto}.figcap{font-size:.8rem;color:var(--mute);margin:9px 2px 0;text-align:center}.figcap b{color:var(--ink)}
+code{font-family:var(--mono);font-size:.85em;background:#eef2f9;color:#1b3a6b;padding:.08em .42em;border-radius:5px}
+ul,ol{margin:.5em 0;padding-left:1.3em}li{margin:.3em 0}
+.cols3{columns:3;column-gap:20px;font-family:var(--mono);font-size:.82rem;margin:12px 0}
+@media(max-width:600px){.cols3{columns:2}}
+.foot{color:var(--mute);font-size:.82rem;margin-top:34px;font-family:var(--mono);border-top:1px solid var(--line);padding-top:14px}
+@media print{@page{size:A4;margin:15mm 0}html,body{font-size:10.4pt}.wrap{max-width:100%;padding:0 16mm}
+  .cover{min-height:auto;padding:16mm 0 8mm;display:block}.cover h1{font-size:30pt}
+  h2{break-after:avoid}.fig,.card,.callout,.tbl,.formula,.kpi,.stp{break-inside:avoid;overflow:visible}
+  table{font-size:9.1pt}th,td{padding:6px 9px}td.mono,th.mono,.file{font-size:8.3pt}
+  .pb{break-before:page}.toc{break-after:page}}
+</style></head><body><div class="wrap">
+
+<!-- ============ COVER ============ -->
+<section class="cover">
+  <div class="kicker">NSE India · Event-Behaviour Analysis</div>
+  <div class="rule"></div>
+  <h1>Nifty 50<br>Behaviour Analysis</h1>
+  <p class="sub">A detailed technical report — the objective, the data, the buy-before / sell-after methodology,
+    the win-rate mathematics, current results, the data-quality work, the technology stack, and the honest
+    limitations of the study.</p>
+  <div class="meta">
+    Detailed Project Report<br>
+    Universe: the current Nifty 50 (verified 1:1 with NSE)<br>
+    Data: Yahoo Finance · NSE India · Screener.in<br>
+    Status: local build · for study and education, not investment advice
+  </div>
+</section>
+
+<!-- ============ TOC ============ -->
+<section class="toc pb"><h2>Contents</h2>
+<ol>
+  <li><span class="tn">1</span><a href="#s1">Executive summary</a></li>
+  <li><span class="tn">2</span><a href="#s2">Objective &amp; core idea</a></li>
+  <li><span class="tn">3</span><a href="#s3">Data sources &amp; pipeline</a></li>
+  <li><span class="tn">4</span><a href="#s4">The Nifty 50 universe</a></li>
+  <li><span class="tn">5</span><a href="#s5">The dataset</a></li>
+  <li><span class="tn">6</span><a href="#s6">Methodology: buy-before / sell-after</a></li>
+  <li><span class="tn">7</span><a href="#s7">The win-rate mathematics</a></li>
+  <li><span class="tn">8</span><a href="#s8">How we predict all four events</a></li>
+  <li><span class="tn">9</span><a href="#s9">Current results — rankings leaders</a></li>
+  <li><span class="tn">10</span><a href="#s10">Data-quality work</a></li>
+  <li><span class="tn">11</span><a href="#s11">Technology stack</a></li>
+  <li><span class="tn">12</span><a href="#s12">The dashboard &amp; tabs</a></li>
+  <li><span class="tn">13</span><a href="#s13">Performance &amp; caching</a></li>
+  <li><span class="tn">14</span><a href="#s14">On machine learning</a></li>
+  <li><span class="tn">15</span><a href="#s15">Limitations &amp; findings</a></li>
+  <li><span class="tn">16</span><a href="#s16">Scripts reference</a></li>
+  <li><span class="tn">A</span><a href="#sa">Appendix: the 50 stocks</a></li>
+</ol></section>
+
+<!-- 1 -->
+<section id="s1"><h2><span class="n">1</span>Executive summary</h2>
+<p>This project studies <b>how the 50 Nifty stocks move around their corporate events</b> — quarterly results,
+  board meetings, corporate actions and material announcements — to test one disciplined idea: <b>buy a few days
+  before a known, scheduled event and sell a few days after.</b> For every stock and event type it brute-force
+  tests <b>64 timing rules</b> against the full event history, reports the best rule and its <b>win rate</b>, and
+  serves everything through a self-built web dashboard.</p>
+<div class="kpis">
+  <div class="kpi"><div class="v">50</div><div class="l">stocks (exact Nifty 50)</div></div>
+  <div class="kpi"><div class="v">68,589</div><div class="l">unique event-dates</div></div>
+  <div class="kpi"><div class="v">106,034</div><div class="l">feed rows analysed</div></div>
+  <div class="kpi"><div class="v">50/50</div><div class="l">fundamentals + prices</div></div>
+</div>
+<p class="lead">The honest headline: past win-rates around events are real but <b>in-sample and modest</b> — a
+  description of history, not a proven money machine. The project's value is the <b>transparent, reproducible
+  framework</b> and the <b>clean, verified, fully-historical Nifty 50 dataset</b> behind it.</p>
+</section>
+
+<!-- 2 -->
+<section id="s2"><h2><span class="n">2</span>Objective &amp; core idea</h2>
+<h3><span class="sn">2.1</span>The question</h3>
+<p>Do Nifty 50 stocks show a <b>repeatable price pattern</b> around their corporate events — and if so, what is the
+  best number of days to enter before and exit after each event type?</p>
+<h3><span class="sn">2.2</span>The hypothesis: anticipation + drift</h3>
+<p>Because event dates are published in advance, markets partly <b>anticipate</b> them (price drifts up into a
+  known results date) and partly <b>digest</b> them afterwards (price keeps drifting for days after the news). The
+  strategy sits inside both windows.</p>
+<div class="two">
+  <div class="card"><span class="tag b">Buy before</span><h3>Catch the anticipation</h3>
+    <p>Enter <b>N days before</b> to sit inside the run-up toward a date the market already knows.</p></div>
+  <div class="card"><span class="tag a">Sell after</span><h3>Catch the drift</h3>
+    <p>Exit <b>M days after</b> so the post-event drift plays out instead of selling into the first spike.</p></div>
+</div>
+<div class="callout"><b>Key framing.</b> We never forecast <em>whether</em> an event happens — the date is read off the
+  regulatory calendar. We only study the <em>price behaviour</em> around that fixed date.</div>
+</section>
+
+<!-- 3 -->
+<section id="s3" class="pb"><h2><span class="n">3</span>Data sources &amp; pipeline</h2>
+<h3><span class="sn">3.1</span>Three external sources, one engine</h3>
+<div class="fig">
+<svg viewBox="0 0 760 220" role="img" aria-label="Data pipeline">
+  <rect x="6" y="18" width="176" height="48" rx="10" fill="var(--blue-soft)" stroke="var(--blue)"/><text x="94" y="40" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--blue)">Yahoo Finance</text><text x="94" y="57" text-anchor="middle" font-size="10.5" fill="#37507e">daily adjusted prices</text>
+  <rect x="6" y="86" width="176" height="48" rx="10" fill="var(--amb-soft)" stroke="var(--amb)"/><text x="94" y="108" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--amb)">NSE India</text><text x="94" y="125" text-anchor="middle" font-size="10.5" fill="#8a5a1a">event feeds + index list</text>
+  <rect x="6" y="154" width="176" height="48" rx="10" fill="var(--viol-soft)" stroke="var(--viol)"/><text x="94" y="176" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--viol)">Screener.in</text><text x="94" y="193" text-anchor="middle" font-size="10.5" fill="#4b2fa0">fundamentals</text>
+  <path d="M182 42 C240 42 250 100 300 110" fill="none" stroke="var(--faint)" stroke-width="2" marker-end="url(#a)"/>
+  <path d="M182 110 h114" fill="none" stroke="var(--faint)" stroke-width="2" marker-end="url(#a)"/>
+  <path d="M182 178 C240 178 250 120 300 112" fill="none" stroke="var(--faint)" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="300" y="74" width="196" height="72" rx="12" fill="#fff" stroke="var(--ink)"/><text x="398" y="99" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--ink)">Analysis engine</text><text x="398" y="116" text-anchor="middle" font-size="10.5" fill="var(--mute)">event_behaviour · rankings</text><text x="398" y="132" text-anchor="middle" font-size="10.5" fill="var(--mute)">screener · disk cache</text>
+  <path d="M496 110 h44" fill="none" stroke="var(--faint)" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="544" y="58" width="210" height="44" rx="10" fill="var(--pos-soft)" stroke="var(--pos)"/><text x="649" y="77" text-anchor="middle" font-size="12" font-weight="700" fill="var(--pos)">Live dashboard</text><text x="649" y="94" text-anchor="middle" font-size="10.5" fill="#1c6b3a">nifty_dash · port 8090</text>
+  <rect x="544" y="120" width="210" height="44" rx="10" fill="var(--pos-soft)" stroke="var(--pos)"/><text x="649" y="139" text-anchor="middle" font-size="12" font-weight="700" fill="var(--pos)">Static site</text><text x="649" y="156" text-anchor="middle" font-size="10.5" fill="#1c6b3a">docs/nifty · GitHub Pages</text>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="var(--faint)"/></marker></defs>
+</svg>
+<div class="figcap"><b>Figure 3.1.</b> Three sources → cached files → one engine → live dashboard + static snapshot.</div>
+</div>
+<div class="tbl"><table>
+<thead><tr><th>Data</th><th>Source</th><th>From where (endpoint / file)</th><th>Cached as</th></tr></thead>
+<tbody>
+<tr><td>Daily prices</td><td>Yahoo Finance</td><td class="mono">query1.finance.yahoo.com/v8/finance/chart/&lt;SYM&gt;.NS</td><td class="mono">processed/price_cache/</td></tr>
+<tr><td>NIFTY index</td><td>Yahoo Finance</td><td class="mono">…/chart/^NSEI</td><td class="mono">price_cache/_NSEI.csv</td></tr>
+<tr><td>Event feeds</td><td>NSE India</td><td class="mono">nseindia.com/api/corporates-* + NSE export (.xlsx)</td><td class="mono">&lt;SYM&gt;/*.csv</td></tr>
+<tr><td>Fundamentals</td><td>Screener.in</td><td class="mono">screener.in/company/&lt;SYM&gt;/ + schedules API</td><td class="mono">pnl/ balance_sheet/ …</td></tr>
+<tr><td>Nifty 50 list</td><td>NSE India</td><td class="mono">equity-stockIndices?index=NIFTY 50 · Company Directory</td><td class="file">download_feeds.py</td></tr>
+</tbody></table></div>
+<h3><span class="sn">3.2</span>Caching &amp; offline operation</h3>
+<p>Every source is snapshotted to disk on first fetch. Prices use <b>adjusted close</b> (corrected for
+  splits/bonuses). Once downloaded, the entire system — dashboard included — runs <b>fully offline</b>.</p>
+</section>
+
+<!-- 4 -->
+<section id="s4"><h2><span class="n">4</span>The Nifty 50 universe</h2>
+<h3><span class="sn">4.1</span>The sync</h3>
+<p>The stock list was re-synced to the <b>exact current Nifty 50</b> from the official NSE Company Directory. The
+  old list had drifted to 52 symbols (stale members never removed through index reshuffles).</p>
+<div class="two">
+  <div class="card"><h3 style="color:var(--pos)">+4 added</h3><p class="mono" style="font-size:.84rem">ETERNAL (ex-Zomato) · INDIGO · MAXHEALTH · TMPV (Tata Motors PV)</p></div>
+  <div class="card"><h3 style="color:var(--neg)">−6 removed</h3><p class="mono" style="font-size:.84rem">BPCL · BRITANNIA · HEROMOTOCO · INDUSINDBK · LTIM · TATAMOTORS</p></div>
+</div>
+<h3><span class="sn">4.2</span>Verification</h3>
+<div class="callout good"><b>Result:</b> dashboard universe == NSE Company Directory == NSE MarketWatch export —
+  <b>all three identical, zero discrepancies.</b> Every company shown is a current Nifty 50 constituent
+  (the full list is in Appendix A).</div>
+</section>
+
+<!-- 5 -->
+<section id="s5"><h2><span class="n">5</span>The dataset</h2>
+<p>After refreshing from the NSE export and merging the full historical archive, the 50 stocks carry:</p>
+<div class="tbl"><table>
+<thead><tr><th>Feed</th><th class="num">Unique dates</th><th>Anchor column</th><th>What it is</th></tr></thead>
+<tbody>
+<tr><td>Announcements</td><td class="num">63,021</td><td class="mono">sort_date</td><td>Press releases, acquisitions, ratings, outcomes.</td></tr>
+<tr><td>Financial results</td><td class="num">3,158</td><td class="mono">broadCastDate</td><td>Quarterly/annual results, back to ~2007.</td></tr>
+<tr><td>Board meetings</td><td class="num">1,553</td><td class="mono">bm_date</td><td>Board-meeting dates, backfilled to 2006.</td></tr>
+<tr><td>Corporate actions</td><td class="num">857</td><td class="mono">exDate</td><td>Dividend / bonus / split ex-dates.</td></tr>
+<tr><td><b>Total</b></td><td class="num"><b>68,589</b></td><td></td><td>across 106,034 raw feed rows; fundamentals + prices for 50/50.</td></tr>
+</tbody></table></div>
+</section>
+
+<!-- 6 -->
+<section id="s6" class="pb"><h2><span class="n">6</span>Methodology — the buy-before / sell-after trade</h2>
+<h3><span class="sn">6.1</span>The two-leg trade</h3>
+<p>For an event pinned to trading day <b>T</b>: <b>buy N trading days before</b> at the close, hold through the
+  event, <b>sell M trading days after</b> at the close. You are never flat during the event.</p>
+<div class="fig">
+<svg viewBox="0 0 760 168" role="img" aria-label="Two-leg trade">
+  <rect x="120" y="80" width="520" height="14" rx="7" fill="var(--blue-soft)"/><line x1="40" y1="87" x2="720" y2="87" stroke="var(--line)" stroke-width="2"/>
+  <path d="M120 64 q0 -13 13 -13 h100 q13 0 13 13" fill="none" stroke="var(--blue)" stroke-width="1.4"/><text x="186" y="40" text-anchor="middle" font-size="11" font-weight="700" fill="var(--blue)">anticipation</text>
+  <path d="M400 64 q0 -13 13 -13 h214 q13 0 13 13" fill="none" stroke="var(--amb)" stroke-width="1.4"/><text x="520" y="40" text-anchor="middle" font-size="11" font-weight="700" fill="var(--amb)">reaction / drift</text>
+  <circle cx="120" cy="87" r="9" fill="var(--blue)"/><text x="120" y="118" text-anchor="middle" font-size="12" font-weight="700" fill="var(--blue)">BUY</text><text x="120" y="135" text-anchor="middle" font-size="10.5" fill="var(--mute)">close · T−N</text>
+  <rect x="391" y="78" width="18" height="18" rx="3" transform="rotate(45 400 87)" fill="var(--amb)"/><text x="400" y="118" text-anchor="middle" font-size="12" font-weight="700" fill="var(--amb)">EVENT · T</text>
+  <circle cx="640" cy="87" r="9" fill="var(--pos)"/><text x="640" y="118" text-anchor="middle" font-size="12" font-weight="700" fill="var(--pos)">SELL</text><text x="640" y="135" text-anchor="middle" font-size="10.5" fill="var(--mute)">close · T+M</text>
+</svg>
+<div class="figcap"><b>Figure 6.1.</b> One buy, one sell, held through the event.</div>
+</div>
+<h3><span class="sn">6.2</span>Anchoring &amp; the 64-rule grid</h3>
+<p><b>T</b> = the first trading day on/after the event date. We then test every combination of N = 1…8 days before
+  and M = 1…8 days after — an <b>8 × 8 = 64-rule grid</b>. Days are <b>trading days</b> (weekends/holidays skipped).</p>
+<div class="formula">
+  entry = <span class="k">close[T − N]</span>&nbsp;&nbsp;<span class="c">// N trading days before</span><br>
+  exit&nbsp; = <span class="k">close[T + M]</span>&nbsp;&nbsp;<span class="c">// M trading days after</span><br>
+  return% = ( exit / entry − 1 ) × 100&nbsp;&nbsp;→&nbsp; <span class="g">WIN</span> if &gt; 0 else <span class="r">LOSS</span>
+</div>
+<h3><span class="sn">6.3</span>Worked calendar — “buy 3 before, sell 2 after”</h3>
+<p>Results broadcast on <b>Thursday 24 July</b>. Note the sell lands on <b>Monday</b> — trading days skip the weekend.</p>
+<div class="tbl"><table>
+<thead><tr><th>Offset</th><th>Date</th><th>Weekday</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td class="mono">T−3</td><td>21 Jul</td><td>Mon</td><td class="pos">BUY at close</td></tr>
+<tr><td class="mono">T−2 … T−1</td><td>22–23 Jul</td><td>Tue–Wed</td><td>hold</td></tr>
+<tr class="hi"><td class="mono">T</td><td>24 Jul</td><td>Thu</td><td><b>EVENT — hold through</b></td></tr>
+<tr><td class="mono">T+1</td><td>25 Jul</td><td>Fri</td><td>hold</td></tr>
+<tr><td class="mono">—</td><td>26–27 Jul</td><td>Sat–Sun</td><td style="color:var(--faint)">market closed — not counted</td></tr>
+<tr><td class="mono">T+2</td><td>28 Jul</td><td>Mon</td><td class="neg">SELL at close</td></tr>
+</tbody></table></div>
+</section>
+
+<!-- 7 -->
+<section id="s7"><h2><span class="n">7</span>The win-rate mathematics</h2>
+<h3><span class="sn">7.1</span>The formula</h3>
+<p>Pool all past events of a type; for each of the 64 cells, the win rate is the share that finished green:</p>
+<div class="formula">win rate(N,M) = ( <span class="g">#events with return% &gt; 0</span> ) ÷ ( total events ) × 100</div>
+<h3><span class="sn">7.2</span>Worked example — 6 past results, rule “buy 2 / sell 1”</h3>
+<div class="tbl"><table>
+<thead><tr><th>Result #</th><th class="num">Entry</th><th class="num">Exit</th><th class="num">Return %</th><th>Outcome</th></tr></thead>
+<tbody>
+<tr><td>1</td><td class="num">1,000</td><td class="num">1,032</td><td class="num pos">+3.2</td><td class="pos">WIN</td></tr>
+<tr><td>2</td><td class="num">1,120</td><td class="num">1,109</td><td class="num neg">−1.0</td><td class="neg">LOSS</td></tr>
+<tr><td>3</td><td class="num">980</td><td class="num">1,005</td><td class="num pos">+2.6</td><td class="pos">WIN</td></tr>
+<tr><td>4</td><td class="num">1,210</td><td class="num">1,228</td><td class="num pos">+1.5</td><td class="pos">WIN</td></tr>
+<tr><td>5</td><td class="num">1,150</td><td class="num">1,142</td><td class="num neg">−0.7</td><td class="neg">LOSS</td></tr>
+<tr><td>6</td><td class="num">1,300</td><td class="num">1,339</td><td class="num pos">+3.0</td><td class="pos">WIN</td></tr>
+</tbody></table></div>
+<div class="formula">wins = 4 / 6&nbsp;&nbsp;→&nbsp; <b>win rate = 66.7%</b>&nbsp;&nbsp;·&nbsp;&nbsp;avg return = (3.2−1.0+2.6+1.5−0.7+3.0)/6 = <b>+1.43%</b></div>
+<h3><span class="sn">7.3</span>Choosing the one displayed rule</h3>
+<div class="steps">
+  <div class="stp"><div class="no">1</div><div class="bd"><b>Require enough events</b> — keep cells backed by ~5+ events.</div></div>
+  <div class="stp"><div class="no">2</div><div class="bd"><b>Keep the profitable cells</b> — average return must be positive.</div></div>
+  <div class="stp"><div class="no">3</div><div class="bd"><b>Rank by win rate, then average return</b> — the top cell becomes the displayed rule.</div></div>
+</div>
+</section>
+
+<!-- 8 -->
+<section id="s8" class="pb"><h2><span class="n">8</span>How we “predict” all four events</h2>
+<p>We read the date off the regulatory calendar. The four events split by <b>how knowable the date is</b>:</p>
+<div class="fig">
+<svg viewBox="0 0 760 116" role="img" aria-label="Knowability spectrum">
+  <line x1="40" y1="66" x2="720" y2="66" stroke="var(--line)" stroke-width="2"/>
+  <text x="150" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="var(--pos)">SCHEDULED — date known ahead</text>
+  <text x="600" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="var(--neg)">UNSCHEDULED</text>
+  <rect x="40" y="57" width="420" height="18" rx="9" fill="var(--pos-soft)"/><rect x="470" y="57" width="250" height="18" rx="9" fill="var(--neg-soft)"/>
+  <circle cx="110" cy="66" r="7" fill="var(--blue)"/><text x="110" y="96" text-anchor="middle" font-size="10.5" fill="var(--ink)">Board Meeting</text>
+  <circle cx="240" cy="66" r="7" fill="var(--blue)"/><text x="240" y="96" text-anchor="middle" font-size="10.5" fill="var(--ink)">Results</text>
+  <circle cx="390" cy="66" r="7" fill="var(--blue)"/><text x="390" y="96" text-anchor="middle" font-size="10.5" fill="var(--ink)">Corporate Action</text>
+  <circle cx="600" cy="66" r="7" fill="var(--neg)"/><text x="600" y="96" text-anchor="middle" font-size="10.5" fill="var(--ink)">Announcements</text>
+</svg>
+<div class="figcap"><b>Figure 8.1.</b> Three events have a date fixed in advance; announcements do not.</div>
+</div>
+<div class="tbl"><table>
+<thead><tr><th>Event</th><th>Anchor (T)</th><th>How the date is known in advance</th><th>Buy-before real?</th></tr></thead>
+<tbody>
+<tr><td><b>Quarterly Results</b></td><td class="mono">broadCastDate</td><td>SEBI LODR <b>Reg 29</b> — results board meeting intimated ≥ 5 clear days ahead.</td><td class="pos">Yes</td></tr>
+<tr><td><b>Board Meeting</b></td><td class="mono">bm_date</td><td>Same Reg 29 intimation announces the meeting date ~5 days ahead.</td><td class="pos">Yes</td></tr>
+<tr><td><b>Corporate Action</b></td><td class="mono">exDate</td><td>NSE broadcasts the record/ex-date days-to-weeks beforehand.</td><td class="pos">Yes</td></tr>
+<tr><td><b>Announcement</b></td><td class="mono">sort_date</td><td><b>Unscheduled</b> — press releases, acquisitions, ratings arrive without warning.</td><td class="neg">No*</td></tr>
+</tbody></table></div>
+<div class="callout warn"><b>*Announcements.</b> You cannot know the date ahead, so the buy-before leg is <em>not</em>
+  predictive — its win rate should be read only as <b>post-disclosure drift</b> and treated with extra caution.</div>
+<div class="callout warn"><b>Corporate actions use adjusted prices.</b> The ex-date drop is removed, so the win rate is
+  <b>residual total-return drift</b> — not dividend capture.</div>
+</section>
+
+<!-- 9 -->
+<section id="s9"><h2><span class="n">9</span>Current results — rankings leaders</h2>
+<p>Top-3 stocks by win rate for each event type, from the live system. Read every win rate <b>next to its event
+  count (n)</b> — a high rate on a tiny n is weak evidence.</p>
+<div class="tbl"><table>
+<thead><tr><th>Event</th><th class="medal">#</th><th>Stock</th><th>Rule</th><th class="num">Win %</th><th class="num">Avg %</th><th class="num">n</th></tr></thead>
+<tbody>
+<tr><td rowspan="3"><b>Quarterly Results</b></td><td class="medal">🥇</td><td class="mono">TMPV</td><td class="mono">buy 1 · sell 2</td><td class="num pos">86</td><td class="num">+6.14</td><td class="num">7</td></tr>
+<tr><td class="medal">🥈</td><td class="mono">APOLLOHOSP</td><td class="mono">buy 2 · sell 4</td><td class="num pos">74</td><td class="num">+3.02</td><td class="num">74</td></tr>
+<tr><td class="medal">🥉</td><td class="mono">NESTLEIND</td><td class="mono">buy 6 · sell 7</td><td class="num">71</td><td class="num">+0.05</td><td class="num">7</td></tr>
+<tr><td rowspan="3"><b>Board Meeting</b></td><td class="medal">🥇</td><td class="mono">HINDALCO</td><td class="mono">buy 1 · sell 4</td><td class="num pos">92</td><td class="num">+3.55</td><td class="num">12</td></tr>
+<tr><td class="medal">🥈</td><td class="mono">EICHERMOT</td><td class="mono">buy 3 · sell 3</td><td class="num pos">86</td><td class="num">+4.07</td><td class="num">7</td></tr>
+<tr><td class="medal">🥉</td><td class="mono">M&amp;M</td><td class="mono">buy 8 · sell 1</td><td class="num pos">84</td><td class="num">+4.54</td><td class="num">19</td></tr>
+<tr><td rowspan="3"><b>Corporate Action</b></td><td class="medal">🥇</td><td class="mono">SBILIFE</td><td class="mono">buy 2 · sell 8</td><td class="num pos">100</td><td class="num">+3.79</td><td class="num">8</td></tr>
+<tr><td class="medal">🥈</td><td class="mono">LT</td><td class="mono">buy 8 · sell 5</td><td class="num pos">100</td><td class="num">+6.74</td><td class="num neg">1</td></tr>
+<tr><td class="medal">🥉</td><td class="mono">JIOFIN</td><td class="mono">buy 8 · sell 5</td><td class="num pos">100</td><td class="num">+3.60</td><td class="num neg">1</td></tr>
+<tr><td rowspan="3"><b>Announcement</b></td><td class="medal">🥇</td><td class="mono">MAXHEALTH</td><td class="mono">buy 6 · sell 8</td><td class="num pos">73</td><td class="num">+4.90</td><td class="num">74</td></tr>
+<tr><td class="medal">🥈</td><td class="mono">NESTLEIND</td><td class="mono">buy 3 · sell 7</td><td class="num">71</td><td class="num">+1.18</td><td class="num">35</td></tr>
+<tr><td class="medal">🥉</td><td class="mono">APOLLOHOSP</td><td class="mono">buy 8 · sell 7</td><td class="num">66</td><td class="num">+2.71</td><td class="num">226</td></tr>
+</tbody></table></div>
+<div class="callout warn"><b>Read the sample size.</b> SBILIFE 100% (n=8) is meaningful; LT and JIOFIN 100% (n=1) are single
+  events and essentially noise. APOLLOHOSP announcements (66%, <b>n=226</b>) is the most statistically robust row here.</div>
+</section>
+
+<!-- 10 -->
+<section id="s10" class="pb"><h2><span class="n">10</span>Data-quality work</h2>
+<div class="steps">
+  <div class="stp"><div class="no">A</div><div class="bd"><b>Merged the full history.</b> The recent NSE export had truncated
+    the financial-results history (e.g. Reliance to 4 quarters). Merging with the original archive
+    <b>recovered +2,860 unique event-dates</b> — restoring 71–83 quarters per stock.</div></div>
+  <div class="stp"><div class="no">B</div><div class="bd"><b>Fixed board-meeting duplication.</b> The merge had doubled board
+    meetings; de-duplicating to one row per date <b>removed 617 duplicate rows</b> (2.22× → 1.07×).</div></div>
+  <div class="stp"><div class="no">C</div><div class="bd"><b>Backfilled board meetings 4×.</b> NSE's feed holds only ~2 recent
+    years; pulling historical "Outcome of Board Meeting" records from the announcements archive (to 2006) lifted the
+    average from <b>~9 to ~38 meetings per stock</b>.</div></div>
+</div>
+<div class="callout"><b>Why win-rates dropped slightly after the merge</b> (e.g. an announcement rule 61% → 57%): more
+  events regress a flukey small-sample figure toward an honest one — lower but more trustworthy.</div>
+</section>
+
+<!-- 11 -->
+<section id="s11"><h2><span class="n">11</span>Technology stack</h2>
+<h3><span class="sn">11.1</span>Methods</h3>
+<p>Event-study window · exhaustive 64-rule grid search · descriptive statistics · trading-day indexing · market
+  adjustment vs NIFTY · train/test + placebo validation · fingerprinted disk cache. <b>No machine learning</b> (see §14).</p>
+<h3><span class="sn">11.2</span>Tools — what, from where, used where</h3>
+<div class="tbl"><table>
+<thead><tr><th>Tool</th><th>Purpose</th><th>From where</th><th>Used in</th></tr></thead>
+<tbody>
+<tr><td><b>Python 3</b></td><td>Backend language.</td><td>python.org</td><td class="file">all scripts</td></tr>
+<tr><td><b>pandas</b></td><td>Tables, CSV, dates.</td><td>PyPI</td><td class="file">~all scripts</td></tr>
+<tr><td><b>numpy</b></td><td>Numeric math.</td><td>PyPI</td><td class="file">event/optimal scripts</td></tr>
+<tr><td><b>openpyxl</b></td><td>Excel export.</td><td>PyPI</td><td class="file">stock_server.py</td></tr>
+<tr><td><b>urllib · ssl · json</b></td><td>Fetch &amp; parse.</td><td>Python stdlib</td><td class="file">fetchers + server</td></tr>
+<tr><td><b>http.server</b></td><td>Web server (no framework).</td><td>Python stdlib</td><td class="file">stock_server.py</td></tr>
+<tr><td><b>HTML · CSS · JS · SVG</b></td><td>Dashboard UI &amp; charts.</td><td>hand-written</td><td class="file">stock_server.py</td></tr>
+<tr><td><b>Headless Chrome</b></td><td>HTML → PDF.</td><td>Google Chrome</td><td class="file">these reports</td></tr>
+<tr><td><b>Git · GitHub Pages</b></td><td>Version control &amp; static host.</td><td>github.com</td><td class="file">docs/nifty/</td></tr>
+</tbody></table></div>
+</section>
+
+<!-- 12 -->
+<section id="s12"><h2><span class="n">12</span>The dashboard &amp; its tabs</h2>
+<div class="tbl"><table>
+<thead><tr><th>Tab</th><th>Shows</th><th>Logic behind it</th></tr></thead>
+<tbody>
+<tr><td>Fundamentals</td><td>P&amp;L, balance sheet, ratios, quarterly</td><td>Reads local Screener CSVs; offline Excel export.</td></tr>
+<tr><td>Behaviour</td><td>The 64-cell grid + best rule + past-event paths</td><td>The core engine, per stock.</td></tr>
+<tr><td>Rankings</td><td>All 50 ranked by win rate, per event type</td><td>Runs the engine across all 50; cached.</td></tr>
+<tr><td>Screener</td><td>Filter by ROCE / growth / debt / P/E</td><td>Latest annual fundamentals per stock.</td></tr>
+<tr><td>Compare</td><td>2–3 stocks side by side</td><td>Fundamentals + behaviour together.</td></tr>
+<tr><td>Event feeds</td><td>Announcements / Board / Corp Actions / Results</td><td>The raw per-stock CSVs, newest first.</td></tr>
+</tbody></table></div>
+</section>
+
+<!-- 13 -->
+<section id="s13"><h2><span class="n">13</span>Performance &amp; caching</h2>
+<p>The feeds grew large, so computing rankings live took ~40 s (and stalled the browser under load). The fix:
+  rankings &amp; screener now <b>persist to a disk cache keyed by a data fingerprint</b> — instant loads, auto-refresh
+  only when the data changes; the cache also warms at startup.</p>
+<div class="tbl"><table>
+<thead><tr><th>Endpoint</th><th class="num">Before</th><th class="num">After</th></tr></thead>
+<tbody>
+<tr><td>Rankings</td><td class="num neg">~190 s (hung)</td><td class="num pos">0.09 s</td></tr>
+<tr><td>Screener</td><td class="num">~2.5 s</td><td class="num pos">0.003 s</td></tr>
+<tr><td>Behaviour / feeds</td><td class="num">—</td><td class="num pos">&lt; 0.7 s</td></tr>
+</tbody></table></div>
+</section>
+
+<!-- 14 -->
+<section id="s14"><h2><span class="n">14</span>On machine learning</h2>
+<p>The live system uses <b>no machine learning</b> — only grid search and statistics, deliberately, for full
+  transparency. A standalone experiment (<span class="file">ml_model.py</span>, scikit-learn) tested whether a model
+  could predict the results trade using price + fundamental features. Its honest conclusion: with only ~48 training
+  examples per stock, extra features <b>hurt</b> (curse of dimensionality) and the model <b>could not reliably beat
+  the trivial baseline</b> ("always predict WIN" ≈ 62%). ML is therefore not part of the product.</p>
+</section>
+
+<!-- 15 -->
+<section id="s15" class="pb"><h2><span class="n">15</span>Limitations &amp; findings</h2>
+<div class="callout warn"><b>In-sample bias.</b> The best (N,M) is chosen from 64 tries on the same history it is scored
+  on, so win rates flatter. They describe the past, not forward probabilities.</div>
+<div class="callout warn"><b>Small samples.</b> 100% on 1–3 events ≪ 60% on 30. Always read the win rate next to n.</div>
+<div class="callout warn"><b>Event overlap.</b> Board meetings and results share dates where the meeting <em>was</em> the results approval.</div>
+<div class="callout warn"><b>Corporate actions ≠ dividend capture</b> (adjusted-close, §8).</div>
+<div class="callout good"><b>Overall finding.</b> Under honest, market-adjusted testing, <b>no robust, reliably tradeable
+  edge survives out-of-sample</b> on the Nifty 50. The project's worth is the transparent framework and the clean,
+  verified, fully-historical dataset — a solid base for further, more careful research.</div>
+</section>
+
+<!-- 16 -->
+<section id="s16"><h2><span class="n">16</span>Scripts reference</h2>
+<div class="tbl"><table>
+<thead><tr><th>Script</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td class="file">event_behaviour.py</td><td>The engine — 64-rule grid of returns &amp; win rates.</td></tr>
+<tr><td class="file">stock_server.py</td><td>Dashboard app — payloads, feeds, rankings, screener, compare, caching.</td></tr>
+<tr><td class="file">nifty_dash.py</td><td>Nifty-50 front end (port 8090) — rebrands + warms caches.</td></tr>
+<tr><td class="file">download_feeds.py</td><td>Nifty 50 list + NSE feed downloader.</td></tr>
+<tr><td class="file">import_new_data.py</td><td>Splits the NSE Excel export into per-stock CSVs.</td></tr>
+<tr><td class="file">merge_event_history.py</td><td>Unions the export with the archive (recovers full history).</td></tr>
+<tr><td class="file">enrich_board_meetings.py</td><td>Backfills board meetings from the announcements archive.</td></tr>
+<tr><td class="file">build_static_nifty.py</td><td>Bakes the dashboard into a static GitHub Pages site.</td></tr>
+<tr><td class="file">fund_loader.py</td><td>Loads the Screener fundamentals folders.</td></tr>
+</tbody></table></div>
+</section>
+
+<!-- APPENDIX -->
+<section id="sa"><h2><span class="n">A</span>Appendix — the 50 constituents</h2>
+<p class="lead">Verified 1:1 against the NSE Company Directory and MarketWatch export.</p>
+<div class="cols3">
+ADANIENT<br>ADANIPORTS<br>APOLLOHOSP<br>ASIANPAINT<br>AXISBANK<br>BAJAJ-AUTO<br>BAJAJFINSV<br>BAJFINANCE<br>BEL<br>BHARTIARTL<br>CIPLA<br>COALINDIA<br>DRREDDY<br>EICHERMOT<br>ETERNAL<br>GRASIM<br>HCLTECH<br>HDFCBANK<br>HDFCLIFE<br>HINDALCO<br>HINDUNILVR<br>ICICIBANK<br>INDIGO<br>INFY<br>ITC<br>JIOFIN<br>JSWSTEEL<br>KOTAKBANK<br>LT<br>M&amp;M<br>MARUTI<br>MAXHEALTH<br>NESTLEIND<br>NTPC<br>ONGC<br>POWERGRID<br>RELIANCE<br>SBILIFE<br>SBIN<br>SHRIRAMFIN<br>SUNPHARMA<br>TATACONSUM<br>TATASTEEL<br>TCS<br>TECHM<br>TITAN<br>TMPV<br>TRENT<br>ULTRACEMCO<br>WIPRO
+</div>
+</section>
+
+<p class="foot">Nifty 50 Behaviour Analysis · Detailed Report · generated from the live system · win rate = share of past
+events where the chosen rule closed positive · numbers are in-sample · for study and education, not investment advice.</p>
+</div></body></html>
