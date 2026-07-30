@@ -84,14 +84,232 @@
   td:nth-child(1){white-space:nowrap;font-family:var(--mono);color:var(--ink)}
   .cat{font-family:var(--mono);font-size:.78rem;color:var(--amber)}
   .enote{color:var(--mute);font-size:.85rem;padding:10px 4px;font-family:var(--mono)}
+  /* behaviour heatmap */
+  .bhead{font-size:1.05rem;margin:20px 0 4px;font-weight:650}
+  .best{background:var(--panel);border:1px solid var(--grid);border-left:3px solid var(--pos);
+    border-radius:0 8px 8px 0;padding:8px 12px;margin:4px 0 8px;font-size:.9rem}
+  .best b{color:var(--ink)}
+  table.hm{border-collapse:collapse;font-variant-numeric:tabular-nums}
+  table.hm th{background:var(--panel);color:var(--mute);font-family:var(--mono);
+    font-size:.72rem;padding:6px 8px;position:static;border:1px solid var(--grid);white-space:nowrap}
+  table.hm td{padding:6px 9px;text-align:right;font-family:var(--mono);font-size:.8rem;
+    color:var(--ink);border:1px solid var(--grid);min-width:46px}
+  table.hm .bcell{outline:2px solid var(--blue);outline-offset:-2px;font-weight:800}
+  .bwrap{overflow-x:auto;margin:4px 0 6px}
+  /* simple behaviour cards */
+  .bintro{color:var(--mute);font-size:.95rem;margin:6px 0 16px;line-height:1.5}
+  .bintro b{color:var(--ink)}
+  .bcards{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+  @media(max-width:720px){.bcards{grid-template-columns:1fr}}
+  .bcard{background:var(--panel);border:1px solid var(--grid);border-radius:12px;padding:18px 20px}
+  .bcard-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+  .bet{font-weight:700;font-size:1.1rem}
+  .bn{font-family:var(--mono);font-size:.72rem;color:var(--mute)}
+  .brec{font-size:1.05rem;margin:2px 0 16px;line-height:1.5}
+  .brec b{color:var(--blue)}
+  .bstats{display:flex;gap:22px;align-items:flex-end;flex-wrap:wrap}
+  .bstat{flex:1;min-width:130px}
+  .blabel{font-size:.7rem;color:var(--mute);text-transform:uppercase;letter-spacing:.05em;
+    margin-bottom:6px;font-family:var(--mono)}
+  .bwinbar{position:relative;height:14px;background:#0e1420;border:1px solid var(--grid);
+    border-radius:100px;overflow:hidden}
+  .bwinbar>span{display:block;height:100%;border-radius:100px}
+  .bwinbar::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;
+    background:var(--ink);opacity:.35}
+  .bwinval{font-family:var(--mono);font-weight:700;font-size:1.25rem;margin-top:6px}
+  .bprofit{font-family:var(--mono);font-weight:700;font-size:1.6rem;line-height:1}
+  .bverdict{margin-top:16px;padding:9px 13px;border-radius:8px;font-size:.9rem;font-weight:600}
+  .v-strong{background:rgba(63,185,80,.14);color:var(--pos)}
+  .v-ok{background:rgba(210,153,34,.15);color:var(--amber)}
+  .v-weak{background:rgba(139,152,173,.12);color:var(--mute)}
+  .v-no{background:rgba(248,81,73,.14);color:var(--neg)}
+  .bdetails{margin-top:22px}
+  .bdetails summary{cursor:pointer;color:var(--mute);font-family:var(--mono);font-size:.85rem;
+    padding:6px 0}
+  .bdetails summary:hover{color:var(--ink)}
+  .bcard{cursor:pointer;transition:border-color .12s,transform .12s}
+  .bcard:hover{border-color:var(--blue)}
+  .bmore{font-size:.75rem;color:var(--blue);font-family:var(--mono);margin-top:12px}
+  /* small "recent event report" box inside each card */
+  .recbox{margin-top:13px;background:#111826;border:1px solid var(--grid);border-radius:8px;
+    padding:10px 12px;cursor:pointer;transition:border-color .12s}
+  .recbox:hover{border-color:var(--amber);background:#141c2c}
+  .recl{font-family:var(--mono);font-size:.66rem;letter-spacing:.05em;color:var(--mute);
+    text-transform:uppercase}
+  .recv{font-family:var(--mono);font-size:.92rem;margin-top:4px;color:var(--ink)}
+  .recmore{font-family:var(--mono);font-size:.68rem;color:var(--amber);margin-top:5px}
+  /* "all past events" link + table rows */
+  .histlink{margin-top:11px;font-family:var(--mono);font-size:.72rem;color:var(--blue);
+    cursor:pointer;padding:8px 10px;border:1px dashed var(--grid);border-radius:8px;
+    transition:border-color .12s,background .12s}
+  .histlink:hover{border-color:var(--blue);background:#141c2c}
+  .hrow{cursor:pointer;transition:background .1s}
+  .hrow:hover{background:#1b2333}
+  /* rankings tab */
+  .rtabs{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 4px}
+  .rtab{background:var(--panel);border:1px solid var(--grid);color:var(--mute);border-radius:8px;
+    padding:8px 14px;cursor:pointer;font-weight:600;font-size:.9rem;font-family:inherit;transition:all .12s}
+  .rtab:hover{color:var(--ink);border-color:var(--blue)}
+  .rtab.active{background:var(--blue);color:#0b1220;border-color:var(--blue)}
+  .rrow{cursor:pointer;transition:background .1s}
+  .rrow:hover{background:#1b2333}
+  .rk{font-family:var(--mono);font-size:1rem;width:44px;text-align:center}
+  .rsym{font-weight:700;color:var(--ink)}
+  .rnum{text-align:right;font-family:var(--mono);white-space:nowrap}
+  .rbar{position:relative;height:12px;min-width:120px;background:#0e1420;border:1px solid var(--grid);
+    border-radius:100px;overflow:hidden}
+  .rbar>span{display:block;height:100%;border-radius:100px}
+  /* screener */
+  .scfilters{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:8px 0 4px;
+    background:var(--panel);border:1px solid var(--grid);border-radius:10px;padding:12px 14px}
+  .scfilters label{font-size:.82rem;color:var(--mute);display:flex;align-items:center;gap:6px;font-family:var(--mono)}
+  .scfilters input{width:70px;background:#0e1420;border:1px solid var(--grid);color:var(--ink);
+    border-radius:6px;padding:5px 8px;font-family:var(--mono);font-size:.85rem}
+  .scbtn{background:var(--blue);color:#0b1220;border:0;border-radius:8px;padding:7px 14px;
+    font-weight:700;font-size:.85rem;cursor:pointer;font-family:inherit}
+  .scbtn.ghost{background:transparent;border:1px solid var(--grid);color:var(--mute)}
+  .scbtn:hover{filter:brightness(1.08)}
+  .scH{cursor:pointer;user-select:none}.scH.rt{text-align:right}.scH:hover{color:var(--ink)}
+  /* compare */
+  .cmpbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0}
+  .cmpchip{background:var(--panel);border:1px solid var(--grid);border-radius:20px;padding:5px 12px;
+    font-weight:600;font-size:.85rem}
+  .cmpchip b{cursor:pointer;color:var(--mute);margin-left:4px}
+  .cmpchip b:hover{color:var(--neg)}
+  .cmpbar input{background:#0e1420;border:1px solid var(--grid);color:var(--ink);border-radius:8px;
+    padding:6px 12px;font-family:inherit;font-size:.85rem}
+  .cmphead{cursor:pointer;color:var(--blue)}.cmphead:hover{text-decoration:underline}
+  .cmplab{color:var(--mute);font-size:.85rem;white-space:nowrap}
+  .cmpsec td{background:var(--panel);color:var(--mute);font-family:var(--mono);font-size:.72rem;
+    text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+  .hdate{color:var(--blue);font-weight:600}
+  .hopen{opacity:.5;font-size:.8em}
+  .hrow:hover .hopen{opacity:1}
+  /* movable, interactive per-event graph panel */
+  .evgraph{position:fixed;z-index:9999;width:460px;max-width:94vw;background:var(--panel);
+    border:1px solid var(--grid);border-radius:12px;box-shadow:0 18px 50px rgba(0,0,0,.55);overflow:hidden}
+  .evgraph-head{display:flex;justify-content:space-between;align-items:center;gap:10px;
+    padding:9px 12px;background:#111826;border-bottom:1px solid var(--grid);cursor:move;
+    font-weight:600;font-size:.86rem;color:var(--ink);user-select:none}
+  .evgraph-head .evx{cursor:pointer;color:var(--mute);font-size:1rem;padding:0 4px}
+  .evgraph-head .evx:hover{color:var(--neg,#f87171)}
+  .evgraph-body{padding:12px 14px 4px;position:relative}
+  .evtip{min-height:18px;text-align:center;font-family:var(--mono);font-size:.76rem;
+    color:var(--ink);opacity:0;transition:opacity .1s;margin-top:2px}
+  .evgraph-foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+    padding:8px 14px 12px;font-family:var(--mono);font-size:.72rem;color:var(--mute)}
+  .evgraph-foot .evhint{opacity:.75}
+  /* behaviour drill-in */
+  .backbtn{background:var(--panel);border:1px solid var(--grid);color:var(--ink);border-radius:7px;
+    padding:6px 13px;cursor:pointer;font-weight:600;font-size:.88rem;margin-bottom:12px}
+  .backbtn:hover{background:#243044}
+  .bhead2{font-size:1.35rem;font-weight:700;margin:2px 0 12px}
+  .bhead2 .bn{font-size:.8rem;color:var(--mute);font-family:var(--mono);font-weight:400}
+  .statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+  @media(max-width:600px){.statrow{grid-template-columns:1fr 1fr}}
+  .sbox{background:var(--panel);border:1px solid var(--grid);border-radius:10px;padding:13px 15px}
+  .sbox .l{font-size:.68rem;text-transform:uppercase;color:var(--mute);font-family:var(--mono);
+    letter-spacing:.05em}
+  .sbox .v{font-size:1.3rem;font-weight:700;font-family:var(--mono);margin-top:4px}
   .banner{background:var(--panel);border:1px solid var(--grid);border-radius:10px;
     padding:22px;color:var(--mute);text-align:center;line-height:1.6}
   .banner b{color:var(--ink)}
   .dl{background:var(--blue);color:#0b1220;border:0;border-radius:8px;padding:10px 18px;
     font-weight:700;font-size:.95rem;cursor:pointer}
   .dl:hover{background:#7cb8ff}
+  .dlbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 12px}
+  .dlbtn{background:var(--blue);color:#0b1220;border-radius:8px;padding:9px 16px;
+    font-weight:700;font-size:.9rem;text-decoration:none}
+  .dlbtn:hover{background:#7cb8ff}
+  .dlnote{color:var(--mute);font-size:.8rem;font-family:var(--mono)}
   a{color:var(--blue)}
   .hint{color:var(--mute);font-size:.82rem;margin-top:16px;font-family:var(--mono)}
+
+  /* ── new components: out-of-sample line + upcoming badges ── */
+  .boos{font-family:var(--mono);font-size:.74rem;color:var(--mute);margin-top:6px}
+  .boos b{font-weight:700}
+  .ubadge{font-family:var(--mono);font-size:.6rem;font-weight:700;padding:.15em .55em;
+    border-radius:20px;margin-left:6px;text-transform:uppercase;letter-spacing:.03em}
+  .ubadge.conf{background:rgba(63,185,80,.15);color:var(--pos)}
+  .ubadge.est{background:rgba(210,153,34,.16);color:var(--amber)}
+  .uwhen{font-family:var(--mono);font-size:.66rem;color:var(--mute);margin-top:2px}
+
+  /* ── visual polish (cosmetic only; no layout/logic change) ── */
+  body{background:
+    radial-gradient(1100px 520px at 15% -10%, #182444 0%, rgba(24,36,68,0) 60%),
+    radial-gradient(900px 500px at 100% 0%, #10233a 0%, rgba(16,35,58,0) 55%),
+    var(--bg) fixed;}
+  .bar{background:rgba(15,19,27,.80);backdrop-filter:saturate(140%) blur(10px);
+    -webkit-backdrop-filter:saturate(140%) blur(10px)}
+  .bar h1{display:flex;align-items:center;gap:9px;letter-spacing:-.01em}
+  .bar h1::before{content:"";width:11px;height:11px;border-radius:50%;flex:0 0 auto;
+    background:linear-gradient(135deg,var(--blue),#7ee0a6);box-shadow:0 0 12px rgba(88,166,255,.55)}
+  button{transition:background .13s,border-color .13s,transform .06s,box-shadow .13s}
+  button:hover{border-color:#3a4a66}
+  input{transition:border-color .13s,box-shadow .13s}
+  input:focus{box-shadow:0 0 0 3px rgba(88,166,255,.18)}
+  .tab{transition:color .13s,border-color .13s}
+  .sym{background:linear-gradient(92deg,var(--ink) 30%,#93b4e8);-webkit-background-clip:text;
+    background-clip:text;color:transparent}
+  .card,.bcard,.chart,.banner,.tblwrap,.sbox{
+    box-shadow:0 1px 2px rgba(0,0,0,.28),0 10px 26px rgba(0,0,0,.20)}
+  .card{border-radius:12px;transition:transform .13s,border-color .13s,box-shadow .13s}
+  .card:hover{transform:translateY(-2px);border-color:#3a4a66}
+  .bcard{border-radius:14px}
+  .bcard:hover{box-shadow:0 2px 4px rgba(0,0,0,.3),0 14px 34px rgba(0,0,0,.28)}
+  .rrow{cursor:pointer;transition:background .1s}
+  .rtab{transition:background .12s,color .12s,border-color .12s}
+  .tblwrap{border-radius:12px}
+  ::selection{background:rgba(88,166,255,.32)}
+  /* tidy scrollbars (WebKit) */
+  ::-webkit-scrollbar{width:11px;height:11px}
+  ::-webkit-scrollbar-thumb{background:#2c374d;border-radius:8px;border:2px solid var(--bg)}
+  ::-webkit-scrollbar-thumb:hover{background:#3a4a66}
+
+  /* Detail Modal */
+  .dm-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:10000;
+    background:rgba(0,0,0,0.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+    display:flex;align-items:center;justify-content:center;padding:16px}
+  .dm-box{background:#151c2a;border:1px solid var(--grid);border-radius:14px;
+    width:100%;max-width:760px;max-height:88vh;display:flex;flex-direction:column;
+    box-shadow:0 24px 60px rgba(0,0,0,0.7);overflow:hidden;animation:dmPop .18s ease-out}
+  @keyframes dmPop{from{transform:scale(.95);opacity:0}to{transform:scale(1);opacity:1}}
+  .dm-hdr{display:flex;justify-content:space-between;align-items:center;
+    padding:14px 20px;background:#1b2436;border-bottom:1px solid var(--grid)}
+  .dm-hdr-left{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .dm-badge{background:var(--blue);color:#0b1220;font-weight:700;font-family:var(--mono);
+    font-size:.82rem;padding:3px 10px;border-radius:6px}
+  .dm-feed-tag{color:var(--amber);font-family:var(--mono);font-size:.82rem;font-weight:600}
+  .dm-date-tag{color:var(--mute);font-family:var(--mono);font-size:.82rem}
+  .dm-close{background:transparent;border:0;color:var(--mute);font-size:1.2rem;
+    cursor:pointer;padding:2px 8px;border-radius:6px}
+  .dm-close:hover{color:var(--ink);background:#243044}
+  .dm-body{padding:20px;overflow-y:auto;line-height:1.5}
+  .dm-title{margin:0 0 16px;font-size:1.25rem;font-weight:700;color:var(--ink)}
+  .dm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:16px}
+  .dm-kv{background:#0e1420;border:1px solid var(--grid);padding:8px 12px;border-radius:8px}
+  .dm-k{display:block;font-size:.7rem;color:var(--mute);font-family:var(--mono);text-transform:uppercase}
+  .dm-v{display:block;font-size:.9rem;font-weight:600;color:var(--ink);margin-top:2px}
+  .dm-desc-wrap{margin-bottom:18px}
+  .dm-lbl{font-size:.75rem;font-family:var(--mono);color:var(--mute);text-transform:uppercase;margin-bottom:6px;letter-spacing:.03em}
+  .dm-desc{background:#0e1420;border:1px solid var(--grid);padding:14px 16px;border-radius:10px;
+    color:var(--ink);font-size:.92rem;white-space:pre-wrap;word-break:break-word}
+  .dm-file-sec{margin-top:16px}
+  .dm-file-box{background:#0e1420;border:1px solid #303d55;border-radius:10px;padding:14px}
+  .dm-file-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-weight:600;font-size:.9rem}
+  .dm-btn{display:inline-block;background:var(--blue);color:#0b1220;font-weight:700;
+    padding:8px 16px;border-radius:8px;text-decoration:none;font-size:.88rem}
+  .dm-btn:hover{background:#7cb8ff;text-decoration:none}
+  .dm-btn-sm{display:inline-block;background:#243044;border:1px solid var(--grid);color:var(--ink);
+    font-weight:600;padding:5px 12px;border-radius:6px;text-decoration:none;font-size:.78rem;font-family:var(--mono)}
+  .dm-btn-sm:hover{background:#303e58;text-decoration:none}
+  .dm-iframe{width:100%;height:320px;border:1px solid var(--grid);border-radius:8px;background:#0f131b;margin-top:8px}
+  .dm-note{background:rgba(210,153,34,0.12);border:1px solid rgba(210,153,34,0.3);color:var(--amber);
+    padding:10px 12px;border-radius:8px;font-size:.82rem;line-height:1.45;margin-top:8px}
+  .ev-row{cursor:pointer;transition:background .1s}
+  .ev-row:hover{background:#1e2738 !important}
+  .filelink{color:var(--blue);font-weight:600;text-decoration:none;font-family:var(--mono);font-size:.82rem}
+  .filelink:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -115,6 +333,11 @@
     <div class="hint" style="margin:0 0 10px">📦 Static snapshot for GitHub Pages — fundamentals for all stocks + events for pre-downloaded ones. Run <b>python stock_server.py</b> locally for live NSE downloads.</div>
     <div class="tabs" id="tabs">
       <button class="tab active" data-tab="fundamentals">Fundamentals</button>
+      <button class="tab" data-tab="behaviour">📈 Behaviour</button>
+      <button class="tab" data-tab="upcoming">📅 Upcoming</button>
+      <button class="tab" data-tab="rankings">🏆 Rankings</button>
+      <button class="tab" data-tab="screener">🔎 Screener</button>
+      <button class="tab" data-tab="compare">⚖ Compare</button>
       <button class="tab" data-tab="announcements">Announcements</button>
       <button class="tab" data-tab="board_meetings">Board Meetings</button>
       <button class="tab" data-tab="corporate_actions">Corporate Actions</button>
@@ -136,8 +359,46 @@
       </div>
     </div>
 
+    <!-- Behaviour view -->
+    <div id="behaviourview" style="display:none"></div>
+
+    <!-- Upcoming events watchlist (events still ahead + historical edge) -->
+    <div id="upcomingview" style="display:none"></div>
+
+    <!-- Rankings view (all stocks ordered by win rate, per event) -->
+    <div id="rankview" style="display:none"></div>
+
+    <!-- Screener view (filter all stocks by fundamentals) -->
+    <div id="screenview" style="display:none"></div>
+
+    <!-- Compare view (2-3 stocks side by side) -->
+    <div id="compareview" style="display:none"></div>
+
     <!-- Event view -->
     <div id="eventsview" style="display:none"></div>
+
+    <!-- Detail Modal for XML/PDF/Event Filings -->
+    <div id="detailModal" class="dm-overlay" style="display:none" onclick="if(event.target===this)closeDetailModal()">
+      <div class="dm-box">
+        <div class="dm-hdr">
+          <div class="dm-hdr-left">
+            <span class="dm-badge" id="dm-sym">SYM</span>
+            <span class="dm-feed-tag" id="dm-feed">Feed</span>
+            <span class="dm-date-tag" id="dm-date">Date</span>
+          </div>
+          <button class="dm-close" onclick="closeDetailModal()">✕</button>
+        </div>
+        <div class="dm-body">
+          <h2 class="dm-title" id="dm-title">Filing Details</h2>
+          <div id="dm-meta"></div>
+          <div id="dm-desc-wrap" class="dm-desc-wrap" style="display:none">
+            <div class="dm-lbl">Full Announcement / Intimation Details</div>
+            <div class="dm-desc" id="dm-desc"></div>
+          </div>
+          <div id="dm-file-sec" class="dm-file-sec" style="display:none"></div>
+        </div>
+      </div>
+    </div>
 
     <div class="hint">🔍 search any of 2,363 stocks · ← / → arrow keys to step · click a tab for event details.</div>
   </main>
@@ -173,60 +434,178 @@ function niceBounds(vals,incZero){
   let lo=Math.min(...v),hi=Math.max(...v),pad=((hi-lo)||1)*0.12;
   return {lo:lo-pad,hi:hi+pad};
 }
+function hexA(hex,a){                       // #rrggbb -> rgba()
+  const c=hex.replace("#",""); const n=parseInt(c.length===3?c.replace(/(.)/g,"$1$1"):c,16);
+  return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${a})`;
+}
+function mix(a,b,t){                        // blend two #rrggbb hex colours
+  const pa=parseInt(a.slice(1),16), pb=parseInt(b.slice(1),16);
+  const r=Math.round(((pa>>16)&255)+(((pb>>16)&255)-((pa>>16)&255))*t);
+  const g=Math.round(((pa>>8)&255)+(((pb>>8)&255)-((pa>>8)&255))*t);
+  const bl=Math.round((pa&255)+((pb&255)-(pa&255))*t);
+  return "#"+((1<<24)+(r<<16)+(g<<8)+bl).toString(16).slice(1);
+}
+function rrect(ctx,x,y,w,hh,r){
+  r=Math.min(r,Math.abs(w)/2,Math.abs(hh)/2);
+  if(ctx.roundRect){ctx.beginPath();ctx.roundRect(x,y,w,hh,r);return;}
+  ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+hh,r);ctx.arcTo(x+w,y+hh,x,y+hh,r);
+  ctx.arcTo(x,y+hh,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();
+}
 function yaxis(ctx,w,h,lo,hi){
-  ctx.font="11px Consolas"; ctx.fillStyle=COL.mute; ctx.strokeStyle=COL.grid;
-  ctx.textAlign="right"; ctx.textBaseline="middle";
+  ctx.font="11px Consolas"; ctx.textAlign="right"; ctx.textBaseline="middle";
   for(let i=0;i<=5;i++){
     const val=lo+(hi-lo)*i/5, y=h-M.b-(val-lo)/((hi-lo)||1)*(h-M.b-M.t);
-    ctx.beginPath();ctx.moveTo(M.l,y);ctx.lineTo(w-M.r,y);ctx.stroke();
-    ctx.fillText(Math.round(val).toLocaleString("en-IN"),M.l-6,y);
+    ctx.strokeStyle="rgba(138,152,173,.13)"; ctx.lineWidth=1; ctx.setLineDash([3,4]);
+    ctx.beginPath();ctx.moveTo(M.l,y);ctx.lineTo(w-M.r,y);ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle=COL.mute; ctx.fillText(Math.round(val).toLocaleString("en-IN"),M.l-8,y);
   }
 }
-function xlab(ctx,w,h,labels){
+function xlab(ctx,w,h,labels,xFn){
   ctx.font="10px Consolas"; ctx.fillStyle=COL.mute; ctx.textAlign="center"; ctx.textBaseline="top";
   const n=labels.length, iw=w-M.l-M.r;
-  labels.forEach((L,i)=>{const x=M.l+(n<2?iw/2:iw*i/(n-1)); ctx.fillText(L,x,h-M.b+6);});
+  const X=xFn||(i=>M.l+(n<2?iw/2:iw*i/(n-1)));
+  // thin the labels so they never overlap
+  let maxw=0; labels.forEach(L=>maxw=Math.max(maxw,ctx.measureText(String(L)).width));
+  const slot=iw/(n>1?n:1), step=Math.max(1,Math.ceil((maxw+6)/slot));
+  labels.forEach((L,i)=>{ if(step>1 && i%step!==0 && i!==n-1) return;
+    ctx.fillText(String(L),X(i),h-M.b+8); });
 }
 function empty(ctx,w,h,msg){ ctx.fillStyle=COL.mute;ctx.font="13px sans-serif";
   ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText(msg||"no data",w/2,h/2); }
 
-function lineChart(cv,labels,seriesList){
+function drawLineBase(cv,labels,seriesList){
   const {ctx,w,h}=setup(cv); ctx.clearRect(0,0,w,h);
   const all=seriesList.flatMap(s=>s.data);
-  const b=niceBounds(all,false); if(!b||!labels.length){empty(ctx,w,h,"no annual P&L");return;}
+  const b=niceBounds(all,false); if(!b||!labels.length){empty(ctx,w,h,"no annual P&L");return null;}
   yaxis(ctx,w,h,b.lo,b.hi); xlab(ctx,w,h,labels);
-  const n=labels.length,iw=w-M.l-M.r;
+  const n=labels.length,iw=w-M.l-M.r,base=h-M.b;
   const X=i=>M.l+(n<2?iw/2:iw*i/(n-1));
   const Y=v=>h-M.b-(v-b.lo)/((b.hi-b.lo)||1)*(h-M.b-M.t);
   seriesList.forEach((s,si)=>{
-    ctx.strokeStyle=s.color;ctx.lineWidth=2;ctx.beginPath();let started=false;
-    s.data.forEach((v,i)=>{ if(v===null||isNaN(v))return;
-      const x=X(i),y=Y(v); started?ctx.lineTo(x,y):ctx.moveTo(x,y); started=true; });
-    ctx.stroke();
-    s.data.forEach((v,i)=>{ if(v===null||isNaN(v))return;
-      ctx.fillStyle=s.color;ctx.beginPath();ctx.arc(X(i),Y(v),3,0,7);ctx.fill(); });
-    ctx.fillStyle=COL.ink;ctx.font="11px sans-serif";ctx.textAlign="left";ctx.textBaseline="middle";
-    const ly=M.t+6+si*15;
-    ctx.strokeStyle=s.color;ctx.lineWidth=3;ctx.beginPath();
+    const pts=[]; s.data.forEach((v,i)=>{ if(v!==null&&!isNaN(v)) pts.push([X(i),Y(v)]); });
+    if(!pts.length)return;
+    const g=ctx.createLinearGradient(0,M.t,0,base);
+    g.addColorStop(0,hexA(s.color,.30)); g.addColorStop(1,hexA(s.color,0));
+    ctx.beginPath();ctx.moveTo(pts[0][0],base);
+    pts.forEach(p=>ctx.lineTo(p[0],p[1])); ctx.lineTo(pts[pts.length-1][0],base);
+    ctx.closePath(); ctx.fillStyle=g; ctx.fill();
+    ctx.save(); ctx.shadowColor=hexA(s.color,.55); ctx.shadowBlur=9;
+    ctx.strokeStyle=s.color; ctx.lineWidth=2.5; ctx.lineJoin="round"; ctx.lineCap="round";
+    ctx.beginPath(); pts.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1])); ctx.stroke();
+    ctx.restore();
+    pts.forEach(p=>{ ctx.fillStyle=COL.panel; ctx.beginPath();ctx.arc(p[0],p[1],4.5,0,7);ctx.fill();
+      ctx.fillStyle=s.color; ctx.beginPath();ctx.arc(p[0],p[1],2.6,0,7);ctx.fill(); });
+    ctx.fillStyle=COL.ink;ctx.font="600 11px sans-serif";ctx.textAlign="left";ctx.textBaseline="middle";
+    const ly=M.t+8+si*17;
+    ctx.strokeStyle=s.color;ctx.lineWidth=3;ctx.lineCap="round";ctx.beginPath();
     ctx.moveTo(w-M.r-118,ly);ctx.lineTo(w-M.r-98,ly);ctx.stroke();
     ctx.fillText(s.name,w-M.r-92,ly);
   });
+  return {ctx,w,h,X,Y,n,base};
 }
-function barChart(cv,labels,vals,colors){
+function lineChart(cv,labels,seriesList){
+  drawLineBase(cv,labels,seriesList);
+  cv._model={kind:"line",labels,seriesList,draw:()=>drawLineBase(cv,labels,seriesList)};
+  bindHover(cv);
+}
+function drawBarBase(cv,labels,vals,colors){
   const {ctx,w,h}=setup(cv); ctx.clearRect(0,0,w,h);
-  const b=niceBounds(vals,true); if(!b||!labels.length){empty(ctx,w,h,"no quarterly data");return;}
-  yaxis(ctx,w,h,b.lo,b.hi); xlab(ctx,w,h,labels);
-  const n=labels.length,iw=w-M.l-M.r,slot=iw/n,bw=slot*0.6;
+  const b=niceBounds(vals,true); if(!b||!labels.length){empty(ctx,w,h,"no quarterly data");return null;}
+  const n=labels.length,iw=w-M.l-M.r,slot=iw/n,bw=Math.min(slot*0.58,30),d=Math.min(bw*0.34,8);
+  yaxis(ctx,w,h,b.lo,b.hi);
+  xlab(ctx,w,h,labels, i=>M.l+slot*(i+0.5));   // labels centred under each bar (+ auto-thinned)
   const Y=v=>h-M.b-(v-b.lo)/((b.hi-b.lo)||1)*(h-M.b-M.t);
   const yz=Y(0);
-  ctx.strokeStyle=COL.mute;ctx.beginPath();ctx.moveTo(M.l,yz);ctx.lineTo(w-M.r,yz);ctx.stroke();
+  ctx.strokeStyle="rgba(138,152,173,.35)";ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(M.l,yz);ctx.lineTo(w-M.r,yz);ctx.stroke();
   vals.forEach((v,i)=>{ if(v===null||isNaN(v))return;
-    const cx=M.l+slot*(i+0.5),y=Y(v);
-    ctx.fillStyle=colors[i]||COL.blue;
-    ctx.fillRect(cx-bw/2,Math.min(yz,y),bw,Math.abs(yz-y));
-    ctx.fillStyle=COL.ink;ctx.font="10px Consolas";ctx.textAlign="center";
-    ctx.textBaseline=v>=0?"bottom":"top";
-    ctx.fillText(Math.round(v).toLocaleString("en-IN"),cx,v>=0?y-3:y+3);
+    const cx=M.l+slot*(i+0.5),y=Y(v),col=colors[i]||COL.blue;
+    const x0=cx-bw/2, x1=cx+bw/2, top=Math.min(yz,y), bot=Math.max(yz,y), hh=Math.max(bot-top,1);
+    // 3D bar: front face (vertical gradient) + lighter top face + darker right face
+    const g=ctx.createLinearGradient(0,top,0,bot);
+    g.addColorStop(0,mix(col,"#ffffff",.12)); g.addColorStop(1,mix(col,"#000000",.22));
+    ctx.fillStyle=g; ctx.fillRect(x0,top,bw,hh);
+    ctx.fillStyle=mix(col,"#ffffff",.34);       // top face
+    ctx.beginPath();ctx.moveTo(x0,top);ctx.lineTo(x0+d,top-d);ctx.lineTo(x1+d,top-d);ctx.lineTo(x1,top);ctx.closePath();ctx.fill();
+    ctx.fillStyle=mix(col,"#000000",.38);       // right (side) face
+    ctx.beginPath();ctx.moveTo(x1,top);ctx.lineTo(x1+d,top-d);ctx.lineTo(x1+d,bot-d);ctx.lineTo(x1,bot);ctx.closePath();ctx.fill();
+    // value label (above the top face for +ve, below for -ve)
+    ctx.fillStyle=COL.ink;ctx.font="600 10px Consolas";ctx.textAlign="center";
+    if(v>=0){ ctx.textBaseline="bottom"; ctx.fillText(Math.round(v).toLocaleString("en-IN"),cx+d/2,top-d-2); }
+    else{ ctx.textBaseline="top"; ctx.fillText(Math.round(v).toLocaleString("en-IN"),cx,bot+3); }
+  });
+  return {ctx,w,h,slot,bw,Y,d};
+}
+function barChart(cv,labels,vals,colors,meta){
+  drawBarBase(cv,labels,vals,colors);
+  cv._model={kind:"bar",labels,vals,colors,meta,draw:()=>drawBarBase(cv,labels,vals,colors)};
+  bindHover(cv);
+}
+/* ---- hover interactivity: crosshair + value tooltip on the canvas ---- */
+function bindHover(cv){
+  cv.style.cursor="crosshair";
+  cv.onmousemove=function(e){
+    const m=cv._model; if(!m)return;
+    const g=m.draw(); if(!g)return;
+    const r=cv.getBoundingClientRect();
+    const mx=e.clientX-r.left;               // CSS px; ctx is dpr-scaled so this maps directly
+    if(m.kind==="line") hoverLine(g,m,mx); else hoverBar(g,m,mx);
+  };
+  cv.onmouseleave=function(){ const m=cv._model; if(m&&m.draw)m.draw(); };
+}
+function hoverLine(g,m,mx){
+  const ctx=g.ctx, n=g.n; if(n<1)return;
+  let idx=n<2?0:Math.round((mx-M.l)/((g.w-M.l-M.r)/(n-1)));
+  idx=Math.max(0,Math.min(n-1,idx));
+  const x=g.X(idx);
+  ctx.save(); ctx.strokeStyle="rgba(139,152,173,.55)"; ctx.setLineDash([4,4]); ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(x,M.t); ctx.lineTo(x,g.base); ctx.stroke(); ctx.setLineDash([]); ctx.restore();
+  const lines=[];
+  m.seriesList.forEach(s=>{ const v=s.data[idx]; if(v==null||isNaN(v))return;
+    const y=g.Y(v);
+    ctx.fillStyle=COL.panel; ctx.beginPath();ctx.arc(x,y,6,0,7);ctx.fill();
+    ctx.strokeStyle=s.color;ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y,5,0,7);ctx.stroke();
+    ctx.fillStyle=s.color;ctx.beginPath();ctx.arc(x,y,2.5,0,7);ctx.fill();
+    lines.push([s.color,s.name,"₹"+Math.round(v).toLocaleString("en-IN")+" cr"]);
+  });
+  chartTip(g,x,m.labels[idx],lines);
+}
+function hoverBar(g,m,mx){
+  const ctx=g.ctx, n=m.vals.length; if(!n)return;
+  let idx=Math.floor((mx-M.l)/g.slot); idx=Math.max(0,Math.min(n-1,idx));
+  const v=m.vals[idx]; if(v==null||isNaN(v))return;
+  const cx=M.l+g.slot*(idx+0.5), y=g.Y(v), yz=g.Y(0);
+  const top=Math.min(yz,y), hh=Math.max(Math.abs(yz-y),1), dd=g.d||0;
+  // highlight the 3D bar (front + top + side outline)
+  ctx.save(); ctx.strokeStyle="rgba(255,255,255,.85)"; ctx.lineWidth=1.5;
+  ctx.strokeRect(cx-g.bw/2,top,g.bw,hh);
+  ctx.beginPath();ctx.moveTo(cx-g.bw/2,top);ctx.lineTo(cx-g.bw/2+dd,top-dd);
+  ctx.lineTo(cx+g.bw/2+dd,top-dd);ctx.lineTo(cx+g.bw/2,top);ctx.stroke();
+  ctx.restore();
+  const col=(m.colors[idx]||COL.blue);
+  const lines=[[col,"Net Profit","₹"+Math.round(v).toLocaleString("en-IN")+" cr"]];
+  const meta=m.meta;
+  if(meta){
+    const yy=(meta.yoy||[])[idx], u=(meta.up||[])[idx];
+    if(yy!=null) lines.push([u?COL.pos:COL.neg,"YoY",(yy>=0?"+":"")+yy+"%"]);
+    else if(u!=null) lines.push([u?COL.pos:COL.neg,"vs last yr",u?"higher":"lower"]);
+  }
+  chartTip(g,cx,m.labels[idx],lines);
+}
+function chartTip(g,x,title,lines){
+  const ctx=g.ctx; ctx.textAlign="left"; ctx.textBaseline="top"; ctx.font="600 11px sans-serif";
+  let tw=title?ctx.measureText(title).width:0;
+  lines.forEach(l=>{ tw=Math.max(tw,16+ctx.measureText(l[1]+": "+l[2]).width); });
+  const pad=9,lh=17, boxW=tw+pad*2, boxH=pad*2+lh*(lines.length+(title?1:0));
+  let bx=x+14; if(bx+boxW>g.w-4) bx=x-14-boxW; if(bx<4)bx=4;
+  const by=M.t+6;
+  ctx.fillStyle="rgba(18,24,36,.97)"; ctx.strokeStyle="#2a3346"; ctx.lineWidth=1;
+  rrect(ctx,bx,by,boxW,boxH,9); ctx.fill(); ctx.stroke();
+  let yy=by+pad;
+  if(title){ ctx.fillStyle=COL.mute; ctx.fillText(title,bx+pad,yy); yy+=lh; }
+  lines.forEach(l=>{
+    ctx.fillStyle=l[0]; ctx.beginPath(); ctx.arc(bx+pad+4,yy+6,4,0,7); ctx.fill();
+    ctx.fillStyle=COL.ink; ctx.fillText(l[1]+": "+l[2], bx+pad+15, yy); yy+=lh;
   });
 }
 
@@ -271,9 +650,11 @@ function renderFundamentals(){
     {name:"Sales",color:COL.blue,data:stock.annual.sales},
     {name:"Net Profit",color:COL.amber,data:stock.annual.net_profit},
   ]);
-  const qc=stock.quarterly.net_profit.map((_,i)=>{
-    const g=stock.quarterly.yoy[i]; return (g!==undefined&&g!==null&&g>=0)?COL.pos:COL.neg; });
-  barChart($("c_quarter"),stock.quarterly.labels,stock.quarterly.net_profit,qc);
+  const Q=stock.quarterly;
+  const qc=Q.net_profit.map((_,i)=>{
+    const u=(Q.up||[])[i];                       // higher than same quarter last year?
+    return u===true?COL.pos:u===false?COL.neg:COL.blue; });   // blue = no prior-year to compare
+  barChart($("c_quarter"),Q.labels,Q.net_profit,qc,Q);
 }
 function card(t,v,s,col){
   return `<div class="card"><div class="t">${t}</div>`+
@@ -298,22 +679,120 @@ async function renderEvents(feed){
       `<button class="dl" onclick="fetchNSE()">⬇ Re-download NSE feeds for ${esc(pay.symbol)}</button></div>`;
     return;
   }
-  let html='<div class="tblwrap"><table><thead><tr>'+
+  // Financial Results: offer a full statements workbook built from the LOCAL
+  // folders (pnl/balance_sheet/cash_flow/ratios/quarterly) — no online fetch.
+  let html='';
+  if(feed==='financial_results'){
+    const su="/api/statements_excel?sym="+encodeURIComponent(SYMS[idx]);
+    html+=`<div class="dlbar"><a class="dlbtn" href="${su}" `+
+      `title="P&L, Balance Sheet, Cash Flow, Ratios & Quarterly from local data">`+
+      `⬇ Download Excel (financial statements)</a>`+
+      `<span class="dlnote">built from your offline folders — the 📊 XBRL links below are raw NSE filings</span></div>`;
+  }
+  html+='<div class="tblwrap"><table><thead><tr>'+
     F.columns.map(c=>`<th>${esc(c.label)}</th>`).join('')+'</tr></thead><tbody>';
-  F.rows.forEach(r=>{
-    html+='<tr>'+F.columns.map(c=>{
+  F.rows.forEach((r, rowIdx)=>{
+    html+='<tr class="ev-row" onclick="openDetailModal(\''+esc(SYMS[idx])+'\', \''+esc(feed)+'\', '+rowIdx+')">'+F.columns.map(c=>{
       const v=r[c.key]||'';
-      if(c.type==='link') return v.startsWith('http')
-        ? `<td><a href="${esc(v)}" target="_blank" rel="noopener">open ↗</a></td>` : `<td>${esc(v)}</td>`;
+      if(c.type==='link'){
+        if(!v.startsWith('http') && !v.startsWith('./')) return `<td>${esc(v)}</td>`;
+        if(c.key==='xbrl'){        // Download Excel -> built from the LOCAL folders
+          if(STATIC) return `<td><a href="javascript:void(0)" onclick="event.stopPropagation();openDetailModal('${esc(SYMS[idx])}','${esc(feed)}',${rowIdx})" class="filelink" title="${esc(v)}">📄 Detail ↗</a></td>`;
+          const u="/api/statements_excel?sym="+encodeURIComponent(SYMS[idx]);
+          return `<td><a href="${u}" onclick="event.stopPropagation()" title="Download financial statements from local data">📊 Excel ↓</a></td>`;
+        }
+        const isPdf=v.toLowerCase().endsWith(".pdf");
+        const isBm=v.startsWith("./bm/");
+        let label = isBm ? "📑 Summary ↗" : (isPdf ? "📄 PDF ↗" : "🔍 Detail ↗");
+        return `<td><a href="javascript:void(0)" onclick="event.stopPropagation();openDetailModal('${esc(SYMS[idx])}','${esc(feed)}',${rowIdx})" class="filelink" title="Click to view detailed summary">${label}</a></td>`;
+      }
       if(c.key==='desc') return `<td class="cat">${esc(v)}</td>`;
       return `<td>${esc(v)}</td>`;
     }).join('')+'</tr>';
   });
   html+='</tbody></table></div>';
-  if(F.total>F.shown) html+=`<div class="enote">Showing latest ${F.shown} of ${F.total.toLocaleString()} rows.</div>`;
-  else html+=`<div class="enote">${F.total.toLocaleString()} row(s).</div>`;
+  if(F.total>F.shown) html+=`<div class="enote">Showing latest ${F.shown} of ${F.total.toLocaleString()} rows. (Click any row for details)</div>`;
+  else html+=`<div class="enote">${F.total.toLocaleString()} row(s). (Click any row for details)</div>`;
   ev.innerHTML=html;
 }
+
+function openDetailModal(sym, feedKey, rowIdx){
+  const pay=eventsCache[sym];
+  if(!pay || !pay.feeds || !pay.feeds[feedKey]) return;
+  const F=pay.feeds[feedKey];
+  const r=F.rows[rowIdx];
+  if(!r) return;
+
+  const dateStr = r.sort_date || r.bm_date || r.broadCastDate || r.exDate || "";
+  const title = r.desc || r.bm_purpose || r.subject || r.relatingTo || F.label || "Filing Details";
+  const descText = r.attchmntText || r.bm_desc || r.subject || "";
+  let fileUrl = "";
+  F.columns.forEach(c => { if(c.type === 'link' && r[c.key]) fileUrl = r[c.key]; });
+
+  $("dm-sym").textContent = sym;
+  $("dm-feed").textContent = F.label;
+  $("dm-date").textContent = dateStr ? ("📅 " + dateStr) : "";
+  $("dm-title").textContent = title;
+
+  let metaHtml = '<div class="dm-grid">';
+  F.columns.forEach(c => {
+    if(c.type !== 'link' && r[c.key]){
+      metaHtml += `<div class="dm-kv"><span class="dm-k">${esc(c.label)}</span><span class="dm-v">${esc(r[c.key])}</span></div>`;
+    }
+  });
+  metaHtml += '</div>';
+  $("dm-meta").innerHTML = metaHtml;
+
+  if(descText && descText !== title){
+    $("dm-desc-wrap").style.display = "block";
+    $("dm-desc").textContent = descText;
+  } else {
+    $("dm-desc-wrap").style.display = "none";
+  }
+
+  const fileSec = $("dm-file-sec");
+  if(fileUrl && (fileUrl.startsWith("http") || fileUrl.startsWith("./bm/"))){
+    fileSec.style.display = "block";
+    const isBaked = fileUrl.startsWith("./bm/") || fileUrl.includes("/bm/");
+    const isPdf = fileUrl.toLowerCase().endsWith(".pdf");
+    const isXml = fileUrl.toLowerCase().endsWith(".xml");
+
+    let fhtml = '';
+    if(isBaked){
+      fhtml = `<div class="dm-file-box">`+
+        `<div class="dm-file-hdr"><span>📑 Parsed XBRL Filing Summary</span>`+
+        `<a href="${esc(fileUrl)}" target="_blank" class="dm-btn-sm">Open Full Page ↗</a></div>`+
+        `<iframe src="${esc(fileUrl)}" class="dm-iframe"></iframe></div>`;
+    } else if(isXml){
+      const rawUrl = STATIC ? fileUrl : ("/api/file?url=" + encodeURIComponent(fileUrl));
+      fhtml = `<div class="dm-file-box">`+
+        `<div class="dm-file-hdr"><span>📄 Source XBRL File (.xml)</span>`+
+        `<a href="${esc(rawUrl)}" target="_blank" class="dm-btn-sm">Open Source XML ↗</a></div>`+
+        `<div class="dm-note">💡 <b>Note on XBRL files:</b> Stock exchange XML files are technical filings. `+
+        `The full announcement text &amp; meeting purpose extracted from the filing are shown in the summary above.</div></div>`;
+    } else if(isPdf){
+      const pdfUrl = STATIC ? fileUrl : ("/api/file?url=" + encodeURIComponent(fileUrl));
+      fhtml = `<div class="dm-file-box">`+
+        `<div class="dm-file-hdr"><span>📄 Official PDF Attachment</span>`+
+        `<a href="${esc(pdfUrl)}" target="_blank" class="dm-btn">Open PDF Document ↗</a></div></div>`;
+    } else {
+      fhtml = `<div class="dm-file-box">`+
+        `<a href="${esc(fileUrl)}" target="_blank" class="dm-btn">Open Attachment ↗</a></div>`;
+    }
+    fileSec.innerHTML = fhtml;
+  } else {
+    fileSec.style.display = "none";
+  }
+
+  $("detailModal").style.display = "flex";
+}
+
+function closeDetailModal(){
+  const m=$("detailModal");
+  if(m) m.style.display="none";
+}
+
+document.addEventListener("keydown", e => { if(e.key === "Escape") closeDetailModal(); });
 
 async function fetchNSE(){
   const sym=SYMS[idx];
@@ -347,13 +826,624 @@ async function fetchNSE(){
   }
 }
 
+let behaviourCache={}, behaviourData=null;
+async function renderBehaviour(){
+  const bv=$("behaviourview"), sym=SYMS[idx];
+  bv.innerHTML='<div class="enote">computing how '+esc(sym)+' moved around its events…</div>';
+  let d;
+  try{
+    if(!behaviourCache[sym]) behaviourCache[sym]=await (await fetch("/api/behaviour?sym="+encodeURIComponent(sym))).json();
+    d=behaviourCache[sym];
+  }catch(e){ bv.innerHTML='<div class="banner">Error computing behaviour: '+esc(e)+'</div>'; return; }
+  if(activeTab!=="behaviour")return;
+  if(d.error){ bv.innerHTML=`<div class="banner">Couldn't analyse <b>${esc(sym)}</b>.<br><span class="enote">${esc(d.error)}</span></div>`; return; }
+  if(!d.available){
+    bv.innerHTML=`<div class="banner">Can't analyse <b>${esc(sym)}</b> yet — ${esc(d.reason||'no event feeds')}.<br><br>`+
+      `Download its NSE event feeds first (any event tab → ⬇ Download).</div>`;
+    return;
+  }
+  const order=["RESULTS","BOARD_MEETING","CORPORATE_ACTION","ANNOUNCEMENT"];
+  const keys=order.filter(k=>d.types[k]).concat(Object.keys(d.types).filter(k=>!order.includes(k)));
+
+  behaviourData=d;
+  let html='<div class="bintro">The best time to buy <b>'+esc(sym)+'</b> around each kind of event — '+
+    'based on what actually happened in the past. <b>Click any card</b> for its graph &amp; full summary.</div><div class="bcards">';
+  for(const et of keys){
+    const t=d.types[et], b=t.best;
+    const [vc,vt]=verdict(b.win_rate_pct,b.avg_return_pct);
+    const barcol=b.win_rate_pct>=55?COL.pos:(b.win_rate_pct>=50?COL.amber:COL.neg);
+    const ps=b.avg_return_pct>=0?'+':'';
+    const dbf=b.days_before, daf=b.days_after;
+    let rec='';
+    if(t.last){
+      const L=t.last, e=L.days.indexOf(0);
+      const p0=L.prices[0], pe=L.prices[e], pa=L.prices[L.prices.length-1];
+      const mv=(pa/p0-1)*100;
+      rec=`<div class="recbox" onclick="event.stopPropagation();openRecent('${et}')">
+        <div class="recl">📋 Recent event report · ${esc(L.date)}</div>
+        <div class="recv">₹${rup(p0)} → ₹${rup(pe)} → ₹${rup(pa)}
+          &nbsp;<b style="color:${mv>=0?COL.pos:COL.neg}">${mv>=0?'+':''}${mv.toFixed(2)}%</b></div>
+        <div class="recmore">click for full report →</div></div>`;
+    }
+    html+=`<div class="bcard" onclick="openBeh('${et}')">
+      <div class="bcard-top"><span class="bet">${esc(pretty(et))}</span><span class="bn">${t.n_events} past events</span></div>
+      <div class="brec">Buy <b>${dbf} day${dbf>1?'s':''} before</b> the event, then sell <b>${daf} day${daf>1?'s':''} after</b>.</div>
+      <div class="bstats">
+        <div class="bstat">
+          <div class="blabel">Chance of profit (win rate)</div>
+          <div class="bwinbar"><span style="width:${Math.max(2,Math.min(100,b.win_rate_pct))}%;background:${barcol}"></span></div>
+          <div class="bwinval" style="color:${barcol}">${b.win_rate_pct}%</div>
+        </div>
+        <div class="bstat">
+          <div class="blabel">Average gain per trade</div>
+          <div class="bprofit" style="color:${b.avg_return_pct>=0?COL.pos:COL.neg}">${ps}${b.avg_return_pct}%</div>
+        </div>
+      </div>
+      <div class="bverdict v-${vc}">${vt}</div>
+      <div class="bmore">📈 click for graph &amp; performance summary →</div>
+      ${rec}
+      ${(t.history&&t.history.length)?`<div class="histlink" onclick="event.stopPropagation();openHistory('${et}')">📜 all ${t.history.length} past events — what happened each time →</div>`:''}
+    </div>`;
+  }
+  html+='</div>';
+  bv.innerHTML=html;
+}
+
+/* ---- the recent-event report (opened from the small box on each card) ---- */
+function openRecent(et){
+  const d=behaviourData; if(!d||!d.types[et]||!d.types[et].last)return;
+  const t=d.types[et], L=t.last, bv=$("behaviourview");
+  const e=L.days.indexOf(0), n=L.prices.length;
+  const p0=L.prices[0], pe=L.prices[e], pa=L.prices[n-1];
+  const m1=(pe/p0-1)*100, m2=(pa/pe-1)*100, m3=(pa/p0-1)*100;
+  const c=v=>v>=0?COL.pos:COL.neg, s=v=>(v>=0?'+':'')+v.toFixed(2)+'%';
+  const rows=L.days.map((dd,i)=>{
+    const pct=(L.prices[i]/pe-1)*100;
+    const lab=dd===0?'EVENT DAY':(dd>0?'T+'+dd:'T'+dd);
+    const key=(i===0||dd===0||i===n-1);
+    return `<tr${key?' style="background:#1b2333;font-weight:700"':''}>`+
+      `<td>${lab}</td><td style="text-align:right">₹${rup(L.prices[i])}</td>`+
+      `<td style="text-align:right;color:${c(pct)}">${s(pct)}</td></tr>`;
+  }).join('');
+  const outcome=m3>=0?'PROFIT':'LOSS';
+  bv.innerHTML=`
+    <button class="backbtn" onclick="renderBehaviour()">← back to all events</button>
+    <div class="bhead2">Recent ${esc(pretty(et))} — full report
+      <span class="bn">· ${esc(d.symbol)} · ${esc(L.date)}</span></div>
+    <div class="bverdict v-${m3>=0?'strong':'no'}" style="display:inline-block">
+      ${outcome}: buying 6 days before and selling 3 days after would have returned ${s(m3)}</div>
+    <div class="statrow" style="grid-template-columns:repeat(3,1fr);margin-top:14px">
+      <div class="sbox"><div class="l">Price 6 days before</div><div class="v" style="color:${COL.amber}">₹${rup(p0)}</div></div>
+      <div class="sbox"><div class="l">Price on event day</div><div class="v">₹${rup(pe)}</div></div>
+      <div class="sbox"><div class="l">Price 3 days after</div><div class="v" style="color:${COL.pos}">₹${rup(pa)}</div></div>
+    </div>
+    <div class="statrow" style="grid-template-columns:repeat(3,1fr)">
+      <div class="sbox"><div class="l">Before → Event</div><div class="v" style="color:${c(m1)}">${s(m1)}</div></div>
+      <div class="sbox"><div class="l">Event → After</div><div class="v" style="color:${c(m2)}">${s(m2)}</div></div>
+      <div class="sbox"><div class="l">Total move</div><div class="v" style="color:${c(m3)}">${s(m3)}</div></div>
+    </div>
+    <div class="chart" style="margin-top:14px">
+      <span class="cs">move cursor 👆</span>
+      <span class="ct">Price around this event (₹)</span>
+      <canvas id="bmeter"></canvas>
+    </div>
+    <div class="bhead" style="margin-top:18px">Day-by-day prices</div>
+    <div class="tblwrap"><table><thead><tr><th>Day</th>
+      <th style="text-align:right">Price</th><th style="text-align:right">vs event day</th>
+      </tr></thead><tbody>${rows}</tbody></table></div>`;
+  resultMeter($("bmeter"),L);
+}
+
+/* ---- ALL past events of one type: what happened each time ---- */
+function openHistory(et){
+  const d=behaviourData; if(!d||!d.types[et]||!d.types[et].history)return;
+  const t=d.types[et], H=t.history, bv=$("behaviourview");
+  const c=v=>v>=0?COL.pos:COL.neg, s=v=>(v>=0?'+':'')+v.toFixed(2)+'%';
+  const wins=H.filter(e=>e.total_pct>0).length;
+  const wr=H.length?Math.round(wins/H.length*100):0;
+  const avg=H.length?H.reduce((a,e)=>a+e.total_pct,0)/H.length:0;
+  const best=H.reduce((a,e)=>e.total_pct>a?e.total_pct:a,-1e9);
+  const worst=H.reduce((a,e)=>e.total_pct<a?e.total_pct:a,1e9);
+  window._histET=pretty(et); window._histSym=d.symbol;
+  const rows=H.map((e,i)=>{
+    const out=e.total_pct>=0?'WIN':'LOSS';
+    return `<tr class="hrow" onclick="openEventGraph(${i})" title="click to open a movable price graph for this event">
+      <td class="hdate">${esc(e.date)} <span class="hopen">📈</span></td>
+      <td style="text-align:right">₹${rup(e.buy)}</td>
+      <td style="text-align:right">₹${rup(e.event)}</td>
+      <td style="text-align:right">₹${rup(e.sell)}</td>
+      <td style="text-align:right;color:${c(e.before_pct)}">${s(e.before_pct)}</td>
+      <td style="text-align:right;color:${c(e.after_pct)}">${s(e.after_pct)}</td>
+      <td style="text-align:right;color:${c(e.total_pct)};font-weight:700">${s(e.total_pct)}</td>
+      <td style="text-align:center;color:${c(e.total_pct)};font-weight:700">${out}</td></tr>`;
+  }).join('');
+  window._histData=H;
+  bv.innerHTML=`
+    <button class="backbtn" onclick="renderBehaviour()">← back to all events</button>
+    <div class="bhead2">All past ${esc(pretty(et))} — what happened each time
+      <span class="bn">· ${esc(d.symbol)} · ${H.length} events</span></div>
+    <div class="statrow" style="grid-template-columns:repeat(5,1fr);margin-top:12px">
+      <div class="sbox"><div class="l">Past events</div><div class="v">${H.length}</div></div>
+      <div class="sbox"><div class="l">Win rate</div><div class="v" style="color:${wr>=55?COL.pos:(wr>=50?COL.amber:COL.neg)}">${wr}%</div></div>
+      <div class="sbox"><div class="l">Average total move</div><div class="v" style="color:${c(avg)}">${s(avg)}</div></div>
+      <div class="sbox"><div class="l">Best</div><div class="v" style="color:${COL.pos}">${s(best)}</div></div>
+      <div class="sbox"><div class="l">Worst</div><div class="v" style="color:${COL.neg}">${s(worst)}</div></div>
+    </div>
+    <div class="enote">Each row: buy 6 trading days before the event, sell 3 days after — the same
+      window as the “recent event report”, shown for every past event (newest first). Click a row for its price chart.</div>
+    <div id="histchart"></div>
+    <div class="tblwrap" style="margin-top:12px"><table><thead><tr>
+      <th>Event date</th><th style="text-align:right">Buy (T-6)</th>
+      <th style="text-align:right">Event day</th><th style="text-align:right">Sell (T+3)</th>
+      <th style="text-align:right">Before→Event</th><th style="text-align:right">Event→After</th>
+      <th style="text-align:right">Total</th><th style="text-align:center">Result</th>
+      </tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+function histRow(i){
+  const e=(window._histData||[])[i]; if(!e)return;
+  const box=$("histchart");
+  box.innerHTML=`<div class="chart" style="margin-top:14px">
+    <span class="cs">move cursor 👆</span>
+    <span class="ct">Price around the ${esc(e.date)} event (₹)</span>
+    <canvas id="hmeter"></canvas></div>`;
+  resultMeter($("hmeter"),{date:e.date,days:e.days,prices:e.prices});
+  box.scrollIntoView({behavior:"smooth",block:"nearest"});
+}
+
+/* ---- a MOVABLE, interactive price graph for one past event ---- */
+function openEventGraph(i){
+  const H=window._histData||[], e=H[i]; if(!e)return;
+  const et=window._histET||'Event', sym=window._histSym||'';
+  const old=document.getElementById('evgraph'); if(old) old.remove();
+
+  const days=e.days, px=e.prices, n=px.length, ei=days.indexOf(0);
+  const W=460,Hh=260,L=52,R=16,T=20,B=36, pw=W-L-R, ph=Hh-T-B;
+  const lo=Math.min(...px), hi=Math.max(...px), pad=(hi-lo)*0.12||1;
+  const vmin=lo-pad, vmax=hi+pad;
+  const X=k=>L+k/(n-1)*pw, Y=v=>T+(vmax-v)/(vmax-vmin)*ph;
+  const P=v=>((v/px[ei]-1)*100), sp=v=>(v>=0?'+':'')+v.toFixed(2)+'%';
+  const BL='#5b9bff', GR='#2b3446', INK='#e6e9ef', MU='#98a2b3', PO='#5ec98a', NE='#f87171';
+
+  let g=`<svg id="evsvg" viewBox="0 0 ${W} ${Hh}" style="width:100%;height:auto;display:block">`;
+  // gridlines + price ticks
+  for(let t=0;t<=3;t++){ const v=vmin+(vmax-vmin)*t/3, y=Y(v);
+    g+=`<line x1="${L}" y1="${y.toFixed(1)}" x2="${W-R}" y2="${y.toFixed(1)}" stroke="${GR}" stroke-width="1"/>`;
+    g+=`<text x="${L-8}" y="${(y+4).toFixed(1)}" fill="${MU}" font-size="10" text-anchor="end">₹${Math.round(v)}</text>`; }
+  // event-day marker
+  g+=`<line x1="${X(ei).toFixed(1)}" y1="${T}" x2="${X(ei).toFixed(1)}" y2="${T+ph}" stroke="${MU}" stroke-width="1.2" stroke-dasharray="4 4"/>`;
+  g+=`<text x="${X(ei).toFixed(1)}" y="${T-6}" fill="${MU}" font-size="10" text-anchor="middle">EVENT</text>`;
+  // x labels
+  for(let k=0;k<n;k++){ const d=days[k]; if(d%2===0||d===0)
+    g+=`<text x="${X(k).toFixed(1)}" y="${Hh-18}" fill="${MU}" font-size="9.5" text-anchor="middle">${d===0?'T':'T'+(d>0?'+':'')+d}</text>`; }
+  // price line + points
+  let pts=px.map((v,k)=>`${X(k).toFixed(1)},${Y(v).toFixed(1)}`).join(' ');
+  g+=`<polyline points="${pts}" fill="none" stroke="${BL}" stroke-width="2.2" stroke-linejoin="round"/>`;
+  px.forEach((v,k)=>{ const col=(k===0)?PO:(k===n-1)?NE:BL;
+    g+=`<circle cx="${X(k).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="${(k===0||k===n-1)?4:2.6}" fill="${col}"/>`; });
+  // crosshair (updated on hover)
+  g+=`<line id="evx" x1="0" y1="${T}" x2="0" y2="${T+ph}" stroke="${BL}" stroke-width="1" opacity="0"/>`;
+  g+=`<circle id="evdot" cx="0" cy="0" r="5" fill="#fff" stroke="${BL}" stroke-width="2.5" opacity="0"/>`;
+  g+=`<rect id="evhit" x="${L}" y="${T}" width="${pw}" height="${ph}" fill="transparent"/>`;
+  g+=`</svg>`;
+
+  const el=document.createElement('div');
+  el.id='evgraph'; el.className='evgraph';
+  el.style.left=Math.max(20,(window.innerWidth-W-40)/2)+'px';
+  el.style.top='120px';
+  el.innerHTML=`
+    <div class="evgraph-head" id="evhead">
+      <span>📈 ${esc(et)} · ${esc(sym)} · ${esc(e.date)}</span>
+      <span class="evx" title="close" onclick="document.getElementById('evgraph').remove()">✕</span>
+    </div>
+    <div class="evgraph-body">${g}<div class="evtip" id="evtip"></div></div>
+    <div class="evgraph-foot">
+      <span>buy T-6 ₹${rup(e.buy)} · sell T+3 ₹${rup(e.sell)} · total <b style="color:${e.total_pct>=0?PO:NE}">${sp(e.total_pct)}</b></span>
+      <span class="evhint">drag title to move · hover line for values</span></div>`;
+  document.body.appendChild(el);
+
+  // hover crosshair
+  const svg=$("evsvg"), xln=$("evx"), dot=$("evdot"), tip=$("evtip"), hit=$("evhit");
+  function move(ev){
+    const r=svg.getBoundingClientRect(), sx=(ev.clientX-r.left)/r.width*W;
+    let k=Math.round((sx-L)/pw*(n-1)); k=Math.max(0,Math.min(n-1,k));
+    const x=X(k), y=Y(px[k]);
+    xln.setAttribute('x1',x); xln.setAttribute('x2',x); xln.setAttribute('opacity','.6');
+    dot.setAttribute('cx',x); dot.setAttribute('cy',y); dot.setAttribute('opacity','1');
+    const d=days[k], lab=d===0?'EVENT DAY':('T'+(d>0?'+':'')+d);
+    tip.style.opacity=1;
+    tip.innerHTML=`<b>${lab}</b> · ₹${rup(px[k])} · <span style="color:${P(px[k])>=0?PO:NE}">${sp(P(px[k]))}</span> vs event`;
+  }
+  hit.addEventListener('mousemove',move);
+  svg.addEventListener('mouseleave',()=>{xln.setAttribute('opacity','0');dot.setAttribute('opacity','0');tip.style.opacity=0;});
+
+  // drag to move the whole panel
+  const head=$("evhead"); let dx=0,dy=0,drag=false;
+  head.addEventListener('mousedown',ev=>{drag=true;dx=ev.clientX-el.offsetLeft;dy=ev.clientY-el.offsetTop;ev.preventDefault();});
+  document.addEventListener('mousemove',ev=>{ if(!drag)return;
+    el.style.left=Math.max(0,Math.min(window.innerWidth-60,ev.clientX-dx))+'px';
+    el.style.top=Math.max(0,Math.min(window.innerHeight-40,ev.clientY-dy))+'px'; });
+  document.addEventListener('mouseup',()=>{drag=false;});
+}
+
+/* ---- drill-in: one event type, with graph + performance summary ---- */
+function openBeh(et){
+  const d=behaviourData; if(!d||!d.types[et])return;
+  const t=d.types[et], b=t.best, bv=$("behaviourview");
+  const [vc,vt]=verdict(b.win_rate_pct,b.avg_return_pct);
+  const pc=v=>(v==null?'—':(v>=0?'+':'')+v+'%');
+  const col=v=>(v==null?COL.mute:(v>=0?COL.pos:COL.neg));
+  bv.innerHTML=`
+    <button class="backbtn" onclick="renderBehaviour()">← back to all events</button>
+    <div class="bhead2">${esc(pretty(et))} <span class="bn">· ${esc(d.symbol)} · ${t.n_events} past events</span></div>
+    <div class="bverdict v-${vc}" style="display:inline-block">${vt}</div>
+    <div class="brec" style="margin-top:12px">Best rule: buy <b>${b.days_before} day${b.days_before>1?'s':''} before</b> the event, sell <b>${b.days_after} day${b.days_after>1?'s':''} after</b>.</div>
+    <div class="chart" style="margin-top:8px">
+      <span class="cs">🟢 BUY · 🔴 SELL · move cursor 👆</span>
+      <span class="ct">How the price usually moves around a ${esc(pretty(et)).toLowerCase()}</span>
+      <canvas id="bpath"></canvas>
+    </div>
+    <div class="statrow">
+      <div class="sbox"><div class="l">Chance of profit</div><div class="v" style="color:${b.win_rate_pct>=55?COL.pos:(b.win_rate_pct>=50?COL.amber:COL.neg)}">${b.win_rate_pct}%</div></div>
+      <div class="sbox"><div class="l">Average gain</div><div class="v" style="color:${col(b.avg_return_pct)}">${pc(b.avg_return_pct)}</div></div>
+      <div class="sbox"><div class="l">Typical (median) gain</div><div class="v" style="color:${col(b.median_pct)}">${pc(b.median_pct)}</div></div>
+      <div class="sbox"><div class="l">Best case</div><div class="v" style="color:${COL.pos}">${pc(b.best_case)}</div></div>
+      <div class="sbox"><div class="l">Worst case</div><div class="v" style="color:${COL.neg}">${pc(b.worst_case)}</div></div>
+      <div class="sbox"><div class="l">Events tested</div><div class="v">${b.n}</div></div>
+    </div>
+    <div class="enote">The line shows how the stock moved on average, lined up so day 0 is the event.
+      A rise before day 0 = it drifts up INTO the event; drift after 0 = it keeps re-pricing on the news.</div>
+    ${t.last?`
+    <div class="bhead" style="margin-top:22px">Most recent one · ${esc(t.last.date)}</div>
+    <div class="chart">
+      <span class="cs">move cursor over the line 👆</span>
+      <span class="ct">Actual price around the last event (₹)</span>
+      <canvas id="bmeter"></canvas>
+    </div>
+    <div class="statrow" style="grid-template-columns:repeat(3,1fr)">
+      <div class="sbox"><div class="l">6 days before</div><div class="v" style="color:${COL.amber}">₹${rup(t.last.prices[0])}</div></div>
+      <div class="sbox"><div class="l">On event day</div><div class="v">₹${rup(t.last.prices[t.last.days.indexOf(0)])}</div></div>
+      <div class="sbox"><div class="l">3 days after</div><div class="v" style="color:${COL.pos}">₹${rup(t.last.prices[t.last.prices.length-1])}</div></div>
+    </div>`:''}
+    <details class="bdetails"><summary>▸ Show the full day-by-day grid (advanced)</summary>
+      ${heatmap(t.grid_return,t.best,d.n_before,d.n_after)}</details>`;
+  if(t.path && t.path.avg_pct.length) avgMoveChart($("bpath"),t.path.days,t.path.avg_pct,b);
+  if(t.last) resultMeter($("bmeter"),t.last);
+}
+function avgMoveChart(cv,days,vals,best){
+  const n=days.length, ev=days.indexOf(0);
+  const buy=days.indexOf(-best.days_before), sell=days.indexOf(best.days_after);
+  function draw(hi){
+    const {ctx,w,h}=setup(cv); ctx.clearRect(0,0,w,h);
+    let lo=Math.min(0,...vals), up=Math.max(0,...vals);
+    const pad=((up-lo)||1)*0.18; lo-=pad; up+=pad;
+    const iw=w-M.l-M.r, X=i=>M.l+(n<2?iw/2:iw*i/(n-1)), Y=v=>h-M.b-(v-lo)/((up-lo)||1)*(h-M.b-M.t);
+    ctx.font="10px Consolas";ctx.textAlign="right";ctx.textBaseline="middle";
+    for(let k=0;k<=4;k++){const val=lo+(up-lo)*k/4,y=Y(val);
+      ctx.strokeStyle=COL.grid;ctx.beginPath();ctx.moveTo(M.l,y);ctx.lineTo(w-M.r,y);ctx.stroke();
+      ctx.fillStyle=COL.mute;ctx.fillText((val>=0?"+":"")+val.toFixed(1)+"%",M.l-6,y);}
+    const yz=Y(0);ctx.strokeStyle=COL.mute;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(M.l,yz);ctx.lineTo(w-M.r,yz);ctx.stroke();
+    ctx.textAlign="center";ctx.textBaseline="top";ctx.fillStyle=COL.mute;
+    days.forEach((d,i)=>ctx.fillText(d===0?"EVENT":(d>0?"+"+d:""+d),X(i),h-M.b+6));
+    if(ev>=0){ctx.strokeStyle=COL.grid;ctx.setLineDash([4,4]);ctx.beginPath();ctx.moveTo(X(ev),M.t);ctx.lineTo(X(ev),h-M.b);ctx.stroke();ctx.setLineDash([]);}
+    ctx.strokeStyle=COL.blue;ctx.lineWidth=2;ctx.beginPath();
+    vals.forEach((v,i)=>{const x=X(i),y=Y(v);i?ctx.lineTo(x,y):ctx.moveTo(x,y);});ctx.stroke();
+    function mark(i,c,txt){ if(i<0)return; const x=X(i),y=Y(vals[i]);
+      ctx.fillStyle=c;ctx.beginPath();ctx.arc(x,y,5,0,7);ctx.fill();
+      ctx.font="bold 10px Consolas";ctx.textAlign="center";ctx.textBaseline="bottom";ctx.fillText(txt,x,y-8);}
+    mark(buy,COL.pos,"BUY"); mark(sell,COL.neg,"SELL");
+    if(hi!=null){const x=X(hi),y=Y(vals[hi]);
+      ctx.strokeStyle=COL.mute;ctx.setLineDash([3,3]);ctx.beginPath();ctx.moveTo(x,M.t);ctx.lineTo(x,h-M.b);ctx.stroke();ctx.setLineDash([]);
+      ctx.fillStyle=COL.blue;ctx.beginPath();ctx.arc(x,y,5,0,7);ctx.fill();
+      const dd=days[hi], lab=dd===0?"EVENT DAY":(dd>0?"T+"+dd:"T"+dd);
+      const txt=lab+"   "+(vals[hi]>=0?"+":"")+vals[hi].toFixed(2)+"%";
+      ctx.font="12px Consolas";const tw=ctx.measureText(txt).width+16;
+      let tx=x+10; if(tx+tw>w-M.r+4)tx=x-tw-10; const ty=Math.max(M.t,y-34);
+      ctx.fillStyle=COL.panel;ctx.strokeStyle=COL.blue;ctx.lineWidth=1;
+      ctx.beginPath();ctx.rect(tx,ty,tw,24);ctx.fill();ctx.stroke();
+      ctx.fillStyle=COL.ink;ctx.textAlign="left";ctx.textBaseline="middle";ctx.fillText(txt,tx+8,ty+12);}
+  }
+  draw(null);
+  cv.onmousemove=e=>{const r=cv.getBoundingClientRect();const iw=r.width-M.l-M.r;
+    let i=Math.round((e.clientX-r.left-M.l)/(iw/(n-1)));draw(Math.max(0,Math.min(n-1,i)));};
+  cv.onmouseleave=()=>draw(null);
+}
+function rup(v){return Number(v).toLocaleString("en-IN",{maximumFractionDigits:2});}
+function resultMeter(cv,data){
+  const days=data.days, prices=data.prices, n=days.length, ev=days.indexOf(0);
+  function draw(hi){
+    const {ctx,w,h}=setup(cv); ctx.clearRect(0,0,w,h);
+    const b=niceBounds(prices,false); if(!b)return; yaxis(ctx,w,h,b.lo,b.hi);
+    const iw=w-M.l-M.r, X=i=>M.l+(n<2?iw/2:iw*i/(n-1)), Y=v=>h-M.b-(v-b.lo)/((b.hi-b.lo)||1)*(h-M.b-M.t);
+    ctx.font="10px Consolas";ctx.fillStyle=COL.mute;ctx.textAlign="center";ctx.textBaseline="top";
+    days.forEach((d,i)=>ctx.fillText(d===0?"EVENT":(d>0?"+"+d:""+d),X(i),h-M.b+6));
+    ctx.strokeStyle=COL.blue;ctx.lineWidth=2;ctx.beginPath();
+    prices.forEach((v,i)=>{const x=X(i),y=Y(v);i?ctx.lineTo(x,y):ctx.moveTo(x,y);});ctx.stroke();
+    [[0,COL.amber],[ev,COL.ink],[n-1,COL.pos]].forEach(a=>{ctx.fillStyle=a[1];ctx.beginPath();ctx.arc(X(a[0]),Y(prices[a[0]]),4,0,7);ctx.fill();});
+    if(hi!=null){
+      const x=X(hi),y=Y(prices[hi]);
+      ctx.strokeStyle=COL.mute;ctx.setLineDash([3,3]);ctx.beginPath();ctx.moveTo(x,M.t);ctx.lineTo(x,h-M.b);ctx.stroke();ctx.setLineDash([]);
+      ctx.fillStyle=COL.blue;ctx.beginPath();ctx.arc(x,y,5,0,7);ctx.fill();
+      const dd=days[hi], lab=dd===0?"EVENT DAY":(dd>0?"T+"+dd:"T"+dd);
+      const txt=lab+"   ₹"+rup(prices[hi]);
+      ctx.font="12px Consolas";const tw=ctx.measureText(txt).width+16;
+      let tx=x+10; if(tx+tw>w-M.r+4)tx=x-tw-10; const ty=Math.max(M.t,y-34);
+      ctx.fillStyle=COL.panel;ctx.strokeStyle=COL.blue;ctx.lineWidth=1;
+      ctx.beginPath();ctx.rect(tx,ty,tw,24);ctx.fill();ctx.stroke();
+      ctx.fillStyle=COL.ink;ctx.textAlign="left";ctx.textBaseline="middle";ctx.fillText(txt,tx+8,ty+12);
+    }
+  }
+  draw(null);
+  cv.onmousemove=e=>{const r=cv.getBoundingClientRect();const iw=r.width-M.l-M.r;
+    let i=Math.round((e.clientX-r.left-M.l)/(iw/(n-1)));draw(Math.max(0,Math.min(n-1,i)));};
+  cv.onmouseleave=()=>draw(null);
+}
+function verdict(win,avg){
+  if(avg<=0)return['no','✕ Avoid — this historically ended in a loss'];
+  if(win>=60&&avg>=0.5)return['strong','✓ Strong pattern — worth watching'];
+  if(win>=55)return['ok','◐ Some edge — decent, not a sure thing'];
+  return['weak','⚠ Weak — barely better than a coin flip'];
+}
+function pretty(et){return {RESULTS:'Quarterly Results',BOARD_MEETING:'Board Meeting',
+  CORPORATE_ACTION:'Corporate Action (dividend/bonus…)',ANNOUNCEMENT:'Announcements'}[et]||et;}
+function heatmap(grid,best,NB,NA){
+  let mx=0; grid.forEach(r=>r.forEach(v=>{if(v!=null)mx=Math.max(mx,Math.abs(v));}));
+  let h='<div class="bwrap"><table class="hm"><thead><tr><th>buy ↓ / sell →</th>';
+  for(let a=1;a<=NA;a++)h+=`<th>T+${a}</th>`;
+  h+='</tr></thead><tbody>';
+  for(let bi=0;bi<NB;bi++){
+    h+=`<tr><th>T−${bi+1}</th>`;
+    for(let ai=0;ai<NA;ai++){
+      const v=grid[bi][ai];
+      const isB=best.days_before===bi+1&&best.days_after===ai+1;
+      h+=`<td class="${isB?'bcell':''}" style="background:${cellColor(v,mx)}">${v==null?'':(v>=0?'+':'')+v}</td>`;
+    }
+    h+='</tr>';
+  }
+  h+='</tbody></table></div>';
+  return h;
+}
+function cellColor(v,mx){
+  if(v==null)return 'transparent';
+  const t=Math.min(1,Math.abs(v)/(mx||1));
+  return v>=0?`rgba(63,185,80,${0.10+0.55*t})`:`rgba(248,81,73,${0.10+0.55*t})`;
+}
+
 function showTab(name){
   activeTab=name;
   document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.tab===name));
-  const isFund=name==="fundamentals";
+  const isFund=name==="fundamentals", isBeh=name==="behaviour", isRank=name==="rankings",
+        isScr=name==="screener", isCmp=name==="compare", isUp=name==="upcoming";
   $("fundview").style.display=isFund?"":"none";
-  $("eventsview").style.display=isFund?"none":"";
-  if(isFund) renderFundamentals(); else renderEvents(name);
+  $("behaviourview").style.display=isBeh?"":"none";
+  $("upcomingview").style.display=isUp?"":"none";
+  $("rankview").style.display=isRank?"":"none";
+  $("screenview").style.display=isScr?"":"none";
+  $("compareview").style.display=isCmp?"":"none";
+  $("eventsview").style.display=(isFund||isBeh||isRank||isScr||isCmp||isUp)?"none":"";
+  if(isFund) renderFundamentals();
+  else if(isBeh) renderBehaviour();
+  else if(isUp) renderUpcoming();
+  else if(isRank) renderRankings();
+  else if(isScr) renderScreener();
+  else if(isCmp) renderCompare();
+  else renderEvents(name);
+}
+
+/* ---------- Upcoming events watchlist ---------- */
+let upData=null, upFilter="ALL";
+async function renderUpcoming(){
+  const uv=$("upcomingview");
+  if(!upData){
+    uv.innerHTML='<div class="enote">Finding events still ahead across all stocks…</div>';
+    try{ upData=await (await fetch("/api/upcoming")).json(); }
+    catch(e){ uv.innerHTML='<div class="banner">Couldn’t load upcoming events: '+esc(e)+'</div>'; return; }
+  }
+  if(activeTab!=="upcoming")return;
+  if(upData.error){ uv.innerHTML='<div class="banner">'+esc(upData.error)+'</div>'; return; }
+  drawUpcoming();
+}
+function setUpFilter(f){ upFilter=f; drawUpcoming(); }
+function drawUpcoming(){
+  const uv=$("upcomingview"), d=upData; if(!d||!d.rows)return;
+  const evs=["ALL","RESULTS","BOARD_MEETING","CORPORATE_ACTION"];
+  const tabs=evs.map(k=>`<button class="rtab${k===upFilter?' active':''}" onclick="setUpFilter('${k}')">${k==="ALL"?"All":esc(pretty(k))}</button>`).join('');
+  let rows=d.rows.filter(r=>upFilter==="ALL"||r.event===upFilter);
+  const body=rows.map(r=>{
+    const wc=r.win==null?'var(--mute)':(r.win>=55?COL.pos:(r.win>=50?COL.amber:COL.neg));
+    const when=r.in_days<=0?'today':(r.in_days===1?'tomorrow':'in '+r.in_days+'d');
+    const badge=r.status==='confirmed'?'<span class="ubadge conf">confirmed</span>':'<span class="ubadge est">estimated</span>';
+    return `<tr class="rrow" onclick="goSym('${r.symbol}')" title="open ${esc(r.symbol)}">
+      <td class="rnum" style="white-space:nowrap">${esc(r.date)}<div class="uwhen">${when}</div></td>
+      <td class="rsym">${esc(r.symbol)}</td>
+      <td>${esc(pretty(r.event))} ${badge}</td>
+      <td class="rnum">${r.db!=null?`buy ${r.db}d / sell ${r.da}d`:'—'}</td>
+      <td class="rnum" style="color:${wc};font-weight:700">${r.win==null?'—':r.win+'%'}</td>
+      <td class="rnum">${r.events!=null?r.events:'—'}</td></tr>`;
+  }).join('');
+  uv.innerHTML=`
+    <div class="bintro">📅 <b>Your watchlist</b> — corporate events still ahead (next ${d.horizon_days} days), each with the stock’s
+      historical <b>best rule</b> and its win rate. <b>Confirmed</b> = the exact date is already announced;
+      <b>estimated</b> = projected from the stock’s past cadence. Click a row to open the stock.</div>
+    <div class="rtabs">${tabs}</div>
+    <div class="tblwrap" style="margin-top:12px"><table>
+      <thead><tr><th>Date</th><th>Stock</th><th>Event</th><th style="text-align:right">Best rule</th>
+      <th style="text-align:right">Win rate</th>
+      <th style="text-align:right">Events</th></tr></thead>
+      <tbody>${body||'<tr><td colspan="6" class="enote">no upcoming events in this window</td></tr>'}</tbody></table></div>
+    <div class="enote">${rows.length} upcoming event(s). Dates are read from NSE filings (confirmed) or projected from
+      cadence (estimated). Win rate = historical best buy/sell rule for that event.</div>`;
+}
+
+/* ---------- Rankings: all stocks ordered by win rate, per event ---------- */
+let rankEvent="RESULTS", rankData=null;
+async function renderRankings(){
+  const rv=$("rankview");
+  if(!rankData){
+    rv.innerHTML='<div class="enote">Ranking every stock by win rate — this analyses all of them, first load takes a few seconds…</div>';
+    try{ rankData=await (await fetch("/api/rankings")).json(); }
+    catch(e){ rv.innerHTML='<div class="banner">Couldn’t build rankings: '+esc(e)+'</div>'; return; }
+  }
+  if(activeTab!=="rankings")return;
+  if(rankData.error){ rv.innerHTML='<div class="banner">'+esc(rankData.error)+'</div>'; return; }
+  drawRankings();
+}
+function setRankEvent(et){ rankEvent=et; drawRankings(); }
+function drawRankings(){
+  const rv=$("rankview"), d=rankData; if(!d||!d.ranks)return;
+  const subs=(d.events||["RESULTS","BOARD_MEETING","CORPORATE_ACTION","ANNOUNCEMENT"]);
+  const tabs=subs.map(k=>`<button class="rtab${k===rankEvent?' active':''}" onclick="setRankEvent('${k}')">${esc(pretty(k))}</button>`).join('');
+  const list=d.ranks[rankEvent]||[];
+  const rows=list.map((r,i)=>{
+    const barcol=r.win>=55?COL.pos:(r.win>=50?COL.amber:COL.neg);
+    const medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1);
+    return `<tr class="rrow" onclick="goSym('${r.symbol}')" title="open ${esc(r.symbol)}">
+      <td class="rk">${medal}</td>
+      <td class="rsym">${esc(r.symbol)}</td>
+      <td><div class="rbar"><span style="width:${Math.max(2,Math.min(100,r.win))}%;background:${barcol}"></span></div></td>
+      <td class="rnum" style="color:${barcol};font-weight:700">${r.win}%</td>
+      <td class="rnum" style="color:${r.avg>=0?COL.pos:COL.neg}">${r.avg>=0?'+':''}${r.avg}%</td>
+      <td class="rnum">buy ${r.db}d / sell ${r.da}d</td>
+      <td class="rnum">${r.events}</td></tr>`;
+  }).join('');
+  rv.innerHTML=`
+    <div class="bintro">All <b>${d.n_stocks}</b> tracked stocks — the Nifty 50 plus a couple of recent
+      ex-members kept for their history — ranked by <b>win rate</b> for each event, highest first.
+      Click a sub-tab to reorder; click a stock to open its Behaviour view.</div>
+    <div class="rtabs">${tabs}</div>
+    <div class="tblwrap" style="margin-top:12px"><table>
+      <thead><tr><th>#</th><th>Stock</th><th>Win rate</th><th style="text-align:right">Win %</th>
+      <th style="text-align:right">Avg gain</th><th style="text-align:right">Best rule</th>
+      <th style="text-align:right">Events</th></tr></thead>
+      <tbody>${rows||'<tr><td colspan="7" class="enote">no stocks with this event yet</td></tr>'}</tbody></table></div>
+    <div class="enote">${list.length} of ${d.n_stocks} stocks have ${esc(pretty(rankEvent))} data.
+      Win rate = share of past events where the best buy/sell rule made money.</div>`;
+}
+function goSym(sym){ const i=SYMS.indexOf(sym); if(i<0)return; idx=i; loadStock(); showTab('behaviour'); }
+
+/* ---------- Screener: filter all stocks by fundamentals ---------- */
+let screenData=null, screenSort={key:'roce',dir:-1};
+const SCOLS=[
+  {k:'symbol',t:'Stock',fmt:v=>v,align:'left'},
+  {k:'pe',t:'P/E',fmt:v=>v==null?'—':v.toFixed(1),good:'low'},
+  {k:'roce',t:'ROCE %',fmt:v=>v==null?'—':v.toFixed(0)+'%',good:'high'},
+  {k:'opm',t:'OPM %',fmt:v=>v==null?'—':v.toFixed(0)+'%',good:'high'},
+  {k:'sales_g',t:'Sales gr%',fmt:v=>v==null?'—':(v>=0?'+':'')+v.toFixed(0)+'%',good:'high'},
+  {k:'profit_g',t:'Profit gr%',fmt:v=>v==null?'—':(v>=0?'+':'')+v.toFixed(0)+'%',good:'high'},
+  {k:'de',t:'Debt/Eq',fmt:v=>v==null?'—':v.toFixed(2),good:'low'},
+  {k:'npat',t:'Net Profit ₹cr',fmt:v=>v==null?'—':Math.round(v).toLocaleString(),align:'right'},
+];
+async function renderScreener(){
+  const sv=$("screenview");
+  if(!screenData){
+    sv.innerHTML='<div class="enote">Loading fundamentals for every stock…</div>';
+    try{ screenData=await (await fetch("/api/screener")).json(); }
+    catch(e){ sv.innerHTML='<div class="banner">Couldn’t load screener: '+esc(e)+'</div>'; return; }
+  }
+  if(activeTab!=="screener")return;
+  if(screenData.error){ sv.innerHTML='<div class="banner">'+esc(screenData.error)+'</div>'; return; }
+  if(!screenData.stocks||!screenData.stocks.length){
+    sv.innerHTML='<div class="banner">No fundamentals loaded yet. Hard-refresh the page (Ctrl+Shift+R).</div>'; return; }
+  // Build the filter shell ONCE; only #sctable redraws on change so the inputs
+  // keep their values and never lose focus while you type.
+  sv.innerHTML=`
+    <div class="bintro">Filter the tracked universe (<b>${screenData.stocks.length}</b> stocks — the Nifty 50 plus a couple
+      of recent index changes) by fundamentals to find <b>high-quality &amp; cheap</b> names.
+      Blank = no limit. Click a column to sort; click a stock to open it.</div>
+    <div class="scfilters">
+      <label>ROCE ≥ <input id="f_roce" type="number" placeholder="any" oninput="drawScreener()"></label>
+      <label>Profit gr% ≥ <input id="f_pg" type="number" placeholder="any" oninput="drawScreener()"></label>
+      <label>OPM% ≥ <input id="f_opm" type="number" placeholder="any" oninput="drawScreener()"></label>
+      <label>Debt/Eq ≤ <input id="f_de" type="number" step="0.1" placeholder="any" oninput="drawScreener()"></label>
+      <label>P/E ≤ <input id="f_pe" type="number" placeholder="any" oninput="drawScreener()"></label>
+      <button class="scbtn" onclick="scPreset()">✨ High-quality + cheap</button>
+      <button class="scbtn ghost" onclick="scClear()">Clear</button>
+    </div>
+    <div id="sctable"></div>`;
+  drawScreener();
+}
+function scGet(id){ const v=parseFloat(($(id)||{}).value); return isNaN(v)?null:v; }
+function scPreset(){ $("f_roce").value=15; $("f_pg").value=10; $("f_de").value=0.5; $("f_pe").value=25; drawScreener(); }
+function scClear(){ ["f_roce","f_pg","f_de","f_pe","f_opm"].forEach(i=>{if($(i))$(i).value='';}); drawScreener(); }
+function scSort(k){ if(screenSort.key===k)screenSort.dir*=-1; else screenSort={key:k,dir:(k==='symbol'||k==='pe'||k==='de')?1:-1}; drawScreener(); }
+function drawScreener(){
+  const tbl=$("sctable"); if(!tbl||!screenData||!screenData.stocks)return;
+  const all=screenData.stocks;
+  const minR=scGet('f_roce'), minPG=scGet('f_pg'), maxDE=scGet('f_de'), maxPE=scGet('f_pe'), minOPM=scGet('f_opm');
+  let rows=all.filter(s=>
+    (minR==null||(s.roce!=null&&s.roce>=minR)) &&
+    (minPG==null||(s.profit_g!=null&&s.profit_g>=minPG)) &&
+    (maxDE==null||(s.de!=null&&s.de<=maxDE)) &&
+    (maxPE==null||(s.pe!=null&&s.pe<=maxPE)) &&
+    (minOPM==null||(s.opm!=null&&s.opm>=minOPM)));
+  const k=screenSort.key, dir=screenSort.dir;
+  rows.sort((a,b)=>{ let x=a[k],y=b[k];
+    if(x==null)return 1; if(y==null)return -1;
+    if(k==='symbol')return x<y?-dir:x>y?dir:0; return (x-y)*dir; });
+  const colcol=(c,v)=>{ if(v==null||!c.good)return '';
+    const vals=rows.map(r=>r[c.k]).filter(x=>x!=null); if(!vals.length)return '';
+    const mn=Math.min(...vals),mx=Math.max(...vals); if(mn===mx)return '';
+    const t=(v-mn)/(mx-mn), q=c.good==='high'?t:1-t;
+    return q>=0.66?'style="color:'+COL.pos+'"':q<=0.33?'style="color:'+COL.neg+'"':''; };
+  const head=SCOLS.map(c=>`<th class="scH ${c.align==='left'?'':'rt'}" onclick="scSort('${c.k}')">${esc(c.t)}${screenSort.key===c.k?(dir>0?' ▲':' ▼'):''}</th>`).join('');
+  const body=rows.map(s=>'<tr class="rrow" onclick="goSym(\''+s.symbol+'\')">'+
+    SCOLS.map(c=>`<td class="${c.align==='left'?'sym':'rnum'}" ${colcol(c,s[c.k])}>${c.fmt(s[c.k])}</td>`).join('')+'</tr>').join('');
+  tbl.innerHTML=`
+    <div class="tblwrap" style="margin-top:10px"><table><thead><tr>${head}</tr></thead><tbody>${body||'<tr><td colspan="8" class="enote">No stock matches these filters.</td></tr>'}</tbody></table></div>
+    <div class="enote">${rows.length} of ${all.length} stocks match. Green = better vs peers, red = worse. Latest annual figures; P/E = price ÷ latest EPS.</div>`;
+}
+
+/* ---------- Compare: 2-3 stocks side by side ---------- */
+let cmpSel=[], cmpBeh={};
+async function renderCompare(){
+  const cv=$("compareview");
+  if(!screenData){ try{ screenData=await (await fetch("/api/screener")).json(); }catch(e){} }
+  if(activeTab!=="compare")return;
+  if(!cmpSel.length){ cmpSel=[SYMS[idx]].filter(Boolean); }
+  drawCompare();
+}
+function cmpAdd(sym){ sym=(sym||'').toUpperCase(); if(!sym||cmpSel.includes(sym)||!SYMS.includes(sym))return;
+  if(cmpSel.length>=3)cmpSel.shift(); cmpSel.push(sym); $("cmppick").value=''; drawCompare(); }
+function cmpDel(sym){ cmpSel=cmpSel.filter(s=>s!==sym); drawCompare(); }
+async function cmpLoadBeh(sym){ if(cmpBeh[sym])return cmpBeh[sym];
+  try{ cmpBeh[sym]=await (await fetch("/api/behaviour?sym="+encodeURIComponent(sym))).json(); }catch(e){ cmpBeh[sym]={}; }
+  return cmpBeh[sym]; }
+async function drawCompare(){
+  const cv=$("compareview");
+  const map={}; (screenData&&screenData.stocks||[]).forEach(s=>map[s.symbol]=s);
+  await Promise.all(cmpSel.map(cmpLoadBeh));
+  if(activeTab!=="compare")return;
+  const chips=cmpSel.map(s=>`<span class="cmpchip">${esc(s)} <b onclick="cmpDel('${s}')">✕</b></span>`).join('');
+  const FR=[['price','Price','₹'],['pe','P/E',''],['roce','ROCE','%'],['opm','OPM','%'],
+    ['sales_g','Sales growth','%'],['profit_g','Profit growth','%'],['de','Debt/Equity',''],
+    ['sales','Sales','₹cr'],['npat','Net Profit','₹cr'],['eps','EPS','₹']];
+  const goodHigh=new Set(['roce','opm','sales_g','profit_g','npat','sales','eps']);
+  const goodLow=new Set(['pe','de']);
+  const fmt=(k,v)=>v==null?'—':(k==='sales'||k==='npat'?Math.round(v).toLocaleString():(k==='price'||k==='eps'?v.toLocaleString(undefined,{maximumFractionDigits:2}):v))+(FR.find(r=>r[0]===k)[2]==='%'?'%':'');
+  const frows=FR.map(([k,lab])=>{
+    const vals=cmpSel.map(s=>map[s]?map[s][k]:null).filter(v=>v!=null);
+    const best=goodHigh.has(k)?Math.max(...vals):goodLow.has(k)?Math.min(...vals):null;
+    return `<tr><td class="cmplab">${esc(lab)}</td>`+cmpSel.map(s=>{ const v=map[s]?map[s][k]:null;
+      const hit=(best!=null&&v===best&&vals.length>1);
+      return `<td class="rnum"${hit?' style="color:'+COL.pos+';font-weight:700"':''}>${fmt(k,v)}</td>`;}).join('')+'</tr>';
+  }).join('');
+  const EVT=[['RESULTS','Results'],['BOARD_MEETING','Board Mtg'],['CORPORATE_ACTION','Corp Action'],['ANNOUNCEMENT','Announce']];
+  const brows=EVT.map(([et,lab])=>`<tr><td class="cmplab">${esc(lab)} — rule · win</td>`+
+    cmpSel.map(s=>{ const t=(cmpBeh[s]&&cmpBeh[s].types||{})[et];
+      if(!t||!t.best)return '<td class="rnum muted">—</td>';
+      const b=t.best,wc=b.win_rate_pct>=55?COL.pos:(b.win_rate_pct>=50?COL.amber:COL.neg);
+      return `<td class="rnum"><span class="mono">buy${b.days_before}/sell${b.days_after}</span><br><b style="color:${wc}">${b.win_rate_pct}%</b> · ${b.avg_return_pct>=0?'+':''}${b.avg_return_pct}%</td>`;
+    }).join('')+'</tr>').join('');
+  const hdr='<th></th>'+cmpSel.map(s=>`<th class="rt"><span class="cmphead" onclick="goSym('${s}')">${esc(s)}</span></th>`).join('');
+  cv.innerHTML=`
+    <div class="bintro">Put <b>2–3 stocks side by side</b> — fundamentals and event behaviour. Best value in each row is highlighted.</div>
+    <div class="cmpbar">${chips}
+      <input id="cmppick" list="cmplist" placeholder="+ add stock" onchange="cmpAdd(this.value)">
+      <datalist id="cmplist">${SYMS.map(s=>'<option value="'+esc(s)+'">').join('')}</datalist></div>
+    ${cmpSel.length?`<div class="tblwrap" style="margin-top:10px"><table>
+      <thead><tr>${hdr}</tr></thead>
+      <tbody><tr class="cmpsec"><td colspan="${cmpSel.length+1}">Fundamentals (latest year)</td></tr>${frows}
+      <tr class="cmpsec"><td colspan="${cmpSel.length+1}">Event behaviour (best rule)</td></tr>${brows}</tbody></table></div>`
+      :'<div class="enote">Add a stock to compare.</div>'}`;
 }
 
 /* ---------- navigation ---------- */

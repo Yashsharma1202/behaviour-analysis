@@ -265,6 +265,51 @@
   ::-webkit-scrollbar{width:11px;height:11px}
   ::-webkit-scrollbar-thumb{background:#2c374d;border-radius:8px;border:2px solid var(--bg)}
   ::-webkit-scrollbar-thumb:hover{background:#3a4a66}
+
+  /* Detail Modal */
+  .dm-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:10000;
+    background:rgba(0,0,0,0.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+    display:flex;align-items:center;justify-content:center;padding:16px}
+  .dm-box{background:#151c2a;border:1px solid var(--grid);border-radius:14px;
+    width:100%;max-width:760px;max-height:88vh;display:flex;flex-direction:column;
+    box-shadow:0 24px 60px rgba(0,0,0,0.7);overflow:hidden;animation:dmPop .18s ease-out}
+  @keyframes dmPop{from{transform:scale(.95);opacity:0}to{transform:scale(1);opacity:1}}
+  .dm-hdr{display:flex;justify-content:space-between;align-items:center;
+    padding:14px 20px;background:#1b2436;border-bottom:1px solid var(--grid)}
+  .dm-hdr-left{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .dm-badge{background:var(--blue);color:#0b1220;font-weight:700;font-family:var(--mono);
+    font-size:.82rem;padding:3px 10px;border-radius:6px}
+  .dm-feed-tag{color:var(--amber);font-family:var(--mono);font-size:.82rem;font-weight:600}
+  .dm-date-tag{color:var(--mute);font-family:var(--mono);font-size:.82rem}
+  .dm-close{background:transparent;border:0;color:var(--mute);font-size:1.2rem;
+    cursor:pointer;padding:2px 8px;border-radius:6px}
+  .dm-close:hover{color:var(--ink);background:#243044}
+  .dm-body{padding:20px;overflow-y:auto;line-height:1.5}
+  .dm-title{margin:0 0 16px;font-size:1.25rem;font-weight:700;color:var(--ink)}
+  .dm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:16px}
+  .dm-kv{background:#0e1420;border:1px solid var(--grid);padding:8px 12px;border-radius:8px}
+  .dm-k{display:block;font-size:.7rem;color:var(--mute);font-family:var(--mono);text-transform:uppercase}
+  .dm-v{display:block;font-size:.9rem;font-weight:600;color:var(--ink);margin-top:2px}
+  .dm-desc-wrap{margin-bottom:18px}
+  .dm-lbl{font-size:.75rem;font-family:var(--mono);color:var(--mute);text-transform:uppercase;margin-bottom:6px;letter-spacing:.03em}
+  .dm-desc{background:#0e1420;border:1px solid var(--grid);padding:14px 16px;border-radius:10px;
+    color:var(--ink);font-size:.92rem;white-space:pre-wrap;word-break:break-word}
+  .dm-file-sec{margin-top:16px}
+  .dm-file-box{background:#0e1420;border:1px solid #303d55;border-radius:10px;padding:14px}
+  .dm-file-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-weight:600;font-size:.9rem}
+  .dm-btn{display:inline-block;background:var(--blue);color:#0b1220;font-weight:700;
+    padding:8px 16px;border-radius:8px;text-decoration:none;font-size:.88rem}
+  .dm-btn:hover{background:#7cb8ff;text-decoration:none}
+  .dm-btn-sm{display:inline-block;background:#243044;border:1px solid var(--grid);color:var(--ink);
+    font-weight:600;padding:5px 12px;border-radius:6px;text-decoration:none;font-size:.78rem;font-family:var(--mono)}
+  .dm-btn-sm:hover{background:#303e58;text-decoration:none}
+  .dm-iframe{width:100%;height:320px;border:1px solid var(--grid);border-radius:8px;background:#0f131b;margin-top:8px}
+  .dm-note{background:rgba(210,153,34,0.12);border:1px solid rgba(210,153,34,0.3);color:var(--amber);
+    padding:10px 12px;border-radius:8px;font-size:.82rem;line-height:1.45;margin-top:8px}
+  .ev-row{cursor:pointer;transition:background .1s}
+  .ev-row:hover{background:#1e2738 !important}
+  .filelink{color:var(--blue);font-weight:600;text-decoration:none;font-family:var(--mono);font-size:.82rem}
+  .filelink:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -332,6 +377,29 @@
     <!-- Event view -->
     <div id="eventsview" style="display:none"></div>
 
+    <!-- Detail Modal for XML/PDF/Event Filings -->
+    <div id="detailModal" class="dm-overlay" style="display:none" onclick="if(event.target===this)closeDetailModal()">
+      <div class="dm-box">
+        <div class="dm-hdr">
+          <div class="dm-hdr-left">
+            <span class="dm-badge" id="dm-sym">SYM</span>
+            <span class="dm-feed-tag" id="dm-feed">Feed</span>
+            <span class="dm-date-tag" id="dm-date">Date</span>
+          </div>
+          <button class="dm-close" onclick="closeDetailModal()">✕</button>
+        </div>
+        <div class="dm-body">
+          <h2 class="dm-title" id="dm-title">Filing Details</h2>
+          <div id="dm-meta"></div>
+          <div id="dm-desc-wrap" class="dm-desc-wrap" style="display:none">
+            <div class="dm-lbl">Full Announcement / Intimation Details</div>
+            <div class="dm-desc" id="dm-desc"></div>
+          </div>
+          <div id="dm-file-sec" class="dm-file-sec" style="display:none"></div>
+        </div>
+      </div>
+    </div>
+
     <div class="hint">🔍 search any of 50 stocks · ← / → arrow keys to step · click a tab for event details.</div>
   </main>
 
@@ -342,7 +410,7 @@ let SYMS=[], idx=0, activeTab="fundamentals", stock=null, eventsCache={}, READY=
 
 /*__DATA_SOURCE__*/
 const STATIC=true;
-const _V="?v=1785404421";
+const _V="?v=1785405261";
 const SYMBOLS_URL="./data/symbols.json"+_V;
 function STOCK_URL(s){return "./data/fund/"+encodeURIComponent(s)+".json"+_V;}
 function EVENTS_URL(s){return "./data/events/"+encodeURIComponent(s)+".json"+_V;}
@@ -624,33 +692,108 @@ async function renderEvents(feed){
   }
   html+='<div class="tblwrap"><table><thead><tr>'+
     F.columns.map(c=>`<th>${esc(c.label)}</th>`).join('')+'</tr></thead><tbody>';
-  F.rows.forEach(r=>{
-    html+='<tr>'+F.columns.map(c=>{
+  F.rows.forEach((r, rowIdx)=>{
+    html+='<tr class="ev-row" onclick="openDetailModal(\''+esc(SYMS[idx])+'\', \''+esc(feed)+'\', '+rowIdx+')">'+F.columns.map(c=>{
       const v=r[c.key]||'';
       if(c.type==='link'){
-        if(!v.startsWith('http')) return `<td>${esc(v)}</td>`;
+        if(!v.startsWith('http') && !v.startsWith('./')) return `<td>${esc(v)}</td>`;
         if(c.key==='xbrl'){        // Download Excel -> built from the LOCAL folders
-          // the static (GitHub Pages) build has no server, so link to the NSE doc instead
-          if(STATIC) return `<td><a href="${v}" target="_blank" rel="noopener" title="${esc(v)}">📄 XBRL ↗</a></td>`;
+          if(STATIC) return `<td><a href="javascript:void(0)" onclick="event.stopPropagation();openDetailModal('${esc(SYMS[idx])}','${esc(feed)}',${rowIdx})" class="filelink" title="${esc(v)}">📄 Detail ↗</a></td>`;
           const u="/api/statements_excel?sym="+encodeURIComponent(SYMS[idx]);
-          return `<td><a href="${u}" title="Download financial statements from local data (P&L, Balance Sheet, Cash Flow, Ratios, Quarterly)">📊 Excel ↓</a></td>`;
+          return `<td><a href="${u}" onclick="event.stopPropagation()" title="Download financial statements from local data">📊 Excel ↓</a></td>`;
         }
-        // attachments: on the live app we proxy through the server (NSE blocks
-        // some direct hits); on the static build there is no server, so link direct.
-        const pdf=v.toLowerCase().endsWith(".pdf");
-        const f=STATIC ? v : "/api/file?url="+encodeURIComponent(v);
-        return `<td><a href="${f}" target="_blank" rel="noopener" title="${esc(v)}">`+
-               `${pdf?"📄 PDF ↗":"📄 view ↗"}</a></td>`;
+        const isPdf=v.toLowerCase().endsWith(".pdf");
+        const isBm=v.startsWith("./bm/");
+        let label = isBm ? "📑 Summary ↗" : (isPdf ? "📄 PDF ↗" : "🔍 Detail ↗");
+        return `<td><a href="javascript:void(0)" onclick="event.stopPropagation();openDetailModal('${esc(SYMS[idx])}','${esc(feed)}',${rowIdx})" class="filelink" title="Click to view detailed summary">${label}</a></td>`;
       }
       if(c.key==='desc') return `<td class="cat">${esc(v)}</td>`;
       return `<td>${esc(v)}</td>`;
     }).join('')+'</tr>';
   });
   html+='</tbody></table></div>';
-  if(F.total>F.shown) html+=`<div class="enote">Showing latest ${F.shown} of ${F.total.toLocaleString()} rows.</div>`;
-  else html+=`<div class="enote">${F.total.toLocaleString()} row(s).</div>`;
+  if(F.total>F.shown) html+=`<div class="enote">Showing latest ${F.shown} of ${F.total.toLocaleString()} rows. (Click any row for details)</div>`;
+  else html+=`<div class="enote">${F.total.toLocaleString()} row(s). (Click any row for details)</div>`;
   ev.innerHTML=html;
 }
+
+function openDetailModal(sym, feedKey, rowIdx){
+  const pay=eventsCache[sym];
+  if(!pay || !pay.feeds || !pay.feeds[feedKey]) return;
+  const F=pay.feeds[feedKey];
+  const r=F.rows[rowIdx];
+  if(!r) return;
+
+  const dateStr = r.sort_date || r.bm_date || r.broadCastDate || r.exDate || "";
+  const title = r.desc || r.bm_purpose || r.subject || r.relatingTo || F.label || "Filing Details";
+  const descText = r.attchmntText || r.bm_desc || r.subject || "";
+  let fileUrl = "";
+  F.columns.forEach(c => { if(c.type === 'link' && r[c.key]) fileUrl = r[c.key]; });
+
+  $("dm-sym").textContent = sym;
+  $("dm-feed").textContent = F.label;
+  $("dm-date").textContent = dateStr ? ("📅 " + dateStr) : "";
+  $("dm-title").textContent = title;
+
+  let metaHtml = '<div class="dm-grid">';
+  F.columns.forEach(c => {
+    if(c.type !== 'link' && r[c.key]){
+      metaHtml += `<div class="dm-kv"><span class="dm-k">${esc(c.label)}</span><span class="dm-v">${esc(r[c.key])}</span></div>`;
+    }
+  });
+  metaHtml += '</div>';
+  $("dm-meta").innerHTML = metaHtml;
+
+  if(descText && descText !== title){
+    $("dm-desc-wrap").style.display = "block";
+    $("dm-desc").textContent = descText;
+  } else {
+    $("dm-desc-wrap").style.display = "none";
+  }
+
+  const fileSec = $("dm-file-sec");
+  if(fileUrl && (fileUrl.startsWith("http") || fileUrl.startsWith("./bm/"))){
+    fileSec.style.display = "block";
+    const isBaked = fileUrl.startsWith("./bm/") || fileUrl.includes("/bm/");
+    const isPdf = fileUrl.toLowerCase().endsWith(".pdf");
+    const isXml = fileUrl.toLowerCase().endsWith(".xml");
+
+    let fhtml = '';
+    if(isBaked){
+      fhtml = `<div class="dm-file-box">`+
+        `<div class="dm-file-hdr"><span>📑 Parsed XBRL Filing Summary</span>`+
+        `<a href="${esc(fileUrl)}" target="_blank" class="dm-btn-sm">Open Full Page ↗</a></div>`+
+        `<iframe src="${esc(fileUrl)}" class="dm-iframe"></iframe></div>`;
+    } else if(isXml){
+      const rawUrl = STATIC ? fileUrl : ("/api/file?url=" + encodeURIComponent(fileUrl));
+      fhtml = `<div class="dm-file-box">`+
+        `<div class="dm-file-hdr"><span>📄 Source XBRL File (.xml)</span>`+
+        `<a href="${esc(rawUrl)}" target="_blank" class="dm-btn-sm">Open Source XML ↗</a></div>`+
+        `<div class="dm-note">💡 <b>Note on XBRL files:</b> Stock exchange XML files are technical filings. `+
+        `The full announcement text &amp; meeting purpose extracted from the filing are shown in the summary above.</div></div>`;
+    } else if(isPdf){
+      const pdfUrl = STATIC ? fileUrl : ("/api/file?url=" + encodeURIComponent(fileUrl));
+      fhtml = `<div class="dm-file-box">`+
+        `<div class="dm-file-hdr"><span>📄 Official PDF Attachment</span>`+
+        `<a href="${esc(pdfUrl)}" target="_blank" class="dm-btn">Open PDF Document ↗</a></div></div>`;
+    } else {
+      fhtml = `<div class="dm-file-box">`+
+        `<a href="${esc(fileUrl)}" target="_blank" class="dm-btn">Open Attachment ↗</a></div>`;
+    }
+    fileSec.innerHTML = fhtml;
+  } else {
+    fileSec.style.display = "none";
+  }
+
+  $("detailModal").style.display = "flex";
+}
+
+function closeDetailModal(){
+  const m=$("detailModal");
+  if(m) m.style.display="none";
+}
+
+document.addEventListener("keydown", e => { if(e.key === "Escape") closeDetailModal(); });
 
 async function fetchNSE(){
   const sym=SYMS[idx];
