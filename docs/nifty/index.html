@@ -297,9 +297,10 @@ let SYMS=[], idx=0, activeTab="fundamentals", stock=null, eventsCache={}, READY=
 
 /*__DATA_SOURCE__*/
 const STATIC=true;
-const SYMBOLS_URL="./data/symbols.json";
-function STOCK_URL(s){return "./data/fund/"+encodeURIComponent(s)+".json";}
-function EVENTS_URL(s){return "./data/events/"+encodeURIComponent(s)+".json";}
+const _V="?v=1785384733";
+const SYMBOLS_URL="./data/symbols.json"+_V;
+function STOCK_URL(s){return "./data/fund/"+encodeURIComponent(s)+".json"+_V;}
+function EVENTS_URL(s){return "./data/events/"+encodeURIComponent(s)+".json"+_V;}
 /*__END_DATA_SOURCE__*/
 
 const $=id=>document.getElementById(id);
@@ -521,7 +522,7 @@ async function renderBehaviour(){
   bv.innerHTML='<div class="enote">computing how '+esc(sym)+' moved around its events…</div>';
   let d;
   try{
-    if(!behaviourCache[sym]) behaviourCache[sym]=await (await fetch("./data/behaviour/"+encodeURIComponent(sym)+".json")).json();
+    if(!behaviourCache[sym]) behaviourCache[sym]=await (await fetch("./data/behaviour/"+encodeURIComponent(sym)+".json"+_V)).json();
     d=behaviourCache[sym];
   }catch(e){ bv.innerHTML='<div class="banner">Error computing behaviour: '+esc(e)+'</div>'; return; }
   if(activeTab!=="behaviour")return;
@@ -922,7 +923,7 @@ async function renderRankings(){
   const rv=$("rankview");
   if(!rankData){
     rv.innerHTML='<div class="enote">Ranking every stock by win rate — this analyses all of them, first load takes a few seconds…</div>';
-    try{ rankData=await (await fetch("./data/rankings.json")).json(); }
+    try{ rankData=await (await fetch("./data/rankings.json"+_V)).json(); }
     catch(e){ rv.innerHTML='<div class="banner">Couldn’t build rankings: '+esc(e)+'</div>'; return; }
   }
   if(activeTab!=="rankings")return;
@@ -979,7 +980,7 @@ async function renderScreener(){
   const sv=$("screenview");
   if(!screenData){
     sv.innerHTML='<div class="enote">Loading fundamentals for every stock…</div>';
-    try{ screenData=await (await fetch("./data/screener.json")).json(); }
+    try{ screenData=await (await fetch("./data/screener.json"+_V)).json(); }
     catch(e){ sv.innerHTML='<div class="banner">Couldn’t load screener: '+esc(e)+'</div>'; return; }
   }
   if(activeTab!=="screener")return;
@@ -1036,7 +1037,7 @@ function drawScreener(){
 let cmpSel=[], cmpBeh={};
 async function renderCompare(){
   const cv=$("compareview");
-  if(!screenData){ try{ screenData=await (await fetch("./data/screener.json")).json(); }catch(e){} }
+  if(!screenData){ try{ screenData=await (await fetch("./data/screener.json"+_V)).json(); }catch(e){} }
   if(activeTab!=="compare")return;
   if(!cmpSel.length){ cmpSel=[SYMS[idx]].filter(Boolean); }
   drawCompare();
@@ -1045,7 +1046,7 @@ function cmpAdd(sym){ sym=(sym||'').toUpperCase(); if(!sym||cmpSel.includes(sym)
   if(cmpSel.length>=3)cmpSel.shift(); cmpSel.push(sym); $("cmppick").value=''; drawCompare(); }
 function cmpDel(sym){ cmpSel=cmpSel.filter(s=>s!==sym); drawCompare(); }
 async function cmpLoadBeh(sym){ if(cmpBeh[sym])return cmpBeh[sym];
-  try{ cmpBeh[sym]=await (await fetch("./data/behaviour/"+encodeURIComponent(sym)+".json")).json(); }catch(e){ cmpBeh[sym]={}; }
+  try{ cmpBeh[sym]=await (await fetch("./data/behaviour/"+encodeURIComponent(sym)+".json"+_V)).json(); }catch(e){ cmpBeh[sym]={}; }
   return cmpBeh[sym]; }
 async function drawCompare(){
   const cv=$("compareview");

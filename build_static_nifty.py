@@ -56,28 +56,33 @@ def _write(path: Path, obj) -> None:
 
 
 # --- the static index.html: take the live PAGE and swap every data source -----
+# _V is a per-build cache-buster appended to every data URL, so browsers/CDN can
+# never serve a stale symbols/rankings/… file after a rebuild.
 STATIC_BLOCK = """/*__DATA_SOURCE__*/
 const STATIC=true;
-const SYMBOLS_URL="./data/symbols.json";
-function STOCK_URL(s){return "./data/fund/"+encodeURIComponent(s)+".json";}
-function EVENTS_URL(s){return "./data/events/"+encodeURIComponent(s)+".json";}
+const _V="?v=__BUILD__";
+const SYMBOLS_URL="./data/symbols.json"+_V;
+function STOCK_URL(s){return "./data/fund/"+encodeURIComponent(s)+".json"+_V;}
+function EVENTS_URL(s){return "./data/events/"+encodeURIComponent(s)+".json"+_V;}
 /*__END_DATA_SOURCE__*/"""
 
 
 def build_index() -> None:
+    import time
+    build = str(int(time.time()))          # per-build cache-buster version
     page = S.PAGE
     # 1) rebrand to the Nifty 50 (mirror nifty_dash.py)
     page = (page.replace("<title>NSE Stock Browser</title>", "<title>Nifty 50 Browser</title>")
                 .replace("NSE Stock Browser", "Nifty 50 Browser")
                 .replace("search any of 2,363 stocks", f"search any of {len(S.SYMBOLS)} stocks"))
-    # 2) swap the symbols/stock/events data source to static files
+    # 2) swap the symbols/stock/events data source to static files (+cache-buster)
     page = re.sub(r"/\*__DATA_SOURCE__\*/.*?/\*__END_DATA_SOURCE__\*/",
-                  STATIC_BLOCK, page, flags=re.DOTALL)
-    # 3) rewrite the remaining /api/ fetches to the pre-baked JSON files
-    page = page.replace('fetch("/api/rankings")', 'fetch("./data/rankings.json")')
-    page = page.replace('fetch("/api/screener")', 'fetch("./data/screener.json")')
+                  STATIC_BLOCK.replace("__BUILD__", build), page, flags=re.DOTALL)
+    # 3) rewrite the remaining /api/ fetches to the pre-baked JSON files (+cache-buster)
+    page = page.replace('fetch("/api/rankings")', 'fetch("./data/rankings.json"+_V)')
+    page = page.replace('fetch("/api/screener")', 'fetch("./data/screener.json"+_V)')
     page = page.replace('"/api/behaviour?sym="+encodeURIComponent(sym))',
-                        '"./data/behaviour/"+encodeURIComponent(sym)+".json")')
+                        '"./data/behaviour/"+encodeURIComponent(sym)+".json"+_V)')
     # 4) snapshot banner after the tab bar
     note = ('<div class="hint" style="margin:0 0 10px">📦 Static snapshot for '
             'GitHub Pages — the Nifty 50 with fundamentals, event feeds, behaviour, '
