@@ -1,0 +1,360 @@
+{
+  "trade": "buy 5d before / sell 3d after",
+  "events": [
+    "RESULTS",
+    "BOARD_MEETING",
+    "CORPORATE_ACTION"
+  ],
+  "n": 6009,
+  "n_train": 4042,
+  "n_test": 1967,
+  "win_rate": 53.0,
+  "fund_cov": 66.0,
+  "baseline": 52.0,
+  "edge": false,
+  "price": {
+    "name": "PRICE only",
+    "lr_acc": 0.5175394001016776,
+    "lr_auc": 0.5022302985120989,
+    "gb_acc": 0.4809354346720895,
+    "gb_auc": 0.4728124126362874,
+    "best": 0.5175394001016776
+  },
+  "fund": {
+    "name": "PRICE + FUNDAMENTALS",
+    "lr_acc": 0.5195729537366548,
+    "lr_auc": 0.5265544269458164,
+    "gb_acc": 0.5114387391967463,
+    "gb_auc": 0.506377162737241,
+    "best": 0.5195729537366548
+  },
+  "signals": [
+    {
+      "f": "mom60",
+      "c": 0.104
+    },
+    {
+      "f": "mom20",
+      "c": 0.061
+    },
+    {
+      "f": "rel_strength",
+      "c": -0.056
+    },
+    {
+      "f": "ev_RESULTS",
+      "c": -0.035
+    },
+    {
+      "f": "month",
+      "c": 0.027
+    },
+    {
+      "f": "ev_CORPORATE_ACTION",
+      "c": 0.026
+    }
+  ],
+  "preds": [
+    {
+      "symbol": "TMPV",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-19",
+      "prob": 58.7
+    },
+    {
+      "symbol": "ADANIENT",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-12",
+      "prob": 57.9
+    },
+    {
+      "symbol": "HDFCLIFE",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-19",
+      "prob": 55.2
+    },
+    {
+      "symbol": "TRENT",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-12",
+      "prob": 54.9
+    },
+    {
+      "symbol": "ETERNAL",
+      "event": "BOARD_MEETING",
+      "date": "2026-04-28",
+      "prob": 54.6
+    },
+    {
+      "symbol": "MAXHEALTH",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-07-03",
+      "prob": 54.3
+    },
+    {
+      "symbol": "JSWSTEEL",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-07-07",
+      "prob": 53.7
+    },
+    {
+      "symbol": "SBIN",
+      "event": "BOARD_MEETING",
+      "date": "2026-06-18",
+      "prob": 53.6
+    },
+    {
+      "symbol": "HDFCBANK",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-19",
+      "prob": 53.4
+    },
+    {
+      "symbol": "BAJAJFINSV",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-30",
+      "prob": 53.1
+    },
+    {
+      "symbol": "ULTRACEMCO",
+      "event": "BOARD_MEETING",
+      "date": "2026-04-27",
+      "prob": 53.0
+    },
+    {
+      "symbol": "KOTAKBANK",
+      "event": "BOARD_MEETING",
+      "date": "2026-05-04",
+      "prob": 52.8
+    },
+    {
+      "symbol": "TECHM",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-07-03",
+      "prob": 52.5
+    },
+    {
+      "symbol": "M&M",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-07-03",
+      "prob": 52.4
+    },
+    {
+      "symbol": "GRASIM",
+      "event": "BOARD_MEETING",
+      "date": "2026-06-08",
+      "prob": 52.2
+    },
+    {
+      "symbol": "TATASTEEL",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-12",
+      "prob": 52.2
+    },
+    {
+      "symbol": "TITAN",
+      "event": "BOARD_MEETING",
+      "date": "2026-05-08",
+      "prob": 52.2
+    },
+    {
+      "symbol": "RELIANCE",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-05",
+      "prob": 52.1
+    },
+    {
+      "symbol": "SHRIRAMFIN",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-07-03",
+      "prob": 52.1
+    },
+    {
+      "symbol": "MARUTI",
+      "event": "BOARD_MEETING",
+      "date": "2026-04-28",
+      "prob": 52.0
+    },
+    {
+      "symbol": "ICICIBANK",
+      "event": "BOARD_MEETING",
+      "date": "2026-06-29",
+      "prob": 51.7
+    },
+    {
+      "symbol": "ASIANPAINT",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-23",
+      "prob": 51.6
+    },
+    {
+      "symbol": "BAJFINANCE",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-30",
+      "prob": 51.5
+    },
+    {
+      "symbol": "DRREDDY",
+      "event": "BOARD_MEETING",
+      "date": "2026-05-12",
+      "prob": 51.5
+    },
+    {
+      "symbol": "TATACONSUM",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-05-25",
+      "prob": 51.5
+    },
+    {
+      "symbol": "HINDALCO",
+      "event": "BOARD_MEETING",
+      "date": "2026-05-22",
+      "prob": 51.3
+    },
+    {
+      "symbol": "AXISBANK",
+      "event": "BOARD_MEETING",
+      "date": "2026-04-27",
+      "prob": 51.0
+    },
+    {
+      "symbol": "BHARTIARTL",
+      "event": "BOARD_MEETING",
+      "date": "2026-05-13",
+      "prob": 51.0
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-23",
+      "prob": 51.0
+    },
+    {
+      "symbol": "WIPRO",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-05",
+      "prob": 51.0
+    },
+    {
+      "symbol": "INDIGO",
+      "event": "BOARD_MEETING",
+      "date": "2026-05-29",
+      "prob": 50.8
+    },
+    {
+      "symbol": "ONGC",
+      "event": "BOARD_MEETING",
+      "date": "2026-06-25",
+      "prob": 50.8
+    },
+    {
+      "symbol": "APOLLOHOSP",
+      "event": "BOARD_MEETING",
+      "date": "2026-05-20",
+      "prob": 50.2
+    },
+    {
+      "symbol": "JIOFIN",
+      "event": "BOARD_MEETING",
+      "date": "2026-04-17",
+      "prob": 50.1
+    },
+    {
+      "symbol": "CIPLA",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-05",
+      "prob": 50.0
+    },
+    {
+      "symbol": "SBILIFE",
+      "event": "BOARD_MEETING",
+      "date": "2026-04-22",
+      "prob": 50.0
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-07-07",
+      "prob": 49.9
+    },
+    {
+      "symbol": "BAJAJ-AUTO",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-24",
+      "prob": 49.0
+    },
+    {
+      "symbol": "LT",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-05-22",
+      "prob": 49.0
+    },
+    {
+      "symbol": "NTPC",
+      "event": "BOARD_MEETING",
+      "date": "2026-05-25",
+      "prob": 49.0
+    },
+    {
+      "symbol": "ADANIPORTS",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-12",
+      "prob": 48.9
+    },
+    {
+      "symbol": "EICHERMOT",
+      "event": "BOARD_MEETING",
+      "date": "2026-05-22",
+      "prob": 48.4
+    },
+    {
+      "symbol": "INFY",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-06-10",
+      "prob": 48.3
+    },
+    {
+      "symbol": "HCLTECH",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-04-24",
+      "prob": 48.1
+    },
+    {
+      "symbol": "POWERGRID",
+      "event": "BOARD_MEETING",
+      "date": "2026-06-26",
+      "prob": 47.6
+    },
+    {
+      "symbol": "ITC",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-05-27",
+      "prob": 47.2
+    },
+    {
+      "symbol": "BEL",
+      "event": "BOARD_MEETING",
+      "date": "2026-05-19",
+      "prob": 46.8
+    },
+    {
+      "symbol": "TCS",
+      "event": "CORPORATE_ACTION",
+      "date": "2026-05-25",
+      "prob": 44.3
+    },
+    {
+      "symbol": "COALINDIA",
+      "event": "BOARD_MEETING",
+      "date": "2026-04-27",
+      "prob": 43.8
+    },
+    {
+      "symbol": "NESTLEIND",
+      "event": "BOARD_MEETING",
+      "date": "2026-07-03",
+      "prob": 42.8
+    }
+  ],
+  "test_from": "2021-07-01"
+}

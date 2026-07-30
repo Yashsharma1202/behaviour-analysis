@@ -81,6 +81,7 @@ def build_index() -> None:
     # 3) rewrite the remaining /api/ fetches to the pre-baked JSON files (+cache-buster)
     page = page.replace('fetch("/api/rankings")', 'fetch("./data/rankings.json"+_V)')
     page = page.replace('fetch("/api/screener")', 'fetch("./data/screener.json"+_V)')
+    page = page.replace('fetch("/api/upcoming")', 'fetch("./data/upcoming.json"+_V)')
     page = page.replace('"/api/behaviour?sym="+encodeURIComponent(sym))',
                         '"./data/behaviour/"+encodeURIComponent(sym)+".json"+_V)')
     # 4) snapshot banner after the tab bar
@@ -144,6 +145,8 @@ def main() -> None:
     _write(DATA / "rankings.json", S.build_rankings())
     print("  building screener…")
     _write(DATA / "screener.json", S.build_screener())
+    print("  building upcoming…")
+    _write(DATA / "upcoming.json", S.build_upcoming())
 
     build_index()
 

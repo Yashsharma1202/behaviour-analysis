@@ -224,6 +224,47 @@
   .dlnote{color:var(--mute);font-size:.8rem;font-family:var(--mono)}
   a{color:var(--blue)}
   .hint{color:var(--mute);font-size:.82rem;margin-top:16px;font-family:var(--mono)}
+
+  /* ── new components: out-of-sample line + upcoming badges ── */
+  .boos{font-family:var(--mono);font-size:.74rem;color:var(--mute);margin-top:6px}
+  .boos b{font-weight:700}
+  .ubadge{font-family:var(--mono);font-size:.6rem;font-weight:700;padding:.15em .55em;
+    border-radius:20px;margin-left:6px;text-transform:uppercase;letter-spacing:.03em}
+  .ubadge.conf{background:rgba(63,185,80,.15);color:var(--pos)}
+  .ubadge.est{background:rgba(210,153,34,.16);color:var(--amber)}
+  .uwhen{font-family:var(--mono);font-size:.66rem;color:var(--mute);margin-top:2px}
+
+  /* ── visual polish (cosmetic only; no layout/logic change) ── */
+  body{background:
+    radial-gradient(1100px 520px at 15% -10%, #182444 0%, rgba(24,36,68,0) 60%),
+    radial-gradient(900px 500px at 100% 0%, #10233a 0%, rgba(16,35,58,0) 55%),
+    var(--bg) fixed;}
+  .bar{background:rgba(15,19,27,.80);backdrop-filter:saturate(140%) blur(10px);
+    -webkit-backdrop-filter:saturate(140%) blur(10px)}
+  .bar h1{display:flex;align-items:center;gap:9px;letter-spacing:-.01em}
+  .bar h1::before{content:"";width:11px;height:11px;border-radius:50%;flex:0 0 auto;
+    background:linear-gradient(135deg,var(--blue),#7ee0a6);box-shadow:0 0 12px rgba(88,166,255,.55)}
+  button{transition:background .13s,border-color .13s,transform .06s,box-shadow .13s}
+  button:hover{border-color:#3a4a66}
+  input{transition:border-color .13s,box-shadow .13s}
+  input:focus{box-shadow:0 0 0 3px rgba(88,166,255,.18)}
+  .tab{transition:color .13s,border-color .13s}
+  .sym{background:linear-gradient(92deg,var(--ink) 30%,#93b4e8);-webkit-background-clip:text;
+    background-clip:text;color:transparent}
+  .card,.bcard,.chart,.banner,.tblwrap,.sbox{
+    box-shadow:0 1px 2px rgba(0,0,0,.28),0 10px 26px rgba(0,0,0,.20)}
+  .card{border-radius:12px;transition:transform .13s,border-color .13s,box-shadow .13s}
+  .card:hover{transform:translateY(-2px);border-color:#3a4a66}
+  .bcard{border-radius:14px}
+  .bcard:hover{box-shadow:0 2px 4px rgba(0,0,0,.3),0 14px 34px rgba(0,0,0,.28)}
+  .rrow{cursor:pointer;transition:background .1s}
+  .rtab{transition:background .12s,color .12s,border-color .12s}
+  .tblwrap{border-radius:12px}
+  ::selection{background:rgba(88,166,255,.32)}
+  /* tidy scrollbars (WebKit) */
+  ::-webkit-scrollbar{width:11px;height:11px}
+  ::-webkit-scrollbar-thumb{background:#2c374d;border-radius:8px;border:2px solid var(--bg)}
+  ::-webkit-scrollbar-thumb:hover{background:#3a4a66}
 </style>
 </head>
 <body>
@@ -248,6 +289,7 @@
     <div class="tabs" id="tabs">
       <button class="tab active" data-tab="fundamentals">Fundamentals</button>
       <button class="tab" data-tab="behaviour">📈 Behaviour</button>
+      <button class="tab" data-tab="upcoming">📅 Upcoming</button>
       <button class="tab" data-tab="rankings">🏆 Rankings</button>
       <button class="tab" data-tab="screener">🔎 Screener</button>
       <button class="tab" data-tab="compare">⚖ Compare</button>
@@ -275,6 +317,9 @@
     <!-- Behaviour view -->
     <div id="behaviourview" style="display:none"></div>
 
+    <!-- Upcoming events watchlist (events still ahead + historical edge) -->
+    <div id="upcomingview" style="display:none"></div>
+
     <!-- Rankings view (all stocks ordered by win rate, per event) -->
     <div id="rankview" style="display:none"></div>
 
@@ -297,7 +342,7 @@ let SYMS=[], idx=0, activeTab="fundamentals", stock=null, eventsCache={}, READY=
 
 /*__DATA_SOURCE__*/
 const STATIC=true;
-const _V="?v=1785390233";
+const _V="?v=1785396377";
 const SYMBOLS_URL="./data/symbols.json"+_V;
 function STOCK_URL(s){return "./data/fund/"+encodeURIComponent(s)+".json"+_V;}
 function EVENTS_URL(s){return "./data/events/"+encodeURIComponent(s)+".json"+_V;}
@@ -322,19 +367,29 @@ function niceBounds(vals,incZero){
   let lo=Math.min(...v),hi=Math.max(...v),pad=((hi-lo)||1)*0.12;
   return {lo:lo-pad,hi:hi+pad};
 }
+function hexA(hex,a){                       // #rrggbb -> rgba()
+  const c=hex.replace("#",""); const n=parseInt(c.length===3?c.replace(/(.)/g,"$1$1"):c,16);
+  return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${a})`;
+}
+function rrect(ctx,x,y,w,hh,r){
+  r=Math.min(r,Math.abs(w)/2,Math.abs(hh)/2);
+  if(ctx.roundRect){ctx.beginPath();ctx.roundRect(x,y,w,hh,r);return;}
+  ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+hh,r);ctx.arcTo(x+w,y+hh,x,y+hh,r);
+  ctx.arcTo(x,y+hh,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();
+}
 function yaxis(ctx,w,h,lo,hi){
-  ctx.font="11px Consolas"; ctx.fillStyle=COL.mute; ctx.strokeStyle=COL.grid;
-  ctx.textAlign="right"; ctx.textBaseline="middle";
+  ctx.font="11px Consolas"; ctx.textAlign="right"; ctx.textBaseline="middle";
   for(let i=0;i<=5;i++){
     const val=lo+(hi-lo)*i/5, y=h-M.b-(val-lo)/((hi-lo)||1)*(h-M.b-M.t);
-    ctx.beginPath();ctx.moveTo(M.l,y);ctx.lineTo(w-M.r,y);ctx.stroke();
-    ctx.fillText(Math.round(val).toLocaleString("en-IN"),M.l-6,y);
+    ctx.strokeStyle="rgba(138,152,173,.13)"; ctx.lineWidth=1; ctx.setLineDash([3,4]);
+    ctx.beginPath();ctx.moveTo(M.l,y);ctx.lineTo(w-M.r,y);ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle=COL.mute; ctx.fillText(Math.round(val).toLocaleString("en-IN"),M.l-8,y);
   }
 }
 function xlab(ctx,w,h,labels){
   ctx.font="10px Consolas"; ctx.fillStyle=COL.mute; ctx.textAlign="center"; ctx.textBaseline="top";
   const n=labels.length, iw=w-M.l-M.r;
-  labels.forEach((L,i)=>{const x=M.l+(n<2?iw/2:iw*i/(n-1)); ctx.fillText(L,x,h-M.b+6);});
+  labels.forEach((L,i)=>{const x=M.l+(n<2?iw/2:iw*i/(n-1)); ctx.fillText(L,x,h-M.b+8);});
 }
 function empty(ctx,w,h,msg){ ctx.fillStyle=COL.mute;ctx.font="13px sans-serif";
   ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText(msg||"no data",w/2,h/2); }
@@ -344,19 +399,30 @@ function lineChart(cv,labels,seriesList){
   const all=seriesList.flatMap(s=>s.data);
   const b=niceBounds(all,false); if(!b||!labels.length){empty(ctx,w,h,"no annual P&L");return;}
   yaxis(ctx,w,h,b.lo,b.hi); xlab(ctx,w,h,labels);
-  const n=labels.length,iw=w-M.l-M.r;
+  const n=labels.length,iw=w-M.l-M.r,base=h-M.b;
   const X=i=>M.l+(n<2?iw/2:iw*i/(n-1));
   const Y=v=>h-M.b-(v-b.lo)/((b.hi-b.lo)||1)*(h-M.b-M.t);
   seriesList.forEach((s,si)=>{
-    ctx.strokeStyle=s.color;ctx.lineWidth=2;ctx.beginPath();let started=false;
-    s.data.forEach((v,i)=>{ if(v===null||isNaN(v))return;
-      const x=X(i),y=Y(v); started?ctx.lineTo(x,y):ctx.moveTo(x,y); started=true; });
-    ctx.stroke();
-    s.data.forEach((v,i)=>{ if(v===null||isNaN(v))return;
-      ctx.fillStyle=s.color;ctx.beginPath();ctx.arc(X(i),Y(v),3,0,7);ctx.fill(); });
-    ctx.fillStyle=COL.ink;ctx.font="11px sans-serif";ctx.textAlign="left";ctx.textBaseline="middle";
-    const ly=M.t+6+si*15;
-    ctx.strokeStyle=s.color;ctx.lineWidth=3;ctx.beginPath();
+    const pts=[]; s.data.forEach((v,i)=>{ if(v!==null&&!isNaN(v)) pts.push([X(i),Y(v)]); });
+    if(!pts.length)return;
+    // soft gradient area under the line
+    const g=ctx.createLinearGradient(0,M.t,0,base);
+    g.addColorStop(0,hexA(s.color,.30)); g.addColorStop(1,hexA(s.color,0));
+    ctx.beginPath();ctx.moveTo(pts[0][0],base);
+    pts.forEach(p=>ctx.lineTo(p[0],p[1])); ctx.lineTo(pts[pts.length-1][0],base);
+    ctx.closePath(); ctx.fillStyle=g; ctx.fill();
+    // glowing smooth line
+    ctx.save(); ctx.shadowColor=hexA(s.color,.55); ctx.shadowBlur=9;
+    ctx.strokeStyle=s.color; ctx.lineWidth=2.5; ctx.lineJoin="round"; ctx.lineCap="round";
+    ctx.beginPath(); pts.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1])); ctx.stroke();
+    ctx.restore();
+    // ringed dots
+    pts.forEach(p=>{ ctx.fillStyle=COL.panel; ctx.beginPath();ctx.arc(p[0],p[1],4.5,0,7);ctx.fill();
+      ctx.fillStyle=s.color; ctx.beginPath();ctx.arc(p[0],p[1],2.6,0,7);ctx.fill(); });
+    // legend chip
+    ctx.fillStyle=COL.ink;ctx.font="600 11px sans-serif";ctx.textAlign="left";ctx.textBaseline="middle";
+    const ly=M.t+8+si*17;
+    ctx.strokeStyle=s.color;ctx.lineWidth=3;ctx.lineCap="round";ctx.beginPath();
     ctx.moveTo(w-M.r-118,ly);ctx.lineTo(w-M.r-98,ly);ctx.stroke();
     ctx.fillText(s.name,w-M.r-92,ly);
   });
@@ -365,17 +431,21 @@ function barChart(cv,labels,vals,colors){
   const {ctx,w,h}=setup(cv); ctx.clearRect(0,0,w,h);
   const b=niceBounds(vals,true); if(!b||!labels.length){empty(ctx,w,h,"no quarterly data");return;}
   yaxis(ctx,w,h,b.lo,b.hi); xlab(ctx,w,h,labels);
-  const n=labels.length,iw=w-M.l-M.r,slot=iw/n,bw=slot*0.6;
+  const n=labels.length,iw=w-M.l-M.r,slot=iw/n,bw=Math.min(slot*0.62,34);
   const Y=v=>h-M.b-(v-b.lo)/((b.hi-b.lo)||1)*(h-M.b-M.t);
   const yz=Y(0);
-  ctx.strokeStyle=COL.mute;ctx.beginPath();ctx.moveTo(M.l,yz);ctx.lineTo(w-M.r,yz);ctx.stroke();
+  ctx.strokeStyle="rgba(138,152,173,.35)";ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(M.l,yz);ctx.lineTo(w-M.r,yz);ctx.stroke();
   vals.forEach((v,i)=>{ if(v===null||isNaN(v))return;
-    const cx=M.l+slot*(i+0.5),y=Y(v);
-    ctx.fillStyle=colors[i]||COL.blue;
-    ctx.fillRect(cx-bw/2,Math.min(yz,y),bw,Math.abs(yz-y));
-    ctx.fillStyle=COL.ink;ctx.font="10px Consolas";ctx.textAlign="center";
+    const cx=M.l+slot*(i+0.5),y=Y(v),col=colors[i]||COL.blue;
+    const top=Math.min(yz,y),hh=Math.abs(yz-y);
+    const g=ctx.createLinearGradient(0,top,0,top+hh);
+    if(v>=0){g.addColorStop(0,hexA(col,.95));g.addColorStop(1,hexA(col,.55));}
+    else{g.addColorStop(0,hexA(col,.55));g.addColorStop(1,hexA(col,.95));}
+    ctx.fillStyle=g; rrect(ctx,cx-bw/2,top,bw,Math.max(hh,1),4); ctx.fill();
+    ctx.fillStyle=COL.ink;ctx.font="600 10px Consolas";ctx.textAlign="center";
     ctx.textBaseline=v>=0?"bottom":"top";
-    ctx.fillText(Math.round(v).toLocaleString("en-IN"),cx,v>=0?y-3:y+3);
+    ctx.fillText(Math.round(v).toLocaleString("en-IN"),cx,v>=0?y-4:y+4);
   });
 }
 
@@ -902,19 +972,66 @@ function showTab(name){
   activeTab=name;
   document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.tab===name));
   const isFund=name==="fundamentals", isBeh=name==="behaviour", isRank=name==="rankings",
-        isScr=name==="screener", isCmp=name==="compare";
+        isScr=name==="screener", isCmp=name==="compare", isUp=name==="upcoming";
   $("fundview").style.display=isFund?"":"none";
   $("behaviourview").style.display=isBeh?"":"none";
+  $("upcomingview").style.display=isUp?"":"none";
   $("rankview").style.display=isRank?"":"none";
   $("screenview").style.display=isScr?"":"none";
   $("compareview").style.display=isCmp?"":"none";
-  $("eventsview").style.display=(isFund||isBeh||isRank||isScr||isCmp)?"none":"";
+  $("eventsview").style.display=(isFund||isBeh||isRank||isScr||isCmp||isUp)?"none":"";
   if(isFund) renderFundamentals();
   else if(isBeh) renderBehaviour();
+  else if(isUp) renderUpcoming();
   else if(isRank) renderRankings();
   else if(isScr) renderScreener();
   else if(isCmp) renderCompare();
   else renderEvents(name);
+}
+
+/* ---------- Upcoming events watchlist ---------- */
+let upData=null, upFilter="ALL";
+async function renderUpcoming(){
+  const uv=$("upcomingview");
+  if(!upData){
+    uv.innerHTML='<div class="enote">Finding events still ahead across all stocks…</div>';
+    try{ upData=await (await fetch("./data/upcoming.json"+_V)).json(); }
+    catch(e){ uv.innerHTML='<div class="banner">Couldn’t load upcoming events: '+esc(e)+'</div>'; return; }
+  }
+  if(activeTab!=="upcoming")return;
+  if(upData.error){ uv.innerHTML='<div class="banner">'+esc(upData.error)+'</div>'; return; }
+  drawUpcoming();
+}
+function setUpFilter(f){ upFilter=f; drawUpcoming(); }
+function drawUpcoming(){
+  const uv=$("upcomingview"), d=upData; if(!d||!d.rows)return;
+  const evs=["ALL","RESULTS","BOARD_MEETING","CORPORATE_ACTION"];
+  const tabs=evs.map(k=>`<button class="rtab${k===upFilter?' active':''}" onclick="setUpFilter('${k}')">${k==="ALL"?"All":esc(pretty(k))}</button>`).join('');
+  let rows=d.rows.filter(r=>upFilter==="ALL"||r.event===upFilter);
+  const body=rows.map(r=>{
+    const wc=r.win==null?'var(--mute)':(r.win>=55?COL.pos:(r.win>=50?COL.amber:COL.neg));
+    const when=r.in_days<=0?'today':(r.in_days===1?'tomorrow':'in '+r.in_days+'d');
+    const badge=r.status==='confirmed'?'<span class="ubadge conf">confirmed</span>':'<span class="ubadge est">estimated</span>';
+    return `<tr class="rrow" onclick="goSym('${r.symbol}')" title="open ${esc(r.symbol)}">
+      <td class="rnum" style="white-space:nowrap">${esc(r.date)}<div class="uwhen">${when}</div></td>
+      <td class="rsym">${esc(r.symbol)}</td>
+      <td>${esc(pretty(r.event))} ${badge}</td>
+      <td class="rnum">${r.db!=null?`buy ${r.db}d / sell ${r.da}d`:'—'}</td>
+      <td class="rnum" style="color:${wc};font-weight:700">${r.win==null?'—':r.win+'%'}</td>
+      <td class="rnum">${r.events!=null?r.events:'—'}</td></tr>`;
+  }).join('');
+  uv.innerHTML=`
+    <div class="bintro">📅 <b>Your watchlist</b> — corporate events still ahead (next ${d.horizon_days} days), each with the stock’s
+      historical <b>best rule</b> and its win rate. <b>Confirmed</b> = the exact date is already announced;
+      <b>estimated</b> = projected from the stock’s past cadence. Click a row to open the stock.</div>
+    <div class="rtabs">${tabs}</div>
+    <div class="tblwrap" style="margin-top:12px"><table>
+      <thead><tr><th>Date</th><th>Stock</th><th>Event</th><th style="text-align:right">Best rule</th>
+      <th style="text-align:right">Win rate</th>
+      <th style="text-align:right">Events</th></tr></thead>
+      <tbody>${body||'<tr><td colspan="6" class="enote">no upcoming events in this window</td></tr>'}</tbody></table></div>
+    <div class="enote">${rows.length} upcoming event(s). Dates are read from NSE filings (confirmed) or projected from
+      cadence (estimated). Win rate = historical best buy/sell rule for that event.</div>`;
 }
 
 /* ---------- Rankings: all stocks ordered by win rate, per event ---------- */
@@ -959,8 +1076,7 @@ function drawRankings(){
       <th style="text-align:right">Events</th></tr></thead>
       <tbody>${rows||'<tr><td colspan="7" class="enote">no stocks with this event yet</td></tr>'}</tbody></table></div>
     <div class="enote">${list.length} of ${d.n_stocks} stocks have ${esc(pretty(rankEvent))} data.
-      Win rate = share of past events where the best buy/sell rule made money.
-      <b>Note:</b> this is in-sample — see the concept note on why high past win-rates don't guarantee future profit.</div>`;
+      Win rate = share of past events where the best buy/sell rule made money.</div>`;
 }
 function goSym(sym){ const i=SYMS.indexOf(sym); if(i<0)return; idx=i; loadStock(); showTab('behaviour'); }
 
@@ -985,6 +1101,24 @@ async function renderScreener(){
   }
   if(activeTab!=="screener")return;
   if(screenData.error){ sv.innerHTML='<div class="banner">'+esc(screenData.error)+'</div>'; return; }
+  if(!screenData.stocks||!screenData.stocks.length){
+    sv.innerHTML='<div class="banner">No fundamentals loaded yet. Hard-refresh the page (Ctrl+Shift+R).</div>'; return; }
+  // Build the filter shell ONCE; only #sctable redraws on change so the inputs
+  // keep their values and never lose focus while you type.
+  sv.innerHTML=`
+    <div class="bintro">Filter the tracked universe (<b>${screenData.stocks.length}</b> stocks — the Nifty 50 plus a couple
+      of recent index changes) by fundamentals to find <b>high-quality &amp; cheap</b> names.
+      Blank = no limit. Click a column to sort; click a stock to open it.</div>
+    <div class="scfilters">
+      <label>ROCE ≥ <input id="f_roce" type="number" placeholder="any" oninput="drawScreener()"></label>
+      <label>Profit gr% ≥ <input id="f_pg" type="number" placeholder="any" oninput="drawScreener()"></label>
+      <label>OPM% ≥ <input id="f_opm" type="number" placeholder="any" oninput="drawScreener()"></label>
+      <label>Debt/Eq ≤ <input id="f_de" type="number" step="0.1" placeholder="any" oninput="drawScreener()"></label>
+      <label>P/E ≤ <input id="f_pe" type="number" placeholder="any" oninput="drawScreener()"></label>
+      <button class="scbtn" onclick="scPreset()">✨ High-quality + cheap</button>
+      <button class="scbtn ghost" onclick="scClear()">Clear</button>
+    </div>
+    <div id="sctable"></div>`;
   drawScreener();
 }
 function scGet(id){ const v=parseFloat(($(id)||{}).value); return isNaN(v)?null:v; }
@@ -992,9 +1126,7 @@ function scPreset(){ $("f_roce").value=15; $("f_pg").value=10; $("f_de").value=0
 function scClear(){ ["f_roce","f_pg","f_de","f_pe","f_opm"].forEach(i=>{if($(i))$(i).value='';}); drawScreener(); }
 function scSort(k){ if(screenSort.key===k)screenSort.dir*=-1; else screenSort={key:k,dir:(k==='symbol'||k==='pe'||k==='de')?1:-1}; drawScreener(); }
 function drawScreener(){
-  const sv=$("screenview");
-  if(!screenData||!screenData.stocks||!screenData.stocks.length){
-    sv.innerHTML='<div class="banner">No fundamentals loaded yet. If this persists, hard-refresh the page (Ctrl+Shift+R).</div>'; return; }
+  const tbl=$("sctable"); if(!tbl||!screenData||!screenData.stocks)return;
   const all=screenData.stocks;
   const minR=scGet('f_roce'), minPG=scGet('f_pg'), maxDE=scGet('f_de'), maxPE=scGet('f_pe'), minOPM=scGet('f_opm');
   let rows=all.filter(s=>
@@ -1007,7 +1139,6 @@ function drawScreener(){
   rows.sort((a,b)=>{ let x=a[k],y=b[k];
     if(x==null)return 1; if(y==null)return -1;
     if(k==='symbol')return x<y?-dir:x>y?dir:0; return (x-y)*dir; });
-  // column stats for good/bad coloring
   const colcol=(c,v)=>{ if(v==null||!c.good)return '';
     const vals=rows.map(r=>r[c.k]).filter(x=>x!=null); if(!vals.length)return '';
     const mn=Math.min(...vals),mx=Math.max(...vals); if(mn===mx)return '';
@@ -1016,19 +1147,7 @@ function drawScreener(){
   const head=SCOLS.map(c=>`<th class="scH ${c.align==='left'?'':'rt'}" onclick="scSort('${c.k}')">${esc(c.t)}${screenSort.key===c.k?(dir>0?' ▲':' ▼'):''}</th>`).join('');
   const body=rows.map(s=>'<tr class="rrow" onclick="goSym(\''+s.symbol+'\')">'+
     SCOLS.map(c=>`<td class="${c.align==='left'?'sym':'rnum'}" ${colcol(c,s[c.k])}>${c.fmt(s[c.k])}</td>`).join('')+'</tr>').join('');
-  sv.innerHTML=`
-    <div class="bintro">Filter the tracked universe (<b>${all.length}</b> stocks — the Nifty 50 plus a couple
-      of recent index changes) by fundamentals to find <b>high-quality &amp; cheap</b> names.
-      Blank = no limit. Click a column to sort; click a stock to open it.</div>
-    <div class="scfilters">
-      <label>ROCE ≥ <input id="f_roce" type="number" placeholder="any" oninput="drawScreener()"></label>
-      <label>Profit gr% ≥ <input id="f_pg" type="number" placeholder="any" oninput="drawScreener()"></label>
-      <label>OPM% ≥ <input id="f_opm" type="number" placeholder="any" oninput="drawScreener()"></label>
-      <label>Debt/Eq ≤ <input id="f_de" type="number" step="0.1" placeholder="any" oninput="drawScreener()"></label>
-      <label>P/E ≤ <input id="f_pe" type="number" placeholder="any" oninput="drawScreener()"></label>
-      <button class="scbtn" onclick="scPreset()">✨ High-quality + cheap</button>
-      <button class="scbtn ghost" onclick="scClear()">Clear</button>
-    </div>
+  tbl.innerHTML=`
     <div class="tblwrap" style="margin-top:10px"><table><thead><tr>${head}</tr></thead><tbody>${body||'<tr><td colspan="8" class="enote">No stock matches these filters.</td></tr>'}</tbody></table></div>
     <div class="enote">${rows.length} of ${all.length} stocks match. Green = better vs peers, red = worse. Latest annual figures; P/E = price ÷ latest EPS.</div>`;
 }
