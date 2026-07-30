@@ -85,7 +85,11 @@ def main() -> None:
         kept = list(old_dts)
         for d0, subj in ya:
             if all(abs((d0 - e).days) > TOL_DAYS for e in kept):   # not already present
-                add.append({"exDate": d0.strftime("%d-%b-%Y"), "subject": subj,
+                ds = d0.strftime("%d-%b-%Y")
+                # Yahoo gives only the ex-date; the record date is the same day
+                # (T+1 settlement) or ~1 day later — use the ex-date so the
+                # RECORD DATE column isn't blank in the dashboard.
+                add.append({"exDate": ds, "recDate": ds, "subject": subj,
                             "symbol": sym, "comp": sym, "company_name": sym,
                             "ca_source": "yahoo"})
                 kept.append(d0)
