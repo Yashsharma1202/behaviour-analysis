@@ -60,6 +60,10 @@ def yahoo_actions(sym: str) -> list[tuple[dt.date, str]]:
     for v in ev.get("dividends", {}).values():
         d0 = dt.datetime.fromtimestamp(v["date"], dt.timezone.utc).date()
         amt = v.get("amount")
+        try:
+            amt = round(float(amt), 2)                 # Yahoo split-adjusts -> tidy decimals
+        except (TypeError, ValueError):
+            amt = None
         out.append((d0, f"Dividend - Rs {amt} Per Share" if amt else "Dividend"))
     for v in ev.get("splits", {}).values():
         d0 = dt.datetime.fromtimestamp(v["date"], dt.timezone.utc).date()
@@ -80,6 +84,13 @@ def main() -> None:
                          .dropna().dt.date.unique()) if len(old) else []
         before = len(old_dts)
 
+        # the stock's face value, taken from its existing NSE rows (Yahoo omits it)
+        fv = ""
+        if len(old) and "faceVal" in old.columns:
+            nz = old.loc[old["faceVal"].astype(str).str.strip() != "", "faceVal"]
+            if len(nz):
+                fv = nz.mode().iloc[0]
+
         ya = yahoo_actions(sym)
         add = []
         kept = list(old_dts)
@@ -90,8 +101,8 @@ def main() -> None:
                 # (T+1 settlement) or ~1 day later — use the ex-date so the
                 # RECORD DATE column isn't blank in the dashboard.
                 add.append({"exDate": ds, "recDate": ds, "subject": subj,
-                            "symbol": sym, "comp": sym, "company_name": sym,
-                            "ca_source": "yahoo"})
+                            "faceVal": fv, "symbol": sym, "comp": sym,
+                            "company_name": sym, "ca_source": "yahoo"})
                 kept.append(d0)
         after = len(kept)
         tot_before += before; tot_after += after
