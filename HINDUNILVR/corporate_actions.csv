@@ -1,21 +1,43 @@
-bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate
--,-,Hindustan Unilever Limited,23-Jun-2026,1,-,INE030A01027,-,-,23-Jun-2026,EQ,Dividend - Rs 22 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
--,-,Hindustan Unilever Limited,05-Dec-2025,1,-,INE030A01027,-,-,05-Dec-2025,EQ,Demerger,HINDUNILVR,Hindustan Unilever Ltd.,
--,-,Hindustan Unilever Limited,07-Nov-2025,1,-,INE030A01027,-,-,07-Nov-2025,EQ,Interim Dividend - Rs 19 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
--,-,Hindustan Unilever Limited,23-Jun-2025,1,-,INE030A01027,-,-,23-Jun-2025,EQ,Dividend - Rs 24 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
--,-,Hindustan Unilever Limited,06-Nov-2024,1,-,INE030A01027,-,-,06-Nov-2024,EQ,Interim Dividend - Rs 19 Per Share/Special Dividend - Rs 10 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
-21-Jun-2024,15-Jun-2024,Hindustan Unilever Limited,14-Jun-2024,1,-,INE030A01027,-,-,-,EQ,Annual General Meeting/Dividend - Rs 24 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
--,-,Hindustan Unilever Limited,02-Nov-2023,1,-,INE030A01027,-,-,02-Nov-2023,EQ,Interim Dividend - Rs 18 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
-26-Jun-2023,20-Jun-2023,Hindustan Unilever Limited,19-Jun-2023,1,-,INE030A01027,-,-,-,EQ,Annual General Meeting/Dividend - Rs 22 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
--,-,Hindustan Unilever Limited,01-Nov-2022,1,-,INE030A01027,-,-,02-Nov-2022,EQ,Interim Dividend - Rs 17 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
-23-Jun-2022,17-Jun-2022,Hindustan Unilever Limited,15-Jun-2022,1,-,INE030A01027,-,-,-,EQ,Annual General Meeting/Dividend - Rs  19 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
--,-,Hindustan Unilever Limited,26-Oct-2021,1,-,INE030A01027,-,-,27-Oct-2021,EQ, Interim Dividend - Rs 15 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
-22-Jun-2021,16-Jun-2021,Hindustan Unilever Limited,14-Jun-2021,1,-,INE030A01027,-,-,-,EQ, Annual General Meeting/Dividend - Rs 17  Per Sh,HINDUNILVR,Hindustan Unilever Ltd.,
--,-,Hindustan Unilever Limited,28-Oct-2020,1,-,INE030A01027,-,-,29-Oct-2020,EQ, Interim Dividend - Rs 14 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
--,-,Hindustan Unilever Limited,30-Jul-2020,1,-,INE030A01027,-,-,31-Jul-2020,EQ, Special Dividend - Rs 9.50 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
-30-Jun-2020,23-Jun-2020,Hindustan Unilever Limited,19-Jun-2020,1,-,INE030A01027,-,-,-,EQ, Annual General Meeting/Dividend - Rs 14 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
--,-,Hindustan Unilever Limited,23-Oct-2019,1,-,INE030A01027,-,-,24-Oct-2019,EQ, Interim Dividend - Rs 11 Per Sh,HINDUNILVR,Hindustan Unilever Ltd.,
-29-Jun-2019,22-Jun-2019,Hindustan Unilever Limited,20-Jun-2019,1,-,INE030A01027,-,-,-,EQ, Annual General Meeting/ Dividend - Rs 13 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
--,-,Hindustan Unilever Limited,25-Oct-2018,1,-,INE030A01027,-,-,26-Oct-2018,EQ, Interim Dividend - Rs 9 Per Share (Date And Purpose Revised),HINDUNILVR,Hindustan Unilever Ltd.,
-29-Jun-2018,23-Jun-2018,Hindustan Unilever Limited,21-Jun-2018,1,-,INE030A01027,-,-,-,EQ, Annual General Meeting / Dividend- Rs 12 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
--,-,Hindustan Unilever Limited,01-Nov-2017,1,-,INE030A01027,-,-,02-Nov-2017,EQ, Interim Dividend - Rs 8/- Per Share,HINDUNILVR,Hindustan Unilever Ltd.,
+bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate,ca_source
+-,-,Hindustan Unilever Limited,23-Jun-2026,1,-,INE030A01027,-,-,23-Jun-2026,EQ,Dividend - Rs 22 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+-,-,Hindustan Unilever Limited,05-Dec-2025,1,-,INE030A01027,-,-,05-Dec-2025,EQ,Demerger,HINDUNILVR,Hindustan Unilever Ltd.,,
+-,-,Hindustan Unilever Limited,07-Nov-2025,1,-,INE030A01027,-,-,07-Nov-2025,EQ,Interim Dividend - Rs 19 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+-,-,Hindustan Unilever Limited,23-Jun-2025,1,-,INE030A01027,-,-,23-Jun-2025,EQ,Dividend - Rs 24 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+-,-,Hindustan Unilever Limited,06-Nov-2024,1,-,INE030A01027,-,-,06-Nov-2024,EQ,Interim Dividend - Rs 19 Per Share/Special Dividend - Rs 10 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+21-Jun-2024,15-Jun-2024,Hindustan Unilever Limited,14-Jun-2024,1,-,INE030A01027,-,-,-,EQ,Annual General Meeting/Dividend - Rs 24 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+-,-,Hindustan Unilever Limited,02-Nov-2023,1,-,INE030A01027,-,-,02-Nov-2023,EQ,Interim Dividend - Rs 18 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+26-Jun-2023,20-Jun-2023,Hindustan Unilever Limited,19-Jun-2023,1,-,INE030A01027,-,-,-,EQ,Annual General Meeting/Dividend - Rs 22 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+-,-,Hindustan Unilever Limited,01-Nov-2022,1,-,INE030A01027,-,-,02-Nov-2022,EQ,Interim Dividend - Rs 17 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+23-Jun-2022,17-Jun-2022,Hindustan Unilever Limited,15-Jun-2022,1,-,INE030A01027,-,-,-,EQ,Annual General Meeting/Dividend - Rs  19 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+-,-,Hindustan Unilever Limited,26-Oct-2021,1,-,INE030A01027,-,-,27-Oct-2021,EQ, Interim Dividend - Rs 15 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+22-Jun-2021,16-Jun-2021,Hindustan Unilever Limited,14-Jun-2021,1,-,INE030A01027,-,-,-,EQ, Annual General Meeting/Dividend - Rs 17  Per Sh,HINDUNILVR,Hindustan Unilever Ltd.,,
+-,-,Hindustan Unilever Limited,28-Oct-2020,1,-,INE030A01027,-,-,29-Oct-2020,EQ, Interim Dividend - Rs 14 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+-,-,Hindustan Unilever Limited,30-Jul-2020,1,-,INE030A01027,-,-,31-Jul-2020,EQ, Special Dividend - Rs 9.50 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+30-Jun-2020,23-Jun-2020,Hindustan Unilever Limited,19-Jun-2020,1,-,INE030A01027,-,-,-,EQ, Annual General Meeting/Dividend - Rs 14 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+-,-,Hindustan Unilever Limited,23-Oct-2019,1,-,INE030A01027,-,-,24-Oct-2019,EQ, Interim Dividend - Rs 11 Per Sh,HINDUNILVR,Hindustan Unilever Ltd.,,
+29-Jun-2019,22-Jun-2019,Hindustan Unilever Limited,20-Jun-2019,1,-,INE030A01027,-,-,-,EQ, Annual General Meeting/ Dividend - Rs 13 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+-,-,Hindustan Unilever Limited,25-Oct-2018,1,-,INE030A01027,-,-,26-Oct-2018,EQ, Interim Dividend - Rs 9 Per Share (Date And Purpose Revised),HINDUNILVR,Hindustan Unilever Ltd.,,
+29-Jun-2018,23-Jun-2018,Hindustan Unilever Limited,21-Jun-2018,1,-,INE030A01027,-,-,-,EQ, Annual General Meeting / Dividend- Rs 12 Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+-,-,Hindustan Unilever Limited,01-Nov-2017,1,-,INE030A01027,-,-,02-Nov-2017,EQ, Interim Dividend - Rs 8/- Per Share,HINDUNILVR,Hindustan Unilever Ltd.,,
+,,HINDUNILVR,22-Jun-2017,,,,,,,,Dividend - Rs 10.0 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,01-Nov-2016,,,,,,,,Dividend - Rs 7.0 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,22-Jun-2016,,,,,,,,Dividend - Rs 9.5 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,19-Oct-2015,,,,,,,,Dividend - Rs 6.5 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,19-Jun-2015,,,,,,,,Dividend - Rs 9.0 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,31-Oct-2014,,,,,,,,Dividend - Rs 6.0 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,11-Jun-2014,,,,,,,,Dividend - Rs 7.5 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,31-Oct-2013,,,,,,,,Dividend - Rs 5.5 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,10-Jul-2013,,,,,,,,Dividend - Rs 6.0 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,01-Nov-2012,,,,,,,,Dividend - Rs 12.5 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,04-Jul-2012,,,,,,,,Dividend - Rs 4.0 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,04-Nov-2011,,,,,,,,Dividend - Rs 3.5 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,08-Jul-2011,,,,,,,,Dividend - Rs 3.5 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,01-Nov-2010,,,,,,,,Dividend - Rs 3.0 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,08-Jul-2010,,,,,,,,Dividend - Rs 3.5 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,06-Nov-2009,,,,,,,,Dividend - Rs 3.0 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,12-Jun-2009,,,,,,,,Dividend - Rs 4.0 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,04-Aug-2008,,,,,,,,Dividend - Rs 3.5 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,17-Mar-2008,,,,,,,,Dividend - Rs 3.0 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,07-Nov-2007,,,,,,,,Dividend - Rs 3.0 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,07-Aug-2007,,,,,,,,Dividend - Rs 3.0 Per Share,HINDUNILVR,HINDUNILVR,,yahoo
+,,HINDUNILVR,20-Apr-2007,,,,,,,,Dividend - Rs 3.0 Per Share,HINDUNILVR,HINDUNILVR,,yahoo

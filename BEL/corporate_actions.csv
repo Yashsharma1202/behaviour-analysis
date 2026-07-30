@@ -1,21 +1,50 @@
-bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate
--,-,Bharat Electronics Limited,06-Mar-2026,1,-,INE263A01016,-,-,06-Mar-2026,EQ,Interim Dividend - Rs 1.95 Per Share,BEL,Bharat Electronics Ltd.,
--,-,Bharat Electronics Limited,14-Aug-2025,1,-,INE263A01016,-,-,14-Aug-2025,EQ,Dividend - Rs 0.90 Per Share,BEL,Bharat Electronics Ltd.,
--,-,Bharat Electronics Limited,11-Mar-2025,1,-,INE263A01016,-,-,11-Mar-2025,EQ,Interim Dividend - Rs 1.5 Per Share,BEL,Bharat Electronics Ltd.,
-18-Aug-2024,16-Aug-2024,Bharat Electronics Limited,14-Aug-2024,1,-,INE263A01016,-,-,-,EQ,Annual General Meeting/Dividend - Re 0.80 Per Share,BEL,Bharat Electronics Ltd.,
--,-,Bharat Electronics Limited,22-Mar-2024,1,-,INE263A01016,-,-,23-Mar-2024,EQ,Interim Dividend - Re 0.70 Per Share,BEL,Bharat Electronics Ltd.,
--,-,Bharat Electronics Limited,09-Feb-2024,1,-,INE263A01016,-,-,10-Feb-2024,EQ,Interim Dividend - Re 0.70 Per Share,BEL,Bharat Electronics Ltd.,
-20-Aug-2023,18-Aug-2023,Bharat Electronics Limited,17-Aug-2023,1,-,INE263A01016,-,-,-,EQ,Annual General Meeting/Dividend - Re 0.60 Per Share,BEL,Bharat Electronics Ltd.,
--,-,Bharat Electronics Limited,24-Mar-2023,1,-,INE263A01016,-,-,25-Mar-2023,EQ,Interim Dividend - Rs 0.60 Per Share,BEL,Bharat Electronics Ltd.,
--,-,Bharat Electronics Limited,10-Feb-2023,1,-,INE263A01016,-,-,10-Feb-2023,EQ,Interim Dividend - Re 0.60 Per Share,BEL,Bharat Electronics Ltd.,
--,-,Bharat Electronics Limited,15-Sep-2022,1,-,INE263A01016,-,-,16-Sep-2022,EQ,Bonus 2:1,BEL,Bharat Electronics Ltd.,
-14-Aug-2022,11-Aug-2022,Bharat Electronics Limited,08-Aug-2022,1,-,INE263A01016,-,-,-,EQ,Annual General Meeting/Dividend - Rs 1.50 Per Share,BEL,Bharat Electronics Ltd.,
--,-,Bharat Electronics Limited,24-Mar-2022,1,-,INE263A01016,-,-,26-Mar-2022,EQ,Interim Dividend - Rs 1.50 Per Share,BEL,Bharat Electronics Ltd.,
--,-,Bharat Electronics Limited,09-Feb-2022,1,-,INE263A01016,-,-,10-Feb-2022,EQ,Interim Dividend - Rs 1.50 Per Share,BEL,Bharat Electronics Ltd.,
-19-Sep-2021,16-Sep-2021,Bharat Electronics Limited,14-Sep-2021,1,-,INE263A01016,-,-,-,EQ, Annual General Meeting/Dividend - Rs 1.20 Per Share,BEL,Bharat Electronics Ltd.,
--,-,Bharat Electronics Limited,23-Mar-2021,1,-,INE263A01016,-,-,24-Mar-2021,EQ, Interim Dividend - Rs 1.40  Per Share,BEL,Bharat Electronics Ltd.,
--,-,Bharat Electronics Limited,08-Feb-2021,1,-,INE263A01016,-,-,09-Feb-2021,EQ, Interim Dividend - Rs 1.40 Per Share,BEL,Bharat Electronics Ltd.,
-20-Sep-2020,17-Sep-2020,Bharat Electronics Limited,15-Sep-2020,1,-,INE263A01016,-,-,-,EQ, Annual General Meeting/Dividend - Rs 1.40 Per Share,BEL,Bharat Electronics Ltd.,
--,-,Bharat Electronics Limited,11-Feb-2020,1,-,INE263A01016,-,-,12-Feb-2020,EQ, Interim Dividend - Rs 1.40 Per Share,BEL,Bharat Electronics Ltd.,
-24-Aug-2019,22-Aug-2019,Bharat Electronics Limited,20-Aug-2019,1,-,INE263A01016,-,-,-,EQ, Annual General Meeting/Dividend - Rs 1.70 Per Share,BEL,Bharat Electronics Ltd.,
--,-,Bharat Electronics Limited,27-Mar-2019,1,-,INE263A01016,-,-,28-Mar-2019,EQ, Interim Dividend - Re 0.70 Per Share,BEL,Bharat Electronics Ltd.,
+bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate,ca_source
+-,-,Bharat Electronics Limited,06-Mar-2026,1,-,INE263A01016,-,-,06-Mar-2026,EQ,Interim Dividend - Rs 1.95 Per Share,BEL,Bharat Electronics Ltd.,,
+-,-,Bharat Electronics Limited,14-Aug-2025,1,-,INE263A01016,-,-,14-Aug-2025,EQ,Dividend - Rs 0.90 Per Share,BEL,Bharat Electronics Ltd.,,
+-,-,Bharat Electronics Limited,11-Mar-2025,1,-,INE263A01016,-,-,11-Mar-2025,EQ,Interim Dividend - Rs 1.5 Per Share,BEL,Bharat Electronics Ltd.,,
+18-Aug-2024,16-Aug-2024,Bharat Electronics Limited,14-Aug-2024,1,-,INE263A01016,-,-,-,EQ,Annual General Meeting/Dividend - Re 0.80 Per Share,BEL,Bharat Electronics Ltd.,,
+-,-,Bharat Electronics Limited,22-Mar-2024,1,-,INE263A01016,-,-,23-Mar-2024,EQ,Interim Dividend - Re 0.70 Per Share,BEL,Bharat Electronics Ltd.,,
+-,-,Bharat Electronics Limited,09-Feb-2024,1,-,INE263A01016,-,-,10-Feb-2024,EQ,Interim Dividend - Re 0.70 Per Share,BEL,Bharat Electronics Ltd.,,
+20-Aug-2023,18-Aug-2023,Bharat Electronics Limited,17-Aug-2023,1,-,INE263A01016,-,-,-,EQ,Annual General Meeting/Dividend - Re 0.60 Per Share,BEL,Bharat Electronics Ltd.,,
+-,-,Bharat Electronics Limited,24-Mar-2023,1,-,INE263A01016,-,-,25-Mar-2023,EQ,Interim Dividend - Rs 0.60 Per Share,BEL,Bharat Electronics Ltd.,,
+-,-,Bharat Electronics Limited,10-Feb-2023,1,-,INE263A01016,-,-,10-Feb-2023,EQ,Interim Dividend - Re 0.60 Per Share,BEL,Bharat Electronics Ltd.,,
+-,-,Bharat Electronics Limited,15-Sep-2022,1,-,INE263A01016,-,-,16-Sep-2022,EQ,Bonus 2:1,BEL,Bharat Electronics Ltd.,,
+14-Aug-2022,11-Aug-2022,Bharat Electronics Limited,08-Aug-2022,1,-,INE263A01016,-,-,-,EQ,Annual General Meeting/Dividend - Rs 1.50 Per Share,BEL,Bharat Electronics Ltd.,,
+-,-,Bharat Electronics Limited,24-Mar-2022,1,-,INE263A01016,-,-,26-Mar-2022,EQ,Interim Dividend - Rs 1.50 Per Share,BEL,Bharat Electronics Ltd.,,
+-,-,Bharat Electronics Limited,09-Feb-2022,1,-,INE263A01016,-,-,10-Feb-2022,EQ,Interim Dividend - Rs 1.50 Per Share,BEL,Bharat Electronics Ltd.,,
+19-Sep-2021,16-Sep-2021,Bharat Electronics Limited,14-Sep-2021,1,-,INE263A01016,-,-,-,EQ, Annual General Meeting/Dividend - Rs 1.20 Per Share,BEL,Bharat Electronics Ltd.,,
+-,-,Bharat Electronics Limited,23-Mar-2021,1,-,INE263A01016,-,-,24-Mar-2021,EQ, Interim Dividend - Rs 1.40  Per Share,BEL,Bharat Electronics Ltd.,,
+-,-,Bharat Electronics Limited,08-Feb-2021,1,-,INE263A01016,-,-,09-Feb-2021,EQ, Interim Dividend - Rs 1.40 Per Share,BEL,Bharat Electronics Ltd.,,
+20-Sep-2020,17-Sep-2020,Bharat Electronics Limited,15-Sep-2020,1,-,INE263A01016,-,-,-,EQ, Annual General Meeting/Dividend - Rs 1.40 Per Share,BEL,Bharat Electronics Ltd.,,
+-,-,Bharat Electronics Limited,11-Feb-2020,1,-,INE263A01016,-,-,12-Feb-2020,EQ, Interim Dividend - Rs 1.40 Per Share,BEL,Bharat Electronics Ltd.,,
+24-Aug-2019,22-Aug-2019,Bharat Electronics Limited,20-Aug-2019,1,-,INE263A01016,-,-,-,EQ, Annual General Meeting/Dividend - Rs 1.70 Per Share,BEL,Bharat Electronics Ltd.,,
+-,-,Bharat Electronics Limited,27-Mar-2019,1,-,INE263A01016,-,-,28-Mar-2019,EQ, Interim Dividend - Re 0.70 Per Share,BEL,Bharat Electronics Ltd.,,
+,,BEL,08-Feb-2019,,,,,,,,Dividend - Rs 0.1 Per Share,BEL,BEL,,yahoo
+,,BEL,20-Aug-2018,,,,,,,,Dividend - Rs 0.133333 Per Share,BEL,BEL,,yahoo
+,,BEL,08-Feb-2018,,,,,,,,Dividend - Rs 0.533333 Per Share,BEL,BEL,,yahoo
+,,BEL,28-Sep-2017,,,,,,,,11:10,BEL,BEL,,yahoo
+,,BEL,14-Aug-2017,,,,,,,,Dividend - Rs 0.318182 Per Share,BEL,BEL,,yahoo
+,,BEL,29-Mar-2017,,,,,,,,Dividend - Rs 0.272727 Per Share,BEL,BEL,,yahoo
+,,BEL,16-Mar-2017,,,,,,,,10:1,BEL,BEL,,yahoo
+,,BEL,02-Feb-2017,,,,,,,,Dividend - Rs 0.090909 Per Share,BEL,BEL,,yahoo
+,,BEL,18-Aug-2016,,,,,,,,Dividend - Rs 0.439394 Per Share,BEL,BEL,,yahoo
+,,BEL,04-Feb-2016,,,,,,,,Dividend - Rs 0.075758 Per Share,BEL,BEL,,yahoo
+,,BEL,14-Sep-2015,,,,,,,,3:1,BEL,BEL,,yahoo
+,,BEL,10-Aug-2015,,,,,,,,Dividend - Rs 0.234343 Per Share,BEL,BEL,,yahoo
+,,BEL,28-Jan-2015,,,,,,,,Dividend - Rs 0.060606 Per Share,BEL,BEL,,yahoo
+,,BEL,12-Sep-2014,,,,,,,,Dividend - Rs 0.174747 Per Share,BEL,BEL,,yahoo
+,,BEL,29-Jan-2014,,,,,,,,Dividend - Rs 0.060606 Per Share,BEL,BEL,,yahoo
+,,BEL,06-Sep-2013,,,,,,,,Dividend - Rs 0.164646 Per Share,BEL,BEL,,yahoo
+,,BEL,30-Jan-2013,,,,,,,,Dividend - Rs 0.060606 Per Share,BEL,BEL,,yahoo
+,,BEL,07-Sep-2012,,,,,,,,Dividend - Rs 0.109091 Per Share,BEL,BEL,,yahoo
+,,BEL,01-Feb-2012,,,,,,,,Dividend - Rs 0.10101 Per Share,BEL,BEL,,yahoo
+,,BEL,13-Sep-2011,,,,,,,,Dividend - Rs 0.157576 Per Share,BEL,BEL,,yahoo
+,,BEL,02-Feb-2011,,,,,,,,Dividend - Rs 0.060606 Per Share,BEL,BEL,,yahoo
+,,BEL,13-Sep-2010,,,,,,,,Dividend - Rs 0.133333 Per Share,BEL,BEL,,yahoo
+,,BEL,03-Feb-2010,,,,,,,,Dividend - Rs 0.060606 Per Share,BEL,BEL,,yahoo
+,,BEL,14-Sep-2009,,,,,,,,Dividend - Rs 0.128283 Per Share,BEL,BEL,,yahoo
+,,BEL,28-Jan-2009,,,,,,,,Dividend - Rs 0.060606 Per Share,BEL,BEL,,yahoo
+,,BEL,12-Sep-2008,,,,,,,,Dividend - Rs 0.148485 Per Share,BEL,BEL,,yahoo
+,,BEL,30-Jan-2008,,,,,,,,Dividend - Rs 0.060606 Per Share,BEL,BEL,,yahoo
+,,BEL,07-Sep-2007,,,,,,,,Dividend - Rs 0.141414 Per Share,BEL,BEL,,yahoo
+,,BEL,25-Jan-2007,,,,,,,,Dividend - Rs 0.040404 Per Share,BEL,BEL,,yahoo

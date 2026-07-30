@@ -1,21 +1,34 @@
-bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate
--,-,Coal India Limited,18-Feb-2026,10,-,INE522F01014,-,-,18-Feb-2026,EQ,Interim Dividend - Rs 5.50 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,04-Nov-2025,10,-,INE522F01014,-,-,04-Nov-2025,EQ,Interim Dividend - Rs 10.25 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,21-Aug-2025,10,-,INE522F01014,-,-,21-Aug-2025,EQ,Dividend - Rs 5.15 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,06-Aug-2025,10,-,INE522F01014,-,-,06-Aug-2025,EQ,Interim Dividend - Rs 5.50 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,31-Jan-2025,10,-,INE522F01014,-,-,31-Jan-2025,EQ,Interim Dividend - Rs 5.60 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,05-Nov-2024,10,-,INE522F01014,-,-,05-Nov-2024,EQ,Interim Dividend - Rs 15.75 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,16-Aug-2024,10,-,INE522F01014,-,-,16-Aug-2024,EQ,Dividend - Rs 5 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,20-Feb-2024,10,-,INE522F01014,-,-,20-Feb-2024,EQ,Interim Dividend - Rs 5.25 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,21-Nov-2023,10,-,INE522F01014,-,-,21-Nov-2023,EQ,Interim Dividend - Rs 15.25 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,18-Aug-2023,10,-,INE522F01014,-,-,18-Aug-2023,EQ,Dividend - Rs 4 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,08-Feb-2023,10,-,INE522F01014,-,-,08-Feb-2023,EQ,Interim Dividend - Rs 5.25 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,15-Nov-2022,10,-,INE522F01014,-,-,16-Nov-2022,EQ,Interim Dividend - Rs 15 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,11-Aug-2022,10,-,INE522F01014,-,-,12-Aug-2022,EQ,Dividend - Rs 3 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,21-Feb-2022,10,-,INE522F01014,-,-,22-Feb-2022,EQ,Interim Dividend - Rs 5 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,06-Dec-2021,10,-,INE522F01014,-,-,07-Dec-2021,EQ, Interim Dividend - Rs 9 Per Sh,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,02-Sep-2021,10,-,INE522F01014,-,-,03-Sep-2021,EQ, Dividend - Rs 3.50 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,15-Mar-2021,10,-,INE522F01014,-,-,16-Mar-2021,EQ, Interim Dividend - Rs 5 Per Share,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,19-Nov-2020,10,-,INE522F01014,-,-,20-Nov-2020,EQ, Interim Dividend - Rs 7.50 Per Share,COALINDIA,Coal India Ltd.,
-23-Sep-2020,16-Sep-2020,Coal India Limited,14-Sep-2020,10,-,INE522F01014,-,-,-,EQ, Annual General Meeting,COALINDIA,Coal India Ltd.,
--,-,Coal India Limited,19-Mar-2020,10,-,INE522F01014,-,-,20-Mar-2020,EQ, Interim Dividend - Rs 12 Per Share,COALINDIA,Coal India Ltd.,
+bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate,ca_source
+-,-,Coal India Limited,18-Feb-2026,10,-,INE522F01014,-,-,18-Feb-2026,EQ,Interim Dividend - Rs 5.50 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,04-Nov-2025,10,-,INE522F01014,-,-,04-Nov-2025,EQ,Interim Dividend - Rs 10.25 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,21-Aug-2025,10,-,INE522F01014,-,-,21-Aug-2025,EQ,Dividend - Rs 5.15 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,06-Aug-2025,10,-,INE522F01014,-,-,06-Aug-2025,EQ,Interim Dividend - Rs 5.50 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,31-Jan-2025,10,-,INE522F01014,-,-,31-Jan-2025,EQ,Interim Dividend - Rs 5.60 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,05-Nov-2024,10,-,INE522F01014,-,-,05-Nov-2024,EQ,Interim Dividend - Rs 15.75 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,16-Aug-2024,10,-,INE522F01014,-,-,16-Aug-2024,EQ,Dividend - Rs 5 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,20-Feb-2024,10,-,INE522F01014,-,-,20-Feb-2024,EQ,Interim Dividend - Rs 5.25 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,21-Nov-2023,10,-,INE522F01014,-,-,21-Nov-2023,EQ,Interim Dividend - Rs 15.25 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,18-Aug-2023,10,-,INE522F01014,-,-,18-Aug-2023,EQ,Dividend - Rs 4 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,08-Feb-2023,10,-,INE522F01014,-,-,08-Feb-2023,EQ,Interim Dividend - Rs 5.25 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,15-Nov-2022,10,-,INE522F01014,-,-,16-Nov-2022,EQ,Interim Dividend - Rs 15 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,11-Aug-2022,10,-,INE522F01014,-,-,12-Aug-2022,EQ,Dividend - Rs 3 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,21-Feb-2022,10,-,INE522F01014,-,-,22-Feb-2022,EQ,Interim Dividend - Rs 5 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,06-Dec-2021,10,-,INE522F01014,-,-,07-Dec-2021,EQ, Interim Dividend - Rs 9 Per Sh,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,02-Sep-2021,10,-,INE522F01014,-,-,03-Sep-2021,EQ, Dividend - Rs 3.50 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,15-Mar-2021,10,-,INE522F01014,-,-,16-Mar-2021,EQ, Interim Dividend - Rs 5 Per Share,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,19-Nov-2020,10,-,INE522F01014,-,-,20-Nov-2020,EQ, Interim Dividend - Rs 7.50 Per Share,COALINDIA,Coal India Ltd.,,
+23-Sep-2020,16-Sep-2020,Coal India Limited,14-Sep-2020,10,-,INE522F01014,-,-,-,EQ, Annual General Meeting,COALINDIA,Coal India Ltd.,,
+-,-,Coal India Limited,19-Mar-2020,10,-,INE522F01014,-,-,20-Mar-2020,EQ, Interim Dividend - Rs 12 Per Share,COALINDIA,Coal India Ltd.,,
+,,COALINDIA,22-Mar-2019,,,,,,,,Dividend - Rs 5.85 Per Share,COALINDIA,COALINDIA,,yahoo
+,,COALINDIA,28-Dec-2018,,,,,,,,Dividend - Rs 7.25 Per Share,COALINDIA,COALINDIA,,yahoo
+,,COALINDIA,16-Mar-2018,,,,,,,,Dividend - Rs 16.5 Per Share,COALINDIA,COALINDIA,,yahoo
+,,COALINDIA,14-Mar-2017,,,,,,,,Dividend - Rs 18.75 Per Share,COALINDIA,COALINDIA,,yahoo
+,,COALINDIA,14-Mar-2016,,,,,,,,Dividend - Rs 27.4 Per Share,COALINDIA,COALINDIA,,yahoo
+,,COALINDIA,03-Mar-2015,,,,,,,,Dividend - Rs 20.7 Per Share,COALINDIA,COALINDIA,,yahoo
+,,COALINDIA,17-Jan-2014,,,,,,,,Dividend - Rs 29.0 Per Share,COALINDIA,COALINDIA,,yahoo
+,,COALINDIA,06-Sep-2013,,,,,,,,Dividend - Rs 4.3 Per Share,COALINDIA,COALINDIA,,yahoo
+,,COALINDIA,18-Mar-2013,,,,,,,,Dividend - Rs 9.7 Per Share,COALINDIA,COALINDIA,,yahoo
+,,COALINDIA,06-Sep-2012,,,,,,,,Dividend - Rs 0.5 Per Share,COALINDIA,COALINDIA,,yahoo
+,,COALINDIA,15-Mar-2012,,,,,,,,Dividend - Rs 9.5 Per Share,COALINDIA,COALINDIA,,yahoo
+,,COALINDIA,08-Sep-2011,,,,,,,,Dividend - Rs 0.4 Per Share,COALINDIA,COALINDIA,,yahoo
+,,COALINDIA,18-Feb-2011,,,,,,,,Dividend - Rs 3.5 Per Share,COALINDIA,COALINDIA,,yahoo

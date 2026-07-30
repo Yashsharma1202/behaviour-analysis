@@ -1,22 +1,44 @@
-bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate
--,-,Wipro Limited,27-Jul-2026,2,-,INE075A01022,-,-,27-Jul-2026,EQ,Interim Dividend - Rs 2 Per Share,WIPRO,Wipro Ltd.,
--,-,Wipro Limited,05-Jun-2026,2,-,INE075A01022,-,-,05-Jun-2026,EQ,Buy Back,WIPRO,Wipro Ltd.,
--,-,Wipro Limited,27-Jan-2026,2,-,INE075A01022,-,-,27-Jan-2026,EQ,Interim Dividend - Rs 6 Per Share,WIPRO,Wipro Ltd.,
--,-,Wipro Limited,28-Jul-2025,2,-,INE075A01022,-,-,28-Jul-2025,EQ,Interim Dividend - Rs 5 Per Share,WIPRO,Wipro Ltd.,
--,-,Wipro Limited,28-Jan-2025,2,-,INE075A01022,-,-,28-Jan-2025,EQ,Interim Dividend - Rs 6 Per Share,WIPRO,Wipro Ltd.,
--,-,Wipro Limited,03-Dec-2024,2,-,INE075A01022,-,-,03-Dec-2024,EQ,Bonus 1:1,WIPRO,Wipro Ltd.,
-18-Jul-2024,17-Jul-2024,Wipro Limited,16-Jul-2024,2,-,INE075A01022,-,-,-,EQ,Annual General Meeting,WIPRO,Wipro Ltd.,
--,-,Wipro Limited,24-Jan-2024,2,-,INE075A01022,-,-,24-Jan-2024,EQ,Interim Dividend - Re 1 Per Share,WIPRO,Wipro Ltd.,
-12-Jul-2023,11-Jul-2023,Wipro Limited,10-Jul-2023,2,-,INE075A01022,-,-,-,EQ,Annual General Meeting,WIPRO,Wipro Ltd.,
--,-,Wipro Limited,16-Jun-2023,2,-,INE075A01022,-,-,16-Jun-2023,EQ,Buy Back,WIPRO,Wipro Ltd.,
--,-,Wipro Limited,24-Jan-2023,2,-,INE075A01022,-,-,25-Jan-2023,EQ,Interim Dividend - Re  1 Per Share,WIPRO,Wipro Ltd.,
-19-Jul-2022,18-Jul-2022,Wipro Limited,14-Jul-2022,2,-,INE075A01022,-,-,-,EQ,Annual General Meeting,WIPRO,Wipro Ltd.,
--,-,Wipro Limited,05-Apr-2022,2,-,INE075A01022,-,-,06-Apr-2022,EQ,Interim Dividend - Rs 5 Per Share,WIPRO,Wipro Ltd.,
--,-,Wipro Limited,21-Jan-2022,2,-,INE075A01022,-,-,24-Jan-2022,EQ,Interim Dividend - Re 1 Per Share,WIPRO,Wipro Ltd.,
-13-Jul-2021,12-Jul-2021,Wipro Limited,08-Jul-2021,2,-,INE075A01022,-,-,-,EQ, Annual General Meeting,WIPRO,Wipro Ltd.,
--,-,Wipro Limited,22-Jan-2021,2,-,INE075A01022,-,-,25-Jan-2021,EQ, Interim Dividend - Re 1 Per Share,WIPRO,Wipro Ltd.,
--,-,Wipro Limited,10-Dec-2020,2,-,INE075A01022,-,-,11-Dec-2020,EQ, Buyback,WIPRO,Wipro Ltd.,
-13-Jul-2020,10-Jul-2020,Wipro Limited,08-Jul-2020,2,-,INE075A01022,-,-,-,EQ, Annual General Meeting,WIPRO,Wipro Ltd.,
--,-,Wipro Limited,24-Jan-2020,2,-,INE075A01022,-,-,27-Jan-2020,EQ, Interim Dividend - Re 1 Per Share,WIPRO,Wipro Ltd.,
--,-,Wipro Limited,20-Jun-2019,2,-,INE075A01022,-,-,21-Jun-2019,EQ, Buyback,WIPRO,Wipro Ltd.,
--,-,Wipro Limited,06-Mar-2019,2,-,INE075A01022,-,-,07-Mar-2019,EQ, Bonus 1:3,WIPRO,,
+bcEndDate,bcStartDate,comp,exDate,faceVal,ind,isin,ndEndDate,ndStartDate,recDate,series,subject,symbol,company_name,caBroadcastDate,ca_source
+-,-,Wipro Limited,27-Jul-2026,2,-,INE075A01022,-,-,27-Jul-2026,EQ,Interim Dividend - Rs 2 Per Share,WIPRO,Wipro Ltd.,,
+-,-,Wipro Limited,05-Jun-2026,2,-,INE075A01022,-,-,05-Jun-2026,EQ,Buy Back,WIPRO,Wipro Ltd.,,
+-,-,Wipro Limited,27-Jan-2026,2,-,INE075A01022,-,-,27-Jan-2026,EQ,Interim Dividend - Rs 6 Per Share,WIPRO,Wipro Ltd.,,
+-,-,Wipro Limited,28-Jul-2025,2,-,INE075A01022,-,-,28-Jul-2025,EQ,Interim Dividend - Rs 5 Per Share,WIPRO,Wipro Ltd.,,
+-,-,Wipro Limited,28-Jan-2025,2,-,INE075A01022,-,-,28-Jan-2025,EQ,Interim Dividend - Rs 6 Per Share,WIPRO,Wipro Ltd.,,
+-,-,Wipro Limited,03-Dec-2024,2,-,INE075A01022,-,-,03-Dec-2024,EQ,Bonus 1:1,WIPRO,Wipro Ltd.,,
+18-Jul-2024,17-Jul-2024,Wipro Limited,16-Jul-2024,2,-,INE075A01022,-,-,-,EQ,Annual General Meeting,WIPRO,Wipro Ltd.,,
+-,-,Wipro Limited,24-Jan-2024,2,-,INE075A01022,-,-,24-Jan-2024,EQ,Interim Dividend - Re 1 Per Share,WIPRO,Wipro Ltd.,,
+12-Jul-2023,11-Jul-2023,Wipro Limited,10-Jul-2023,2,-,INE075A01022,-,-,-,EQ,Annual General Meeting,WIPRO,Wipro Ltd.,,
+-,-,Wipro Limited,16-Jun-2023,2,-,INE075A01022,-,-,16-Jun-2023,EQ,Buy Back,WIPRO,Wipro Ltd.,,
+-,-,Wipro Limited,24-Jan-2023,2,-,INE075A01022,-,-,25-Jan-2023,EQ,Interim Dividend - Re  1 Per Share,WIPRO,Wipro Ltd.,,
+19-Jul-2022,18-Jul-2022,Wipro Limited,14-Jul-2022,2,-,INE075A01022,-,-,-,EQ,Annual General Meeting,WIPRO,Wipro Ltd.,,
+-,-,Wipro Limited,05-Apr-2022,2,-,INE075A01022,-,-,06-Apr-2022,EQ,Interim Dividend - Rs 5 Per Share,WIPRO,Wipro Ltd.,,
+-,-,Wipro Limited,21-Jan-2022,2,-,INE075A01022,-,-,24-Jan-2022,EQ,Interim Dividend - Re 1 Per Share,WIPRO,Wipro Ltd.,,
+13-Jul-2021,12-Jul-2021,Wipro Limited,08-Jul-2021,2,-,INE075A01022,-,-,-,EQ, Annual General Meeting,WIPRO,Wipro Ltd.,,
+-,-,Wipro Limited,22-Jan-2021,2,-,INE075A01022,-,-,25-Jan-2021,EQ, Interim Dividend - Re 1 Per Share,WIPRO,Wipro Ltd.,,
+-,-,Wipro Limited,10-Dec-2020,2,-,INE075A01022,-,-,11-Dec-2020,EQ, Buyback,WIPRO,Wipro Ltd.,,
+13-Jul-2020,10-Jul-2020,Wipro Limited,08-Jul-2020,2,-,INE075A01022,-,-,-,EQ, Annual General Meeting,WIPRO,Wipro Ltd.,,
+-,-,Wipro Limited,24-Jan-2020,2,-,INE075A01022,-,-,27-Jan-2020,EQ, Interim Dividend - Re 1 Per Share,WIPRO,Wipro Ltd.,,
+-,-,Wipro Limited,20-Jun-2019,2,-,INE075A01022,-,-,21-Jun-2019,EQ, Buyback,WIPRO,Wipro Ltd.,,
+-,-,Wipro Limited,06-Mar-2019,2,-,INE075A01022,-,-,07-Mar-2019,EQ, Bonus 1:3,WIPRO,,,
+,,WIPRO,29-Jan-2019,,,,,,,,Dividend - Rs 0.375 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,31-Jan-2018,,,,,,,,Dividend - Rs 0.375 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,13-Jun-2017,,,,,,,,2:1,WIPRO,WIPRO,,yahoo
+,,WIPRO,02-Feb-2017,,,,,,,,Dividend - Rs 0.375 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,11-Jul-2016,,,,,,,,Dividend - Rs 0.1875 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,25-Jan-2016,,,,,,,,Dividend - Rs 0.9375 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,20-Jul-2015,,,,,,,,Dividend - Rs 1.3125 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,22-Jan-2015,,,,,,,,Dividend - Rs 0.9375 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,21-Jul-2014,,,,,,,,Dividend - Rs 0.9375 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,22-Jan-2014,,,,,,,,Dividend - Rs 0.5625 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,27-Jun-2013,,,,,,,,Dividend - Rs 0.9375 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,23-Jan-2013,,,,,,,,Dividend - Rs 0.375 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,28-Jun-2012,,,,,,,,Dividend - Rs 0.75 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,24-Jan-2012,,,,,,,,Dividend - Rs 0.375 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,29-Jun-2011,,,,,,,,Dividend - Rs 0.75 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,27-Jan-2011,,,,,,,,Dividend - Rs 0.375 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,15-Jun-2010,,,,,,,,5:3,WIPRO,WIPRO,,yahoo
+,,WIPRO,29-Jun-2009,,,,,,,,Dividend - Rs 0.45 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,27-Jun-2008,,,,,,,,Dividend - Rs 0.45 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,25-Oct-2007,,,,,,,,Dividend - Rs 0.225 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,28-Jun-2007,,,,,,,,Dividend - Rs 0.1125 Per Share,WIPRO,WIPRO,,yahoo
+,,WIPRO,26-Mar-2007,,,,,,,,Dividend - Rs 0.5625 Per Share,WIPRO,WIPRO,,yahoo
