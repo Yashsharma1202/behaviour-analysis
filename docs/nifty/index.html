@@ -342,7 +342,7 @@ let SYMS=[], idx=0, activeTab="fundamentals", stock=null, eventsCache={}, READY=
 
 /*__DATA_SOURCE__*/
 const STATIC=true;
-const _V="?v=1785396736";
+const _V="?v=1785399587";
 const SYMBOLS_URL="./data/symbols.json"+_V;
 function STOCK_URL(s){return "./data/fund/"+encodeURIComponent(s)+".json"+_V;}
 function EVENTS_URL(s){return "./data/events/"+encodeURIComponent(s)+".json"+_V;}
@@ -394,10 +394,10 @@ function xlab(ctx,w,h,labels){
 function empty(ctx,w,h,msg){ ctx.fillStyle=COL.mute;ctx.font="13px sans-serif";
   ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText(msg||"no data",w/2,h/2); }
 
-function lineChart(cv,labels,seriesList){
+function drawLineBase(cv,labels,seriesList){
   const {ctx,w,h}=setup(cv); ctx.clearRect(0,0,w,h);
   const all=seriesList.flatMap(s=>s.data);
-  const b=niceBounds(all,false); if(!b||!labels.length){empty(ctx,w,h,"no annual P&L");return;}
+  const b=niceBounds(all,false); if(!b||!labels.length){empty(ctx,w,h,"no annual P&L");return null;}
   yaxis(ctx,w,h,b.lo,b.hi); xlab(ctx,w,h,labels);
   const n=labels.length,iw=w-M.l-M.r,base=h-M.b;
   const X=i=>M.l+(n<2?iw/2:iw*i/(n-1));
@@ -405,31 +405,33 @@ function lineChart(cv,labels,seriesList){
   seriesList.forEach((s,si)=>{
     const pts=[]; s.data.forEach((v,i)=>{ if(v!==null&&!isNaN(v)) pts.push([X(i),Y(v)]); });
     if(!pts.length)return;
-    // soft gradient area under the line
     const g=ctx.createLinearGradient(0,M.t,0,base);
     g.addColorStop(0,hexA(s.color,.30)); g.addColorStop(1,hexA(s.color,0));
     ctx.beginPath();ctx.moveTo(pts[0][0],base);
     pts.forEach(p=>ctx.lineTo(p[0],p[1])); ctx.lineTo(pts[pts.length-1][0],base);
     ctx.closePath(); ctx.fillStyle=g; ctx.fill();
-    // glowing smooth line
     ctx.save(); ctx.shadowColor=hexA(s.color,.55); ctx.shadowBlur=9;
     ctx.strokeStyle=s.color; ctx.lineWidth=2.5; ctx.lineJoin="round"; ctx.lineCap="round";
     ctx.beginPath(); pts.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1])); ctx.stroke();
     ctx.restore();
-    // ringed dots
     pts.forEach(p=>{ ctx.fillStyle=COL.panel; ctx.beginPath();ctx.arc(p[0],p[1],4.5,0,7);ctx.fill();
       ctx.fillStyle=s.color; ctx.beginPath();ctx.arc(p[0],p[1],2.6,0,7);ctx.fill(); });
-    // legend chip
     ctx.fillStyle=COL.ink;ctx.font="600 11px sans-serif";ctx.textAlign="left";ctx.textBaseline="middle";
     const ly=M.t+8+si*17;
     ctx.strokeStyle=s.color;ctx.lineWidth=3;ctx.lineCap="round";ctx.beginPath();
     ctx.moveTo(w-M.r-118,ly);ctx.lineTo(w-M.r-98,ly);ctx.stroke();
     ctx.fillText(s.name,w-M.r-92,ly);
   });
+  return {ctx,w,h,X,Y,n,base};
 }
-function barChart(cv,labels,vals,colors){
+function lineChart(cv,labels,seriesList){
+  drawLineBase(cv,labels,seriesList);
+  cv._model={kind:"line",labels,seriesList,draw:()=>drawLineBase(cv,labels,seriesList)};
+  bindHover(cv);
+}
+function drawBarBase(cv,labels,vals,colors){
   const {ctx,w,h}=setup(cv); ctx.clearRect(0,0,w,h);
-  const b=niceBounds(vals,true); if(!b||!labels.length){empty(ctx,w,h,"no quarterly data");return;}
+  const b=niceBounds(vals,true); if(!b||!labels.length){empty(ctx,w,h,"no quarterly data");return null;}
   yaxis(ctx,w,h,b.lo,b.hi); xlab(ctx,w,h,labels);
   const n=labels.length,iw=w-M.l-M.r,slot=iw/n,bw=Math.min(slot*0.62,34);
   const Y=v=>h-M.b-(v-b.lo)/((b.hi-b.lo)||1)*(h-M.b-M.t);
@@ -446,6 +448,68 @@ function barChart(cv,labels,vals,colors){
     ctx.fillStyle=COL.ink;ctx.font="600 10px Consolas";ctx.textAlign="center";
     ctx.textBaseline=v>=0?"bottom":"top";
     ctx.fillText(Math.round(v).toLocaleString("en-IN"),cx,v>=0?y-4:y+4);
+  });
+  return {ctx,w,h,slot,bw,Y};
+}
+function barChart(cv,labels,vals,colors){
+  drawBarBase(cv,labels,vals,colors);
+  cv._model={kind:"bar",labels,vals,colors,draw:()=>drawBarBase(cv,labels,vals,colors)};
+  bindHover(cv);
+}
+/* ---- hover interactivity: crosshair + value tooltip on the canvas ---- */
+function bindHover(cv){
+  cv.style.cursor="crosshair";
+  cv.onmousemove=function(e){
+    const m=cv._model; if(!m)return;
+    const g=m.draw(); if(!g)return;
+    const r=cv.getBoundingClientRect();
+    const mx=e.clientX-r.left;               // CSS px; ctx is dpr-scaled so this maps directly
+    if(m.kind==="line") hoverLine(g,m,mx); else hoverBar(g,m,mx);
+  };
+  cv.onmouseleave=function(){ const m=cv._model; if(m&&m.draw)m.draw(); };
+}
+function hoverLine(g,m,mx){
+  const ctx=g.ctx, n=g.n; if(n<1)return;
+  let idx=n<2?0:Math.round((mx-M.l)/((g.w-M.l-M.r)/(n-1)));
+  idx=Math.max(0,Math.min(n-1,idx));
+  const x=g.X(idx);
+  ctx.save(); ctx.strokeStyle="rgba(139,152,173,.55)"; ctx.setLineDash([4,4]); ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(x,M.t); ctx.lineTo(x,g.base); ctx.stroke(); ctx.setLineDash([]); ctx.restore();
+  const lines=[];
+  m.seriesList.forEach(s=>{ const v=s.data[idx]; if(v==null||isNaN(v))return;
+    const y=g.Y(v);
+    ctx.fillStyle=COL.panel; ctx.beginPath();ctx.arc(x,y,6,0,7);ctx.fill();
+    ctx.strokeStyle=s.color;ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y,5,0,7);ctx.stroke();
+    ctx.fillStyle=s.color;ctx.beginPath();ctx.arc(x,y,2.5,0,7);ctx.fill();
+    lines.push([s.color,s.name,"₹"+Math.round(v).toLocaleString("en-IN")+" cr"]);
+  });
+  chartTip(g,x,m.labels[idx],lines);
+}
+function hoverBar(g,m,mx){
+  const ctx=g.ctx, n=m.vals.length; if(!n)return;
+  let idx=Math.floor((mx-M.l)/g.slot); idx=Math.max(0,Math.min(n-1,idx));
+  const v=m.vals[idx]; if(v==null||isNaN(v))return;
+  const cx=M.l+g.slot*(idx+0.5), y=g.Y(v), yz=g.Y(0);
+  const top=Math.min(yz,y), hh=Math.abs(yz-y);
+  ctx.save(); ctx.strokeStyle=COL.ink; ctx.lineWidth=1.5;
+  rrect(ctx,cx-g.bw/2,top,g.bw,Math.max(hh,1),4); ctx.stroke(); ctx.restore();
+  const col=(m.colors[idx]||COL.blue);
+  chartTip(g,cx,m.labels[idx],[[col,"Net Profit","₹"+Math.round(v).toLocaleString("en-IN")+" cr"]]);
+}
+function chartTip(g,x,title,lines){
+  const ctx=g.ctx; ctx.textAlign="left"; ctx.textBaseline="top"; ctx.font="600 11px sans-serif";
+  let tw=title?ctx.measureText(title).width:0;
+  lines.forEach(l=>{ tw=Math.max(tw,16+ctx.measureText(l[1]+": "+l[2]).width); });
+  const pad=9,lh=17, boxW=tw+pad*2, boxH=pad*2+lh*(lines.length+(title?1:0));
+  let bx=x+14; if(bx+boxW>g.w-4) bx=x-14-boxW; if(bx<4)bx=4;
+  const by=M.t+6;
+  ctx.fillStyle="rgba(18,24,36,.97)"; ctx.strokeStyle="#2a3346"; ctx.lineWidth=1;
+  rrect(ctx,bx,by,boxW,boxH,9); ctx.fill(); ctx.stroke();
+  let yy=by+pad;
+  if(title){ ctx.fillStyle=COL.mute; ctx.fillText(title,bx+pad,yy); yy+=lh; }
+  lines.forEach(l=>{
+    ctx.fillStyle=l[0]; ctx.beginPath(); ctx.arc(bx+pad+4,yy+6,4,0,7); ctx.fill();
+    ctx.fillStyle=COL.ink; ctx.fillText(l[1]+": "+l[2], bx+pad+15, yy); yy+=lh;
   });
 }
 
