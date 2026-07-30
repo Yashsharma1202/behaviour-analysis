@@ -58,28 +58,36 @@ for d in (FUND, EVENTS, BEHAV, BM):
     d.mkdir(parents=True, exist_ok=True)
 
 
-def bake_bm_summaries(sym: str, ev: dict) -> int:
-    """For each board-meeting XBRL attachment, fetch + parse it into a readable
-    summary page under docs/nifty/bm/, and repoint the link at that local page.
-    Falls back to the direct NSE link if the file can't be fetched/parsed."""
-    feed = ev.get("feeds", {}).get("board_meetings")
-    if not feed:
-        return 0
+# feeds whose attachment links we try to summarise, and the link column in each
+_XBRL_LINK_COLS = {"board_meetings": "attachment", "announcements": "attchmntFile"}
+_BAKED: dict = {}                                          # url -> ./bm/<hash>.html (dedupe across stocks)
+
+
+def bake_xbrl_summaries(sym: str, ev: dict) -> int:
+    """For every XBRL (.xml) attachment in the board-meeting & announcement feeds,
+    fetch + parse it into a readable summary page under docs/nifty/bm/ and repoint
+    the link there. PDFs and non-XBRL are left as direct links (they open fine)."""
     n = 0
-    for row in feed.get("rows", []):
-        url = (row.get("attachment") or "").strip()
-        if not url.startswith("http"):
+    for feed_key, col in _XBRL_LINK_COLS.items():
+        feed = ev.get("feeds", {}).get(feed_key)
+        if not feed:
             continue
-        try:
-            data, _ctype, name = S.fetch_nse_file(url)
-            html = S.xml_to_html(data, name, url)         # raises if not parseable XBRL
-            h = hashlib.md5(url.encode()).hexdigest()[:16]
-            (BM / f"{h}.html").write_text(html, encoding="utf-8")
-            row["attachment"] = f"./bm/{h}.html"          # repoint to the baked summary
-            n += 1
-        except Exception:                                 # noqa: BLE001  (PDF / fetch fail -> keep direct link)
-            pass
-        time.sleep(0.3)                                   # be polite to NSE
+        for row in feed.get("rows", []):
+            url = (row.get(col) or "").strip()
+            if not url.startswith("http") or not url.lower().endswith(".xml"):
+                continue                                  # only XBRL; PDFs stay direct
+            if url in _BAKED:                             # already baked (same filing on another stock)
+                row[col] = _BAKED[url]; continue
+            try:
+                data, _ctype, name = S.fetch_nse_file(url)
+                html = S.xml_to_html(data, name, url)     # raises if not parseable XBRL
+                h = hashlib.md5(url.encode()).hexdigest()[:16]
+                (BM / f"{h}.html").write_text(html, encoding="utf-8")
+                local = f"./bm/{h}.html"
+                _BAKED[url] = local; row[col] = local; n += 1
+            except Exception:                             # noqa: BLE001  (fetch/parse fail -> keep direct link)
+                pass
+            time.sleep(0.3)                               # be polite to NSE
     return n
 
 
@@ -160,12 +168,12 @@ def main() -> None:
         try:
             ev = S.build_events(sym)
             if BM_SUMMARIES:
-                bm_total += bake_bm_summaries(sym, ev)
+                bm_total += bake_xbrl_summaries(sym, ev)
             _write(EVENTS / f"{sym}.json", ev)
         except Exception as e:                               # noqa: BLE001
             print(f"  ! events {sym}: {e}")
     if BM_SUMMARIES:
-        print(f"  board-meeting summaries baked: {bm_total}")
+        print(f"  XBRL summaries baked (board meetings + announcements): {bm_total}")
 
     # behaviour payload for every stock (Behaviour + Compare tabs)
     bfail = 0
