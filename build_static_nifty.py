@@ -27,8 +27,10 @@ RUN
 from __future__ import annotations
 
 import json
+import hashlib
 import re
 import sys
+import time
 import warnings
 from pathlib import Path
 
@@ -41,14 +43,44 @@ from download_feeds import NIFTY50_FALLBACK    # the Nifty 50 symbol list
 # ── restrict the universe to the Nifty 50 (same as nifty_dash.py) ─────────────
 S.SYMBOLS = sorted(set(NIFTY50_FALLBACK))
 
+# bake readable board-meeting XBRL summaries too? (fetches from NSE, so only run
+# where NSE is reachable — e.g. on your machine — via:  python build_static_nifty.py --summaries)
+BM_SUMMARIES = "--summaries" in sys.argv
+
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "docs" / "nifty"
 DATA = OUT / "data"
 FUND = DATA / "fund"
 EVENTS = DATA / "events"
 BEHAV = DATA / "behaviour"
-for d in (FUND, EVENTS, BEHAV):
+BM = OUT / "bm"                                # baked board-meeting summary pages
+for d in (FUND, EVENTS, BEHAV, BM):
     d.mkdir(parents=True, exist_ok=True)
+
+
+def bake_bm_summaries(sym: str, ev: dict) -> int:
+    """For each board-meeting XBRL attachment, fetch + parse it into a readable
+    summary page under docs/nifty/bm/, and repoint the link at that local page.
+    Falls back to the direct NSE link if the file can't be fetched/parsed."""
+    feed = ev.get("feeds", {}).get("board_meetings")
+    if not feed:
+        return 0
+    n = 0
+    for row in feed.get("rows", []):
+        url = (row.get("attachment") or "").strip()
+        if not url.startswith("http"):
+            continue
+        try:
+            data, _ctype, name = S.fetch_nse_file(url)
+            html = S.xml_to_html(data, name, url)         # raises if not parseable XBRL
+            h = hashlib.md5(url.encode()).hexdigest()[:16]
+            (BM / f"{h}.html").write_text(html, encoding="utf-8")
+            row["attachment"] = f"./bm/{h}.html"          # repoint to the baked summary
+            n += 1
+        except Exception:                                 # noqa: BLE001  (PDF / fetch fail -> keep direct link)
+            pass
+        time.sleep(0.3)                                   # be polite to NSE
+    return n
 
 
 def _write(path: Path, obj) -> None:
@@ -122,12 +154,18 @@ def main() -> None:
                        "error": str(e)}
         _write(FUND / f"{sym}.json", payload)
 
-    # events for downloaded stocks
+    # events for downloaded stocks (+ optional board-meeting XBRL summaries)
+    bm_total = 0
     for sym in ready:
         try:
-            _write(EVENTS / f"{sym}.json", S.build_events(sym))
+            ev = S.build_events(sym)
+            if BM_SUMMARIES:
+                bm_total += bake_bm_summaries(sym, ev)
+            _write(EVENTS / f"{sym}.json", ev)
         except Exception as e:                               # noqa: BLE001
             print(f"  ! events {sym}: {e}")
+    if BM_SUMMARIES:
+        print(f"  board-meeting summaries baked: {bm_total}")
 
     # behaviour payload for every stock (Behaviour + Compare tabs)
     bfail = 0
