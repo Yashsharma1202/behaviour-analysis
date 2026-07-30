@@ -1574,12 +1574,15 @@ async function renderEvents(feed){
       if(c.type==='link'){
         if(!v.startsWith('http')) return `<td>${esc(v)}</td>`;
         if(c.key==='xbrl'){        // Download Excel -> built from the LOCAL folders
+          // the static (GitHub Pages) build has no server, so link to the NSE doc instead
+          if(STATIC) return `<td><a href="${v}" target="_blank" rel="noopener" title="${esc(v)}">📄 XBRL ↗</a></td>`;
           const u="/api/statements_excel?sym="+encodeURIComponent(SYMS[idx]);
           return `<td><a href="${u}" title="Download financial statements from local data (P&L, Balance Sheet, Cash Flow, Ratios, Quarterly)">📊 Excel ↓</a></td>`;
         }
-        // attachments: proxy through the server (NSE blocks direct hits) so they open
-        const f="/api/file?url="+encodeURIComponent(v);
+        // attachments: on the live app we proxy through the server (NSE blocks
+        // some direct hits); on the static build there is no server, so link direct.
         const pdf=v.toLowerCase().endsWith(".pdf");
+        const f=STATIC ? v : "/api/file?url="+encodeURIComponent(v);
         return `<td><a href="${f}" target="_blank" rel="noopener" title="${esc(v)}">`+
                `${pdf?"📄 PDF ↗":"📄 view ↗"}</a></td>`;
       }
