@@ -125,14 +125,27 @@ def build_payload(sym: str) -> dict:
         annual["sales"] = _series(pnl, "Sales") or []
         annual["net_profit"] = _series(pnl, "Net Profit") or []
 
-    quarterly = {"labels": [], "net_profit": [], "yoy": []}
+    quarterly = {"labels": [], "net_profit": [], "yoy": [], "up": []}
     if q is not None and not q.empty:
-        sub = q.tail(12)
+        npc = _col(q, "Net Profit")
+        full = [_num(v) for v in q[npc].tolist()] if npc else []
+        # YoY computed from the ACTUAL profit — this quarter vs the SAME quarter a
+        # year earlier (4 quarters back). "up" (colour) = profit higher than last
+        # year, well-defined even with a negative base; "yoy" (%) only when base>0.
+        up, yoy = [], []
+        for i, v in enumerate(full):
+            prev = full[i - 4] if i >= 4 else None
+            if v is None or prev is None:
+                up.append(None); yoy.append(None)
+            else:
+                up.append(v >= prev)
+                yoy.append(round((v / prev - 1) * 100, 1) if prev > 0 else None)
+        n = min(12, len(full))
+        sub = q.tail(n)
         quarterly["labels"] = [d.strftime("%b-%y") for d in sub.index]
-        npc = _col(sub, "Net Profit")
-        yoyc = _col(sub, "YOY Profit Growth %")
-        quarterly["net_profit"] = [_num(v) for v in sub[npc].tolist()] if npc else []
-        quarterly["yoy"] = [_num(v) for v in sub[yoyc].tolist()] if yoyc else []
+        quarterly["net_profit"] = full[-n:] if n else []
+        quarterly["yoy"] = yoy[-n:] if n else []
+        quarterly["up"] = up[-n:] if n else []
 
     return {
         "symbol": sym,
@@ -1410,6 +1423,13 @@ function hexA(hex,a){                       // #rrggbb -> rgba()
   const c=hex.replace("#",""); const n=parseInt(c.length===3?c.replace(/(.)/g,"$1$1"):c,16);
   return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${a})`;
 }
+function mix(a,b,t){                        // blend two #rrggbb hex colours
+  const pa=parseInt(a.slice(1),16), pb=parseInt(b.slice(1),16);
+  const r=Math.round(((pa>>16)&255)+(((pb>>16)&255)-((pa>>16)&255))*t);
+  const g=Math.round(((pa>>8)&255)+(((pb>>8)&255)-((pa>>8)&255))*t);
+  const bl=Math.round((pa&255)+((pb&255)-(pa&255))*t);
+  return "#"+((1<<24)+(r<<16)+(g<<8)+bl).toString(16).slice(1);
+}
 function rrect(ctx,x,y,w,hh,r){
   r=Math.min(r,Math.abs(w)/2,Math.abs(hh)/2);
   if(ctx.roundRect){ctx.beginPath();ctx.roundRect(x,y,w,hh,r);return;}
@@ -1425,10 +1445,15 @@ function yaxis(ctx,w,h,lo,hi){
     ctx.fillStyle=COL.mute; ctx.fillText(Math.round(val).toLocaleString("en-IN"),M.l-8,y);
   }
 }
-function xlab(ctx,w,h,labels){
+function xlab(ctx,w,h,labels,xFn){
   ctx.font="10px Consolas"; ctx.fillStyle=COL.mute; ctx.textAlign="center"; ctx.textBaseline="top";
   const n=labels.length, iw=w-M.l-M.r;
-  labels.forEach((L,i)=>{const x=M.l+(n<2?iw/2:iw*i/(n-1)); ctx.fillText(L,x,h-M.b+8);});
+  const X=xFn||(i=>M.l+(n<2?iw/2:iw*i/(n-1)));
+  // thin the labels so they never overlap
+  let maxw=0; labels.forEach(L=>maxw=Math.max(maxw,ctx.measureText(String(L)).width));
+  const slot=iw/(n>1?n:1), step=Math.max(1,Math.ceil((maxw+6)/slot));
+  labels.forEach((L,i)=>{ if(step>1 && i%step!==0 && i!==n-1) return;
+    ctx.fillText(String(L),X(i),h-M.b+8); });
 }
 function empty(ctx,w,h,msg){ ctx.fillStyle=COL.mute;ctx.font="13px sans-serif";
   ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText(msg||"no data",w/2,h/2); }
@@ -1471,28 +1496,34 @@ function lineChart(cv,labels,seriesList){
 function drawBarBase(cv,labels,vals,colors){
   const {ctx,w,h}=setup(cv); ctx.clearRect(0,0,w,h);
   const b=niceBounds(vals,true); if(!b||!labels.length){empty(ctx,w,h,"no quarterly data");return null;}
-  yaxis(ctx,w,h,b.lo,b.hi); xlab(ctx,w,h,labels);
-  const n=labels.length,iw=w-M.l-M.r,slot=iw/n,bw=Math.min(slot*0.62,34);
+  const n=labels.length,iw=w-M.l-M.r,slot=iw/n,bw=Math.min(slot*0.58,30),d=Math.min(bw*0.34,8);
+  yaxis(ctx,w,h,b.lo,b.hi);
+  xlab(ctx,w,h,labels, i=>M.l+slot*(i+0.5));   // labels centred under each bar (+ auto-thinned)
   const Y=v=>h-M.b-(v-b.lo)/((b.hi-b.lo)||1)*(h-M.b-M.t);
   const yz=Y(0);
   ctx.strokeStyle="rgba(138,152,173,.35)";ctx.lineWidth=1;
   ctx.beginPath();ctx.moveTo(M.l,yz);ctx.lineTo(w-M.r,yz);ctx.stroke();
   vals.forEach((v,i)=>{ if(v===null||isNaN(v))return;
     const cx=M.l+slot*(i+0.5),y=Y(v),col=colors[i]||COL.blue;
-    const top=Math.min(yz,y),hh=Math.abs(yz-y);
-    const g=ctx.createLinearGradient(0,top,0,top+hh);
-    if(v>=0){g.addColorStop(0,hexA(col,.95));g.addColorStop(1,hexA(col,.55));}
-    else{g.addColorStop(0,hexA(col,.55));g.addColorStop(1,hexA(col,.95));}
-    ctx.fillStyle=g; rrect(ctx,cx-bw/2,top,bw,Math.max(hh,1),4); ctx.fill();
+    const x0=cx-bw/2, x1=cx+bw/2, top=Math.min(yz,y), bot=Math.max(yz,y), hh=Math.max(bot-top,1);
+    // 3D bar: front face (vertical gradient) + lighter top face + darker right face
+    const g=ctx.createLinearGradient(0,top,0,bot);
+    g.addColorStop(0,mix(col,"#ffffff",.12)); g.addColorStop(1,mix(col,"#000000",.22));
+    ctx.fillStyle=g; ctx.fillRect(x0,top,bw,hh);
+    ctx.fillStyle=mix(col,"#ffffff",.34);       // top face
+    ctx.beginPath();ctx.moveTo(x0,top);ctx.lineTo(x0+d,top-d);ctx.lineTo(x1+d,top-d);ctx.lineTo(x1,top);ctx.closePath();ctx.fill();
+    ctx.fillStyle=mix(col,"#000000",.38);       // right (side) face
+    ctx.beginPath();ctx.moveTo(x1,top);ctx.lineTo(x1+d,top-d);ctx.lineTo(x1+d,bot-d);ctx.lineTo(x1,bot);ctx.closePath();ctx.fill();
+    // value label (above the top face for +ve, below for -ve)
     ctx.fillStyle=COL.ink;ctx.font="600 10px Consolas";ctx.textAlign="center";
-    ctx.textBaseline=v>=0?"bottom":"top";
-    ctx.fillText(Math.round(v).toLocaleString("en-IN"),cx,v>=0?y-4:y+4);
+    if(v>=0){ ctx.textBaseline="bottom"; ctx.fillText(Math.round(v).toLocaleString("en-IN"),cx+d/2,top-d-2); }
+    else{ ctx.textBaseline="top"; ctx.fillText(Math.round(v).toLocaleString("en-IN"),cx,bot+3); }
   });
-  return {ctx,w,h,slot,bw,Y};
+  return {ctx,w,h,slot,bw,Y,d};
 }
-function barChart(cv,labels,vals,colors){
+function barChart(cv,labels,vals,colors,meta){
   drawBarBase(cv,labels,vals,colors);
-  cv._model={kind:"bar",labels,vals,colors,draw:()=>drawBarBase(cv,labels,vals,colors)};
+  cv._model={kind:"bar",labels,vals,colors,meta,draw:()=>drawBarBase(cv,labels,vals,colors)};
   bindHover(cv);
 }
 /* ---- hover interactivity: crosshair + value tooltip on the canvas ---- */
@@ -1529,11 +1560,22 @@ function hoverBar(g,m,mx){
   let idx=Math.floor((mx-M.l)/g.slot); idx=Math.max(0,Math.min(n-1,idx));
   const v=m.vals[idx]; if(v==null||isNaN(v))return;
   const cx=M.l+g.slot*(idx+0.5), y=g.Y(v), yz=g.Y(0);
-  const top=Math.min(yz,y), hh=Math.abs(yz-y);
-  ctx.save(); ctx.strokeStyle=COL.ink; ctx.lineWidth=1.5;
-  rrect(ctx,cx-g.bw/2,top,g.bw,Math.max(hh,1),4); ctx.stroke(); ctx.restore();
+  const top=Math.min(yz,y), hh=Math.max(Math.abs(yz-y),1), dd=g.d||0;
+  // highlight the 3D bar (front + top + side outline)
+  ctx.save(); ctx.strokeStyle="rgba(255,255,255,.85)"; ctx.lineWidth=1.5;
+  ctx.strokeRect(cx-g.bw/2,top,g.bw,hh);
+  ctx.beginPath();ctx.moveTo(cx-g.bw/2,top);ctx.lineTo(cx-g.bw/2+dd,top-dd);
+  ctx.lineTo(cx+g.bw/2+dd,top-dd);ctx.lineTo(cx+g.bw/2,top);ctx.stroke();
+  ctx.restore();
   const col=(m.colors[idx]||COL.blue);
-  chartTip(g,cx,m.labels[idx],[[col,"Net Profit","₹"+Math.round(v).toLocaleString("en-IN")+" cr"]]);
+  const lines=[[col,"Net Profit","₹"+Math.round(v).toLocaleString("en-IN")+" cr"]];
+  const meta=m.meta;
+  if(meta){
+    const yy=(meta.yoy||[])[idx], u=(meta.up||[])[idx];
+    if(yy!=null) lines.push([u?COL.pos:COL.neg,"YoY",(yy>=0?"+":"")+yy+"%"]);
+    else if(u!=null) lines.push([u?COL.pos:COL.neg,"vs last yr",u?"higher":"lower"]);
+  }
+  chartTip(g,cx,m.labels[idx],lines);
 }
 function chartTip(g,x,title,lines){
   const ctx=g.ctx; ctx.textAlign="left"; ctx.textBaseline="top"; ctx.font="600 11px sans-serif";
@@ -1593,9 +1635,11 @@ function renderFundamentals(){
     {name:"Sales",color:COL.blue,data:stock.annual.sales},
     {name:"Net Profit",color:COL.amber,data:stock.annual.net_profit},
   ]);
-  const qc=stock.quarterly.net_profit.map((_,i)=>{
-    const g=stock.quarterly.yoy[i]; return (g!==undefined&&g!==null&&g>=0)?COL.pos:COL.neg; });
-  barChart($("c_quarter"),stock.quarterly.labels,stock.quarterly.net_profit,qc);
+  const Q=stock.quarterly;
+  const qc=Q.net_profit.map((_,i)=>{
+    const u=(Q.up||[])[i];                       // higher than same quarter last year?
+    return u===true?COL.pos:u===false?COL.neg:COL.blue; });   // blue = no prior-year to compare
+  barChart($("c_quarter"),Q.labels,Q.net_profit,qc,Q);
 }
 function card(t,v,s,col){
   return `<div class="card"><div class="t">${t}</div>`+

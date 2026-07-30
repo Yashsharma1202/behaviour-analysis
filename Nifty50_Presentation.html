@@ -1,0 +1,347 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nifty 50 Behaviour Analysis — Presentation</title>
+<style>
+:root{
+  --bg:#0b0f17; --panel:#141b28; --panel2:#0f1622; --ink:#eaf0f7; --mute:#93a1b5; --faint:#5f6c81;
+  --line:#232d40; --blue:#5aa2ff; --green:#41c777; --amber:#e0a92e; --red:#f76d63; --violet:#9b8cff;
+  --mono:'SFMono-Regular',Consolas,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:'Inter',-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;line-height:1.5}
+.slide{position:relative;min-height:100vh;padding:56px 68px;display:flex;flex-direction:column;
+  justify-content:center;overflow:hidden;border-bottom:1px solid var(--line)}
+.slide::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(900px 460px at 12% -8%, rgba(90,162,255,.10), transparent 60%),
+             radial-gradient(760px 420px at 100% 0%, rgba(65,199,119,.08), transparent 55%)}
+.slide>*{position:relative;z-index:1}
+.kicker{font-family:var(--mono);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--blue);font-weight:700;margin-bottom:14px}
+.pnum{position:absolute;bottom:22px;right:30px;font-family:var(--mono);font-size:.72rem;color:var(--faint);z-index:2}
+h1{font-size:3.5rem;line-height:1.05;margin:0 0 .3em;letter-spacing:-.03em;font-weight:800}
+h2{font-size:2.15rem;line-height:1.1;margin:0 0 .5em;letter-spacing:-.02em;font-weight:800}
+h3{font-size:1.1rem;margin:0 0 .3em;font-weight:700}
+p{margin:.5em 0;font-size:1.12rem;color:var(--mute);max-width:60ch}
+.big{font-size:1.5rem;color:var(--ink);font-weight:600;max-width:26ch}
+b{color:var(--ink)}
+.grad{background:linear-gradient(92deg,#eaf0f7 20%,#8fc0ff 60%,#7ee0a6);-webkit-background-clip:text;
+  background-clip:text;color:transparent}
+.rule{width:70px;height:5px;border-radius:4px;background:linear-gradient(90deg,var(--blue),var(--green));margin:18px 0 26px}
+.dot{width:13px;height:13px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--green));
+  box-shadow:0 0 16px rgba(90,162,255,.6);display:inline-block}
+.meta{margin-top:30px;font-family:var(--mono);font-size:.82rem;color:var(--faint);line-height:2}
+/* tiles */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:22px 0}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px 20px}
+.kpi .v{font-size:2.4rem;font-weight:800;letter-spacing:-.02em;
+  background:linear-gradient(92deg,#8fc0ff,#7ee0a6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kpi .l{font-size:.82rem;color:var(--mute);margin-top:4px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:10px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+.card .ic{font-size:1.5rem}
+.card h3{margin-top:8px}
+.card p{font-size:.95rem;margin:.3em 0 0}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.feat .f{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.feat .f .t{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:8px}
+.feat .f p{font-size:.9rem;margin:.35em 0 0}
+.tl{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.tl .row{display:flex;gap:16px;align-items:flex-start}
+.tl .n{flex:0 0 34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--green));
+  color:#08101e;font-weight:800;font-family:var(--mono);display:flex;align-items:center;justify-content:center;font-size:.9rem}
+.tl .bd{flex:1}.tl .bd b{font-size:1.05rem}.tl .bd p{margin:.15em 0 0;font-size:.95rem}
+.callout{border-left:5px solid var(--amber);background:var(--panel);border-radius:0 14px 14px 0;
+  padding:16px 22px;margin-top:18px}
+.callout.good{border-left-color:var(--green)}
+.callout b{color:var(--ink)}.callout p{margin:.2em 0 0;font-size:1rem}
+.formula{font-family:var(--mono);font-size:1.05rem;background:#0a1220;border:1px solid var(--line);
+  border-radius:14px;padding:18px 22px;margin:16px 0;color:#cfe0f5}
+.formula .c{color:var(--faint)}.formula .k{color:#8fd3ff}.formula .g{color:#7ee0a6}
+.pill{display:inline-block;font-family:var(--mono);font-size:.72rem;font-weight:700;padding:.2em .7em;
+  border-radius:20px;background:rgba(90,162,255,.16);color:var(--blue)}
+svg{display:block;max-width:100%}
+.legend{display:flex;gap:20px;font-size:.85rem;color:var(--mute);margin-top:6px;font-family:var(--mono)}
+.sw{width:12px;height:12px;border-radius:3px;display:inline-block;vertical-align:-1px;margin-right:6px}
+.foot{font-family:var(--mono);font-size:.78rem;color:var(--faint);margin-top:26px}
+/* appendix — all 50 stock profiles, by sector */
+.apx{padding:40px 54px 60px}
+.apx .ahead{font-size:1.4rem;font-weight:800;margin:0 0 4px}
+.sec{font-size:1.15rem;font-weight:800;margin:22px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--line);
+  display:flex;align-items:baseline;gap:8px}
+.sec .cnt{font-family:var(--mono);font-size:.78rem;color:var(--faint);font-weight:400}
+.apxgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ac{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;break-inside:avoid}
+.ac .h{display:flex;justify-content:space-between;align-items:baseline;gap:6px}
+.ac .sym{font-size:1rem;font-weight:800;letter-spacing:-.01em}
+.ac .px{font-family:var(--mono);font-size:.68rem;color:var(--mute);white-space:nowrap}
+.ac .nm{font-size:.68rem;color:var(--faint);margin:1px 0 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ac .fr{display:flex;gap:10px;font-size:.7rem;color:var(--mute);font-family:var(--mono);margin-bottom:8px;flex-wrap:wrap;
+  padding-bottom:8px;border-bottom:1px solid var(--line)}
+.ac .fr b{color:var(--ink)}
+.ac .er{display:grid;grid-template-columns:1fr auto;font-size:.72rem;gap:2px 6px;align-items:center}
+.ac .el{color:var(--mute)}
+.ac .ew{font-family:var(--mono);font-weight:800;text-align:right}
+.g2{color:var(--green)}.a2{color:var(--amber)}.r2{color:var(--red)}.na2{color:var(--faint)}
+@media print{
+  @page{size:A4 landscape;margin:0}
+  html,body{background:var(--bg)}
+  .slide{min-height:210mm;height:210mm;break-after:page;border-bottom:none;padding:44px 54px;justify-content:center}
+  h1{font-size:44pt}h2{font-size:27pt}
+  .apx{break-before:page}.sec{break-after:avoid}
+}
+</style></head><body>
+
+<!-- 1 · COVER -->
+<section class="slide" style="justify-content:center">
+  <div class="kicker"><span class="dot"></span>&nbsp; NSE India · Event-Behaviour Analysis</div>
+  <h1 class="grad">Nifty 50<br>Behaviour Analysis</h1>
+  <div class="rule"></div>
+  <p class="big">Do stocks move in a repeatable way around their corporate events — and can we turn that into a
+    disciplined “buy-before / sell-after” framework?</p>
+  <div class="meta">
+    A data-driven study of the 50 Nifty stocks · a live web dashboard · an honest set of findings<br>
+    Data: NSE India &nbsp;|&nbsp; Presented by ______________ · ____ / ____
+  </div>
+  <div class="pnum">01</div>
+</section>
+
+<!-- 2 · THE IDEA -->
+<section class="slide">
+  <div class="kicker">The idea</div>
+  <h2>Trade the calendar, not a hunch.</h2>
+  <div class="two">
+    <div>
+      <p>Corporate events — <b>quarterly results, board meetings, dividends, announcements</b> — have
+        <b>dates that are public in advance</b>. Markets <b>anticipate</b> them on the way in and <b>digest</b>
+        them on the way out.</p>
+      <p>So we test one disciplined rule: <b>buy N days before</b> a known event, hold through it, and
+        <b>sell M days after</b> — and measure how often that actually made money.</p>
+      <div class="callout"><b>We never forecast the event.</b><p>The date is read off the regulatory calendar.
+        The only thing we study is the <em>price behaviour</em> around it.</p></div>
+    </div>
+    <div>
+      <svg viewBox="0 0 520 260" role="img" aria-label="Buy-before / sell-after concept">
+        <rect x="70" y="150" width="380" height="12" rx="6" fill="rgba(90,162,255,.20)"/>
+        <line x1="30" y1="156" x2="500" y2="156" stroke="var(--line)" stroke-width="2"/>
+        <path d="M70 120 q0 -16 16 -16 h94 q16 0 16 16" fill="none" stroke="var(--blue)" stroke-width="2"/>
+        <text x="132" y="90" text-anchor="middle" font-size="14" font-weight="700" fill="var(--blue)">anticipation</text>
+        <path d="M270 120 q0 -16 16 -16 h148 q16 0 16 16" fill="none" stroke="var(--green)" stroke-width="2"/>
+        <text x="360" y="90" text-anchor="middle" font-size="14" font-weight="700" fill="var(--green)">reaction / drift</text>
+        <circle cx="70" cy="156" r="11" fill="var(--blue)"/><text x="70" y="196" text-anchor="middle" font-size="14" font-weight="800" fill="var(--blue)">BUY</text><text x="70" y="216" text-anchor="middle" font-size="11" fill="var(--mute)">T − N</text>
+        <rect x="259" y="145" width="22" height="22" rx="4" transform="rotate(45 270 156)" fill="var(--amber)"/><text x="270" y="196" text-anchor="middle" font-size="14" font-weight="800" fill="var(--amber)">EVENT</text><text x="270" y="216" text-anchor="middle" font-size="11" fill="var(--mute)">T</text>
+        <circle cx="450" cy="156" r="11" fill="var(--green)"/><text x="450" y="196" text-anchor="middle" font-size="14" font-weight="800" fill="var(--green)">SELL</text><text x="450" y="216" text-anchor="middle" font-size="11" fill="var(--mute)">T + M</text>
+      </svg>
+    </div>
+  </div>
+  <div class="pnum">02</div>
+</section>
+
+<!-- 3 · THE DATA -->
+<section class="slide">
+  <div class="kicker">The foundation</div>
+  <h2>A clean, verified dataset.</h2>
+  <div class="kpis">
+    <div class="kpi"><div class="v">50</div><div class="l">stocks — the exact current Nifty 50, verified 1:1 with NSE</div></div>
+    <div class="kpi"><div class="v">68,589</div><div class="l">unique corporate-event dates analysed</div></div>
+    <div class="kpi"><div class="v">106,034</div><div class="l">raw event records processed</div></div>
+    <div class="kpi"><div class="v">50/50</div><div class="l">with fundamentals &amp; full price history</div></div>
+  </div>
+  <div class="cards3">
+    <div class="card"><div class="ic" style="color:var(--amber)">🏛️</div><h3>NSE India</h3>
+      <p>The event calendar — results, board meetings, corporate actions, announcements.</p></div>
+  </div>
+  <div class="foot">Universe re-synced to the exact 50 · full history merged &amp; audited · date-parsing, duplication and
+    coverage bugs found and fixed.</div>
+  <div class="pnum">03</div>
+</section>
+
+<!-- 4 · METHOD -->
+<section class="slide">
+  <div class="kicker">How it works</div>
+  <h2>Brute-force honesty.</h2>
+  <div class="two">
+    <div>
+      <p>For each event we test <b>every</b> combination of “buy N days before” × “sell M days after”
+        (N,M = 1…8) — an <b>8 × 8 = 64-rule grid</b> — against the stock’s full history, and keep the best.</p>
+      <div class="formula">
+        return% = ( <span class="k">close[T+M]</span> / <span class="k">close[T−N]</span> − 1 ) × 100<br>
+        <span class="g">WIN</span> if &gt; 0 &nbsp; <span class="c">// per event</span><br><br>
+        <b>win rate</b> = wins ÷ total events × 100
+      </div>
+      <p><span class="pill">no machine learning</span> &nbsp; Just exhaustive search + transparent statistics — every
+        number traces to one formula.</p>
+    </div>
+    <div>
+      <svg viewBox="0 0 420 300" role="img" aria-label="the 64-rule grid">
+        <text x="228" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#eaf0f7">The 64 candidate rules</text>
+        <text x="22" y="165" text-anchor="middle" font-size="12" fill="#93a1b5" transform="rotate(-90 22 165)">days BEFORE (buy)</text>
+        <text x="228" y="290" text-anchor="middle" font-size="12" fill="#93a1b5">days AFTER (sell)</text>
+        <rect x="60" y="40" width="336" height="208" fill="#18202e" stroke="#232d40"/>
+        <rect x="102" y="92" width="42" height="26" fill="#41c777"/>
+        <text x="123" y="109" text-anchor="middle" font-size="11" font-weight="800" fill="#08101e">best</text>
+        <g stroke="#0b0f17" stroke-width="2">
+          <line x1="102" y1="40" x2="102" y2="248"/><line x1="144" y1="40" x2="144" y2="248"/>
+          <line x1="186" y1="40" x2="186" y2="248"/><line x1="228" y1="40" x2="228" y2="248"/>
+          <line x1="270" y1="40" x2="270" y2="248"/><line x1="312" y1="40" x2="312" y2="248"/>
+          <line x1="354" y1="40" x2="354" y2="248"/>
+          <line x1="60" y1="66" x2="396" y2="66"/><line x1="60" y1="92" x2="396" y2="92"/>
+          <line x1="60" y1="118" x2="396" y2="118"/><line x1="60" y1="144" x2="396" y2="144"/>
+          <line x1="60" y1="170" x2="396" y2="170"/><line x1="60" y1="196" x2="396" y2="196"/>
+          <line x1="60" y1="222" x2="396" y2="222"/>
+        </g>
+        <text x="123" y="264" text-anchor="middle" font-size="11" fill="#41c777" font-weight="700">highest win rate</text>
+      </svg>
+    </div>
+  </div>
+  <div class="pnum">04</div>
+</section>
+
+<!-- 5 · THE CHART -->
+<section class="slide">
+  <div class="kicker">A look at the results</div>
+  <h2>Where the strongest historical patterns sit.</h2>
+  <p style="margin-bottom:6px">Top stocks by <b>board-meeting</b> win rate — how often the best buy/sell rule closed
+    positive. Bars start at zero; the count (n) is shown for honesty.</p>
+  <svg viewBox="0 0 900 360" role="img" aria-label="Top stocks by board-meeting win rate">
+    <!-- gridlines 0..100 -->
+    <g font-family="var(--mono)" font-size="12" fill="#5f6c81">
+      <line x1="150" y1="30" x2="150" y2="330" stroke="#232d40"/>
+      <line x1="312" y1="30" x2="312" y2="330" stroke="#19212f" stroke-dasharray="3 5"/>
+      <line x1="474" y1="30" x2="474" y2="330" stroke="#19212f" stroke-dasharray="3 5"/>
+      <line x1="636" y1="30" x2="636" y2="330" stroke="#19212f" stroke-dasharray="3 5"/>
+      <line x1="798" y1="30" x2="798" y2="330" stroke="#19212f" stroke-dasharray="3 5"/>
+      <text x="150" y="348" text-anchor="middle">0</text>
+      <text x="312" y="348" text-anchor="middle">25</text>
+      <text x="474" y="348" text-anchor="middle">50</text>
+      <text x="636" y="348" text-anchor="middle">75</text>
+      <text x="798" y="348" text-anchor="middle">100%</text>
+    </g>
+    <!-- bars: x0=150, scale 6.48 px per % (648px for 100) -->
+    <g font-family="Inter,sans-serif">
+      <!-- M&M 84 -->
+      <text x="142" y="52" text-anchor="end" font-size="14" font-weight="700" fill="#eaf0f7">M&amp;M</text>
+      <rect x="150" y="42" width="544" height="20" rx="5" fill="#5aa2ff"/>
+      <text x="704" y="52" font-size="13" font-weight="700" fill="#eaf0f7">84% · n=19</text>
+      <!-- APOLLOHOSP 80 -->
+      <text x="142" y="88" text-anchor="end" font-size="14" font-weight="700" fill="#eaf0f7">APOLLOHOSP</text>
+      <rect x="150" y="78" width="518" height="20" rx="5" fill="#5aa2ff"/>
+      <text x="678" y="88" font-size="13" font-weight="700" fill="#eaf0f7">80% · n=15</text>
+      <!-- MAXHEALTH 77 -->
+      <text x="142" y="124" text-anchor="end" font-size="14" font-weight="700" fill="#eaf0f7">MAXHEALTH</text>
+      <rect x="150" y="114" width="499" height="20" rx="5" fill="#5aa2ff"/>
+      <text x="659" y="124" font-size="13" font-weight="700" fill="#eaf0f7">77% · n=30</text>
+      <!-- ADANIPORTS 75 -->
+      <text x="142" y="160" text-anchor="end" font-size="14" font-weight="700" fill="#eaf0f7">ADANIPORTS</text>
+      <rect x="150" y="150" width="486" height="20" rx="5" fill="#5aa2ff"/>
+      <text x="646" y="160" font-size="13" font-weight="700" fill="#eaf0f7">75% · n=59</text>
+      <!-- ULTRACEMCO 74 -->
+      <text x="142" y="196" text-anchor="end" font-size="14" font-weight="700" fill="#eaf0f7">ULTRACEMCO</text>
+      <rect x="150" y="186" width="480" height="20" rx="5" fill="#5aa2ff"/>
+      <text x="640" y="196" font-size="13" font-weight="700" fill="#eaf0f7">74% · n=35</text>
+      <!-- BHARTIARTL 73 -->
+      <text x="142" y="232" text-anchor="end" font-size="14" font-weight="700" fill="#eaf0f7">BHARTIARTL</text>
+      <rect x="150" y="222" width="473" height="20" rx="5" fill="#5aa2ff"/>
+      <text x="633" y="232" font-size="13" font-weight="700" fill="#eaf0f7">73% · n=15</text>
+      <!-- ICICIBANK 72 -->
+      <text x="142" y="268" text-anchor="end" font-size="14" font-weight="700" fill="#eaf0f7">ICICIBANK</text>
+      <rect x="150" y="258" width="467" height="20" rx="5" fill="#5aa2ff"/>
+      <text x="627" y="268" font-size="13" font-weight="700" fill="#eaf0f7">72% · n=39</text>
+      <!-- JSWSTEEL 71 -->
+      <text x="142" y="304" text-anchor="end" font-size="14" font-weight="700" fill="#eaf0f7">JSWSTEEL</text>
+      <rect x="150" y="294" width="460" height="20" rx="5" fill="#5aa2ff"/>
+      <text x="620" y="304" font-size="13" font-weight="700" fill="#eaf0f7">71% · n=52</text>
+    </g>
+  </svg>
+  <div class="foot">Historical hit-rate (in-sample). Higher n = more reliable. See slide 08 for the honest caveat.</div>
+  <div class="pnum">05</div>
+</section>
+
+<!-- 6 · THE DASHBOARD -->
+<section class="slide">
+  <div class="kicker">The product</div>
+  <h2>A live, interactive dashboard.</h2>
+  <div class="feat">
+    <div class="f"><div class="t">📈 Behaviour</div><p>Each stock’s best buy/sell rule &amp; win rate per event, with a full return grid.</p></div>
+    <div class="f"><div class="t">🏆 Rankings</div><p>All 50 stocks ordered by win rate, per event type.</p></div>
+    <div class="f"><div class="t">📅 Upcoming</div><p>A watchlist of events still ahead — with each stock’s historical edge.</p></div>
+    <div class="f"><div class="t">🔎 Screener</div><p>Filter by ROCE, growth, debt, P/E to find quality &amp; cheap names.</p></div>
+    <div class="f"><div class="t">⚖ Compare</div><p>2–3 stocks side by side — fundamentals + behaviour.</p></div>
+    <div class="f"><div class="t">📊 Fundamentals</div><p>Interactive <b>3D charts</b> with hover tooltips; offline Excel export.</p></div>
+  </div>
+  <div class="callout good"><b>Runs two ways.</b><p>A live Python app on your machine, and an always-on static
+    snapshot on GitHub Pages — the same 50 stocks, anywhere.</p></div>
+  <div class="pnum">06</div>
+</section>
+
+<!-- 7 · WHAT WE BUILT -->
+<section class="slide">
+  <div class="kicker">The journey · what we did</div>
+  <h2>From raw feeds to a polished tool.</h2>
+  <div class="tl">
+    <div class="row"><div class="n">1</div><div class="bd"><b>Locked the universe</b><p>Re-synced to the exact current Nifty 50 and verified it 1:1 against NSE.</p></div></div>
+    <div class="row"><div class="n">2</div><div class="bd"><b>Fixed &amp; deepened the data</b><p>Merged full history (+2,860 event-dates), backfilled board meetings 4×, extended corporate actions from Yahoo, repaired date-parsing &amp; duplication bugs.</p></div></div>
+    <div class="row"><div class="n">3</div><div class="bd"><b>Built the analysis engine</b><p>The 64-rule grid, win-rate rankings, screener &amp; compare — cached for instant loads.</p></div></div>
+    <div class="row"><div class="n">4</div><div class="bd"><b>Made it usable &amp; beautiful</b><p>Upcoming watchlist, interactive 3D charts with tooltips, polished UI, readable filings — and an ML experiment kept honestly separate.</p></div></div>
+  </div>
+  <div class="pnum">07</div>
+</section>
+
+<!-- 8 · FINDINGS -->
+<section class="slide">
+  <div class="kicker">The honest bottom line</div>
+  <h2>What the numbers really say.</h2>
+  <div class="two">
+    <div>
+      <p>Past win-rates around events are real — but they are <b>in-sample</b> (a rule chosen on the same history
+        it’s scored on) and <b>modest</b> out of sample.</p>
+      <div class="callout"><b>No robust, reliably tradeable edge survives out-of-sample.</b>
+        <p>Even a pooled, time-validated ML test on 6,000 events landed at ~coin-flip.</p></div>
+      <p>That is itself a <b>valuable, defensible result</b> — and it’s presented transparently, not hidden.</p>
+    </div>
+    <div>
+      <div class="card" style="padding:26px">
+        <h3 style="font-size:1.3rem">The real deliverable</h3>
+        <p style="font-size:1.05rem;color:var(--ink)">A <b>transparent framework</b> and a <b>clean, verified,
+          fully-historical Nifty 50 dataset</b> — a solid base for deeper, more careful research.</p>
+        <div class="legend" style="margin-top:16px">
+          <span><span class="sw" style="background:var(--green)"></span>green = grew vs last year</span>
+          <span><span class="sw" style="background:var(--red)"></span>red = fell / loss</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pnum">08</div>
+</section>
+
+<!-- 9 · CLOSING -->
+<section class="slide" style="justify-content:center">
+  <div class="kicker"><span class="dot"></span>&nbsp; Live now</div>
+  <h1 style="font-size:2.6rem">See it for yourself.</h1>
+  <div class="rule"></div>
+  <p class="big">The full dashboard — 50 stocks, all event analyses, interactive 3D charts — is running and shareable.</p>
+  <div class="cards3" style="margin-top:20px">
+    <div class="card"><h3>Local app</h3><p class="mono" style="font-family:var(--mono);color:var(--blue)">localhost:8090</p></div>
+    <div class="card"><h3>Always-on (GitHub Pages)</h3><p class="mono" style="font-family:var(--mono);color:var(--blue);font-size:.8rem">yashsharma1202.github.io/behaviour-analysis/nifty/</p></div>
+    <div class="card"><h3>Source</h3><p class="mono" style="font-family:var(--mono);color:var(--blue);font-size:.85rem">github.com/Yashsharma1202</p></div>
+  </div>
+  <div class="foot">Nifty 50 Behaviour Analysis · for study &amp; education, not investment advice · Thank you.</div>
+  <div class="pnum">09</div>
+</section>
+
+<!-- APPENDIX DIVIDER -->
+<section class="slide" style="justify-content:center">
+  <div class="kicker"><span class="dot"></span>&nbsp; Appendix</div>
+  <h1 style="font-size:2.6rem">All 50 stocks — by sector</h1>
+  <div class="rule"></div>
+  <p class="big">Headline fundamentals + the best event play &amp; win rate for every constituent,
+    grouped by sector for easy navigation.</p>
+  <div class="pnum">A</div>
+</section>
+
+<!-- appendix cards injected here by build_stock_profiles.py -->
+<div class="apx"><!--APPENDIX_CARDS--><div class="ahead">All 50 stocks — by sector</div><div class="sec">Banks<span class="cnt">5</span></div><div class="apxgrid"><div class="ac"><div class="h"><span class="sym">HDFCBANK</span><span class="px">₹825 · P/E 16.7</span></div><div class="nm">HDFC Bank</div><div class="fr"><span>ROCE <b>—</b></span><span>OPM <b>—</b></span><span>D/E <b>—</b></span><span>Pft <b class="">+8%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">65%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">69%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">71%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">58%</span></div></div></div><div class="ac"><div class="h"><span class="sym">ICICIBANK</span><span class="px">₹1,403 · P/E 18.5</span></div><div class="nm">ICICI Bank</div><div class="fr"><span>ROCE <b>—</b></span><span>OPM <b>—</b></span><span>D/E <b>—</b></span><span>Pft <b class="">+6%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">62%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">72%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">74%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">56%</span></div></div></div><div class="ac"><div class="h"><span class="sym">AXISBANK</span><span class="px">₹1,328 · P/E 15.6</span></div><div class="nm">Axis Bank</div><div class="fr"><span>ROCE <b>—</b></span><span>OPM <b>—</b></span><span>D/E <b>—</b></span><span>Pft <b class="r2">-6%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">64%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">61%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">74%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">59%</span></div></div></div><div class="ac"><div class="h"><span class="sym">KOTAKBANK</span><span class="px">₹377 · P/E 19.4</span></div><div class="nm">Kotak Mahindra Bank</div><div class="fr"><span>ROCE <b>—</b></span><span>OPM <b>—</b></span><span>D/E <b>—</b></span><span>Pft <b class="r2">-14%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">57%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">65%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">81%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">59%</span></div></div></div><div class="ac"><div class="h"><span class="sym">SBIN</span><span class="px">₹1,037 · P/E 11.5</span></div><div class="nm">State Bank of India</div><div class="fr"><span>ROCE <b>—</b></span><span>OPM <b>—</b></span><span>D/E <b>—</b></span><span>Pft <b class="">+7%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">61%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">65%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">71%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">57%</span></div></div></div></div><div class="sec">Financial Services<span class="cnt">6</span></div><div class="apxgrid"><div class="ac"><div class="h"><span class="sym">BAJFINANCE</span><span class="px">₹1,014 · P/E 33.2</span></div><div class="nm">Bajaj Finance</div><div class="fr"><span>ROCE <b>—</b></span><span>OPM <b>—</b></span><span>D/E <b>—</b></span><span>Pft <b class="">+15%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">61%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">64%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">72%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">60%</span></div></div></div><div class="ac"><div class="h"><span class="sym">BAJAJFINSV</span><span class="px">₹1,901 · P/E 31.0</span></div><div class="nm">Bajaj Finserv</div><div class="fr"><span>ROCE <b>11%</b></span><span>OPM <b>38%</b></span><span>D/E <b>5.52</b></span><span>Pft <b class="">+12%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">62%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew a2">59%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">76%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">58%</span></div></div></div><div class="ac"><div class="h"><span class="sym">SHRIRAMFIN</span><span class="px">₹1,044 · P/E 19.6</span></div><div class="nm">Shriram Finance</div><div class="fr"><span>ROCE <b>—</b></span><span>OPM <b>—</b></span><span>D/E <b>—</b></span><span>Pft <b class="">+22%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">63%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">62%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">67%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">58%</span></div></div></div><div class="ac"><div class="h"><span class="sym">JIOFIN</span><span class="px">₹242 · P/E 98.5</span></div><div class="nm">Jio Financial Services</div><div class="fr"><span>ROCE <b>2%</b></span><span>OPM <b>66%</b></span><span>D/E <b>0.16</b></span><span>Pft <b class="r2">-5%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">50%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew a2">58%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">100%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">53%</span></div></div></div><div class="ac"><div class="h"><span class="sym">HDFCLIFE</span><span class="px">₹570 · P/E 64.4</span></div><div class="nm">HDFC Life Insurance Company</div><div class="fr"><span>ROCE <b>10%</b></span><span>OPM <b>1%</b></span><span>D/E <b>0.17</b></span><span>Pft <b class="">+15%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">50%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">66%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">90%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">51%</span></div></div></div><div class="ac"><div class="h"><span class="sym">SBILIFE</span><span class="px">₹1,846 · P/E 75.0</span></div><div class="nm">SBI Life Insurance Company</div><div class="fr"><span>ROCE <b>15%</b></span><span>OPM <b>1%</b></span><span>D/E <b>0.00</b></span><span>Pft <b class="">—</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">64%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">68%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">100%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">61%</span></div></div></div></div><div class="sec">IT & Technology<span class="cnt">5</span></div><div class="apxgrid"><div class="ac"><div class="h"><span class="sym">TCS</span><span class="px">₹2,126 · P/E 15.6</span></div><div class="nm">Tata Consultancy Services</div><div class="fr"><span>ROCE <b>63%</b></span><span>OPM <b>27%</b></span><span>D/E <b>0.11</b></span><span>Pft <b class="">+8%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">61%</span></div><div class="er"><span class="el">Board mtg ★</span><span class="ew g2">62%</span></div><div class="er"><span class="el">Corp action</span><span class="ew g2">60%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">59%</span></div></div></div><div class="ac"><div class="h"><span class="sym">INFY</span><span class="px">₹1,070 · P/E 14.7</span></div><div class="nm">Infosys</div><div class="fr"><span>ROCE <b>40%</b></span><span>OPM <b>24%</b></span><span>D/E <b>0.10</b></span><span>Pft <b class="">+13%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">58%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">64%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">67%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">61%</span></div></div></div><div class="ac"><div class="h"><span class="sym">HCLTECH</span><span class="px">₹1,174 · P/E 19.1</span></div><div class="nm">HCL Technologies</div><div class="fr"><span>ROCE <b>31%</b></span><span>OPM <b>21%</b></span><span>D/E <b>0.07</b></span><span>Pft <b class="">+1%</b></span></div><div class="ev"><div class="er"><span class="el">Results ★</span><span class="ew g2">68%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">61%</span></div><div class="er"><span class="el">Corp action</span><span class="ew g2">66%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">61%</span></div></div></div><div class="ac"><div class="h"><span class="sym">TECHM</span><span class="px">₹1,465 · P/E 29.8</span></div><div class="nm">Tech Mahindra</div><div class="fr"><span>ROCE <b>23%</b></span><span>OPM <b>16%</b></span><span>D/E <b>0.07</b></span><span>Pft <b class="">+27%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">58%</span></div><div class="er"><span class="el">Board mtg ★</span><span class="ew g2">70%</span></div><div class="er"><span class="el">Corp action</span><span class="ew g2">68%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">64%</span></div></div></div><div class="ac"><div class="h"><span class="sym">WIPRO</span><span class="px">₹176 · P/E 14.0</span></div><div class="nm">Wipro</div><div class="fr"><span>ROCE <b>18%</b></span><span>OPM <b>19%</b></span><span>D/E <b>0.23</b></span><span>Pft <b class="">+1%</b></span></div><div class="ev"><div class="er"><span class="el">Results ★</span><span class="ew a2">59%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew a2">57%</span></div><div class="er"><span class="el">Corp action</span><span class="ew a2">52%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">55%</span></div></div></div></div><div class="sec">Automobiles<span class="cnt">5</span></div><div class="apxgrid"><div class="ac"><div class="h"><span class="sym">MARUTI</span><span class="px">₹13,632 · P/E 29.2</span></div><div class="nm">Maruti Suzuki India</div><div class="fr"><span>ROCE <b>19%</b></span><span>OPM <b>12%</b></span><span>D/E <b>0.00</b></span><span>Pft <b class="">+2%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">61%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">61%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">70%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">57%</span></div></div></div><div class="ac"><div class="h"><span class="sym">M&M</span><span class="px">₹3,093 · P/E 22.5</span></div><div class="nm">Mahindra & Mahindra</div><div class="fr"><span>ROCE <b>15%</b></span><span>OPM <b>19%</b></span><span>D/E <b>1.44</b></span><span>Pft <b class="">+37%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">65%</span></div><div class="er"><span class="el">Board mtg ★</span><span class="ew g2">84%</span></div><div class="er"><span class="el">Corp action</span><span class="ew g2">78%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">55%</span></div></div></div><div class="ac"><div class="h"><span class="sym">BAJAJ-AUTO</span><span class="px">₹10,087 · P/E 26.2</span></div><div class="nm">Bajaj Auto</div><div class="fr"><span>ROCE <b>28%</b></span><span>OPM <b>21%</b></span><span>D/E <b>0.58</b></span><span>Pft <b class="">+48%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">68%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">67%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">78%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">63%</span></div></div></div><div class="ac"><div class="h"><span class="sym">EICHERMOT</span><span class="px">₹7,296 · P/E 36.3</span></div><div class="nm">Eicher Motors</div><div class="fr"><span>ROCE <b>31%</b></span><span>OPM <b>25%</b></span><span>D/E <b>0.02</b></span><span>Pft <b class="">+17%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">67%</span></div><div class="er"><span class="el">Board mtg ★</span><span class="ew g2">86%</span></div><div class="er"><span class="el">Corp action</span><span class="ew g2">81%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">58%</span></div></div></div><div class="ac"><div class="h"><span class="sym">TMPV</span><span class="px">₹327 · P/E 1.5</span></div><div class="nm">Tata Motors Passenger Vehicles</div><div class="fr"><span>ROCE <b>3%</b></span><span>OPM <b>6%</b></span><span>D/E <b>0.71</b></span><span>Pft <b class="r2">-77%</b></span></div><div class="ev"><div class="er"><span class="el">Results ★</span><span class="ew g2">86%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">67%</span></div><div class="er"><span class="el">Corp action</span><span class="ew g2">61%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">54%</span></div></div></div></div><div class="sec">Metals & Mining<span class="cnt">4</span></div><div class="apxgrid"><div class="ac"><div class="h"><span class="sym">TATASTEEL</span><span class="px">₹188 · P/E 21.7</span></div><div class="nm">Tata Steel</div><div class="fr"><span>ROCE <b>13%</b></span><span>OPM <b>15%</b></span><span>D/E <b>0.90</b></span><span>Pft <b class="">+217%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">57%</span></div><div class="er"><span class="el">Board mtg ★</span><span class="ew g2">63%</span></div><div class="er"><span class="el">Corp action</span><span class="ew a2">55%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">56%</span></div></div></div><div class="ac"><div class="h"><span class="sym">JSWSTEEL</span><span class="px">₹1,238 · P/E 13.6</span></div><div class="nm">JSW Steel</div><div class="fr"><span>ROCE <b>11%</b></span><span>OPM <b>16%</b></span><span>D/E <b>0.99</b></span><span>Pft <b class="">+134%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">67%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">71%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">80%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">59%</span></div></div></div><div class="ac"><div class="h"><span class="sym">HINDALCO</span><span class="px">₹963 · P/E 16.2</span></div><div class="nm">Hindalco Industries</div><div class="fr"><span>ROCE <b>14%</b></span><span>OPM <b>13%</b></span><span>D/E <b>0.73</b></span><span>Pft <b class="">+9%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">53%</span></div><div class="er"><span class="el">Board mtg ★</span><span class="ew g2">92%</span></div><div class="er"><span class="el">Corp action</span><span class="ew g2">75%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">58%</span></div></div></div><div class="ac"><div class="h"><span class="sym">COALINDIA</span><span class="px">₹428 · P/E 8.5</span></div><div class="nm">Coal India</div><div class="fr"><span>ROCE <b>35%</b></span><span>OPM <b>24%</b></span><span>D/E <b>0.12</b></span><span>Pft <b class="r2">-12%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">58%</span></div><div class="er"><span class="el">Board mtg ★</span><span class="ew g2">68%</span></div><div class="er"><span class="el">Corp action</span><span class="ew g2">64%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">62%</span></div></div></div></div><div class="sec">Oil, Gas & Power<span class="cnt">4</span></div><div class="apxgrid"><div class="ac"><div class="h"><span class="sym">RELIANCE</span><span class="px">₹1,304 · P/E 21.8</span></div><div class="nm">Reliance Industries</div><div class="fr"><span>ROCE <b>10%</b></span><span>OPM <b>17%</b></span><span>D/E <b>0.45</b></span><span>Pft <b class="">+14%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">59%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">62%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">72%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">57%</span></div></div></div><div class="ac"><div class="h"><span class="sym">ONGC</span><span class="px">₹247 · P/E 7.5</span></div><div class="nm">Oil & Natural Gas Corporation</div><div class="fr"><span>ROCE <b>14%</b></span><span>OPM <b>16%</b></span><span>D/E <b>0.47</b></span><span>Pft <b class="">+15%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">50%</span></div><div class="er"><span class="el">Board mtg ★</span><span class="ew g2">63%</span></div><div class="er"><span class="el">Corp action</span><span class="ew g2">62%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">56%</span></div></div></div><div class="ac"><div class="h"><span class="sym">NTPC</span><span class="px">₹347 · P/E 12.4</span></div><div class="nm">NTPC</div><div class="fr"><span>ROCE <b>8%</b></span><span>OPM <b>28%</b></span><span>D/E <b>1.33</b></span><span>Pft <b class="">+20%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">58%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">60%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">76%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">58%</span></div></div></div><div class="ac"><div class="h"><span class="sym">POWERGRID</span><span class="px">₹285 · P/E 16.6</span></div><div class="nm">Power Grid Corporation of India</div><div class="fr"><span>ROCE <b>10%</b></span><span>OPM <b>75%</b></span><span>D/E <b>1.47</b></span><span>Pft <b class="">+4%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">60%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew a2">56%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">78%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">56%</span></div></div></div></div><div class="sec">Pharma & Healthcare<span class="cnt">5</span></div><div class="apxgrid"><div class="ac"><div class="h"><span class="sym">SUNPHARMA</span><span class="px">₹1,920 · P/E 40.1</span></div><div class="nm">Sun Pharmaceutical Industries</div><div class="fr"><span>ROCE <b>21%</b></span><span>OPM <b>30%</b></span><span>D/E <b>0.06</b></span><span>Pft <b class="">+9%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">68%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew a2">50%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">73%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">61%</span></div></div></div><div class="ac"><div class="h"><span class="sym">CIPLA</span><span class="px">₹1,431 · P/E 29.8</span></div><div class="nm">Cipla</div><div class="fr"><span>ROCE <b>15%</b></span><span>OPM <b>21%</b></span><span>D/E <b>0.02</b></span><span>Pft <b class="r2">-26%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">56%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">69%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">77%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">58%</span></div></div></div><div class="ac"><div class="h"><span class="sym">DRREDDY</span><span class="px">₹1,242 · P/E 24.7</span></div><div class="nm">Dr. Reddy's Laboratories</div><div class="fr"><span>ROCE <b>14%</b></span><span>OPM <b>19%</b></span><span>D/E <b>0.20</b></span><span>Pft <b class="r2">-24%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">53%</span></div><div class="er"><span class="el">Board mtg ★</span><span class="ew g2">80%</span></div><div class="er"><span class="el">Corp action</span><span class="ew g2">76%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">58%</span></div></div></div><div class="ac"><div class="h"><span class="sym">APOLLOHOSP</span><span class="px">₹8,828 · P/E 65.4</span></div><div class="nm">Apollo Hospitals Enterprise</div><div class="fr"><span>ROCE <b>18%</b></span><span>OPM <b>15%</b></span><span>D/E <b>0.90</b></span><span>Pft <b class="">+40%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">74%</span></div><div class="er"><span class="el">Board mtg ★</span><span class="ew g2">80%</span></div><div class="er"><span class="el">Corp action</span><span class="ew g2">73%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">66%</span></div></div></div><div class="ac"><div class="h"><span class="sym">MAXHEALTH</span><span class="px">₹1,084 · P/E 73.2</span></div><div class="nm">Max Healthcare Institute</div><div class="fr"><span>ROCE <b>15%</b></span><span>OPM <b>27%</b></span><span>D/E <b>0.32</b></span><span>Pft <b class="">+31%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">88%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">77%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">100%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">66%</span></div></div></div></div><div class="sec">FMCG<span class="cnt">4</span></div><div class="apxgrid"><div class="ac"><div class="h"><span class="sym">HINDUNILVR</span><span class="px">₹2,136 · P/E 33.4</span></div><div class="nm">Hindustan Unilever</div><div class="fr"><span>ROCE <b>28%</b></span><span>OPM <b>23%</b></span><span>D/E <b>0.03</b></span><span>Pft <b class="">+46%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">53%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">62%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">69%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">56%</span></div></div></div><div class="ac"><div class="h"><span class="sym">ITC</span><span class="px">₹281 · P/E 17.0</span></div><div class="nm">ITC</div><div class="fr"><span>ROCE <b>39%</b></span><span>OPM <b>35%</b></span><span>D/E <b>0.03</b></span><span>Pft <b class="">+6%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">57%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew r2">43%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">69%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">57%</span></div></div></div><div class="ac"><div class="h"><span class="sym">NESTLEIND</span><span class="px">₹1,442 · P/E 79.5</span></div><div class="nm">Nestle India</div><div class="fr"><span>ROCE <b>85%</b></span><span>OPM <b>23%</b></span><span>D/E <b>0.09</b></span><span>Pft <b class="">+11%</b></span></div><div class="ev"><div class="er"><span class="el">Results ★</span><span class="ew g2">71%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">62%</span></div><div class="er"><span class="el">Corp action</span><span class="ew g2">69%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">71%</span></div></div></div><div class="ac"><div class="h"><span class="sym">TATACONSUM</span><span class="px">₹1,103 · P/E 70.8</span></div><div class="nm">Tata Consumer Products</div><div class="fr"><span>ROCE <b>9%</b></span><span>OPM <b>14%</b></span><span>D/E <b>0.13</b></span><span>Pft <b class="">+22%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">55%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew a2">53%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">74%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">59%</span></div></div></div></div><div class="sec">Consumer & Retail<span class="cnt">4</span></div><div class="apxgrid"><div class="ac"><div class="h"><span class="sym">TITAN</span><span class="px">₹4,565 · P/E 79.9</span></div><div class="nm">Titan Company</div><div class="fr"><span>ROCE <b>26%</b></span><span>OPM <b>10%</b></span><span>D/E <b>0.93</b></span><span>Pft <b class="">+54%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">61%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew r2">46%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">76%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">63%</span></div></div></div><div class="ac"><div class="h"><span class="sym">TRENT</span><span class="px">₹2,898 · P/E 89.8</span></div><div class="nm">Trent</div><div class="fr"><span>ROCE <b>28%</b></span><span>OPM <b>19%</b></span><span>D/E <b>0.37</b></span><span>Pft <b class="">+19%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">57%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">66%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">80%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">66%</span></div></div></div><div class="ac"><div class="h"><span class="sym">ASIANPAINT</span><span class="px">₹2,648 · P/E 58.7</span></div><div class="nm">Asian Paints</div><div class="fr"><span>ROCE <b>26%</b></span><span>OPM <b>19%</b></span><span>D/E <b>0.18</b></span><span>Pft <b class="">+13%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">58%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew a2">59%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">67%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">64%</span></div></div></div><div class="ac"><div class="h"><span class="sym">ETERNAL</span><span class="px">₹294 · P/E 774.1</span></div><div class="nm">Eternal</div><div class="fr"><span>ROCE <b>3%</b></span><span>OPM <b>2%</b></span><span>D/E <b>0.15</b></span><span>Pft <b class="r2">-16%</b></span></div><div class="ev"><div class="er"><span class="el">Results ★</span><span class="ew g2">77%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">65%</span></div><div class="er"><span class="el">Corp action</span><span class="ew na2">—</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">61%</span></div></div></div></div><div class="sec">Cement & Materials<span class="cnt">2</span></div><div class="apxgrid"><div class="ac"><div class="h"><span class="sym">ULTRACEMCO</span><span class="px">₹11,594 · P/E 41.8</span></div><div class="nm">UltraTech Cement</div><div class="fr"><span>ROCE <b>13%</b></span><span>OPM <b>19%</b></span><span>D/E <b>0.31</b></span><span>Pft <b class="">+36%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">54%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">74%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">80%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">62%</span></div></div></div><div class="ac"><div class="h"><span class="sym">GRASIM</span><span class="px">₹3,193 · P/E 43.8</span></div><div class="nm">Grasim Industries</div><div class="fr"><span>ROCE <b>8%</b></span><span>OPM <b>21%</b></span><span>D/E <b>2.20</b></span><span>Pft <b class="">+38%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">61%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">61%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">74%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">58%</span></div></div></div></div><div class="sec">Infra & Capital Goods<span class="cnt">2</span></div><div class="apxgrid"><div class="ac"><div class="h"><span class="sym">LT</span><span class="px">₹3,916 · P/E 33.5</span></div><div class="nm">Larsen & Toubro</div><div class="fr"><span>ROCE <b>15%</b></span><span>OPM <b>12%</b></span><span>D/E <b>1.15</b></span><span>Pft <b class="">+7%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">61%</span></div><div class="er"><span class="el">Board mtg ★</span><span class="ew g2">77%</span></div><div class="er"><span class="el">Corp action</span><span class="ew g2">66%</span></div><div class="er"><span class="el">Announce</span><span class="ew a2">59%</span></div></div></div><div class="ac"><div class="h"><span class="sym">BEL</span><span class="px">₹410 · P/E 49.5</span></div><div class="nm">Bharat Electronics</div><div class="fr"><span>ROCE <b>37%</b></span><span>OPM <b>29%</b></span><span>D/E <b>0.00</b></span><span>Pft <b class="">+14%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">56%</span></div><div class="er"><span class="el">Board mtg ★</span><span class="ew g2">82%</span></div><div class="er"><span class="el">Corp action</span><span class="ew g2">67%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">64%</span></div></div></div></div><div class="sec">Diversified & Ports<span class="cnt">2</span></div><div class="apxgrid"><div class="ac"><div class="h"><span class="sym">ADANIENT</span><span class="px">₹3,156 · P/E 43.6</span></div><div class="nm">Adani Enterprises</div><div class="fr"><span>ROCE <b>6%</b></span><span>OPM <b>14%</b></span><span>D/E <b>1.32</b></span><span>Pft <b class="r2">-199%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">65%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">64%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">67%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">62%</span></div></div></div><div class="ac"><div class="h"><span class="sym">ADANIPORTS</span><span class="px">₹1,820 · P/E 32.7</span></div><div class="nm">Adani Ports and Special Economic Zone</div><div class="fr"><span>ROCE <b>14%</b></span><span>OPM <b>59%</b></span><span>D/E <b>0.66</b></span><span>Pft <b class="">+15%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">66%</span></div><div class="er"><span class="el">Board mtg ★</span><span class="ew g2">75%</span></div><div class="er"><span class="el">Corp action</span><span class="ew a2">57%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">64%</span></div></div></div></div><div class="sec">Telecom<span class="cnt">1</span></div><div class="apxgrid"><div class="ac"><div class="h"><span class="sym">BHARTIARTL</span><span class="px">₹1,905 · P/E 43.5</span></div><div class="nm">Bharti Airtel</div><div class="fr"><span>ROCE <b>18%</b></span><span>OPM <b>57%</b></span><span>D/E <b>1.31</b></span><span>Pft <b class="">+27%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew a2">52%</span></div><div class="er"><span class="el">Board mtg ★</span><span class="ew g2">73%</span></div><div class="er"><span class="el">Corp action</span><span class="ew g2">65%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">60%</span></div></div></div></div><div class="sec">Aviation<span class="cnt">1</span></div><div class="apxgrid"><div class="ac"><div class="h"><span class="sym">INDIGO</span><span class="px">₹5,077 · P/E —</span></div><div class="nm">InterGlobe Aviation</div><div class="fr"><span>ROCE <b>7%</b></span><span>OPM <b>14%</b></span><span>D/E <b>11.15</b></span><span>Pft <b class="r2">-117%</b></span></div><div class="ev"><div class="er"><span class="el">Results</span><span class="ew g2">69%</span></div><div class="er"><span class="el">Board mtg</span><span class="ew g2">75%</span></div><div class="er"><span class="el">Corp action ★</span><span class="ew g2">78%</span></div><div class="er"><span class="el">Announce</span><span class="ew g2">63%</span></div></div></div></div></div>
+
+</body></html>
