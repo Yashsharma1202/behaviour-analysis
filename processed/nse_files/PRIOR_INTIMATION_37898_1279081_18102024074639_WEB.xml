@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:in-capmkt="https://www.sebi.gov.in/xbrl/2022-03-31/in-capmkt" xmlns:in-capmkt-ent="https://www.sebi.gov.in/xbrl/Prior_Intimation_Of_Board_Meeting/2022-03-31/in-capmkt/in-capmkt-ent" xmlns:in-capmkt-roles="https://www.sebi.gov.in/xbrl/Prior_Intimation_Of_Board_Meeting/2022-03-31/in-capmkt-roles" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:in-capmkt-type="https://www.sebi.gov.in/xbrl/2022-03-31/in-capmkt-types" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:net="http://www.xbrl.org/2009/role/net" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:iso4217="http://www.xbrl.org/2003/iso4217" xmlns:negated="http://www.xbrl.org/2009/role/negated" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xl="http://www.xbrl.org/2003/XLink">
+<link:schemaRef xlink:type="simple" xlink:href="in-capmkt-ent-2022-03-31.xsd"/>
+
+<xbrli:unit id="INR"><xbrli:measure>iso4217:INR</xbrli:measure></xbrli:unit><xbrli:unit id="pure"><xbrli:measure>xbrli:pure</xbrli:measure></xbrli:unit><xbrli:unit id="shares"><xbrli:measure>xbrli:shares</xbrli:measure></xbrli:unit><xbrli:unit id="INRPerShare"><xbrli:divide><xbrli:unitNumerator><xbrli:measure>iso4217:INR</xbrli:measure></xbrli:unitNumerator><xbrli:unitDenominator><xbrli:measure>xbrli:shares</xbrli:measure></xbrli:unitDenominator></xbrli:divide></xbrli:unit>
+<in-capmkt:NSESymbol contextRef="OneI">ASIANPAINT</in-capmkt:NSESymbol>
+<in-capmkt:ISIN contextRef="OneI">INE021A01026</in-capmkt:ISIN>
+<in-capmkt:TypeOfIntimation contextRef="OneD">Re-schedule (postpone or prepone)</in-capmkt:TypeOfIntimation>
+<in-capmkt:DateOfProposedMeeting contextRef="OneD">2024-11-09</in-capmkt:DateOfProposedMeeting>
+<in-capmkt:DateOfOriginalMeeting contextRef="OneD">2024-10-23</in-capmkt:DateOfOriginalMeeting>
+<in-capmkt:WhetherTradingWindowIsClosed contextRef="OneD">true</in-capmkt:WhetherTradingWindowIsClosed>
+<in-capmkt:StartDateOfTradingWindow contextRef="OneD">2024-09-20</in-capmkt:StartDateOfTradingWindow>
+<in-capmkt:EndDateOfTradingWindow contextRef="OneD">2024-11-12</in-capmkt:EndDateOfTradingWindow>
+<in-capmkt:Agenda1 contextRef="OneD">Financial results</in-capmkt:Agenda1>
+<in-capmkt:Agenda2 contextRef="OneD">Dividend</in-capmkt:Agenda2>
+<in-capmkt:WhetherResultsAreAuditedOrUnaudited contextRef="OneD">Audited</in-capmkt:WhetherResultsAreAuditedOrUnaudited>
+<in-capmkt:NatureOfReportStandaloneConsolidated contextRef="OneD">Standalone And Consolidated</in-capmkt:NatureOfReportStandaloneConsolidated>
+<in-capmkt:ReportingPeriodType contextRef="OneD">Quarterly</in-capmkt:ReportingPeriodType>
+<in-capmkt:MonthOfPeriodEnded contextRef="OneD">September</in-capmkt:MonthOfPeriodEnded>
+<in-capmkt:YearOfPeriodEnded contextRef="OneI" unitRef="INR" decimals="0">2024</in-capmkt:YearOfPeriodEnded>
+<in-capmkt:TypeOfDividend contextRef="OneD">Interim</in-capmkt:TypeOfDividend>
+<in-capmkt:RemarksWebsiteDissemination contextRef="OneI">This is with reference to our letter no. APL/SEC/42/2024-25/01 dated 13th September 2024, wherein it was informed that a meeting of the Board of Directors of the Company will be held on Wednesday, 23rd October 2024, inter alia, to consider the following: 1) Approval of audited standalone financial results of the Company for the quarter and half year ended 30th September 2024; 2) Approval of unaudited consolidated financial results of the Company for the quarter and half year ended 30th September 2024; and 3) Declaration of interim dividend, if any, for the financial year ending 31st March 2025. This is to inform you that the aforesaid meeting of the Board of Directors is being rescheduled to Saturday, 9th November 2024. Consequently, the record date for payment of interim dividend, if declared, will be Tuesday, 19th November 2024.</in-capmkt:RemarksWebsiteDissemination>
+</xbrli:xbrl>

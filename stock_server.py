@@ -377,6 +377,119 @@ pre{{margin:0;padding:16px;overflow-x:auto;max-height:60vh;overflow-y:auto;
 </div></body></html>"""
 
 
+# feed key -> how to brief one row from the data we ALREADY hold on disk (no NSE
+# fetch). Each filing's plain-English summary is published by NSE in the feed row
+# itself (bm_desc / attchmntText), so we can render a readable page for EVERY event
+# — offline — instead of dumping the raw XBRL .xml at the reader.
+_BRIEF_SPEC = {
+    "board_meetings": {
+        "title": ("meetingType", "intimationType", "bm_purpose"),
+        "company": ("company_name", "sm_name"),
+        "symbol": "bm_symbol", "isin": "sm_isin", "industry": "sm_indusrty",
+        "link": "attachment",
+        "rows": [("bm_date", "Meeting date"), ("bm_purpose", "Purpose"),
+                 ("intimationType", "Intimation type"), ("meetingType", "Meeting type"),
+                 ("oriiginalMeetingDate", "Original meeting date"),
+                 ("proposedMeetingDate", "Proposed meeting date"),
+                 ("bm_timestamp", "Broadcast")],
+        "para": ("bm_desc", "What this filing says"),
+        "kind": "Board Meeting",
+    },
+    "announcements": {
+        "title": ("desc",),
+        "company": ("company_name", "sm_name"),
+        "symbol": "symbol", "isin": "sm_isin", "industry": "smIndustry",
+        "link": "attchmntFile",
+        "rows": [("sort_date", "Date"), ("dt", "Date"), ("desc", "Category"),
+                 ("exchdisstime", "Broadcast time")],
+        "para": ("attchmntText", "What this filing says"),
+        "kind": "Announcement",
+    },
+}
+
+
+def brief_html_from_row(feed_key: str, row: dict, url: str = "") -> str:
+    """Render a detailed, readable brief for one board-meeting / announcement filing
+    from LOCAL feed fields — the offline alternative to opening the raw XBRL .xml.
+
+    `row` may be the rich CSV row (all columns) or the trimmed payload row; both
+    work because every field is looked up defensively."""
+    import html as _h
+
+    spec = _BRIEF_SPEC[feed_key]
+    g = lambda *keys: next((str(row[k]).strip() for k in keys
+                            if row.get(k) and str(row[k]).strip()), "")
+
+    title = g(*spec["title"]) or spec["kind"]
+    company = g(*spec["company"])
+    symbol = g(spec["symbol"])
+    isin = g(spec["isin"])
+    industry = g(spec["industry"])
+    para_txt = g(spec["para"][0])
+    orig = (url or g(spec["link"])).strip()
+
+    # de-dupe the meta line (don't repeat title text inside the detail table)
+    detail = []
+    for col, lbl in spec["rows"]:
+        v = g(col)
+        if v and v != title:
+            detail.append((lbl, _fmt_date(v) if "date" in col.lower()
+                                              or "timestamp" in col.lower() else v))
+    seen, drows = set(), []
+    for lbl, v in detail:                                   # collapse duplicate labels/values
+        key = (lbl, v)
+        if key in seen:
+            continue
+        seen.add(key)
+        drows.append(f"<tr><td class='k'>{_h.escape(lbl)}</td>"
+                     f"<td class='v'>{_h.escape(v)}</td></tr>")
+    body = "".join(drows)
+
+    subbits = " · ".join(x for x in (company, symbol, isin) if x)
+    para = (f"<div class='para'><div class='plabel'>{_h.escape(spec['para'][1])}</div>"
+            f"<p>{_h.escape(para_txt)}</p></div>") if para_txt else ""
+    ind = f"<div class='tag'>{_h.escape(industry)}</div>" if industry else ""
+    origlink = (f"<a class='ghost' href='{_h.escape(orig)}' target='_blank' "
+                f"rel='noopener'>Open original filing on NSE ↗</a>") if orig.startswith("http") else ""
+
+    return f"""<!doctype html><html><head><meta charset="utf-8">
+<title>{_h.escape(title)} — {_h.escape(symbol or company or spec['kind'])}</title><style>
+body{{background:#0f131b;color:#e6edf3;margin:0;padding:34px;
+ font-family:-apple-system,"Segoe UI",system-ui,sans-serif;line-height:1.5}}
+.wrap{{max-width:820px;margin:0 auto}}
+.eyebrow{{color:#58a6ff;font-family:ui-monospace,Consolas,monospace;font-size:.72rem;
+ letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}}
+h1{{margin:0 0 6px;font-size:1.5rem;font-weight:700}}
+.sub{{color:#8b98ad;font-family:ui-monospace,Consolas,monospace;font-size:.85rem}}
+.tag{{display:inline-block;margin-top:10px;background:#171d2b;border:1px solid #2a3346;
+ color:#8b98ad;border-radius:20px;padding:3px 12px;font-size:.78rem}}
+.para{{background:#141b2b;border:1px solid #2a3346;border-left:3px solid #58a6ff;
+ border-radius:10px;padding:16px 18px;margin:22px 0}}
+.plabel{{color:#58a6ff;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+ margin-bottom:6px}}
+.para p{{margin:0;font-size:1.02rem;color:#e6edf3}}
+table{{width:100%;border-collapse:collapse;background:#171d2b;border:1px solid #2a3346;
+ border-radius:10px;overflow:hidden}}
+td{{padding:11px 16px;border-bottom:1px solid #2a3346;vertical-align:top}}
+tr:last-child td{{border-bottom:0}} tr:hover{{background:#1b2333}}
+.k{{color:#8b98ad;width:40%;font-size:.9rem}} .v{{color:#e6edf3;font-weight:600}}
+.foot{{margin-top:20px}}
+.ghost{{display:inline-block;background:#171d2b;border:1px solid #2a3346;color:#e6edf3;
+ padding:8px 15px;border-radius:8px;text-decoration:none;font-size:.85rem}}
+.ghost:hover{{background:#243044}}
+.note{{margin-top:16px;color:#63708a;font-size:.76rem}}
+</style></head><body><div class="wrap">
+<div class="eyebrow">{_h.escape(spec['kind'])}</div>
+<h1>{_h.escape(title)}</h1>
+<div class="sub">{_h.escape(subbits)}</div>
+{ind}
+{para}
+{('<table>' + body + '</table>') if body else ''}
+<div class="foot">{origlink}</div>
+<div class="note">Brief generated from the NSE corporate-filing feed held locally — no live fetch required.</div>
+</div></body></html>"""
+
+
 def _xbrl_facts(xml_text: str) -> list[tuple]:
     """Every non-dimensional numeric fact: (concept, value, period_from, period_to)."""
     import xml.etree.ElementTree as ET

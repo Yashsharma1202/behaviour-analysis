@@ -91,6 +91,49 @@ def bake_xbrl_summaries(sym: str, ev: dict) -> int:
     return n
 
 
+def bake_briefs(sym: str, ev: dict) -> int:
+    """OFFLINE alternative to the raw XBRL .xml: render a readable, detailed brief
+    for every .xml attachment straight from the LOCAL feed row (no NSE fetch) and
+    repoint the link at it. Reuses the ./bm/ folder + url-hash, so if --summaries
+    already baked a richer XBRL summary for a link, that one wins and this skips it.
+    Runs everywhere and covers 100% of filings — the XBRL fetch only ever covered
+    the fraction NSE let us download."""
+    n = 0
+    for feed_key, col in _XBRL_LINK_COLS.items():
+        feed = ev.get("feeds", {}).get(feed_key)
+        if not feed or not feed.get("rows"):
+            continue
+        # index the rich CSV rows (all columns) by attachment URL for fuller briefs
+        by_url: dict = {}
+        csv = ROOT / sym / f"{feed_key}.csv"
+        if csv.exists():
+            try:
+                df = S.pd.read_csv(csv, dtype=str).fillna("")
+                if col in df.columns:
+                    for _, r in df.iterrows():
+                        u = str(r.get(col, "")).strip()
+                        if u:
+                            by_url[u] = r.to_dict()
+            except Exception:                             # noqa: BLE001
+                pass
+        for row in feed["rows"]:
+            url = str(row.get(col, "")).strip()
+            if not url.lower().endswith(".xml"):          # PDFs/none already readable
+                continue
+            if url in _BAKED:                             # already baked (summary or other stock)
+                row[col] = _BAKED[url]; continue
+            src = by_url.get(url, row)                    # rich CSV row, else trimmed payload row
+            try:
+                html = S.brief_html_from_row(feed_key, src, url)
+                h = hashlib.md5(url.encode()).hexdigest()[:16]
+                (BM / f"{h}.html").write_text(html, encoding="utf-8")
+                local = f"./bm/{h}.html"
+                _BAKED[url] = local; row[col] = local; n += 1
+            except Exception:                             # noqa: BLE001
+                pass
+    return n
+
+
 def _write(path: Path, obj) -> None:
     path.write_text(json.dumps(obj, ensure_ascii=False), encoding="utf-8")
 
@@ -162,18 +205,21 @@ def main() -> None:
                        "error": str(e)}
         _write(FUND / f"{sym}.json", payload)
 
-    # events for downloaded stocks (+ optional board-meeting XBRL summaries)
-    bm_total = 0
+    # events for downloaded stocks (+ readable brief pages for every XBRL .xml;
+    # optionally richer XBRL-parsed summaries where NSE is reachable via --summaries)
+    bm_total = brief_total = 0
     for sym in ready:
         try:
             ev = S.build_events(sym)
             if BM_SUMMARIES:
-                bm_total += bake_xbrl_summaries(sym, ev)
+                bm_total += bake_xbrl_summaries(sym, ev)   # richer, needs NSE (wins where present)
+            brief_total += bake_briefs(sym, ev)            # offline brief for the rest
             _write(EVENTS / f"{sym}.json", ev)
         except Exception as e:                               # noqa: BLE001
             print(f"  ! events {sym}: {e}")
     if BM_SUMMARIES:
-        print(f"  XBRL summaries baked (board meetings + announcements): {bm_total}")
+        print(f"  XBRL summaries baked (from NSE): {bm_total}")
+    print(f"  brief pages baked (from local feed data): {brief_total}")
 
     # behaviour payload for every stock (Behaviour + Compare tabs)
     bfail = 0

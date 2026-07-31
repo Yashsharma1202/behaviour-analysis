@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:in-capmkt="https://www.sebi.gov.in/xbrl/2023-05-31/in-capmkt" xmlns:in-capmkt-ent="https://www.sebi.gov.in/xbrl/Prior_Intimation_Of_Board_Meeting/2023-05-31/in-capmkt/in-capmkt-ent" xmlns:in-capmkt-roles="https://www.sebi.gov.in/xbrl/Prior_Intimation_Of_Board_Meeting/2023-05-31/in-capmkt-roles" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:in-capmkt-type="https://www.sebi.gov.in/xbrl/2023-05-31/in-capmkt-types" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:net="http://www.xbrl.org/2009/role/net" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:iso4217="http://www.xbrl.org/2003/iso4217" xmlns:negated="http://www.xbrl.org/2009/role/negated" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xl="http://www.xbrl.org/2003/XLink">
+<link:schemaRef xlink:type="simple" xlink:href="in-capmkt-ent-2023-05-31.xsd"/>
+
+<xbrli:unit id="INR"><xbrli:measure>iso4217:INR</xbrli:measure></xbrli:unit><xbrli:unit id="pure"><xbrli:measure>xbrli:pure</xbrli:measure></xbrli:unit><xbrli:unit id="shares"><xbrli:measure>xbrli:shares</xbrli:measure></xbrli:unit><xbrli:unit id="INRPerShare"><xbrli:divide><xbrli:unitNumerator><xbrli:measure>iso4217:INR</xbrli:measure></xbrli:unitNumerator><xbrli:unitDenominator><xbrli:measure>xbrli:shares</xbrli:measure></xbrli:unitDenominator></xbrli:divide></xbrli:unit>
+<in-capmkt:NSESymbol contextRef="OneI">AXISBANK</in-capmkt:NSESymbol>
+<in-capmkt:NameOfTheCompany contextRef="OneI">Axis Bank Limited</in-capmkt:NameOfTheCompany>
+<in-capmkt:ISIN contextRef="OneI">INE238A01034</in-capmkt:ISIN>
+<in-capmkt:TypeOfMeeting contextRef="OneI">Board Meeting</in-capmkt:TypeOfMeeting>
+<in-capmkt:TypeOfIntimation contextRef="OneD">New</in-capmkt:TypeOfIntimation>
+<in-capmkt:DateOfProposedMeeting contextRef="OneD">2025-04-24</in-capmkt:DateOfProposedMeeting>
+<in-capmkt:WhetherTradingWindowIsClosed contextRef="OneD">Yes</in-capmkt:WhetherTradingWindowIsClosed>
+<in-capmkt:DateOfStartOfTradingWindowClosure contextRef="OneI">2025-04-01</in-capmkt:DateOfStartOfTradingWindowClosure>
+<in-capmkt:DetailsOfDateOfEndOfTradingWindowClosure contextRef="OneI">2025-04-26</in-capmkt:DetailsOfDateOfEndOfTradingWindowClosure>
+<in-capmkt:Agenda1 contextRef="OneD">Financial results</in-capmkt:Agenda1>
+<in-capmkt:Agenda2 contextRef="OneD">Dividend</in-capmkt:Agenda2>
+<in-capmkt:Agenda3 contextRef="OneD">Fund raising</in-capmkt:Agenda3>
+<in-capmkt:WhetherResultsAreAuditedOrUnaudited contextRef="OneD">Audited</in-capmkt:WhetherResultsAreAuditedOrUnaudited>
+<in-capmkt:NatureOfReportStandaloneConsolidated contextRef="OneD">Standalone And Consolidated</in-capmkt:NatureOfReportStandaloneConsolidated>
+<in-capmkt:ReportingPeriodType contextRef="OneD">Yearly</in-capmkt:ReportingPeriodType>
+<in-capmkt:MonthOfPeriodEnded contextRef="OneD">March</in-capmkt:MonthOfPeriodEnded>
+<in-capmkt:YearOfPeriodEnded contextRef="OneI" unitRef="INR" decimals="0">2025</in-capmkt:YearOfPeriodEnded>
+<in-capmkt:ModeOfRaisingFunds contextRef="OneD">Debt issue</in-capmkt:ModeOfRaisingFunds>
+<in-capmkt:Mode1OfRaisingFunds contextRef="OneD">To be ascertained</in-capmkt:Mode1OfRaisingFunds>
+<in-capmkt:TypeOfDividend contextRef="OneD">Final</in-capmkt:TypeOfDividend>
+<in-capmkt:RemarksWebsiteDissemination contextRef="OneI">In reference to the above, we would like to inform you that a meeting of the Board of Directors (the “Board”) of Axis Bank Limited (the “Bank”) will be held on Thursday, April 24, 2025, inter alia to consider and approve the following:  (i) Audited Standalone and Consolidated Financial Results of the Bank, for the quarter and year ended March 31, 2025. (ii) Recommend final dividend, if any, for the financial year ended March 31, 2025. (iii) Explore the option of raising funds through: (a) issue of equity shares/ depository receipts and/or any other instruments or securities representing either equity shares and/or convertible securities linked to equity shares including through Qualified Institutions Placement (QIP)/ American Depository Receipts (ADRs)/ Global Depository Receipts (GDRs) program, preferential allotment or such other permissible mode or combinations thereof as may be decided, subject to shareholders approval and receipt of other governmental/ regulatory/ statutory approvals at an appropriate time, as applicable. (b) issue of debt instruments including but not limited to Bonds and Non-Convertible Debentures, in Indian Currency / Foreign Currency, subject to shareholders approval, in terms of Section 42 of the Companies Act, 2013 read with the relevant Rules, the SEBI (Issue and Listing of Non-Convertible Securities) Regulations, 2021, the SEBI Listing Regulations and relevant guidelines/norms/regulations of the Reserve Bank of India.  Further, please note that in furtherance to our letter no. AXIS/CO/CS/696/2024-25 dated March 27, 2025, and in terms of the Share Dealing Code of the Bank, the window for trading in equity shares / securities of the Bank for Designated Persons and their immediate relatives has commenced from                                Tuesday, April 1, 2025, and shall remain closed till Saturday, April 26, 2025.</in-capmkt:RemarksWebsiteDissemination>
+</xbrli:xbrl>
