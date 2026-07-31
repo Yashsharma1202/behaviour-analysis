@@ -410,7 +410,7 @@ let SYMS=[], idx=0, activeTab="fundamentals", stock=null, eventsCache={}, READY=
 
 /*__DATA_SOURCE__*/
 const STATIC=true;
-const _V="?v=1785471235";
+const _V="?v=1785473621";
 const SYMBOLS_URL="./data/symbols.json"+_V;
 function STOCK_URL(s){return "./data/fund/"+encodeURIComponent(s)+".json"+_V;}
 function EVENTS_URL(s){return "./data/events/"+encodeURIComponent(s)+".json"+_V;}
@@ -848,7 +848,8 @@ async function renderBehaviour(){
 
   behaviourData=d;
   let html='<div class="bintro">The best time to buy <b>'+esc(sym)+'</b> around each kind of event — '+
-    'based on what actually happened in the past. <b>Click any card</b> for its graph &amp; full summary.</div><div class="bcards">';
+    'based on what actually happened in the past. <b>Click any card</b> for its graph &amp; full summary. '+
+    '<span class="enote">(1 candle = 1 trading day.)</span></div><div class="bcards">';
   for(const et of keys){
     const t=d.types[et], b=t.best;
     const [vc,vt]=verdict(b.win_rate_pct,b.avg_return_pct);
@@ -868,7 +869,7 @@ async function renderBehaviour(){
     }
     html+=`<div class="bcard" onclick="openBeh('${et}')">
       <div class="bcard-top"><span class="bet">${esc(pretty(et))}</span><span class="bn">${t.n_events} past events</span></div>
-      <div class="brec">Buy <b>${dbf} day${dbf>1?'s':''} before</b> the event, then sell <b>${daf} day${daf>1?'s':''} after</b>.</div>
+      <div class="brec">Buy <b>${dbf} candle${dbf>1?'s':''} before</b> the event, then sell <b>${daf} candle${daf>1?'s':''} after</b>.</div>
       <div class="bstats">
         <div class="bstat">
           <div class="blabel">Chance of profit (win rate)</div>
@@ -900,7 +901,7 @@ function openRecent(et){
   const c=v=>v>=0?COL.pos:COL.neg, s=v=>(v>=0?'+':'')+v.toFixed(2)+'%';
   const rows=L.days.map((dd,i)=>{
     const pct=(L.prices[i]/pe-1)*100;
-    const lab=dd===0?'EVENT DAY':(dd>0?'T+'+dd:'T'+dd);
+    const lab=dd===0?'EVENT CANDLE':(dd>0?'T+'+dd:'T'+dd);
     const key=(i===0||dd===0||i===n-1);
     return `<tr${key?' style="background:#1b2333;font-weight:700"':''}>`+
       `<td>${lab}</td><td style="text-align:right">₹${rup(L.prices[i])}</td>`+
@@ -912,11 +913,11 @@ function openRecent(et){
     <div class="bhead2">Recent ${esc(pretty(et))} — full report
       <span class="bn">· ${esc(d.symbol)} · ${esc(L.date)}</span></div>
     <div class="bverdict v-${m3>=0?'strong':'no'}" style="display:inline-block">
-      ${outcome}: buying 6 days before and selling 3 days after would have returned ${s(m3)}</div>
+      ${outcome}: buying 6 candles before and selling 3 candles after would have returned ${s(m3)}</div>
     <div class="statrow" style="grid-template-columns:repeat(3,1fr);margin-top:14px">
-      <div class="sbox"><div class="l">Price 6 days before</div><div class="v" style="color:${COL.amber}">₹${rup(p0)}</div></div>
-      <div class="sbox"><div class="l">Price on event day</div><div class="v">₹${rup(pe)}</div></div>
-      <div class="sbox"><div class="l">Price 3 days after</div><div class="v" style="color:${COL.pos}">₹${rup(pa)}</div></div>
+      <div class="sbox"><div class="l">Price 6 candles before</div><div class="v" style="color:${COL.amber}">₹${rup(p0)}</div></div>
+      <div class="sbox"><div class="l">Price on event candle</div><div class="v">₹${rup(pe)}</div></div>
+      <div class="sbox"><div class="l">Price 3 candles after</div><div class="v" style="color:${COL.pos}">₹${rup(pa)}</div></div>
     </div>
     <div class="statrow" style="grid-template-columns:repeat(3,1fr)">
       <div class="sbox"><div class="l">Before → Event</div><div class="v" style="color:${c(m1)}">${s(m1)}</div></div>
@@ -928,9 +929,9 @@ function openRecent(et){
       <span class="ct">Price around this event (₹)</span>
       <canvas id="bmeter"></canvas>
     </div>
-    <div class="bhead" style="margin-top:18px">Day-by-day prices</div>
-    <div class="tblwrap"><table><thead><tr><th>Day</th>
-      <th style="text-align:right">Price</th><th style="text-align:right">vs event day</th>
+    <div class="bhead" style="margin-top:18px">Candle-by-candle prices</div>
+    <div class="tblwrap"><table><thead><tr><th>Candle</th>
+      <th style="text-align:right">Price</th><th style="text-align:right">vs event candle</th>
       </tr></thead><tbody>${rows}</tbody></table></div>`;
   resultMeter($("bmeter"),L);
 }
@@ -970,12 +971,12 @@ function openHistory(et){
       <div class="sbox"><div class="l">Best</div><div class="v" style="color:${COL.pos}">${s(best)}</div></div>
       <div class="sbox"><div class="l">Worst</div><div class="v" style="color:${COL.neg}">${s(worst)}</div></div>
     </div>
-    <div class="enote">Each row: buy 6 trading days before the event, sell 3 days after — the same
-      window as the “recent event report”, shown for every past event (newest first). Click a row for its price chart.</div>
+    <div class="enote">Each row: buy 6 candles before the event, sell 3 candles after — the same
+      window as the “recent event report”, shown for every past event (newest first). Click a row for its price chart. (1 candle = 1 trading day.)</div>
     <div id="histchart"></div>
     <div class="tblwrap" style="margin-top:12px"><table><thead><tr>
       <th>Event date</th><th style="text-align:right">Buy (T-6)</th>
-      <th style="text-align:right">Event day</th><th style="text-align:right">Sell (T+3)</th>
+      <th style="text-align:right">Event candle</th><th style="text-align:right">Sell (T+3)</th>
       <th style="text-align:right">Before→Event</th><th style="text-align:right">Event→After</th>
       <th style="text-align:right">Total</th><th style="text-align:center">Result</th>
       </tr></thead><tbody>${rows}</tbody></table></div>`;
@@ -1050,7 +1051,7 @@ function openEventGraph(i){
     const x=X(k), y=Y(px[k]);
     xln.setAttribute('x1',x); xln.setAttribute('x2',x); xln.setAttribute('opacity','.6');
     dot.setAttribute('cx',x); dot.setAttribute('cy',y); dot.setAttribute('opacity','1');
-    const d=days[k], lab=d===0?'EVENT DAY':('T'+(d>0?'+':'')+d);
+    const d=days[k], lab=d===0?'EVENT CANDLE':('T'+(d>0?'+':'')+d);
     tip.style.opacity=1;
     tip.innerHTML=`<b>${lab}</b> · ₹${rup(px[k])} · <span style="color:${P(px[k])>=0?PO:NE}">${sp(P(px[k]))}</span> vs event`;
   }
@@ -1077,7 +1078,7 @@ function openBeh(et){
     <button class="backbtn" onclick="renderBehaviour()">← back to all events</button>
     <div class="bhead2">${esc(pretty(et))} <span class="bn">· ${esc(d.symbol)} · ${t.n_events} past events</span></div>
     <div class="bverdict v-${vc}" style="display:inline-block">${vt}</div>
-    <div class="brec" style="margin-top:12px">Best rule: buy <b>${b.days_before} day${b.days_before>1?'s':''} before</b> the event, sell <b>${b.days_after} day${b.days_after>1?'s':''} after</b>.</div>
+    <div class="brec" style="margin-top:12px">Best rule: buy <b>${b.days_before} candle${b.days_before>1?'s':''} before</b> the event, sell <b>${b.days_after} candle${b.days_after>1?'s':''} after</b>.</div>
     <div class="chart" style="margin-top:8px">
       <span class="cs">🟢 BUY · 🔴 SELL · move cursor 👆</span>
       <span class="ct">How the price usually moves around a ${esc(pretty(et)).toLowerCase()}</span>
@@ -1091,8 +1092,8 @@ function openBeh(et){
       <div class="sbox"><div class="l">Worst case</div><div class="v" style="color:${COL.neg}">${pc(b.worst_case)}</div></div>
       <div class="sbox"><div class="l">Events tested</div><div class="v">${b.n}</div></div>
     </div>
-    <div class="enote">The line shows how the stock moved on average, lined up so day 0 is the event.
-      A rise before day 0 = it drifts up INTO the event; drift after 0 = it keeps re-pricing on the news.</div>
+    <div class="enote">The line shows how the stock moved on average, lined up so candle 0 is the event.
+      A rise before candle 0 = it drifts up INTO the event; drift after 0 = it keeps re-pricing on the news.</div>
     ${t.last?`
     <div class="bhead" style="margin-top:22px">Most recent one · ${esc(t.last.date)}</div>
     <div class="chart">
@@ -1101,11 +1102,11 @@ function openBeh(et){
       <canvas id="bmeter"></canvas>
     </div>
     <div class="statrow" style="grid-template-columns:repeat(3,1fr)">
-      <div class="sbox"><div class="l">6 days before</div><div class="v" style="color:${COL.amber}">₹${rup(t.last.prices[0])}</div></div>
-      <div class="sbox"><div class="l">On event day</div><div class="v">₹${rup(t.last.prices[t.last.days.indexOf(0)])}</div></div>
-      <div class="sbox"><div class="l">3 days after</div><div class="v" style="color:${COL.pos}">₹${rup(t.last.prices[t.last.prices.length-1])}</div></div>
+      <div class="sbox"><div class="l">6 candles before</div><div class="v" style="color:${COL.amber}">₹${rup(t.last.prices[0])}</div></div>
+      <div class="sbox"><div class="l">On event candle</div><div class="v">₹${rup(t.last.prices[t.last.days.indexOf(0)])}</div></div>
+      <div class="sbox"><div class="l">3 candles after</div><div class="v" style="color:${COL.pos}">₹${rup(t.last.prices[t.last.prices.length-1])}</div></div>
     </div>`:''}
-    <details class="bdetails"><summary>▸ Show the full day-by-day grid (advanced)</summary>
+    <details class="bdetails"><summary>▸ Show the full candle-by-candle grid (advanced)</summary>
       ${heatmap(t.grid_return,t.best,d.n_before,d.n_after)}</details>`;
   if(t.path && t.path.avg_pct.length) avgMoveChart($("bpath"),t.path.days,t.path.avg_pct,b);
   if(t.last) resultMeter($("bmeter"),t.last);
@@ -1135,7 +1136,7 @@ function avgMoveChart(cv,days,vals,best){
     if(hi!=null){const x=X(hi),y=Y(vals[hi]);
       ctx.strokeStyle=COL.mute;ctx.setLineDash([3,3]);ctx.beginPath();ctx.moveTo(x,M.t);ctx.lineTo(x,h-M.b);ctx.stroke();ctx.setLineDash([]);
       ctx.fillStyle=COL.blue;ctx.beginPath();ctx.arc(x,y,5,0,7);ctx.fill();
-      const dd=days[hi], lab=dd===0?"EVENT DAY":(dd>0?"T+"+dd:"T"+dd);
+      const dd=days[hi], lab=dd===0?"EVENT CANDLE":(dd>0?"T+"+dd:"T"+dd);
       const txt=lab+"   "+(vals[hi]>=0?"+":"")+vals[hi].toFixed(2)+"%";
       ctx.font="12px Consolas";const tw=ctx.measureText(txt).width+16;
       let tx=x+10; if(tx+tw>w-M.r+4)tx=x-tw-10; const ty=Math.max(M.t,y-34);
@@ -1164,7 +1165,7 @@ function resultMeter(cv,data){
       const x=X(hi),y=Y(prices[hi]);
       ctx.strokeStyle=COL.mute;ctx.setLineDash([3,3]);ctx.beginPath();ctx.moveTo(x,M.t);ctx.lineTo(x,h-M.b);ctx.stroke();ctx.setLineDash([]);
       ctx.fillStyle=COL.blue;ctx.beginPath();ctx.arc(x,y,5,0,7);ctx.fill();
-      const dd=days[hi], lab=dd===0?"EVENT DAY":(dd>0?"T+"+dd:"T"+dd);
+      const dd=days[hi], lab=dd===0?"EVENT CANDLE":(dd>0?"T+"+dd:"T"+dd);
       const txt=lab+"   ₹"+rup(prices[hi]);
       ctx.font="12px Consolas";const tw=ctx.measureText(txt).width+16;
       let tx=x+10; if(tx+tw>w-M.r+4)tx=x-tw-10; const ty=Math.max(M.t,y-34);
@@ -1257,7 +1258,7 @@ function drawUpcoming(){
       <td class="rnum" style="white-space:nowrap">${esc(r.date)}<div class="uwhen">${when}</div></td>
       <td class="rsym">${esc(r.symbol)}</td>
       <td>${esc(pretty(r.event))} ${badge}</td>
-      <td class="rnum">${r.db!=null?`buy ${r.db}d / sell ${r.da}d`:'—'}</td>
+      <td class="rnum">${r.db!=null?`buy ${r.db}c / sell ${r.da}c`:'—'}</td>
       <td class="rnum" style="color:${wc};font-weight:700">${r.win==null?'—':r.win+'%'}</td>
       <td class="rnum">${r.events!=null?r.events:'—'}</td></tr>`;
   }).join('');
@@ -1267,7 +1268,7 @@ function drawUpcoming(){
       <b>estimated</b> = projected from the stock’s past cadence. Click a row to open the stock.</div>
     <div class="rtabs">${tabs}</div>
     <div class="tblwrap" style="margin-top:12px"><table>
-      <thead><tr><th>Date</th><th>Stock</th><th>Event</th><th style="text-align:right">Best rule</th>
+      <thead><tr><th>Date</th><th>Stock</th><th>Event</th><th style="text-align:right">Best rule (candles)</th>
       <th style="text-align:right">Win rate</th>
       <th style="text-align:right">Events</th></tr></thead>
       <tbody>${body||'<tr><td colspan="6" class="enote">no upcoming events in this window</td></tr>'}</tbody></table></div>
@@ -1303,7 +1304,7 @@ function drawRankings(){
       <td><div class="rbar"><span style="width:${Math.max(2,Math.min(100,r.win))}%;background:${barcol}"></span></div></td>
       <td class="rnum" style="color:${barcol};font-weight:700">${r.win}%</td>
       <td class="rnum" style="color:${r.avg>=0?COL.pos:COL.neg}">${r.avg>=0?'+':''}${r.avg}%</td>
-      <td class="rnum">buy ${r.db}d / sell ${r.da}d</td>
+      <td class="rnum">buy ${r.db}c / sell ${r.da}c</td>
       <td class="rnum">${r.events}</td></tr>`;
   }).join('');
   rv.innerHTML=`
@@ -1313,7 +1314,7 @@ function drawRankings(){
     <div class="rtabs">${tabs}</div>
     <div class="tblwrap" style="margin-top:12px"><table>
       <thead><tr><th>#</th><th>Stock</th><th>Win rate</th><th style="text-align:right">Win %</th>
-      <th style="text-align:right">Avg gain</th><th style="text-align:right">Best rule</th>
+      <th style="text-align:right">Avg gain</th><th style="text-align:right">Best rule (candles)</th>
       <th style="text-align:right">Events</th></tr></thead>
       <tbody>${rows||'<tr><td colspan="7" class="enote">no stocks with this event yet</td></tr>'}</tbody></table></div>
     <div class="enote">${list.length} of ${d.n_stocks} stocks have ${esc(pretty(rankEvent))} data.
@@ -1432,7 +1433,7 @@ async function drawCompare(){
     cmpSel.map(s=>{ const t=(cmpBeh[s]&&cmpBeh[s].types||{})[et];
       if(!t||!t.best)return '<td class="rnum muted">—</td>';
       const b=t.best,wc=b.win_rate_pct>=55?COL.pos:(b.win_rate_pct>=50?COL.amber:COL.neg);
-      return `<td class="rnum"><span class="mono">buy${b.days_before}/sell${b.days_after}</span><br><b style="color:${wc}">${b.win_rate_pct}%</b> · ${b.avg_return_pct>=0?'+':''}${b.avg_return_pct}%</td>`;
+      return `<td class="rnum"><span class="mono">buy${b.days_before}c/sell${b.days_after}c</span><br><b style="color:${wc}">${b.win_rate_pct}%</b> · ${b.avg_return_pct>=0?'+':''}${b.avg_return_pct}%</td>`;
     }).join('')+'</tr>').join('');
   const hdr='<th></th>'+cmpSel.map(s=>`<th class="rt"><span class="cmphead" onclick="goSym('${s}')">${esc(s)}</span></th>`).join('');
   cv.innerHTML=`
