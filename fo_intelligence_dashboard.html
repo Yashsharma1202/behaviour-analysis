@@ -538,7 +538,7 @@
       </div>
       <div class="status-badge">
         <div class="status-dot"></div>
-        <span>LIVE SERVER HOSTING: http://10.10.7.70:8080/</span>
+        <span id="server-url-badge">LIVE SERVER HOSTING: http://10.10.7.70:8080/</span>
       </div>
     </header>
 
@@ -781,6 +781,9 @@
     // Fetch and Initialize Datasets
     async function loadDatasets() {
       try {
+        if (window.location.origin && window.location.origin !== 'null') {
+          document.getElementById('server-url-badge').innerText = 'LIVE SERVER HOSTING: ' + window.location.origin + '/';
+        }
         const [resFo, resHoli, resQtr] = await Promise.all([
           fetch('dashboard_data/fo_stocks_211.json'),
           fetch('dashboard_data/holidays_dataset.json'),
