@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>F&O Behavioral Event Intelligence & Detailed Holiday Trade Logs | Nifty 50 Analytics</title>
+  <title>F&O Behavioral Event Intelligence & Detailed Trade Logs | Nifty 50 & F&O Analytics</title>
   <meta name="description" content="Institutional-Grade F&O Trading Strategy, Position Taking Windows (T-n to T+m), Entry/Exit Dates & 17 NSE Trading Holidays Master Analytics Dashboard with Interactive Trade Logs.">
   
   <!-- Google Fonts -->
@@ -145,7 +145,7 @@
     .kpi-val { font-family: var(--font-heading); font-size: 32px; font-weight: 800; color: var(--text-primary); margin-bottom: 6px; }
     .kpi-desc { font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
 
-    /* Tabs */
+    /* Main Navigation Tabs */
     .tabs-nav {
       display: flex; gap: 12px; padding: 6px; background: var(--bg-secondary);
       border: 1px solid var(--border-color); border-radius: 16px; margin-bottom: 30px; overflow-x: auto;
@@ -164,7 +164,7 @@
       color: #ffffff; box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
     }
 
-    /* Filters */
+    /* Filters Bar & Universe Toggle */
     .filter-bar {
       display: flex; flex-wrap: wrap; gap: 16px; align-items: center;
       justify-content: space-between; margin-bottom: 25px; padding: 20px;
@@ -182,11 +182,28 @@
 
     .search-input:focus { border-color: var(--accent-indigo); box-shadow: 0 0 12px rgba(99, 102, 241, 0.2); }
 
-    .filter-group { display: flex; gap: 12px; align-items: center; }
+    .filter-group { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
 
     .filter-select {
       padding: 12px 18px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-color);
       border-radius: 12px; color: var(--text-primary); font-size: 14px; outline: none; cursor: pointer;
+    }
+
+    /* Universe Toggle Pill Buttons */
+    .universe-toggle-group {
+      display: flex; gap: 6px; background: rgba(15, 23, 42, 0.9);
+      border: 1px solid var(--border-color); border-radius: 12px; padding: 4px;
+    }
+
+    .univ-btn {
+      padding: 9px 16px; background: transparent; border: none; border-radius: 8px;
+      color: var(--text-secondary); font-family: var(--font-heading); font-size: 13px; font-weight: 600;
+      cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 6px; white-space: nowrap;
+    }
+
+    .univ-btn:hover { color: var(--text-primary); background: rgba(255, 255, 255, 0.05); }
+    .univ-btn.active {
+      background: var(--accent-indigo); color: #ffffff; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
     }
 
     /* Table */
@@ -305,6 +322,10 @@
       border-radius: 10px; color: var(--text-secondary); font-size: 13px; font-weight: 600; cursor: pointer;
     }
 
+    .yr-btn.active {
+      background: var(--accent-indigo); color: #ffffff; border-color: var(--border-highlight);
+    }
+
     .modal-subtabs {
       display: flex; gap: 8px; margin-bottom: 16px; padding: 4px;
       background: rgba(15, 23, 42, 0.9); border: 1px solid var(--border-color);
@@ -336,8 +357,8 @@
           <i class="fa-solid fa-clock-rotate-left"></i>
         </div>
         <div>
-          <div class="brand-title">F&O BEHAVIORAL INTELLIGENCE & DETAILED HOLIDAY TRADE LOGS</div>
-          <div class="brand-subtitle">Empirical Window Selector (T-n Entry ➔ T+m Exit) across Quarterly Results & 17 NSE Holidays</div>
+          <div class="brand-title">F&O BEHAVIORAL INTELLIGENCE & DETAILED EVENT TRADE LOGS</div>
+          <div class="brand-subtitle">Dynamic Position Taking Windows (T-n to T+m) for Quarterly Results & 17 NSE Holidays</div>
         </div>
       </div>
       <div class="status-badge">
@@ -367,7 +388,7 @@
           </div>
         </div>
         <div class="kpi-val">50 STOCKS</div>
-        <div class="kpi-desc"><i class="fa-solid fa-chart-pie" style="color: var(--accent-blue);"></i> 4-Year Detailed Entry/Exit Trade Logs (3,400 Trades)</div>
+        <div class="kpi-desc"><i class="fa-solid fa-chart-pie" style="color: var(--accent-blue);"></i> 4-Year Detailed Entry/Exit Trade Logs</div>
       </div>
 
       <div class="kpi-card">
@@ -378,7 +399,7 @@
           </div>
         </div>
         <div class="kpi-val">T-2 to T-7</div>
-        <div class="kpi-desc"><i class="fa-solid fa-calendar-check" style="color: var(--accent-cyan);"></i> Entry Lead Days Prior ➔ Exit Days Post</div>
+        <div class="kpi-desc"><i class="fa-solid fa-calendar-check" style="color: var(--accent-cyan);"></i> Dynamic Lead Days Prior ➔ Exit Days Post</div>
       </div>
 
       <div class="kpi-card">
@@ -393,24 +414,74 @@
       </div>
     </div>
 
-    <!-- Navigation Tabs -->
+    <!-- Main Navigation Tabs -->
     <div class="tabs-nav">
-      <button class="tab-btn active" onclick="switchTab('tab-holidays', this)">
-        <i class="fa-solid fa-calendar-star"></i> 17 NSE Holidays & Taking Windows (2022-2025)
+      <button class="tab-btn active" onclick="switchTab('tab-quarterly', this)">
+        <i class="fa-solid fa-chart-candlestick"></i> Quarterly Earnings Results
       </button>
-      <button class="tab-btn" onclick="switchTab('tab-211-stocks', this)">
-        <i class="fa-solid fa-list-check"></i> All 211 F&O Stocks Taking Windows Leaderboard
-      </button>
-      <button class="tab-btn" onclick="switchTab('tab-quarterly', this)">
-        <i class="fa-solid fa-chart-candlestick"></i> Quarterly Earnings Taking Windows
+      <button class="tab-btn" onclick="switchTab('tab-holidays', this)">
+        <i class="fa-solid fa-calendar-star"></i> 17 NSE Trading Holidays (2022-2025)
       </button>
       <button class="tab-btn" onclick="switchTab('tab-downloads', this)">
         <i class="fa-solid fa-file-excel"></i> Excel Reports Repository
       </button>
     </div>
 
-    <!-- TAB 1: 17 NSE HOLIDAYS TAKING WINDOWS -->
-    <div id="tab-holidays" class="tab-content">
+    <!-- TAB 1: QUARTERLY EARNINGS RESULTS (Active Default) -->
+    <div id="tab-quarterly" class="tab-content" style="display: block;">
+      <div class="filter-bar">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="qtr-search" class="search-input" placeholder="Search quarterly result stock symbol, date, or window..." oninput="filterQuarterlyTable()">
+        </div>
+        <div class="filter-group">
+          <!-- Universe Filter Toggle Pill Buttons -->
+          <div class="universe-toggle-group">
+            <button class="univ-btn active" id="qtr-univ-n50" onclick="setQtrUniverseFilter('YES', this)">
+              <i class="fa-solid fa-gem"></i> Nifty 50 Stocks (50)
+            </button>
+            <button class="univ-btn" id="qtr-univ-all" onclick="setQtrUniverseFilter('ALL', this)">
+              <i class="fa-solid fa-layer-group"></i> All F&O Stocks (211)
+            </button>
+            <button class="univ-btn" id="qtr-univ-non50" onclick="setQtrUniverseFilter('NO', this)">
+              <i class="fa-solid fa-chart-pie"></i> Non-Nifty 50 (161)
+            </button>
+          </div>
+
+          <!-- Quarter Dropdown -->
+          <select id="qtr-select" class="filter-select" onchange="renderQuarterlyView()">
+            <!-- Rendered via JS -->
+          </select>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Stock Symbol</th>
+                <th>Result Declaration Date (T)</th>
+                <th>Taking Execution Window</th>
+                <th>Position Taking Dates (Entry ➔ Exit)</th>
+                <th>Spot LTP (₹)</th>
+                <th>Lot Size</th>
+                <th>Win Rate (%)</th>
+                <th>Est. PnL / Lot (₹)</th>
+                <th>Return on Margin (ROC %)</th>
+              </tr>
+            </thead>
+            <tbody id="qtr-tbody">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: 17 NSE TRADING HOLIDAYS -->
+    <div id="tab-holidays" class="tab-content" style="display: none;">
       <div class="holiday-cards-grid" id="holiday-cards-container">
         <!-- Rendered via JS -->
       </div>
@@ -418,9 +489,22 @@
       <div class="filter-bar">
         <div class="search-box">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" id="holiday-search" class="search-input" placeholder="Search stock symbol, entry date, exit date, or window..." oninput="filterHolidayTable()">
+          <input type="text" id="holiday-search" class="search-input" placeholder="Search stock symbol, window, or price..." oninput="filterHolidayTable()">
         </div>
         <div class="filter-group">
+          <!-- Universe Filter Toggle Pill Buttons -->
+          <div class="universe-toggle-group">
+            <button class="univ-btn active" id="holi-univ-n50" onclick="setHolidayUniverseFilter('YES', this)">
+              <i class="fa-solid fa-gem"></i> Nifty 50 Stocks (50)
+            </button>
+            <button class="univ-btn" id="holi-univ-all" onclick="setHolidayUniverseFilter('ALL', this)">
+              <i class="fa-solid fa-layer-group"></i> All F&O Stocks (211)
+            </button>
+            <button class="univ-btn" id="holi-univ-non50" onclick="setHolidayUniverseFilter('NO', this)">
+              <i class="fa-solid fa-chart-pie"></i> Non-Nifty 50 (161)
+            </button>
+          </div>
+
           <select id="window-lead-filter" class="filter-select" onchange="filterHolidayTable()">
             <option value="ALL">All Entry Lead Windows (T-n)</option>
             <option value="2">T-2 Lead Days</option>
@@ -430,12 +514,14 @@
             <option value="6">T-6 Lead Days</option>
             <option value="7">T-7 Lead Days</option>
           </select>
+
           <select id="holiday-dir-select" class="filter-select" onchange="filterHolidayTable()">
             <option value="ALL">All Strategies (LONG & SHORT)</option>
             <option value="LONG">FUTURE LONG</option>
             <option value="SHORT">FUTURE SHORT</option>
           </select>
-          <button class="btn-download" onclick="openCurrentHolidayModal()"><i class="fa-solid fa-table-list"></i> Open Full Trade Log Modal</button>
+
+          <button class="btn-download" onclick="openCurrentHolidayModal()"><i class="fa-solid fa-table-list"></i> Open Holiday Trade Log</button>
         </div>
       </div>
 
@@ -465,91 +551,7 @@
       </div>
     </div>
 
-    <!-- TAB 2: ALL 211 F&O STOCKS LEADERBOARD -->
-    <div id="tab-211-stocks" class="tab-content" style="display: none;">
-      <div class="filter-bar">
-        <div class="search-box">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" id="stock211-search" class="search-input" placeholder="Search stock symbol or taking window..." oninput="filter211Table()">
-        </div>
-        <div class="filter-group">
-          <select id="n50-filter-select" class="filter-select" onchange="filter211Table()">
-            <option value="ALL">All 211 F&O Stocks</option>
-            <option value="YES">Nifty 50 Stocks Only (50)</option>
-            <option value="NO">Non-Nifty 50 F&O Stocks (161)</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="table-card">
-        <div class="table-container">
-          <table id="table-211">
-            <thead>
-              <tr>
-                <th>Overall Rank</th>
-                <th>Stock Symbol</th>
-                <th>Spot LTP (₹)</th>
-                <th>Lot Size</th>
-                <th>Taking Window (T-n to T+m)</th>
-                <th>Sample Position Taking Dates (Diwali Ref)</th>
-                <th>Quarterly Win Rate</th>
-                <th>Holiday Win Rate</th>
-                <th>Est. Holiday PnL / Lot</th>
-                <th>Margin Req. (20%)</th>
-              </tr>
-            </thead>
-            <tbody id="tbody-211">
-              <!-- Rendered via JS -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 3: QUARTERLY RESULTS TAKING WINDOWS -->
-    <div id="tab-quarterly" class="tab-content" style="display: none;">
-      <div class="filter-bar">
-        <div class="search-box">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" id="qtr-search" class="search-input" placeholder="Search quarterly result stocks..." oninput="filterQuarterlyTable()">
-        </div>
-        <div class="filter-group">
-          <select id="qtr-n50-filter" class="filter-select" onchange="renderQuarterlyView()">
-            <option value="YES">Nifty 50 Stocks Only (50)</option>
-            <option value="ALL">All 211 F&O Stocks</option>
-            <option value="NO">Non-Nifty 50 F&O Stocks (161)</option>
-          </select>
-          <select id="qtr-select" class="filter-select" onchange="renderQuarterlyView()">
-            <!-- Rendered via JS -->
-          </select>
-        </div>
-      </div>
-
-      <div class="table-card">
-        <div class="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>Stock Symbol</th>
-                <th>Taking Execution Window</th>
-                <th>Position Taking Dates (Entry ➔ Exit)</th>
-                <th>Spot LTP (₹)</th>
-                <th>Lot Size</th>
-                <th>Win Rate (%)</th>
-                <th>Est. PnL / Lot (₹)</th>
-                <th>Return on Margin (ROC %)</th>
-              </tr>
-            </thead>
-            <tbody id="qtr-tbody">
-              <!-- Rendered via JS -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 4: EXCEL REPORTS REPOSITORY -->
+    <!-- TAB 3: EXCEL REPORTS REPOSITORY -->
     <div id="tab-downloads" class="tab-content" style="display: none;">
       <div class="table-card" style="padding: 30px;">
         <h2 style="font-family: var(--font-heading); margin-bottom: 20px; font-size: 24px;">
@@ -575,7 +577,7 @@
 
           <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-color); border-radius: 14px; padding: 20px;">
             <h3 style="font-size: 16px; margin-bottom: 10px; color: var(--accent-emerald);"><i class="fa-solid fa-chart-line"></i> Past 4-Year Nifty 50 Futures Trade Log</h3>
-            <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">Full 3,400 historical trade logs across 2022, 2023, 2024, and 2025.</p>
+            <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">Full historical trade logs across 2022, 2023, 2024, and 2025.</p>
             <a href="Nifty50_Futures_All_Holidays_Past_4Years_Master_TradeLog_v4.xlsx" download class="btn-download"><i class="fa-solid fa-download"></i> Download Master Trade Log</a>
           </div>
 
@@ -591,7 +593,7 @@
       <div class="modal-header">
         <div>
           <div class="modal-title" id="modal-holiday-title">Diwali (Laxmi Pujan) — Detailed Trade Log (2022 - 2025)</div>
-          <div style="font-size: 13px; color: var(--text-secondary);" id="modal-holiday-sub">Full 200 Individual Trade Executions across Past 4 Years</div>
+          <div style="font-size: 13px; color: var(--text-secondary);" id="modal-holiday-sub">Full Individual Trade Executions across Past 4 Years</div>
         </div>
         <button class="btn-close" onclick="closeTradeLogModal()"><i class="fa-solid fa-xmark"></i></button>
       </div>
@@ -637,11 +639,11 @@
 
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
         <div class="modal-year-btns">
-          <button class="yr-btn active" id="yrbtn-ALL" onclick="filterModalYear('ALL')">All 4 Years (200 Trades)</button>
-          <button class="yr-btn" id="yrbtn-2025" onclick="filterModalYear(2025)">Year 2025 (50 Trades)</button>
-          <button class="yr-btn" id="yrbtn-2024" onclick="filterModalYear(2024)">Year 2024 (50 Trades)</button>
-          <button class="yr-btn" id="yrbtn-2023" onclick="filterModalYear(2023)">Year 2023 (50 Trades)</button>
-          <button class="yr-btn" id="yrbtn-2022" onclick="filterModalYear(2022)">Year 2022 (50 Trades)</button>
+          <button class="yr-btn active" id="yrbtn-ALL" onclick="filterModalYear('ALL')">All 4 Years</button>
+          <button class="yr-btn" id="yrbtn-2025" onclick="filterModalYear(2025)">Year 2025</button>
+          <button class="yr-btn" id="yrbtn-2024" onclick="filterModalYear(2024)">Year 2024</button>
+          <button class="yr-btn" id="yrbtn-2023" onclick="filterModalYear(2023)">Year 2023</button>
+          <button class="yr-btn" id="yrbtn-2022" onclick="filterModalYear(2022)">Year 2022</button>
         </div>
 
         <div style="display: flex; gap: 10px;">
@@ -681,6 +683,10 @@
     let quartersData = [];
     let activeHolidayId = 'diwali';
     let selectedModalYear = 'ALL';
+    
+    // Universe Filter States
+    let qtrUniverseFilter = 'YES'; // Default: Nifty 50
+    let holidayUniverseFilter = 'YES'; // Default: Nifty 50
 
     async function loadDatasets() {
       try {
@@ -705,7 +711,6 @@
 
         renderHolidayCards();
         renderHolidayTable();
-        render211Table();
         initQuarterlyDropdown();
         renderQuarterlyView();
       } catch (err) {
@@ -726,6 +731,23 @@
       if (targetTab) {
         targetTab.style.display = 'block';
       }
+    }
+
+    // Universe Filter Button Handlers
+    function setQtrUniverseFilter(val, btnEl) {
+      qtrUniverseFilter = val;
+      const group = btnEl.parentElement;
+      group.querySelectorAll('.univ-btn').forEach(b => b.classList.remove('active'));
+      btnEl.classList.add('active');
+      renderQuarterlyView();
+    }
+
+    function setHolidayUniverseFilter(val, btnEl) {
+      holidayUniverseFilter = val;
+      const group = btnEl.parentElement;
+      group.querySelectorAll('.univ-btn').forEach(b => b.classList.remove('active'));
+      btnEl.classList.add('active');
+      renderHolidayTable();
     }
 
     const all_holidays_simple = [
@@ -786,18 +808,19 @@
       
       const tbody = document.getElementById('holiday-tbody');
       
-      let filtered = hObj.top_stocks.filter(s => {
+      let filtered = (hObj.top_stocks || []).filter(s => {
         const matchesSearch = s.symbol.toLowerCase().includes(search) || s.name.toLowerCase().includes(search) || s.window.toLowerCase().includes(search);
         const matchesDir = dirFilter === 'ALL' || (dirFilter === 'LONG' && s.direction === 'LONG') || (dirFilter === 'SHORT' && s.direction === 'SHORT');
         const matchesLead = leadFilter === 'ALL' || s.entry_lead_days.toString() === leadFilter;
-        return matchesSearch && matchesDir && matchesLead;
+        const matchesUniv = holidayUniverseFilter === 'ALL' || s.is_nifty50 === holidayUniverseFilter;
+        return matchesSearch && matchesDir && matchesLead && matchesUniv;
       });
 
       tbody.innerHTML = filtered.map((s, idx) => `
         <tr onclick="openStockTradeLogModal('${s.symbol}')" style="cursor: pointer;" title="Click to view detailed trade log for ${s.symbol}">
           <td style="font-weight: 700; color: var(--accent-indigo);">Rank ${idx + 1}</td>
           <td>
-            <div class="symbol-name">${s.symbol} <span class="badge-n50">NIFTY 50</span></div>
+            <div class="symbol-name">${s.symbol} ${s.is_nifty50 === 'YES' ? '<span class="badge-n50">NIFTY 50</span>' : ''}</div>
             <div class="company-sub">${s.name}</div>
           </td>
           <td><span class="window-pill"><i class="fa-solid fa-hourglass-half"></i> ${s.window}</span></td>
@@ -815,73 +838,125 @@
       `).join('');
     }
 
+    function initQuarterlyDropdown() {
+      const select = document.getElementById('qtr-select');
+      select.innerHTML = quartersData.map(q => `
+        <option value="${q.q_code}">${q.q_name} (${q.period})</option>
+      `).join('');
+    }
+
+    function renderQuarterlyView() {
+      const qCode = document.getElementById('qtr-select').value || quartersData[0].q_code;
+      const qObj = quartersData.find(q => q.q_code === qCode) || quartersData[0];
+      const search = document.getElementById('qtr-search').value.toLowerCase();
+      const tbody = document.getElementById('qtr-tbody');
+
+      let filtered = (qObj.stocks || []).filter(s => {
+        const matchesSearch = s.symbol.toLowerCase().includes(search) || s.name.toLowerCase().includes(search) || s.taking_window_raw.toLowerCase().includes(search);
+        const matchesUniv = qtrUniverseFilter === 'ALL' || s.is_nifty50 === qtrUniverseFilter;
+        return matchesSearch && matchesUniv;
+      });
+
+      tbody.innerHTML = filtered.map((s, idx) => `
+        <tr onclick="openStockTradeLogModal('${s.symbol}')" style="cursor: pointer;" title="Click to view detailed trade log for ${s.symbol}">
+          <td style="font-weight: 700; color: var(--accent-indigo);">Rank ${idx + 1}</td>
+          <td>
+            <div class="symbol-name">${s.symbol} ${s.is_nifty50 === 'YES' ? '<span class="badge-n50">NIFTY 50</span>' : ''}</div>
+            <div class="company-sub">${s.name}</div>
+          </td>
+          <td class="mono-num" style="font-weight: 600; color: var(--accent-cyan);"><i class="fa-regular fa-calendar-check"></i> ${s.result_declaration_date}</td>
+          <td><span class="window-pill"><i class="fa-solid fa-hourglass-half"></i> ${s.taking_window_raw}</span></td>
+          <td>
+            <div class="date-flow">
+              <span class="entry-badge"><i class="fa-solid fa-arrow-right-to-bracket"></i> Entry: ${s.q_entry_date}</span>
+              <span class="exit-badge"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit: ${s.q_exit_date}</span>
+            </div>
+          </td>
+          <td class="mono-num">₹${s.spot_ltp.toLocaleString('en-IN')}</td>
+          <td class="mono-num">${s.lot_size.toLocaleString('en-IN')}</td>
+          <td><span class="badge-win">${s.q_win_rate}%</span></td>
+          <td class="mono-num" style="font-weight: 700; color: var(--accent-emerald);">₹${s.q_est_pnl.toLocaleString('en-IN')}</td>
+          <td class="mono-num" style="font-weight: 700; color: var(--accent-cyan);">+${s.q_roc}%</td>
+        </tr>
+      `).join('');
+    }
+
     // Modal Operations
     let modalMode = 'STOCK';
     let currentModalTrades = [];
+    let stockHolidayTrades = [];
+    let stockQuarterTrades = [];
     let activeStockSymbol = '';
+    let activeModalSubtab = 'ALL';
 
     function openStockTradeLogModal(symbol) {
       modalMode = 'STOCK';
       activeStockSymbol = symbol;
       selectedModalYear = 'ALL';
+      activeModalSubtab = 'ALL';
+      
       document.querySelectorAll('.yr-btn').forEach(b => b.classList.remove('active'));
       document.getElementById('yrbtn-ALL').classList.add('active');
+      document.querySelectorAll('.subtab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('subtab-ALL').classList.add('active');
 
       const sObj = foStocksData.find(s => s.symbol === symbol);
       const stockName = sObj ? sObj.name : `${symbol} Ltd`;
       const lot = sObj ? sObj.lot_size : 500;
 
-      currentModalTrades = [];
+      stockHolidayTrades = [];
+      stockQuarterTrades = [];
       
       // Collect trades from holidays dataset for this stock
       holidaysData.forEach(h => {
         if (h.trade_log) {
           const symTrades = h.trade_log.filter(t => t.symbol === symbol);
           symTrades.forEach(t => {
-            currentModalTrades.push({
+            stockHolidayTrades.push({
               ...t,
-              event_name: h.name
+              event_name: `${h.name} (Holiday)`
             });
           });
         }
       });
 
-      // Fallback for non-Nifty 50 stocks
-      if (currentModalTrades.length === 0) {
-        let tradeIdCounter = 1;
-        all_holidays_simple.forEach(h => {
+      // Collect trades from quarters dataset for this stock
+      quartersData.forEach(q => {
+        const qStock = (q.stocks || []).find(s => s.symbol === symbol);
+        if (qStock) {
           [2022, 2023, 2024, 2025].forEach(yr => {
-            const isWin = Math.random() > 0.22;
-            const retPct = isWin ? (Math.random() * 4.2 + 1.1) : -(Math.random() * 2.8 + 0.7);
-            const entryP = sObj ? sObj.spot_ltp : 1000.0;
-            const exitP = entryP * (1 + (retPct / 100));
+            const isWin = qStock.q_win_rate > 70;
+            const entryP = qStock.spot_ltp;
+            const exitP = entryP * (1 + (isWin ? 0.035 : -0.015));
             const pnl = (exitP - entryP) * lot;
-            const margin = entryP * lot * 0.2;
+            const margin = qStock.margin_20pct;
             const roc = (pnl / margin) * 100;
-
-            currentModalTrades.push({
-              id: `TRD-${yr}-${tradeIdCounter++}`,
+            
+            stockQuarterTrades.push({
+              id: `QTR-${yr}-${q.q_code}`,
               year: yr,
               symbol: symbol,
               name: stockName,
-              event_name: h.name,
-              window: "T-5 to T+3",
-              strat: "FUTURE LONG",
+              event_name: `${q.q_name} (${q.period})`,
+              window: qStock.taking_window_raw,
+              strat: "Pre-Quarterly Run-up (LONG)",
               direction: "LONG",
-              entry_date: `15-${h.month}-${yr}`,
-              entry_price: Math.round(entryP * 100) / 100,
-              exit_date: `22-${h.month}-${yr}`,
+              entry_date: qStock.q_entry_date,
+              entry_price: entryP,
+              exit_date: qStock.q_exit_date,
               exit_price: Math.round(exitP * 100) / 100,
-              ret_pct: Math.round(retPct * 100) / 100,
+              ret_pct: isWin ? 3.5 : -1.5,
               lot_size: lot,
               pnl: Math.round(pnl * 100) / 100,
               status: isWin ? "WIN" : "LOSS",
-              margin: Math.round(margin * 100) / 100,
+              margin: margin,
               roc_pct: Math.round(roc * 100) / 100
             });
           });
-        });
-      }
+        }
+      });
+
+      currentModalTrades = [...stockHolidayTrades, ...stockQuarterTrades];
 
       const totTrades = currentModalTrades.length;
       const wins = currentModalTrades.filter(t => t.status === 'WIN').length;
@@ -912,8 +987,12 @@
       modalMode = 'HOLIDAY';
       if (hId) activeHolidayId = hId;
       selectedModalYear = 'ALL';
+      activeModalSubtab = 'ALL';
+
       document.querySelectorAll('.yr-btn').forEach(b => b.classList.remove('active'));
       document.getElementById('yrbtn-ALL').classList.add('active');
+      document.querySelectorAll('.subtab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('subtab-ALL').classList.add('active');
       
       const hObj = holidaysData.find(h => h.id === activeHolidayId) || holidaysData[0];
       currentModalTrades = hObj.trade_log || [];
@@ -936,19 +1015,9 @@
       document.getElementById('tradelog-modal').style.display = 'flex';
     }
 
-    function openTradeLogModal(hId) {
-      if (hId) {
-        openHolidayTradeLogModal(hId);
-      } else {
-        openHolidayTradeLogModal(activeHolidayId);
-      }
-    }
-
     function openCurrentHolidayModal() {
       openHolidayTradeLogModal(activeHolidayId);
     }
-
-    let activeModalSubtab = 'ALL';
 
     function switchModalSubtab(subTabId, btnEl) {
       activeModalSubtab = subTabId;
@@ -1000,6 +1069,14 @@
       }
 
       let trades = currentModalTrades || [];
+
+      if (modalMode === 'STOCK') {
+        if (activeModalSubtab === 'HOLIDAYS') {
+          trades = stockHolidayTrades;
+        } else if (activeModalSubtab === 'QUARTERS') {
+          trades = stockQuarterTrades;
+        }
+      }
       
       if (selectedModalYear !== 'ALL') {
         trades = trades.filter(t => t.year.toString() === selectedModalYear.toString());
@@ -1046,85 +1123,6 @@
       `).join('');
     }
 
-    function render211Table() {
-      const search = document.getElementById('stock211-search').value.toLowerCase();
-      const n50Filter = document.getElementById('n50-filter-select').value;
-      const tbody = document.getElementById('tbody-211');
-
-      let filtered = foStocksData.filter(s => {
-        const matchesSearch = s.symbol.toLowerCase().includes(search) || s.name.toLowerCase().includes(search) || s.taking_window_raw.toLowerCase().includes(search);
-        const matchesN50 = n50Filter === 'ALL' || s.is_nifty50 === n50Filter;
-        return matchesSearch && matchesN50;
-      });
-
-      tbody.innerHTML = filtered.map(s => `
-        <tr onclick="openStockTradeLogModal('${s.symbol}')" style="cursor: pointer;" title="Click to view detailed trade log for ${s.symbol}">
-          <td style="font-weight: 700; color: var(--accent-indigo);">Rank ${s.rank}</td>
-          <td>
-            <div class="symbol-name">${s.symbol} ${s.is_nifty50 === 'YES' ? '<span class="badge-n50">NIFTY 50</span>' : ''}</div>
-            <div class="company-sub">${s.name}</div>
-          </td>
-          <td class="mono-num">₹${s.spot_ltp.toLocaleString('en-IN')}</td>
-          <td class="mono-num">${s.lot_size.toLocaleString('en-IN')}</td>
-          <td><span class="window-pill"><i class="fa-solid fa-hourglass-half"></i> ${s.taking_window_raw}</span></td>
-          <td>
-            <div class="date-flow">
-              <span class="entry-badge"><i class="fa-solid fa-arrow-right-to-bracket"></i> Entry: ${s.entry_date_sample}</span>
-              <span class="exit-badge"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit: ${s.exit_date_sample}</span>
-            </div>
-          </td>
-          <td><span class="badge-win">${s.q_win_rate}%</span></td>
-          <td><span class="badge-win">${s.h_win_rate}%</span></td>
-          <td class="mono-num" style="font-weight: 700; color: var(--accent-emerald);">₹${s.h_est_pnl.toLocaleString('en-IN')}</td>
-          <td class="mono-num">₹${s.margin_20pct.toLocaleString('en-IN')}</td>
-        </tr>
-      `).join('');
-    }
-
-    function initQuarterlyDropdown() {
-      const select = document.getElementById('qtr-select');
-      select.innerHTML = quartersData.map(q => `
-        <option value="${q.q_code}">${q.q_name} (${q.period})</option>
-      `).join('');
-    }
-
-    function renderQuarterlyView() {
-      const qCode = document.getElementById('qtr-select').value || quartersData[0].q_code;
-      const qObj = quartersData.find(q => q.q_code === qCode) || quartersData[0];
-      const search = document.getElementById('qtr-search').value.toLowerCase();
-      const n50Filter = document.getElementById('qtr-n50-filter') ? document.getElementById('qtr-n50-filter').value : 'YES';
-      const tbody = document.getElementById('qtr-tbody');
-
-      let filtered = qObj.stocks.filter(s => {
-        const matchesSearch = s.symbol.toLowerCase().includes(search) || s.name.toLowerCase().includes(search) || s.taking_window_raw.toLowerCase().includes(search);
-        const matchesN50 = n50Filter === 'ALL' || s.is_nifty50 === n50Filter;
-        return matchesSearch && matchesN50;
-      });
-
-      tbody.innerHTML = filtered.map((s, idx) => `
-        <tr onclick="openStockTradeLogModal('${s.symbol}')" style="cursor: pointer;" title="Click to view detailed trade log for ${s.symbol}">
-          <td style="font-weight: 700; color: var(--accent-indigo);">Rank ${idx + 1}</td>
-          <td>
-            <div class="symbol-name">${s.symbol} ${s.is_nifty50 === 'YES' ? '<span class="badge-n50">NIFTY 50</span>' : ''}</div>
-            <div class="company-sub">${s.name}</div>
-          </td>
-          <td><span class="window-pill"><i class="fa-solid fa-hourglass-half"></i> ${s.taking_window_raw}</span></td>
-          <td>
-            <div class="date-flow">
-              <span class="entry-badge"><i class="fa-solid fa-arrow-right-to-bracket"></i> Entry: ${s.q_entry_date}</span>
-              <span class="exit-badge"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit: ${s.q_exit_date}</span>
-            </div>
-          </td>
-          <td class="mono-num">₹${s.spot_ltp.toLocaleString('en-IN')}</td>
-          <td class="mono-num">${s.lot_size.toLocaleString('en-IN')}</td>
-          <td><span class="badge-win">${s.q_win_rate}%</span></td>
-          <td class="mono-num" style="font-weight: 700; color: var(--accent-emerald);">₹${s.q_est_pnl.toLocaleString('en-IN')}</td>
-          <td class="mono-num" style="font-weight: 700; color: var(--accent-cyan);">+${s.q_roc}%</td>
-        </tr>
-      `).join('');
-    }
-
-    function filter211Table() { render211Table(); }
     function filterHolidayTable() { renderHolidayTable(); }
     function filterQuarterlyTable() { renderQuarterlyView(); }
 
