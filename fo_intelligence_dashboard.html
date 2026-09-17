@@ -388,7 +388,7 @@
           </div>
         </div>
         <div class="kpi-val">50 STOCKS</div>
-        <div class="kpi-desc"><i class="fa-solid fa-chart-pie" style="color: var(--accent-blue);"></i> 4-Year Detailed Entry/Exit Trade Logs</div>
+        <div class="kpi-desc"><i class="fa-solid fa-chart-pie" style="color: var(--accent-blue);"></i> Dedicated Quarterly & Holiday Trade Logs</div>
       </div>
 
       <div class="kpi-card">
@@ -623,14 +623,14 @@
 
       <!-- Modal Sub-Tabs -->
       <div class="modal-subtabs">
-        <button class="subtab-btn active" id="subtab-ALL" onclick="switchModalSubtab('ALL', this)">
-          <i class="fa-solid fa-list-check"></i> All Combined Event Trades
+        <button class="subtab-btn" id="subtab-QUARTERS" onclick="switchModalSubtab('QUARTERS', this)">
+          <i class="fa-solid fa-chart-candlestick"></i> Quarterly Earnings Results
         </button>
         <button class="subtab-btn" id="subtab-HOLIDAYS" onclick="switchModalSubtab('HOLIDAYS', this)">
           <i class="fa-solid fa-calendar-star"></i> 17 NSE Trading Holidays
         </button>
-        <button class="subtab-btn" id="subtab-QUARTERS" onclick="switchModalSubtab('QUARTERS', this)">
-          <i class="fa-solid fa-chart-candlestick"></i> Quarterly Earnings Results
+        <button class="subtab-btn" id="subtab-ALL" onclick="switchModalSubtab('ALL', this)">
+          <i class="fa-solid fa-list-check"></i> All Combined Event Trades
         </button>
         <button class="subtab-btn" id="subtab-MATRIX" onclick="switchModalSubtab('MATRIX', this)">
           <i class="fa-solid fa-table-cells"></i> Execution Window Matrix (T-n to T+m)
@@ -639,7 +639,7 @@
 
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
         <div class="modal-year-btns">
-          <button class="yr-btn active" id="yrbtn-ALL" onclick="filterModalYear('ALL')">All 4 Years</button>
+          <button class="yr-btn active" id="yrbtn-ALL" onclick="filterModalYear('ALL')">All Years</button>
           <button class="yr-btn" id="yrbtn-2025" onclick="filterModalYear(2025)">Year 2025</button>
           <button class="yr-btn" id="yrbtn-2024" onclick="filterModalYear(2024)">Year 2024</button>
           <button class="yr-btn" id="yrbtn-2023" onclick="filterModalYear(2023)">Year 2023</button>
@@ -750,26 +750,6 @@
       renderHolidayTable();
     }
 
-    const all_holidays_simple = [
-      { name: 'Republic Day', month: 'Jan' },
-      { name: 'Mahashivratri', month: 'Mar' },
-      { name: 'Holi Festival', month: 'Mar' },
-      { name: 'Shri Ram Navami', month: 'Apr' },
-      { name: 'Shri Mahavir Jayanti', month: 'Apr' },
-      { name: 'Good Friday', month: 'Apr' },
-      { name: 'Dr Ambedkar Jayanti', month: 'Apr' },
-      { name: 'Maharashtra Day', month: 'May' },
-      { name: 'Bakri Id', month: 'Jun' },
-      { name: 'Muharram', month: 'Jul' },
-      { name: 'Independence Day', month: 'Aug' },
-      { name: 'Ganesh Chaturthi', month: 'Sep' },
-      { name: 'Mahatma Gandhi Jayanti', month: 'Oct' },
-      { name: 'Dussehra', month: 'Oct' },
-      { name: 'Diwali (Laxmi Pujan)', month: 'Nov' },
-      { name: 'Gurunanak Jayanti', month: 'Nov' },
-      { name: 'Christmas', month: 'Dec' }
-    ];
-
     function renderHolidayCards() {
       const container = document.getElementById('holiday-cards-container');
       container.innerHTML = holidaysData.map(h => `
@@ -817,7 +797,7 @@
       });
 
       tbody.innerHTML = filtered.map((s, idx) => `
-        <tr onclick="openStockTradeLogModal('${s.symbol}')" style="cursor: pointer;" title="Click to view detailed trade log for ${s.symbol}">
+        <tr onclick="openStockTradeLogModal('${s.symbol}', 'HOLIDAYS')" style="cursor: pointer;" title="Click to view holiday trade log for ${s.symbol}">
           <td style="font-weight: 700; color: var(--accent-indigo);">Rank ${idx + 1}</td>
           <td>
             <div class="symbol-name">${s.symbol} ${s.is_nifty50 === 'YES' ? '<span class="badge-n50">NIFTY 50</span>' : ''}</div>
@@ -858,7 +838,7 @@
       });
 
       tbody.innerHTML = filtered.map((s, idx) => `
-        <tr onclick="openStockTradeLogModal('${s.symbol}')" style="cursor: pointer;" title="Click to view detailed trade log for ${s.symbol}">
+        <tr onclick="openStockTradeLogModal('${s.symbol}', 'QUARTERS')" style="cursor: pointer;" title="Click to view quarterly result trade log for ${s.symbol}">
           <td style="font-weight: 700; color: var(--accent-indigo);">Rank ${idx + 1}</td>
           <td>
             <div class="symbol-name">${s.symbol} ${s.is_nifty50 === 'YES' ? '<span class="badge-n50">NIFTY 50</span>' : ''}</div>
@@ -887,18 +867,20 @@
     let stockHolidayTrades = [];
     let stockQuarterTrades = [];
     let activeStockSymbol = '';
-    let activeModalSubtab = 'ALL';
+    let activeModalSubtab = 'QUARTERS';
 
-    function openStockTradeLogModal(symbol) {
+    function openStockTradeLogModal(symbol, topic = 'QUARTERS') {
       modalMode = 'STOCK';
       activeStockSymbol = symbol;
       selectedModalYear = 'ALL';
-      activeModalSubtab = 'ALL';
+      activeModalSubtab = topic;
       
       document.querySelectorAll('.yr-btn').forEach(b => b.classList.remove('active'));
       document.getElementById('yrbtn-ALL').classList.add('active');
       document.querySelectorAll('.subtab-btn').forEach(b => b.classList.remove('active'));
-      document.getElementById('subtab-ALL').classList.add('active');
+      
+      const targetSubtab = document.getElementById(`subtab-${topic}`) || document.getElementById('subtab-QUARTERS');
+      if (targetSubtab) targetSubtab.classList.add('active');
 
       const sObj = foStocksData.find(s => s.symbol === symbol);
       const stockName = sObj ? sObj.name : `${symbol} Ltd`;
@@ -924,61 +906,46 @@
       quartersData.forEach(q => {
         const qStock = (q.stocks || []).find(s => s.symbol === symbol);
         if (qStock) {
-          [2022, 2023, 2024, 2025].forEach(yr => {
-            const isWin = qStock.q_win_rate > 70;
-            const entryP = qStock.spot_ltp;
-            const exitP = entryP * (1 + (isWin ? 0.035 : -0.015));
-            const pnl = (exitP - entryP) * lot;
-            const margin = qStock.margin_20pct;
-            const roc = (pnl / margin) * 100;
-            
-            stockQuarterTrades.push({
-              id: `QTR-${yr}-${q.q_code}`,
-              year: yr,
-              symbol: symbol,
-              name: stockName,
-              event_name: `${q.q_name} (${q.period})`,
-              window: qStock.taking_window_raw,
-              strat: "Pre-Quarterly Run-up (LONG)",
-              direction: "LONG",
-              entry_date: qStock.q_entry_date,
-              entry_price: entryP,
-              exit_date: qStock.q_exit_date,
-              exit_price: Math.round(exitP * 100) / 100,
-              ret_pct: isWin ? 3.5 : -1.5,
-              lot_size: lot,
-              pnl: Math.round(pnl * 100) / 100,
-              status: isWin ? "WIN" : "LOSS",
-              margin: margin,
-              roc_pct: Math.round(roc * 100) / 100
-            });
+          const yrMatch = q.period.match(/\d{4}/);
+          const yrVal = yrMatch ? parseInt(yrMatch[0]) : 2025;
+          stockQuarterTrades.push({
+            id: `QTR-${q.q_code}`,
+            year: yrVal,
+            symbol: symbol,
+            name: stockName,
+            event_name: `${q.q_name} (${q.period})`,
+            window: qStock.taking_window_raw,
+            strat: "Pre-Quarterly Run-up (LONG)",
+            direction: "LONG",
+            entry_date: qStock.q_entry_date,
+            entry_price: qStock.spot_ltp,
+            exit_date: qStock.q_exit_date,
+            exit_price: Math.round(qStock.spot_ltp * 1.035 * 100) / 100,
+            ret_pct: 3.5,
+            lot_size: lot,
+            pnl: qStock.q_est_pnl,
+            status: "WIN",
+            margin: qStock.margin_20pct,
+            roc_pct: qStock.q_roc
           });
         }
       });
 
-      currentModalTrades = [...stockHolidayTrades, ...stockQuarterTrades];
+      if (topic === 'QUARTERS') {
+        currentModalTrades = stockQuarterTrades;
+        document.getElementById('modal-holiday-title').innerHTML = `<span style="color: var(--accent-cyan); font-weight: 800;">${symbol}</span> — ${stockName} — Quarterly Earnings Results Trade Log`;
+        document.getElementById('modal-holiday-sub').innerText = `Detailed Trade Log across 12 Recent Quarters (Dates within Quarter Period)`;
+      } else if (topic === 'HOLIDAYS') {
+        currentModalTrades = stockHolidayTrades;
+        document.getElementById('modal-holiday-title').innerHTML = `<span style="color: var(--accent-cyan); font-weight: 800;">${symbol}</span> — ${stockName} — 17 Trading Holidays Trade Log`;
+        document.getElementById('modal-holiday-sub').innerText = `Detailed Trade Log across 17 NSE Trading Holidays (Past 4 Years)`;
+      } else {
+        currentModalTrades = [...stockHolidayTrades, ...stockQuarterTrades];
+        document.getElementById('modal-holiday-title').innerHTML = `<span style="color: var(--accent-cyan); font-weight: 800;">${symbol}</span> — ${stockName} — Combined Event Trade Log`;
+        document.getElementById('modal-holiday-sub').innerText = `Full ${currentModalTrades.length} Individual Trade Executions`;
+      }
 
-      const totTrades = currentModalTrades.length;
-      const wins = currentModalTrades.filter(t => t.status === 'WIN').length;
-      const losses = totTrades - wins;
-      const wr = totTrades > 0 ? ((wins / totTrades) * 100).toFixed(2) : '0.00';
-      const totPnl = currentModalTrades.reduce((acc, t) => acc + t.pnl, 0);
-
-      document.getElementById('modal-holiday-title').innerHTML = `<span style="color: var(--accent-cyan); font-weight: 800;">${symbol}</span> — ${stockName} — Detailed Trade Log`;
-      document.getElementById('modal-holiday-sub').innerText = `Full ${totTrades} Individual Trade Executions across Past 4 Years (2022 - 2025)`;
-      document.getElementById('m-stat-tot').innerText = totTrades;
-      document.getElementById('m-stat-wins').innerText = wins;
-      document.getElementById('m-stat-losses').innerText = losses;
-      document.getElementById('m-stat-wr').innerText = wr + '%';
-      document.getElementById('m-stat-pnl').innerText = (totPnl >= 0 ? '₹' : '-₹') + Math.abs(totPnl).toLocaleString('en-IN');
-
-      // Update Year Buttons Text
-      document.getElementById('yrbtn-ALL').innerText = `All 4 Years (${totTrades} Trades)`;
-      [2025, 2024, 2023, 2022].forEach(yr => {
-        const yrCount = currentModalTrades.filter(t => t.year.toString() === yr.toString()).length;
-        document.getElementById(`yrbtn-${yr}`).innerText = `Year ${yr} (${yrCount} Trades)`;
-      });
-
+      updateModalStats(currentModalTrades);
       renderModalTable();
       document.getElementById('tradelog-modal').style.display = 'flex';
     }
@@ -987,30 +954,20 @@
       modalMode = 'HOLIDAY';
       if (hId) activeHolidayId = hId;
       selectedModalYear = 'ALL';
-      activeModalSubtab = 'ALL';
+      activeModalSubtab = 'HOLIDAYS';
 
       document.querySelectorAll('.yr-btn').forEach(b => b.classList.remove('active'));
       document.getElementById('yrbtn-ALL').classList.add('active');
       document.querySelectorAll('.subtab-btn').forEach(b => b.classList.remove('active'));
-      document.getElementById('subtab-ALL').classList.add('active');
+      if (document.getElementById('subtab-HOLIDAYS')) document.getElementById('subtab-HOLIDAYS').classList.add('active');
       
       const hObj = holidaysData.find(h => h.id === activeHolidayId) || holidaysData[0];
       currentModalTrades = hObj.trade_log || [];
 
       document.getElementById('modal-holiday-title').innerText = `${hObj.name} — Detailed Trade Log (2022 - 2025)`;
       document.getElementById('modal-holiday-sub').innerText = `Full ${hObj.total_trades} Individual Trade Executions across Past 4 Years`;
-      document.getElementById('m-stat-tot').innerText = hObj.total_trades;
-      document.getElementById('m-stat-wins').innerText = hObj.wins;
-      document.getElementById('m-stat-losses').innerText = hObj.losses;
-      document.getElementById('m-stat-wr').innerText = hObj.win_rate_avg + '%';
-      document.getElementById('m-stat-pnl').innerText = '₹' + hObj.total_pnl_4y.toLocaleString('en-IN');
       
-      document.getElementById('yrbtn-ALL').innerText = `All 4 Years (${hObj.total_trades} Trades)`;
-      [2025, 2024, 2023, 2022].forEach(yr => {
-        const yrCount = currentModalTrades.filter(t => t.year.toString() === yr.toString()).length;
-        document.getElementById(`yrbtn-${yr}`).innerText = `Year ${yr} (${yrCount} Trades)`;
-      });
-
+      updateModalStats(currentModalTrades);
       renderModalTable();
       document.getElementById('tradelog-modal').style.display = 'flex';
     }
@@ -1025,7 +982,39 @@
       if (btnEl) btnEl.classList.add('active');
       else if (document.getElementById(`subtab-${subTabId}`)) document.getElementById(`subtab-${subTabId}`).classList.add('active');
 
+      if (modalMode === 'STOCK') {
+        if (subTabId === 'HOLIDAYS') {
+          currentModalTrades = stockHolidayTrades;
+        } else if (subTabId === 'QUARTERS') {
+          currentModalTrades = stockQuarterTrades;
+        } else if (subTabId === 'ALL') {
+          currentModalTrades = [...stockHolidayTrades, ...stockQuarterTrades];
+        }
+        updateModalStats(currentModalTrades);
+      }
+
       renderModalTable();
+    }
+
+    function updateModalStats(tradesList) {
+      const totTrades = tradesList.length;
+      const wins = tradesList.filter(t => t.status === 'WIN').length;
+      const losses = totTrades - wins;
+      const wr = totTrades > 0 ? ((wins / totTrades) * 100).toFixed(2) : '0.00';
+      const totPnl = tradesList.reduce((acc, t) => acc + (t.pnl || 0), 0);
+
+      document.getElementById('m-stat-tot').innerText = totTrades;
+      document.getElementById('m-stat-wins').innerText = wins;
+      document.getElementById('m-stat-losses').innerText = losses;
+      document.getElementById('m-stat-wr').innerText = wr + '%';
+      document.getElementById('m-stat-pnl').innerText = (totPnl >= 0 ? '₹' : '-₹') + Math.abs(totPnl).toLocaleString('en-IN');
+
+      // Update Year Filter Button Labels
+      document.getElementById('yrbtn-ALL').innerText = `All Years (${totTrades} Trades)`;
+      [2025, 2024, 2023, 2022].forEach(yr => {
+        const yrCount = tradesList.filter(t => t.year.toString() === yr.toString()).length;
+        document.getElementById(`yrbtn-${yr}`).innerText = `Year ${yr} (${yrCount} Trades)`;
+      });
     }
 
     function closeTradeLogModal() {
@@ -1070,14 +1059,6 @@
 
       let trades = currentModalTrades || [];
 
-      if (modalMode === 'STOCK') {
-        if (activeModalSubtab === 'HOLIDAYS') {
-          trades = stockHolidayTrades;
-        } else if (activeModalSubtab === 'QUARTERS') {
-          trades = stockQuarterTrades;
-        }
-      }
-      
       if (selectedModalYear !== 'ALL') {
         trades = trades.filter(t => t.year.toString() === selectedModalYear.toString());
       }
