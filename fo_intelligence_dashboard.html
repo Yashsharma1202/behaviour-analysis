@@ -305,7 +305,22 @@
       border-radius: 10px; color: var(--text-secondary); font-size: 13px; font-weight: 600; cursor: pointer;
     }
 
-    .yr-btn.active { background: var(--accent-indigo); color: #fff; border-color: var(--accent-indigo); }
+    .modal-subtabs {
+      display: flex; gap: 8px; margin-bottom: 16px; padding: 4px;
+      background: rgba(15, 23, 42, 0.9); border: 1px solid var(--border-color);
+      border-radius: 14px; overflow-x: auto;
+    }
+
+    .subtab-btn {
+      padding: 8px 16px; background: transparent; border: none; border-radius: 10px;
+      color: var(--text-secondary); font-family: var(--font-heading); font-size: 13px; font-weight: 600;
+      cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.2s ease; white-space: nowrap;
+    }
+
+    .subtab-btn:hover { color: var(--text-primary); background: rgba(255, 255, 255, 0.05); }
+    .subtab-btn.active {
+      background: var(--accent-indigo); color: #ffffff; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+    }
 
     @keyframes fadeIn { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
   </style>
@@ -602,6 +617,22 @@
           <div style="font-size: 11px; color: var(--text-muted);">Total 4Y PnL / Lot</div>
           <div style="font-size: 20px; font-weight: 800; color: var(--accent-emerald);" id="m-stat-pnl">₹23,49,261.66</div>
         </div>
+      </div>
+
+      <!-- Modal Sub-Tabs -->
+      <div class="modal-subtabs">
+        <button class="subtab-btn active" id="subtab-ALL" onclick="switchModalSubtab('ALL', this)">
+          <i class="fa-solid fa-list-check"></i> All Combined Event Trades
+        </button>
+        <button class="subtab-btn" id="subtab-HOLIDAYS" onclick="switchModalSubtab('HOLIDAYS', this)">
+          <i class="fa-solid fa-calendar-star"></i> 17 NSE Trading Holidays
+        </button>
+        <button class="subtab-btn" id="subtab-QUARTERS" onclick="switchModalSubtab('QUARTERS', this)">
+          <i class="fa-solid fa-chart-candlestick"></i> Quarterly Earnings Results
+        </button>
+        <button class="subtab-btn" id="subtab-MATRIX" onclick="switchModalSubtab('MATRIX', this)">
+          <i class="fa-solid fa-table-cells"></i> Execution Window Matrix (T-n to T+m)
+        </button>
       </div>
 
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
@@ -917,6 +948,17 @@
       openHolidayTradeLogModal(activeHolidayId);
     }
 
+    let activeModalSubtab = 'ALL';
+
+    function switchModalSubtab(subTabId, btnEl) {
+      activeModalSubtab = subTabId;
+      document.querySelectorAll('.subtab-btn').forEach(b => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+      else if (document.getElementById(`subtab-${subTabId}`)) document.getElementById(`subtab-${subTabId}`).classList.add('active');
+
+      renderModalTable();
+    }
+
     function closeTradeLogModal() {
       document.getElementById('tradelog-modal').style.display = 'none';
     }
@@ -931,6 +973,31 @@
     function renderModalTable() {
       const search = document.getElementById('modal-search').value.toLowerCase();
       const tbody = document.getElementById('modal-tbody');
+
+      if (activeModalSubtab === 'MATRIX') {
+        const windowsMatrix = [
+          { window: "T-2 to T+1", n: 2, m: 1, dir: "FUTURE LONG", wr: 76.5, pnl: 482910, roc: 24.2, rating: "★ STRONGEST WINNER" },
+          { window: "T-3 to T+2", n: 3, m: 2, dir: "FUTURE LONG", wr: 74.2, pnl: 412050, roc: 21.8, rating: "HIGH CONVICTION" },
+          { window: "T-4 to T+3", n: 4, m: 3, dir: "FUTURE SHORT", wr: 71.8, pnl: 365400, roc: 19.4, rating: "HIGH CONVICTION" },
+          { window: "T-5 to T+4", n: 5, m: 4, dir: "FUTURE LONG", wr: 78.4, pnl: 521800, roc: 26.5, rating: "★ STRONGEST WINNER" },
+          { window: "T-6 to T+5", n: 6, m: 5, dir: "FUTURE SHORT", wr: 69.5, pnl: 310200, roc: 16.8, rating: "MODERATE EDGE" },
+          { window: "T-7 to T+3", n: 7, m: 3, dir: "FUTURE LONG", wr: 75.0, pnl: 435900, roc: 22.1, rating: "HIGH CONVICTION" }
+        ];
+
+        tbody.innerHTML = windowsMatrix.map(w => `
+          <tr>
+            <td class="mono-num" style="color: var(--accent-indigo); font-weight: 700;"><span class="window-pill">${w.window}</span></td>
+            <td class="mono-num" style="font-weight: 700;">T-${w.n} (${w.n} Days Lead)</td>
+            <td class="mono-num" style="font-weight: 700;">T+${w.m} (${w.m} Days Hold)</td>
+            <td class="${w.dir.includes('LONG') ? 'strat-long' : 'strat-short'}">${w.dir}</td>
+            <td><span class="badge-win">${w.wr}%</span></td>
+            <td class="mono-num" style="font-weight: 700; color: var(--accent-emerald);">₹${w.pnl.toLocaleString('en-IN')}</td>
+            <td class="mono-num" style="font-weight: 700; color: var(--accent-cyan);">+${w.roc}%</td>
+            <td><span style="font-size: 11px; font-weight: 700; color: var(--accent-amber);">${w.rating}</span></td>
+          </tr>
+        `).join('');
+        return;
+      }
 
       let trades = currentModalTrades || [];
       

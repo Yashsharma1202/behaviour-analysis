@@ -81,12 +81,13 @@ quarters_def = [
     {"q_code": "FY23_Q2", "q_name": "FY 2022-23 Q2 Results", "period": "Jul - Sep 2022"}
 ]
 
-# Build complete 211 stock list per quarter
+windows_pool = [(2,1), (3,2), (4,2), (5,3), (6,4), (7,5), (4,5), (5,5), (3,5), (6,2), (2,4), (5,2), (2,5), (3,3), (4,3), (5,4), (6,3), (7,2), (3,1), (4,1)]
+
 quarters_dataset = []
 
-for q in quarters_def:
+for q_idx, q in enumerate(quarters_def):
     stocks_list = []
-    for sym in valid_syms:
+    for idx, sym in enumerate(valid_syms):
         is_n50 = sym in nifty50_specs
         name = nifty50_specs[sym]['name'] if is_n50 else f"{sym} Ltd"
         lot = nifty50_specs[sym]['lot'] if is_n50 else 500
@@ -96,8 +97,8 @@ for q in quarters_def:
         est_pnl = round(spot_ltp * lot * (win_rate / 1000.0), 2)
         roc = round((est_pnl / margin) * 100.0, 2)
         
-        entry_lead = np.random.choice([2, 3, 4, 5, 6, 7])
-        exit_hold = np.random.choice([1, 2, 3, 4, 5])
+        n_w, m_w = windows_pool[(idx + q_idx) % len(windows_pool)]
+        win_str = f"T-{n_w} to T+{m_w}"
         
         s_obj = {
             "symbol": sym,
@@ -106,11 +107,11 @@ for q in quarters_def:
             "spot_ltp": spot_ltp,
             "lot_size": lot,
             "margin_20pct": margin,
-            "taking_window_raw": f"T-{entry_lead} to T+{exit_hold}",
-            "entry_lead_days": int(entry_lead),
-            "exit_hold_days": int(exit_hold),
-            "entry_date_sample": f"0{entry_lead}-Jul-2025 (Wed)",
-            "exit_date_sample": f"2{exit_hold}-Jul-2025 (Thu)",
+            "taking_window_raw": win_str,
+            "entry_lead_days": n_w,
+            "exit_hold_days": m_w,
+            "entry_date_sample": f"{16 - n_w}-Jul-2025",
+            "exit_date_sample": f"{20 + m_w}-Jul-2025",
             "q_win_rate": win_rate,
             "q_est_pnl": est_pnl,
             "q_roc": roc,
@@ -119,13 +120,12 @@ for q in quarters_def:
             "h_roc": round(roc * 0.9, 2),
             "best_strategy": "Pre-Quarterly Run-up (LONG)",
             "option_play": "1% ITM CALL / PUT Option (30% SL)",
-            "q_entry_date": f"0{entry_lead}-Jul-2025 (Wed)",
-            "q_exit_date": f"2{exit_hold}-Jul-2025 (Thu)",
-            "taking_window_full": f"Entry: 0{entry_lead}-Jul-2025 (Wed) (T-{entry_lead} to T+{exit_hold}) ➔ Exit: 2{exit_hold}-Jul-2025 (Thu)"
+            "q_entry_date": f"{16 - n_w}-Jul-2025",
+            "q_exit_date": f"{20 + m_w}-Jul-2025",
+            "taking_window_full": f"Entry: {16 - n_w}-Jul-2025 ({win_str}) ➔ Exit: {20 + m_w}-Jul-2025"
         }
         stocks_list.append(s_obj)
         
-    # Sort stocks: Nifty 50 stocks first, then by q_est_pnl descending
     stocks_list = sorted(stocks_list, key=lambda x: (x['is_nifty50'] == 'YES', x['q_est_pnl']), reverse=True)
     for r_idx, s in enumerate(stocks_list, 1):
         s['rank'] = r_idx
@@ -145,4 +145,4 @@ for q in quarters_def:
 with open(DATA_DIR / 'quarters_dataset.json', 'w', encoding='utf-8') as f:
     json.dump(quarters_dataset, f, indent=2)
 
-print(f"Saved complete quarters_dataset.json with 211 stocks (including ALL 50 Nifty 50 stocks) across 12 quarters!")
+print(f"Saved complete quarters_dataset.json with dynamic windows per stock!")
