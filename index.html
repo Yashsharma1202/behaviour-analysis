@@ -592,8 +592,8 @@
     <div class="modal-box">
       <div class="modal-header">
         <div>
-          <div class="modal-title" id="modal-holiday-title">Diwali (Laxmi Pujan) — Detailed Trade Log (2022 - 2025)</div>
-          <div style="font-size: 13px; color: var(--text-secondary);" id="modal-holiday-sub">Full Individual Trade Executions across Past 4 Years</div>
+          <div class="modal-title" id="modal-holiday-title">Diwali (Laxmi Pujan) — Detailed Trade Log</div>
+          <div style="font-size: 13px; color: var(--text-secondary);" id="modal-holiday-sub">Full Individual Trade Executions</div>
         </div>
         <button class="btn-close" onclick="closeTradeLogModal()"><i class="fa-solid fa-xmark"></i></button>
       </div>
@@ -616,7 +616,7 @@
           <div style="font-size: 20px; font-weight: 800; color: var(--accent-emerald);" id="m-stat-wr">76.00%</div>
         </div>
         <div class="modal-sum-card">
-          <div style="font-size: 11px; color: var(--text-muted);">Total 4Y PnL / Lot</div>
+          <div style="font-size: 11px; color: var(--text-muted);">Total PnL / Lot</div>
           <div style="font-size: 20px; font-weight: 800; color: var(--accent-emerald);" id="m-stat-pnl">₹23,49,261.66</div>
         </div>
       </div>
@@ -640,6 +640,7 @@
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
         <div class="modal-year-btns">
           <button class="yr-btn active" id="yrbtn-ALL" onclick="filterModalYear('ALL')">All Years</button>
+          <button class="yr-btn" id="yrbtn-2026" onclick="filterModalYear(2026)">Year 2026</button>
           <button class="yr-btn" id="yrbtn-2025" onclick="filterModalYear(2025)">Year 2025</button>
           <button class="yr-btn" id="yrbtn-2024" onclick="filterModalYear(2024)">Year 2024</button>
           <button class="yr-btn" id="yrbtn-2023" onclick="filterModalYear(2023)">Year 2023</button>
@@ -768,7 +769,7 @@
             </div>
           </div>
           <button class="btn-tradelog" onclick="event.stopPropagation(); openHolidayTradeLogModal('${h.id}')">
-            <i class="fa-solid fa-list-check"></i> View 4-Year Detailed Trade Log (${h.total_trades || 200})
+            <i class="fa-solid fa-list-check"></i> View Detailed Trade Log (${h.total_trades || 200})
           </button>
         </div>
       `).join('');
@@ -907,7 +908,7 @@
         const qStock = (q.stocks || []).find(s => s.symbol === symbol);
         if (qStock) {
           const yrMatch = q.period.match(/\d{4}/);
-          const yrVal = yrMatch ? parseInt(yrMatch[0]) : 2025;
+          const yrVal = yrMatch ? parseInt(yrMatch[0]) : 2026;
           stockQuarterTrades.push({
             id: `QTR-${q.q_code}`,
             year: yrVal,
@@ -934,7 +935,7 @@
       if (topic === 'QUARTERS') {
         currentModalTrades = stockQuarterTrades;
         document.getElementById('modal-holiday-title').innerHTML = `<span style="color: var(--accent-cyan); font-weight: 800;">${symbol}</span> — ${stockName} — Quarterly Earnings Results Trade Log`;
-        document.getElementById('modal-holiday-sub').innerText = `Detailed Trade Log across 12 Recent Quarters (Dates within Quarter Period)`;
+        document.getElementById('modal-holiday-sub').innerText = `Detailed Trade Log across 17 Quarters (Up to Q2 FY 2026-27)`;
       } else if (topic === 'HOLIDAYS') {
         currentModalTrades = stockHolidayTrades;
         document.getElementById('modal-holiday-title').innerHTML = `<span style="color: var(--accent-cyan); font-weight: 800;">${symbol}</span> — ${stockName} — 17 Trading Holidays Trade Log`;
@@ -1011,9 +1012,12 @@
 
       // Update Year Filter Button Labels
       document.getElementById('yrbtn-ALL').innerText = `All Years (${totTrades} Trades)`;
-      [2025, 2024, 2023, 2022].forEach(yr => {
-        const yrCount = tradesList.filter(t => t.year.toString() === yr.toString()).length;
-        document.getElementById(`yrbtn-${yr}`).innerText = `Year ${yr} (${yrCount} Trades)`;
+      [2026, 2025, 2024, 2023, 2022].forEach(yr => {
+        const btn = document.getElementById(`yrbtn-${yr}`);
+        if (btn) {
+          const yrCount = tradesList.filter(t => t.year.toString() === yr.toString()).length;
+          btn.innerText = `Year ${yr} (${yrCount} Trades)`;
+        }
       });
     }
 
@@ -1024,7 +1028,8 @@
     function filterModalYear(yr) {
       selectedModalYear = yr;
       document.querySelectorAll('.yr-btn').forEach(b => b.classList.remove('active'));
-      document.getElementById(`yrbtn-${yr}`).classList.add('active');
+      const btn = document.getElementById(`yrbtn-${yr}`);
+      if (btn) btn.classList.add('active');
       renderModalTable();
     }
 

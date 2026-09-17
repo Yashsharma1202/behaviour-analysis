@@ -68,13 +68,13 @@ nifty50_specs = {
 fo_211 = json.load(open(DATA_DIR / 'fo_stocks_211.json', encoding='utf-8'))
 valid_syms = [s['symbol'] for s in fo_211]
 
-# 12 Quarters Definitions with STRICT month ranges matching the Quarter Period!
-# Q1: Apr - Jun (Months 4, 5, 6)
-# Q4: Jan - Mar (Months 1, 2, 3)
-# Q3: Oct - Dec (Months 10, 11, 12)
-# Q2: Jul - Sep (Months 7, 8, 9)
-
+# Quarters Definitions up to FY 2026-27 Q2 Results (Jul - Sep 2026)
 quarters_def = [
+    {"q_code": "FY27_Q2", "q_name": "FY 2026-27 Q2 Results", "period": "Jul - Sep 2026", "yr": 2026, "months": [7, 8, 9]},
+    {"q_code": "FY27_Q1", "q_name": "FY 2026-27 Q1 Results", "period": "Apr - Jun 2026", "yr": 2026, "months": [4, 5, 6]},
+    {"q_code": "FY26_Q4", "q_name": "FY 2025-26 Q4 Results", "period": "Jan - Mar 2026", "yr": 2026, "months": [1, 2, 3]},
+    {"q_code": "FY26_Q3", "q_name": "FY 2025-26 Q3 Results", "period": "Oct - Dec 2025", "yr": 2025, "months": [10, 11, 12]},
+    {"q_code": "FY26_Q2", "q_name": "FY 2025-26 Q2 Results", "period": "Jul - Sep 2025", "yr": 2025, "months": [7, 8, 9]},
     {"q_code": "FY26_Q1", "q_name": "FY 2025-26 Q1 Results", "period": "Apr - Jun 2025", "yr": 2025, "months": [4, 5, 6]},
     {"q_code": "FY25_Q4", "q_name": "FY 2024-25 Q4 Results", "period": "Jan - Mar 2025", "yr": 2025, "months": [1, 2, 3]},
     {"q_code": "FY25_Q3", "q_name": "FY 2024-25 Q3 Results", "period": "Oct - Dec 2024", "yr": 2024, "months": [10, 11, 12]},
@@ -113,14 +113,10 @@ for q_idx, q in enumerate(quarters_def):
         name = nifty50_specs[sym]['name'] if is_n50 else f"{sym} Ltd"
         lot = nifty50_specs[sym]['lot'] if is_n50 else 500
         
-        # Pick month inside the quarter (months[0], months[1], or months[2])
-        # Spread stocks across the quarter's 3 months so dates stay 100% inside the quarter months!
         mo_idx = idx % len(months)
         mo = months[mo_idx]
         
-        # Ensure result date T allows entry lead days (T-n) and exit hold days (T+m) within reasonable bound
         day = 10 + (idx * 7 % 15)  # Days between 10 and 24 of the month
-        
         res_dt = datetime.date(res_yr, mo, day)
             
         n_w, m_w = windows_pool[(idx + q_idx) % len(windows_pool)]
@@ -166,7 +162,6 @@ for q_idx, q in enumerate(quarters_def):
         }
         stocks_list.append(s_obj)
 
-    # Sort by q_est_pnl
     stocks_list = sorted(stocks_list, key=lambda x: x['q_est_pnl'], reverse=True)
     for r_i, s in enumerate(stocks_list, 1):
         s['rank'] = r_i
@@ -186,4 +181,4 @@ for q_idx, q in enumerate(quarters_def):
 with open(DATA_DIR / 'quarters_dataset.json', 'w', encoding='utf-8') as f:
     json.dump(quarters_dataset, f, indent=2)
 
-print("Successfully regenerated quarters_dataset.json! All dates strictly fall within quarter months!")
+print(f"Successfully generated quarters_dataset.json with {len(quarters_dataset)} quarters up to FY 2026-27 Q2 (Jul - Sep 2026)!")
