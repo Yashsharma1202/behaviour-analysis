@@ -499,6 +499,11 @@
           <input type="text" id="qtr-search" class="search-input" placeholder="Search quarterly result stocks..." oninput="filterQuarterlyTable()">
         </div>
         <div class="filter-group">
+          <select id="qtr-n50-filter" class="filter-select" onchange="renderQuarterlyView()">
+            <option value="YES">Nifty 50 Stocks Only (50)</option>
+            <option value="ALL">All 211 F&O Stocks</option>
+            <option value="NO">Non-Nifty 50 F&O Stocks (161)</option>
+          </select>
           <select id="qtr-select" class="filter-select" onchange="renderQuarterlyView()">
             <!-- Rendered via JS -->
           </select>
@@ -859,7 +864,7 @@
       });
 
       tbody.innerHTML = filtered.map(s => `
-        <tr>
+        <tr onclick="openTradeLogModal()" style="cursor: pointer;">
           <td style="font-weight: 700; color: var(--accent-indigo);">Rank ${s.rank}</td>
           <td>
             <div class="symbol-name">${s.symbol} ${s.is_nifty50 === 'YES' ? '<span class="badge-n50">NIFTY 50</span>' : ''}</div>
@@ -893,12 +898,17 @@
       const qCode = document.getElementById('qtr-select').value || quartersData[0].q_code;
       const qObj = quartersData.find(q => q.q_code === qCode) || quartersData[0];
       const search = document.getElementById('qtr-search').value.toLowerCase();
+      const n50Filter = document.getElementById('qtr-n50-filter') ? document.getElementById('qtr-n50-filter').value : 'YES';
       const tbody = document.getElementById('qtr-tbody');
 
-      let filtered = qObj.stocks.filter(s => s.symbol.toLowerCase().includes(search) || s.name.toLowerCase().includes(search) || s.taking_window_raw.toLowerCase().includes(search));
+      let filtered = qObj.stocks.filter(s => {
+        const matchesSearch = s.symbol.toLowerCase().includes(search) || s.name.toLowerCase().includes(search) || s.taking_window_raw.toLowerCase().includes(search);
+        const matchesN50 = n50Filter === 'ALL' || s.is_nifty50 === n50Filter;
+        return matchesSearch && matchesN50;
+      });
 
       tbody.innerHTML = filtered.map((s, idx) => `
-        <tr>
+        <tr onclick="openTradeLogModal()" style="cursor: pointer;">
           <td style="font-weight: 700; color: var(--accent-indigo);">Rank ${idx + 1}</td>
           <td>
             <div class="symbol-name">${s.symbol} ${s.is_nifty50 === 'YES' ? '<span class="badge-n50">NIFTY 50</span>' : ''}</div>

@@ -1,8 +1,8 @@
 [
   {
     "rank": 1,
-    "symbol": "12_Quarters_Reports_Case1",
-    "name": "12_Quarters_Reports_Case1 Limited",
+    "symbol": "360ONE",
+    "name": "360ONE Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -20,8 +20,8 @@
   },
   {
     "rank": 2,
-    "symbol": "12_Quarters_Reports_Case2",
-    "name": "12_Quarters_Reports_Case2 Limited",
+    "symbol": "ABB",
+    "name": "ABB Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -39,8 +39,8 @@
   },
   {
     "rank": 3,
-    "symbol": "12_Quarters_Reports_Case3",
-    "name": "12_Quarters_Reports_Case3 Limited",
+    "symbol": "ABCAPITAL",
+    "name": "ABCAPITAL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -58,8 +58,8 @@
   },
   {
     "rank": 4,
-    "symbol": "12_Quarters_Reports_Case4",
-    "name": "12_Quarters_Reports_Case4 Limited",
+    "symbol": "ADANIENSOL",
+    "name": "ADANIENSOL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -77,177 +77,6 @@
   },
   {
     "rank": 5,
-    "symbol": "12_Quarters_Reports_Case5",
-    "name": "12_Quarters_Reports_Case5 Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 6,
-    "symbol": "12_Quarters_Reports_Case6",
-    "name": "12_Quarters_Reports_Case6 Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 7,
-    "symbol": "12_Quarters_Reports_Case7",
-    "name": "12_Quarters_Reports_Case7 Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 8,
-    "symbol": "12_Quarters_Reports_Case8",
-    "name": "12_Quarters_Reports_Case8 Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 9,
-    "symbol": "20MICRONS",
-    "name": "20MICRONS Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 10,
-    "symbol": "360ONE",
-    "name": "360ONE Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 11,
-    "symbol": "ABB",
-    "name": "ABB Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 12,
-    "symbol": "ABCAPITAL",
-    "name": "ABCAPITAL Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 13,
-    "symbol": "ADANIENSOL",
-    "name": "ADANIENSOL Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 14,
     "symbol": "ADANIENT",
     "name": "Adani Enterprises Ltd",
     "is_nifty50": "YES",
@@ -266,9 +95,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 15,
+    "rank": 6,
     "symbol": "ADANIGREEN",
-    "name": "ADANIGREEN Limited",
+    "name": "ADANIGREEN Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -285,7 +114,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 16,
+    "rank": 7,
     "symbol": "ADANIPORTS",
     "name": "Adani Ports & SEZ Ltd",
     "is_nifty50": "YES",
@@ -304,9 +133,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 17,
+    "rank": 8,
     "symbol": "ADANIPOWER",
-    "name": "ADANIPOWER Limited",
+    "name": "ADANIPOWER Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -323,9 +152,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 18,
+    "rank": 9,
     "symbol": "ALKEM",
-    "name": "ALKEM Limited",
+    "name": "ALKEM Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -342,47 +171,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 19,
-    "symbol": "ALLCARGO",
-    "name": "ALLCARGO Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 20,
-    "symbol": "ALMONDZ",
-    "name": "ALMONDZ Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 21,
+    "rank": 10,
     "symbol": "AMBER",
-    "name": "AMBER Limited",
+    "name": "AMBER Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -399,9 +190,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 22,
+    "rank": 11,
     "symbol": "AMBUJACEM",
-    "name": "AMBUJACEM Limited",
+    "name": "AMBUJACEM Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -418,9 +209,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 23,
+    "rank": 12,
     "symbol": "ANGELONE",
-    "name": "ANGELONE Limited",
+    "name": "ANGELONE Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -437,9 +228,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 24,
+    "rank": 13,
     "symbol": "APLAPOLLO",
-    "name": "APLAPOLLO Limited",
+    "name": "APLAPOLLO Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -456,7 +247,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 25,
+    "rank": 14,
     "symbol": "APOLLOHOSP",
     "name": "Apollo Hospitals Enterprise Ltd",
     "is_nifty50": "YES",
@@ -475,9 +266,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 26,
+    "rank": 15,
     "symbol": "ASHOKLEY",
-    "name": "ASHOKLEY Limited",
+    "name": "ASHOKLEY Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -494,7 +285,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 27,
+    "rank": 16,
     "symbol": "ASIANPAINT",
     "name": "Asian Paints Ltd",
     "is_nifty50": "YES",
@@ -513,9 +304,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 28,
+    "rank": 17,
     "symbol": "ASTRAL",
-    "name": "ASTRAL Limited",
+    "name": "ASTRAL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -532,9 +323,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 29,
+    "rank": 18,
     "symbol": "ATHERENERG",
-    "name": "ATHERENERG Limited",
+    "name": "ATHERENERG Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -551,9 +342,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 30,
+    "rank": 19,
     "symbol": "AUBANK",
-    "name": "AUBANK Limited",
+    "name": "AUBANK Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -570,9 +361,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 31,
+    "rank": 20,
     "symbol": "AUROPHARMA",
-    "name": "AUROPHARMA Limited",
+    "name": "AUROPHARMA Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -589,7 +380,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 32,
+    "rank": 21,
     "symbol": "AXISBANK",
     "name": "Axis Bank Ltd",
     "is_nifty50": "YES",
@@ -608,7 +399,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 33,
+    "rank": 22,
     "symbol": "BAJAJ-AUTO",
     "name": "Bajaj Auto Ltd",
     "is_nifty50": "YES",
@@ -627,7 +418,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 34,
+    "rank": 23,
     "symbol": "BAJAJFINSV",
     "name": "Bajaj Finserv Ltd",
     "is_nifty50": "YES",
@@ -646,9 +437,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 35,
+    "rank": 24,
     "symbol": "BAJAJHLDNG",
-    "name": "BAJAJHLDNG Limited",
+    "name": "BAJAJHLDNG Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -665,7 +456,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 36,
+    "rank": 25,
     "symbol": "BAJFINANCE",
     "name": "Bajaj Finance Ltd",
     "is_nifty50": "YES",
@@ -684,9 +475,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 37,
+    "rank": 26,
     "symbol": "BANDHANBNK",
-    "name": "BANDHANBNK Limited",
+    "name": "BANDHANBNK Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -703,9 +494,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 38,
+    "rank": 27,
     "symbol": "BANKBARODA",
-    "name": "BANKBARODA Limited",
+    "name": "BANKBARODA Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -722,9 +513,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 39,
+    "rank": 28,
     "symbol": "BANKINDIA",
-    "name": "BANKINDIA Limited",
+    "name": "BANKINDIA Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -741,9 +532,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 40,
+    "rank": 29,
     "symbol": "BDL",
-    "name": "BDL Limited",
+    "name": "BDL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -760,7 +551,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 41,
+    "rank": 30,
     "symbol": "BEL",
     "name": "Bharat Electronics Ltd",
     "is_nifty50": "YES",
@@ -779,9 +570,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 42,
+    "rank": 31,
     "symbol": "BHARATFORG",
-    "name": "BHARATFORG Limited",
+    "name": "BHARATFORG Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -798,7 +589,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 43,
+    "rank": 32,
     "symbol": "BHARTIARTL",
     "name": "Bharti Airtel Ltd",
     "is_nifty50": "YES",
@@ -817,9 +608,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 44,
+    "rank": 33,
     "symbol": "BHEL",
-    "name": "BHEL Limited",
+    "name": "BHEL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -836,9 +627,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 45,
+    "rank": 34,
     "symbol": "BIOCON",
-    "name": "BIOCON Limited",
+    "name": "BIOCON Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -855,9 +646,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 46,
+    "rank": 35,
     "symbol": "BLUESTARCO",
-    "name": "BLUESTARCO Limited",
+    "name": "BLUESTARCO Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -874,9 +665,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 47,
+    "rank": 36,
     "symbol": "BOSCHLTD",
-    "name": "BOSCHLTD Limited",
+    "name": "BOSCHLTD Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -893,7 +684,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 48,
+    "rank": 37,
     "symbol": "BPCL",
     "name": "Bharat Petroleum Corp Ltd",
     "is_nifty50": "YES",
@@ -912,7 +703,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 49,
+    "rank": 38,
     "symbol": "BRITANNIA",
     "name": "Britannia Industries Ltd",
     "is_nifty50": "YES",
@@ -931,9 +722,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 50,
+    "rank": 39,
     "symbol": "BSE",
-    "name": "BSE Limited",
+    "name": "BSE Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -950,9 +741,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 51,
+    "rank": 40,
     "symbol": "CAMS",
-    "name": "CAMS Limited",
+    "name": "CAMS Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -969,9 +760,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 52,
+    "rank": 41,
     "symbol": "CANBK",
-    "name": "CANBK Limited",
+    "name": "CANBK Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -988,9 +779,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 53,
+    "rank": 42,
     "symbol": "CDSL",
-    "name": "CDSL Limited",
+    "name": "CDSL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1007,9 +798,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 54,
+    "rank": 43,
     "symbol": "CGPOWER",
-    "name": "CGPOWER Limited",
+    "name": "CGPOWER Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1026,9 +817,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 55,
+    "rank": 44,
     "symbol": "CHOLAFIN",
-    "name": "CHOLAFIN Limited",
+    "name": "CHOLAFIN Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1045,7 +836,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 56,
+    "rank": 45,
     "symbol": "CIPLA",
     "name": "Cipla Ltd",
     "is_nifty50": "YES",
@@ -1064,7 +855,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 57,
+    "rank": 46,
     "symbol": "COALINDIA",
     "name": "Coal India Ltd",
     "is_nifty50": "YES",
@@ -1083,9 +874,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 58,
+    "rank": 47,
     "symbol": "COCHINSHIP",
-    "name": "COCHINSHIP Limited",
+    "name": "COCHINSHIP Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1102,9 +893,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 59,
+    "rank": 48,
     "symbol": "COFORGE",
-    "name": "COFORGE Limited",
+    "name": "COFORGE Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1121,9 +912,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 60,
+    "rank": 49,
     "symbol": "COLPAL",
-    "name": "COLPAL Limited",
+    "name": "COLPAL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1140,9 +931,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 61,
+    "rank": 50,
     "symbol": "CONCOR",
-    "name": "CONCOR Limited",
+    "name": "CONCOR Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1159,9 +950,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 62,
+    "rank": 51,
     "symbol": "CROMPTON",
-    "name": "CROMPTON Limited",
+    "name": "CROMPTON Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1178,9 +969,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 63,
+    "rank": 52,
     "symbol": "CUMMINSIND",
-    "name": "CUMMINSIND Limited",
+    "name": "CUMMINSIND Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1197,9 +988,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 64,
+    "rank": 53,
     "symbol": "DABUR",
-    "name": "DABUR Limited",
+    "name": "DABUR Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1216,9 +1007,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 65,
+    "rank": 54,
     "symbol": "DELHIVERY",
-    "name": "DELHIVERY Limited",
+    "name": "DELHIVERY Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1235,7 +1026,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 66,
+    "rank": 55,
     "symbol": "DIVISLAB",
     "name": "Divis Laboratories Ltd",
     "is_nifty50": "YES",
@@ -1254,9 +1045,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 67,
+    "rank": 56,
     "symbol": "DIXON",
-    "name": "DIXON Limited",
+    "name": "DIXON Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1273,9 +1064,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 68,
+    "rank": 57,
     "symbol": "DLF",
-    "name": "DLF Limited",
+    "name": "DLF Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1292,9 +1083,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 69,
+    "rank": 58,
     "symbol": "DMART",
-    "name": "DMART Limited",
+    "name": "DMART Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1311,7 +1102,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 70,
+    "rank": 59,
     "symbol": "DRREDDY",
     "name": "Dr Reddys Laboratories Ltd",
     "is_nifty50": "YES",
@@ -1330,7 +1121,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 71,
+    "rank": 60,
     "symbol": "EICHERMOT",
     "name": "Eicher Motors Ltd",
     "is_nifty50": "YES",
@@ -1349,9 +1140,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 72,
+    "rank": 61,
     "symbol": "ETERNAL",
-    "name": "ETERNAL Limited",
+    "name": "ETERNAL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1368,9 +1159,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 73,
+    "rank": 62,
     "symbol": "FEDERALBNK",
-    "name": "FEDERALBNK Limited",
+    "name": "FEDERALBNK Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1387,9 +1178,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 74,
+    "rank": 63,
     "symbol": "FORCEMOT",
-    "name": "FORCEMOT Limited",
+    "name": "FORCEMOT Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1406,9 +1197,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 75,
+    "rank": 64,
     "symbol": "FORTIS",
-    "name": "FORTIS Limited",
+    "name": "FORTIS Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1425,9 +1216,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 76,
+    "rank": 65,
     "symbol": "GAIL",
-    "name": "GAIL Limited",
+    "name": "GAIL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1444,9 +1235,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 77,
+    "rank": 66,
     "symbol": "GLENMARK",
-    "name": "GLENMARK Limited",
+    "name": "GLENMARK Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1463,9 +1254,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 78,
+    "rank": 67,
     "symbol": "GMRAIRPORT",
-    "name": "GMRAIRPORT Limited",
+    "name": "GMRAIRPORT Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1482,9 +1273,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 79,
+    "rank": 68,
     "symbol": "GODFRYPHLP",
-    "name": "GODFRYPHLP Limited",
+    "name": "GODFRYPHLP Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1501,9 +1292,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 80,
+    "rank": 69,
     "symbol": "GODREJCP",
-    "name": "GODREJCP Limited",
+    "name": "GODREJCP Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1520,9 +1311,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 81,
+    "rank": 70,
     "symbol": "GODREJPROP",
-    "name": "GODREJPROP Limited",
+    "name": "GODREJPROP Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1539,7 +1330,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 82,
+    "rank": 71,
     "symbol": "GRASIM",
     "name": "Grasim Industries Ltd",
     "is_nifty50": "YES",
@@ -1558,9 +1349,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 83,
+    "rank": 72,
     "symbol": "GVT&D",
-    "name": "GVT&D Limited",
+    "name": "GVT&D Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1577,9 +1368,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 84,
+    "rank": 73,
     "symbol": "HAL",
-    "name": "HAL Limited",
+    "name": "HAL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1596,9 +1387,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 85,
+    "rank": 74,
     "symbol": "HAVELLS",
-    "name": "HAVELLS Limited",
+    "name": "HAVELLS Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1615,7 +1406,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 86,
+    "rank": 75,
     "symbol": "HCLTECH",
     "name": "HCL Technologies Ltd",
     "is_nifty50": "YES",
@@ -1634,9 +1425,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 87,
+    "rank": 76,
     "symbol": "HDFCAMC",
-    "name": "HDFCAMC Limited",
+    "name": "HDFCAMC Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1653,7 +1444,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 88,
+    "rank": 77,
     "symbol": "HDFCBANK",
     "name": "HDFC Bank Ltd",
     "is_nifty50": "YES",
@@ -1672,7 +1463,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 89,
+    "rank": 78,
     "symbol": "HDFCLIFE",
     "name": "HDFC Life Insurance Co Ltd",
     "is_nifty50": "YES",
@@ -1691,9 +1482,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 90,
+    "rank": 79,
     "symbol": "HEROMOTOCO",
-    "name": "HEROMOTOCO Limited",
+    "name": "HEROMOTOCO Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1710,7 +1501,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 91,
+    "rank": 80,
     "symbol": "HINDALCO",
     "name": "Hindalco Industries Ltd",
     "is_nifty50": "YES",
@@ -1729,9 +1520,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 92,
+    "rank": 81,
     "symbol": "HINDPETRO",
-    "name": "HINDPETRO Limited",
+    "name": "HINDPETRO Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1748,7 +1539,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 93,
+    "rank": 82,
     "symbol": "HINDUNILVR",
     "name": "Hindustan Unilever Ltd",
     "is_nifty50": "YES",
@@ -1767,9 +1558,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 94,
+    "rank": 83,
     "symbol": "HINDZINC",
-    "name": "HINDZINC Limited",
+    "name": "HINDZINC Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1786,9 +1577,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 95,
+    "rank": 84,
     "symbol": "HYUNDAI",
-    "name": "HYUNDAI Limited",
+    "name": "HYUNDAI Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1805,7 +1596,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 96,
+    "rank": 85,
     "symbol": "ICICIBANK",
     "name": "ICICI Bank Ltd",
     "is_nifty50": "YES",
@@ -1824,9 +1615,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 97,
+    "rank": 86,
     "symbol": "ICICIGI",
-    "name": "ICICIGI Limited",
+    "name": "ICICIGI Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1843,9 +1634,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 98,
+    "rank": 87,
     "symbol": "ICICIPRULI",
-    "name": "ICICIPRULI Limited",
+    "name": "ICICIPRULI Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1862,9 +1653,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 99,
+    "rank": 88,
     "symbol": "IDEA",
-    "name": "IDEA Limited",
+    "name": "IDEA Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1881,9 +1672,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 100,
+    "rank": 89,
     "symbol": "IDFCFIRSTB",
-    "name": "IDFCFIRSTB Limited",
+    "name": "IDFCFIRSTB Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1900,9 +1691,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 101,
+    "rank": 90,
     "symbol": "IEX",
-    "name": "IEX Limited",
+    "name": "IEX Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1919,9 +1710,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 102,
+    "rank": 91,
     "symbol": "INDHOTEL",
-    "name": "INDHOTEL Limited",
+    "name": "INDHOTEL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1938,9 +1729,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 103,
+    "rank": 92,
     "symbol": "INDIANB",
-    "name": "INDIANB Limited",
+    "name": "INDIANB Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1957,7 +1748,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 104,
+    "rank": 93,
     "symbol": "INDIGO",
     "name": "InterGlobe Aviation Ltd",
     "is_nifty50": "YES",
@@ -1976,9 +1767,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 105,
+    "rank": 94,
     "symbol": "INDUSINDBK",
-    "name": "INDUSINDBK Limited",
+    "name": "INDUSINDBK Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -1995,9 +1786,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 106,
+    "rank": 95,
     "symbol": "INDUSTOWER",
-    "name": "INDUSTOWER Limited",
+    "name": "INDUSTOWER Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2014,7 +1805,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 107,
+    "rank": 96,
     "symbol": "INFY",
     "name": "Infosys Ltd",
     "is_nifty50": "YES",
@@ -2033,9 +1824,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 108,
+    "rank": 97,
     "symbol": "INOXWIND",
-    "name": "INOXWIND Limited",
+    "name": "INOXWIND Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2052,9 +1843,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 109,
+    "rank": 98,
     "symbol": "IOC",
-    "name": "IOC Limited",
+    "name": "IOC Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2071,9 +1862,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 110,
+    "rank": 99,
     "symbol": "IREDA",
-    "name": "IREDA Limited",
+    "name": "IREDA Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2090,9 +1881,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 111,
+    "rank": 100,
     "symbol": "IRFC",
-    "name": "IRFC Limited",
+    "name": "IRFC Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2109,7 +1900,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 112,
+    "rank": 101,
     "symbol": "ITC",
     "name": "ITC Ltd",
     "is_nifty50": "YES",
@@ -2128,9 +1919,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 113,
+    "rank": 102,
     "symbol": "JINDALSTEL",
-    "name": "JINDALSTEL Limited",
+    "name": "JINDALSTEL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2147,7 +1938,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 114,
+    "rank": 103,
     "symbol": "JIOFIN",
     "name": "Jio Financial Services Ltd",
     "is_nifty50": "YES",
@@ -2166,9 +1957,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 115,
+    "rank": 104,
     "symbol": "JSWENERGY",
-    "name": "JSWENERGY Limited",
+    "name": "JSWENERGY Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2185,7 +1976,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 116,
+    "rank": 105,
     "symbol": "JSWSTEEL",
     "name": "JSW Steel Ltd",
     "is_nifty50": "YES",
@@ -2204,9 +1995,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 117,
+    "rank": 106,
     "symbol": "JUBLFOOD",
-    "name": "JUBLFOOD Limited",
+    "name": "JUBLFOOD Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2223,9 +2014,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 118,
+    "rank": 107,
     "symbol": "KALYANKJIL",
-    "name": "KALYANKJIL Limited",
+    "name": "KALYANKJIL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2242,9 +2033,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 119,
+    "rank": 108,
     "symbol": "KAYNES",
-    "name": "KAYNES Limited",
+    "name": "KAYNES Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2261,9 +2052,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 120,
+    "rank": 109,
     "symbol": "KEI",
-    "name": "KEI Limited",
+    "name": "KEI Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2280,9 +2071,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 121,
+    "rank": 110,
     "symbol": "KFINTECH",
-    "name": "KFINTECH Limited",
+    "name": "KFINTECH Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2299,7 +2090,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 122,
+    "rank": 111,
     "symbol": "KOTAKBANK",
     "name": "Kotak Mahindra Bank Ltd",
     "is_nifty50": "YES",
@@ -2318,9 +2109,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 123,
+    "rank": 112,
     "symbol": "KPITTECH",
-    "name": "KPITTECH Limited",
+    "name": "KPITTECH Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2337,9 +2128,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 124,
+    "rank": 113,
     "symbol": "LAURUSLABS",
-    "name": "LAURUSLABS Limited",
+    "name": "LAURUSLABS Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2356,9 +2147,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 125,
+    "rank": 114,
     "symbol": "LICHSGFIN",
-    "name": "LICHSGFIN Limited",
+    "name": "LICHSGFIN Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2375,9 +2166,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 126,
+    "rank": 115,
     "symbol": "LICI",
-    "name": "LICI Limited",
+    "name": "LICI Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2394,9 +2185,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 127,
+    "rank": 116,
     "symbol": "LODHA",
-    "name": "LODHA Limited",
+    "name": "LODHA Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2413,7 +2204,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 128,
+    "rank": 117,
     "symbol": "LT",
     "name": "Larsen & Toubro Ltd",
     "is_nifty50": "YES",
@@ -2432,9 +2223,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 129,
+    "rank": 118,
     "symbol": "LTF",
-    "name": "LTF Limited",
+    "name": "LTF Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2451,28 +2242,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 130,
-    "symbol": "LTIM",
-    "name": "LTIM Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 131,
+    "rank": 119,
     "symbol": "LTM",
-    "name": "LTM Limited",
+    "name": "LTM Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2489,9 +2261,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 132,
+    "rank": 120,
     "symbol": "LUPIN",
-    "name": "LUPIN Limited",
+    "name": "LUPIN Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2508,7 +2280,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 133,
+    "rank": 121,
     "symbol": "M&M",
     "name": "Mahindra & Mahindra Ltd",
     "is_nifty50": "YES",
@@ -2527,9 +2299,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 134,
+    "rank": 122,
     "symbol": "MAHABANK",
-    "name": "MAHABANK Limited",
+    "name": "MAHABANK Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2546,9 +2318,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 135,
+    "rank": 123,
     "symbol": "MANAPPURAM",
-    "name": "MANAPPURAM Limited",
+    "name": "MANAPPURAM Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2565,9 +2337,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 136,
+    "rank": 124,
     "symbol": "MANKIND",
-    "name": "MANKIND Limited",
+    "name": "MANKIND Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2584,9 +2356,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 137,
+    "rank": 125,
     "symbol": "MARICO",
-    "name": "MARICO Limited",
+    "name": "MARICO Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2603,7 +2375,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 138,
+    "rank": 126,
     "symbol": "MARUTI",
     "name": "Maruti Suzuki India Ltd",
     "is_nifty50": "YES",
@@ -2622,9 +2394,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 139,
+    "rank": 127,
     "symbol": "MAXHEALTH",
-    "name": "MAXHEALTH Limited",
+    "name": "MAXHEALTH Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2641,9 +2413,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 140,
+    "rank": 128,
     "symbol": "MAZDOCK",
-    "name": "MAZDOCK Limited",
+    "name": "MAZDOCK Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2660,9 +2432,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 141,
+    "rank": 129,
     "symbol": "MCX",
-    "name": "MCX Limited",
+    "name": "MCX Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2679,9 +2451,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 142,
+    "rank": 130,
     "symbol": "MFSL",
-    "name": "MFSL Limited",
+    "name": "MFSL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2698,9 +2470,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 143,
+    "rank": 131,
     "symbol": "MOTHERSON",
-    "name": "MOTHERSON Limited",
+    "name": "MOTHERSON Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2717,9 +2489,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 144,
+    "rank": 132,
     "symbol": "MOTILALOFS",
-    "name": "MOTILALOFS Limited",
+    "name": "MOTILALOFS Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2736,9 +2508,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 145,
+    "rank": 133,
     "symbol": "MPHASIS",
-    "name": "MPHASIS Limited",
+    "name": "MPHASIS Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2755,9 +2527,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 146,
+    "rank": 134,
     "symbol": "MUTHOOTFIN",
-    "name": "MUTHOOTFIN Limited",
+    "name": "MUTHOOTFIN Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2774,9 +2546,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 147,
+    "rank": 135,
     "symbol": "NAM-INDIA",
-    "name": "NAM-INDIA Limited",
+    "name": "NAM-INDIA Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2793,9 +2565,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 148,
+    "rank": 136,
     "symbol": "NATIONALUM",
-    "name": "NATIONALUM Limited",
+    "name": "NATIONALUM Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2812,9 +2584,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 149,
+    "rank": 137,
     "symbol": "NAUKRI",
-    "name": "NAUKRI Limited",
+    "name": "NAUKRI Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2831,9 +2603,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 150,
+    "rank": 138,
     "symbol": "NBCC",
-    "name": "NBCC Limited",
+    "name": "NBCC Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2850,7 +2622,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 151,
+    "rank": 139,
     "symbol": "NESTLEIND",
     "name": "Nestle India Ltd",
     "is_nifty50": "YES",
@@ -2869,9 +2641,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 152,
+    "rank": 140,
     "symbol": "NHPC",
-    "name": "NHPC Limited",
+    "name": "NHPC Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2888,9 +2660,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 153,
+    "rank": 141,
     "symbol": "NMDC",
-    "name": "NMDC Limited",
+    "name": "NMDC Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2907,7 +2679,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 154,
+    "rank": 142,
     "symbol": "NTPC",
     "name": "NTPC Ltd",
     "is_nifty50": "YES",
@@ -2926,9 +2698,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 155,
+    "rank": 143,
     "symbol": "NYKAA",
-    "name": "NYKAA Limited",
+    "name": "NYKAA Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2945,28 +2717,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 156,
-    "symbol": "New folder",
-    "name": "New folder Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 157,
+    "rank": 144,
     "symbol": "OBEROIRLTY",
-    "name": "OBEROIRLTY Limited",
+    "name": "OBEROIRLTY Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -2983,9 +2736,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 158,
+    "rank": 145,
     "symbol": "OFSS",
-    "name": "OFSS Limited",
+    "name": "OFSS Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3002,9 +2755,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 159,
+    "rank": 146,
     "symbol": "OIL",
-    "name": "OIL Limited",
+    "name": "OIL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3021,7 +2774,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 160,
+    "rank": 147,
     "symbol": "ONGC",
     "name": "Oil & Natural Gas Corp Ltd",
     "is_nifty50": "YES",
@@ -3040,9 +2793,256 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 161,
+    "rank": 148,
     "symbol": "PAGEIND",
-    "name": "PAGEIND Limited",
+    "name": "PAGEIND Ltd",
+    "is_nifty50": "NO",
+    "spot_ltp": 1000.0,
+    "lot_size": 500,
+    "margin_20pct": 100000.0,
+    "taking_window_raw": "T-5 to T+3",
+    "entry_lead_days": 5,
+    "exit_hold_days": 3,
+    "entry_date_sample": "16-Oct-2026 (Fri)",
+    "exit_date_sample": "26-Oct-2026 (Mon)",
+    "q_win_rate": 75.0,
+    "h_win_rate": 71.43,
+    "h_est_pnl": 17500.0,
+    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
+    "option_play": "1% ITM CALL / PUT Option (30% SL)"
+  },
+  {
+    "rank": 149,
+    "symbol": "PATANJALI",
+    "name": "PATANJALI Ltd",
+    "is_nifty50": "NO",
+    "spot_ltp": 1000.0,
+    "lot_size": 500,
+    "margin_20pct": 100000.0,
+    "taking_window_raw": "T-5 to T+3",
+    "entry_lead_days": 5,
+    "exit_hold_days": 3,
+    "entry_date_sample": "16-Oct-2026 (Fri)",
+    "exit_date_sample": "26-Oct-2026 (Mon)",
+    "q_win_rate": 75.0,
+    "h_win_rate": 71.43,
+    "h_est_pnl": 17500.0,
+    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
+    "option_play": "1% ITM CALL / PUT Option (30% SL)"
+  },
+  {
+    "rank": 150,
+    "symbol": "PAYTM",
+    "name": "PAYTM Ltd",
+    "is_nifty50": "NO",
+    "spot_ltp": 1000.0,
+    "lot_size": 500,
+    "margin_20pct": 100000.0,
+    "taking_window_raw": "T-5 to T+3",
+    "entry_lead_days": 5,
+    "exit_hold_days": 3,
+    "entry_date_sample": "16-Oct-2026 (Fri)",
+    "exit_date_sample": "26-Oct-2026 (Mon)",
+    "q_win_rate": 75.0,
+    "h_win_rate": 71.43,
+    "h_est_pnl": 17500.0,
+    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
+    "option_play": "1% ITM CALL / PUT Option (30% SL)"
+  },
+  {
+    "rank": 151,
+    "symbol": "PERSISTENT",
+    "name": "PERSISTENT Ltd",
+    "is_nifty50": "NO",
+    "spot_ltp": 1000.0,
+    "lot_size": 500,
+    "margin_20pct": 100000.0,
+    "taking_window_raw": "T-5 to T+3",
+    "entry_lead_days": 5,
+    "exit_hold_days": 3,
+    "entry_date_sample": "16-Oct-2026 (Fri)",
+    "exit_date_sample": "26-Oct-2026 (Mon)",
+    "q_win_rate": 75.0,
+    "h_win_rate": 71.43,
+    "h_est_pnl": 17500.0,
+    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
+    "option_play": "1% ITM CALL / PUT Option (30% SL)"
+  },
+  {
+    "rank": 152,
+    "symbol": "PETRONET",
+    "name": "PETRONET Ltd",
+    "is_nifty50": "NO",
+    "spot_ltp": 1000.0,
+    "lot_size": 500,
+    "margin_20pct": 100000.0,
+    "taking_window_raw": "T-5 to T+3",
+    "entry_lead_days": 5,
+    "exit_hold_days": 3,
+    "entry_date_sample": "16-Oct-2026 (Fri)",
+    "exit_date_sample": "26-Oct-2026 (Mon)",
+    "q_win_rate": 75.0,
+    "h_win_rate": 71.43,
+    "h_est_pnl": 17500.0,
+    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
+    "option_play": "1% ITM CALL / PUT Option (30% SL)"
+  },
+  {
+    "rank": 153,
+    "symbol": "PFC",
+    "name": "PFC Ltd",
+    "is_nifty50": "NO",
+    "spot_ltp": 1000.0,
+    "lot_size": 500,
+    "margin_20pct": 100000.0,
+    "taking_window_raw": "T-5 to T+3",
+    "entry_lead_days": 5,
+    "exit_hold_days": 3,
+    "entry_date_sample": "16-Oct-2026 (Fri)",
+    "exit_date_sample": "26-Oct-2026 (Mon)",
+    "q_win_rate": 75.0,
+    "h_win_rate": 71.43,
+    "h_est_pnl": 17500.0,
+    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
+    "option_play": "1% ITM CALL / PUT Option (30% SL)"
+  },
+  {
+    "rank": 154,
+    "symbol": "PGEL",
+    "name": "PGEL Ltd",
+    "is_nifty50": "NO",
+    "spot_ltp": 1000.0,
+    "lot_size": 500,
+    "margin_20pct": 100000.0,
+    "taking_window_raw": "T-5 to T+3",
+    "entry_lead_days": 5,
+    "exit_hold_days": 3,
+    "entry_date_sample": "16-Oct-2026 (Fri)",
+    "exit_date_sample": "26-Oct-2026 (Mon)",
+    "q_win_rate": 75.0,
+    "h_win_rate": 71.43,
+    "h_est_pnl": 17500.0,
+    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
+    "option_play": "1% ITM CALL / PUT Option (30% SL)"
+  },
+  {
+    "rank": 155,
+    "symbol": "PHOENIXLTD",
+    "name": "PHOENIXLTD Ltd",
+    "is_nifty50": "NO",
+    "spot_ltp": 1000.0,
+    "lot_size": 500,
+    "margin_20pct": 100000.0,
+    "taking_window_raw": "T-5 to T+3",
+    "entry_lead_days": 5,
+    "exit_hold_days": 3,
+    "entry_date_sample": "16-Oct-2026 (Fri)",
+    "exit_date_sample": "26-Oct-2026 (Mon)",
+    "q_win_rate": 75.0,
+    "h_win_rate": 71.43,
+    "h_est_pnl": 17500.0,
+    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
+    "option_play": "1% ITM CALL / PUT Option (30% SL)"
+  },
+  {
+    "rank": 156,
+    "symbol": "PIDILITIND",
+    "name": "PIDILITIND Ltd",
+    "is_nifty50": "NO",
+    "spot_ltp": 1000.0,
+    "lot_size": 500,
+    "margin_20pct": 100000.0,
+    "taking_window_raw": "T-5 to T+3",
+    "entry_lead_days": 5,
+    "exit_hold_days": 3,
+    "entry_date_sample": "16-Oct-2026 (Fri)",
+    "exit_date_sample": "26-Oct-2026 (Mon)",
+    "q_win_rate": 75.0,
+    "h_win_rate": 71.43,
+    "h_est_pnl": 17500.0,
+    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
+    "option_play": "1% ITM CALL / PUT Option (30% SL)"
+  },
+  {
+    "rank": 157,
+    "symbol": "PIIND",
+    "name": "PIIND Ltd",
+    "is_nifty50": "NO",
+    "spot_ltp": 1000.0,
+    "lot_size": 500,
+    "margin_20pct": 100000.0,
+    "taking_window_raw": "T-5 to T+3",
+    "entry_lead_days": 5,
+    "exit_hold_days": 3,
+    "entry_date_sample": "16-Oct-2026 (Fri)",
+    "exit_date_sample": "26-Oct-2026 (Mon)",
+    "q_win_rate": 75.0,
+    "h_win_rate": 71.43,
+    "h_est_pnl": 17500.0,
+    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
+    "option_play": "1% ITM CALL / PUT Option (30% SL)"
+  },
+  {
+    "rank": 158,
+    "symbol": "PNB",
+    "name": "PNB Ltd",
+    "is_nifty50": "NO",
+    "spot_ltp": 1000.0,
+    "lot_size": 500,
+    "margin_20pct": 100000.0,
+    "taking_window_raw": "T-5 to T+3",
+    "entry_lead_days": 5,
+    "exit_hold_days": 3,
+    "entry_date_sample": "16-Oct-2026 (Fri)",
+    "exit_date_sample": "26-Oct-2026 (Mon)",
+    "q_win_rate": 75.0,
+    "h_win_rate": 71.43,
+    "h_est_pnl": 17500.0,
+    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
+    "option_play": "1% ITM CALL / PUT Option (30% SL)"
+  },
+  {
+    "rank": 159,
+    "symbol": "PNBHOUSING",
+    "name": "PNBHOUSING Ltd",
+    "is_nifty50": "NO",
+    "spot_ltp": 1000.0,
+    "lot_size": 500,
+    "margin_20pct": 100000.0,
+    "taking_window_raw": "T-5 to T+3",
+    "entry_lead_days": 5,
+    "exit_hold_days": 3,
+    "entry_date_sample": "16-Oct-2026 (Fri)",
+    "exit_date_sample": "26-Oct-2026 (Mon)",
+    "q_win_rate": 75.0,
+    "h_win_rate": 71.43,
+    "h_est_pnl": 17500.0,
+    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
+    "option_play": "1% ITM CALL / PUT Option (30% SL)"
+  },
+  {
+    "rank": 160,
+    "symbol": "POLICYBZR",
+    "name": "POLICYBZR Ltd",
+    "is_nifty50": "NO",
+    "spot_ltp": 1000.0,
+    "lot_size": 500,
+    "margin_20pct": 100000.0,
+    "taking_window_raw": "T-5 to T+3",
+    "entry_lead_days": 5,
+    "exit_hold_days": 3,
+    "entry_date_sample": "16-Oct-2026 (Fri)",
+    "exit_date_sample": "26-Oct-2026 (Mon)",
+    "q_win_rate": 75.0,
+    "h_win_rate": 71.43,
+    "h_est_pnl": 17500.0,
+    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
+    "option_play": "1% ITM CALL / PUT Option (30% SL)"
+  },
+  {
+    "rank": 161,
+    "symbol": "POLYCAB",
+    "name": "POLYCAB Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3060,253 +3060,6 @@
   },
   {
     "rank": 162,
-    "symbol": "PATANJALI",
-    "name": "PATANJALI Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 163,
-    "symbol": "PAYTM",
-    "name": "PAYTM Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 164,
-    "symbol": "PERSISTENT",
-    "name": "PERSISTENT Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 165,
-    "symbol": "PETRONET",
-    "name": "PETRONET Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 166,
-    "symbol": "PFC",
-    "name": "PFC Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 167,
-    "symbol": "PGEL",
-    "name": "PGEL Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 168,
-    "symbol": "PHOENIXLTD",
-    "name": "PHOENIXLTD Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 169,
-    "symbol": "PIDILITIND",
-    "name": "PIDILITIND Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 170,
-    "symbol": "PIIND",
-    "name": "PIIND Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 171,
-    "symbol": "PNB",
-    "name": "PNB Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 172,
-    "symbol": "PNBHOUSING",
-    "name": "PNBHOUSING Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 173,
-    "symbol": "POLICYBZR",
-    "name": "POLICYBZR Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 174,
-    "symbol": "POLYCAB",
-    "name": "POLYCAB Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 175,
     "symbol": "POWERGRID",
     "name": "Power Grid Corporation of India Ltd",
     "is_nifty50": "YES",
@@ -3325,9 +3078,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 176,
+    "rank": 163,
     "symbol": "POWERINDIA",
-    "name": "POWERINDIA Limited",
+    "name": "POWERINDIA Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3344,9 +3097,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 177,
+    "rank": 164,
     "symbol": "PREMIERENE",
-    "name": "PREMIERENE Limited",
+    "name": "PREMIERENE Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3363,9 +3116,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 178,
+    "rank": 165,
     "symbol": "PRESTIGE",
-    "name": "PRESTIGE Limited",
+    "name": "PRESTIGE Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3382,28 +3135,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 179,
-    "symbol": "RACE",
-    "name": "RACE Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 180,
+    "rank": 166,
     "symbol": "RADICO",
-    "name": "RADICO Limited",
+    "name": "RADICO Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3420,9 +3154,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 181,
+    "rank": 167,
     "symbol": "RBLBANK",
-    "name": "RBLBANK Limited",
+    "name": "RBLBANK Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3439,9 +3173,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 182,
+    "rank": 168,
     "symbol": "RECLTD",
-    "name": "RECLTD Limited",
+    "name": "RECLTD Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3458,26 +3192,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 183,
-    "symbol": "RELIABLE",
-    "name": "RELIABLE Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 184,
+    "rank": 169,
     "symbol": "RELIANCE",
     "name": "Reliance Industries Ltd",
     "is_nifty50": "YES",
@@ -3496,9 +3211,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 185,
+    "rank": 170,
     "symbol": "RVNL",
-    "name": "RVNL Limited",
+    "name": "RVNL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3515,9 +3230,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 186,
+    "rank": 171,
     "symbol": "SAGILITY",
-    "name": "SAGILITY Limited",
+    "name": "SAGILITY Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3534,9 +3249,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 187,
+    "rank": 172,
     "symbol": "SAIL",
-    "name": "SAIL Limited",
+    "name": "SAIL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3553,9 +3268,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 188,
+    "rank": 173,
     "symbol": "SBICARD",
-    "name": "SBICARD Limited",
+    "name": "SBICARD Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3572,9 +3287,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 189,
+    "rank": 174,
     "symbol": "SBILIFE",
-    "name": "SBILIFE Limited",
+    "name": "SBILIFE Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3591,7 +3306,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 190,
+    "rank": 175,
     "symbol": "SBIN",
     "name": "State Bank of India",
     "is_nifty50": "YES",
@@ -3610,9 +3325,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 191,
+    "rank": 176,
     "symbol": "SHREECEM",
-    "name": "SHREECEM Limited",
+    "name": "SHREECEM Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3629,7 +3344,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 192,
+    "rank": 177,
     "symbol": "SHRIRAMFIN",
     "name": "Shriram Finance Ltd",
     "is_nifty50": "YES",
@@ -3648,9 +3363,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 193,
+    "rank": 178,
     "symbol": "SIEMENS",
-    "name": "SIEMENS Limited",
+    "name": "SIEMENS Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3667,9 +3382,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 194,
+    "rank": 179,
     "symbol": "SOLARINDS",
-    "name": "SOLARINDS Limited",
+    "name": "SOLARINDS Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3686,9 +3401,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 195,
+    "rank": 180,
     "symbol": "SONACOMS",
-    "name": "SONACOMS Limited",
+    "name": "SONACOMS Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3705,9 +3420,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 196,
+    "rank": 181,
     "symbol": "SRF",
-    "name": "SRF Limited",
+    "name": "SRF Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3724,7 +3439,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 197,
+    "rank": 182,
     "symbol": "SUNPHARMA",
     "name": "Sun Pharmaceutical Industries Ltd",
     "is_nifty50": "YES",
@@ -3743,9 +3458,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 198,
+    "rank": 183,
     "symbol": "SUPREMEIND",
-    "name": "SUPREMEIND Limited",
+    "name": "SUPREMEIND Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3762,9 +3477,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 199,
+    "rank": 184,
     "symbol": "SUZLON",
-    "name": "SUZLON Limited",
+    "name": "SUZLON Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3781,9 +3496,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 200,
+    "rank": 185,
     "symbol": "SWIGGY",
-    "name": "SWIGGY Limited",
+    "name": "SWIGGY Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3800,7 +3515,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 201,
+    "rank": 186,
     "symbol": "TATACONSUM",
     "name": "Tata Consumer Products Ltd",
     "is_nifty50": "YES",
@@ -3819,9 +3534,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 202,
+    "rank": 187,
     "symbol": "TATAELXSI",
-    "name": "TATAELXSI Limited",
+    "name": "TATAELXSI Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3838,7 +3553,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 203,
+    "rank": 188,
     "symbol": "TATAMOTORS",
     "name": "Tata Motors Ltd",
     "is_nifty50": "YES",
@@ -3857,9 +3572,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 204,
+    "rank": 189,
     "symbol": "TATAPOWER",
-    "name": "TATAPOWER Limited",
+    "name": "TATAPOWER Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3876,7 +3591,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 205,
+    "rank": 190,
     "symbol": "TATASTEEL",
     "name": "Tata Steel Ltd",
     "is_nifty50": "YES",
@@ -3895,7 +3610,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 206,
+    "rank": 191,
     "symbol": "TCS",
     "name": "Tata Consultancy Services Ltd",
     "is_nifty50": "YES",
@@ -3914,7 +3629,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 207,
+    "rank": 192,
     "symbol": "TECHM",
     "name": "Tech Mahindra Ltd",
     "is_nifty50": "YES",
@@ -3933,9 +3648,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 208,
+    "rank": 193,
     "symbol": "TIINDIA",
-    "name": "TIINDIA Limited",
+    "name": "TIINDIA Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3952,7 +3667,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 209,
+    "rank": 194,
     "symbol": "TITAN",
     "name": "Titan Company Ltd",
     "is_nifty50": "YES",
@@ -3971,9 +3686,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 210,
+    "rank": 195,
     "symbol": "TMPV",
-    "name": "TMPV Limited",
+    "name": "TMPV Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -3990,9 +3705,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 211,
+    "rank": 196,
     "symbol": "TORNTPHARM",
-    "name": "TORNTPHARM Limited",
+    "name": "TORNTPHARM Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -4009,7 +3724,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 212,
+    "rank": 197,
     "symbol": "TRENT",
     "name": "Trent Ltd",
     "is_nifty50": "YES",
@@ -4028,9 +3743,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 213,
+    "rank": 198,
     "symbol": "TVSMOTOR",
-    "name": "TVSMOTOR Limited",
+    "name": "TVSMOTOR Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -4047,7 +3762,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 214,
+    "rank": 199,
     "symbol": "ULTRACEMCO",
     "name": "UltraTech Cement Ltd",
     "is_nifty50": "YES",
@@ -4066,9 +3781,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 215,
+    "rank": 200,
     "symbol": "UNIONBANK",
-    "name": "UNIONBANK Limited",
+    "name": "UNIONBANK Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -4085,9 +3800,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 216,
+    "rank": 201,
     "symbol": "UNITDSPR",
-    "name": "UNITDSPR Limited",
+    "name": "UNITDSPR Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -4104,9 +3819,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 217,
+    "rank": 202,
     "symbol": "UNOMINDA",
-    "name": "UNOMINDA Limited",
+    "name": "UNOMINDA Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -4123,9 +3838,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 218,
+    "rank": 203,
     "symbol": "UPL",
-    "name": "UPL Limited",
+    "name": "UPL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -4142,9 +3857,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 219,
+    "rank": 204,
     "symbol": "VBL",
-    "name": "VBL Limited",
+    "name": "VBL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -4161,9 +3876,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 220,
+    "rank": 205,
     "symbol": "VEDL",
-    "name": "VEDL Limited",
+    "name": "VEDL Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -4180,9 +3895,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 221,
+    "rank": 206,
     "symbol": "VMM",
-    "name": "VMM Limited",
+    "name": "VMM Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -4199,9 +3914,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 222,
+    "rank": 207,
     "symbol": "VOLTAS",
-    "name": "VOLTAS Limited",
+    "name": "VOLTAS Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -4218,9 +3933,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 223,
+    "rank": 208,
     "symbol": "WAAREEENER",
-    "name": "WAAREEENER Limited",
+    "name": "WAAREEENER Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -4237,7 +3952,7 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 224,
+    "rank": 209,
     "symbol": "WIPRO",
     "name": "Wipro Ltd",
     "is_nifty50": "YES",
@@ -4256,9 +3971,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 225,
+    "rank": 210,
     "symbol": "YESBANK",
-    "name": "YESBANK Limited",
+    "name": "YESBANK Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,
@@ -4275,47 +3990,9 @@
     "option_play": "1% ITM CALL / PUT Option (30% SL)"
   },
   {
-    "rank": 226,
+    "rank": 211,
     "symbol": "ZYDUSLIFE",
-    "name": "ZYDUSLIFE Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 227,
-    "symbol": "new data",
-    "name": "new data Limited",
-    "is_nifty50": "NO",
-    "spot_ltp": 1000.0,
-    "lot_size": 500,
-    "margin_20pct": 100000.0,
-    "taking_window_raw": "T-5 to T+3",
-    "entry_lead_days": 5,
-    "exit_hold_days": 3,
-    "entry_date_sample": "16-Oct-2026 (Fri)",
-    "exit_date_sample": "26-Oct-2026 (Mon)",
-    "q_win_rate": 75.0,
-    "h_win_rate": 71.43,
-    "h_est_pnl": 17500.0,
-    "best_strategy": "Empirical Pre-Event Run-up (LONG / SHORT)",
-    "option_play": "1% ITM CALL / PUT Option (30% SL)"
-  },
-  {
-    "rank": 228,
-    "symbol": "spot_parquet",
-    "name": "spot_parquet Limited",
+    "name": "ZYDUSLIFE Ltd",
     "is_nifty50": "NO",
     "spot_ltp": 1000.0,
     "lot_size": 500,

@@ -2,7 +2,6 @@ import os
 import sys
 import json
 import pathlib
-import datetime
 import pandas as pd
 import numpy as np
 
@@ -10,13 +9,15 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 ROOT = pathlib.Path('D:/behaviour analysis')
 PRICE_CACHE = ROOT / 'processed' / 'price_cache'
+OI_DATA = ROOT / 'OI_DATA'
 DATA_DIR = ROOT / 'dashboard_data'
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 print("==========================================================================================")
-print("BUILDING REAL EMPIRICAL DASHBOARD JSON DATASETS WITH COMPLETE 4-YEAR TRADE LOGS (2022-2025)")
+print("FAST REGENERATION OF CLEAN F&O DATASETS WITH EXACT NIFTY 50 STOCKS")
 print("==========================================================================================")
 
+# Official Nifty 50 Stocks Specs (50 Stocks)
 nifty50_specs = {
     'RELIANCE': {'name': 'Reliance Industries Ltd', 'lot': 250},
     'HDFCBANK': {'name': 'HDFC Bank Ltd', 'lot': 550},
@@ -70,7 +71,15 @@ nifty50_specs = {
     'HDFCLIFE': {'name': 'HDFC Life Insurance Co Ltd', 'lot': 1100}
 }
 
-# Complete 17 NSE Trading Holidays & Historical Target Dates
+# Discover exact 211 F&O Symbols from OI_DATA
+if OI_DATA.exists():
+    fo_211_symbols = sorted([e.name for e in os.scandir(OI_DATA) if e.is_dir() and not e.name.startswith('.')])
+else:
+    fo_211_symbols = list(nifty50_specs.keys())
+
+print(f"Discovered {len(fo_211_symbols)} F&O Symbols from OI_DATA.")
+
+# 17 Holidays Setup
 all_holidays = [
     {'id': 'republic', 'name': 'Republic Day', 'dates': {2022: '2022-01-26', 2023: '2023-01-26', 2024: '2024-01-26', 2025: '2025-01-26'}, 'date_str': '26-Jan-2026 (Mon)', 'desc': 'Pre-Union Budget & Republic Day national rally'},
     {'id': 'mahashivratri', 'name': 'Mahashivratri', 'dates': {2022: '2022-03-01', 2023: '2023-02-18', 2024: '2024-03-08', 2025: '2025-02-26'}, 'date_str': '03-Mar-2026 (Tue)', 'desc': 'Festival accumulation momentum play'},
@@ -91,7 +100,7 @@ all_holidays = [
     {'id': 'christmas', 'name': 'Christmas & Year-End', 'dates': {2022: '2022-12-25', 2023: '2023-12-25', 2024: '2024-12-25', 2025: '2025-12-25'}, 'date_str': '25-Dec-2026 (Fri)', 'desc': 'Global FII year-end book closing & tax loss harvesting'}
 ]
 
-# Load Price Data for All Nifty 50 Stocks
+# Load Price Data for Nifty 50 Stocks
 stock_data_cache = {}
 for sym in nifty50_specs:
     csv_file = PRICE_CACHE / f"{sym}.csv"
@@ -103,9 +112,7 @@ for sym in nifty50_specs:
         adj_list = df['adj'].astype(float).tolist()
         stock_data_cache[sym] = (dates_list, adj_list)
 
-candidate_windows = [(2,1), (3,2), (4,2), (5,3), (6,4), (7,5), (4,5), (5,5), (3,5), (6,2), (2,4), (5,2)]
-
-def fast_backtest(dates_list, adj_list, dates_dict, n_back, m_fwd, direction='LONG', lot=100):
+def fast_backtest(dates_list, adj_list, dates_dict, direction='LONG', lot=100):
     trades = []
     for yr, h_date_str in dates_dict.items():
         target_dt = pd.to_datetime(h_date_str)
@@ -115,8 +122,8 @@ def fast_backtest(dates_list, adj_list, dates_dict, n_back, m_fwd, direction='LO
                 idx = i
             else:
                 break
-        entry_idx = max(0, idx - n_back)
-        exit_idx = min(len(dates_list) - 1, idx + m_fwd)
+        entry_idx = max(0, idx - 4)
+        exit_idx = min(len(dates_list) - 1, idx + 4)
         
         entry_p = adj_list[entry_idx]
         exit_p = adj_list[exit_idx]
@@ -142,46 +149,29 @@ def fast_backtest(dates_list, adj_list, dates_dict, n_back, m_fwd, direction='LO
     wins = sum(1 for t in trades if t['status'] == 'WIN')
     wr = (wins / len(trades) * 100.0) if trades else 0.0
     tot_pnl = sum(t['pnl'] for t in trades)
-    avg_ret = np.mean([t['ret_pct'] for t in trades]) if trades else 0.0
     
     return {
-        'n': n_back, 'm': m_fwd, 'direction': direction,
-        'wr': round(wr, 2), 'tot_pnl': round(tot_pnl, 2), 'avg_ret': round(avg_ret, 2),
+        'n': 4, 'm': 4, 'direction': direction,
+        'wr': round(wr, 2), 'tot_pnl': round(tot_pnl, 2),
         'trades': trades
     }
 
-def find_best_behavior_strategy_fast(dates_list, adj_list, dates_dict, lot=100):
-    best_res = None
-    max_score = -999999999
-    for direction in ['LONG', 'SHORT']:
-        for n, m in candidate_windows:
-            res = fast_backtest(dates_list, adj_list, dates_dict, n, m, direction, lot)
-            if res:
-                score = res['tot_pnl'] + (res['wr'] * 1000)
-                if score > max_score:
-                    max_score = score
-                    best_res = res
-    return best_res
-
-# Process All 17 Holidays & Build Real JSON Dataset
+# 1. Generate Holidays Dataset
 holidays_dataset = []
-
-all_dirs = sorted([d for d in os.listdir(ROOT) if os.path.isdir(ROOT / d) and not d.startswith('.') and not d.startswith('_') and d not in ['processed', 'scratch', 'docs', 'balance_sheet', 'cash_flow', 'pnl', 'quarterly', 'ratios', 'OI_DATA', 'options_parquet', '12_Quarters_Reports', 'Case1_Quarterly_Reports', 'NSE_17_Holidays_Past_4Years_Reports', '17_NSE_Holidays_Reports', 'Nifty50_Futures_Holiday_TradeLogs_Past_4Years', 'dashboard_data']])
-
 for h in all_holidays:
     h_trades_list = []
     stock_summary_list = []
-    
     trade_id_counter = 1
     
     for sym, spec in nifty50_specs.items():
         if sym not in stock_data_cache:
             continue
         dates_list, adj_list = stock_data_cache[sym]
-        best_strat = find_best_behavior_strategy_fast(dates_list, adj_list, h['dates'], spec['lot'])
-        if not best_strat:
-            continue
-            
+        
+        res_long = fast_backtest(dates_list, adj_list, h['dates'], 'LONG', spec['lot'])
+        res_short = fast_backtest(dates_list, adj_list, h['dates'], 'SHORT', spec['lot'])
+        best_strat = res_long if res_long['tot_pnl'] >= res_short['tot_pnl'] else res_short
+        
         n_days = best_strat['n']
         m_days = best_strat['m']
         direction = best_strat['direction']
@@ -215,7 +205,6 @@ for h in all_holidays:
             }
             h_trades_list.append(t_obj)
             sym_pnl_by_yr[yr] = tr['pnl']
-            trade_counter = trade_id_counter
             
         trade_id_counter += 1
         
@@ -223,7 +212,7 @@ for h in all_holidays:
             'symbol': sym,
             'name': spec['name'],
             'is_nifty50': 'YES',
-            'spot_ltp': adj_list[-1] if adj_list else 1000.0,
+            'spot_ltp': round(adj_list[-1], 2) if adj_list else 1000.0,
             'lot_size': spec['lot'],
             'margin_20pct': round((adj_list[-1] if adj_list else 1000.0) * spec['lot'] * 0.20, 2),
             'window': f"T-{n_days} to T+{m_days}",
@@ -239,7 +228,6 @@ for h in all_holidays:
             'total_4y_pnl': best_strat['tot_pnl']
         })
         
-    # Rank stocks for this holiday by total 4-year PnL descending
     stock_summary_list = sorted(stock_summary_list, key=lambda x: x['total_4y_pnl'], reverse=True)
     for r_idx, s in enumerate(stock_summary_list, 1):
         s['rank'] = r_idx
@@ -250,7 +238,6 @@ for h in all_holidays:
     avg_wr_h = round((wins_h / tot_trades_h * 100.0), 2) if tot_trades_h > 0 else 0.0
     tot_pnl_h = round(sum(t['pnl'] for t in h_trades_list), 2)
     
-    # Majority bias
     longs_cnt = sum(1 for s in stock_summary_list if s['direction'] == 'LONG')
     shorts_cnt = len(stock_summary_list) - longs_cnt
     dominant_bias = "LONG" if longs_cnt >= shorts_cnt else "SHORT"
@@ -273,13 +260,14 @@ for h in all_holidays:
 
 with open(DATA_DIR / 'holidays_dataset.json', 'w', encoding='utf-8') as f:
     json.dump(holidays_dataset, f, indent=2)
-print("Saved real empirical holidays_dataset.json with 200 trade logs per holiday.")
+print("Saved holidays_dataset.json successfully.")
 
-# Save 211 F&O Stocks Master JSON
+# 2. Generate 211 F&O Stocks Master JSON
 fo_stocks_211 = []
-for idx, sym in enumerate(all_dirs, 1):
+for idx, sym in enumerate(fo_211_symbols, 1):
     is_n50 = sym in nifty50_specs
     lot = nifty50_specs[sym]['lot'] if is_n50 else 500
+    name = nifty50_specs[sym]['name'] if is_n50 else f"{sym} Ltd"
     dates_list, adj_list = stock_data_cache.get(sym, ([], []))
     ltp = round(adj_list[-1], 2) if adj_list else 1000.0
     margin = round(ltp * lot * 0.20, 2)
@@ -287,7 +275,7 @@ for idx, sym in enumerate(all_dirs, 1):
     fo_stocks_211.append({
         "rank": idx,
         "symbol": sym,
-        "name": nifty50_specs[sym]['name'] if is_n50 else f"{sym} Limited",
+        "name": name,
         "is_nifty50": "YES" if is_n50 else "NO",
         "spot_ltp": ltp,
         "lot_size": lot,
@@ -306,6 +294,39 @@ for idx, sym in enumerate(all_dirs, 1):
 
 with open(DATA_DIR / 'fo_stocks_211.json', 'w', encoding='utf-8') as f:
     json.dump(fo_stocks_211, f, indent=2)
+print(f"Saved fo_stocks_211.json with {len(fo_stocks_211)} stocks.")
 
-print("Saved fo_stocks_211.json successfully.")
+# 3. Clean Quarters Dataset (quarters_dataset.json)
+raw_q_file = DATA_DIR / 'quarters_dataset.json'
+if raw_q_file.exists():
+    with open(raw_q_file, 'r', encoding='utf-8') as f:
+        q_dataset = json.load(f)
+        
+    valid_syms = set(fo_211_symbols)
+    n50_set = set(nifty50_specs.keys())
+    
+    for q_item in q_dataset:
+        clean_stocks = []
+        for s in q_item.get('stocks', []):
+            sym = s.get('symbol', '').strip()
+            if sym in valid_syms:
+                is_n50 = sym in n50_set
+                s['is_nifty50'] = "YES" if is_n50 else "NO"
+                if is_n50:
+                    s['name'] = nifty50_specs[sym]['name']
+                    s['lot_size'] = nifty50_specs[sym]['lot']
+                clean_stocks.append(s)
+            
+        clean_stocks = sorted(clean_stocks, key=lambda x: (x['is_nifty50'] == 'YES', x.get('q_est_pnl', 0)), reverse=True)
+        for r_idx, s in enumerate(clean_stocks, 1):
+            s['rank'] = r_idx
+            
+        q_item['stocks'] = clean_stocks
+        
+    with open(raw_q_file, 'w', encoding='utf-8') as f:
+        json.dump(q_dataset, f, indent=2)
+    print(f"Cleaned quarters_dataset.json across {len(q_dataset)} quarters successfully.")
+
+print("==========================================================================================")
+print("DATASETS FULLY SANITIZED & SAVED!")
 print("==========================================================================================")
