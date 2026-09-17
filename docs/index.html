@@ -380,16 +380,16 @@
 
     <!-- Navigation Tabs -->
     <div class="tabs-nav">
-      <button class="tab-btn active" onclick="switchTab('tab-holidays')">
+      <button class="tab-btn active" onclick="switchTab('tab-holidays', this)">
         <i class="fa-solid fa-calendar-star"></i> 17 NSE Holidays & Taking Windows (2022-2025)
       </button>
-      <button class="tab-btn" onclick="switchTab('tab-211-stocks')">
+      <button class="tab-btn" onclick="switchTab('tab-211-stocks', this)">
         <i class="fa-solid fa-list-check"></i> All 211 F&O Stocks Taking Windows Leaderboard
       </button>
-      <button class="tab-btn" onclick="switchTab('tab-quarterly')">
+      <button class="tab-btn" onclick="switchTab('tab-quarterly', this)">
         <i class="fa-solid fa-chart-candlestick"></i> Quarterly Earnings Taking Windows
       </button>
-      <button class="tab-btn" onclick="switchTab('tab-downloads')">
+      <button class="tab-btn" onclick="switchTab('tab-downloads', this)">
         <i class="fa-solid fa-file-excel"></i> Excel Reports Repository
       </button>
     </div>
@@ -544,19 +544,19 @@
           <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-color); border-radius: 14px; padding: 20px;">
             <h3 style="font-size: 16px; margin-bottom: 10px; color: var(--accent-cyan);"><i class="fa-solid fa-folder-open"></i> 17 NSE Holiday Folders (Past 4Y)</h3>
             <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">Contains 85 standalone Excel workbooks (4 yearly trade log files + 1 consolidated file for each holiday).</p>
-            <a href="file:///D:/behaviour%20analysis/17_NSE_Holidays_Reports/" class="btn-download"><i class="fa-solid fa-folder"></i> Open Reports Folder</a>
+            <a href="17_NSE_Holidays_Reports/" target="_blank" class="btn-download"><i class="fa-solid fa-folder"></i> Open Reports Folder</a>
           </div>
 
           <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-color); border-radius: 14px; padding: 20px;">
             <h3 style="font-size: 16px; margin-bottom: 10px; color: var(--accent-indigo);"><i class="fa-solid fa-file-excel"></i> All 211 F&O Stocks Master Excel</h3>
             <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">Complete 18-sheet multi-sheet workbook covering all 211 F&O stocks ranked rank-wise.</p>
-            <a href="file:///D:/behaviour%20analysis/All_211_FO_Stocks_Holidays_Rankwise_Master.xlsx" class="btn-download"><i class="fa-solid fa-download"></i> Open Master File</a>
+            <a href="All_211_FO_Stocks_Holidays_Rankwise_Master.xlsx" download class="btn-download"><i class="fa-solid fa-download"></i> Download Master File</a>
           </div>
 
           <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-color); border-radius: 14px; padding: 20px;">
             <h3 style="font-size: 16px; margin-bottom: 10px; color: var(--accent-emerald);"><i class="fa-solid fa-chart-line"></i> Past 4-Year Nifty 50 Futures Trade Log</h3>
             <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">Full 3,400 historical trade logs across 2022, 2023, 2024, and 2025.</p>
-            <a href="file:///D:/behaviour%20analysis/Nifty50_Futures_All_Holidays_Past_4Years_Master_TradeLog_v4.xlsx" class="btn-download"><i class="fa-solid fa-download"></i> Open Master Trade Log</a>
+            <a href="Nifty50_Futures_All_Holidays_Past_4Years_Master_TradeLog_v4.xlsx" download class="btn-download"><i class="fa-solid fa-download"></i> Download Master Trade Log</a>
           </div>
 
         </div>
@@ -677,12 +677,19 @@
       }
     }
 
-    function switchTab(tabId) {
+    function switchTab(tabId, btnEl) {
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
       document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
       
-      event.currentTarget.classList.add('active');
-      document.getElementById(tabId).style.display = 'block';
+      const targetBtn = btnEl || (window.event ? window.event.currentTarget : null);
+      if (targetBtn && targetBtn.classList) {
+        targetBtn.classList.add('active');
+      }
+      
+      const targetTab = document.getElementById(tabId);
+      if (targetTab) {
+        targetTab.style.display = 'block';
+      }
     }
 
     function renderHolidayCards() {
