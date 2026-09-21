@@ -1,7 +1,26 @@
-# Include everything (all raw per-stock data + downloaded NSE feeds + outputs),
-# except build artifacts and the personal chat log.
 __pycache__/
 *.pyc
 
-# personal chat history (also references the separate ML Regime project — keep out)
+# personal chat history
 all_user_requests.md
+
+# Windows & Office temporary lock files
+~$*.xlsx
+~$*.xls
+
+# Logs and SQLite local DBs
+*.log
+news.db
+forward.db
+
+# Heavy Parquet & Raw Tick data cache
+OI_DATA/
+options_parquet/
+spot_parquet/
+
+# Scratch files
+scratch/
+scratch_*
+.tempmediaStorage/
+.user_uploaded/
+

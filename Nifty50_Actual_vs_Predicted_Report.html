@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Actual vs Predicted Performance Report</title>
+<style>
+@page {
+    size: A4 landscape;
+    margin: 8mm;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #1e293b;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background-color: #ffffff;
+}
+header {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+header h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+header .subtitle {
+    margin: 2px 0 0 0;
+    font-size: 10px;
+    color: #93c5fd;
+    font-weight: 500;
+}
+.grid {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.card {
+    flex: 1;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+.card-title {
+    font-size: 8.5px;
+    text-transform: uppercase;
+    color: #64748b;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+.card-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+}
+.card-desc {
+    font-size: 8px;
+    color: #64748b;
+    margin-top: 1px;
+}
+.plots-container {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+    height: 270px;
+    page-break-after: always;
+}
+.plot-box {
+    flex: 1;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #cbd5e1;
+    padding: 3px 5px;
+    font-size: 8.2px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+thead tr {
+    background-color: #f1f5f9;
+}
+thead th {
+    font-weight: 700;
+    color: #334155;
+    text-align: center;
+    padding: 5px 3px;
+}
+tr.realised-row {
+    background-color: #ffffff;
+}
+tr.open-row {
+    background-color: #fffbeb;
+}
+tr.upcoming-row {
+    background-color: #f8fafc;
+    color: #94a3b8;
+}
+tr.filtered-row {
+    background-color: #f8fafc;
+    color: #94a3b8;
+    font-style: italic;
+}
+td.name {
+    text-align: left;
+    font-weight: 600;
+}
+td.sym {
+    text-align: center;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+td.c {
+    text-align: center;
+}
+td.n {
+    text-align: right;
+}
+td.pos {
+    color: #15803d;
+    font-weight: 600;
+}
+td.neg {
+    color: #b91c1c;
+    font-weight: 600;
+}
+td.dash {
+    color: #94a3b8;
+    text-align: center;
+}
+.badge {
+    display: inline-block;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 7.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.badge.realised {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+.badge.open {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+.badge.upcoming {
+    background-color: #f1f5f9;
+    color: #64748b;
+}
+.badge.filtered {
+    background-color: #ffe4e6;
+    color: #b91c1c;
+}
+.footer {
+    margin-top: 12px;
+    font-size: 8px;
+    color: #64748b;
+    display: flex;
+    justify-content: space-between;
+}
+</style>
+</head>
+<body>
+
+    <header>
+        <h1>Nifty 50 Q1 Results: Actual vs Predicted Performance Report</h1>
+        <div class="subtitle">Comparing expected model predictions with actual outcomes (realised & open till-date positions)</div>
+    </header>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-title">Total Active Stocks</div>
+            <div class="card-value">27</div>
+            <div class="card-desc">With valid entry dates & predictions</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Realised / Open Split</div>
+            <div class="card-value">27 R / 0 O</div>
+            <div class="card-desc">R = Exited, O = Running till-date</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Mean Absolute Error</div>
+            <div class="card-value">4.87%</div>
+            <div class="card-desc">MAE (Realised: 4.87% | Open: 0.00%)</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Directional Accuracy</div>
+            <div class="card-value">63.0%</div>
+            <div class="card-desc">Sign match of Predicted vs Actual</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Correlation</div>
+            <div class="card-value">-0.303</div>
+            <div class="card-desc">Pearson correlation coefficient</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Avg Pred vs Actual</div>
+            <div class="card-value">1.97% / 1.80%</div>
+            <div class="card-desc">Expected return vs Actual return</div>
+        </div>
+    </div>
+
+    <div class="plots-container">
+        <div class="plot-box">
+            
+    <svg width="100%" height="100%" viewBox="0 0 500 260" style="background-color: #ffffff; display: block;">
+        <rect x="0" y="0" width="500" height="260" fill="none" stroke="#e2e8f0" stroke-width="1" rx="4" />
+        <line x1="45.0" y1="215.0" x2="480.0" y2="20.0" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4" />
+<line x1="223.26362484157158" y1="20" x2="223.26362484157158" y2="215" stroke="#cbd5e1" stroke-width="1" />
+<line x1="45" y1="135.08871989860583" x2="480" y2="135.08871989860583" stroke="#cbd5e1" stroke-width="1" />
+<circle cx="287.9531051964512" cy="164.9112801013942" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>ADANIENT\nExpected: +3.52%\nActual: -3.62%\nStatus: Realised</title></circle>
+<circle cx="244.39797211660328" cy="167.8770595690748" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>ADANIPORTS\nExpected: +1.15%\nActual: -3.98%\nStatus: Realised</title></circle>
+<circle cx="278.7642585551331" cy="143.65652724968314" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>APOLLOHOSP\nExpected: +3.02%\nActual: -1.04%\nStatus: Realised</title></circle>
+<circle cx="253.77059569074774" cy="116.38783269961979" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>ASIANPAINT\nExpected: +1.66%\nActual: +2.27%\nStatus: Realised</title></circle>
+<circle cx="272.88339670468946" cy="56.00126742712297" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>BAJAJ-AUTO\nExpected: +2.70%\nActual: +9.60%\nStatus: Realised</title></circle>
+<circle cx="250.46261089987325" cy="63.250950570342184" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>BAJAJFINSV\nExpected: +1.48%\nActual: +8.72%\nStatus: Realised</title></circle>
+<circle cx="282.807351077313" cy="59.21419518377692" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>BAJFINANCE\nExpected: +3.24%\nActual: +9.21%\nStatus: Realised</title></circle>
+<circle cx="229.51204055766792" cy="101.39416983523448" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>BHARTIARTL\nExpected: +0.34%\nActual: +4.09%\nStatus: Realised</title></circle>
+<circle cx="233.9226869455006" cy="119.27122940430927" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>CIPLA\nExpected: +0.58%\nActual: +1.92%\nStatus: Realised</title></circle>
+<circle cx="296.03929024081117" cy="91.09632446134349" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>EICHERMOT\nExpected: +3.96%\nActual: +5.34%\nStatus: Realised</title></circle>
+<circle cx="325.07604562737635" cy="134.6768060836502" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>ETERNAL\nExpected: +5.54%\nActual: +0.05%\nStatus: Realised</title></circle>
+<circle cx="230.79847908745245" cy="152.8833967046895" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>GRASIM\nExpected: +0.41%\nActual: -2.16%\nStatus: Realised</title></circle>
+<circle cx="233.5551330798479" cy="206.7617237008872" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>HDFCBANK\nExpected: +0.56%\nActual: -8.70%\nStatus: Realised</title></circle>
+<circle cx="225.65272496831432" cy="87.80101394169836" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>HINDALCO\nExpected: +0.13%\nActual: +5.74%\nStatus: Realised</title></circle>
+<circle cx="252.30038022813687" cy="115.97591888466414" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>ICICIBANK\nExpected: +1.58%\nActual: +2.32%\nStatus: Realised</title></circle>
+<circle cx="229.87959442332064" cy="118.28263624841574" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>INDIGO\nExpected: +0.36%\nActual: +2.04%\nStatus: Realised</title></circle>
+<circle cx="236.67934093789606" cy="129.73384030418254" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>JIOFIN\nExpected: +0.73%\nActual: +0.65%\nStatus: Realised</title></circle>
+<circle cx="251.5652724968314" cy="85.65906210392905" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>M&M\nExpected: +1.54%\nActual: +6.00%\nStatus: Realised</title></circle>
+<circle cx="340.6970849176172" cy="199.51204055766794" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>MAXHEALTH\nExpected: +6.39%\nActual: -7.82%\nStatus: Realised</title></circle>
+<circle cx="224.1825095057034" cy="87.14195183776934" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>NESTLEIND\nExpected: +0.05%\nActual: +5.82%\nStatus: Realised</title></circle>
+<circle cx="255.97591888466408" cy="114.90494296577948" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>SBILIFE\nExpected: +1.78%\nActual: +2.45%\nStatus: Realised</title></circle>
+<circle cx="270.3105196451204" cy="151.89480354879595" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>SHRIRAMFIN\nExpected: +2.56%\nActual: -2.04%\nStatus: Realised</title></circle>
+<circle cx="246.0519645120405" cy="148.68187579214197" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>SUNPHARMA\nExpected: +1.24%\nActual: -1.65%\nStatus: Realised</title></circle>
+<circle cx="232.4524714828897" cy="28.238276299112783" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>TECHM\nExpected: +0.50%\nActual: +12.97%\nStatus: Realised</title></circle>
+<circle cx="239.43599493029149" cy="87.8833967046895" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>TITAN\nExpected: +0.88%\nActual: +5.73%\nStatus: Realised</title></circle>
+<circle cx="336.10266159695817" cy="165.81749049429658" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>TMPV\nExpected: +6.14%\nActual: -3.73%\nStatus: Realised</title></circle>
+<circle cx="242.9277566539924" cy="148.59949302915084" r="4.5" fill="#16803d" opacity="0.85" stroke="#ffffff" stroke-width="0.8"><title>TRENT\nExpected: +1.07%\nActual: -1.64%\nStatus: Realised</title></circle>
+<text x="45.0" y="227" font-size="7" fill="#64748b" text-anchor="middle">-9.7%</text>
+<text x="39" y="217.5" font-size="7" fill="#64748b" text-anchor="end">-9.7%</text>
+<text x="153.75" y="227" font-size="7" fill="#64748b" text-anchor="middle">-3.8%</text>
+<text x="39" y="168.75" font-size="7" fill="#64748b" text-anchor="end">-3.8%</text>
+<text x="262.5" y="227" font-size="7" fill="#64748b" text-anchor="middle">2.1%</text>
+<text x="39" y="120.0" font-size="7" fill="#64748b" text-anchor="end">2.1%</text>
+<text x="371.25" y="227" font-size="7" fill="#64748b" text-anchor="middle">8.1%</text>
+<text x="39" y="71.25" font-size="7" fill="#64748b" text-anchor="end">8.1%</text>
+<text x="480.0" y="227" font-size="7" fill="#64748b" text-anchor="middle">14.0%</text>
+<text x="39" y="22.5" font-size="7" fill="#64748b" text-anchor="end">14.0%</text>
+<text x="262.5" y="250" font-size="9" font-weight="bold" fill="#334155" text-anchor="middle">Expected Return (%)</text>
+<text x="12" y="117.5" font-size="9" font-weight="bold" fill="#334155" text-anchor="middle" transform="rotate(-90 12 117.5)">Actual Return (%)</text>
+<text x="55" y="35" font-size="9" font-weight="bold" fill="#0f172a">Actual vs Expected Scatter Plot</text>
+<circle cx="385" cy="30" r="4" fill="#16803d" />
+<text x="393" y="33" font-size="7" fill="#334155">Realised</text>
+<circle cx="430" cy="30" r="4" fill="#b45309" />
+<text x="438" y="33" font-size="7" fill="#334155">Open</text>
+    </svg>
+    
+        </div>
+        <div class="plot-box">
+            
+    <svg width="100%" height="100%" viewBox="0 0 500 260" style="background-color: #ffffff; display: block;">
+        <rect x="0" y="0" width="500" height="260" fill="none" stroke="#e2e8f0" stroke-width="1" rx="4" />
+        <line x1="35" y1="204.5" x2="485" y2="204.5" stroke="#f1f5f9" stroke-width="1" />
+<text x="29" y="207.0" font-size="7" fill="#64748b" text-anchor="end">-11.2%</text>
+<line x1="35" y1="163.5" x2="485" y2="163.5" stroke="#f1f5f9" stroke-width="1" />
+<text x="29" y="166.0" font-size="7" fill="#64748b" text-anchor="end">-5.6%</text>
+<line x1="35" y1="122.5" x2="485" y2="122.5" stroke="#f1f5f9" stroke-width="1" />
+<text x="29" y="125.0" font-size="7" fill="#64748b" text-anchor="end">0.0%</text>
+<line x1="35" y1="81.5" x2="485" y2="81.5" stroke="#f1f5f9" stroke-width="1" />
+<text x="29" y="84.0" font-size="7" fill="#64748b" text-anchor="end">5.6%</text>
+<line x1="35" y1="40.499999999999986" x2="485" y2="40.499999999999986" stroke="#f1f5f9" stroke-width="1" />
+<text x="29" y="42.999999999999986" font-size="7" fill="#64748b" text-anchor="end">11.2%</text>
+<line x1="35" y1="122.5" x2="485" y2="122.5" stroke="#94a3b8" stroke-width="1" />
+<rect x="40.4" y="118.83142448103078" width="9.6" height="3.66857551896922" fill="#3b82f6" rx="0.5" />
+<rect x="50.0" y="27.33715103793844" width="9.6" height="95.16284896206156" fill="#10b981" rx="0.5" />
+<text x="50.0" y="236" font-size="7" font-weight="bold" fill="#334155" text-anchor="middle">TECHM</text>
+<rect x="70.4" y="102.68969219756622" width="9.6" height="19.810307802433783" fill="#3b82f6" rx="0.5" />
+<rect x="80.0" y="52.06335003579099" width="9.6" height="70.43664996420901" fill="#10b981" rx="0.5" />
+<text x="80.0" y="236" font-size="7" font-weight="bold" fill="#334155" text-anchor="middle">BAJAJ-AUTO</text>
+<rect x="100.4" y="98.72763063707946" width="9.6" height="23.772369362920543" fill="#3b82f6" rx="0.5" />
+<rect x="110.0" y="54.924838940586966" width="9.6" height="67.57516105941303" fill="#10b981" rx="0.5" />
+<text x="110.0" y="236" font-size="7" font-weight="bold" fill="#334155" text-anchor="middle">BAJFINANCE</text>
+<rect x="130.4" y="111.64101646385112" width="9.6" height="10.858983536148884" fill="#3b82f6" rx="0.5" />
+<rect x="140.0" y="58.520042949176805" width="9.6" height="63.979957050823195" fill="#10b981" rx="0.5" />
+<text x="140.0" y="236" font-size="7" font-weight="bold" fill="#334155" text-anchor="middle">BAJAJFINSV</text>
+<rect x="160.4" y="118.39119541875448" width="9.6" height="4.108804581245522" fill="#3b82f6" rx="0.5" />
+<rect x="170.0" y="122.5" width="9.6" height="63.833214030064426" fill="#ef4444" rx="0.5" />
+<text x="170.0" y="236" font-size="7" font-weight="bold" fill="#334155" text-anchor="middle">HDFCBANK</text>
+<rect x="190.4" y="75.61560486757338" width="9.6" height="46.88439513242662" fill="#3b82f6" rx="0.5" />
+<rect x="200.0" y="122.5" width="9.6" height="57.37652111667859" fill="#ef4444" rx="0.5" />
+<text x="200.0" y="236" font-size="7" font-weight="bold" fill="#334155" text-anchor="middle">MAXHEALTH</text>
+<rect x="220.4" y="111.2007874015748" width="9.6" height="11.2992125984252" fill="#3b82f6" rx="0.5" />
+<rect x="230.0" y="78.47709377236936" width="9.6" height="44.02290622763064" fill="#10b981" rx="0.5" />
+<text x="230.0" y="236" font-size="7" font-weight="bold" fill="#334155" text-anchor="middle">M&M</text>
+<rect x="250.4" y="122.13314244810307" width="9.6" height="0.3668575518969277" fill="#3b82f6" rx="0.5" />
+<rect x="260.0" y="79.79778095919828" width="9.6" height="42.70221904080172" fill="#10b981" rx="0.5" />
+<text x="260.0" y="236" font-size="7" font-weight="bold" fill="#334155" text-anchor="middle">NESTLEIND</text>
+<rect x="280.4" y="121.54617036506801" width="9.6" height="0.9538296349319921" fill="#3b82f6" rx="0.5" />
+<rect x="290.0" y="80.38475304223336" width="9.6" height="42.115246957766644" fill="#10b981" rx="0.5" />
+<text x="290.0" y="236" font-size="7" font-weight="bold" fill="#334155" text-anchor="middle">HINDALCO</text>
+<rect x="310.4" y="116.04330708661418" width="9.6" height="6.456692913385822" fill="#3b82f6" rx="0.5" />
+<rect x="320.0" y="80.45812455261273" width="9.6" height="42.04187544738727" fill="#10b981" rx="0.5" />
+<text x="320.0" y="236" font-size="7" font-weight="bold" fill="#334155" text-anchor="middle">TITAN</text>
+<rect x="340.4" y="93.44488188976378" width="9.6" height="29.055118110236222" fill="#3b82f6" rx="0.5" />
+<rect x="350.0" y="83.31961345740874" width="9.6" height="39.180386542591265" fill="#10b981" rx="0.5" />
+<text x="350.0" y="236" font-size="7" font-weight="bold" fill="#334155" text-anchor="middle">EICHERMOT</text>
+<rect x="370.4" y="120.00536864710094" width="9.6" height="2.494631352899063" fill="#3b82f6" rx="0.5" />
+<rect x="380.0" y="92.49105225483179" width="9.6" height="30.008947745168214" fill="#10b981" rx="0.5" />
+<text x="380.0" y="236" font-size="7" font-weight="bold" fill="#334155" text-anchor="middle">BHARTIARTL</text>
+<rect x="400.4" y="114.06227630637079" width="9.6" height="8.43772369362921" fill="#3b82f6" rx="0.5" />
+<rect x="410.0" y="122.5" width="9.6" height="29.201861130994985" fill="#ef4444" rx="0.5" />
+<text x="410.0" y="236" font-size="7" font-weight="bold" fill="#334155" text-anchor="middle">ADANIPORTS</text>
+<rect x="430.4" y="77.44989262705798" width="9.6" height="45.05010737294202" fill="#3b82f6" rx="0.5" />
+<rect x="440.0" y="122.5" width="9.6" height="27.36757337151039" fill="#ef4444" rx="0.5" />
+<text x="440.0" y="236" font-size="7" font-weight="bold" fill="#334155" text-anchor="middle">TMPV</text>
+<rect x="460.4" y="96.6732283464567" width="9.6" height="25.826771653543304" fill="#3b82f6" rx="0.5" />
+<rect x="470.0" y="122.5" width="9.6" height="26.560486757337145" fill="#ef4444" rx="0.5" />
+<text x="470.0" y="236" font-size="7" font-weight="bold" fill="#334155" text-anchor="middle">ADANIENT</text>
+<text x="10" y="122.5" font-size="9" font-weight="bold" fill="#334155" text-anchor="middle" transform="rotate(-90 10 122.5)">Return %</text>
+<text x="45" y="35" font-size="9" font-weight="bold" fill="#0f172a">Top 15 Absolute Movers (Expected vs Actual)</text>
+<rect x="305" y="20" width="8" height="8" fill="#3b82f6" rx="1" />
+<text x="317" y="27" font-size="7" fill="#334155">Expected</text>
+<rect x="365" y="20" width="8" height="8" fill="#10b981" rx="1" />
+<text x="377" y="27" font-size="7" fill="#334155">Actual (+)</text>
+<rect x="415" y="20" width="8" height="8" fill="#ef4444" rx="1" />
+<text x="427" y="27" font-size="7" fill="#334155">Actual (-)</text>
+    </svg>
+    
+        </div>
+    </div>
+
+    <!-- PAGE 2: DETAILED TABLE -->
+    <header style="margin-top: 20px;">
+        <h1>Detailed Performance Metrics Table</h1>
+        <div class="subtitle">Per-stock actual returns vs expectations based on Q1 reporting window</div>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 15%;">Company Name</th>
+                <th style="width: 7%;">SYMBOL</th>
+                <th style="width: 8%;">Sector</th>
+                <th style="width: 8%;">Result Date</th>
+                <th style="width: 7%;">Before (Buy)</th>
+                <th style="width: 7%;">After (Sell)</th>
+                <th style="width: 8%;">Expected Return</th>
+                <th style="width: 8%;">Actual Return</th>
+                <th style="width: 8%;">Status</th>
+                <th style="width: 8%;">Entry Date</th>
+                <th style="width: 8%;">Buy Price</th>
+                <th style="width: 8%;">Exit Date</th>
+                <th style="width: 8%;">Exit Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        <tr class="realised-row">
+            <td class="name">Adani Enterprises Ltd.</td>
+            <td class="sym">ADANIENT</td>
+            <td class="c">Ports/Diversified</td>
+            <td class="c">29-Jul</td>
+            <td class="c">7</td>
+            <td class="c">3</td>
+            <td class="n pos">+3.52%</td>
+            <td class="n neg">-3.62%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">20-Jul</td>
+            <td class="n">3,183.3</td>
+            <td class="c">03-Aug</td>
+            <td class="n">3,068.0</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Adani Ports and Special Economic Zone Ltd.</td>
+            <td class="sym">ADANIPORTS</td>
+            <td class="c">Ports/Diversified</td>
+            <td class="c">29-Jul</td>
+            <td class="c">2</td>
+            <td class="c">5</td>
+            <td class="n pos">+1.15%</td>
+            <td class="n neg">-3.98%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">27-Jul</td>
+            <td class="n">1,770.4</td>
+            <td class="c">05-Aug</td>
+            <td class="n">1,700.0</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Apollo Hospitals Enterprise Ltd.</td>
+            <td class="sym">APOLLOHOSP</td>
+            <td class="c">Pharma/Health</td>
+            <td class="c">12-Aug</td>
+            <td class="c">2</td>
+            <td class="c">4</td>
+            <td class="n pos">+3.02%</td>
+            <td class="n neg">-1.04%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">10-Aug</td>
+            <td class="n">8,912.0</td>
+            <td class="c">18-Aug</td>
+            <td class="n">8,819.5</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Asian Paints Ltd.</td>
+            <td class="sym">ASIANPAINT</td>
+            <td class="c">Consumer</td>
+            <td class="c">29-Jul</td>
+            <td class="c">8</td>
+            <td class="c">8</td>
+            <td class="n pos">+1.66%</td>
+            <td class="n pos">+2.27%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">17-Jul</td>
+            <td class="n">2,689.0</td>
+            <td class="c">10-Aug</td>
+            <td class="n">2,750.0</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Axis Bank Ltd.</td>
+            <td class="sym">AXISBANK</td>
+            <td class="c">Banks</td>
+            <td class="c">18-Jul</td>
+            <td class="c">7</td>
+            <td class="c">8</td>
+            <td class="n pos">+2.59%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">08-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Bajaj Auto Ltd.</td>
+            <td class="sym">BAJAJ-AUTO</td>
+            <td class="c">Auto</td>
+            <td class="c">21-Jul</td>
+            <td class="c">8</td>
+            <td class="c">4</td>
+            <td class="n pos">+2.70%</td>
+            <td class="n pos">+9.60%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">09-Jul</td>
+            <td class="n">10,155.0</td>
+            <td class="c">27-Jul</td>
+            <td class="n">11,130.0</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Bajaj Finserv Ltd.</td>
+            <td class="sym">BAJAJFINSV</td>
+            <td class="c">NBFC/Fin</td>
+            <td class="c">31-Jul</td>
+            <td class="c">3</td>
+            <td class="c">1</td>
+            <td class="n pos">+1.48%</td>
+            <td class="n pos">+8.72%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">28-Jul</td>
+            <td class="n">1,927.9</td>
+            <td class="c">03-Aug</td>
+            <td class="n">2,096.0</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Bajaj Finance Ltd.</td>
+            <td class="sym">BAJFINANCE</td>
+            <td class="c">NBFC/Fin</td>
+            <td class="c">30-Jul</td>
+            <td class="c">3</td>
+            <td class="c">5</td>
+            <td class="n pos">+3.24%</td>
+            <td class="n pos">+9.21%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">27-Jul</td>
+            <td class="n">1,048.3</td>
+            <td class="c">06-Aug</td>
+            <td class="n">1,144.8</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Bharat Electronics Ltd.</td>
+            <td class="sym">BEL</td>
+            <td class="c">Infra/CapGoods</td>
+            <td class="c">27-Jul</td>
+            <td class="c">1</td>
+            <td class="c">8</td>
+            <td class="n pos">+0.97%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">24-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Bharti Airtel Ltd.</td>
+            <td class="sym">BHARTIARTL</td>
+            <td class="c">Telecom</td>
+            <td class="c">04-Aug</td>
+            <td class="c">7</td>
+            <td class="c">1</td>
+            <td class="n pos">+0.34%</td>
+            <td class="n pos">+4.09%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">24-Jul</td>
+            <td class="n">1,900.2</td>
+            <td class="c">05-Aug</td>
+            <td class="n">1,978.0</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Cipla Ltd.</td>
+            <td class="sym">CIPLA</td>
+            <td class="c">Pharma/Health</td>
+            <td class="c">23-Jul</td>
+            <td class="c">2</td>
+            <td class="c">8</td>
+            <td class="n pos">+0.58%</td>
+            <td class="n pos">+1.92%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">21-Jul</td>
+            <td class="n">1,432.5</td>
+            <td class="c">04-Aug</td>
+            <td class="n">1,460.0</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Coal India Ltd.</td>
+            <td class="sym">COALINDIA</td>
+            <td class="c">Metals</td>
+            <td class="c">27-Jul</td>
+            <td class="c">8</td>
+            <td class="c">3</td>
+            <td class="n pos">+0.84%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">15-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Dr. Reddy's Laboratories Ltd.</td>
+            <td class="sym">DRREDDY</td>
+            <td class="c">Pharma/Health</td>
+            <td class="c">22-Jul</td>
+            <td class="c">1</td>
+            <td class="c">1</td>
+            <td class="n neg">-0.24%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">21-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Eicher Motors Ltd.</td>
+            <td class="sym">EICHERMOT</td>
+            <td class="c">Auto</td>
+            <td class="c">29-Jul</td>
+            <td class="c">7</td>
+            <td class="c">6</td>
+            <td class="n pos">+3.96%</td>
+            <td class="n pos">+5.34%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">20-Jul</td>
+            <td class="n">7,563.5</td>
+            <td class="c">06-Aug</td>
+            <td class="n">7,967.5</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Eternal Ltd.</td>
+            <td class="sym">ETERNAL</td>
+            <td class="c">Consumer</td>
+            <td class="c">22-Jul</td>
+            <td class="c">2</td>
+            <td class="c">1</td>
+            <td class="n pos">+5.54%</td>
+            <td class="n pos">+0.05%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">20-Jul</td>
+            <td class="n">286.9</td>
+            <td class="c">23-Jul</td>
+            <td class="n">287.1</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Grasim Industries Ltd.</td>
+            <td class="sym">GRASIM</td>
+            <td class="c">Cement</td>
+            <td class="c">12-Aug</td>
+            <td class="c">1</td>
+            <td class="c">3</td>
+            <td class="n pos">+0.41%</td>
+            <td class="n neg">-2.16%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">11-Aug</td>
+            <td class="n">3,322.2</td>
+            <td class="c">17-Aug</td>
+            <td class="n">3,250.5</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">HCL Technologies Ltd.</td>
+            <td class="sym">HCLTECH</td>
+            <td class="c">IT</td>
+            <td class="c">13-Jul</td>
+            <td class="c">6</td>
+            <td class="c">3</td>
+            <td class="n pos">+1.87%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">03-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">HDFC Bank Ltd.</td>
+            <td class="sym">HDFCBANK</td>
+            <td class="c">Banks</td>
+            <td class="c">18-Jul</td>
+            <td class="c">5</td>
+            <td class="c">3</td>
+            <td class="n pos">+0.56%</td>
+            <td class="n neg">-8.70%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">10-Jul</td>
+            <td class="n">825.0</td>
+            <td class="c">22-Jul</td>
+            <td class="n">753.1</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">HDFC Life Insurance Company Ltd.</td>
+            <td class="sym">HDFCLIFE</td>
+            <td class="c">Insurance</td>
+            <td class="c">15-Jul</td>
+            <td class="c">8</td>
+            <td class="c">5</td>
+            <td class="n pos">+0.07%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">03-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Hindalco Industries Ltd.</td>
+            <td class="sym">HINDALCO</td>
+            <td class="c">Metals</td>
+            <td class="c">07-Aug</td>
+            <td class="c">3</td>
+            <td class="c">3</td>
+            <td class="n pos">+0.13%</td>
+            <td class="n pos">+5.74%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">04-Aug</td>
+            <td class="n">1,020.0</td>
+            <td class="c">12-Aug</td>
+            <td class="n">1,078.5</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Hindustan Unilever Ltd.</td>
+            <td class="sym">HINDUNILVR</td>
+            <td class="c">FMCG</td>
+            <td class="c">28-Jul</td>
+            <td class="c">6</td>
+            <td class="c">7</td>
+            <td class="n pos">+0.57%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">20-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">ICICI Bank Ltd.</td>
+            <td class="sym">ICICIBANK</td>
+            <td class="c">Banks</td>
+            <td class="c">18-Jul</td>
+            <td class="c">3</td>
+            <td class="c">6</td>
+            <td class="n pos">+1.58%</td>
+            <td class="n pos">+2.32%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">14-Jul</td>
+            <td class="n">1,412.9</td>
+            <td class="c">27-Jul</td>
+            <td class="n">1,445.7</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">InterGlobe Aviation Ltd.</td>
+            <td class="sym">INDIGO</td>
+            <td class="c">Aviation</td>
+            <td class="c">23-Jul</td>
+            <td class="c">6</td>
+            <td class="c">5</td>
+            <td class="n pos">+0.36%</td>
+            <td class="n pos">+2.04%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">15-Jul</td>
+            <td class="n">5,171.0</td>
+            <td class="c">30-Jul</td>
+            <td class="n">5,276.5</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Infosys Ltd.</td>
+            <td class="sym">INFY</td>
+            <td class="c">IT</td>
+            <td class="c">23-Jul</td>
+            <td class="c">8</td>
+            <td class="c">7</td>
+            <td class="n pos">+0.65%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">13-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">ITC Ltd.</td>
+            <td class="sym">ITC</td>
+            <td class="c">FMCG</td>
+            <td class="c">31-Jul</td>
+            <td class="c">8</td>
+            <td class="c">8</td>
+            <td class="n pos">+0.91%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">21-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Jio Financial Services Ltd.</td>
+            <td class="sym">JIOFIN</td>
+            <td class="c">NBFC/Fin</td>
+            <td class="c">16-Jul</td>
+            <td class="c">3</td>
+            <td class="c">1</td>
+            <td class="n pos">+0.73%</td>
+            <td class="n pos">+0.65%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">13-Jul</td>
+            <td class="n">241.4</td>
+            <td class="c">17-Jul</td>
+            <td class="n">243.0</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">JSW Steel Ltd.</td>
+            <td class="sym">JSWSTEEL</td>
+            <td class="c">Metals</td>
+            <td class="c">17-Jul</td>
+            <td class="c">4</td>
+            <td class="c">7</td>
+            <td class="n pos">+2.69%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">13-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Kotak Mahindra Bank Ltd.</td>
+            <td class="sym">KOTAKBANK</td>
+            <td class="c">Banks</td>
+            <td class="c">18-Jul</td>
+            <td class="c">6</td>
+            <td class="c">8</td>
+            <td class="n pos">+0.92%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">09-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Larsen & Toubro Ltd.</td>
+            <td class="sym">LT</td>
+            <td class="c">Infra/CapGoods</td>
+            <td class="c">28-Jul</td>
+            <td class="c">1</td>
+            <td class="c">4</td>
+            <td class="n pos">+0.84%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">27-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Mahindra & Mahindra Ltd.</td>
+            <td class="sym">M&M</td>
+            <td class="c">Auto</td>
+            <td class="c">30-Jul</td>
+            <td class="c">3</td>
+            <td class="c">3</td>
+            <td class="n pos">+1.54%</td>
+            <td class="n pos">+6.00%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">27-Jul</td>
+            <td class="n">3,238.6</td>
+            <td class="c">04-Aug</td>
+            <td class="n">3,433.0</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Maruti Suzuki India Ltd.</td>
+            <td class="sym">MARUTI</td>
+            <td class="c">Auto</td>
+            <td class="c">31-Jul</td>
+            <td class="c">6</td>
+            <td class="c">4</td>
+            <td class="n pos">+1.43%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">23-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Max Healthcare Institute Ltd.</td>
+            <td class="sym">MAXHEALTH</td>
+            <td class="c">Pharma/Health</td>
+            <td class="c">13-Aug</td>
+            <td class="c">8</td>
+            <td class="c">3</td>
+            <td class="n pos">+6.39%</td>
+            <td class="n neg">-7.82%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">03-Aug</td>
+            <td class="n">1,100.4</td>
+            <td class="c">18-Aug</td>
+            <td class="n">1,014.4</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Nestle India Ltd.</td>
+            <td class="sym">NESTLEIND</td>
+            <td class="c">FMCG</td>
+            <td class="c">22-Jul</td>
+            <td class="c">6</td>
+            <td class="c">7</td>
+            <td class="n pos">+0.05%</td>
+            <td class="n pos">+5.82%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">14-Jul</td>
+            <td class="n">1,427.1</td>
+            <td class="c">31-Jul</td>
+            <td class="n">1,510.2</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">NTPC Ltd.</td>
+            <td class="sym">NTPC</td>
+            <td class="c">Energy</td>
+            <td class="c">24-Jul</td>
+            <td class="c">1</td>
+            <td class="c">4</td>
+            <td class="n pos">+0.58%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">23-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Oil & Natural Gas Corporation Ltd.</td>
+            <td class="sym">ONGC</td>
+            <td class="c">Energy</td>
+            <td class="c">04-Aug</td>
+            <td class="c">1</td>
+            <td class="c">7</td>
+            <td class="n pos">+0.26%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">03-Aug</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Power Grid Corporation of India Ltd.</td>
+            <td class="sym">POWERGRID</td>
+            <td class="c">Energy</td>
+            <td class="c">05-Aug</td>
+            <td class="c">4</td>
+            <td class="c">8</td>
+            <td class="n pos">+0.30%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">30-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Reliance Industries Ltd.</td>
+            <td class="sym">RELIANCE</td>
+            <td class="c">Energy</td>
+            <td class="c">17-Jul</td>
+            <td class="c">8</td>
+            <td class="c">1</td>
+            <td class="n pos">+0.75%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">07-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">SBI Life Insurance Company Ltd.</td>
+            <td class="sym">SBILIFE</td>
+            <td class="c">Insurance</td>
+            <td class="c">24-Jul</td>
+            <td class="c">1</td>
+            <td class="c">7</td>
+            <td class="n pos">+1.78%</td>
+            <td class="n pos">+2.45%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">23-Jul</td>
+            <td class="n">1,853.5</td>
+            <td class="c">04-Aug</td>
+            <td class="n">1,899.0</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">State Bank of India</td>
+            <td class="sym">SBIN</td>
+            <td class="c">Banks</td>
+            <td class="c">07-Aug</td>
+            <td class="c">7</td>
+            <td class="c">2</td>
+            <td class="n pos">+1.93%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">29-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Shriram Finance Ltd.</td>
+            <td class="sym">SHRIRAMFIN</td>
+            <td class="c">NBFC/Fin</td>
+            <td class="c">24-Jul</td>
+            <td class="c">3</td>
+            <td class="c">5</td>
+            <td class="n pos">+2.56%</td>
+            <td class="n neg">-2.04%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">21-Jul</td>
+            <td class="n">1,061.5</td>
+            <td class="c">31-Jul</td>
+            <td class="n">1,039.8</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Sun Pharmaceutical Industries Ltd.</td>
+            <td class="sym">SUNPHARMA</td>
+            <td class="c">Pharma/Health</td>
+            <td class="c">31-Jul</td>
+            <td class="c">3</td>
+            <td class="c">8</td>
+            <td class="n pos">+1.24%</td>
+            <td class="n neg">-1.65%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">28-Jul</td>
+            <td class="n">1,976.7</td>
+            <td class="c">12-Aug</td>
+            <td class="n">1,944.0</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Tata Consumer Products Ltd.</td>
+            <td class="sym">TATACONSUM</td>
+            <td class="c">FMCG</td>
+            <td class="c">24-Jul</td>
+            <td class="c">2</td>
+            <td class="c">8</td>
+            <td class="n pos">+1.05%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">22-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Tata Steel Ltd.</td>
+            <td class="sym">TATASTEEL</td>
+            <td class="c">Metals</td>
+            <td class="c">30-Jul</td>
+            <td class="c">1</td>
+            <td class="c">4</td>
+            <td class="n pos">+0.61%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">29-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Tata Consultancy Services Ltd.</td>
+            <td class="sym">TCS</td>
+            <td class="c">IT</td>
+            <td class="c">09-Jul</td>
+            <td class="c">8</td>
+            <td class="c">6</td>
+            <td class="n pos">+1.90%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">29-Jun</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Tech Mahindra Ltd.</td>
+            <td class="sym">TECHM</td>
+            <td class="c">IT</td>
+            <td class="c">16-Jul</td>
+            <td class="c">7</td>
+            <td class="c">8</td>
+            <td class="n pos">+0.50%</td>
+            <td class="n pos">+12.97%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">07-Jul</td>
+            <td class="n">1,447.5</td>
+            <td class="c">28-Jul</td>
+            <td class="n">1,635.2</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Titan Company Ltd.</td>
+            <td class="sym">TITAN</td>
+            <td class="c">Consumer</td>
+            <td class="c">07-Aug</td>
+            <td class="c">5</td>
+            <td class="c">2</td>
+            <td class="n pos">+0.88%</td>
+            <td class="n pos">+5.73%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">31-Jul</td>
+            <td class="n">4,850.0</td>
+            <td class="c">11-Aug</td>
+            <td class="n">5,128.0</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Tata Motors Passenger Vehicles Ltd.</td>
+            <td class="sym">TMPV</td>
+            <td class="c">Auto</td>
+            <td class="c">13-Aug</td>
+            <td class="c">1</td>
+            <td class="c">2</td>
+            <td class="n pos">+6.14%</td>
+            <td class="n neg">-3.73%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">12-Aug</td>
+            <td class="n">343.0</td>
+            <td class="c">17-Aug</td>
+            <td class="n">330.2</td>
+        </tr>
+        
+
+        <tr class="realised-row">
+            <td class="name">Trent Ltd.</td>
+            <td class="sym">TRENT</td>
+            <td class="c">Consumer</td>
+            <td class="c">06-Aug</td>
+            <td class="c">3</td>
+            <td class="c">3</td>
+            <td class="n pos">+1.07%</td>
+            <td class="n neg">-1.64%</td>
+            <td class="c"><span class="badge realised">Realised</span></td>
+            <td class="c">03-Aug</td>
+            <td class="n">3,050.0</td>
+            <td class="c">11-Aug</td>
+            <td class="n">3,000.0</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">UltraTech Cement Ltd.</td>
+            <td class="sym">ULTRACEMCO</td>
+            <td class="c">Cement</td>
+            <td class="c">20-Jul</td>
+            <td class="c">8</td>
+            <td class="c">8</td>
+            <td class="n pos">+0.13%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">08-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+
+        <tr class="filtered-row">
+            <td class="name">Wipro Ltd.</td>
+            <td class="sym">WIPRO</td>
+            <td class="c">IT</td>
+            <td class="c">16-Jul</td>
+            <td class="c">7</td>
+            <td class="c">4</td>
+            <td class="n pos">+1.24%</td>
+            <td class="n neg">+nan%</td>
+            <td class="c"><span class="badge filtered">Filter Out</span></td>
+            <td class="c">07-Jul</td>
+            <td class="n">nan</td>
+            <td class="c">—</td>
+            <td class="n">nan</td>
+        </tr>
+        
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <div>Nifty 50 Behaviour Engine · Q1 Performance Audit</div>
+        <div>Generated on 19-Aug-2026 · Page 2 of 2</div>
+    </div>
+
+</body>
+</html>

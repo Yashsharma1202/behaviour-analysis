@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloomberg Terminal Grid | Nifty 50 Event Execution</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        :root {
+            --bg-body: #05070c;
+            --bg-nav: #0a0e17;
+            --bg-card: rgba(13, 19, 32, 0.85);
+            --bg-input: #131b2e;
+            --border-subtle: #1e293b;
+            --border-highlight: #334155;
+            
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+            
+            --neon-green: #10b981;
+            --neon-red: #f43f5e;
+            --neon-cyan: #38bdf8;
+            --neon-amber: #f59e0b;
+            --neon-purple: #a855f7;
+            --neon-blue: #6366f1;
+
+            --font-main: 'Plus Jakarta Sans', sans-serif;
+            --font-mono: 'Fira Code', monospace;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 16px 20px;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.06) 0px, transparent 40%),
+                radial-gradient(at 100% 100%, rgba(56, 189, 248, 0.06) 0px, transparent 40%);
+        }
+
+        /* Top Header */
+        .app-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-nav);
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            padding: 12px 24px;
+            margin-bottom: 16px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-cyan));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+        }
+
+        .brand-text h1 {
+            font-size: 17px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-text p { font-size: 11px; color: var(--text-muted); }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .status-pill {
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: var(--neon-green);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .dot-pulse {
+            width: 7px;
+            height: 7px;
+            background: var(--neon-green);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--neon-green);
+        }
+
+        /* 3-COLUMN BLOOMBERG TERMINAL GRID LAYOUT */
+        .terminal-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr 340px;
+            gap: 16px;
+            align-items: start;
+        }
+
+        /* Card Container */
+        .b-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 18px;
+            backdrop-filter: blur(12px);
+            margin-bottom: 16px;
+        }
+
+        .b-card:last-child { margin-bottom: 0; }
+
+        .c-title {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            padding-bottom: 8px;
+        }
+
+        /* Search Autocomplete */
+        .search-wrapper { position: relative; margin-bottom: 14px; }
+        .search-ctrl {
+            width: 100%;
+            background: var(--bg-input);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-main);
+            padding: 10px 12px 10px 34px;
+            border-radius: 10px;
+            font-family: var(--font-main);
+            font-size: 13px;
+            outline: none;
+        }
+        .search-ctrl:focus { border-color: var(--neon-cyan); }
+        .search-icon { position: absolute; left: 10px; top: 10px; color: var(--text-muted); font-size: 14px; }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #0f172a;
+            border: 1px solid var(--border-subtle);
+            border-radius: 10px;
+            margin-top: 4px;
+            max-height: 240px;
+            overflow-y: auto;
+            z-index: 100;
+            display: none;
+        }
+        .dropdown-menu.active { display: block; }
+        .dropdown-item {
+            padding: 10px 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .dropdown-item:hover { background: rgba(56, 189, 248, 0.1); }
+
+        .badge-stage2 { background: rgba(16, 185, 129, 0.15); color: var(--neon-green); border: 1px solid rgba(16, 185, 129, 0.3); font-size: 9px; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+        .badge-stage1 { background: rgba(245, 158, 11, 0.15); color: var(--neon-amber); border: 1px solid rgba(245, 158, 11, 0.3); font-size: 9px; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+
+        .form-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--text-dim); margin-bottom: 4px; display: block; }
+        .form-field { width: 100%; background: var(--bg-input); border: 1px solid var(--border-subtle); color: var(--text-main); padding: 9px 12px; border-radius: 10px; font-family: var(--font-main); font-size: 13px; outline: none; margin-bottom: 12px; }
+
+        /* Watchlist Quick Links */
+        .w-list { display: flex; flex-direction: column; gap: 6px; }
+        .w-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 10px;
+            background: var(--bg-input);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.15s;
+        }
+        .w-item:hover { background: rgba(56, 189, 248, 0.1); border-left: 3px solid var(--neon-cyan); }
+        .w-item.active { border-left: 3px solid var(--neon-green); background: rgba(16, 185, 129, 0.08); }
+
+        /* Center Column: Live Signal Hero */
+        .hero-banner {
+            background: linear-gradient(135deg, rgba(244, 63, 94, 0.12) 0%, rgba(13, 19, 32, 0.95) 100%);
+            border: 1px solid rgba(244, 63, 94, 0.35);
+            border-radius: 16px;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .hero-banner.long-hero {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(13, 19, 32, 0.95) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+
+        .hero-banner.locked-hero {
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .sig-badge {
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .sig-badge.short { background: var(--neon-red); color: #fff; box-shadow: 0 0 12px var(--neon-red); }
+        .sig-badge.long { background: var(--neon-green); color: #fff; box-shadow: 0 0 12px var(--neon-green); }
+        .sig-badge.locked { background: var(--neon-amber); color: #000; }
+
+        /* Metrics Strip */
+        .m-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .m-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .m-title { font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--text-dim); }
+        .m-value { font-size: 20px; font-weight: 800; font-family: var(--font-mono); margin: 4px 0; }
+
+        /* Timeline Flow */
+        .t-flow {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .t-card {
+            background: var(--bg-input);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .t-card.entry { border-color: rgba(245, 158, 11, 0.4); background: rgba(245, 158, 11, 0.05); }
+        .t-card.result { border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.05); }
+        .t-card.exit { border-color: rgba(168, 85, 247, 0.4); background: rgba(168, 85, 247, 0.05); }
+
+        .t-tag { font-size: 9px; font-weight: 800; text-transform: uppercase; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 6px; }
+        .tag-entry { background: var(--neon-amber); color: #000; }
+        .tag-result { background: var(--neon-cyan); color: #000; }
+        .tag-exit { background: var(--neon-purple); color: #fff; }
+
+        .t-val { font-family: var(--font-mono); font-size: 14px; font-weight: 700; }
+        .t-sub { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+
+        /* Historical Table */
+        table { width: 100%; border-collapse: collapse; font-size: 12px; }
+        th { background: var(--bg-input); color: var(--text-muted); font-size: 10px; text-transform: uppercase; padding: 10px 12px; border-bottom: 1px solid var(--border-subtle); text-align: left; }
+        td { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.03); font-family: var(--font-mono); }
+        .win-tag { background: rgba(16, 185, 129, 0.15); color: var(--neon-green); padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 10px; }
+        .pos-txt { color: var(--neon-green); }
+        .neg-txt { color: var(--neon-red); }
+
+        /* Right Column: Capital & Chart */
+        .calc-panel {
+            background: var(--bg-input);
+            border-radius: 12px;
+            padding: 14px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .calc-line { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 8px; }
+        .calc-line:last-child { margin-bottom: 0; padding-top: 8px; border-top: 1px solid var(--border-subtle); font-weight: 700; }
+
+        .chart-box { height: 200px; width: 100%; }
+
+        .risk-box {
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            border-radius: 12px;
+            padding: 12px;
+            color: var(--neon-amber);
+            font-size: 11px;
+            margin-top: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="brand">
+            <div class="brand-logo">⚡</div>
+            <div class="brand-text">
+                <h1>Bloomberg Terminal Grid | Nifty 50 Execution</h1>
+                <p>3-Column Institutional Grid | Stage 2 Disclosed Verification Engine</p>
+            </div>
+        </div>
+
+        <div class="header-controls">
+            <div style="display:flex; align-items:center; gap:6px;">
+                <span style="font-size:10px; font-weight:700; color:var(--text-muted); text-transform:uppercase">Font:</span>
+                <select id="fontSelect" onchange="switchFont()" style="background:var(--bg-input); border:1px solid var(--border-subtle); color:var(--text-main); padding:4px 8px; border-radius:6px; font-size:11px; outline:none">
+                    <option value="'Plus Jakarta Sans', sans-serif" selected>Plus Jakarta Sans</option>
+                    <option value="'Inter', sans-serif">Inter</option>
+                    <option value="'Sora', sans-serif">Sora</option>
+                </select>
+            </div>
+
+            <div class="status-pill">
+                <div class="dot-pulse"></div> Live Stage 2 Filter Active
+            </div>
+        </div>
+    </header>
+
+    <!-- 3-COLUMN TERMINAL GRID -->
+    <div class="terminal-grid">
+
+        <!-- COLUMN 1: CONTROLS & WATCHLIST (LEFT) -->
+        <aside>
+            <div class="b-card">
+                <div class="c-title">🔍 Search Stock Universe</div>
+                <div class="search-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" class="search-ctrl" placeholder="Search Nifty 50 stock..." oninput="handleSearch()" onfocus="handleSearch()">
+                    <div id="dropdownResults" class="dropdown-menu"></div>
+                </div>
+
+                <span class="form-lbl">Active Target Stock</span>
+                <div id="dispStockName" style="font-weight:800; font-size:15px; color:var(--neon-cyan); margin-bottom:10px">ULTRACEMCO - UltraTech Cement</div>
+
+                <span class="form-lbl">NSE Disclosed Filing Status</span>
+                <div id="dispStageBadge" class="badge-stage2" style="display:inline-block; font-size:11px; padding:4px 8px; margin-bottom:12px">
+                    🟢 Stage 2: Officially Confirmed on NSE
+                </div>
+
+                <span class="form-lbl">Confirmed Result Date (T)</span>
+                <input type="text" id="dispResultDate" class="form-field" value="19-Oct-2026 (Confirmed)" readonly style="font-family:var(--font-mono); font-weight:700">
+
+                <span class="form-lbl">Target Quarter Window</span>
+                <select id="quarterSelect" class="form-field" onchange="renderView()">
+                    <option value="Q3" selected>Q3: October – December Results Season (Jul – Sep Operating Period)</option>
+                    <option value="Q4">Q4: January – March Results Season (Oct – Dec Operating Period)</option>
+                    <option value="Q1">Q1: April – June Results Season (Jan – Mar Operating Period)</option>
+                    <option value="Q2">Q2: July – September Results Season (Apr – Jun Operating Period)</option>
+                </select>
+            </div>
+
+            <!-- Quick Watchlist Card -->
+            <div class="b-card">
+                <div class="c-title">📌 Quick Watchlist (Nifty 50 Top Stocks)</div>
+                <div class="w-list">
+                    <div class="w-item active" onclick="quickSelect('ULTRACEMCO')">
+                        <span>ULTRACEMCO</span>
+                        <span class="badge-stage2">🟢 Stage 2 (19-Oct)</span>
+                    </div>
+                    <div class="w-item" onclick="quickSelect('RELIANCE')">
+                        <span>RELIANCE</span>
+                        <span class="badge-stage1">🟡 Stage 1 (Pending)</span>
+                    </div>
+                    <div class="w-item" onclick="quickSelect('TCS')">
+                        <span>TCS</span>
+                        <span class="badge-stage1">🟡 Stage 1 (Pending)</span>
+                    </div>
+                    <div class="w-item" onclick="quickSelect('INFY')">
+                        <span>INFY</span>
+                        <span class="badge-stage1">🟡 Stage 1 (Pending)</span>
+                    </div>
+                    <div class="w-item" onclick="quickSelect('HDFCBANK')">
+                        <span>HDFCBANK</span>
+                        <span class="badge-stage1">🟡 Stage 1 (Pending)</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- COLUMN 2: CENTER (LIVE SIGNAL, TIMELINE, TRADE LOGS) -->
+        <main>
+            <!-- Hero Signal Banner -->
+            <div class="hero-banner" id="heroBanner">
+                <div>
+                    <div style="font-size:18px; font-weight:800; display:flex; align-items:center; gap:10px">
+                        Signal: <span class="sig-badge short" id="heroTag">SELL / SHORT 1 LOT</span>
+                    </div>
+                    <p style="font-size:12px; color:var(--text-muted); margin-top:4px" id="heroDesc">
+                        Stage 2 Verified Signal (100% Disclosed on NSE). 77.78% Win Rate. Initiate Short Position near EOD close on T-1.
+                    </p>
+                </div>
+
+                <div style="text-align:right">
+                    <div style="font-size:10px; font-weight:700; color:var(--text-dim); text-transform:uppercase">EOD Execution Window</div>
+                    <div style="font-family:var(--font-mono); font-size:16px; font-weight:700; color:var(--neon-amber)">3:15 PM – 3:25 PM IST</div>
+                </div>
+            </div>
+
+            <!-- Key Metrics Strip -->
+            <div class="m-strip">
+                <div class="m-box">
+                    <div class="m-title">Q3 Results Historical Win Rate</div>
+                    <div class="m-value" id="valWinRate" style="color:var(--neon-purple)">77.78%</div>
+                    <div style="font-size:11px; color:var(--text-muted)">14 Wins / 18 Past Oct Quarters</div>
+                </div>
+                <div class="m-box">
+                    <div class="m-title">Expected Net Return</div>
+                    <div class="m-value" id="valAvgReturn" style="color:var(--neon-green)">+0.57%</div>
+                    <div style="font-size:11px; color:var(--text-muted)">Average Net Gain Per Trade</div>
+                </div>
+                <div class="m-box">
+                    <div class="m-title">Optimized Window</div>
+                    <div class="m-value" id="valWindow" style="color:var(--neon-cyan)">T-1 to T+1</div>
+                    <div style="font-size:11px; color:var(--text-muted)">2 Trading Days Exposure</div>
+                </div>
+            </div>
+
+            <!-- Timeline Flow -->
+            <div class="b-card">
+                <div class="c-title">📅 Live Execution Schedule Timeline ($T-1 \rightarrow T \rightarrow T+1$)</div>
+                <div class="t-flow">
+                    <div class="t-card entry">
+                        <span class="t-badge entry">Step 1: Entry Date (T-1)</span>
+                        <div class="t-val" id="tDateEntry">16-Oct-2026 (Friday)</div>
+                        <div class="t-sub">Initiate Short Position at Market EOD Close (3:15 PM IST)</div>
+                    </div>
+
+                    <div class="t-card result">
+                        <span class="t-badge result">Step 2: Result Date (T)</span>
+                        <div class="t-val" id="tDateResult">19-Oct-2026 (Monday)</div>
+                        <div class="t-sub">Board Meeting / Earnings Release Day. Hold position.</div>
+                    </div>
+
+                    <div class="t-card exit">
+                        <span class="t-badge exit">Step 3: Exit Date (T+1)</span>
+                        <div class="t-val" id="tDateExit">20-Oct-2026 (Tuesday)</div>
+                        <div class="t-sub">Square Off / Close Position at Market EOD Close (3:15 PM IST)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Past Trade Execution Log Table -->
+            <div class="b-card">
+                <div class="c-title">📜 Past Historical Execution Log (<span id="tableStockTitle">UltraTech Cement Ltd.</span>)</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Quarter</th>
+                            <th>Broadcast Date (T)</th>
+                            <th>Entry Date</th>
+                            <th>Exit Date</th>
+                            <th>Entry Price</th>
+                            <th>Exit Price</th>
+                            <th>Return %</th>
+                            <th>Net PnL</th>
+                            <th>Outcome</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- COLUMN 3: RIGHT (MARGIN CALC & PRICE CHART) -->
+        <aside>
+            <!-- Capital & Margin Calculator Card -->
+            <div class="b-card">
+                <div class="c-title">💰 Live Margin & Capital Calculator</div>
+                <div class="calc-panel">
+                    <div class="calc-line">
+                        <span>LTP Price:</span>
+                        <span id="dispLtp" style="font-family:var(--font-mono)">₹11,594.00</span>
+                    </div>
+                    <div class="calc-line">
+                        <span>Contract Lot Size:</span>
+                        <span id="dispLot">100 Shares</span>
+                    </div>
+                    <div class="calc-line">
+                        <span>Total Contract Value:</span>
+                        <span id="dispVal" style="font-family:var(--font-mono)">₹11,59,400.00</span>
+                    </div>
+                    <div class="calc-line">
+                        <span>Req 20% Futures Margin:</span>
+                        <span id="dispMargin" style="color:var(--neon-purple); font-family:var(--font-mono)">₹2,31,880.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Price Curve Chart -->
+            <div class="b-card">
+                <div class="c-title">📊 Event Price Curve Visualization</div>
+                <div class="chart-box">
+                    <canvas id="eventChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Risk Protocol Card -->
+            <div class="b-card">
+                <div class="c-title">🛡️ Risk Protocol & Stop Loss</div>
+                <div class="risk-box">
+                    <strong>Stop-Loss Rule:</strong> Set a hard stop-loss of <strong>2.5% to 3.0%</strong> above entry. If any execution date coincides with an NSE exchange holiday, execution automatically shifts to the nearest open trading day at 3:15 PM IST.
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <script>
+        const NIFTY_DATA = [
+            { sym: "ULTRACEMCO", name: "UltraTech Cement Ltd.", ltp: 11594.00, lot: 100, stage: 2, dateStr: "19-Oct-2026 (Confirmed)", wr: "77.78%", avgRet: "+0.57%", winStr: "T-1 to T+1", strat: "SHORT", entry: "16-Oct-2026 (Friday)", result: "19-Oct-2026 (Monday)", exit: "20-Oct-2026 (Tuesday)",
+              trades: [
+                  { q: "Q4 (Jan 2025)", t: "2025-01-24", entry: "2025-01-17", exit: "2025-01-30", pEntry: 10513.36, pExit: 11407.09, ret: 8.50, pnl: 88277, win: true, side: "LONG" },
+                  { q: "Q3 (Oct 2024)", t: "2024-10-22", entry: "2024-10-15", exit: "2024-10-28", pEntry: 11344.99, pExit: 11022.73, ret: 2.84, pnl: 31107, win: true, side: "SHORT" },
+                  { q: "Q2 (Jul 2024)", t: "2024-07-19", entry: "2024-07-11", exit: "2024-07-25", pEntry: 11414.48, pExit: 11302.41, ret: 0.98, pnl: 10071, win: true, side: "SHORT" },
+                  { q: "Q1 (Apr 2024)", t: "2024-05-03", entry: "2024-04-25", exit: "2024-05-09", pEntry: 9566.02, pExit: 9331.26, ret: 2.45, pnl: 22531, win: true, side: "SHORT" }
+              ]
+            },
+            { sym: "RELIANCE", name: "Reliance Industries Ltd.", ltp: 2980.00, lot: 250, stage: 1, dateStr: "Unannounced (Pending Filing)", wr: "--", avgRet: "--", winStr: "T-3 to T+2", strat: "LOCKED (WAITING FOR NSE FILING)", entry: "Pending NSE Filing", result: "Pending NSE Filing", exit: "Pending NSE Filing", trades: [] },
+            { sym: "TCS", name: "Tata Consultancy Services", ltp: 4250.00, lot: 175, stage: 1, dateStr: "Unannounced (Pending Filing)", wr: "--", avgRet: "--", winStr: "T-2 to T+2", strat: "LOCKED (WAITING FOR NSE FILING)", entry: "Pending NSE Filing", result: "Pending NSE Filing", exit: "Pending NSE Filing", trades: [] },
+            { sym: "INFY", name: "Infosys Limited", ltp: 1890.00, lot: 400, stage: 1, dateStr: "Unannounced (Pending Filing)", wr: "--", avgRet: "--", winStr: "T-4 to T+1", strat: "LOCKED (WAITING FOR NSE FILING)", entry: "Pending NSE Filing", result: "Pending NSE Filing", exit: "Pending NSE Filing", trades: [] },
+            { sym: "HDFCBANK", name: "HDFC Bank Ltd.", ltp: 1640.00, lot: 550, stage: 1, dateStr: "Unannounced (Pending Filing)", wr: "--", avgRet: "--", winStr: "T-5 to T+2", strat: "LOCKED (WAITING FOR NSE FILING)", entry: "Pending NSE Filing", result: "Pending NSE Filing", exit: "Pending NSE Filing", trades: [] }
+        ];
+
+        let activeStock = NIFTY_DATA[0];
+        let eventChart = null;
+
+        function switchFont() {
+            const fontVal = document.getElementById('fontSelect').value;
+            document.body.style.fontFamily = fontVal;
+        }
+
+        function handleSearch() {
+            const query = document.getElementById('searchInput').value.trim().toLowerCase();
+            const container = document.getElementById('dropdownResults');
+            container.innerHTML = '';
+
+            if (query.length === 0) {
+                container.classList.remove('active');
+                return;
+            }
+
+            const matches = NIFTY_DATA.filter(s => 
+                s.sym.toLowerCase().includes(query) || s.name.toLowerCase().includes(query)
+            );
+
+            if (matches.length === 0) {
+                container.innerHTML = `<div style="padding:10px; color:var(--text-muted); font-size:12px; text-align:center">No Nifty 50 stock found</div>`;
+            } else {
+                matches.forEach(s => {
+                    const item = document.createElement('div');
+                    item.className = 'dropdown-item';
+                    item.onclick = () => selectStock(s);
+                    item.innerHTML = `
+                        <div>
+                            <div style="font-weight:700; color:var(--text-main); font-size:13px">${s.sym}</div>
+                            <div style="font-size:11px; color:var(--text-muted)">${s.name}</div>
+                        </div>
+                        <span class="${s.stage === 2 ? 'badge-stage2' : 'badge-stage1'}">
+                            ${s.stage === 2 ? '🟢 Stage 2' : '🟡 Stage 1'}
+                        </span>
+                    `;
+                    container.appendChild(item);
+                });
+            }
+
+            container.classList.add('active');
+        }
+
+        function quickSelect(sym) {
+            const s = NIFTY_DATA.find(x => x.sym === sym) || NIFTY_DATA[0];
+            selectStock(s);
+        }
+
+        function selectStock(stockObj) {
+            activeStock = stockObj;
+            document.getElementById('searchInput').value = `${stockObj.sym} - ${stockObj.name}`;
+            document.getElementById('dropdownResults').classList.remove('active');
+            
+            // Update active state in watchlist
+            document.querySelectorAll('.w-item').forEach(el => {
+                el.classList.toggle('active', el.innerText.includes(stockObj.sym));
+            });
+
+            renderView();
+        }
+
+        function renderView() {
+            const s = activeStock;
+            document.getElementById('dispStockName').innerText = `${s.sym} - ${s.name}`;
+
+            const badge = document.getElementById('dispStageBadge');
+            if (s.stage === 2) {
+                badge.className = 'badge-stage2';
+                badge.innerText = '🟢 Stage 2: Officially Confirmed on NSE';
+            } else {
+                badge.className = 'badge-stage1';
+                badge.innerText = '🟡 Stage 1: Pending Official NSE Filing';
+            }
+
+            document.getElementById('dispResultDate').value = s.dateStr;
+
+            // Margin Calc
+            document.getElementById('dispLtp').innerText = `₹${s.ltp.toLocaleString('en-IN', {minimumFractionDigits:2})}`;
+            document.getElementById('dispLot').innerText = `${s.lot} Shares`;
+            const cVal = s.ltp * s.lot;
+            document.getElementById('dispVal').innerText = `₹${cVal.toLocaleString('en-IN', {minimumFractionDigits:2})}`;
+            document.getElementById('dispMargin').innerText = `₹${(cVal * 0.20).toLocaleString('en-IN', {minimumFractionDigits:2})}`;
+
+            // Hero Banner & Metrics
+            const heroBanner = document.getElementById('heroBanner');
+            const heroTag = document.getElementById('heroTag');
+            const heroDesc = document.getElementById('heroDesc');
+
+            if (s.stage === 2) {
+                heroBanner.className = `hero-banner ${s.strat === 'LONG' ? 'long-hero' : ''}`;
+                heroTag.className = `sig-badge ${s.strat.toLowerCase()}`;
+                heroTag.innerText = s.strat === 'SHORT' ? 'SELL / SHORT 1 LOT' : 'BUY / LONG 1 LOT';
+                heroDesc.innerText = `Stage 2 Verified Signal (100% Disclosed on NSE). ${s.wr} Win Rate. Initiate Short Position near EOD close on T-1.`;
+            } else {
+                heroBanner.className = 'hero-banner locked-hero';
+                heroTag.className = 'sig-badge locked';
+                heroTag.innerText = 'LOCKED (STAGE 1 UNANNOUNCED)';
+                heroDesc.innerText = 'Trading rule enforced: Execution is locked until official filing appears on NSE India.';
+            }
+
+            document.getElementById('valWinRate').innerText = s.stage === 2 ? s.wr : '--';
+            document.getElementById('valAvgReturn').innerText = s.stage === 2 ? s.avgRet : '--';
+            document.getElementById('valWindow').innerText = s.winStr;
+
+            document.getElementById('tDateEntry').innerText = s.entry;
+            document.getElementById('tDateResult').innerText = s.result;
+            document.getElementById('tDateExit').innerText = s.exit;
+            document.getElementById('tableStockTitle').innerText = s.name;
+
+            // Table
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            if (s.trades.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="9" style="text-align:center; color:var(--text-muted); padding:16px">No historical trades logged for this selection or pending NSE filing.</td></tr>`;
+            } else {
+                s.trades.forEach(t => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td style="font-weight:700; color:var(--text-main)">${t.q}</td>
+                        <td>${t.t}</td>
+                        <td>${t.entry}</td>
+                        <td>${t.exit}</td>
+                        <td>₹${t.pEntry.toLocaleString('en-IN')}</td>
+                        <td>₹${t.pExit.toLocaleString('en-IN')}</td>
+                        <td class="${t.ret >= 0 ? 'pos-txt' : 'neg-txt'}">${t.ret >= 0 ? '+' : ''}${t.ret.toFixed(2)}%</td>
+                        <td class="${t.pnl >= 0 ? 'pos-txt' : 'neg-txt'}">${t.pnl >= 0 ? '+' : ''}₹${t.pnl.toLocaleString('en-IN')}</td>
+                        <td><span class="${t.win ? 'win-tag' : 'loss-tag'}">${t.win ? 'WIN' : 'LOSS'} (${t.side})</span></td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            }
+
+            renderChart(s);
+        }
+
+        function renderChart(s) {
+            const ctx = document.getElementById('eventChart').getContext('2d');
+            if (eventChart) eventChart.destroy();
+
+            const isShort = s.strat === 'SHORT';
+            const color = isShort ? '#f43f5e' : '#10b981';
+
+            eventChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['T-5', 'T-3', 'T-1 (Entry)', 'T (Result)', 'T+1 (Exit)', 'T+3'],
+                    datasets: [{
+                        label: 'Price Trajectory',
+                        data: [100, 99.5, 100.2, isShort ? 98.4 : 101.8, isShort ? 97.5 : 102.5, isShort ? 98.0 : 102.0],
+                        borderColor: color,
+                        backgroundColor: isShort ? 'rgba(244, 63, 94, 0.1)' : 'rgba(16, 185, 129, 0.1)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#94a3b8', font: { size: 10 } } },
+                        y: { grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#94a3b8', font: { size: 10 } } }
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.search-wrapper')) {
+                document.getElementById('dropdownResults').classList.remove('active');
+            }
+        });
+
+        window.onload = renderView;
+    </script>
+</body>
+</html>

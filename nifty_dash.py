@@ -16,12 +16,14 @@ feeds) but only LISTS the Nifty 50 constituents.
 
 from __future__ import annotations
 
+import json
 import sys
 import threading
 import webbrowser
-from urllib.parse import urlparse
+from urllib.parse import urlparse, parse_qs
 
 import stock_server as S                      # reuse the whole dashboard engine
+import exp_bar_host as X                       # Peer / Forward analysis (promoted onto main host)
 from download_feeds import NIFTY50_FALLBACK   # the Nifty 50 symbol list
 
 _N = len(set(NIFTY50_FALLBACK))
@@ -32,12 +34,38 @@ NIFTY_PAGE = (S.PAGE
               .replace("NSE Stock Browser", "Nifty 50 Browser")
               .replace("search any of 2,363 stocks", f"search any of {_N} stocks"))
 
+# --- promote the Peer / Forward analysis onto the main host (purely additive) --
+# Serve the whole expectation-bar app at /peer, with its API mounted at /pa/* so
+# it never collides with the main dashboard's own /api/* routes. The main page is
+# untouched apart from one floating link.
+_BACK_TO_MAIN = ('<a href="/" style="display:inline-block;margin-bottom:12px;background:#1f2937;'
+                 'color:#e6edf3;font-weight:700;padding:8px 14px;border-radius:8px;'
+                 'text-decoration:none;border:1px solid #2b3a4f;font-family:-apple-system,Segoe UI,sans-serif">'
+                 '← Main Dashboard</a>')
+PEER_PAGE = (X.PAGE.replace("/api/", "/pa/")
+             .replace('<div class="wrap">', '<div class="wrap">' + _BACK_TO_MAIN, 1))
+_PEER_LINK = ('<a href="/peer" target="_blank" style="position:fixed;bottom:16px;right:16px;'
+              'z-index:9999;background:#58a6ff;color:#0b1220;font-weight:700;padding:9px 15px;'
+              'border-radius:9px;text-decoration:none;font-family:-apple-system,Segoe UI,sans-serif;'
+              'box-shadow:0 4px 14px rgba(0,0,0,.4)">📊 Peer / Forward Analysis ↗</a>')
+NIFTY_PAGE = NIFTY_PAGE.replace("</body>", _PEER_LINK + "</body>")
+
 
 class NiftyHandler(S.Handler):
     """Same handler as the full dashboard, but serves the rebranded page."""
     def do_GET(self):
-        if urlparse(self.path).path in ("/", "/index.html"):
+        p = urlparse(self.path)
+        if p.path in ("/", "/index.html"):
             self._send(200, NIFTY_PAGE, "text/html; charset=utf-8")
+            return
+        if p.path in ("/peer", "/peer/", "/peer.html"):
+            self._send(200, PEER_PAGE, "text/html; charset=utf-8")
+            return
+        if p.path.startswith("/pa/"):                       # Peer / Forward analysis API
+            obj = X.api(p.path[len("/pa/"):], parse_qs(p.query))
+            body = json.dumps(obj if obj is not None else {"error": "not found"},
+                              ensure_ascii=False)
+            self._send(200 if obj is not None else 404, body, "application/json")
             return
         super().do_GET()
 

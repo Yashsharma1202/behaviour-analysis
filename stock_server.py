@@ -56,14 +56,21 @@ FILE_CACHE.mkdir(parents=True, exist_ok=True)
 # Symbol discovery
 # ---------------------------------------------------------------------------
 def discover_symbols() -> list[str]:
+    oi_dir = ROOT / "OI_DATA"
+    if oi_dir.exists():
+        import os
+        syms = sorted([e.name.strip().upper() for e in os.scandir(oi_dir) if e.is_dir()])
+        if syms:
+            return syms
+            
     syms: set[str] = set()
     for st in STATEMENT_DIRS:
         d = ROOT / st
         if d.exists():
-            syms.update(p.stem for p in d.glob("*.csv"))
-    # Drop purely-numeric BSE scrip codes (e.g. 500142) — those are old/delisted
-    # entries with stale, incomplete data. Keep proper alphabetic NSE symbols.
+            syms.update(p.stem.strip().upper() for p in d.glob("*.csv"))
+            
     return sorted(s for s in syms if not s.isdigit())
+
 
 
 # ---------------------------------------------------------------------------

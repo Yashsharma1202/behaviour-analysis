@@ -106,9 +106,12 @@ def load_events_from_feeds(symbols: list[str]) -> pd.DataFrame:
     for sym in symbols:
         for feed, (label, datecol, sigcol) in FEEDS.items():
             path = ROOT / sym / f"{feed}.csv"
-            if not path.exists():
+            if not path.exists() or path.stat().st_size == 0:
                 continue
-            df = pd.read_csv(path, dtype=str).fillna("")
+            try:
+                df = pd.read_csv(path, dtype=str).fillna("")
+            except Exception:
+                continue
             if datecol not in df.columns:
                 continue
             if sigcol and sigcol in df.columns:          # keep only 'major' announcements

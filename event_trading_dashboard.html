@@ -1,0 +1,1899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nifty 50 Event Intelligence & Position Taking Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #070B14;
+      --surface: #0E1626;
+      --surface-light: #162032;
+      --surface-border: #1E2D44;
+      --primary: #3B82F6;
+      --primary-glow: rgba(59, 130, 246, 0.25);
+      --accent: #6366F1;
+      
+      --long-bg: rgba(16, 185, 129, 0.12);
+      --long-border: #10B981;
+      --long-text: #34D399;
+      --long-glow: rgba(16, 185, 129, 0.25);
+      
+      --short-bg: rgba(239, 68, 68, 0.12);
+      --short-border: #EF4444;
+      --short-text: #F87171;
+      --short-glow: rgba(239, 68, 68, 0.25);
+      
+      --gold-bg: rgba(245, 158, 11, 0.15);
+      --gold-text: #FBBF24;
+      --text-main: #F1F5F9;
+      --text-muted: #94A3B8;
+      --text-sub: #64748B;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    /* Top Navigation Bar */
+    header {
+      background: rgba(14, 22, 38, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--surface-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0.75rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #3B82F6, #6366F1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: #FFF;
+      box-shadow: 0 0 15px var(--primary-glow);
+    }
+    .brand-text h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .brand-text p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .header-pills {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34D399;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+    }
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #10B981;
+      box-shadow: 0 0 8px #10B981;
+      animation: pulse 1.8s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    /* Ticker Banner */
+    .ticker-bar {
+      background: linear-gradient(90deg, #1E1B4B 0%, #0F172A 50%, #1E1B4B 100%);
+      border-bottom: 1px solid #312E81;
+      padding: 0.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+    .ticker-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .ticker-tag {
+      background: #4F46E5;
+      color: #FFF;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    /* Container Layout */
+    .container {
+      width: 100%;
+      max-width: 100%;
+      margin: 1rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Master Tabs Navigation */
+    .tabs-nav {
+      display: flex;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--surface-border);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.25rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .tabs-nav::-webkit-scrollbar {
+      display: none;
+    }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 0.65rem 1.15rem;
+      color: var(--text-muted);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 8px 8px 0 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      position: relative;
+      white-space: nowrap;
+    }
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: var(--surface-light);
+    }
+    .tab-btn.active {
+      color: #FFF;
+      background: var(--surface);
+    }
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #3B82F6, #6366F1);
+      border-radius: 3px 3px 0 0;
+    }
+    .tab-badge {
+      font-size: 0.65rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 9999px;
+      font-weight: 700;
+    }
+    .badge-active { background: #10B981; color: #FFF; }
+    .badge-urgent { background: #EF4444; color: #FFF; animation: pulse 1.5s infinite; }
+    .badge-count { background: var(--surface-border); color: var(--text-muted); }
+
+    /* Section Cards */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 12px;
+      padding: 1rem 1.15rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .card-title-group h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .card-title-group p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    /* Event Master Table (Tabular Form) */
+    .event-master-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+    }
+    .event-master-table th {
+      background: #111D30;
+      color: #94A3B8;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.6rem 0.75rem;
+      border-bottom: 2px solid var(--surface-border);
+      text-align: left;
+      white-space: nowrap;
+    }
+    .event-master-table td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--surface-border);
+      background: var(--surface-light);
+      font-size: 0.8rem;
+      vertical-align: middle;
+      white-space: nowrap;
+      transition: background 0.2s ease;
+    }
+    .event-master-row {
+      cursor: pointer;
+    }
+    .event-master-row:hover td {
+      background: rgba(59, 130, 246, 0.08);
+    }
+    .event-master-row.selected td {
+      background: rgba(59, 130, 246, 0.15);
+      border-top: 1px solid #3B82F6;
+      border-bottom: 1px solid #3B82F6;
+    }
+
+    .btn-select-event {
+      background: #1E293B;
+      color: #FFF;
+      border: 1px solid var(--surface-border);
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      white-space: nowrap;
+    }
+    .event-master-row.selected .btn-select-event {
+      background: #3B82F6;
+      border-color: #3B82F6;
+      color: #FFF;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+    }
+
+    /* Filters Bar */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .search-input {
+      background: var(--surface-light);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      color: #FFF;
+      padding: 0.45rem 0.85rem;
+      font-size: 0.8rem;
+      min-width: 220px;
+      outline: none;
+      transition: border 0.2s ease;
+    }
+    .search-input:focus {
+      border-color: #3B82F6;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+    }
+    .filter-pill {
+      background: var(--surface-light);
+      border: 1px solid var(--surface-border);
+      color: var(--text-muted);
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .filter-pill:hover, .filter-pill.active {
+      color: #FFF;
+      border-color: #3B82F6;
+      background: rgba(59, 130, 246, 0.15);
+    }
+
+    /* Table Styles */
+    .table-container {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+      border-radius: 10px;
+      border: 1px solid var(--surface-border);
+      background: var(--surface);
+      scrollbar-width: thin;
+      scrollbar-color: #3B82F6 #111D30;
+    }
+    .table-container::-webkit-scrollbar {
+      height: 7px;
+    }
+    .table-container::-webkit-scrollbar-track {
+      background: #0B111E;
+      border-radius: 4px;
+    }
+    .table-container::-webkit-scrollbar-thumb {
+      background: #3B82F6;
+      border-radius: 4px;
+    }
+    .table-container::-webkit-scrollbar-thumb:hover {
+      background: #60A5FA;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.8rem;
+    }
+    th {
+      background: var(--surface-light);
+      color: var(--text-muted);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.6rem 0.7rem;
+      border-bottom: 1px solid var(--surface-border);
+      white-space: nowrap;
+    }
+    td {
+      padding: 0.6rem 0.7rem;
+      border-bottom: 1px solid var(--surface-border);
+      color: var(--text-main);
+      white-space: nowrap;
+    }
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Sticky first two columns for wide 15-column tables */
+    #quarter-table th:nth-child(1),
+    #quarter-table td:nth-child(1),
+    #equity-table th:nth-child(1),
+    #equity-table td:nth-child(1) {
+      position: sticky;
+      left: 0;
+      z-index: 3;
+      background: #0E1626;
+      min-width: 36px;
+      text-align: center;
+    }
+    #quarter-table th:nth-child(2),
+    #quarter-table td:nth-child(2),
+    #equity-table th:nth-child(2),
+    #equity-table td:nth-child(2) {
+      position: sticky;
+      left: 36px;
+      z-index: 3;
+      background: #0E1626;
+      box-shadow: 3px 0 6px -2px rgba(0, 0, 0, 0.5);
+    }
+    #quarter-table tr:hover td:nth-child(1),
+    #quarter-table tr:hover td:nth-child(2),
+    #equity-table tr:hover td:nth-child(1),
+    #equity-table tr:hover td:nth-child(2) {
+      background: #17243B;
+    }
+    
+    /* Direction Badges */
+    .badge-long {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--long-bg);
+      border: 1px solid var(--long-border);
+      color: var(--long-text);
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+    }
+    .badge-short {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--short-bg);
+      border: 1px solid var(--short-border);
+      color: var(--short-text);
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+    }
+
+    .window-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      color: #E2E8F0;
+    }
+
+    .date-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+    .date-confirmed { color: #60A5FA; }
+    .date-pending { color: var(--text-sub); font-style: italic; }
+
+    /* Action Recommendation Tag */
+    .action-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.55rem;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .action-buy-call { background: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .action-buy-put { background: rgba(239, 68, 68, 0.15); color: #F87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+    .action-buy-cnc { background: rgba(16, 185, 129, 0.18); color: #10B981; border: 1px solid #10B981; font-weight: 700; }
+    .action-exit-cash { background: rgba(245, 158, 11, 0.15); color: #FBBF24; border: 1px solid #F59E0B; }
+
+    /* Segment Switch Bar */
+    .seg-switch-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--surface-light);
+      padding: 0.35rem 0.5rem;
+      border-radius: 10px;
+      border: 1px solid var(--surface-border);
+      margin-bottom: 1.25rem;
+    }
+    .seg-pill {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+    .seg-pill:hover {
+      color: #FFF;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .seg-pill.active {
+      background: linear-gradient(135deg, #2563EB, #4F46E5);
+      color: #FFF;
+      font-weight: 700;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+    }
+
+    /* Quick Detail Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.2s ease;
+    }
+    .modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 16px;
+      width: 90%;
+      max-width: 600px;
+      padding: 2rem;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      transform: scale(0.95);
+      transition: all 0.2s ease;
+    }
+    .modal-backdrop.open .modal {
+      transform: scale(1);
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .close-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    /* Floating Alert */
+    .timing-banner {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(15, 23, 42, 0.6) 100%);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      border-left: 4px solid #EF4444;
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .timing-banner strong { color: #FCA5A5; font-size: 0.9rem; }
+    .timing-banner p { font-size: 0.8rem; color: #E2E8F0; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header>
+    <div class="brand">
+      <div class="brand-logo">N50</div>
+      <div class="brand-text">
+        <h1>Nifty 50 Event Intelligence Host</h1>
+        <p>Quantitative Event-Drift Engine & Position Taking Hub</p>
+      </div>
+    </div>
+    <div class="header-pills">
+      <div class="live-badge" style="background:rgba(59, 130, 246, 0.15); border-color:#3B82F6; color:#93C5FD;">
+        <span>⏰ EXECUTION: 09:20 AM ENTRY | 03:15 PM EXIT</span>
+      </div>
+      <div class="live-badge">
+        <span class="live-dot"></span>
+        <span>LIVE ENVIRONMENT: 21-SEP-2026</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Urgent Action Ticker -->
+  <div class="ticker-bar">
+    <div class="ticker-item">
+      <span class="ticker-tag">Next Trigger</span>
+      <span><strong>2-Oct Gandhi Jayanti Playbook</strong> triggers <strong>TOMORROW (Tuesday 22-Sep)</strong> for T-8 stocks (BHARTIARTL, HDFCLIFE, COALINDIA, JIOFIN)</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-tag" style="background:#059669">Q3 Earnings</span>
+      <span>First Quarterly Trade: <strong>HCLTECH (LONG)</strong> on <strong>06-Oct-2026</strong></span>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Master Navigation Tabs -->
+    <div class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('quarterly')">
+        <span>⚡ Futures & F&O</span>
+        <span class="tab-badge badge-active">DERIVATIVES</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab('equity')">
+        <span>📈 Cash Equity</span>
+        <span class="tab-badge badge-count">SPOT / CNC</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab('holidays')">
+        <span>🏖️ Holiday Trading</span>
+        <span class="tab-badge badge-urgent">STARTS TOMORROW</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab('rbi')">
+        <span>🏦 RBI Monetary Policy</span>
+        <span class="tab-badge badge-count">2026 MPC</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab('custom')">
+        <span>➕ Custom Events Hub</span>
+        <span class="tab-badge badge-count">EXTENSIBLE</span>
+      </button>
+    </div>
+
+    <!-- TAB 1: FUTURES & F&O RESULTS -->
+    <div id="tab-quarterly" class="tab-content">
+      
+      <!-- Segment Switcher Header -->
+      <div class="seg-switch-bar">
+        <span style="font-size:0.75rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; margin-right:0.3rem;">Active Segment:</span>
+        <button class="seg-pill active" onclick="switchTab('quarterly')">⚡ Futures & F&O (1 Lot Margin)</button>
+        <button class="seg-pill" onclick="switchTab('equity')">📈 Cash Equity (100% Delivery CNC)</button>
+      </div>
+
+      <!-- Event Selectors in TABULAR FORM -->
+      <div class="card" style="padding: 1rem 1.15rem; margin-bottom: 1.25rem;">
+        <div class="card-title-group" style="margin-bottom: 0.85rem;">
+          <h2>📅 Quarterly Earnings Cycles &mdash; Futures & F&O Master</h2>
+          <p>Click on any row to load that quarter's full 50-stock position taking table below (Fixed Lot Sizes & SPAN Margin).</p>
+        </div>
+        
+        <div class="table-container">
+          <table class="event-master-table">
+            <thead>
+              <tr>
+                <th>Quarter Code</th>
+                <th>Earnings Event Cycle</th>
+                <th>Reporting Period</th>
+                <th>Status</th>
+                <th>Model Strategy Bias</th>
+                <th>ALL QUARTERS WIN RATE</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event-master-row selected" id="qrow-FY27_Q2" onclick="selectQuarterRow('FY27_Q2', this)">
+                <td><span class="window-pill" style="color:#60A5FA;">FY27_Q2</span></td>
+                <td><strong style="color:#FFF;">Q3 FY 2026-27 (Jul - Sep 2026 Results)</strong></td>
+                <td>October 2026 - November 2026</td>
+                <td><span class="badge-active" style="padding:0.25rem 0.6rem; border-radius:4px;">ACTIVE CURRENT QUARTER</span></td>
+                <td><span class="badge-short">25 SHORT</span> / <span class="badge-long">25 LONG</span></td>
+                <td><strong style="color:#FBBF24;">70.3%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectQuarterRow('FY27_Q2', this.closest('tr'))">✓ Loaded Below</button></td>
+              </tr>
+              <tr class="event-master-row" id="qrow-FY27_Q1" onclick="selectQuarterRow('FY27_Q1', this)">
+                <td><span class="window-pill">FY27_Q1</span></td>
+                <td><strong style="color:#FFF;">Q2 FY 2026-27 (Apr - Jun 2026 Results)</strong></td>
+                <td>July 2026 – August 2026</td>
+                <td><span class="badge-urgent" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED OUT-OF-SAMPLE</span></td>
+                <td><span class="badge-short">20 SHORT</span> / <span class="badge-long">30 LONG</span></td>
+                <td><strong style="color:#FBBF24;">86.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectQuarterRow('FY27_Q1', this.closest('tr'))">View Performance</button></td>
+              </tr>
+              <tr class="event-master-row" id="qrow-FY27_Q0" onclick="selectQuarterRow('FY27_Q0', this)">
+                <td><span class="window-pill">FY27_Q0</span></td>
+                <td><strong style="color:#FFF;">Q1 FY 2026-27 (Jan - Mar 2026 Results)</strong></td>
+                <td>April 2026 – May 2026</td>
+                <td><span class="badge-urgent" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED OUT-OF-SAMPLE</span></td>
+                <td><span class="badge-short">29 SHORT</span> / <span class="badge-long">21 LONG</span></td>
+                <td><strong style="color:#FBBF24;">60.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectQuarterRow('FY27_Q0', this.closest('tr'))">View Performance</button></td>
+              </tr>
+              <tr class="event-master-row" id="qrow-FY26_Q4" onclick="selectQuarterRow('FY26_Q4', this)">
+                <td><span class="window-pill">FY26_Q4</span></td>
+                <td><strong style="color:#FFF;">Q4 FY 2025-26 (Oct - Dec 2025 Results)</strong></td>
+                <td>January 2026 – February 2026</td>
+                <td><span class="badge-urgent" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED OUT-OF-SAMPLE</span></td>
+                <td><span class="badge-short">31 SHORT</span> / <span class="badge-long">19 LONG</span></td>
+                <td><strong style="color:#FBBF24;">72.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectQuarterRow('FY26_Q4', this.closest('tr'))">View Performance</button></td>
+              </tr>
+              <tr class="event-master-row" id="qrow-FY26_Q3" onclick="selectQuarterRow('FY26_Q3', this)">
+                <td><span class="window-pill">FY26_Q3</span></td>
+                <td><strong style="color:#FFF;">Q3 FY 2025-26 (Jul - Sep 2025 Results)</strong></td>
+                <td>October 2025 – November 2025</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">BENCHMARK Q3 EARNINGS</span></td>
+                <td><span class="badge-short">33 SHORT</span> / <span class="badge-long">17 LONG</span></td>
+                <td><strong style="color:#FBBF24;">66.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectQuarterRow('FY26_Q3', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="qrow-FY26_Q2" onclick="selectQuarterRow('FY26_Q2', this)">
+                <td><span class="window-pill">FY26_Q2</span></td>
+                <td><strong style="color:#FFF;">Q2 FY 2025-26 (Apr - Jun 2025 Results)</strong></td>
+                <td>July 2025 – August 2025</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-short">31 SHORT</span> / <span class="badge-long">18 LONG</span></td>
+                <td><strong style="color:#FBBF24;">51.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectQuarterRow('FY26_Q2', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="qrow-FY26_Q1" onclick="selectQuarterRow('FY26_Q1', this)">
+                <td><span class="window-pill">FY26_Q1</span></td>
+                <td><strong style="color:#FFF;">Q1 FY 2025-26 (Jan - Mar 2025 Results)</strong></td>
+                <td>April 2025 – May 2025</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-short">33 SHORT</span> / <span class="badge-long">17 LONG</span></td>
+                <td><strong style="color:#FBBF24;">62.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectQuarterRow('FY26_Q1', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="qrow-FY25_Q4" onclick="selectQuarterRow('FY25_Q4', this)">
+                <td><span class="window-pill">FY25_Q4</span></td>
+                <td><strong style="color:#FFF;">Q4 FY 2024-25 (Oct - Dec 2024 Results)</strong></td>
+                <td>January 2025 – February 2025</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-short">33 SHORT</span> / <span class="badge-long">17 LONG</span></td>
+                <td><strong style="color:#FBBF24;">52.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectQuarterRow('FY25_Q4', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="qrow-FY25_Q3" onclick="selectQuarterRow('FY25_Q3', this)">
+                <td><span class="window-pill">FY25_Q3</span></td>
+                <td><strong style="color:#FFF;">Q3 FY 2024-25 (Jul - Sep 2024 Results)</strong></td>
+                <td>October 2024 – November 2024</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-short">29 SHORT</span> / <span class="badge-long">21 LONG</span></td>
+                <td><strong style="color:#FBBF24;">62.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectQuarterRow('FY25_Q3', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="qrow-FY25_Q2" onclick="selectQuarterRow('FY25_Q2', this)">
+                <td><span class="window-pill">FY25_Q2</span></td>
+                <td><strong style="color:#FFF;">Q2 FY 2024-25 (Apr - Jun 2024 Results)</strong></td>
+                <td>July 2024 – August 2024</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-short">27 SHORT</span> / <span class="badge-long">23 LONG</span></td>
+                <td><strong style="color:#FBBF24;">68.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectQuarterRow('FY25_Q2', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="qrow-FY25_Q1" onclick="selectQuarterRow('FY25_Q1', this)">
+                <td><span class="window-pill">FY25_Q1</span></td>
+                <td><strong style="color:#FFF;">Q1 FY 2024-25 (Jan - Mar 2024 Results)</strong></td>
+                <td>April 2024 – May 2024</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-short">30 SHORT</span> / <span class="badge-long">21 LONG</span></td>
+                <td><strong style="color:#FBBF24;">66.7%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectQuarterRow('FY25_Q1', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="qrow-FY24_Q4" onclick="selectQuarterRow('FY24_Q4', this)">
+                <td><span class="window-pill">FY24_Q4</span></td>
+                <td><strong style="color:#FFF;">Q4 FY 2023-24 (Oct - Dec 2023 Results)</strong></td>
+                <td>January 2024 – February 2024</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-short">19 SHORT</span> / <span class="badge-long">32 LONG</span></td>
+                <td><strong style="color:#FBBF24;">96.1%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectQuarterRow('FY24_Q4', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="qrow-FY24_Q3" onclick="selectQuarterRow('FY24_Q3', this)">
+                <td><span class="window-pill">FY24_Q3</span></td>
+                <td><strong style="color:#FFF;">Q3 FY 2023-24 (Jul - Sep 2023 Results)</strong></td>
+                <td>October 2023 – November 2023</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-short">23 SHORT</span> / <span class="badge-long">27 LONG</span></td>
+                <td><strong style="color:#FBBF24;">94.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectQuarterRow('FY24_Q3', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Main Position Taking Table Card -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2 id="quarter-table-heading">Q3 FY 2026-27 Position Taking Windows &mdash; Futures (F&O)</h2>
+            <p>Futures lot-size contracts with ~20% SPAN margin and overnight LONG / SHORT capabilities.</p>
+          </div>
+          
+          <div class="filter-bar">
+            <input type="text" id="q-search" class="search-input" placeholder="Search Futures Symbol (e.g. INFY, HCLTECH)..." oninput="filterQuarterTable()">
+            <button class="filter-pill active" onclick="setQuarterFilter('all', this)">All (50)</button>
+            <button class="filter-pill" onclick="setQuarterFilter('confirmed', this)">📢 Confirmed Dates (4)</button>
+            <button class="filter-pill" onclick="setQuarterFilter('LONG', this)">🟢 LONG Only (22)</button>
+            <button class="filter-pill" onclick="setQuarterFilter('SHORT', this)">🔴 SHORT Only (28)</button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table id="quarter-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Symbol</th>
+                <th>Company</th>
+                <th>Futures Bias</th>
+                <th>Position Window</th>
+                <th>Entry Date (09:20 AM)</th>
+                <th>Result Date (T)</th>
+                <th>Exit Date (03:15 PM)</th>
+                <th>All Quarters Win Rate</th>
+                <th>Lot Size</th>
+                <th>Expected Ret %</th>
+                <th>Return We Get (Actual %)</th>
+                <th>Realised P&L (1 Lot)</th>
+                <th>20% SPAN Margin</th>
+                <th>Futures Order Ticket</th>
+              </tr>
+            </thead>
+            <tbody id="quarter-tbody">
+              <!-- Dynamically populated via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- TAB 1B: CASH EQUITY (SPOT / CNC DELIVERY) -->
+    <div id="tab-equity" class="tab-content" style="display:none;">
+      
+      <!-- Segment Switcher Header -->
+      <div class="seg-switch-bar">
+        <span style="font-size:0.75rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; margin-right:0.3rem;">Active Segment:</span>
+        <button class="seg-pill" onclick="switchTab('quarterly')">⚡ Futures & F&O (1 Lot Margin)</button>
+        <button class="seg-pill active" onclick="switchTab('equity')">📈 Cash Equity (100% Delivery CNC)</button>
+      </div>
+
+      <div class="timing-banner" style="border-left: 4px solid #10B981; background:rgba(16, 185, 129, 0.08);">
+        <div>
+          <strong style="color:#34D399;">📈 Cash Equity (Spot / CNC) Trading Framework</strong>
+          <p style="color:#CBD5E1; font-size:0.85rem;">
+            Trades executed with 100% cash delivery into Demat account. Zero leverage, zero MTM margin calls. 
+            <strong>Note:</strong> Under SEBI exchange rules, overnight naked shorting is prohibited in cash equity. Therefore, 
+            <strong>🟢 LONG</strong> signals represent <strong>Cash Delivery Buys</strong>, while 
+            <strong>🔴 SHORT</strong> signals represent <strong>Capital Protection / Profit Booking / Defensive Exits</strong> (Zero Buying).
+          </p>
+        </div>
+      </div>
+
+      <!-- Equity Event Master Table -->
+      <div class="card" style="padding: 1rem 1.15rem; margin-bottom: 1.25rem;">
+        <div class="card-title-group" style="margin-bottom: 0.85rem;">
+          <h2>📅 Quarterly Earnings Cycles &mdash; Cash Equity Master</h2>
+          <p>Click on any cycle to view the Cash Delivery Buy vs. Capital Protection schedule.</p>
+        </div>
+        
+        <div class="table-container">
+          <table class="event-master-table">
+            <thead>
+              <tr>
+                <th>Quarter Code</th>
+                <th>Earnings Event Cycle</th>
+                <th>Reporting Period</th>
+                <th>Status</th>
+                <th>Cash Equity Action Plan</th>
+                <th>ALL QUARTERS WIN RATE</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event-master-row selected" id="eqrow-FY27_Q2" onclick="selectEquityQuarterRow('FY27_Q2', this)">
+                <td><span class="window-pill" style="color:#60A5FA;">FY27_Q2</span></td>
+                <td><strong style="color:#FFF;">Q3 FY 2026-27 (Jul - Sep 2026 Results)</strong></td>
+                <td>October 2026 - November 2026</td>
+                <td><span class="badge-active" style="padding:0.25rem 0.6rem; border-radius:4px;">ACTIVE CURRENT QUARTER</span></td>
+                <td><span class="badge-long">25 Delivery BUYS</span> / <span class="badge-short">25 Cash EXITS</span></td>
+                <td><strong style="color:#FBBF24;">70.3%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectEquityQuarterRow('FY27_Q2', this.closest('tr'))">✓ Loaded Below</button></td>
+              </tr>
+              <tr class="event-master-row" id="eqrow-FY27_Q1" onclick="selectEquityQuarterRow('FY27_Q1', this)">
+                <td><span class="window-pill">FY27_Q1</span></td>
+                <td><strong style="color:#FFF;">Q2 FY 2026-27 (Apr - Jun 2026 Results)</strong></td>
+                <td>July 2026 – August 2026</td>
+                <td><span class="badge-urgent" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED OUT-OF-SAMPLE</span></td>
+                <td><span class="badge-long">30 Delivery BUYS</span> / <span class="badge-short">20 Cash EXITS</span></td>
+                <td><strong style="color:#FBBF24;">86.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectEquityQuarterRow('FY27_Q1', this.closest('tr'))">View Performance</button></td>
+              </tr>
+              <tr class="event-master-row" id="eqrow-FY27_Q0" onclick="selectEquityQuarterRow('FY27_Q0', this)">
+                <td><span class="window-pill">FY27_Q0</span></td>
+                <td><strong style="color:#FFF;">Q1 FY 2026-27 (Jan - Mar 2026 Results)</strong></td>
+                <td>April 2026 – May 2026</td>
+                <td><span class="badge-urgent" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED OUT-OF-SAMPLE</span></td>
+                <td><span class="badge-long">21 Delivery BUYS</span> / <span class="badge-short">29 Cash EXITS</span></td>
+                <td><strong style="color:#FBBF24;">60.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectEquityQuarterRow('FY27_Q0', this.closest('tr'))">View Performance</button></td>
+              </tr>
+              <tr class="event-master-row" id="eqrow-FY26_Q4" onclick="selectEquityQuarterRow('FY26_Q4', this)">
+                <td><span class="window-pill">FY26_Q4</span></td>
+                <td><strong style="color:#FFF;">Q4 FY 2025-26 (Oct - Dec 2025 Results)</strong></td>
+                <td>January 2026 – February 2026</td>
+                <td><span class="badge-urgent" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED OUT-OF-SAMPLE</span></td>
+                <td><span class="badge-long">19 Delivery BUYS</span> / <span class="badge-short">31 Cash EXITS</span></td>
+                <td><strong style="color:#FBBF24;">72.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectEquityQuarterRow('FY26_Q4', this.closest('tr'))">View Performance</button></td>
+              </tr>
+              <tr class="event-master-row" id="eqrow-FY26_Q3" onclick="selectEquityQuarterRow('FY26_Q3', this)">
+                <td><span class="window-pill">FY26_Q3</span></td>
+                <td><strong style="color:#FFF;">Q3 FY 2025-26 (Jul - Sep 2025 Results)</strong></td>
+                <td>October 2025 – November 2025</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">BENCHMARK Q3 EARNINGS</span></td>
+                <td><span class="badge-long">17 Delivery BUYS</span> / <span class="badge-short">33 Cash EXITS</span></td>
+                <td><strong style="color:#FBBF24;">66.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectEquityQuarterRow('FY26_Q3', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="eqrow-FY26_Q2" onclick="selectEquityQuarterRow('FY26_Q2', this)">
+                <td><span class="window-pill">FY26_Q2</span></td>
+                <td><strong style="color:#FFF;">Q2 FY 2025-26 (Apr - Jun 2025 Results)</strong></td>
+                <td>July 2025 – August 2025</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-long">18 Delivery BUYS</span> / <span class="badge-short">31 Cash EXITS</span></td>
+                <td><strong style="color:#FBBF24;">51.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectEquityQuarterRow('FY26_Q2', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="eqrow-FY26_Q1" onclick="selectEquityQuarterRow('FY26_Q1', this)">
+                <td><span class="window-pill">FY26_Q1</span></td>
+                <td><strong style="color:#FFF;">Q1 FY 2025-26 (Jan - Mar 2025 Results)</strong></td>
+                <td>April 2025 – May 2025</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-long">17 Delivery BUYS</span> / <span class="badge-short">33 Cash EXITS</span></td>
+                <td><strong style="color:#FBBF24;">62.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectEquityQuarterRow('FY26_Q1', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="eqrow-FY25_Q4" onclick="selectEquityQuarterRow('FY25_Q4', this)">
+                <td><span class="window-pill">FY25_Q4</span></td>
+                <td><strong style="color:#FFF;">Q4 FY 2024-25 (Oct - Dec 2024 Results)</strong></td>
+                <td>January 2025 – February 2025</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-long">17 Delivery BUYS</span> / <span class="badge-short">33 Cash EXITS</span></td>
+                <td><strong style="color:#FBBF24;">52.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectEquityQuarterRow('FY25_Q4', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="eqrow-FY25_Q3" onclick="selectEquityQuarterRow('FY25_Q3', this)">
+                <td><span class="window-pill">FY25_Q3</span></td>
+                <td><strong style="color:#FFF;">Q3 FY 2024-25 (Jul - Sep 2024 Results)</strong></td>
+                <td>October 2024 – November 2024</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-long">21 Delivery BUYS</span> / <span class="badge-short">29 Cash EXITS</span></td>
+                <td><strong style="color:#FBBF24;">62.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectEquityQuarterRow('FY25_Q3', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="eqrow-FY25_Q2" onclick="selectEquityQuarterRow('FY25_Q2', this)">
+                <td><span class="window-pill">FY25_Q2</span></td>
+                <td><strong style="color:#FFF;">Q2 FY 2024-25 (Apr - Jun 2024 Results)</strong></td>
+                <td>July 2024 – August 2024</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-long">23 Delivery BUYS</span> / <span class="badge-short">27 Cash EXITS</span></td>
+                <td><strong style="color:#FBBF24;">68.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectEquityQuarterRow('FY25_Q2', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="eqrow-FY25_Q1" onclick="selectEquityQuarterRow('FY25_Q1', this)">
+                <td><span class="window-pill">FY25_Q1</span></td>
+                <td><strong style="color:#FFF;">Q1 FY 2024-25 (Jan - Mar 2024 Results)</strong></td>
+                <td>April 2024 – May 2024</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-long">21 Delivery BUYS</span> / <span class="badge-short">30 Cash EXITS</span></td>
+                <td><strong style="color:#FBBF24;">66.7%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectEquityQuarterRow('FY25_Q1', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="eqrow-FY24_Q4" onclick="selectEquityQuarterRow('FY24_Q4', this)">
+                <td><span class="window-pill">FY24_Q4</span></td>
+                <td><strong style="color:#FFF;">Q4 FY 2023-24 (Oct - Dec 2023 Results)</strong></td>
+                <td>January 2024 – February 2024</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-long">32 Delivery BUYS</span> / <span class="badge-short">19 Cash EXITS</span></td>
+                <td><strong style="color:#FBBF24;">96.1%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectEquityQuarterRow('FY24_Q4', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+              <tr class="event-master-row" id="eqrow-FY24_Q3" onclick="selectEquityQuarterRow('FY24_Q3', this)">
+                <td><span class="window-pill">FY24_Q3</span></td>
+                <td><strong style="color:#FFF;">Q3 FY 2023-24 (Jul - Sep 2023 Results)</strong></td>
+                <td>October 2023 – November 2023</td>
+                <td><span class="badge-count" style="padding:0.25rem 0.6rem; border-radius:4px;">COMPLETED HISTORICAL</span></td>
+                <td><span class="badge-long">27 Delivery BUYS</span> / <span class="badge-short">23 Cash EXITS</span></td>
+                <td><strong style="color:#FBBF24;">94.0%</strong></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectEquityQuarterRow('FY24_Q3', this.closest('tr'))">View Benchmark</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Main Equity Position Taking Table Card -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2 id="equity-table-heading">Q3 FY 2026-27 Position Taking Windows &mdash; Cash Equity (Delivery)</h2>
+            <p>Pure cash shares, zero leverage, Demat delivery (CNC). Scaled on ₹1,00,000 unit allocation.</p>
+          </div>
+          
+          <div class="filter-bar">
+            <input type="text" id="eq-search" class="search-input" placeholder="Search Equity Stock (e.g. RELIANCE, TCS)..." oninput="filterEquityTable()">
+            <button class="filter-pill active" onclick="setEquityFilter('all', this)">All (50)</button>
+            <button class="filter-pill" onclick="setEquityFilter('BUY', this)">🟢 Delivery BUYS (22)</button>
+            <button class="filter-pill" onclick="setEquityFilter('EXIT', this)">🔴 Cash EXITS (28)</button>
+            <button class="filter-pill" onclick="setEquityFilter('confirmed', this)">📢 Confirmed Dates (4)</button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table id="equity-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Symbol</th>
+                <th>Company</th>
+                <th>Equity Signal</th>
+                <th>Position Window</th>
+                <th>Entry Date (09:20 AM)</th>
+                <th>Result Date (T)</th>
+                <th>Exit Date (03:15 PM)</th>
+                <th>All Quarters Win Rate</th>
+                <th>Spot LTP (₹)</th>
+                <th>Shares (₹1L Basis)</th>
+                <th>Expected Ret %</th>
+                <th>Return We Get (Actual %)</th>
+                <th>Delivery Action Ticket</th>
+              </tr>
+            </thead>
+            <tbody id="equity-tbody">
+              <!-- Dynamically populated via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- TAB 2: HOLIDAY TRADING -->
+    <div id="tab-holidays" class="tab-content" style="display:none;">
+      
+      <div class="timing-banner">
+        <div>
+          <strong>⚠️ Immediate Trading Alert: Mahatma Gandhi Jayanti (2-Oct) Window Opens Tomorrow!</strong>
+          <p>The 19-year full-history backtest shows 30 LONG / 20 SHORT setups. Early T-8 wave entries begin on Tuesday, 22-Sep-2026.</p>
+        </div>
+        <button class="filter-pill active" style="background:#EF4444; color:#FFF; border:none;" onclick="selectHolidayRow('gandhi_2026')">View 2-Oct Setups</button>
+      </div>
+
+      <!-- Holiday Events in TABULAR FORM -->
+      <div class="card" style="padding: 1rem 1.15rem; margin-bottom: 1.25rem;">
+        <div class="card-title-group" style="margin-bottom: 0.85rem;">
+          <h2>🏖️ Market Holidays Master Event Table</h2>
+          <p>Click on any holiday row to load its complete position taking playbook below.</p>
+        </div>
+        
+        <div class="table-container">
+          <table class="event-master-table">
+            <thead>
+              <tr>
+                <th>Holiday Name</th>
+                <th>Market Closure Date</th>
+                <th>Category</th>
+                <th>Current Status</th>
+                <th>First Entry Trigger</th>
+                <th>Historical Model Bias</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event-master-row selected" id="hrow-gandhi_2026" onclick="selectHolidayRow('gandhi_2026', this)">
+                <td><strong style="color:#FFF;">Mahatma Gandhi Jayanti</strong></td>
+                <td><span class="date-badge date-confirmed">02-Oct-2026 (Friday)</span></td>
+                <td>National Holiday</td>
+                <td><span class="badge-urgent" style="padding:0.25rem 0.6rem; border-radius:4px;">🚨 STARTS TOMORROW (22-Sep)</span></td>
+                <td><strong style="color:#EF4444;">Tuesday, 22-Sep (T-8)</strong></td>
+                <td><span class="badge-long">30 LONG</span> / <span class="badge-short">20 SHORT</span></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectHolidayRow('gandhi_2026', this.closest('tr'))">✓ Loaded Below</button></td>
+              </tr>
+              <tr class="event-master-row" id="hrow-dussehra_2026" onclick="selectHolidayRow('dussehra_2026', this)">
+                <td><strong>Dussehra / Vijayadashami</strong></td>
+                <td><span class="date-badge">20-Oct-2026 (Tuesday)</span></td>
+                <td>Festival Holiday</td>
+                <td><span style="color:#94A3B8; font-size:0.75rem;">UPCOMING IN OCT</span></td>
+                <td>Mid-October 2026</td>
+                <td><span class="badge-long">LONG Biased</span></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectHolidayRow('dussehra_2026', this.closest('tr'))">View Playbook</button></td>
+              </tr>
+              <tr class="event-master-row" id="hrow-diwali_2026" onclick="selectHolidayRow('diwali_2026', this)">
+                <td><strong>Diwali (Laxmi Pujan & Muhurat)</strong></td>
+                <td><span class="date-badge">21-Oct-2026 (Wednesday)</span></td>
+                <td>Festival Holiday</td>
+                <td><span style="color:#94A3B8; font-size:0.75rem;">UPCOMING IN OCT</span></td>
+                <td>Pre-Muhurat Rally</td>
+                <td><span class="badge-long">Strong LONG (Diwali Rally)</span></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectHolidayRow('diwali_2026', this.closest('tr'))">View Playbook</button></td>
+              </tr>
+              <tr class="event-master-row" id="hrow-christmas_2026" onclick="selectHolidayRow('christmas_2026', this)">
+                <td><strong>Christmas & Year-End</strong></td>
+                <td><span class="date-badge">25-Dec-2026 (Friday)</span></td>
+                <td>Year-End Event</td>
+                <td><span style="color:#94A3B8; font-size:0.75rem;">DECEMBER 2026</span></td>
+                <td>Late December</td>
+                <td><span class="badge-short">FII Book Closing (SHORT)</span></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectHolidayRow('christmas_2026', this.closest('tr'))">View Playbook</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Holiday Position Taking Table -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2 id="holiday-table-heading">Mahatma Gandhi Jayanti (2-Oct-2026) 19-Year Position Taking Playbook</h2>
+            <p>19 Years of Historical Daily Bars (2007–2025) across all lead/lag combinations.</p>
+          </div>
+          <div class="filter-bar">
+            <input type="text" id="h-search" class="search-input" placeholder="Search Holiday Symbol..." oninput="filterHolidayTable()">
+            <button class="filter-pill active" onclick="setHolidayFilter('all', this)">All (50)</button>
+            <button class="filter-pill" onclick="setHolidayFilter('tomorrow', this)">🚨 Triggers Tomorrow (4)</button>
+            <button class="filter-pill" onclick="setHolidayFilter('LONG', this)">🟢 LONG (30)</button>
+            <button class="filter-pill" onclick="setHolidayFilter('SHORT', this)">🔴 SHORT (20)</button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table id="holiday-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Symbol</th>
+                <th>Company</th>
+                <th>Direction</th>
+                <th>Window</th>
+                <th>Entry Date (09:20 AM)</th>
+                <th>Exit Date (03:15 PM)</th>
+                <th>19Y Win Rate</th>
+                <th>19Y Avg Ret</th>
+                <th>Lot Size</th>
+                <th>Recommended Action</th>
+              </tr>
+            </thead>
+            <tbody id="holiday-tbody">
+              <!-- Dynamically populated via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- TAB 3: RBI MONETARY POLICY -->
+    <div id="tab-rbi" class="tab-content" style="display:none;">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2>RBI Monetary Policy Committee (MPC) Event Trading</h2>
+            <p>Interest rate decisions & banking sector high-volatility window model.</p>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table class="event-master-table">
+            <thead>
+              <tr>
+                <th>Meeting Schedule</th>
+                <th>Announcement Date (T)</th>
+                <th>MPC Session Duration</th>
+                <th>Session Dates (T-2 to T+1)</th>
+                <th>Strategy Bias</th>
+                <th>Top Stock Window Range</th>
+                <th>Historical Win Rate</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event-master-row selected" id="rbirow-rbi_oct_2026" onclick="selectRbiRow('rbi_oct_2026', this)">
+                <td><strong>Oct 2026 Bi-Monthly MPC</strong></td>
+                <td><span class="date-badge date-confirmed">09-Oct-2026 (Fri 10:00 AM)</span></td>
+                <td><span class="window-pill" title="3-Day MPC Committee Session">T-2 to T+1 (Meeting Window)</span></td>
+                <td>07-Oct (Wed) to 12-Oct (Mon)</td>
+                <td><span class="badge-long">FESTIVE LIQUIDITY / LONG DRIFT</span></td>
+                <td><span class="window-pill">T-8 to T+8 (Stock Specific)</span></td>
+                <td><strong style="color:#FBBF24;">76.4%</strong></td>
+                <td><button class="btn-select-event">✓ Active Policy</button></td>
+              </tr>
+              <tr class="event-master-row" id="rbirow-rbi_dec_2026" onclick="selectRbiRow('rbi_dec_2026', this)">
+                <td><strong>Dec 2026 Bi-Monthly MPC</strong></td>
+                <td><span class="date-badge date-confirmed">04-Dec-2026 (Fri 10:00 AM)</span></td>
+                <td><span class="window-pill" title="3-Day MPC Committee Session">T-2 to T+1 (Meeting Window)</span></td>
+                <td>02-Dec (Wed) to 07-Dec (Mon)</td>
+                <td><span class="badge-short">YEAR-END TAX TIGHTENING / FADE</span></td>
+                <td><span class="window-pill">T-8 to T+8 (Stock Specific)</span></td>
+                <td><strong style="color:#E2E8F0;">74.8%</strong></td>
+                <td><button class="btn-select-event">View Details</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- All 50 Nifty Stocks RBI Position Taking Table -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2 id="rbi-table-heading">All 50 Nifty Stocks &mdash; October 2026 RBI Policy Position Taking Windows</h2>
+            <p>Empirical Quantitative Models across 12 RBI Monetary Policy Committee Events.</p>
+          </div>
+          <div class="filter-bar">
+            <input type="text" id="rbi-search" class="search-input" placeholder="Search Nifty 50 Stock or Sector..." oninput="filterRbiTable()">
+            <button class="filter-pill active" onclick="setRbiFilter('all', this)">All (50)</button>
+            <button class="filter-pill" onclick="setRbiFilter('LONG', this)">🟢 LONG (33)</button>
+            <button class="filter-pill" onclick="setRbiFilter('SHORT', this)">🔴 SHORT (17)</button>
+            <button class="filter-pill" onclick="setRbiFilter('banking', this)">🏦 Banking & NBFC</button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table id="rbi-stocks-table">
+            <thead>
+              <tr>
+                <th>Symbol</th>
+                <th>Industry Sector</th>
+                <th>Strategy Bias</th>
+                <th>Position Taking Window</th>
+                <th>Entry Date (09:20 AM)</th>
+                <th>Exit Date (03:15 PM)</th>
+                <th>Historical Win Rate</th>
+                <th>Win Ratio</th>
+                <th>Avg Return %</th>
+                <th>Net Realised P&L</th>
+                <th>Trade Action</th>
+              </tr>
+            </thead>
+            <tbody id="rbi-tbody">
+              <!-- Populated dynamically via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- TAB 4: EXTENSIBLE CUSTOM EVENTS -->
+    <div id="tab-custom" class="tab-content" style="display:none;">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2>Custom Event Framework & Extension Hub</h2>
+            <p>Plug-and-play architecture for adding corporate actions, budget sessions, and index rebalancing events.</p>
+          </div>
+        </div>
+        <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">
+          To add a new event tab, simply define the event config with date $T$, lead offset $n$, lag offset $m$, and direction algorithm. The host will automatically render its position taking windows, order tickets, and execution rules.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Stock Detail Modal -->
+  <div id="stock-modal" class="modal-backdrop" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 id="m-title" style="font-family:'Outfit'; font-size:1.3rem;">Stock Execution Ticket</h3>
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+      </div>
+      <div id="m-body" style="font-size:0.9rem; line-height:1.7;"></div>
+    </div>
+  </div>
+
+  <script>
+    let dashboardData = null;
+    let currentQuarterCode = 'FY27_Q2';
+    let currentEquityQuarterCode = 'FY27_Q2';
+    let currentHolidayId = 'gandhi_2026';
+    let currentRbiFilter = 'all';
+    let currentRbiId = 'rbi_oct_2026';
+    let currentQuarterFilter = 'all';
+    let currentEquityFilter = 'all';
+    let currentHolidayFilter = 'all';
+
+    async function loadData() {
+      try {
+        const res = await fetch('dashboard_data/event_dashboard_data.json');
+        dashboardData = await res.json();
+      } catch (err) {
+        console.warn('Direct fetch failed, using window fallback');
+      }
+      renderQuarterTable();
+      renderEquityTable();
+      renderHolidayTable();
+      renderRbiTable();
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      
+      const target = document.getElementById('tab-' + tabId);
+      if (target) target.style.display = 'block';
+      
+      const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick') && b.getAttribute('onclick').includes(tabId));
+      if (activeBtn) activeBtn.classList.add('active');
+
+      if (tabId === 'equity') renderEquityTable();
+      if (tabId === 'quarterly') renderQuarterTable();
+    }
+
+    function selectEquityQuarterRow(qCode, rowElement) {
+      currentEquityQuarterCode = qCode;
+      document.querySelectorAll('#tab-equity .event-master-row').forEach(r => {
+        r.classList.remove('selected');
+        const btn = r.querySelector('.btn-select-event');
+        if (btn) btn.innerText = 'View Quarter';
+      });
+
+      const selectedRow = rowElement || document.getElementById('eqrow-' + qCode);
+      if (selectedRow) {
+        selectedRow.classList.add('selected');
+        const activeBtn = selectedRow.querySelector('.btn-select-event');
+        if (activeBtn) activeBtn.innerText = '✓ Loaded Below';
+      }
+
+      const heading = document.getElementById('equity-table-heading');
+      if (heading && dashboardData && dashboardData.quarters) {
+        const qObj = dashboardData.quarters.find(x => x.q_code === qCode);
+        if (qObj) {
+          heading.innerHTML = `${qObj.title} &mdash; Cash Equity (Delivery) Playbook`;
+        }
+      }
+
+      renderEquityTable();
+    }
+
+    function renderEquityTable() {
+      if (!dashboardData || !dashboardData.quarters) return;
+      const q = dashboardData.quarters.find(x => x.q_code === currentEquityQuarterCode) || dashboardData.quarters[0];
+      const tbody = document.getElementById('equity-tbody');
+      if (!tbody || !q.stocks) return;
+      tbody.innerHTML = '';
+
+      const query = (document.getElementById('eq-search')?.value || '').toUpperCase();
+
+      q.stocks.forEach((s, idx) => {
+        const isBuy = s.direction === 'LONG';
+        if (currentEquityFilter === 'BUY' && !isBuy) return;
+        if (currentEquityFilter === 'EXIT' && isBuy) return;
+        if (currentEquityFilter === 'confirmed' && !s.announced) return;
+        if (query && !s.symbol.includes(query) && !s.name.toUpperCase().includes(query)) return;
+
+        const tr = document.createElement('tr');
+        tr.style.cursor = 'pointer';
+        tr.onclick = () => openStockModal(s, 'equity');
+
+        const signalBadge = isBuy
+          ? `<span class="badge-long">🟢 DELIVERY BUY</span>`
+          : `<span class="badge-short">🔴 CASH EXIT / AVOID</span>`;
+
+        const actionTag = isBuy
+          ? `<span class="action-tag action-buy-cnc">BUY DELIVERY (CNC)</span>`
+          : `<span class="action-tag action-exit-cash">BOOK PROFIT / DEFENSIVE</span>`;
+
+        const enDateStr = s.announced 
+          ? `<span class="date-badge date-confirmed">${s.entry_date}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>` 
+          : `<span class="date-badge date-pending">T - ${s.lead} trading days<br><small style="font-size:0.7rem;">09:20 AM</small></span>`;
+        const resDateStr = s.announced ? `<span class="date-badge date-confirmed">${s.result_date}</span>` : `<span class="date-badge date-pending">Awaiting NSE</span>`;
+        const exDateStr = s.announced 
+          ? `<span class="date-badge date-confirmed">${s.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem; font-weight:700;">⏰ 03:15 PM</small></span>` 
+          : `<span class="date-badge date-pending">T + ${s.hold} trading days<br><small style="font-size:0.7rem;">03:15 PM</small></span>`;
+
+        const ltpVal = s.ltp || 1500;
+        const ltpStr = `₹${Number(ltpVal).toLocaleString('en-IN')}`;
+        const sharesStr = `${s.eq_qty_1l || Math.max(1, Math.floor(100000 / ltpVal))} shares`;
+
+        // Format Expected Return %
+        const expVal = (s.expected_ret !== null && s.expected_ret !== undefined) ? Number(s.expected_ret) : 0;
+        const expColor = isBuy ? '#34D399' : (expVal < 0 ? '#F87171' : '#94A3B8');
+        const expStr = `<span style="color:${expColor}; font-weight:700;">${expVal > 0 ? '+' : ''}${expVal.toFixed(2)}%</span>`;
+
+        // Format Return We Get (Actual %)
+        let actStr = '';
+        if (s.actual_ret !== null && s.actual_ret !== undefined) {
+          const actVal = Number(s.actual_ret);
+          const actColor = actVal >= 0 ? '#34D399' : '#EF4444';
+          actStr = `<span style="color:${actColor}; font-weight:700;">${actVal >= 0 ? '+' : ''}${actVal.toFixed(2)}%</span>`;
+        } else {
+          actStr = `<span class="date-badge date-pending" style="font-size:0.75rem;">⏳ Active Q3 (Pending)</span>`;
+        }
+
+        tr.innerHTML = `
+          <td>${idx + 1}</td>
+          <td><strong>${s.symbol}</strong></td>
+          <td style="color:#CBD5E1">${s.name}</td>
+          <td>${signalBadge}</td>
+          <td><span class="window-pill">${s.window}</span></td>
+          <td>${enDateStr}</td>
+          <td>${resDateStr}</td>
+          <td>${exDateStr}</td>
+          <td><strong style="color:#FBBF24">${s.all_q_wr || 75.0}%</strong></td>
+          <td style="color:#FFF; font-weight:600;">${ltpStr}</td>
+          <td style="color:#60A5FA; font-weight:600;">${sharesStr}</td>
+          <td>${expStr}</td>
+          <td>${actStr}</td>
+          <td>${actionTag}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function setEquityFilter(filter, el) {
+      currentEquityFilter = filter;
+      document.querySelectorAll('#tab-equity .filter-pill').forEach(b => b.classList.remove('active'));
+      if (el) el.classList.add('active');
+      renderEquityTable();
+    }
+
+    function filterEquityTable() { renderEquityTable(); }
+
+    function selectQuarterRow(qCode, rowElement) {
+      currentQuarterCode = qCode;
+      document.querySelectorAll('#tab-quarterly .event-master-row').forEach(r => {
+        r.classList.remove('selected');
+        const btn = r.querySelector('.btn-select-event');
+        if (btn) {
+          btn.innerText = 'View Quarter';
+        }
+      });
+
+      const selectedRow = rowElement || document.getElementById('qrow-' + qCode);
+      if (selectedRow) {
+        selectedRow.classList.add('selected');
+        const activeBtn = selectedRow.querySelector('.btn-select-event');
+        if (activeBtn) activeBtn.innerText = '✓ Loaded Below';
+      }
+
+      const heading = document.getElementById('quarter-table-heading');
+      if (heading && dashboardData && dashboardData.quarters) {
+        const qObj = dashboardData.quarters.find(x => x.q_code === qCode);
+        if (qObj) {
+          heading.innerHTML = `${qObj.title} &mdash; 50-Stock Position Taking Windows`;
+        }
+      }
+
+      renderQuarterTable();
+    }
+
+    function selectHolidayRow(hId, rowElement) {
+      currentHolidayId = hId;
+      document.querySelectorAll('#tab-holidays .event-master-row').forEach(r => {
+        r.classList.remove('selected');
+        const btn = r.querySelector('.btn-select-event');
+        if (btn) btn.innerText = 'View Playbook';
+      });
+
+      const selectedRow = rowElement || document.getElementById('hrow-' + hId);
+      if (selectedRow) {
+        selectedRow.classList.add('selected');
+        const activeBtn = selectedRow.querySelector('.btn-select-event');
+        if (activeBtn) activeBtn.innerText = '✓ Loaded Below';
+      }
+
+      const heading = document.getElementById('holiday-table-heading');
+      if (heading && dashboardData && dashboardData.holidays) {
+        const hObj = dashboardData.holidays.find(x => x.id === hId);
+        if (hObj) {
+          heading.innerHTML = `${hObj.name} (2026) &mdash; 50-Stock Position Taking Playbook`;
+        }
+      }
+
+      renderHolidayTable();
+    }
+
+    function renderQuarterTable() {
+      if (!dashboardData || !dashboardData.quarters) return;
+      const q = dashboardData.quarters.find(x => x.q_code === currentQuarterCode) || dashboardData.quarters[0];
+      const tbody = document.getElementById('quarter-tbody');
+      if (!tbody || !q.stocks) return;
+      tbody.innerHTML = '';
+
+      const query = (document.getElementById('q-search')?.value || '').toUpperCase();
+
+      q.stocks.forEach((s, idx) => {
+        if (currentQuarterFilter === 'confirmed' && !s.announced) return;
+        if (currentQuarterFilter === 'LONG' && s.direction !== 'LONG') return;
+        if (currentQuarterFilter === 'SHORT' && s.direction !== 'SHORT') return;
+        if (query && !s.symbol.includes(query) && !s.name.toUpperCase().includes(query)) return;
+
+        const tr = document.createElement('tr');
+        tr.style.cursor = 'pointer';
+        tr.onclick = () => openStockModal(s, 'quarter');
+
+        const dirBadge = s.direction === 'LONG' 
+          ? `<span class="badge-long">▲ LONG</span>`
+          : `<span class="badge-short">▼ SHORT</span>`;
+
+        const enDateStr = s.announced 
+          ? `<span class="date-badge date-confirmed">${s.entry_date}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>` 
+          : `<span class="date-badge date-pending">T - ${s.lead} trading days<br><small style="font-size:0.7rem;">09:20 AM</small></span>`;
+        const resDateStr = s.announced ? `<span class="date-badge date-confirmed">${s.result_date}</span>` : `<span class="date-badge date-pending">Awaiting NSE</span>`;
+        const exDateStr = s.announced 
+          ? `<span class="date-badge date-confirmed">${s.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem; font-weight:700;">⏰ 03:15 PM</small></span>` 
+          : `<span class="date-badge date-pending">T + ${s.hold} trading days<br><small style="font-size:0.7rem;">03:15 PM</small></span>`;
+
+        const actionTag = s.direction === 'LONG'
+          ? `<span class="action-tag action-buy-call">BUY CALL / LONG FUT</span>`
+          : `<span class="action-tag action-buy-put">BUY PUT / SHORT FUT</span>`;
+
+        // Format Expected Return %
+        const expVal = (s.expected_ret !== null && s.expected_ret !== undefined) ? Number(s.expected_ret) : 0;
+        const expColor = expVal >= 0 ? '#34D399' : '#F87171';
+        const expStr = `<span style="color:${expColor}; font-weight:700;">${expVal >= 0 ? '+' : ''}${expVal.toFixed(2)}%</span>`;
+
+        // Format Return We Get (Actual %)
+        let actStr = '';
+        if (s.actual_ret !== null && s.actual_ret !== undefined) {
+          const actVal = Number(s.actual_ret);
+          const actColor = actVal >= 0 ? '#34D399' : '#EF4444';
+          actStr = `<span style="color:${actColor}; font-weight:700;">${actVal >= 0 ? '+' : ''}${actVal.toFixed(2)}%</span>`;
+        } else {
+          actStr = `<span class="date-badge date-pending" style="font-size:0.75rem;">⏳ Active Q3 (Pending)</span>`;
+        }
+
+        // Format Realised P&L (1 Lot)
+        let pnlStr = '';
+        if (s.exp_pnl_1lot !== null && s.exp_pnl_1lot !== undefined && s.exp_pnl_1lot !== 0) {
+          const pnlVal = Number(s.exp_pnl_1lot);
+          const pnlColor = pnlVal >= 0 ? '#34D399' : '#EF4444';
+          pnlStr = `<span style="color:${pnlColor}; font-weight:700;">${pnlVal >= 0 ? '+' : ''}₹${Math.abs(Math.round(pnlVal)).toLocaleString('en-IN')}</span>`;
+        } else {
+          pnlStr = `<span style="color:#94A3B8;">&mdash;</span>`;
+        }
+
+        tr.innerHTML = `
+          <td>${idx + 1}</td>
+          <td><strong>${s.symbol}</strong></td>
+          <td style="color:#CBD5E1">${s.name}</td>
+          <td>${dirBadge}</td>
+          <td><span class="window-pill">${s.window}</span></td>
+          <td>${enDateStr}</td>
+          <td>${resDateStr}</td>
+          <td>${exDateStr}</td>
+          <td><strong style="color:#FBBF24">${s.all_q_wr || 75.0}%</strong></td>
+          <td style="color:#60A5FA; font-weight:600;">${Number(s.lot).toLocaleString()}</td>
+          <td>${expStr}</td>
+          <td>${actStr}</td>
+          <td>${pnlStr}</td>
+          <td style="color:#CBD5E1; font-weight:600;">₹${Number(s.margin).toLocaleString('en-IN')}</td>
+          <td>${actionTag}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function renderHolidayTable() {
+      if (!dashboardData || !dashboardData.holidays) return;
+      const h = dashboardData.holidays.find(x => x.id === currentHolidayId) || dashboardData.holidays[0];
+      const tbody = document.getElementById('holiday-tbody');
+      if (!tbody || !h.stocks) return;
+      tbody.innerHTML = '';
+
+      const query = (document.getElementById('h-search').value || '').toUpperCase();
+
+      h.stocks.forEach((s, idx) => {
+        if (currentHolidayFilter === 'tomorrow' && !s.entry_date.includes('22-Sep')) return;
+        if (currentHolidayFilter === 'LONG' && s.direction !== 'LONG') return;
+        if (currentHolidayFilter === 'SHORT' && s.direction !== 'SHORT') return;
+        if (query && !s.symbol.includes(query) && !s.name.toUpperCase().includes(query)) return;
+
+        const tr = document.createElement('tr');
+        tr.style.cursor = 'pointer';
+        tr.onclick = () => openStockModal(s, 'holiday');
+
+        const dirBadge = s.direction === 'LONG' 
+          ? `<span class="badge-long">▲ LONG</span>`
+          : `<span class="badge-short">▼ SHORT</span>`;
+
+        const isTomorrow = s.entry_date.includes('22-Sep');
+        const enDateBadge = isTomorrow 
+          ? `<span class="date-badge" style="color:#EF4444; font-weight:800;">🚨 ${s.entry_date}<br><small style="color:#EF4444; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>` 
+          : `<span class="date-badge date-confirmed">${s.entry_date}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>`;
+        const exDateBadge = `<span class="date-badge">${s.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem;">⏰ 03:15 PM</small></span>`;
+
+        const actionTag = s.direction === 'LONG'
+          ? `<span class="action-tag action-buy-call">BUY CALL (Risk Capped)</span>`
+          : `<span class="action-tag action-buy-put">BUY PUT (Risk Capped)</span>`;
+
+        tr.innerHTML = `
+          <td><strong>Rank ${idx + 1}</strong></td>
+          <td><strong>${s.symbol}</strong></td>
+          <td style="color:#CBD5E1">${s.name}</td>
+          <td>${dirBadge}</td>
+          <td><span class="window-pill">${s.window}</span></td>
+          <td>${enDateBadge}</td>
+          <td>${exDateBadge}</td>
+          <td><strong style="color:${s.full_19y_wr >= 80 ? '#FBBF24' : '#E2E8F0'}">${s.full_19y_wr}%</strong></td>
+          <td style="color:${s.full_19y_avg_ret > 0 ? '#34D399' : '#F87171'}">${s.full_19y_avg_ret > 0 ? '+' : ''}${s.full_19y_avg_ret}%</td>
+          <td style="color:#94A3B8">${s.lot}</td>
+          <td>${actionTag}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function selectRbiRow(rbiId, rowElement) {
+      currentRbiId = rbiId;
+      document.querySelectorAll('#tab-rbi .event-master-row').forEach(r => r.classList.remove('selected'));
+      if (rowElement) {
+        rowElement.classList.add('selected');
+      } else {
+        const target = document.getElementById('rbirow-' + rbiId);
+        if (target) target.classList.add('selected');
+      }
+      const heading = document.getElementById('rbi-table-heading');
+      if (heading) {
+        heading.innerText = rbiId.includes('oct') 
+          ? 'All 50 Nifty Stocks — October 2026 RBI Policy Position Taking Windows'
+          : 'All 50 Nifty Stocks — December 2026 RBI Policy Position Taking Windows';
+      }
+      renderRbiTable();
+    }
+
+    function renderRbiTable() {
+      if (!dashboardData || !dashboardData.rbi_policy) return;
+      const rbiEvent = dashboardData.rbi_policy.find(x => x.id === currentRbiId) || dashboardData.rbi_policy[0];
+      const tbody = document.getElementById('rbi-tbody');
+      if (!tbody || !rbiEvent.stocks) return;
+      tbody.innerHTML = '';
+
+      const query = (document.getElementById('rbi-search')?.value || '').toLowerCase().trim();
+
+      const filtered = rbiEvent.stocks.filter(s => {
+        if (currentRbiFilter === 'LONG' && s.direction !== 'LONG') return false;
+        if (currentRbiFilter === 'SHORT' && s.direction !== 'SHORT') return false;
+        if (currentRbiFilter === 'banking' && !s.sector.toLowerCase().includes('bank') && !s.sector.toLowerCase().includes('nbfc')) return false;
+        if (query) {
+          const matchSym = s.symbol.toLowerCase().includes(query);
+          const matchSec = s.sector.toLowerCase().includes(query);
+          if (!matchSym && !matchSec) return false;
+        }
+        return true;
+      });
+
+      filtered.forEach(s => {
+        const tr = document.createElement('tr');
+        tr.style.cursor = 'pointer';
+        tr.onclick = () => openStockModal({
+          symbol: s.symbol,
+          name: s.sector,
+          direction: s.direction,
+          window: s.window,
+          entry_date: s.entry_date,
+          exit_date: s.exit_date,
+          lot: 'Standard F&O Lot',
+          full_19y_wr: s.win_rate
+        }, 'rbi');
+
+        const dirBadge = s.direction === 'LONG' 
+          ? `<span class="badge-long">▲ LONG</span>`
+          : `<span class="badge-short">▼ SHORT</span>`;
+
+        const actionTag = s.direction === 'LONG'
+          ? `<span class="action-tag action-buy-call">BUY CALL (Risk Capped)</span>`
+          : `<span class="action-tag action-buy-put">BUY PUT (Risk Capped)</span>`;
+
+        tr.innerHTML = `
+          <td><strong>${s.symbol}</strong></td>
+          <td style="color:#CBD5E1">${s.sector}</td>
+          <td>${dirBadge}</td>
+          <td><span class="window-pill">${s.window}</span></td>
+          <td><span class="date-badge date-confirmed">${s.entry_date}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span></td>
+          <td><span class="date-badge">${s.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem;">⏰ 03:15 PM</small></span></td>
+          <td><strong style="color:${s.win_rate >= 75 ? '#FBBF24' : '#E2E8F0'}">${s.win_rate}%</strong></td>
+          <td style="color:#94A3B8">${s.win_ratio}</td>
+          <td style="color:${s.avg_ret > 0 ? '#34D399' : '#F87171'}">${s.avg_ret > 0 ? '+' : ''}${s.avg_ret}%</td>
+          <td style="color:${s.net_pnl >= 0 ? '#34D399' : '#F87171'}">₹${s.net_pnl.toLocaleString('en-IN')}</td>
+          <td>${actionTag}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function setRbiFilter(filter, el) {
+      currentRbiFilter = filter;
+      document.querySelectorAll('#tab-rbi .filter-pill').forEach(b => b.classList.remove('active'));
+      if (el) el.classList.add('active');
+      renderRbiTable();
+    }
+
+    function filterRbiTable() { renderRbiTable(); }
+
+    function setQuarterFilter(filter, el) {
+      currentQuarterFilter = filter;
+      document.querySelectorAll('#tab-quarterly .filter-pill').forEach(b => b.classList.remove('active'));
+      if (el) el.classList.add('active');
+      renderQuarterTable();
+    }
+
+    function setHolidayFilter(filter, el) {
+      currentHolidayFilter = filter;
+      document.querySelectorAll('#tab-holidays .filter-pill').forEach(b => b.classList.remove('active'));
+      if (el) el.classList.add('active');
+      renderHolidayTable();
+    }
+
+    function filterQuarterTable() { renderQuarterTable(); }
+    function filterHolidayTable() { renderHolidayTable(); }
+
+    function openStockModal(stock, type) {
+      const modal = document.getElementById('stock-modal');
+      const title = document.getElementById('m-title');
+      const body = document.getElementById('m-body');
+
+      title.innerHTML = `${stock.symbol} &mdash; ${stock.name}`;
+      
+      if (type === 'equity') {
+        const isBuy = stock.direction === 'LONG';
+        const dirColor = isBuy ? '#34D399' : '#FBBF24';
+        const actionHeader = isBuy ? 'CASH DELIVERY BUY (CNC)' : 'DEFENSIVE CASH EXIT / CAPITAL PROTECTION';
+        const ltpVal = stock.ltp || 1500;
+        const sharesCount = stock.eq_qty_1l || Math.max(1, Math.floor(100000 / ltpVal));
+        const estCapital = sharesCount * ltpVal;
+
+        body.innerHTML = `
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+            <div style="background:var(--surface-light); padding:1rem; border-radius:8px;">
+              <div style="font-size:0.75rem; color:var(--text-muted);">EQUITY CASH SIGNAL</div>
+              <div style="font-size:1.15rem; font-weight:800; color:${dirColor}">${actionHeader}</div>
+            </div>
+            <div style="background:var(--surface-light); padding:1rem; border-radius:8px;">
+              <div style="font-size:0.75rem; color:var(--text-muted);">POSITION WINDOW</div>
+              <div style="font-size:1.25rem; font-weight:800; color:#FFF; font-family:'JetBrains Mono'">${stock.window}</div>
+            </div>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border:1px solid var(--surface-border); margin-bottom:1.5rem;">
+            <p><strong>💵 Cash Spot LTP:</strong> ₹${Number(ltpVal).toLocaleString('en-IN')}</p>
+            <p><strong>📦 Delivery Allocation:</strong> ${sharesCount} shares (Approx ₹${Number(estCapital).toLocaleString('en-IN')} cash)</p>
+            <p><strong>📅 Entry Date:</strong> ${stock.entry_date || ('T - ' + stock.lead + ' trading days')}</p>
+            <p><strong>🏁 Exit Date:</strong> ${stock.exit_date || ('T + ' + stock.hold + ' trading days')}</p>
+            <p><strong>📈 Historical Win Rate (All Quarters):</strong> ${stock.all_q_wr || stock.full_19y_wr || 75.0}%</p>
+            <p><strong>🎯 Expected Return %:</strong> <span style="color:${(stock.expected_ret || 0) >= 0 ? '#34D399' : '#F87171'}; font-weight:700;">${stock.expected_ret !== undefined && stock.expected_ret !== null ? (stock.expected_ret > 0 ? '+' : '') + stock.expected_ret + '%' : 'N/A'}</span></p>
+            <p><strong>💰 Return We Get (Actual %):</strong> ${stock.actual_ret !== undefined && stock.actual_ret !== null ? '<span style="color:' + (stock.actual_ret >= 0 ? '#34D399' : '#EF4444') + '; font-weight:700;">' + (stock.actual_ret > 0 ? '+' : '') + stock.actual_ret + '%</span>' : '<span style="color:#FBBF24;">⏳ Active Q3 (Pending)</span>'}</p>
+          </div>
+
+          <div style="background:${isBuy ? 'var(--long-bg)' : 'rgba(245, 158, 11, 0.12)'}; border:1px solid ${dirColor}; padding:1rem; border-radius:8px;">
+            <div style="font-weight:700; color:${dirColor}; margin-bottom:0.25rem;">Cash Delivery Execution Rule:</div>
+            <div style="font-size:0.85rem; color:#FFF;">
+              ${isBuy 
+                ? `Place <strong>CNC (Cash Delivery) BUY</strong> order at <strong>9:20 AM</strong> on Entry Date. Hold in Demat account with 100% cash. Exit between <strong>3:10 PM - 3:25 PM</strong> on Exit Date.` 
+                : `<strong>No Shorting Permitted in Cash Market:</strong> Under SEBI exchange regulations, overnight short selling is not allowed in cash equity. If you hold this stock, book delivery profit or hedge. Do NOT buy fresh cash delivery shares.`}
+            </div>
+          </div>
+        `;
+        modal.classList.add('open');
+        return;
+      }
+      
+      if (type === 'holiday') {
+        const dirColor = stock.direction === 'LONG' ? '#34D399' : '#F87171';
+        body.innerHTML = `
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+            <div style="background:var(--surface-light); padding:1rem; border-radius:8px;">
+              <div style="font-size:0.75rem; color:var(--text-muted);">HOLIDAY STRATEGY BIAS</div>
+              <div style="font-size:1.25rem; font-weight:800; color:${dirColor}">${stock.direction}</div>
+            </div>
+            <div style="background:var(--surface-light); padding:1rem; border-radius:8px;">
+              <div style="font-size:0.75rem; color:var(--text-muted);">POSITION WINDOW</div>
+              <div style="font-size:1.25rem; font-weight:800; color:#FFF; font-family:'JetBrains Mono'">${stock.window}</div>
+            </div>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border:1px solid var(--surface-border); margin-bottom:1.5rem;">
+            <p><strong>📅 Entry Date:</strong> <span style="color:#60A5FA; font-weight:700;">${stock.entry_date} (Entry: 9:20 AM)</span></p>
+            <p><strong>🏁 Exit Date:</strong> ${stock.exit_date} (Exit: 3:10 PM - 3:25 PM)</p>
+            <p><strong>📦 Lot Size:</strong> ${stock.lot} shares</p>
+            <p><strong>📈 19-Year Model Win Rate:</strong> <strong style="color:#FBBF24;">${stock.full_19y_wr}%</strong> (${stock.total_years || 19} Years Backtested)</p>
+            <p><strong>🎯 19-Year Avg Return %:</strong> <span style="color:${stock.full_19y_avg_ret >= 0 ? '#34D399' : '#F87171'}; font-weight:700;">${stock.full_19y_avg_ret > 0 ? '+' : ''}${stock.full_19y_avg_ret}%</span></p>
+            <p><strong>⚡ Recent 4-Year Win Rate:</strong> ${stock.last_4y_wr}%</p>
+            <p><strong>🛡️ Required SPAN Margin:</strong> ₹${Number(stock.margin || 0).toLocaleString('en-IN')}</p>
+          </div>
+
+          <div style="background:${stock.direction === 'LONG' ? 'var(--long-bg)' : 'var(--short-bg)'}; border:1px solid ${dirColor}; padding:1rem; border-radius:8px;">
+            <div style="font-weight:700; color:${dirColor}; margin-bottom:0.25rem;">Holiday Playbook Execution Rule:</div>
+            <div style="font-size:0.85rem; color:#FFF;">
+              <strong>Recommended Action:</strong> ${stock.fut_action || (stock.direction === 'LONG' ? 'BUY CALL / LONG FUTURES' : 'BUY PUT / SHORT FUTURES')}<br>
+              Entry at <strong>9:20 AM</strong> on Entry Date. Exit between <strong>3:10 PM - 3:25 PM</strong> on Exit Date.
+            </div>
+          </div>
+        `;
+        modal.classList.add('open');
+        return;
+      }
+
+      if (type === 'rbi') {
+        const dirColor = stock.direction === 'LONG' ? '#34D399' : '#F87171';
+        body.innerHTML = `
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+            <div style="background:var(--surface-light); padding:1rem; border-radius:8px;">
+              <div style="font-size:0.75rem; color:var(--text-muted);">RBI POLICY BIAS</div>
+              <div style="font-size:1.25rem; font-weight:800; color:${dirColor}">${stock.direction}</div>
+            </div>
+            <div style="background:var(--surface-light); padding:1rem; border-radius:8px;">
+              <div style="font-size:0.75rem; color:var(--text-muted);">POSITION WINDOW</div>
+              <div style="font-size:1.25rem; font-weight:800; color:#FFF; font-family:'JetBrains Mono'">${stock.window}</div>
+            </div>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border:1px solid var(--surface-border); margin-bottom:1.5rem;">
+            <p><strong>🏦 Sector:</strong> ${stock.name || 'Nifty 50'}</p>
+            <p><strong>📅 Entry Date:</strong> <span style="color:#60A5FA; font-weight:700;">${stock.entry_date} (Entry: 9:20 AM)</span></p>
+            <p><strong>🏁 Exit Date:</strong> ${stock.exit_date} (Exit: 3:10 PM - 3:25 PM)</p>
+            <p><strong>📈 Historical Win Rate:</strong> <strong style="color:#FBBF24;">${stock.full_19y_wr || stock.win_rate}%</strong> (${stock.win_ratio || '12 Events'})</p>
+            <p><strong>🎯 Avg Return per MPC Event:</strong> <span style="color:${(stock.avg_ret || 0) >= 0 ? '#34D399' : '#F87171'}; font-weight:700;">${(stock.avg_ret || 0) > 0 ? '+' : ''}${stock.avg_ret || 0}%</span></p>
+            <p><strong>📊 Net Realised P&L:</strong> <span style="color:#34D399; font-weight:700;">₹${Number(stock.net_pnl || 0).toLocaleString('en-IN')}</span></p>
+          </div>
+
+          <div style="background:${stock.direction === 'LONG' ? 'var(--long-bg)' : 'var(--short-bg)'}; border:1px solid ${dirColor}; padding:1rem; border-radius:8px;">
+            <div style="font-weight:700; color:${dirColor}; margin-bottom:0.25rem;">RBI MPC Policy Execution Rule:</div>
+            <div style="font-size:0.85rem; color:#FFF;">
+              Execute ATM/ITM Options or Futures at <strong>9:20 AM</strong> on Entry Date.<br>
+              Hold through MPC announcement day. Square off position on Exit Date.
+            </div>
+          </div>
+        `;
+        modal.classList.add('open');
+        return;
+      }
+      
+      const dirColor = stock.direction === 'LONG' ? '#34D399' : '#F87171';
+      const actionText = stock.direction === 'LONG' ? 'BUY October ATM/ITM Call Option' : 'BUY October ATM/ITM Put Option';
+
+      body.innerHTML = `
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+          <div style="background:var(--surface-light); padding:1rem; border-radius:8px;">
+            <div style="font-size:0.75rem; color:var(--text-muted);">RECOMMENDED DIRECTION</div>
+            <div style="font-size:1.25rem; font-weight:800; color:${dirColor}">${stock.direction}</div>
+          </div>
+          <div style="background:var(--surface-light); padding:1rem; border-radius:8px;">
+            <div style="font-size:0.75rem; color:var(--text-muted);">POSITION WINDOW</div>
+            <div style="font-size:1.25rem; font-weight:800; color:#FFF; font-family:'JetBrains Mono'">${stock.window}</div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border:1px solid var(--surface-border); margin-bottom:1.5rem;">
+          <p><strong>📅 Entry:</strong> ${stock.entry_date || ('T - ' + stock.lead + ' trading days')} @ <strong>09:20 AM</strong> ${stock.entry_px_920 ? `&nbsp;(<span style="color:#60A5FA; font-weight:700;">₹${Number(stock.entry_px_920).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>)` : ''}</p>
+          <p><strong>🏁 Exit:</strong> ${stock.exit_date || ('T + ' + stock.hold + ' trading days')} @ <strong>03:15 PM</strong> ${stock.exit_px_315 ? `&nbsp;(<span style="color:#94A3B8; font-weight:700;">₹${Number(stock.exit_px_315).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>)` : ''}</p>
+          <p><strong>📦 Lot Size:</strong> ${stock.lot} shares</p>
+          <p><strong>📈 Win Rate:</strong> ${stock.full_19y_wr ? stock.full_19y_wr + '% (19 Years)' : ((stock.all_q_wr || 75.0) + '% (All Available Quarters)')}</p>
+          <p><strong>🎯 Expected Return %:</strong> <span style="color:${(stock.expected_ret || 0) >= 0 ? '#34D399' : '#F87171'}; font-weight:700;">${stock.expected_ret !== undefined && stock.expected_ret !== null ? (stock.expected_ret > 0 ? '+' : '') + stock.expected_ret + '%' : 'N/A'}</span></p>
+          <p><strong>💰 Return We Get (Actual % @ 09:20 AM Entry):</strong> ${stock.actual_ret !== undefined && stock.actual_ret !== null ? '<span style="color:' + (stock.actual_ret >= 0 ? '#34D399' : '#EF4444') + '; font-weight:700;">' + (stock.actual_ret > 0 ? '+' : '') + stock.actual_ret + '%</span>' : '<span style="color:#FBBF24;">⏳ Active Q3 (Pending)</span>'}</p>
+          <p><strong>📊 Realised / Expected P&L (1 Lot):</strong> ${stock.exp_pnl_1lot !== undefined && stock.exp_pnl_1lot !== null && stock.exp_pnl_1lot !== 0 ? '<span style="color:' + (stock.exp_pnl_1lot >= 0 ? '#34D399' : '#EF4444') + '; font-weight:700;">' + (stock.exp_pnl_1lot >= 0 ? '+' : '') + '₹' + Math.abs(Math.round(stock.exp_pnl_1lot)).toLocaleString('en-IN') + '</span>' : 'N/A'}</p>
+          <p><strong>🛡️ Required SPAN Margin:</strong> ₹${Number(stock.margin || 0).toLocaleString('en-IN')}</p>
+        </div>
+
+        <div style="background:${stock.direction === 'LONG' ? 'var(--long-bg)' : 'var(--short-bg)'}; border:1px solid ${dirColor}; padding:1rem; border-radius:8px;">
+          <div style="font-weight:700; color:${dirColor}; margin-bottom:0.25rem;">Real Fund Execution Rule:</div>
+          <div style="font-size:0.85rem; color:#FFF;">
+            Place order at <strong>09:20 AM</strong> on Entry Date.<br>
+            Recommended Contract: <strong>${actionText}</strong>.<br>
+            Square off position between <strong>03:10 PM - 03:25 PM</strong> on Exit Date.
+          </div>
+        </div>
+      `;
+      modal.classList.add('open');
+    }
+
+    function closeModal(e) {
+      document.getElementById('stock-modal').classList.remove('open');
+    }
+
+    window.addEventListener('DOMContentLoaded', loadData);
+  </script>
+</body>
+</html>

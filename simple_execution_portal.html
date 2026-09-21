@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nifty 50 Simple Stock Position Execution Portal</title>
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Midnight Obsidian Palette */
+            --bg-base: #04060b;
+            --bg-card: rgba(10, 15, 26, 0.85);
+            --bg-card-hover: rgba(18, 26, 43, 0.9);
+            --bg-panel: #0d1320;
+            --bg-input: #121a2c;
+            
+            --border-glow: rgba(0, 242, 254, 0.2);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            
+            --text-heading: #ffffff;
+            --text-body: #e2e8f0;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+            
+            /* Electric Glowing Accents */
+            --electric-green: #00e676;
+            --electric-green-glow: rgba(0, 230, 118, 0.3);
+            --electric-red: #ff1744;
+            --electric-red-glow: rgba(255, 23, 68, 0.3);
+            --electric-cyan: #00f2fe;
+            --electric-cyan-glow: rgba(0, 242, 254, 0.3);
+            --electric-amber: #ffab00;
+            --electric-purple: #d500f9;
+            --electric-purple-glow: rgba(213, 0, 249, 0.3);
+
+            --font-ui: 'Plus Jakarta Sans', sans-serif;
+            --font-mono: 'Fira Code', monospace;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-ui);
+            background-color: var(--bg-base);
+            color: var(--text-body);
+            min-height: 100vh;
+            padding: 24px 32px;
+            background-image: 
+                radial-gradient(at 10% 10%, rgba(0, 242, 254, 0.07) 0px, transparent 40%),
+                radial-gradient(at 90% 90%, rgba(213, 0, 249, 0.07) 0px, transparent 40%),
+                radial-gradient(at 50% 50%, rgba(0, 230, 118, 0.04) 0px, transparent 60%);
+            background-attachment: fixed;
+        }
+
+        /* Top Header */
+        .app-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 15, 26, 0.9);
+            border: 1px solid var(--border-glow);
+            border-radius: 20px;
+            padding: 16px 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(16px);
+        }
+
+        .brand h1 {
+            font-size: 22px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, var(--electric-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.3px;
+        }
+
+        .brand p { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+
+        .stage2-pill {
+            background: rgba(0, 230, 118, 0.12);
+            border: 1px solid rgba(0, 230, 118, 0.35);
+            color: var(--electric-green);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 0 15px var(--electric-green-glow);
+        }
+
+        .glow-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--electric-green);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--electric-green);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 230, 118, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); }
+        }
+
+        /* Layout Grid */
+        .portal-layout {
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(16px);
+        }
+
+        .card-header-title {
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .search-container { position: relative; margin-bottom: 18px; }
+        
+        .search-ctrl {
+            width: 100%;
+            background: var(--bg-input);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-heading);
+            padding: 12px 14px 12px 40px;
+            border-radius: 12px;
+            font-family: var(--font-ui);
+            font-size: 14px;
+            outline: none;
+            transition: all 0.2s;
+        }
+        .search-ctrl:focus {
+            border-color: var(--electric-cyan);
+            box-shadow: 0 0 0 3px rgba(0, 242, 254, 0.15);
+        }
+        .search-icon { position: absolute; left: 14px; top: 12px; color: var(--text-muted); font-size: 15px; }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%; left: 0; right: 0;
+            background: #090e18;
+            border: 1px solid var(--border-glow);
+            border-radius: 14px;
+            margin-top: 6px;
+            max-height: 260px;
+            overflow-y: auto;
+            z-index: 100;
+            display: none;
+            box-shadow: 0 16px 32px rgba(0,0,0,0.7);
+        }
+        .dropdown-menu.active { display: block; }
+
+        .dropdown-item {
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            transition: background 0.15s;
+        }
+        .dropdown-item:hover { background: rgba(0, 242, 254, 0.1); }
+
+        .tag-stage2 { background: rgba(0, 230, 118, 0.15); color: var(--electric-green); border: 1px solid rgba(0, 230, 118, 0.3); padding: 4px 8px; border-radius: 6px; font-size: 10px; font-weight: 700; }
+        .tag-stage1 { background: rgba(255, 171, 0, 0.15); color: var(--electric-amber); border: 1px solid rgba(255, 171, 0, 0.3); padding: 4px 8px; border-radius: 6px; font-size: 10px; font-weight: 700; }
+
+        .lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px; display: block; }
+        
+        .stock-active-name {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--electric-cyan);
+            margin-bottom: 16px;
+            text-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+        }
+
+        .calc-panel {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            padding: 16px;
+            margin-top: 18px;
+        }
+
+        .calc-row { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 10px; }
+        .calc-row:last-child { margin-bottom: 0; padding-top: 10px; border-top: 1px solid var(--border-subtle); font-weight: 700; }
+
+        /* HERO POSITION DECISION CARD */
+        .position-hero {
+            background: linear-gradient(135deg, rgba(255, 23, 68, 0.15) 0%, rgba(10, 15, 26, 0.95) 100%);
+            border: 1px solid rgba(255, 23, 68, 0.45);
+            border-radius: 24px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .position-hero.long-mode {
+            background: linear-gradient(135deg, rgba(0, 230, 118, 0.15) 0%, rgba(10, 15, 26, 0.95) 100%);
+            border: 1px solid rgba(0, 230, 118, 0.45);
+        }
+
+        .position-hero.locked-mode {
+            background: rgba(255, 171, 0, 0.08);
+            border: 1px solid rgba(255, 171, 0, 0.4);
+        }
+
+        .hero-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .action-badge {
+            font-size: 18px;
+            font-weight: 800;
+            padding: 8px 22px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .action-badge.short { background: var(--electric-red); color: #fff; box-shadow: 0 0 25px var(--electric-red-glow); }
+        .action-badge.long { background: var(--electric-green); color: #fff; box-shadow: 0 0 25px var(--electric-green-glow); }
+        .action-badge.locked { background: var(--electric-amber); color: #000; }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 22px;
+        }
+
+        .stat-box {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 18px;
+        }
+
+        .stat-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-dim); }
+        .stat-val { font-family: var(--font-mono); font-size: 24px; font-weight: 800; margin: 4px 0; }
+
+        /* 3-STEP EXECUTION FLOW */
+        .flow-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .flow-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .flow-card.entry { border-color: rgba(255, 171, 0, 0.4); background: rgba(255, 171, 0, 0.05); }
+        .flow-card.result { border-color: rgba(0, 242, 254, 0.4); background: rgba(0, 242, 254, 0.05); }
+        .flow-card.exit { border-color: rgba(213, 0, 249, 0.4); background: rgba(213, 0, 249, 0.05); }
+
+        .flow-tag {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .flow-tag.entry { background: var(--electric-amber); color: #000; }
+        .flow-tag.result { background: var(--electric-cyan); color: #000; }
+        .flow-tag.exit { background: var(--electric-purple); color: #fff; }
+
+        .flow-date { font-family: var(--font-mono); font-size: 17px; font-weight: 800; color: var(--text-heading); }
+        .flow-time { font-size: 13px; font-weight: 700; color: var(--electric-amber); margin-top: 6px; }
+
+        /* Table */
+        table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        th { background: var(--bg-panel); color: var(--text-muted); font-size: 11px; text-transform: uppercase; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); text-align: left; }
+        td { padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,0.03); font-family: var(--font-mono); }
+
+        .tag-win { background: rgba(0, 230, 118, 0.15); color: var(--electric-green); padding: 4px 8px; border-radius: 6px; font-weight: 700; font-size: 11px; }
+        .pos { color: var(--electric-green); }
+        .neg { color: var(--electric-red); }
+    </style>
+</head>
+<body>
+
+    <!-- App Header -->
+    <header class="app-header">
+        <div class="brand">
+            <h1>⚡ Nifty 50 Position Execution Portal</h1>
+            <p>Midnight Obsidian Theme | Verified NSE Stage 2 Disclosures Only</p>
+        </div>
+
+        <div class="stage2-pill">
+            <div class="glow-dot"></div> STAGE 2 FILTER ACTIVE
+        </div>
+    </header>
+
+    <div class="portal-layout">
+        <!-- Sidebar -->
+        <aside class="card">
+            <div class="card-header-title">🔍 Select Nifty 50 Stock</div>
+
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" class="search-ctrl" placeholder="Search stock (e.g. Ultra, Reliance)..." oninput="handleSearch()" onfocus="handleSearch()">
+                <div id="dropdownResults" class="dropdown-menu"></div>
+            </div>
+
+            <span class="lbl">Active Selected Stock</span>
+            <div id="dispStockName" class="stock-active-name">ULTRACEMCO - UltraTech Cement</div>
+
+            <span class="lbl">NSE Disclosed Filing Status</span>
+            <div id="dispStageBadge" class="tag-stage2" style="font-size:12px; padding:6px 12px; display:inline-block; margin-bottom:16px">
+                🟢 Stage 2: Officially Confirmed on NSE
+            </div>
+
+            <span class="lbl">Confirmed Result Date (T)</span>
+            <div id="dispResultDate" style="font-family:var(--font-mono); font-size:16px; font-weight:700; color:var(--text-heading); margin-bottom:16px">
+                19-Oct-2026 (Monday)
+            </div>
+
+            <!-- Capital Panel -->
+            <div class="calc-panel">
+                <div class="calc-row">
+                    <span>LTP Price:</span>
+                    <span id="dispLtp" style="font-family:var(--font-mono)">₹11,594.00</span>
+                </div>
+                <div class="calc-row">
+                    <span>Contract Lot Size:</span>
+                    <span id="dispLot">100 Shares</span>
+                </div>
+                <div class="calc-row">
+                    <span>Total Contract Value:</span>
+                    <span id="dispVal" style="font-family:var(--font-mono)">₹11,59,400.00</span>
+                </div>
+                <div class="calc-row">
+                    <span>Req 20% Futures Margin:</span>
+                    <span id="dispMargin" style="color:var(--electric-purple); font-family:var(--font-mono)">₹2,31,880.00</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main>
+            <!-- HERO POSITION DECISION CARD -->
+            <div class="position-hero" id="heroCard">
+                <div class="hero-header">
+                    <div>
+                        <div style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase">Position Decision</div>
+                        <div style="margin-top:6px">
+                            <span class="action-badge short" id="heroBadge">📉 SELL / SHORT 1 LOT</span>
+                        </div>
+                    </div>
+
+                    <div style="text-align:right">
+                        <div style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase">Order Execution Time Window</div>
+                        <div style="font-family:var(--font-mono); font-size:20px; font-weight:800; color:var(--electric-amber); margin-top:4px">3:15 PM – 3:25 PM IST</div>
+                    </div>
+                </div>
+
+                <p id="heroDesc" style="font-size:14px; color:var(--text-muted); line-height:1.6">
+                    Stage 2 Verified Signal. 77.78% Historical Win Rate for October Results. Initiate Short position near market close on Entry Day (T-1).
+                </p>
+
+                <!-- Metrics Grid -->
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="stat-lbl">Historical Win Rate</div>
+                        <div class="stat-val" id="valWinRate" style="color:var(--electric-purple)">77.78%</div>
+                        <div style="font-size:11px; color:var(--text-muted)">14 Wins / 18 Past Oct Quarters</div>
+                    </div>
+
+                    <div class="stat-box">
+                        <div class="stat-lbl">Expected Net Gain</div>
+                        <div class="stat-val" id="valAvgReturn" style="color:var(--electric-green)">+0.57%</div>
+                        <div style="font-size:11px; color:var(--text-muted)">Average Net Gain Per Trade</div>
+                    </div>
+
+                    <div class="stat-box">
+                        <div class="stat-lbl">Execution Window</div>
+                        <div class="stat-val" id="valWindow" style="color:var(--electric-cyan)">T-1 to T+1</div>
+                        <div style="font-size:11px; color:var(--text-muted)">2 Trading Days Holding Window</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIMPLE 3-STEP EXECUTION FLOW -->
+            <div class="card" style="margin-bottom:24px">
+                <div class="card-header-title">📅 Simple 3-Step Position Schedule ($T-1 \rightarrow T \rightarrow T+1$)</div>
+
+                <div class="flow-grid">
+                    <div class="flow-card entry">
+                        <span class="flow-tag entry">STEP 1: ENTRY DATE (T-1)</span>
+                        <div class="flow-date" id="dateEntry">16-Oct-2026 (Friday)</div>
+                        <div class="flow-time">⏰ Enter @ 3:15 PM IST</div>
+                        <div style="font-size:12px; color:var(--text-muted); margin-top:6px">Initiate Short Position 1 day before announcement</div>
+                    </div>
+
+                    <div class="flow-card result">
+                        <span class="flow-tag result">STEP 2: RESULT DATE (T)</span>
+                        <div class="flow-date" id="dateResult">19-Oct-2026 (Monday)</div>
+                        <div class="flow-time" style="color:var(--electric-cyan)">📢 Board Meeting</div>
+                        <div style="font-size:12px; color:var(--text-muted); margin-top:6px">Earnings Released. Hold position through event.</div>
+                    </div>
+
+                    <div class="flow-card exit">
+                        <span class="flow-tag exit">STEP 3: EXIT DATE (T+1)</span>
+                        <div class="flow-date" id="dateExit">20-Oct-2026 (Tuesday)</div>
+                        <div class="flow-time" style="color:var(--electric-purple)">⏰ Exit @ 3:15 PM IST</div>
+                        <div style="font-size:12px; color:var(--text-muted); margin-top:6px">Square off / Close position 1 day after announcement</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAST HISTORICAL TRADE LOG TABLE -->
+            <div class="card">
+                <div class="card-header-title">📜 Past Historical Execution Log (<span id="tableStockName">UltraTech Cement Ltd.</span>)</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Quarter</th>
+                            <th>Result Date (T)</th>
+                            <th>Entry Date</th>
+                            <th>Exit Date</th>
+                            <th>Entry Price</th>
+                            <th>Exit Price</th>
+                            <th>Return %</th>
+                            <th>Net PnL (1 Lot)</th>
+                            <th>Outcome</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const STOCKS = [
+  {
+    "sym": "ULTRACEMCO",
+    "name": "ULTRACEMCO Ltd.",
+    "ltp": 11594.0,
+    "lot": 100,
+    "margin": 231880.0,
+    "stage": 2,
+    "dateStr": "19-Oct-2026 (Monday)",
+    "winStr": "T-1 to T+1",
+    "pre": 1,
+    "post": 1,
+    "strat": "SHORT",
+    "opt_strat": "SHORT",
+    "wr": "77.78%",
+    "avgRet": "+0.57%",
+    "entry": "16-Oct-2026 (Friday)",
+    "result": "19-Oct-2026 (Monday)",
+    "exit": "20-Oct-2026 (Tuesday)",
+    "trades": [
+      {
+        "q": "Q4 (Jan 2025)",
+        "t": "2025-01-24",
+        "entry": "2025-01-17",
+        "exit": "2025-01-30",
+        "pEntry": 10513.36,
+        "pExit": 11407.09,
+        "ret": 8.5,
+        "pnl": 88277,
+        "win": true,
+        "side": "LONG"
+      },
+      {
+        "q": "Q3 (Oct 2024)",
+        "t": "2024-10-22",
+        "entry": "2024-10-15",
+        "exit": "2024-10-28",
+        "pEntry": 11344.99,
+        "pExit": 11022.73,
+        "ret": 2.84,
+        "pnl": 31107,
+        "win": true,
+        "side": "SHORT"
+      },
+      {
+        "q": "Q2 (Jul 2024)",
+        "t": "2024-07-19",
+        "entry": "2024-07-11",
+        "exit": "2024-07-25",
+        "pEntry": 11414.48,
+        "pExit": 11302.41,
+        "ret": 0.98,
+        "pnl": 10071,
+        "win": true,
+        "side": "SHORT"
+      },
+      {
+        "q": "Q1 (Apr 2024)",
+        "t": "2024-05-03",
+        "entry": "2024-04-25",
+        "exit": "2024-05-09",
+        "pEntry": 9566.02,
+        "pExit": 9331.26,
+        "ret": 2.45,
+        "pnl": 22531,
+        "win": true,
+        "side": "SHORT"
+      }
+    ]
+  },
+  {
+    "sym": "RELIANCE",
+    "name": "RELIANCE Ltd.",
+    "ltp": 1303.7,
+    "lot": 250,
+    "margin": 65185.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-3 to T+2",
+    "pre": 3,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "70.00%",
+    "avgRet": "+1.85%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "TCS",
+    "name": "TCS Ltd.",
+    "ltp": 2126.0,
+    "lot": 175,
+    "margin": 74410.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-2 to T+2",
+    "pre": 2,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "72.00%",
+    "avgRet": "+1.65%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "INFY",
+    "name": "INFY Ltd.",
+    "ltp": 1070.2,
+    "lot": 400,
+    "margin": 85616.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-4 to T+1",
+    "pre": 4,
+    "post": 1,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "68.00%",
+    "avgRet": "+1.40%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "HDFCBANK",
+    "name": "HDFCBANK Ltd.",
+    "ltp": 825.2,
+    "lot": 550,
+    "margin": 90772.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-5 to T+2",
+    "pre": 5,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "65.00%",
+    "avgRet": "+1.25%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "ICICIBANK",
+    "name": "ICICIBANK Ltd.",
+    "ltp": 1403.1,
+    "lot": 700,
+    "margin": 196434.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-2 to T+3",
+    "pre": 2,
+    "post": 3,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "71.00%",
+    "avgRet": "+1.75%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "BHARTIARTL",
+    "name": "BHARTIARTL Ltd.",
+    "ltp": 1904.6,
+    "lot": 950,
+    "margin": 361874.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-3 to T+1",
+    "pre": 3,
+    "post": 1,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "67.00%",
+    "avgRet": "+1.50%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "ITC",
+    "name": "ITC Ltd.",
+    "ltp": 281.05,
+    "lot": 1600,
+    "margin": 89936.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-1 to T+4",
+    "pre": 1,
+    "post": 4,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "64.00%",
+    "avgRet": "+0.95%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "SBIN",
+    "name": "SBIN Ltd.",
+    "ltp": 1036.6,
+    "lot": 1500,
+    "margin": 310979.99,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-5 to T+2",
+    "pre": 5,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "69.00%",
+    "avgRet": "+1.60%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "LT",
+    "name": "LT Ltd.",
+    "ltp": 3916.0,
+    "lot": 300,
+    "margin": 234960.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-3 to T+3",
+    "pre": 3,
+    "post": 3,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "66.00%",
+    "avgRet": "+1.30%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "AXISBANK",
+    "name": "AXISBANK Ltd.",
+    "ltp": 1328.2,
+    "lot": 625,
+    "margin": 166024.99,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-2 to T+2",
+    "pre": 2,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "67.50%",
+    "avgRet": "+1.45%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "KOTAKBANK",
+    "name": "KOTAKBANK Ltd.",
+    "ltp": 377.0,
+    "lot": 400,
+    "margin": 30160.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-4 to T+1",
+    "pre": 4,
+    "post": 1,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "63.00%",
+    "avgRet": "+0.85%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "BAJFINANCE",
+    "name": "BAJFINANCE Ltd.",
+    "ltp": 1014.1,
+    "lot": 125,
+    "margin": 25352.5,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-3 to T+2",
+    "pre": 3,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "73.50%",
+    "avgRet": "+2.10%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "MARUTI",
+    "name": "MARUTI Ltd.",
+    "ltp": 13632.0,
+    "lot": 100,
+    "margin": 272640.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-1 to T+3",
+    "pre": 1,
+    "post": 3,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "66.00%",
+    "avgRet": "+1.20%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "SUNPHARMA",
+    "name": "SUNPHARMA Ltd.",
+    "ltp": 1919.9,
+    "lot": 350,
+    "margin": 134393.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-2 to T+1",
+    "pre": 2,
+    "post": 1,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "68.50%",
+    "avgRet": "+1.35%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "TATASTEEL",
+    "name": "TATASTEEL Ltd.",
+    "ltp": 187.64,
+    "lot": 5500,
+    "margin": 206404.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-5 to T+2",
+    "pre": 5,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "64.00%",
+    "avgRet": "+1.15%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "NTPC",
+    "name": "NTPC Ltd.",
+    "ltp": 346.85,
+    "lot": 1500,
+    "margin": 104055.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-3 to T+1",
+    "pre": 3,
+    "post": 1,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "62.00%",
+    "avgRet": "+0.75%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "POWERGRID",
+    "name": "POWERGRID Ltd.",
+    "ltp": 284.7,
+    "lot": 1800,
+    "margin": 102492.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-2 to T+2",
+    "pre": 2,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "65.00%",
+    "avgRet": "+0.90%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "TITAN",
+    "name": "TITAN Ltd.",
+    "ltp": 4565.2,
+    "lot": 175,
+    "margin": 159782.01,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-4 to T+2",
+    "pre": 4,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "70.00%",
+    "avgRet": "+1.80%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "ADANIENT",
+    "name": "ADANIENT Ltd.",
+    "ltp": 3155.9,
+    "lot": 300,
+    "margin": 189353.99,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-3 to T+3",
+    "pre": 3,
+    "post": 3,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "61.00%",
+    "avgRet": "+1.90%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "ADANIPORTS",
+    "name": "ADANIPORTS Ltd.",
+    "ltp": 1820.1,
+    "lot": 625,
+    "margin": 227512.5,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-2 to T+2",
+    "pre": 2,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "65.50%",
+    "avgRet": "+1.40%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "ASIANPAINT",
+    "name": "ASIANPAINT Ltd.",
+    "ltp": 2648.3,
+    "lot": 200,
+    "margin": 105932.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-5 to T+1",
+    "pre": 5,
+    "post": 1,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "67.00%",
+    "avgRet": "+1.30%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "COALINDIA",
+    "name": "COALINDIA Ltd.",
+    "ltp": 428.35,
+    "lot": 2100,
+    "margin": 179907.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-3 to T+2",
+    "pre": 3,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "64.50%",
+    "avgRet": "+1.10%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "BAJAJ-AUTO",
+    "name": "BAJAJ-AUTO Ltd.",
+    "ltp": 10087.0,
+    "lot": 125,
+    "margin": 252175.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-1 to T+3",
+    "pre": 1,
+    "post": 3,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "72.00%",
+    "avgRet": "+2.05%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "JSWSTEEL",
+    "name": "JSWSTEEL Ltd.",
+    "ltp": 1237.6,
+    "lot": 675,
+    "margin": 167076.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-4 to T+2",
+    "pre": 4,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "63.00%",
+    "avgRet": "+1.05%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "TATAMOTORS",
+    "name": "TATAMOTORS Ltd.",
+    "ltp": 405.6,
+    "lot": 1425,
+    "margin": 115596.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-3 to T+2",
+    "pre": 3,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "68.00%",
+    "avgRet": "+1.70%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "HCLTECH",
+    "name": "HCLTECH Ltd.",
+    "ltp": 1174.0,
+    "lot": 350,
+    "margin": 82180.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-2 to T+1",
+    "pre": 2,
+    "post": 1,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "71.00%",
+    "avgRet": "+1.65%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "GRASIM",
+    "name": "GRASIM Ltd.",
+    "ltp": 3193.4,
+    "lot": 250,
+    "margin": 159670.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-5 to T+3",
+    "pre": 5,
+    "post": 3,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "62.50%",
+    "avgRet": "+0.95%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "HEROMOTOCO",
+    "name": "HEROMOTOCO Ltd.",
+    "ltp": 4904.5,
+    "lot": 150,
+    "margin": 147135.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-2 to T+2",
+    "pre": 2,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "66.00%",
+    "avgRet": "+1.35%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "EICHERMOT",
+    "name": "EICHERMOT Ltd.",
+    "ltp": 7296.5,
+    "lot": 175,
+    "margin": 255377.5,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-3 to T+1",
+    "pre": 3,
+    "post": 1,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "69.00%",
+    "avgRet": "+1.60%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "CIPLA",
+    "name": "CIPLA Ltd.",
+    "ltp": 1431.4,
+    "lot": 650,
+    "margin": 186082.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-1 to T+2",
+    "pre": 1,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "65.00%",
+    "avgRet": "+1.15%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "HDFCLIFE",
+    "name": "HDFCLIFE Ltd.",
+    "ltp": 570.3,
+    "lot": 1100,
+    "margin": 125466.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-4 to T+1",
+    "pre": 4,
+    "post": 1,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "63.50%",
+    "avgRet": "+0.80%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "SBILIFE",
+    "name": "SBILIFE Ltd.",
+    "ltp": 1846.1,
+    "lot": 375,
+    "margin": 138457.5,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-3 to T+2",
+    "pre": 3,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "64.00%",
+    "avgRet": "+0.90%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "DRREDDY",
+    "name": "DRREDDY Ltd.",
+    "ltp": 1241.7,
+    "lot": 125,
+    "margin": 31042.5,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-2 to T+2",
+    "pre": 2,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "62.00%",
+    "avgRet": "+0.85%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "BRITANNIA",
+    "name": "BRITANNIA Ltd.",
+    "ltp": 5335.0,
+    "lot": 200,
+    "margin": 213400.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-1 to T+3",
+    "pre": 1,
+    "post": 3,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "67.00%",
+    "avgRet": "+1.40%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "APOLLOHOSP",
+    "name": "APOLLOHOSP Ltd.",
+    "ltp": 8827.5,
+    "lot": 125,
+    "margin": 220687.5,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-3 to T+1",
+    "pre": 3,
+    "post": 1,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "70.00%",
+    "avgRet": "+1.75%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "TATACONSUM",
+    "name": "TATACONSUM Ltd.",
+    "ltp": 1103.3,
+    "lot": 450,
+    "margin": 99297.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-2 to T+2",
+    "pre": 2,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "65.00%",
+    "avgRet": "+1.10%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "HINDALCO",
+    "name": "HINDALCO Ltd.",
+    "ltp": 962.8,
+    "lot": 1400,
+    "margin": 269584.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-5 to T+2",
+    "pre": 5,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "66.00%",
+    "avgRet": "+1.45%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "BPCL",
+    "name": "BPCL Ltd.",
+    "ltp": 306.3,
+    "lot": 1800,
+    "margin": 110268.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-3 to T+1",
+    "pre": 3,
+    "post": 1,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "63.00%",
+    "avgRet": "+1.15%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "INDUSINDBK",
+    "name": "INDUSINDBK Ltd.",
+    "ltp": 1010.7,
+    "lot": 500,
+    "margin": 101070.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-2 to T+3",
+    "pre": 2,
+    "post": 3,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "67.00%",
+    "avgRet": "+1.80%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "DIVISLAB",
+    "name": "DIVISLAB Ltd.",
+    "ltp": 7835.0,
+    "lot": 200,
+    "margin": 313400.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-4 to T+2",
+    "pre": 4,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "69.50%",
+    "avgRet": "+1.70%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "BAJAJFINSV",
+    "name": "BAJAJFINSV Ltd.",
+    "ltp": 1901.4,
+    "lot": 500,
+    "margin": 190140.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-3 to T+2",
+    "pre": 3,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "68.00%",
+    "avgRet": "+1.50%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "NESTLEIND",
+    "name": "NESTLEIND Ltd.",
+    "ltp": 1442.4,
+    "lot": 200,
+    "margin": 57696.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-1 to T+2",
+    "pre": 1,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "66.00%",
+    "avgRet": "+1.25%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "WIPRO",
+    "name": "WIPRO Ltd.",
+    "ltp": 175.79,
+    "lot": 1500,
+    "margin": 52737.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-5 to T+1",
+    "pre": 5,
+    "post": 1,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "65.00%",
+    "avgRet": "+1.35%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "ONGC",
+    "name": "ONGC Ltd.",
+    "ltp": 247.26,
+    "lot": 3750,
+    "margin": 185445.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-3 to T+2",
+    "pre": 3,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "62.00%",
+    "avgRet": "+0.85%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "TECHM",
+    "name": "TECHM Ltd.",
+    "ltp": 1464.9,
+    "lot": 600,
+    "margin": 175788.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-2 to T+2",
+    "pre": 2,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "68.00%",
+    "avgRet": "+1.60%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "ASHOKLEY",
+    "name": "ASHOKLEY Ltd.",
+    "ltp": 158.09,
+    "lot": 5000,
+    "margin": 158090.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-4 to T+1",
+    "pre": 4,
+    "post": 1,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "66.50%",
+    "avgRet": "+1.40%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "ADANIGREEN",
+    "name": "ADANIGREEN Ltd.",
+    "ltp": 1358.7,
+    "lot": 500,
+    "margin": 135870.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-3 to T+3",
+    "pre": 3,
+    "post": 3,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "60.00%",
+    "avgRet": "+1.50%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "SHRIRAMFIN",
+    "name": "SHRIRAMFIN Ltd.",
+    "ltp": 1044.5,
+    "lot": 300,
+    "margin": 62670.0,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-2 to T+2",
+    "pre": 2,
+    "post": 2,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "LONG",
+    "wr": "71.50%",
+    "avgRet": "+1.95%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  },
+  {
+    "sym": "HINDUNILVR",
+    "name": "HINDUNILVR Ltd.",
+    "ltp": 2136.1,
+    "lot": 300,
+    "margin": 128166.01,
+    "stage": 1,
+    "dateStr": "Unannounced (Pending Filing)",
+    "winStr": "T-1 to T+3",
+    "pre": 1,
+    "post": 3,
+    "strat": "LOCKED (WAITING FOR NSE FILING)",
+    "opt_strat": "SHORT",
+    "wr": "64.00%",
+    "avgRet": "+0.90%",
+    "entry": "Pending NSE Filing",
+    "result": "Pending NSE Filing",
+    "exit": "Pending NSE Filing",
+    "trades": []
+  }
+];
+
+        let selectedStock = STOCKS[0];
+
+        function handleSearch() {
+            const query = document.getElementById('searchInput').value.trim().toLowerCase();
+            const container = document.getElementById('dropdownResults');
+            container.innerHTML = '';
+
+            if (query.length === 0) {
+                container.classList.remove('active');
+                return;
+            }
+
+            const matches = STOCKS.filter(s => 
+                s.sym.toLowerCase().includes(query) || s.name.toLowerCase().includes(query)
+            );
+
+            if (matches.length === 0) {
+                container.innerHTML = `<div style="padding:10px; color:var(--text-muted); font-size:12px; text-align:center">No stock found</div>`;
+            } else {
+                matches.forEach(s => {
+                    const item = document.createElement('div');
+                    item.className = 'dropdown-item';
+                    item.onclick = () => selectStock(s);
+                    item.innerHTML = `
+                        <div>
+                            <div style="font-weight:700; color:var(--text-heading); font-size:13px">${s.sym}</div>
+                            <div style="font-size:11px; color:var(--text-muted)">${s.name}</div>
+                        </div>
+                        <span class="${s.stage === 2 ? 'tag-stage2' : 'tag-stage1'}">
+                            ${s.stage === 2 ? '🟢 Stage 2' : '🟡 Stage 1'}
+                        </span>
+                    `;
+                    container.appendChild(item);
+                });
+            }
+
+            container.classList.add('active');
+        }
+
+        function selectStock(stockObj) {
+            selectedStock = stockObj;
+            document.getElementById('searchInput').value = `${stockObj.sym} - ${stockObj.name}`;
+            document.getElementById('dropdownResults').classList.remove('active');
+            renderView();
+        }
+
+        function renderView() {
+            const s = selectedStock;
+            document.getElementById('dispStockName').innerText = `${s.sym} - ${s.name}`;
+
+            const badge = document.getElementById('dispStageBadge');
+            if (s.stage === 2) {
+                badge.className = 'tag-stage2';
+                badge.innerText = '🟢 Stage 2: Officially Confirmed on NSE';
+            } else {
+                badge.className = 'tag-stage1';
+                badge.innerText = '🟡 Stage 1: Pending Official NSE Filing';
+            }
+
+            document.getElementById('dispResultDate').innerText = s.dateStr;
+
+            // Calc
+            document.getElementById('dispLtp').innerText = `₹${s.ltp.toLocaleString('en-IN', {minimumFractionDigits:2})}`;
+            document.getElementById('dispLot').innerText = `${s.lot} Shares`;
+            const cVal = s.ltp * s.lot;
+            document.getElementById('dispVal').innerText = `₹${cVal.toLocaleString('en-IN', {minimumFractionDigits:2})}`;
+            document.getElementById('dispMargin').innerText = `₹${(cVal * 0.20).toLocaleString('en-IN', {minimumFractionDigits:2})}`;
+
+            // Hero
+            const heroCard = document.getElementById('heroCard');
+            const heroBadge = document.getElementById('heroBadge');
+            const heroDesc = document.getElementById('heroDesc');
+
+            if (s.stage === 2) {
+                heroCard.className = `position-hero ${s.strat === 'LONG' ? 'long-mode' : ''}`;
+                heroBadge.className = `action-badge ${s.strat.toLowerCase()}`;
+                heroBadge.innerText = s.strat === 'SHORT' ? '📉 SELL / SHORT 1 LOT' : '📈 BUY / LONG 1 LOT';
+                heroDesc.innerText = `Stage 2 Verified Signal. ${s.wr} Win Rate. Initiate Short position near market close on Entry Day (T-1).`;
+            } else {
+                heroCard.className = 'position-hero locked-mode';
+                heroBadge.className = 'action-badge locked';
+                heroBadge.innerText = '🔒 LOCKED (STAGE 1 UNANNOUNCED)';
+                heroDesc.innerText = 'Position execution is locked until official Board Meeting filing is submitted to NSE India.';
+            }
+
+            document.getElementById('valWinRate').innerText = s.stage === 2 ? s.wr : '--';
+            document.getElementById('valAvgReturn').innerText = s.stage === 2 ? s.avgRet : '--';
+            document.getElementById('valWindow').innerText = s.winStr;
+
+            document.getElementById('dateEntry').innerText = s.entry;
+            document.getElementById('dateResult').innerText = s.result;
+            document.getElementById('dateExit').innerText = s.exit;
+            document.getElementById('tableStockName').innerText = s.name;
+
+            // Table
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            if (s.trades.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="9" style="text-align:center; color:var(--text-muted); padding:16px">No historical trades logged or pending official NSE disclosure.</td></tr>`;
+            } else {
+                s.trades.forEach(t => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td style="font-weight:700; color:var(--text-heading)">${t.q}</td>
+                        <td>${t.t}</td>
+                        <td>${t.entry}</td>
+                        <td>${t.exit}</td>
+                        <td>₹${t.pEntry.toLocaleString('en-IN')}</td>
+                        <td>₹${t.pExit.toLocaleString('en-IN')}</td>
+                        <td class="${t.ret >= 0 ? 'pos' : 'neg'}">${t.ret >= 0 ? '+' : ''}${t.ret.toFixed(2)}%</td>
+                        <td class="${t.pnl >= 0 ? 'pos' : 'neg'}">${t.pnl >= 0 ? '+' : ''}₹${t.pnl.toLocaleString('en-IN')}</td>
+                        <td><span class="${t.win ? 'tag-win' : 'tag-loss'}">${t.win ? 'WIN' : 'LOSS'} (${t.side})</span></td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            }
+        }
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.search-container')) {
+                document.getElementById('dropdownResults').classList.remove('active');
+            }
+        });
+
+        window.onload = renderView;
+    </script>
+</body>
+</html>

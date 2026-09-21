@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-09-21 09:34:39",
+  "total_found": 4,
+  "data": [
+    {
+      "symbol": "HCLTECH",
+      "company": "HCL Technologies Limited",
+      "result_date": "12-Oct-2026",
+      "result_date_day": "Monday",
+      "quarter": "Q2 FY2026-27 (Jul-Sep 2026)",
+      "days_to_result": 21,
+      "purpose": "Financial Results/Dividend",
+      "source": "NSE Event Calendar API",
+      "scraped_at": "2026-09-21 09:34:39"
+    },
+    {
+      "symbol": "AXISBANK",
+      "company": "Axis Bank Limited",
+      "result_date": "17-Oct-2026",
+      "result_date_day": "Saturday",
+      "quarter": "Q2 FY2026-27 (Jul-Sep 2026)",
+      "days_to_result": 26,
+      "purpose": "Financial Results",
+      "source": "NSE Event Calendar API",
+      "scraped_at": "2026-09-21 09:34:39"
+    },
+    {
+      "symbol": "ULTRACEMCO",
+      "company": "UltraTech Cement Limited",
+      "result_date": "19-Oct-2026",
+      "result_date_day": "Monday",
+      "quarter": "Q2 FY2026-27 (Jul-Sep 2026)",
+      "days_to_result": 28,
+      "purpose": "Financial Results",
+      "source": "NSE Event Calendar API",
+      "scraped_at": "2026-09-21 09:34:39"
+    },
+    {
+      "symbol": "INFY",
+      "company": "Infosys Limited",
+      "result_date": "23-Oct-2026",
+      "result_date_day": "Friday",
+      "quarter": "Q2 FY2026-27 (Jul-Sep 2026)",
+      "days_to_result": 32,
+      "purpose": "Financial Results/Dividend",
+      "source": "NSE Event Calendar API",
+      "scraped_at": "2026-09-21 09:34:39"
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Long vs Short Event-Trading Background Study</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 40px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            color: #0f172a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+            margin-top: 0;
+        }
+        
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            color: #1e3a8a;
+            margin-top: 30px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 6px;
+        }
+        
+        h3 {
+            font-size: 1.1rem;
+            color: #0f172a;
+            margin-top: 20px;
+        }
+        
+        p, li {
+            font-size: 14.5px;
+            color: #334155;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13.5px;
+        }
+        
+        th, td {
+            padding: 10px 12px;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f8fafc;
+            color: #475569;
+            font-weight: 600;
+            font-size: 12.5px;
+            text-transform: uppercase;
+        }
+        
+        .code-block {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+        
+        .accent {
+            color: #2563eb;
+            font-weight: 600;
+        }
+        
+        .footer {
+            margin-top: 60px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 20px;
+            font-size: 12px;
+            color: #94a3b8;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="text-transform: uppercase; letter-spacing: 2px; font-size: 11px; color: #3b82f6; font-weight: 600; margin-bottom: 8px;">Technical Study Report</div>
+        <h1>Event-Driven Earnings Drift Model (Long vs Short)</h1>
+        
+        <p class="lead">This technical study documents the methodology, mathematics, and operational logic of the Event-Driven Earnings Drift Model implemented on ports <code>8080</code> (Long-Only) and <code>8000</code> (Short-Selling).</p>
+        
+        <h2>1. Executive Summary & Strategy Core</h2>
+        <p>The core methodology is built on the <strong>Earnings Drift Anomaly</strong> positioning. Instead of predicting the direction or surprise of a company's upcoming earnings report, the model positions around the <strong>Catalyst Announcement Date (Result Date)</strong>.</p>
+        <p>By analyzing a stock's historical price behavior around its past earnings announcements, the engine optimizes entry and exit offsets to capture:</p>
+        <ul>
+            <li><strong>The Pre-Result Anticipation Drift</strong> ("Buy the Rumour" run-up or "Sell the Rumour" profit booking).</li>
+            <li><strong>The Post-Result Digest Drift / PEAD</strong> (Post-Earnings Announcement Drift as the market digests the surprise).</li>
+        </ul>
+        
+        <h2>2. Leg Mechanics & Mathematical Formulation</h2>
+        <p>Every event-driven trade is executed as a <strong>two-leg transaction</strong> matching specific trading-day offsets relative to the Result Announcement Date (<em>T</em>).</p>
+        
+        <h3>A. Long Strategy (Buy Before, Sell After)</h3>
+        <p>Used when a stock exhibits consistent upward momentum leading into or immediately following results.</p>
+        <ul>
+            <li><strong>Entry (Buy)</strong>: Executed at the Closing Price on trading day <em>T − N</em>.</li>
+            <li><strong>Exit (Sell)</strong>: Executed at the Closing Price on trading day <em>T + M</em>.</li>
+        </ul>
+        <p><strong>Math Formulation:</strong></p>
+        <div style="background-color: #f8fafc; padding: 15px; border-left: 4px solid #2563eb; font-family: monospace; font-size: 14px; margin: 15px 0;">
+            Long Return (%) = [ ( Price_exit / Price_entry ) - 1 - Cost ] * 100
+        </div>
+        <p><em>Where Cost represents transaction costs / slippage fraction (default: 0.10% or 0.0010 round-trip).</em></p>
+        
+        <h3>B. Short Strategy (Sell Before, Buy After)</h3>
+        <p>Used when a stock exhibits consistent downward momentum or pre-result profit booking.</p>
+        <ul>
+            <li><strong>Entry (Short Sell)</strong>: Executed at the Closing Price on trading day <em>T − N</em>.</li>
+            <li><strong>Exit (Cover Buy)</strong>: Executed at the Closing Price on trading day <em>T + M</em>.</li>
+        </ul>
+        <p><strong>Math Formulation:</strong></p>
+        <div style="background-color: #f8fafc; padding: 15px; border-left: 4px solid #ef4444; font-family: monospace; font-size: 14px; margin: 15px 0;">
+            Short Return (%) = [ ( Price_entry - Price_exit ) / Price_entry - Cost ] * 100
+        </div>
+        
+        <h2>3. How the Engine Predicts the Candle (Grid Optimization)</h2>
+        <p>The model determines the optimal buy and sell offsets (<em>N</em> and <em>M</em>) using <strong>ex-ante historical grid backtesting</strong> over the past quarters:</p>
+        
+        <div class="code-block">
+                  ┌──────────────────────────────┐
+                  │   Historical Event Dates     │
+                  └──────────────┬───────────────┘
+                                 │
+                   [For each (N, M) combination]
+            Long: N,M ∈ [1, 8]  │  Short: N ∈ [1, 10], M ∈ [1, 15]
+                                 ▼
+                  ┌──────────────────────────────┐
+                  │    Simulate Trade Returns    │
+                  └──────────────┬───────────────┘
+                                 │
+                                 ▼
+                  ┌──────────────────────────────┐
+                  │ Calculate Metrics per Stock:  │
+                  │   - Average Return (%)       │
+                  │   - Win Rate (%)             │
+                  └──────────────┬───────────────┘
+                                 │
+                                 ▼
+                  ┌──────────────────────────────┐
+                  │  Pick optimal parameters.    │
+                  │  (Max Win Rate > Max Return) │
+                  └──────────────────────────────┘
+        </div>
+        
+        <ol>
+            <li><strong>Parameters Grid Search</strong>: 
+                <ul>
+                    <li><strong>Long-Only Grid</strong>: Entry Offset (<em>N</em>) from 1 to 8 days, Exit Offset (<em>M</em>) from 1 to 8 days (<strong>8x8 grid</strong>).</li>
+                    <li><strong>Short-Selling Grid</strong>: Entry Offset (<em>N</em>) from 1 to 8 days, Exit Offset (<em>M</em>) from 1 to 8 days (<strong>8x8 grid</strong>).</li>
+                </ul>
+            </li>
+            <li><strong>Backtesting Matrix</strong>: The engine evaluates a symmetric 64 combinations (8x8) for both Long and Short strategies across historical earnings result dates to prevent overfitting.</li>
+            <li><strong>Objective Optimization Function</strong>: The optimal offset combination is chosen by ranking combinations first by <strong>Win Rate (%)</strong>, and then by <strong>Average Return (%)</strong>.</li>
+        </ol>
+        
+        <h2>4. Port 8080 (Long-Only) vs Port 8000 (Short-Selling) Comparison</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Port 8080 (Long-Only)</th>
+                    <th>Port 8000 (Short-Selling)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Operational Logic</strong></td>
+                    <td>Buy first at T-N, sell later at T+M.</td>
+                    <td>Sell first at T-N, buy back (cover) at T+M.</td>
+                </tr>
+                <tr>
+                    <td><strong>Market View</strong></td>
+                    <td>Bullish anticipation / post-result reaction.</td>
+                    <td>Bearish anticipation / negative earnings drift.</td>
+                </tr>
+                <tr>
+                    <td><strong>Profit Trigger</strong></td>
+                    <td>Exit Price &gt; Entry Price</td>
+                    <td>Exit Price &lt; Entry Price</td>
+                </tr>
+                <tr>
+                    <td><strong>Risk Profile</strong></td>
+                    <td>Maximum loss is limited to 100% of capital.</td>
+                    <td>Maximum loss is theoretically unlimited.</td>
+                </tr>
+                <tr>
+                    <td><strong>Capital Allocation</strong></td>
+                    <td>Cash used to purchase asset shares.</td>
+                    <td>Cash locked as margin to support short position.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>5. Summary Matrix (Losing Trades Decision Logic)</h2>
+        <p>Our backtest highlights that having a combined strategy selection model is optimal. Even when trades result in a loss, the decision matrix selects the leg that minimizes losses. For example:</p>
+        <ul>
+            <li><strong>NTPC (Q2)</strong>: Choosing <code>SHORT</code> resulted in a <strong>-0.45%</strong> loss, avoiding the <strong>-1.18%</strong> loss from the <code>LONG</code> strategy.</li>
+            <li><strong>SHRIRAMFIN (Q2)</strong>: Choosing <code>LONG</code> resulted in a <strong>-1.49%</strong> loss, avoiding the massive <strong>-12.32%</strong> loss from the <code>SHORT</code> strategy.</li>
+        </ul>
+        
+        <div class="footer">
+            NSE India · Yahoo Finance prices · Methodological Review Report
+        </div>
+    </div>
+</body>
+</html>

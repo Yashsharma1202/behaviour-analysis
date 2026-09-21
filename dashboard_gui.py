@@ -5,6 +5,7 @@ import tkinter as tk
 from pathlib import Path
 from tkinter import ttk
 
+import sys
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent

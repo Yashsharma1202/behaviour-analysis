@@ -1,0 +1,2462 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    @page {
+        size: A4 landscape;
+        margin: 0;
+    }
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f4f6;
+        -webkit-print-color-adjust: exact;
+    }
+    .page {
+        width: 297mm;
+        height: 210mm;
+        box-sizing: border-box;
+        padding: 10mm 15mm;
+        background-color: white;
+        position: relative;
+        page-break-after: always;
+    }
+    header {
+        border-bottom: 2px solid #1e3a8a;
+        padding-bottom: 4px;
+        margin-bottom: 8px;
+    }
+    h1 {
+        font-size: 20px;
+        color: #1e3a8a;
+        margin: 0 0 2px 0;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .subtitle {
+        font-size: 11px;
+        color: #4b5563;
+        margin: 0;
+        font-weight: 500;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 9px;
+        margin-bottom: 10px;
+    }
+    th {
+        background-color: #1e3a8a;
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 8px;
+        padding: 5px 4px;
+        border: 1px solid #1e3a8a;
+    }
+    td {
+        padding: 4px;
+        border: 1px solid #e5e7eb;
+        vertical-align: middle;
+    }
+    tr:nth-child(even) {
+        background-color: #f9fafb;
+    }
+    .name { text-align: left; color: #111827; }
+    .sym { font-weight: 700; text-align: center; color: #1e40af; }
+    .c { text-align: center; }
+    .n { text-align: right; font-family: monospace; font-size: 9.5px; }
+    .pos { color: #15803d; font-weight: bold; background-color: #f0fdf4; }
+    .neg { color: #b91c1c; font-weight: bold; background-color: #fef2f2; }
+    
+    footer {
+        position: absolute;
+        bottom: 8mm;
+        left: 15mm;
+        right: 15mm;
+        border-top: 1px solid #e5e7eb;
+        padding-top: 4px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 8px;
+        color: #9ca3af;
+    }
+    
+    .cover-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .cover-main {
+        margin-top: 10mm;
+    }
+    .cover-title {
+        font-size: 30px;
+        font-weight: 800;
+        color: #1e3a8a;
+        margin: 0;
+        line-height: 1.1;
+    }
+    .cover-subtitle {
+        font-size: 15px;
+        color: #4b5563;
+        margin: 8px 0 0 0;
+        font-weight: 500;
+    }
+    .cover-meta {
+        margin-top: 15mm;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    .meta-box {
+        background-color: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        padding: 8px 10px;
+    }
+    .meta-label {
+        font-size: 8.5px;
+        color: #64748b;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    .meta-value {
+        font-size: 13px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-top: 2px;
+    }
+</style>
+</head>
+<body>
+
+    <!-- PAGE 1: COVER & EXECUTIVE SUMMARY -->
+    <div class="page cover-page" style="height: 297mm; page-break-after: always;">
+        <header>
+            <h1>Nifty 50 Capital Utilisation Report</h1>
+            <div class="subtitle">Case 1 Reinvested Capital Compounding & Re-entry Audit</div>
+        </header>
+        
+        <div class="cover-main">
+            <div class="cover-title">Case 1 Capital Utilisation & Re-entry Audit</div>
+            <div class="cover-subtitle">Quarterly Standalone Capital Compounding and Re-entry Statistics (buying exactly 1 unit of stock, No SL, No Filter)</div>
+            
+            <h3 style="margin-top: 12px; margin-bottom: 4px; color: #1e3a8a; font-size: 11px; text-transform: uppercase;">Quarterly Performance Summary</h3>
+            <table style="font-size: 9px; margin-bottom: 0;">
+                <thead>
+                    <tr>
+                        <th style="text-align: left; padding: 6px 10px;">Quarter</th>
+                        <th style="padding: 6px 10px;">Capital Slots Utilised</th>
+                        <th style="padding: 6px 10px;">Total Capital Re-entries</th>
+                        <th style="text-align: right; padding: 6px 10px;">Fund Utilised (Rs.)</th>
+                        <th style="text-align: right; padding: 6px 10px;">Final Portfolio Value (Rs.)</th>
+                        <th style="text-align: right; padding: 6px 10px;">Net Rupee Profit (Rs.)</th>
+                        <th style="text-align: right; padding: 6px 10px;">Compounded Return (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr>
+            <td style="font-weight: bold; text-align: left; padding: 6px 10px;">Q2 2026-27</td>
+            <td style="text-align: center; padding: 6px 10px;">26</td>
+            <td style="text-align: center; padding: 6px 10px;">24</td>
+            <td style="text-align: right; padding: 6px 10px; font-family: monospace;">Rs. 56,831.36</td>
+            <td style="text-align: right; padding: 6px 10px; font-family: monospace;">Rs. 58,274.22</td>
+            <td style="text-align: right; font-weight: bold; color: #15803d; padding: 6px 10px; font-family: monospace;">Rs. +1,442.86</td>
+            <td style="text-align: right; font-weight: bold; color: #15803d; padding: 6px 10px;">+2.54%</td>
+        </tr>
+        
+
+        <tr>
+            <td style="font-weight: bold; text-align: left; padding: 6px 10px;">FY25-26Q4</td>
+            <td style="text-align: center; padding: 6px 10px;">18</td>
+            <td style="text-align: center; padding: 6px 10px;">32</td>
+            <td style="text-align: right; padding: 6px 10px; font-family: monospace;">Rs. 31,804.03</td>
+            <td style="text-align: right; padding: 6px 10px; font-family: monospace;">Rs. 31,650.49</td>
+            <td style="text-align: right; font-weight: bold; color: #b91c1c; padding: 6px 10px; font-family: monospace;">Rs. -153.54</td>
+            <td style="text-align: right; font-weight: bold; color: #b91c1c; padding: 6px 10px;">-0.48%</td>
+        </tr>
+        
+
+        <tr>
+            <td style="font-weight: bold; text-align: left; padding: 6px 10px;">FY25-26Q3</td>
+            <td style="text-align: center; padding: 6px 10px;">27</td>
+            <td style="text-align: center; padding: 6px 10px;">23</td>
+            <td style="text-align: right; padding: 6px 10px; font-family: monospace;">Rs. 74,601.12</td>
+            <td style="text-align: right; padding: 6px 10px; font-family: monospace;">Rs. 76,783.35</td>
+            <td style="text-align: right; font-weight: bold; color: #15803d; padding: 6px 10px; font-family: monospace;">Rs. +2,182.23</td>
+            <td style="text-align: right; font-weight: bold; color: #15803d; padding: 6px 10px;">+2.93%</td>
+        </tr>
+        
+
+        <tr>
+            <td style="font-weight: bold; text-align: left; padding: 6px 10px;">FY25-26Q2</td>
+            <td style="text-align: center; padding: 6px 10px;">27</td>
+            <td style="text-align: center; padding: 6px 10px;">23</td>
+            <td style="text-align: right; padding: 6px 10px; font-family: monospace;">Rs. 52,838.55</td>
+            <td style="text-align: right; padding: 6px 10px; font-family: monospace;">Rs. 54,329.43</td>
+            <td style="text-align: right; font-weight: bold; color: #15803d; padding: 6px 10px; font-family: monospace;">Rs. +1,490.88</td>
+            <td style="text-align: right; font-weight: bold; color: #15803d; padding: 6px 10px;">+2.82%</td>
+        </tr>
+        
+
+        <tr>
+            <td style="font-weight: bold; text-align: left; padding: 6px 10px;">FY25-26Q1</td>
+            <td style="text-align: center; padding: 6px 10px;">27</td>
+            <td style="text-align: center; padding: 6px 10px;">23</td>
+            <td style="text-align: right; padding: 6px 10px; font-family: monospace;">Rs. 65,804.91</td>
+            <td style="text-align: right; padding: 6px 10px; font-family: monospace;">Rs. 64,507.87</td>
+            <td style="text-align: right; font-weight: bold; color: #b91c1c; padding: 6px 10px; font-family: monospace;">Rs. -1,297.04</td>
+            <td style="text-align: right; font-weight: bold; color: #b91c1c; padding: 6px 10px;">-1.97%</td>
+        </tr>
+        
+
+        <tr>
+            <td style="font-weight: bold; text-align: left; padding: 6px 10px;">FY24-25Q4</td>
+            <td style="text-align: center; padding: 6px 10px;">29</td>
+            <td style="text-align: center; padding: 6px 10px;">21</td>
+            <td style="text-align: right; padding: 6px 10px; font-family: monospace;">Rs. 64,400.10</td>
+            <td style="text-align: right; padding: 6px 10px; font-family: monospace;">Rs. 64,754.70</td>
+            <td style="text-align: right; font-weight: bold; color: #15803d; padding: 6px 10px; font-family: monospace;">Rs. +354.60</td>
+            <td style="text-align: right; font-weight: bold; color: #15803d; padding: 6px 10px;">+0.55%</td>
+        </tr>
+        
+
+        <tr>
+            <td style="font-weight: bold; text-align: left; padding: 6px 10px;">FY24-25Q3</td>
+            <td style="text-align: center; padding: 6px 10px;">26</td>
+            <td style="text-align: center; padding: 6px 10px;">24</td>
+            <td style="text-align: right; padding: 6px 10px; font-family: monospace;">Rs. 74,149.14</td>
+            <td style="text-align: right; padding: 6px 10px; font-family: monospace;">Rs. 70,180.23</td>
+            <td style="text-align: right; font-weight: bold; color: #b91c1c; padding: 6px 10px; font-family: monospace;">Rs. -3,968.91</td>
+            <td style="text-align: right; font-weight: bold; color: #b91c1c; padding: 6px 10px;">-5.35%</td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="cover-meta">
+            <div class="meta-box">
+                <div class="meta-label">Total Capital Slots</div>
+                <div class="meta-value" style="color: #1e40af;">180 slots</div>
+            </div>
+            <div class="meta-box">
+                <div class="meta-label">Total Re-entries</div>
+                <div class="meta-value" style="color: #7c3aed;">170 re-entries</div>
+            </div>
+            <div class="meta-box">
+                <div class="meta-label">Total Rupee Profit</div>
+                <div class="meta-value" style="color: #15803d;">Rs. +51.06</div>
+            </div>
+            <div class="meta-box">
+                <div class="meta-label">Compounded Return</div>
+                <div class="meta-value" style="color: #15803d;">+0.01%</div>
+            </div>
+        </div>
+        
+        <footer>
+            <span>Nifty 50 Case 1 Reinvested Capital Utilisation Report</span>
+            <span>Page 1</span>
+        </footer>
+    </div>
+
+    <!-- DETAIL PAGES -->
+    
+        <div class="page">
+            <header>
+                <h1>Nifty 50 Capital Utilisation Details</h1>
+                <div class="subtitle">Detailed Slot Compounding & Re-entry Log for Quarter Q2 2026-27</div>
+            </header>
+            <div style="margin-bottom: 8px; font-size: 10px; color: #4b5563; font-weight: 600;">
+                Quarter summary: Utilised Fund: Rs. 56,831.36 | Net Profit: Rs. +1,442.86 (+2.54%) | Slots: 26 | Re-entries: 24
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Slot ID</th>
+                        <th style="width: 13%; text-align: right;">Start Capital</th>
+                        <th style="width: 13%; text-align: right;">Final Value</th>
+                        <th style="width: 13%; text-align: right;">Net Profit</th>
+                        <th style="width: 10%; text-align: right;">Return (%)</th>
+                        <th style="width: 10%;">Re-entries</th>
+                        <th style="width: 31%; text-align: left;">Compounded Trade Flow (Re-entries Path)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+            <tr>
+                <td class="sym">Slot 1</td>
+                <td class="n">Rs. 2,097.90</td>
+                <td class="n">Rs. 2,295.77</td>
+                <td class="n pos">Rs. +197.87</td>
+                <td class="n pos">+9.43%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TCS (29-Jun to 17-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ASIANPAINT (17-Jul to 10-Aug) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> APOLLOHOSP (10-Aug to 18-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 2</td>
+                <td class="n">Rs. 1,139.00</td>
+                <td class="n">Rs. 1,054.93</td>
+                <td class="n neg">Rs. -84.07</td>
+                <td class="n neg">-7.38%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HCLTECH (03-Jul to 16-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ADANIENT (20-Jul to 03-Aug) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> MAXHEALTH (03-Aug to 18-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 3</td>
+                <td class="n">Rs. 567.70</td>
+                <td class="n">Rs. 541.87</td>
+                <td class="n neg">Rs. -25.83</td>
+                <td class="n neg">-4.55%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HDFCLIFE (03-Jul to 22-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TATACONSUM (22-Jul to 05-Aug) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> GRASIM (11-Aug to 17-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 4</td>
+                <td class="n">Rs. 1,308.40</td>
+                <td class="n">Rs. 1,341.72</td>
+                <td class="n pos">Rs. +33.32</td>
+                <td class="n pos">+2.55%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">RELIANCE (07-Jul to 20-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> EICHERMOT (20-Jul to 06-Aug) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TMPV (12-Aug to 17-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 5</td>
+                <td class="n">Rs. 1,447.50</td>
+                <td class="n">Rs. 1,762.37</td>
+                <td class="n pos">Rs. +314.87</td>
+                <td class="n pos">+21.75%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TECHM (07-Jul to 28-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BAJAJFINSV (28-Jul to 03-Aug) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ONGC (03-Aug to 13-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 6</td>
+                <td class="n">Rs. 173.00</td>
+                <td class="n">Rs. 183.24</td>
+                <td class="n pos">Rs. +10.24</td>
+                <td class="n pos">+5.92%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">WIPRO (07-Jul to 22-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> MARUTI (23-Jul to 06-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 7</td>
+                <td class="n">Rs. 1,309.50</td>
+                <td class="n">Rs. 1,299.13</td>
+                <td class="n neg">Rs. -10.37</td>
+                <td class="n neg">-0.79%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">AXISBANK (08-Jul to 29-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> SBIN (29-Jul to 11-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 8</td>
+                <td class="n">Rs. 11,353.00</td>
+                <td class="n">Rs. 11,036.53</td>
+                <td class="n neg">Rs. -316.47</td>
+                <td class="n neg">-2.79%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ULTRACEMCO (08-Jul to 30-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> POWERGRID (30-Jul to 17-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 9</td>
+                <td class="n">Rs. 10,155.00</td>
+                <td class="n">Rs. 10,738.59</td>
+                <td class="n pos">Rs. +583.59</td>
+                <td class="n pos">+5.75%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">BAJAJ-AUTO (09-Jul to 27-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ADANIPORTS (27-Jul to 05-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 10</td>
+                <td class="n">Rs. 377.15</td>
+                <td class="n">Rs. 402.10</td>
+                <td class="n pos">Rs. +24.95</td>
+                <td class="n pos">+6.62%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">KOTAKBANK (09-Jul to 29-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TATASTEEL (29-Jul to 05-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 11</td>
+                <td class="n">Rs. 824.95</td>
+                <td class="n">Rs. 783.71</td>
+                <td class="n neg">Rs. -41.24</td>
+                <td class="n neg">-5.00%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HDFCBANK (10-Jul to 22-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> NTPC (23-Jul to 30-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TITAN (31-Jul to 11-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 12</td>
+                <td class="n">Rs. 1,102.60</td>
+                <td class="n">Rs. 1,160.65</td>
+                <td class="n pos">Rs. +58.05</td>
+                <td class="n pos">+5.26%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">INFY (13-Jul to 03-Aug) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TRENT (03-Aug to 11-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 13</td>
+                <td class="n">Rs. 241.41</td>
+                <td class="n">Rs. 263.35</td>
+                <td class="n pos">Rs. +21.94</td>
+                <td class="n pos">+9.09%</td>
+                <td class="c" style="font-weight: 700;">3</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">JIOFIN (13-Jul to 17-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ETERNAL (20-Jul to 23-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> SBILIFE (23-Jul to 04-Aug) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> HINDALCO (04-Aug to 12-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 14</td>
+                <td class="n">Rs. 1,237.40</td>
+                <td class="n">Rs. 1,226.35</td>
+                <td class="n neg">Rs. -11.05</td>
+                <td class="n neg">-0.89%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">JSWSTEEL (13-Jul to 28-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> SUNPHARMA (28-Jul to 12-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 15</td>
+                <td class="n">Rs. 1,407.70</td>
+                <td class="n">Rs. 1,578.86</td>
+                <td class="n pos">Rs. +171.16</td>
+                <td class="n pos">+12.16%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ICICIBANK (14-Jul to 27-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BAJFINANCE (27-Jul to 06-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 16</td>
+                <td class="n">Rs. 1,427.10</td>
+                <td class="n">Rs. 1,509.59</td>
+                <td class="n pos">Rs. +82.49</td>
+                <td class="n pos">+5.78%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">NESTLEIND (14-Jul to 31-Jul)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 17</td>
+                <td class="n">Rs. 427.55</td>
+                <td class="n">Rs. 417.20</td>
+                <td class="n neg">Rs. -10.35</td>
+                <td class="n neg">-2.42%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">COALINDIA (15-Jul to 30-Jul)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 18</td>
+                <td class="n">Rs. 5,171.00</td>
+                <td class="n">Rs. 5,230.47</td>
+                <td class="n pos">Rs. +59.47</td>
+                <td class="n pos">+1.15%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">INDIGO (15-Jul to 30-Jul)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 19</td>
+                <td class="n">Rs. 2,139.70</td>
+                <td class="n">Rs. 2,079.57</td>
+                <td class="n neg">Rs. -60.13</td>
+                <td class="n neg">-2.81%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HINDUNILVR (20-Jul to 06-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 20</td>
+                <td class="n">Rs. 1,432.50</td>
+                <td class="n">Rs. 1,460.00</td>
+                <td class="n pos">Rs. +27.50</td>
+                <td class="n pos">+1.92%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">CIPLA (21-Jul to 04-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 21</td>
+                <td class="n">Rs. 1,206.00</td>
+                <td class="n">Rs. 1,149.64</td>
+                <td class="n neg">Rs. -56.36</td>
+                <td class="n neg">-4.67%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">DRREDDY (21-Jul to 23-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BEL (24-Jul to 06-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 22</td>
+                <td class="n">Rs. 281.00</td>
+                <td class="n">Rs. 276.14</td>
+                <td class="n neg">Rs. -4.86</td>
+                <td class="n neg">-1.73%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ITC (21-Jul to 12-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 23</td>
+                <td class="n">Rs. 1,061.50</td>
+                <td class="n">Rs. 1,046.75</td>
+                <td class="n neg">Rs. -14.75</td>
+                <td class="n neg">-1.39%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">SHRIRAMFIN (21-Jul to 31-Jul)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 24</td>
+                <td class="n">Rs. 1,898.20</td>
+                <td class="n">Rs. 1,977.92</td>
+                <td class="n pos">Rs. +79.72</td>
+                <td class="n pos">+4.20%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">BHARTIARTL (24-Jul to 05-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 25</td>
+                <td class="n">Rs. 3,806.00</td>
+                <td class="n">Rs. 4,024.85</td>
+                <td class="n pos">Rs. +218.85</td>
+                <td class="n pos">+5.75%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">LT (27-Jul to 03-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 26</td>
+                <td class="n">Rs. 3,238.60</td>
+                <td class="n">Rs. 3,432.92</td>
+                <td class="n pos">Rs. +194.32</td>
+                <td class="n pos">+6.00%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">M&M (27-Jul to 04-Aug)</td>
+            </tr>
+            
+                </tbody>
+            </table>
+            <footer>
+                <span>Nifty 50 Case 1 Reinvested Capital Utilisation Report</span>
+                <span>Page 2</span>
+            </footer>
+        </div>
+        
+
+        <div class="page">
+            <header>
+                <h1>Nifty 50 Capital Utilisation Details</h1>
+                <div class="subtitle">Detailed Slot Compounding & Re-entry Log for Quarter FY25-26Q4</div>
+            </header>
+            <div style="margin-bottom: 8px; font-size: 10px; color: #4b5563; font-weight: 600;">
+                Quarter summary: Utilised Fund: Rs. 31,804.03 | Net Profit: Rs. -153.54 (-0.48%) | Slots: 18 | Re-entries: 32
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Slot ID</th>
+                        <th style="width: 13%; text-align: right;">Start Capital</th>
+                        <th style="width: 13%; text-align: right;">Final Value</th>
+                        <th style="width: 13%; text-align: right;">Net Profit</th>
+                        <th style="width: 10%; text-align: right;">Return (%)</th>
+                        <th style="width: 10%;">Re-entries</th>
+                        <th style="width: 31%; text-align: left;">Compounded Trade Flow (Re-entries Path)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+            <tr>
+                <td class="sym">Slot 1</td>
+                <td class="n">Rs. 2,377.40</td>
+                <td class="n">Rs. 2,577.79</td>
+                <td class="n pos">Rs. +200.39</td>
+                <td class="n pos">+8.43%</td>
+                <td class="c" style="font-weight: 700;">4</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TCS (25-Mar to 20-Apr) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> MARUTI (20-Apr to 04-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BHARTIARTL (04-May to 14-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TATASTEEL (14-May to 21-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> INDIGO (21-May to 05-Jun)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 2</td>
+                <td class="n">Rs. 566.10</td>
+                <td class="n">Rs. 621.68</td>
+                <td class="n pos">Rs. +55.58</td>
+                <td class="n pos">+9.82%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HDFCLIFE (02-Apr to 23-Apr) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> KOTAKBANK (23-Apr to 13-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> EICHERMOT (13-May to 01-Jun)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 3</td>
+                <td class="n">Rs. 197.29</td>
+                <td class="n">Rs. 202.13</td>
+                <td class="n pos">Rs. +4.84</td>
+                <td class="n pos">+2.45%</td>
+                <td class="c" style="font-weight: 700;">3</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">WIPRO (06-Apr to 22-Apr) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> HINDUNILVR (22-Apr to 11-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> CIPLA (11-May to 25-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ONGC (25-May to 04-Jun)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 4</td>
+                <td class="n">Rs. 797.70</td>
+                <td class="n">Rs. 937.57</td>
+                <td class="n pos">Rs. +139.87</td>
+                <td class="n pos">+17.53%</td>
+                <td class="c" style="font-weight: 700;">3</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HDFCBANK (09-Apr to 22-Apr) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BAJAJ-AUTO (24-Apr to 12-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TMPV (13-May to 18-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> APOLLOHOSP (18-May to 26-May)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 5</td>
+                <td class="n">Rs. 1,451.20</td>
+                <td class="n">Rs. 1,375.41</td>
+                <td class="n neg">Rs. -75.79</td>
+                <td class="n neg">-5.22%</td>
+                <td class="c" style="font-weight: 700;">3</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HCLTECH (10-Apr to 24-Apr) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BAJFINANCE (24-Apr to 06-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TATACONSUM (06-May to 20-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> NTPC (21-May to 28-May)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 6</td>
+                <td class="n">Rs. 1,292.50</td>
+                <td class="n">Rs. 1,068.53</td>
+                <td class="n neg">Rs. -223.97</td>
+                <td class="n neg">-17.33%</td>
+                <td class="c" style="font-weight: 700;">3</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">INFY (10-Apr to 04-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> LT (04-May to 11-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> DRREDDY (11-May to 13-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BEL (18-May to 29-May)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 7</td>
+                <td class="n">Rs. 1,249.30</td>
+                <td class="n">Rs. 1,582.51</td>
+                <td class="n pos">Rs. +333.21</td>
+                <td class="n pos">+26.67%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">NESTLEIND (10-Apr to 30-Apr) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> M&M (30-Apr to 08-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> JSWSTEEL (08-May to 25-May)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 8</td>
+                <td class="n">Rs. 1,440.20</td>
+                <td class="n">Rs. 1,362.85</td>
+                <td class="n neg">Rs. -77.35</td>
+                <td class="n neg">-5.37%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TECHM (10-Apr to 04-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ITC (11-May to 02-Jun)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 9</td>
+                <td class="n">Rs. 1,351.10</td>
+                <td class="n">Rs. 1,250.84</td>
+                <td class="n neg">Rs. -100.26</td>
+                <td class="n neg">-7.42%</td>
+                <td class="c" style="font-weight: 700;">3</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ICICIBANK (13-Apr to 27-Apr) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BAJAJFINSV (27-Apr to 01-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TITAN (01-May to 12-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ASIANPAINT (19-May to 10-Jun)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 10</td>
+                <td class="n">Rs. 237.68</td>
+                <td class="n">Rs. 251.17</td>
+                <td class="n pos">Rs. +13.49</td>
+                <td class="n pos">+5.68%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">JIOFIN (13-Apr to 20-Apr) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ADANIENT (21-Apr to 05-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> MAXHEALTH (11-May to 26-May)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 11</td>
+                <td class="n">Rs. 1,315.10</td>
+                <td class="n">Rs. 1,395.21</td>
+                <td class="n pos">Rs. +80.11</td>
+                <td class="n pos">+6.09%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">RELIANCE (13-Apr to 27-Apr) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ADANIPORTS (28-Apr to 07-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> POWERGRID (11-May to 27-May)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 12</td>
+                <td class="n">Rs. 1,355.50</td>
+                <td class="n">Rs. 1,398.42</td>
+                <td class="n pos">Rs. +42.92</td>
+                <td class="n pos">+3.17%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">AXISBANK (15-Apr to 06-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> GRASIM (19-May to 25-May)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 13</td>
+                <td class="n">Rs. 435.80</td>
+                <td class="n">Rs. 527.98</td>
+                <td class="n pos">Rs. +92.18</td>
+                <td class="n pos">+21.15%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">COALINDIA (15-Apr to 30-Apr) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> HINDALCO (19-May to 27-May)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 14</td>
+                <td class="n">Rs. 11,785.00</td>
+                <td class="n">Rs. 11,540.77</td>
+                <td class="n neg">Rs. -244.23</td>
+                <td class="n neg">-2.07%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ULTRACEMCO (15-Apr to 07-May) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> SUNPHARMA (19-May to 03-Jun)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 15</td>
+                <td class="n">Rs. 2,738.47</td>
+                <td class="n">Rs. 2,547.18</td>
+                <td class="n neg">Rs. -191.29</td>
+                <td class="n neg">-6.99%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TRENT (17-Apr to 27-Apr) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> SBIN (29-Apr to 12-May)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 16</td>
+                <td class="n">Rs. 1,911.60</td>
+                <td class="n">Rs. 1,819.08</td>
+                <td class="n neg">Rs. -92.52</td>
+                <td class="n neg">-4.84%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">SBILIFE (21-Apr to 01-May)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 17</td>
+                <td class="n">Rs. 1,045.30</td>
+                <td class="n">Rs. 937.32</td>
+                <td class="n neg">Rs. -107.98</td>
+                <td class="n neg">-10.33%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">SHRIRAMFIN (21-Apr to 01-May)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 18</td>
+                <td class="n">Rs. 256.79</td>
+                <td class="n">Rs. 254.04</td>
+                <td class="n neg">Rs. -2.75</td>
+                <td class="n neg">-1.07%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ETERNAL (24-Apr to 29-Apr)</td>
+            </tr>
+            
+                </tbody>
+            </table>
+            <footer>
+                <span>Nifty 50 Case 1 Reinvested Capital Utilisation Report</span>
+                <span>Page 3</span>
+            </footer>
+        </div>
+        
+
+        <div class="page">
+            <header>
+                <h1>Nifty 50 Capital Utilisation Details</h1>
+                <div class="subtitle">Detailed Slot Compounding & Re-entry Log for Quarter FY25-26Q3</div>
+            </header>
+            <div style="margin-bottom: 8px; font-size: 10px; color: #4b5563; font-weight: 600;">
+                Quarter summary: Utilised Fund: Rs. 74,601.12 | Net Profit: Rs. +2,182.23 (+2.93%) | Slots: 27 | Re-entries: 23
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Slot ID</th>
+                        <th style="width: 13%; text-align: right;">Start Capital</th>
+                        <th style="width: 13%; text-align: right;">Final Value</th>
+                        <th style="width: 13%; text-align: right;">Net Profit</th>
+                        <th style="width: 10%; text-align: right;">Return (%)</th>
+                        <th style="width: 10%;">Re-entries</th>
+                        <th style="width: 31%; text-align: left;">Compounded Trade Flow (Re-entries Path)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+            <tr>
+                <td class="sym">Slot 1</td>
+                <td class="n">Rs. 3,206.20</td>
+                <td class="n">Rs. 3,679.38</td>
+                <td class="n pos">Rs. +473.18</td>
+                <td class="n pos">+14.76%</td>
+                <td class="c" style="font-weight: 700;">3</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TCS (31-Dec to 20-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> DRREDDY (20-Jan to 22-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ADANIENT (22-Jan to 06-Feb) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> APOLLOHOSP (06-Feb to 16-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 2</td>
+                <td class="n">Rs. 1,640.20</td>
+                <td class="n">Rs. 1,704.75</td>
+                <td class="n pos">Rs. +64.55</td>
+                <td class="n pos">+3.94%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HCLTECH (02-Jan to 15-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> KOTAKBANK (15-Jan to 05-Feb) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TATASTEEL (05-Feb to 12-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 3</td>
+                <td class="n">Rs. 1,640.40</td>
+                <td class="n">Rs. 1,728.08</td>
+                <td class="n pos">Rs. +87.68</td>
+                <td class="n pos">+5.35%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">INFY (02-Jan to 23-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> MAXHEALTH (23-Jan to 10-Feb) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ONGC (11-Feb to 23-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 4</td>
+                <td class="n">Rs. 759.30</td>
+                <td class="n">Rs. 701.68</td>
+                <td class="n neg">Rs. -57.62</td>
+                <td class="n neg">-7.59%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HDFCLIFE (05-Jan to 22-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TATACONSUM (22-Jan to 06-Feb) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> M&M (06-Feb to 16-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 5</td>
+                <td class="n">Rs. 1,507.60</td>
+                <td class="n">Rs. 1,427.23</td>
+                <td class="n neg">Rs. -80.37</td>
+                <td class="n neg">-5.33%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">RELIANCE (06-Jan to 19-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BAJAJ-AUTO (19-Jan to 05-Feb) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> GRASIM (09-Feb to 13-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 6</td>
+                <td class="n">Rs. 1,625.20</td>
+                <td class="n">Rs. 1,826.03</td>
+                <td class="n pos">Rs. +200.83</td>
+                <td class="n pos">+12.36%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TECHM (07-Jan to 29-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BAJFINANCE (29-Jan to 10-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 7</td>
+                <td class="n">Rs. 270.80</td>
+                <td class="n">Rs. 278.83</td>
+                <td class="n pos">Rs. +8.03</td>
+                <td class="n pos">+2.96%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">WIPRO (07-Jan to 22-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> POWERGRID (23-Jan to 11-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 8</td>
+                <td class="n">Rs. 939.00</td>
+                <td class="n">Rs. 827.03</td>
+                <td class="n neg">Rs. -111.97</td>
+                <td class="n neg">-11.92%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HDFCBANK (09-Jan to 21-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> CIPLA (21-Jan to 05-Feb) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> HINDALCO (09-Feb to 17-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 9</td>
+                <td class="n">Rs. 288.25</td>
+                <td class="n">Rs. 272.19</td>
+                <td class="n neg">Rs. -16.06</td>
+                <td class="n neg">-5.57%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">JIOFIN (12-Jan to 16-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ITC (16-Jan to 10-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 10</td>
+                <td class="n">Rs. 1,437.00</td>
+                <td class="n">Rs. 1,431.25</td>
+                <td class="n neg">Rs. -5.75</td>
+                <td class="n neg">-0.40%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ICICIBANK (13-Jan to 27-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BEL (27-Jan to 09-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 11</td>
+                <td class="n">Rs. 12,044.00</td>
+                <td class="n">Rs. 12,772.66</td>
+                <td class="n pos">Rs. +728.66</td>
+                <td class="n pos">+6.05%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ULTRACEMCO (13-Jan to 05-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 12</td>
+                <td class="n">Rs. 2,813.90</td>
+                <td class="n">Rs. 2,401.10</td>
+                <td class="n neg">Rs. -412.80</td>
+                <td class="n neg">-14.67%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ASIANPAINT (14-Jan to 06-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 13</td>
+                <td class="n">Rs. 1,298.80</td>
+                <td class="n">Rs. 1,330.62</td>
+                <td class="n pos">Rs. +31.82</td>
+                <td class="n pos">+2.45%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">AXISBANK (14-Jan to 05-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 14</td>
+                <td class="n">Rs. 4,733.00</td>
+                <td class="n">Rs. 5,033.38</td>
+                <td class="n pos">Rs. +300.38</td>
+                <td class="n pos">+6.35%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">INDIGO (14-Jan to 30-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ADANIPORTS (30-Jan to 10-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 15</td>
+                <td class="n">Rs. 281.35</td>
+                <td class="n">Rs. 284.97</td>
+                <td class="n pos">Rs. +3.62</td>
+                <td class="n pos">+1.29%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ETERNAL (19-Jan to 22-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BHARTIARTL (27-Jan to 06-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 16</td>
+                <td class="n">Rs. 1,184.10</td>
+                <td class="n">Rs. 1,214.88</td>
+                <td class="n pos">Rs. +30.78</td>
+                <td class="n pos">+2.60%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">JSWSTEEL (19-Jan to 04-Feb) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> HINDUNILVR (04-Feb to 23-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 17</td>
+                <td class="n">Rs. 16,176.00</td>
+                <td class="n">Rs. 15,534.01</td>
+                <td class="n neg">Rs. -641.99</td>
+                <td class="n neg">-3.97%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">MARUTI (19-Jan to 03-Feb) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TITAN (03-Feb to 12-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 18</td>
+                <td class="n">Rs. 987.50</td>
+                <td class="n">Rs. 957.70</td>
+                <td class="n neg">Rs. -29.80</td>
+                <td class="n neg">-3.02%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">SHRIRAMFIN (20-Jan to 02-Feb) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> COALINDIA (02-Feb to 17-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 19</td>
+                <td class="n">Rs. 1,283.20</td>
+                <td class="n">Rs. 1,308.61</td>
+                <td class="n pos">Rs. +25.41</td>
+                <td class="n pos">+1.98%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">NESTLEIND (21-Jan to 10-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 20</td>
+                <td class="n">Rs. 3,787.80</td>
+                <td class="n">Rs. 4,059.93</td>
+                <td class="n pos">Rs. +272.13</td>
+                <td class="n pos">+7.18%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">LT (27-Jan to 03-Feb) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TMPV (04-Feb to 09-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 21</td>
+                <td class="n">Rs. 2,038.20</td>
+                <td class="n">Rs. 1,996.62</td>
+                <td class="n neg">Rs. -41.58</td>
+                <td class="n neg">-2.04%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">SBILIFE (27-Jan to 06-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 22</td>
+                <td class="n">Rs. 1,638.90</td>
+                <td class="n">Rs. 1,711.18</td>
+                <td class="n pos">Rs. +72.28</td>
+                <td class="n pos">+4.41%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">SUNPHARMA (27-Jan to 11-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 23</td>
+                <td class="n">Rs. 1,063.50</td>
+                <td class="n">Rs. 1,144.11</td>
+                <td class="n pos">Rs. +80.61</td>
+                <td class="n pos">+7.58%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">SBIN (28-Jan to 10-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 24</td>
+                <td class="n">Rs. 358.15</td>
+                <td class="n">Rs. 367.00</td>
+                <td class="n pos">Rs. +8.85</td>
+                <td class="n pos">+2.47%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">NTPC (29-Jan to 05-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 25</td>
+                <td class="n">Rs. 1,952.60</td>
+                <td class="n">Rs. 2,000.05</td>
+                <td class="n pos">Rs. +47.45</td>
+                <td class="n pos">+2.43%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">BAJAJFINSV (30-Jan to 05-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 26</td>
+                <td class="n">Rs. 7,122.50</td>
+                <td class="n">Rs. 8,009.25</td>
+                <td class="n pos">Rs. +886.75</td>
+                <td class="n pos">+12.45%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">EICHERMOT (30-Jan to 18-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 27</td>
+                <td class="n">Rs. 2,523.67</td>
+                <td class="n">Rs. 2,780.83</td>
+                <td class="n pos">Rs. +257.16</td>
+                <td class="n pos">+10.19%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TRENT (30-Jan to 09-Feb)</td>
+            </tr>
+            
+                </tbody>
+            </table>
+            <footer>
+                <span>Nifty 50 Case 1 Reinvested Capital Utilisation Report</span>
+                <span>Page 4</span>
+            </footer>
+        </div>
+        
+
+        <div class="page">
+            <header>
+                <h1>Nifty 50 Capital Utilisation Details</h1>
+                <div class="subtitle">Detailed Slot Compounding & Re-entry Log for Quarter FY25-26Q2</div>
+            </header>
+            <div style="margin-bottom: 8px; font-size: 10px; color: #4b5563; font-weight: 600;">
+                Quarter summary: Utilised Fund: Rs. 52,838.55 | Net Profit: Rs. +1,490.88 (+2.82%) | Slots: 27 | Re-entries: 23
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Slot ID</th>
+                        <th style="width: 13%; text-align: right;">Start Capital</th>
+                        <th style="width: 13%; text-align: right;">Final Value</th>
+                        <th style="width: 13%; text-align: right;">Net Profit</th>
+                        <th style="width: 10%; text-align: right;">Return (%)</th>
+                        <th style="width: 10%;">Re-entries</th>
+                        <th style="width: 31%; text-align: left;">Compounded Trade Flow (Re-entries Path)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+            <tr>
+                <td class="sym">Slot 1</td>
+                <td class="n">Rs. 2,899.10</td>
+                <td class="n">Rs. 2,729.28</td>
+                <td class="n neg">Rs. -169.82</td>
+                <td class="n neg">-5.86%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TCS (26-Sep to 17-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ITC (17-Oct to 12-Nov) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TMPV (13-Nov to 18-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 2</td>
+                <td class="n">Rs. 1,393.50</td>
+                <td class="n">Rs. 1,455.47</td>
+                <td class="n pos">Rs. +61.97</td>
+                <td class="n pos">+4.45%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HCLTECH (03-Oct to 16-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> COALINDIA (16-Oct to 03-Nov) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> APOLLOHOSP (03-Nov to 12-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 3</td>
+                <td class="n">Rs. 759.20</td>
+                <td class="n">Rs. 760.29</td>
+                <td class="n pos">Rs. +1.09</td>
+                <td class="n pos">+0.14%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HDFCLIFE (03-Oct to 23-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BHARTIARTL (23-Oct to 04-Nov) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BAJFINANCE (04-Nov to 17-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 4</td>
+                <td class="n">Rs. 1,400.60</td>
+                <td class="n">Rs. 1,426.07</td>
+                <td class="n pos">Rs. +25.47</td>
+                <td class="n pos">+1.82%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TECHM (03-Oct to 27-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BAJAJ-AUTO (27-Oct to 13-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 5</td>
+                <td class="n">Rs. 1,212.80</td>
+                <td class="n">Rs. 1,207.51</td>
+                <td class="n neg">Rs. -5.29</td>
+                <td class="n neg">-0.44%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">AXISBANK (06-Oct to 28-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> CIPLA (28-Oct to 12-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 6</td>
+                <td class="n">Rs. 1,476.00</td>
+                <td class="n">Rs. 1,462.05</td>
+                <td class="n neg">Rs. -13.95</td>
+                <td class="n neg">-0.95%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">INFY (06-Oct to 28-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> LT (28-Oct to 04-Nov) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BAJAJFINSV (06-Nov to 12-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 7</td>
+                <td class="n">Rs. 1,384.80</td>
+                <td class="n">Rs. 1,462.34</td>
+                <td class="n pos">Rs. +77.54</td>
+                <td class="n pos">+5.60%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">RELIANCE (07-Oct to 20-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> DRREDDY (23-Oct to 27-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> INDIGO (27-Oct to 12-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 8</td>
+                <td class="n">Rs. 12,184.00</td>
+                <td class="n">Rs. 13,751.80</td>
+                <td class="n pos">Rs. +1,567.80</td>
+                <td class="n pos">+12.87%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ULTRACEMCO (07-Oct to 30-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ASIANPAINT (30-Oct to 24-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 9</td>
+                <td class="n">Rs. 243.53</td>
+                <td class="n">Rs. 227.75</td>
+                <td class="n neg">Rs. -15.78</td>
+                <td class="n neg">-6.48%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">WIPRO (07-Oct to 23-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> MARUTI (23-Oct to 07-Nov) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ONGC (07-Nov to 19-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 10</td>
+                <td class="n">Rs. 1,180.50</td>
+                <td class="n">Rs. 1,196.31</td>
+                <td class="n pos">Rs. +15.81</td>
+                <td class="n pos">+1.34%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">NESTLEIND (08-Oct to 28-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> POWERGRID (28-Oct to 14-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 11</td>
+                <td class="n">Rs. 980.90</td>
+                <td class="n">Rs. 1,022.54</td>
+                <td class="n pos">Rs. +41.64</td>
+                <td class="n pos">+4.24%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HDFCBANK (10-Oct to 23-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> SBILIFE (23-Oct to 04-Nov) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TATASTEEL (11-Nov to 18-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 12</td>
+                <td class="n">Rs. 308.45</td>
+                <td class="n">Rs. 283.89</td>
+                <td class="n neg">Rs. -24.56</td>
+                <td class="n neg">-7.96%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">JIOFIN (13-Oct to 17-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ADANIENT (24-Oct to 10-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 13</td>
+                <td class="n">Rs. 1,161.40</td>
+                <td class="n">Rs. 1,135.38</td>
+                <td class="n neg">Rs. -26.02</td>
+                <td class="n neg">-2.24%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">JSWSTEEL (13-Oct to 29-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> NTPC (29-Oct to 06-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 14</td>
+                <td class="n">Rs. 347.75</td>
+                <td class="n">Rs. 362.10</td>
+                <td class="n pos">Rs. +14.35</td>
+                <td class="n pos">+4.13%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ETERNAL (14-Oct to 17-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> SBIN (24-Oct to 07-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 15</td>
+                <td class="n">Rs. 2,502.30</td>
+                <td class="n">Rs. 2,498.88</td>
+                <td class="n neg">Rs. -3.42</td>
+                <td class="n neg">-0.14%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HINDUNILVR (14-Oct to 03-Nov) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> EICHERMOT (03-Nov to 21-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 16</td>
+                <td class="n">Rs. 1,384.10</td>
+                <td class="n">Rs. 1,546.53</td>
+                <td class="n pos">Rs. +162.43</td>
+                <td class="n pos">+11.74%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ICICIBANK (14-Oct to 28-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> SHRIRAMFIN (28-Oct to 10-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 17</td>
+                <td class="n">Rs. 429.92</td>
+                <td class="n">Rs. 416.64</td>
+                <td class="n neg">Rs. -13.28</td>
+                <td class="n neg">-3.09%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">KOTAKBANK (15-Oct to 06-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 18</td>
+                <td class="n">Rs. 3,739.80</td>
+                <td class="n">Rs. 3,774.58</td>
+                <td class="n pos">Rs. +34.78</td>
+                <td class="n pos">+0.93%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TITAN (27-Oct to 06-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 19</td>
+                <td class="n">Rs. 409.90</td>
+                <td class="n">Rs. 419.82</td>
+                <td class="n pos">Rs. +9.92</td>
+                <td class="n pos">+2.42%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">BEL (30-Oct to 13-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 20</td>
+                <td class="n">Rs. 3,502.10</td>
+                <td class="n">Rs. 3,663.90</td>
+                <td class="n pos">Rs. +161.80</td>
+                <td class="n pos">+4.62%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">M&M (30-Oct to 10-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 21</td>
+                <td class="n">Rs. 1,703.40</td>
+                <td class="n">Rs. 1,763.87</td>
+                <td class="n pos">Rs. +60.47</td>
+                <td class="n pos">+3.55%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">SUNPHARMA (30-Oct to 17-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 22</td>
+                <td class="n">Rs. 1,176.60</td>
+                <td class="n">Rs. 1,157.77</td>
+                <td class="n neg">Rs. -18.83</td>
+                <td class="n neg">-1.60%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TATACONSUM (30-Oct to 14-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 23</td>
+                <td class="n">Rs. 1,451.50</td>
+                <td class="n">Rs. 1,506.95</td>
+                <td class="n pos">Rs. +55.45</td>
+                <td class="n pos">+3.82%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ADANIPORTS (31-Oct to 12-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 24</td>
+                <td class="n">Rs. 2,899.90</td>
+                <td class="n">Rs. 2,763.02</td>
+                <td class="n neg">Rs. -136.88</td>
+                <td class="n neg">-4.72%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">GRASIM (03-Nov to 10-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 25</td>
+                <td class="n">Rs. 847.20</td>
+                <td class="n">Rs. 794.42</td>
+                <td class="n neg">Rs. -52.78</td>
+                <td class="n neg">-6.23%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HINDALCO (03-Nov to 12-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 26</td>
+                <td class="n">Rs. 1,145.90</td>
+                <td class="n">Rs. 1,164.35</td>
+                <td class="n pos">Rs. +18.45</td>
+                <td class="n pos">+1.61%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">MAXHEALTH (03-Nov to 19-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 27</td>
+                <td class="n">Rs. 4,713.40</td>
+                <td class="n">Rs. 4,375.92</td>
+                <td class="n neg">Rs. -337.48</td>
+                <td class="n neg">-7.16%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TRENT (03-Nov to 12-Nov)</td>
+            </tr>
+            
+                </tbody>
+            </table>
+            <footer>
+                <span>Nifty 50 Case 1 Reinvested Capital Utilisation Report</span>
+                <span>Page 5</span>
+            </footer>
+        </div>
+        
+
+        <div class="page">
+            <header>
+                <h1>Nifty 50 Capital Utilisation Details</h1>
+                <div class="subtitle">Detailed Slot Compounding & Re-entry Log for Quarter FY25-26Q1</div>
+            </header>
+            <div style="margin-bottom: 8px; font-size: 10px; color: #4b5563; font-weight: 600;">
+                Quarter summary: Utilised Fund: Rs. 65,804.91 | Net Profit: Rs. -1,297.04 (-1.97%) | Slots: 27 | Re-entries: 23
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Slot ID</th>
+                        <th style="width: 13%; text-align: right;">Start Capital</th>
+                        <th style="width: 13%; text-align: right;">Final Value</th>
+                        <th style="width: 13%; text-align: right;">Net Profit</th>
+                        <th style="width: 10%; text-align: right;">Return (%)</th>
+                        <th style="width: 10%;">Re-entries</th>
+                        <th style="width: 31%; text-align: left;">Compounded Trade Flow (Re-entries Path)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+            <tr>
+                <td class="sym">Slot 1</td>
+                <td class="n">Rs. 3,462.00</td>
+                <td class="n">Rs. 2,977.23</td>
+                <td class="n neg">Rs. -484.77</td>
+                <td class="n neg">-14.00%</td>
+                <td class="c" style="font-weight: 700;">3</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TCS (30-Jun to 18-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> INDUSINDBK (18-Jul to 29-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TATASTEEL (29-Jul to 05-Aug) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ONGC (06-Aug to 19-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 2</td>
+                <td class="n">Rs. 785.85</td>
+                <td class="n">Rs. 748.43</td>
+                <td class="n neg">Rs. -37.42</td>
+                <td class="n neg">-4.76%</td>
+                <td class="c" style="font-weight: 700;">3</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HDFCLIFE (03-Jul to 22-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ADANIENT (22-Jul to 05-Aug) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> HEROMOTOCO (07-Aug to 08-Aug) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> APOLLOHOSP (08-Aug to 19-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 3</td>
+                <td class="n">Rs. 1,725.90</td>
+                <td class="n">Rs. 1,643.41</td>
+                <td class="n neg">Rs. -82.49</td>
+                <td class="n neg">-4.78%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HCLTECH (04-Jul to 17-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ASIANPAINT (17-Jul to 08-Aug) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> GRASIM (11-Aug to 18-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 4</td>
+                <td class="n">Rs. 1,623.90</td>
+                <td class="n">Rs. 1,600.38</td>
+                <td class="n neg">Rs. -23.52</td>
+                <td class="n neg">-1.45%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TECHM (07-Jul to 28-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> LT (28-Jul to 04-Aug) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> HINDALCO (07-Aug to 18-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 5</td>
+                <td class="n">Rs. 1,165.40</td>
+                <td class="n">Rs. 1,089.36</td>
+                <td class="n neg">Rs. -76.04</td>
+                <td class="n neg">-6.52%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">AXISBANK (08-Jul to 29-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> SBIN (30-Jul to 12-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 6</td>
+                <td class="n">Rs. 1,537.60</td>
+                <td class="n">Rs. 1,375.08</td>
+                <td class="n neg">Rs. -162.52</td>
+                <td class="n neg">-10.57%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">RELIANCE (08-Jul to 21-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BAJFINANCE (21-Jul to 31-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TITAN (31-Jul to 11-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 7</td>
+                <td class="n">Rs. 269.65</td>
+                <td class="n">Rs. 266.86</td>
+                <td class="n neg">Rs. -2.79</td>
+                <td class="n neg">-1.03%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">WIPRO (08-Jul to 23-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> CIPLA (23-Jul to 06-Aug) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TATAMOTORS (07-Aug to 12-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 8</td>
+                <td class="n">Rs. 12,562.00</td>
+                <td class="n">Rs. 12,098.54</td>
+                <td class="n neg">Rs. -463.46</td>
+                <td class="n neg">-3.69%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ULTRACEMCO (09-Jul to 31-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ADANIPORTS (01-Aug to 12-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 9</td>
+                <td class="n">Rs. 991.85</td>
+                <td class="n">Rs. 1,040.32</td>
+                <td class="n pos">Rs. +48.47</td>
+                <td class="n pos">+4.89%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HDFCBANK (11-Jul to 23-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> HINDUNILVR (23-Jul to 11-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 10</td>
+                <td class="n">Rs. 1,594.90</td>
+                <td class="n">Rs. 1,544.34</td>
+                <td class="n neg">Rs. -50.56</td>
+                <td class="n neg">-3.17%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">INFY (11-Jul to 01-Aug) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TRENT (01-Aug to 11-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 11</td>
+                <td class="n">Rs. 319.10</td>
+                <td class="n">Rs. 310.85</td>
+                <td class="n neg">Rs. -8.25</td>
+                <td class="n neg">-2.59%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">JIOFIN (14-Jul to 18-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> COALINDIA (21-Jul to 05-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 12</td>
+                <td class="n">Rs. 1,038.90</td>
+                <td class="n">Rs. 1,034.85</td>
+                <td class="n neg">Rs. -4.05</td>
+                <td class="n neg">-0.39%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">JSWSTEEL (14-Jul to 29-Jul)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 13</td>
+                <td class="n">Rs. 1,430.80</td>
+                <td class="n">Rs. 1,489.50</td>
+                <td class="n pos">Rs. +58.70</td>
+                <td class="n pos">+4.10%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ICICIBANK (15-Jul to 28-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> M&M (28-Jul to 05-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 14</td>
+                <td class="n">Rs. 1,230.00</td>
+                <td class="n">Rs. 1,138.73</td>
+                <td class="n neg">Rs. -91.27</td>
+                <td class="n neg">-7.42%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">NESTLEIND (16-Jul to 04-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 15</td>
+                <td class="n">Rs. 259.65</td>
+                <td class="n">Rs. 289.87</td>
+                <td class="n pos">Rs. +30.22</td>
+                <td class="n pos">+11.64%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ETERNAL (17-Jul to 22-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BAJAJFINSV (22-Jul to 28-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> NTPC (28-Jul to 04-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 16</td>
+                <td class="n">Rs. 434.16</td>
+                <td class="n">Rs. 400.47</td>
+                <td class="n neg">Rs. -33.69</td>
+                <td class="n neg">-7.76%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">KOTAKBANK (17-Jul to 06-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 17</td>
+                <td class="n">Rs. 1,090.30</td>
+                <td class="n">Rs. 1,072.64</td>
+                <td class="n neg">Rs. -17.66</td>
+                <td class="n neg">-1.62%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TATACONSUM (21-Jul to 04-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 18</td>
+                <td class="n">Rs. 1,240.00</td>
+                <td class="n">Rs. 1,204.29</td>
+                <td class="n neg">Rs. -35.71</td>
+                <td class="n neg">-2.88%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">DRREDDY (22-Jul to 24-Jul) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> POWERGRID (24-Jul to 11-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 19</td>
+                <td class="n">Rs. 5,439.50</td>
+                <td class="n">Rs. 5,663.06</td>
+                <td class="n pos">Rs. +223.56</td>
+                <td class="n pos">+4.11%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">EICHERMOT (22-Jul to 08-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 20</td>
+                <td class="n">Rs. 416.00</td>
+                <td class="n">Rs. 414.09</td>
+                <td class="n neg">Rs. -1.91</td>
+                <td class="n neg">-0.46%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ITC (22-Jul to 13-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 21</td>
+                <td class="n">Rs. 640.15</td>
+                <td class="n">Rs. 614.22</td>
+                <td class="n neg">Rs. -25.93</td>
+                <td class="n neg">-4.05%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">SHRIRAMFIN (22-Jul to 01-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 22</td>
+                <td class="n">Rs. 12,627.00</td>
+                <td class="n">Rs. 12,523.46</td>
+                <td class="n neg">Rs. -103.54</td>
+                <td class="n neg">-0.82%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">MARUTI (23-Jul to 06-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 23</td>
+                <td class="n">Rs. 1,809.50</td>
+                <td class="n">Rs. 1,831.58</td>
+                <td class="n pos">Rs. +22.08</td>
+                <td class="n pos">+1.22%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">SBILIFE (23-Jul to 04-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 24</td>
+                <td class="n">Rs. 8,075.50</td>
+                <td class="n">Rs. 8,196.63</td>
+                <td class="n pos">Rs. +121.13</td>
+                <td class="n pos">+1.50%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">BAJAJ-AUTO (25-Jul to 12-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 25</td>
+                <td class="n">Rs. 395.20</td>
+                <td class="n">Rs. 387.73</td>
+                <td class="n neg">Rs. -7.47</td>
+                <td class="n neg">-1.89%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">BEL (25-Jul to 07-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 26</td>
+                <td class="n">Rs. 1,937.90</td>
+                <td class="n">Rs. 1,929.76</td>
+                <td class="n neg">Rs. -8.14</td>
+                <td class="n neg">-0.42%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">BHARTIARTL (25-Jul to 06-Aug)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 27</td>
+                <td class="n">Rs. 1,702.20</td>
+                <td class="n">Rs. 1,622.20</td>
+                <td class="n neg">Rs. -80.00</td>
+                <td class="n neg">-4.70%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">SUNPHARMA (28-Jul to 12-Aug)</td>
+            </tr>
+            
+                </tbody>
+            </table>
+            <footer>
+                <span>Nifty 50 Case 1 Reinvested Capital Utilisation Report</span>
+                <span>Page 6</span>
+            </footer>
+        </div>
+        
+
+        <div class="page">
+            <header>
+                <h1>Nifty 50 Capital Utilisation Details</h1>
+                <div class="subtitle">Detailed Slot Compounding & Re-entry Log for Quarter FY24-25Q4</div>
+            </header>
+            <div style="margin-bottom: 8px; font-size: 10px; color: #4b5563; font-weight: 600;">
+                Quarter summary: Utilised Fund: Rs. 64,400.10 | Net Profit: Rs. +354.60 (+0.55%) | Slots: 29 | Re-entries: 21
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Slot ID</th>
+                        <th style="width: 13%; text-align: right;">Start Capital</th>
+                        <th style="width: 13%; text-align: right;">Final Value</th>
+                        <th style="width: 13%; text-align: right;">Net Profit</th>
+                        <th style="width: 10%; text-align: right;">Return (%)</th>
+                        <th style="width: 10%;">Re-entries</th>
+                        <th style="width: 31%; text-align: left;">Compounded Trade Flow (Re-entries Path)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+            <tr>
+                <td class="sym">Slot 1</td>
+                <td class="n">Rs. 4,158.80</td>
+                <td class="n">Rs. 3,570.95</td>
+                <td class="n neg">Rs. -587.85</td>
+                <td class="n neg">-14.14%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TCS (30-Dec to 17-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> JSWSTEEL (20-Jan to 03-Feb) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TRENT (03-Feb to 11-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 2</td>
+                <td class="n">Rs. 1,946.65</td>
+                <td class="n">Rs. 1,501.67</td>
+                <td class="n neg">Rs. -444.98</td>
+                <td class="n neg">-22.86%</td>
+                <td class="c" style="font-weight: 700;">3</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HCLTECH (03-Jan to 16-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> SBILIFE (16-Jan to 28-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TMPV (28-Jan to 31-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> EICHERMOT (31-Jan to 18-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 3</td>
+                <td class="n">Rs. 623.00</td>
+                <td class="n">Rs. 567.56</td>
+                <td class="n neg">Rs. -55.44</td>
+                <td class="n neg">-8.90%</td>
+                <td class="c" style="font-weight: 700;">3</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HDFCLIFE (03-Jan to 22-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> DRREDDY (22-Jan to 24-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TATASTEEL (24-Jan to 31-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> M&M (04-Feb to 12-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 4</td>
+                <td class="n">Rs. 1,937.85</td>
+                <td class="n">Rs. 1,849.87</td>
+                <td class="n neg">Rs. -87.98</td>
+                <td class="n neg">-4.54%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">INFY (06-Jan to 27-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BAJAJFINSV (27-Jan to 31-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> GRASIM (07-Feb to 13-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 5</td>
+                <td class="n">Rs. 1,218.00</td>
+                <td class="n">Rs. 1,436.62</td>
+                <td class="n pos">Rs. +218.62</td>
+                <td class="n pos">+17.95%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">RELIANCE (06-Jan to 17-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> MAXHEALTH (20-Jan to 03-Feb) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> HINDALCO (10-Feb to 18-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 6</td>
+                <td class="n">Rs. 1,067.50</td>
+                <td class="n">Rs. 1,051.59</td>
+                <td class="n neg">Rs. -15.91</td>
+                <td class="n neg">-1.49%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">AXISBANK (07-Jan to 28-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TATACONSUM (28-Jan to 10-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 7</td>
+                <td class="n">Rs. 297.55</td>
+                <td class="n">Rs. 299.43</td>
+                <td class="n pos">Rs. +1.88</td>
+                <td class="n pos">+0.63%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">WIPRO (08-Jan to 23-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> NTPC (23-Jan to 30-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ONGC (30-Jan to 10-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 8</td>
+                <td class="n">Rs. 1,663.75</td>
+                <td class="n">Rs. 1,676.01</td>
+                <td class="n pos">Rs. +12.26</td>
+                <td class="n pos">+0.74%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TECHM (08-Jan to 29-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> LT (29-Jan to 04-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 9</td>
+                <td class="n">Rs. 358.04</td>
+                <td class="n">Rs. 393.06</td>
+                <td class="n pos">Rs. +35.02</td>
+                <td class="n pos">+9.78%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">KOTAKBANK (09-Jan to 29-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BEL (29-Jan to 10-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 10</td>
+                <td class="n">Rs. 11,259.80</td>
+                <td class="n">Rs. 11,487.25</td>
+                <td class="n pos">Rs. +227.45</td>
+                <td class="n pos">+2.02%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ULTRACEMCO (09-Jan to 31-Jan)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 11</td>
+                <td class="n">Rs. 7,036.75</td>
+                <td class="n">Rs. 7,086.42</td>
+                <td class="n pos">Rs. +49.67</td>
+                <td class="n pos">+0.71%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">APOLLOHOSP (10-Jan to 20-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> SHRIRAMFIN (21-Jan to 31-Jan)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 12</td>
+                <td class="n">Rs. 272.85</td>
+                <td class="n">Rs. 289.39</td>
+                <td class="n pos">Rs. +16.54</td>
+                <td class="n pos">+6.06%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">JIOFIN (14-Jan to 20-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ICICIBANK (21-Jan to 01-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 13</td>
+                <td class="n">Rs. 2,367.95</td>
+                <td class="n">Rs. 2,468.82</td>
+                <td class="n pos">Rs. +100.87</td>
+                <td class="n pos">+4.26%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HINDUNILVR (14-Jan to 31-Jan)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 14</td>
+                <td class="n">Rs. 821.53</td>
+                <td class="n">Rs. 862.87</td>
+                <td class="n pos">Rs. +41.34</td>
+                <td class="n pos">+5.03%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HDFCBANK (15-Jan to 27-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ADANIPORTS (28-Jan to 05-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 15</td>
+                <td class="n">Rs. 374.60</td>
+                <td class="n">Rs. 385.05</td>
+                <td class="n pos">Rs. +10.45</td>
+                <td class="n pos">+2.79%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">COALINDIA (15-Jan to 30-Jan)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 16</td>
+                <td class="n">Rs. 241.90</td>
+                <td class="n">Rs. 237.22</td>
+                <td class="n neg">Rs. -4.68</td>
+                <td class="n neg">-1.94%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ETERNAL (16-Jan to 21-Jan) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> MARUTI (21-Jan to 03-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 17</td>
+                <td class="n">Rs. 4,111.75</td>
+                <td class="n">Rs. 4,324.33</td>
+                <td class="n pos">Rs. +212.58</td>
+                <td class="n pos">+5.17%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">INDIGO (16-Jan to 31-Jan)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 18</td>
+                <td class="n">Rs. 8,581.95</td>
+                <td class="n">Rs. 9,155.22</td>
+                <td class="n pos">Rs. +573.27</td>
+                <td class="n pos">+6.68%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">BAJAJ-AUTO (16-Jan to 01-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 19</td>
+                <td class="n">Rs. 2,384.30</td>
+                <td class="n">Rs. 2,261.75</td>
+                <td class="n neg">Rs. -122.55</td>
+                <td class="n neg">-5.14%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ADANIENT (21-Jan to 03-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 20</td>
+                <td class="n">Rs. 1,099.47</td>
+                <td class="n">Rs. 1,110.57</td>
+                <td class="n pos">Rs. +11.10</td>
+                <td class="n pos">+1.01%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">NESTLEIND (23-Jan to 10-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 21</td>
+                <td class="n">Rs. 1,411.40</td>
+                <td class="n">Rs. 1,471.53</td>
+                <td class="n pos">Rs. +60.13</td>
+                <td class="n pos">+4.26%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">CIPLA (24-Jan to 06-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 22</td>
+                <td class="n">Rs. 743.86</td>
+                <td class="n">Rs. 847.55</td>
+                <td class="n pos">Rs. +103.69</td>
+                <td class="n pos">+13.94%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">BAJFINANCE (24-Jan to 04-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 23</td>
+                <td class="n">Rs. 2,262.40</td>
+                <td class="n">Rs. 2,231.41</td>
+                <td class="n neg">Rs. -30.99</td>
+                <td class="n neg">-1.37%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ASIANPAINT (24-Jan to 14-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 24</td>
+                <td class="n">Rs. 1,705.50</td>
+                <td class="n">Rs. 1,699.70</td>
+                <td class="n neg">Rs. -5.80</td>
+                <td class="n neg">-0.34%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">SUNPHARMA (28-Jan to 11-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 25</td>
+                <td class="n">Rs. 435.45</td>
+                <td class="n">Rs. 405.23</td>
+                <td class="n neg">Rs. -30.22</td>
+                <td class="n neg">-6.94%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ITC (28-Jan to 18-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 26</td>
+                <td class="n">Rs. 287.85</td>
+                <td class="n">Rs. 259.15</td>
+                <td class="n neg">Rs. -28.70</td>
+                <td class="n neg">-9.97%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">POWERGRID (29-Jan to 13-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 27</td>
+                <td class="n">Rs. 3,370.75</td>
+                <td class="n">Rs. 3,410.86</td>
+                <td class="n pos">Rs. +40.11</td>
+                <td class="n pos">+1.19%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TITAN (29-Jan to 06-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 28</td>
+                <td class="n">Rs. 758.45</td>
+                <td class="n">Rs. 736.83</td>
+                <td class="n neg">Rs. -21.62</td>
+                <td class="n neg">-2.85%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">SBIN (29-Jan to 10-Feb)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 29</td>
+                <td class="n">Rs. 1,600.45</td>
+                <td class="n">Rs. 1,676.79</td>
+                <td class="n pos">Rs. +76.34</td>
+                <td class="n pos">+4.77%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">BHARTIARTL (29-Jan to 07-Feb)</td>
+            </tr>
+            
+                </tbody>
+            </table>
+            <footer>
+                <span>Nifty 50 Case 1 Reinvested Capital Utilisation Report</span>
+                <span>Page 7</span>
+            </footer>
+        </div>
+        
+
+        <div class="page">
+            <header>
+                <h1>Nifty 50 Capital Utilisation Details</h1>
+                <div class="subtitle">Detailed Slot Compounding & Re-entry Log for Quarter FY24-25Q3</div>
+            </header>
+            <div style="margin-bottom: 8px; font-size: 10px; color: #4b5563; font-weight: 600;">
+                Quarter summary: Utilised Fund: Rs. 74,149.14 | Net Profit: Rs. -3,968.91 (-5.35%) | Slots: 26 | Re-entries: 24
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Slot ID</th>
+                        <th style="width: 13%; text-align: right;">Start Capital</th>
+                        <th style="width: 13%; text-align: right;">Final Value</th>
+                        <th style="width: 13%; text-align: right;">Net Profit</th>
+                        <th style="width: 10%; text-align: right;">Return (%)</th>
+                        <th style="width: 10%;">Re-entries</th>
+                        <th style="width: 31%; text-align: left;">Compounded Trade Flow (Re-entries Path)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+            <tr>
+                <td class="sym">Slot 1</td>
+                <td class="n">Rs. 4,308.70</td>
+                <td class="n">Rs. 4,307.09</td>
+                <td class="n neg">Rs. -1.61</td>
+                <td class="n neg">-0.04%</td>
+                <td class="c" style="font-weight: 700;">4</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TCS (27-Sep to 18-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ETERNAL (18-Oct to 23-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> NTPC (23-Oct to 30-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> SBIN (30-Oct to 12-Nov) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> GRASIM (13-Nov to 21-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 2</td>
+                <td class="n">Rs. 1,464.82</td>
+                <td class="n">Rs. 1,258.95</td>
+                <td class="n neg">Rs. -205.87</td>
+                <td class="n neg">-14.05%</td>
+                <td class="c" style="font-weight: 700;">3</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">RELIANCE (01-Oct to 15-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> JIOFIN (15-Oct to 21-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> JSWSTEEL (21-Oct to 05-Nov) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TATASTEEL (05-Nov to 12-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 3</td>
+                <td class="n">Rs. 702.25</td>
+                <td class="n">Rs. 635.21</td>
+                <td class="n neg">Rs. -67.04</td>
+                <td class="n neg">-9.55%</td>
+                <td class="c" style="font-weight: 700;">3</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HDFCLIFE (03-Oct to 22-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> SBILIFE (22-Oct to 01-Nov) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> DRREDDY (04-Nov to 06-Nov) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> HINDALCO (06-Nov to 14-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 4</td>
+                <td class="n">Rs. 1,776.60</td>
+                <td class="n">Rs. 1,924.47</td>
+                <td class="n pos">Rs. +147.87</td>
+                <td class="n pos">+8.32%</td>
+                <td class="c" style="font-weight: 700;">3</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HCLTECH (04-Oct to 17-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BAJFINANCE (17-Oct to 29-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> LT (29-Oct to 05-Nov) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TMPV (07-Nov to 12-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 5</td>
+                <td class="n">Rs. 11,774.40</td>
+                <td class="n">Rs. 10,127.16</td>
+                <td class="n neg">Rs. -1,647.24</td>
+                <td class="n neg">-13.99%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">BAJAJ-AUTO (04-Oct to 22-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> SHRIRAMFIN (22-Oct to 01-Nov) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> APOLLOHOSP (04-Nov to 12-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 6</td>
+                <td class="n">Rs. 1,934.30</td>
+                <td class="n">Rs. 1,658.56</td>
+                <td class="n neg">Rs. -275.74</td>
+                <td class="n neg">-14.26%</td>
+                <td class="c" style="font-weight: 700;">2</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">INFY (07-Oct to 28-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TITAN (29-Oct to 07-Nov) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> ONGC (08-Nov to 22-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 7</td>
+                <td class="n">Rs. 263.48</td>
+                <td class="n">Rs. 266.40</td>
+                <td class="n pos">Rs. +2.92</td>
+                <td class="n pos">+1.11%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">WIPRO (08-Oct to 23-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> SUNPHARMA (23-Oct to 07-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 8</td>
+                <td class="n">Rs. 1,153.30</td>
+                <td class="n">Rs. 1,165.62</td>
+                <td class="n pos">Rs. +12.32</td>
+                <td class="n pos">+1.07%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">AXISBANK (08-Oct to 29-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> POWERGRID (31-Oct to 19-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 9</td>
+                <td class="n">Rs. 1,258.00</td>
+                <td class="n">Rs. 1,141.77</td>
+                <td class="n neg">Rs. -116.23</td>
+                <td class="n neg">-9.24%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">NESTLEIND (09-Oct to 28-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> M&M (04-Nov to 12-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 10</td>
+                <td class="n">Rs. 1,658.80</td>
+                <td class="n">Rs. 1,557.29</td>
+                <td class="n neg">Rs. -101.51</td>
+                <td class="n neg">-6.12%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TECHM (09-Oct to 30-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> TRENT (04-Nov to 12-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 11</td>
+                <td class="n">Rs. 11,350.15</td>
+                <td class="n">Rs. 11,455.86</td>
+                <td class="n pos">Rs. +105.71</td>
+                <td class="n pos">+0.93%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ULTRACEMCO (09-Oct to 31-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> EICHERMOT (04-Nov to 25-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 12</td>
+                <td class="n">Rs. 375.22</td>
+                <td class="n">Rs. 346.93</td>
+                <td class="n neg">Rs. -28.29</td>
+                <td class="n neg">-7.54%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">KOTAKBANK (10-Oct to 30-Oct)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 13</td>
+                <td class="n">Rs. 825.50</td>
+                <td class="n">Rs. 965.49</td>
+                <td class="n pos">Rs. +139.99</td>
+                <td class="n pos">+16.96%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HDFCBANK (11-Oct to 23-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> BEL (24-Oct to 06-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 14</td>
+                <td class="n">Rs. 3,037.20</td>
+                <td class="n">Rs. 2,915.41</td>
+                <td class="n neg">Rs. -121.79</td>
+                <td class="n neg">-4.01%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ASIANPAINT (11-Oct to 04-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 15</td>
+                <td class="n">Rs. 478.52</td>
+                <td class="n">Rs. 462.39</td>
+                <td class="n neg">Rs. -16.13</td>
+                <td class="n neg">-3.37%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ITC (14-Oct to 05-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 16</td>
+                <td class="n">Rs. 2,781.45</td>
+                <td class="n">Rs. 2,537.52</td>
+                <td class="n neg">Rs. -243.93</td>
+                <td class="n neg">-8.77%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">HINDUNILVR (15-Oct to 01-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 17</td>
+                <td class="n">Rs. 494.45</td>
+                <td class="n">Rs. 449.16</td>
+                <td class="n neg">Rs. -45.29</td>
+                <td class="n neg">-9.16%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">COALINDIA (15-Oct to 30-Oct)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 18</td>
+                <td class="n">Rs. 1,113.95</td>
+                <td class="n">Rs. 1,022.72</td>
+                <td class="n neg">Rs. -91.23</td>
+                <td class="n neg">-8.19%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">TATACONSUM (16-Oct to 30-Oct)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 19</td>
+                <td class="n">Rs. 4,624.00</td>
+                <td class="n">Rs. 4,069.58</td>
+                <td class="n neg">Rs. -554.42</td>
+                <td class="n neg">-11.99%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">INDIGO (17-Oct to 01-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 20</td>
+                <td class="n">Rs. 1,701.15</td>
+                <td class="n">Rs. 1,637.02</td>
+                <td class="n neg">Rs. -64.13</td>
+                <td class="n neg">-3.77%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">BHARTIARTL (17-Oct to 29-Oct)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 21</td>
+                <td class="n">Rs. 1,819.90</td>
+                <td class="n">Rs. 2,074.95</td>
+                <td class="n pos">Rs. +255.05</td>
+                <td class="n pos">+14.01%</td>
+                <td class="c" style="font-weight: 700;">1</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">BAJAJFINSV (18-Oct to 24-Oct) &rarr; <span style='color:#7c3aed;font-weight:600;'>Re-entry:</span> MAXHEALTH (24-Oct to 08-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 22</td>
+                <td class="n">Rs. 3,002.00</td>
+                <td class="n">Rs. 2,949.47</td>
+                <td class="n neg">Rs. -52.53</td>
+                <td class="n neg">-1.75%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ADANIENT (18-Oct to 01-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 23</td>
+                <td class="n">Rs. 12,175.90</td>
+                <td class="n">Rs. 11,052.06</td>
+                <td class="n neg">Rs. -1,123.84</td>
+                <td class="n neg">-9.23%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">MARUTI (21-Oct to 04-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 24</td>
+                <td class="n">Rs. 1,267.50</td>
+                <td class="n">Rs. 1,277.26</td>
+                <td class="n pos">Rs. +9.76</td>
+                <td class="n pos">+0.77%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ICICIBANK (22-Oct to 04-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 25</td>
+                <td class="n">Rs. 1,318.70</td>
+                <td class="n">Rs. 1,329.38</td>
+                <td class="n pos">Rs. +10.68</td>
+                <td class="n pos">+0.81%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">ADANIPORTS (25-Oct to 05-Nov)</td>
+            </tr>
+            
+
+            <tr>
+                <td class="sym">Slot 26</td>
+                <td class="n">Rs. 1,488.90</td>
+                <td class="n">Rs. 1,592.53</td>
+                <td class="n pos">Rs. +103.63</td>
+                <td class="n pos">+6.96%</td>
+                <td class="c" style="font-weight: 700;">0</td>
+                <td class="name" style="font-size: 8px; font-family: monospace;">CIPLA (25-Oct to 08-Nov)</td>
+            </tr>
+            
+                </tbody>
+            </table>
+            <footer>
+                <span>Nifty 50 Case 1 Reinvested Capital Utilisation Report</span>
+                <span>Page 8</span>
+            </footer>
+        </div>
+        
+
+</body>
+</html>

@@ -1,0 +1,549 @@
+import os
+import pathlib
+import sys
+import bisect
+import pandas as pd
+import numpy as np
+import openpyxl
+from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+from openpyxl.utils import get_column_letter
+
+sys.stdout.reconfigure(errors='replace')
+
+ROOT = pathlib.Path('D:/behaviour analysis')
+OI_DIR = ROOT / 'OI_DATA'
+PROC = ROOT / 'processed'
+PRICE_CACHE = PROC / 'price_cache'
+
+SYMBOLS = sorted([e.name.strip().upper() for e in os.scandir(OI_DIR) if e.is_dir()])
+
+print("==========================================================================================")
+print("BUILDING RANKWISE QUARTERLY PERFORMANCE MASTER V7 (SORTED BY NET P&L & WIN RATE)")
+print("==========================================================================================")
+print(f"Total Target Universe: {len(SYMBOLS)} Stocks")
+
+LOT_SIZES = {
+    "RELIANCE": 250, "TCS": 175, "INFY": 400, "HDFCBANK": 550, "ICICIBANK": 700,
+    "BHARTIARTL": 950, "ITC": 1600, "SBIN": 1500, "LTIM": 150, "LT": 300,
+    "HINDUNILVR": 300, "AXISBANK": 625, "KOTAKBANK": 400, "BAJFINANCE": 125,
+    "M&M": 350, "MARUTI": 100, "SUNPHARMA": 350, "TATASTEEL": 5500,
+    "NTPC": 1500, "POWERGRID": 1800, "TITAN": 175, "ADANIENT": 300,
+    "ADANIPORTS": 625, "ULTRACEMCO": 100, "ASIANPAINT": 200, "COALINDIA": 2100,
+    "BAJAJ-AUTO": 125, "JSWSTEEL": 675, "TATAMOTORS": 1425, "HCLTECH": 350,
+    "GRASIM": 250, "HEROMOTOCO": 150, "EICHERMOT": 175, "CIPLA": 650,
+    "HDFCLIFE": 1100, "SBILIFE": 375, "DRREDDY": 125, "BRITANNIA": 200,
+    "APOLLOHOSP": 125, "TATACONSUM": 450, "HINDALCO": 1400, "BPCL": 1800,
+    "INDUSINDBK": 500, "DIVISLAB": 200, "BAJAJFINSV": 500, "NESTLEIND": 200,
+    "WIPRO": 1500, "ONGC": 3750, "TECHM": 600, "ASHOKLEY": 5000, "ADANIGREEN": 500
+}
+
+SECTOR_MAP = {
+    "HDFCBANK": "Banking & Finance", "ICICIBANK": "Banking & Finance", "AXISBANK": "Banking & Finance",
+    "KOTAKBANK": "Banking & Finance", "SBIN": "Banking & Finance", "INDUSINDBK": "Banking & Finance",
+    "BANKBARODA": "Banking & Finance", "PNB": "Banking & Finance", "CANBK": "Banking & Finance",
+    "IDFCFIRSTB": "Banking & Finance", "AUBANK": "Banking & Finance", "FEDERALBNK": "Banking & Finance",
+    "RBLBANK": "Banking & Finance", "INDIANB": "Banking & Finance", "UNIONBANK": "Banking & Finance",
+    
+    "BAJFINANCE": "NBFC & Fintech", "BAJAJFINSV": "NBFC & Fintech", "SHRIRAMFIN": "NBFC & Fintech",
+    "JIOFIN": "NBFC & Fintech", "CHOLAFIN": "NBFC & Fintech", "MUTHOOTFIN": "NBFC & Fintech",
+    "REC": "NBFC & Fintech", "PFC": "NBFC & Fintech", "SBICARD": "NBFC & Fintech",
+    "M&MFIN": "NBFC & Fintech", "LICHSGFIN": "NBFC & Fintech", "IRFC": "NBFC & Fintech",
+    "CREDITACC": "NBFC & Fintech", "MANAPPURAM": "NBFC & Fintech", "PAYTM": "NBFC & Fintech",
+    
+    "HDFCLIFE": "Insurance", "SBILIFE": "Insurance", "ICICIPRULI": "Insurance", "ICICIGI": "Insurance",
+    "GICRE": "Insurance", "NIACL": "Insurance", "STARHEALTH": "Insurance",
+    
+    "TCS": "IT & Tech Services", "INFY": "IT & Tech Services", "HCLTECH": "IT & Tech Services",
+    "TECHM": "IT & Tech Services", "WIPRO": "IT & Tech Services", "LTIM": "IT & Tech Services",
+    "PERSISTENT": "IT & Tech Services", "COFORGE": "IT & Tech Services", "MPHASIS": "IT & Tech Services",
+    "TATAELXSI": "IT & Tech Services", "KPITTECH": "IT & Tech Services", "LTTS": "IT & Tech Services",
+    "OFSS": "IT & Tech Services", "CYIENT": "IT & Tech Services", "KFINTECH": "IT & Tech Services",
+    
+    "MARUTI": "Automobile & Auto Ancillaries", "M&M": "Automobile & Auto Ancillaries",
+    "BAJAJ-AUTO": "Automobile & Auto Ancillaries", "EICHERMOT": "Automobile & Auto Ancillaries",
+    "HEROMOTOCO": "Automobile & Auto Ancillaries", "TATAMOTORS": "Automobile & Auto Ancillaries",
+    "ASHOKLEY": "Automobile & Auto Ancillaries", "TVSMOTOR": "Automobile & Auto Ancillaries",
+    "BHARATFORG": "Automobile & Auto Ancillaries", "MOTHERSON": "Automobile & Auto Ancillaries",
+    "BOSCHLTD": "Automobile & Auto Ancillaries", "BALKRISIND": "Automobile & Auto Ancillaries",
+    "MRF": "Automobile & Auto Ancillaries", "APOLLOTYRE": "Automobile & Auto Ancillaries",
+    "UNOMINDA": "Automobile & Auto Ancillaries", "TIINDIA": "Automobile & Auto Ancillaries",
+    "ATHERENERG": "Automobile & Auto Ancillaries", "HYUNDAI": "Automobile & Auto Ancillaries",
+    
+    "TATASTEEL": "Metals & Mining", "JSWSTEEL": "Metals & Mining", "HINDALCO": "Metals & Mining",
+    "COALINDIA": "Metals & Mining", "JINDALSTEL": "Metals & Mining", "NMDC": "Metals & Mining",
+    "VEDL": "Metals & Mining", "NATIONALUM": "Metals & Mining", "SAIL": "Metals & Mining",
+    "APLAPOLLO": "Metals & Mining", "HINDZINC": "Metals & Mining",
+    
+    "RELIANCE": "Oil, Gas & Energy", "ONGC": "Oil, Gas & Energy", "NTPC": "Oil, Gas & Energy",
+    "POWERGRID": "Oil, Gas & Energy", "BPCL": "Oil, Gas & Energy", "IOC": "Oil, Gas & Energy",
+    "HPCL": "Oil, Gas & Energy", "GAIL": "Oil, Gas & Energy", "ADANIGREEN": "Oil, Gas & Energy",
+    "ADANIPOWER": "Oil, Gas & Energy", "TATAPOWER": "Oil, Gas & Energy", "NHPC": "Oil, Gas & Energy",
+    "SJVN": "Oil, Gas & Energy", "OIL": "Oil, Gas & Energy", "SUZLON": "Oil, Gas & Energy",
+    "INOXWIND": "Oil, Gas & Energy", "IREDA": "Oil, Gas & Energy", "WAAREEENER": "Oil, Gas & Energy",
+    
+    "SUNPHARMA": "Pharma & Healthcare", "CIPLA": "Pharma & Healthcare", "DRREDDY": "Pharma & Healthcare",
+    "APOLLOHOSP": "Pharma & Healthcare", "DIVISLAB": "Pharma & Healthcare", "TORNTPHARM": "Pharma & Healthcare",
+    "MANKIND": "Pharma & Healthcare", "LUPIN": "Pharma & Healthcare", "ZYDUSLIFE": "Pharma & Healthcare",
+    "ALKEM": "Pharma & Healthcare", "BIOCON": "Pharma & Healthcare", "MAXHEALTH": "Pharma & Healthcare",
+    "SYNGENE": "Pharma & Healthcare", "FORTIS": "Pharma & Healthcare", "LAURUSLABS": "Pharma & Healthcare",
+    "SAGILITY": "Pharma & Healthcare",
+    
+    "HINDUNILVR": "FMCG & Consumer Goods", "ITC": "FMCG & Consumer Goods", "NESTLEIND": "FMCG & Consumer Goods",
+    "TATACONSUM": "FMCG & Consumer Goods", "BRITANNIA": "FMCG & Consumer Goods", "DABUR": "FMCG & Consumer Goods",
+    "GODREJCP": "FMCG & Consumer Goods", "MARICO": "FMCG & Consumer Goods", "COLPAL": "FMCG & Consumer Goods",
+    "VBL": "FMCG & Consumer Goods", "PGHH": "FMCG & Consumer Goods", "UBL": "FMCG & Consumer Goods",
+    "MCDOWELL-N": "FMCG & Consumer Goods", "GODFRYPHLP": "FMCG & Consumer Goods",
+    
+    "TITAN": "Consumer Durables & Retail", "TRENT": "Consumer Durables & Retail",
+    "ASIANPAINT": "Consumer Durables & Retail", "BERGEPAINT": "Consumer Durables & Retail",
+    "PIDILITIND": "Consumer Durables & Retail", "HAVELLS": "Consumer Durables & Retail",
+    "DIXON": "Consumer Durables & Retail", "VOLTAS": "Consumer Durables & Retail",
+    "POLYCAB": "Consumer Durables & Retail", "CROMPTON": "Consumer Durables & Retail",
+    "KEI": "Consumer Durables & Retail", "WHIRLPOOL": "Consumer Durables & Retail",
+    "DMART": "Consumer Durables & Retail", "KALYANKJIL": "Consumer Durables & Retail",
+    
+    "L&T": "Capital Goods & Infrastructure", "LT": "Capital Goods & Infrastructure",
+    "SIEMENS": "Capital Goods & Infrastructure", "ABB": "Capital Goods & Infrastructure",
+    "BEL": "Capital Goods & Infrastructure", "HAL": "Capital Goods & Infrastructure",
+    "BHEL": "Capital Goods & Infrastructure", "CGPOWER": "Capital Goods & Infrastructure",
+    "CUMMINSIND": "Capital Goods & Infrastructure", "TITAGARH": "Capital Goods & Infrastructure",
+    "RAILTEL": "Capital Goods & Infrastructure", "RITES": "Capital Goods & Infrastructure",
+    "MAZDOCK": "Capital Goods & Infrastructure", "COCHINSHIP": "Capital Goods & Infrastructure",
+    "BDL": "Capital Goods & Infrastructure", "IRCON": "Capital Goods & Infrastructure",
+    
+    "DLF": "Realty & Construction", "LODHA": "Realty & Construction", "GODREJPROP": "Realty & Construction",
+    "OBERREALTY": "Realty & Construction", "PHOENIXLTD": "Realty & Construction", "PRESTIGE": "Realty & Construction"
+}
+
+pre_candidates = [1, 2, 3, 4, 5, 7, 8]
+post_candidates = [1, 2, 3, 4, 5, 8]
+
+def assign_financial_quarter(row):
+    rel = str(row.get('relatingTo', '')).lower()
+    if 'first' in rel or 'q1' in rel: return 'Q1'
+    elif 'second' in rel or 'q2' in rel: return 'Q2'
+    elif 'third' in rel or 'q3' in rel: return 'Q3'
+    elif 'fourth' in rel or 'q4' in rel: return 'Q4'
+        
+    to_dt = row.get('to_dt', None)
+    if pd.notnull(to_dt) and hasattr(to_dt, 'month'):
+        m = to_dt.month
+        if m in (4, 5, 6): return 'Q1'
+        elif m in (7, 8, 9): return 'Q2'
+        elif m in (10, 11, 12): return 'Q3'
+        elif m in (1, 2, 3): return 'Q4'
+
+    bc_dt = row.get('dt', None)
+    if pd.notnull(bc_dt) and hasattr(bc_dt, 'month'):
+        m = bc_dt.month
+        if m in (7, 8, 9): return 'Q1'
+        elif m in (10, 11, 12): return 'Q2'
+        elif m in (1, 2, 3): return 'Q3'
+        else: return 'Q4'
+        
+    return 'Q1'
+
+def get_financial_quarter_display_name(q_code):
+    names = {
+        "Q1": "Q1 (April - June)",
+        "Q2": "Q2 (July - September)",
+        "Q3": "Q3 (October - December)",
+        "Q4": "Q4 (January - March)"
+    }
+    return names.get(q_code, "N/A")
+
+quarter_data_store = {
+    "ALL": [], "Q1": [], "Q2": [], "Q3": [], "Q4": []
+}
+
+# Per-stock ALL-quarters fallback (populated on first pass)
+all_quarters_fallback = {}
+
+for idx, sym in enumerate(SYMBOLS, 1):
+    stock_folder = ROOT / sym
+    fr_path = stock_folder / 'financial_results.csv'
+    price_path = PRICE_CACHE / f"{sym}.csv"
+    
+    df_prices = pd.DataFrame()
+    if price_path.exists():
+        try:
+            df_prices = pd.read_csv(price_path)
+            df_prices['date'] = pd.to_datetime(df_prices['date'])
+            df_prices = df_prices.sort_values('date').reset_index(drop=True)
+        except Exception:
+            pass
+            
+    if df_prices.empty:
+        continue
+        
+    df_fr_clean = pd.DataFrame()
+    first_q_name = "N/A"
+    
+    if fr_path.exists() and fr_path.stat().st_size > 10:
+        try:
+            df_fr = pd.read_csv(fr_path, dtype=str).fillna('')
+            if not df_fr.empty and 'broadCastDate' in df_fr.columns:
+                df_fr['dt'] = pd.to_datetime(df_fr['broadCastDate'], format='mixed', errors='coerce')
+                if 'toDate' in df_fr.columns:
+                    df_fr['to_dt'] = pd.to_datetime(df_fr['toDate'], format='mixed', errors='coerce')
+                else:
+                    df_fr['to_dt'] = None
+                df_fr = df_fr.dropna(subset=['dt']).sort_values('dt', ascending=True)
+                
+                if not df_fr.empty:
+                    earliest_row = df_fr.iloc[0]
+                    first_q_code = assign_financial_quarter(earliest_row)
+                    first_q_name = get_financial_quarter_display_name(first_q_code)
+                
+                df_fr = df_fr.sort_values('dt', ascending=False)
+                df_fr['year'] = df_fr['dt'].dt.year
+                df_fr['q_type'] = df_fr.apply(assign_financial_quarter, axis=1)
+                
+                df_fr_clean = df_fr.drop_duplicates(subset=['year', 'q_type']).copy()
+        except Exception:
+            pass
+            
+    n_quarters_total = len(df_fr_clean)
+    trading_status = "QUALIFIED" if n_quarters_total >= 12 else "AVOID BUT MONITOR IT"
+    sector_name = SECTOR_MAP.get(sym, "Diversified / Others")
+    valid_dates = df_prices['date'].tolist()
+    if not valid_dates:
+        continue
+        
+    lot_size = LOT_SIZES.get(sym, max(100, int(1000000 / float(df_prices['adj'].iloc[-1]))))
+    last_price = float(df_prices['adj'].iloc[-1])
+    margin_for_stock = round(0.20 * lot_size * last_price, 2)
+    
+    for q_t in ["ALL", "Q1", "Q2", "Q3", "Q4"]:
+        if q_t == "ALL":
+            df_q_sub = df_fr_clean
+        else:
+            df_q_sub = df_fr_clean[df_fr_clean['q_type'] == q_t] if not df_fr_clean.empty else pd.DataFrame()
+            
+        tot_q_count = len(df_q_sub)
+        
+        if tot_q_count == 0:
+            # For Q-specific tabs: if stock has overall data, use ALL-quarters fallback
+            if q_t != "ALL" and sym in all_quarters_fallback and all_quarters_fallback[sym]['is_available']:
+                fb = dict(all_quarters_fallback[sym])
+                fb['n_quarters_qtype'] = f"0 {q_t} Qtrs (All Qtrs Used)"
+                quarter_data_store[q_t].append(fb)
+            else:
+                quarter_data_store[q_t].append({
+                    "sym": sym, "sector": sector_name,
+                    "first_q_name": first_q_name,
+                    "trading_status": trading_status,
+                    "n_quarters_total": f"{n_quarters_total} Quarters",
+                    "n_quarters_qtype": "0 Quarters", "window": "N/A", "strategy": "N/A",
+                    "win_rate": 0.0, "wins": 0, "losses": 0, "win_ratio_str": "N/A", "avg_ret": 0.0,
+                    "margin": margin_for_stock, "net_pnl": 0.0, "is_available": False
+                })
+            continue
+
+        best_pnl = -999999999
+        best_eval = None
+
+        for pre in pre_candidates:
+            for post in post_candidates:
+                emp_long_wins = 0; emp_short_wins = 0
+                rets_long = []; rets_short = []
+                pnl_long_total = 0.0; pnl_short_total = 0.0
+
+                for _, row in df_q_sub.iterrows():
+                    dt = row['dt']
+                    pos = bisect.bisect_left(valid_dates, dt)
+                    if pos == 0: r_i = 0
+                    elif pos >= len(valid_dates): r_i = len(valid_dates) - 1
+                    else:
+                        r_i = pos if (valid_dates[pos] - dt) < (dt - valid_dates[pos - 1]) else (pos - 1)
+
+                    e_i = max(0, r_i - pre)
+                    x_i = min(len(valid_dates) - 1, r_i + post)
+                    pe = float(df_prices.loc[e_i, 'adj']); px = float(df_prices.loc[x_i, 'adj'])
+                    if pe > 0:
+                        rl = (px - pe) / pe * 100
+                        rs = (pe - px) / pe * 100
+                        rets_long.append(rl); rets_short.append(rs)
+                        
+                        b_to_l = round(lot_size * pe, 2); s_to_l = round(lot_size * px, 2)
+                        cost_l = round((b_to_l + s_to_l) * 0.0005, 2)
+                        net_pnl_l = round(s_to_l - b_to_l - cost_l, 2)
+                        pnl_long_total += net_pnl_l
+                        
+                        b_to_s = round(lot_size * px, 2); s_to_s = round(lot_size * pe, 2)
+                        cost_s = round((b_to_s + s_to_s) * 0.0005, 2)
+                        net_pnl_s = round(s_to_s - b_to_s - cost_s, 2)
+                        pnl_short_total += net_pnl_s
+                        
+                        if net_pnl_l > 0: emp_long_wins += 1
+                        if net_pnl_s > 0: emp_short_wins += 1
+
+                if tot_q_count > 0:
+                    wr_long = (emp_long_wins / tot_q_count) * 100
+                    wr_short = (emp_short_wins / tot_q_count) * 100
+                else:
+                    wr_long = wr_short = 0.0
+                
+                if wr_long >= wr_short:
+                    opt_strat = "FUTURE LONG"
+                    opt_wr = round(wr_long, 2)
+                    opt_wins = emp_long_wins
+                    opt_losses = tot_q_count - emp_long_wins
+                    opt_avg_ret = round(np.mean(rets_long), 2) if rets_long else 0.0
+                    opt_pnl = round(pnl_long_total, 2)
+                else:
+                    opt_strat = "FUTURE SHORT"
+                    opt_wr = round(wr_short, 2)
+                    opt_wins = emp_short_wins
+                    opt_losses = tot_q_count - emp_short_wins
+                    opt_avg_ret = round(np.mean(rets_short), 2) if rets_short else 0.0
+                    opt_pnl = round(pnl_short_total, 2)
+
+                if opt_pnl > best_pnl:
+                    best_pnl = opt_pnl
+                    best_eval = {
+                        "pre": pre, "post": post, "window": f"T-{pre} to T+{post}",
+                        "strategy": opt_strat, "win_rate": opt_wr,
+                        "wins": opt_wins, "losses": opt_losses,
+                        "avg_ret": opt_avg_ret, "pnl": opt_pnl
+                    }
+
+        # Guard: if best_eval is still None (all prices were zero), skip this stock/quarter
+        if best_eval is None:
+            quarter_data_store[q_t].append({
+                "sym": sym, "sector": sector_name,
+                "first_q_name": first_q_name,
+                "trading_status": trading_status,
+                "n_quarters_total": f"{n_quarters_total} Quarters",
+                "n_quarters_qtype": f"{tot_q_count} Quarters", "window": "N/A", "strategy": "N/A",
+                "win_rate": 0.0, "wins": 0, "losses": 0, "win_ratio_str": "N/A", "avg_ret": 0.0,
+                "margin": margin_for_stock, "net_pnl": 0.0, "is_available": False
+            })
+            continue
+
+        window_str = best_eval["window"]
+        opt_strat = best_eval["strategy"]
+        opt_wr = best_eval["win_rate"]
+        opt_wins = best_eval["wins"]
+        opt_losses = best_eval["losses"]
+        opt_avg_ret = best_eval["avg_ret"]
+        opt_pnl = best_eval["pnl"]
+        
+        win_ratio_str = f"{opt_wins} Wins / {tot_q_count} Qtrs"
+
+        result_entry = {
+            "sym": sym, "sector": sector_name,
+            "first_q_name": first_q_name,
+            "trading_status": trading_status,
+            "n_quarters_total": f"{n_quarters_total} Quarters",
+            "n_quarters_qtype": f"{tot_q_count} Quarters", "window": window_str, "strategy": opt_strat,
+            "win_rate": opt_wr, "wins": opt_wins, "losses": opt_losses, "win_ratio_str": win_ratio_str,
+            "avg_ret": opt_avg_ret, "margin": margin_for_stock, "net_pnl": opt_pnl, "is_available": True
+        }
+
+        # Store ALL-quarters result as fallback for Q-specific tabs
+        if q_t == "ALL":
+            all_quarters_fallback[sym] = result_entry
+
+        quarter_data_store[q_t].append(result_entry)
+
+out_path_rankwise = ROOT / "Nifty211_Rankwise_Quarterly_Performance_Master.xlsx"
+out_path_all = ROOT / "Nifty211_All_Quarters_Performance_Master.xlsx"
+out_path_clean = ROOT / "Nifty211_Quarterly_Performance_Master_Clean.xlsx"
+out_path_dynamic = ROOT / "Nifty211_Dynamic_Quarterly_Performance_Master.xlsx"
+out_path_master = ROOT / "Nifty211_Quarterly_Performance_Master.xlsx"
+
+wb = openpyxl.Workbook()
+
+title_font = Font(name="Calibri", size=16, bold=True, color="FFFFFF")
+title_fill = PatternFill("solid", fgColor="1F4E79")
+card_val_font = Font(name="Calibri", size=15, bold=True, color="1F4E79")
+hdr_font = Font(name="Calibri", size=11, bold=True, color="FFFFFF")
+hdr_fill = PatternFill("solid", fgColor="1F4E79")
+subhdr_fill = PatternFill("solid", fgColor="2F5597")
+border_thin = Border(left=Side(style='thin', color='D9D9D9'), right=Side(style='thin', color='D9D9D9'),
+                     top=Side(style='thin', color='D9D9D9'), bottom=Side(style='thin', color='D9D9D9'))
+card_fill = PatternFill("solid", fgColor="F2F4F7")
+pos_fill = PatternFill("solid", fgColor="E2EFDA")
+neg_fill = PatternFill("solid", fgColor="FCE4D6")
+amb_fill = PatternFill("solid", fgColor="FFF2CC")
+pos_font = Font(name="Calibri", size=11, bold=True, color="276A3C")
+neg_font = Font(name="Calibri", size=11, bold=True, color="9C0006")
+amb_font = Font(name="Calibri", size=11, bold=True, color="B25900")
+
+quarter_names = {
+    "ALL": "ALL QUARTERS COMBINED",
+    "Q1": "Q1 (April - June)",
+    "Q2": "Q2 (July - September)",
+    "Q3": "Q3 (October - December)",
+    "Q4": "Q4 (January - March)"
+}
+
+for q_idx, q_t in enumerate(["ALL", "Q1", "Q2", "Q3", "Q4"]):
+    sheet_title = quarter_names[q_t]
+    if q_idx == 0:
+        ws = wb.active
+        ws.title = sheet_title
+    else:
+        ws = wb.create_sheet(title=sheet_title)
+        
+    ws.views.sheetView[0].showGridLines = True
+    
+    raw_list = quarter_data_store[q_t]
+    df_qtype = pd.DataFrame(raw_list)
+    # STRICT RANKWISE SORT: NET P&L DESCENDING -> WIN RATE DESCENDING -> AVG RETURN DESCENDING
+    df_avail = df_qtype[df_qtype['is_available'] == True].sort_values(['net_pnl', 'win_rate', 'avg_ret'], ascending=[False, False, False])
+    df_unavail = df_qtype[df_qtype['is_available'] == False].sort_values('sym', ascending=True)
+    df_sorted = pd.concat([df_avail, df_unavail], ignore_index=True)
+    
+    # Title Banner (15 Columns: A to O)
+    ws.merge_cells("A1:O1")
+    ws["A1"] = f"RANKWISE QUARTERLY PERFORMANCE MASTER — {sheet_title.upper()}"
+    ws["A1"].font = title_font; ws["A1"].fill = title_fill
+    ws["A1"].alignment = Alignment(horizontal="center", vertical="center")
+    ws.row_dimensions[1].height = 40
+
+    # KPI Summary Cards
+    top_stock = df_avail.iloc[0]['sym'] if not df_avail.empty else "N/A"
+    top_pnl = df_avail.iloc[0]['net_pnl'] if not df_avail.empty else 0.0
+    avg_ret_q = round(df_avail['avg_ret'].mean(), 2) if not df_avail.empty else 0.0
+    avg_wr_q = round(df_avail['win_rate'].mean(), 2) if not df_avail.empty else 0.0
+    tot_pnl_q = round(df_avail['net_pnl'].sum(), 2) if not df_avail.empty else 0.0
+    
+    cards = [
+        ("TOTAL STOCKS RANKED", f"{len(df_sorted)} Stocks ({len(df_avail)} Avail)", "A3:C4", "A3"),
+        ("TOP RANKED STOCK (NET P&L)", f"{top_stock} (₹{top_pnl:,.2f})", "D3:F4", "D3"),
+        ("AVERAGE QUARTER RETURN %", f"{avg_ret_q}%", "G3:I4", "G3"),
+        ("AVERAGE QUARTER WIN RATE %", f"{avg_wr_q}%", "J3:L4", "J3"),
+        ("TOTAL QUARTER NET P&L", f"₹{tot_pnl_q:,.2f}", "M3:O4", "M3")
+    ]
+    for title, val, merge_range, top_left in cards:
+        ws.merge_cells(merge_range)
+        ws[top_left] = f"{title}\n{val}"
+        ws[top_left].font = card_val_font
+        ws[top_left].alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+        ws[top_left].fill = card_fill; ws[top_left].border = border_thin
+
+    # Main Ranking Table (15 Columns)
+    rank_start_row = 6
+    ws.cell(row=rank_start_row, column=1, value=f"ALL {len(df_sorted)} STOCKS RANKED BY {sheet_title.upper()} NET REALISED P&L").font = hdr_font
+    ws.cell(row=rank_start_row, column=1).fill = hdr_fill
+    ws.merge_cells(start_row=rank_start_row, start_column=1, end_row=rank_start_row, end_column=15)
+
+    headers = [
+        "Rank", "Stock Symbol", "Industry Sector",
+        "Listing Start Quarter Name",
+        "Strategy", "Action Status", "Total History Quarters", "Quarter Data Count",
+        "Position Window", "Win Rate %", "Win Ratio", "Losing Quarters",
+        "Average Return %", "Margin Capital (₹)", "Net Realised P&L (₹)"
+    ]
+    ws.row_dimensions[rank_start_row+1].height = 28
+    for c_idx, h in enumerate(headers, 1):
+        cell = ws.cell(row=rank_start_row+1, column=c_idx, value=h)
+        cell.font = hdr_font; cell.fill = subhdr_fill
+        cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+
+    for r_idx, r in enumerate(df_sorted.to_dict('records'), start=rank_start_row+2):
+        ws.cell(row=r_idx, column=1, value=r_idx - rank_start_row - 1).border = border_thin
+        ws.cell(row=r_idx, column=1).alignment = Alignment(horizontal="center")
+        
+        ws.cell(row=r_idx, column=2, value=r['sym']).border = border_thin
+        ws.cell(row=r_idx, column=2).font = Font(bold=True)
+        
+        ws.cell(row=r_idx, column=3, value=r['sector']).border = border_thin
+        ws.cell(row=r_idx, column=3).alignment = Alignment(horizontal="center")
+        
+        # Column 4: Listing Start Quarter Name
+        ws.cell(row=r_idx, column=4, value=r['first_q_name']).border = border_thin
+        ws.cell(row=r_idx, column=4).alignment = Alignment(horizontal="center")
+
+        # Column 5: Strategy
+        c_st = ws.cell(row=r_idx, column=5, value=r['strategy'])
+        c_st.border = border_thin; c_st.alignment = Alignment(horizontal="center")
+        if r['strategy'] == 'FUTURE LONG': c_st.fill = pos_fill; c_st.font = pos_font
+        elif r['strategy'] == 'FUTURE SHORT': c_st.fill = neg_fill; c_st.font = neg_font
+        else: c_st.fill = card_fill; c_st.font = Font(color="7F7F7F", italic=True)
+
+        # Column 6: Action Status
+        c_act = ws.cell(row=r_idx, column=6, value=r['trading_status'])
+        c_act.border = border_thin; c_act.alignment = Alignment(horizontal="center")
+        if r['trading_status'] == 'QUALIFIED': c_act.fill = pos_fill; c_act.font = pos_font
+        else: c_act.fill = amb_fill; c_act.font = amb_font
+        
+        # Column 7: Total History Quarters
+        ws.cell(row=r_idx, column=7, value=r['n_quarters_total']).border = border_thin
+        ws.cell(row=r_idx, column=7).alignment = Alignment(horizontal="center")
+        
+        # Column 8: Quarter Data Count
+        ws.cell(row=r_idx, column=8, value=r['n_quarters_qtype']).border = border_thin
+        ws.cell(row=r_idx, column=8).alignment = Alignment(horizontal="center")
+        
+        # Column 9: Position Window
+        ws.cell(row=r_idx, column=9, value=r['window']).border = border_thin
+        ws.cell(row=r_idx, column=9).alignment = Alignment(horizontal="center")
+        
+        # Column 10: Win Rate %
+        wr_val_str = f"{r['win_rate']}%" if r['is_available'] else "N/A"
+        c_wr = ws.cell(row=r_idx, column=10, value=wr_val_str)
+        c_wr.border = border_thin; c_wr.alignment = Alignment(horizontal="right")
+        c_wr.font = Font(bold=True)
+        if r['is_available']:
+            if r['win_rate'] >= 65.0: c_wr.fill = pos_fill; c_wr.font = pos_font
+            elif r['win_rate'] < 50.0: c_wr.fill = neg_fill; c_wr.font = neg_font
+        else:
+            c_wr.alignment = Alignment(horizontal="center"); c_wr.font = Font(color="7F7F7F", italic=True)
+        
+        # Column 11: Win Ratio
+        c_w = ws.cell(row=r_idx, column=11, value=r['win_ratio_str'])
+        c_w.border = border_thin; c_w.alignment = Alignment(horizontal="center")
+        if not r['is_available']: c_w.font = Font(color="7F7F7F", italic=True)
+        
+        # Column 12: Losing Quarters
+        c_l = ws.cell(row=r_idx, column=12, value=r['losses'] if r['is_available'] else "N/A")
+        c_l.border = border_thin; c_l.alignment = Alignment(horizontal="center")
+        if not r['is_available']: c_l.font = Font(color="7F7F7F", italic=True)
+        
+        # Column 13: Average Return %
+        ret_val_str = f"{r['avg_ret']}%" if r['is_available'] else "N/A"
+        c_ret = ws.cell(row=r_idx, column=13, value=ret_val_str)
+        c_ret.border = border_thin; c_ret.alignment = Alignment(horizontal="right")
+        c_ret.font = Font(bold=True)
+        if r['is_available']:
+            if r['avg_ret'] >= 0: c_ret.fill = pos_fill; c_ret.font = pos_font
+            else: c_ret.fill = neg_fill; c_ret.font = neg_font
+        else:
+            c_ret.alignment = Alignment(horizontal="center"); c_ret.font = Font(color="7F7F7F", italic=True)
+        
+        # Column 14: Margin Capital (₹)
+        ws.cell(row=r_idx, column=14, value=f"₹{r['margin']:,.2f}").border = border_thin
+        ws.cell(row=r_idx, column=14).alignment = Alignment(horizontal="right")
+        
+        # Column 15: Net Realised P&L (₹)
+        pnl_val_str = f"₹{r['net_pnl']:,.2f}" if r['is_available'] else "N/A"
+        c_p = ws.cell(row=r_idx, column=15, value=pnl_val_str)
+        c_p.border = border_thin; c_p.alignment = Alignment(horizontal="right")
+        if r['is_available']:
+            if r['net_pnl'] >= 0: c_p.fill = pos_fill; c_p.font = pos_font
+            else: c_p.fill = neg_fill; c_p.font = neg_font
+        else:
+            c_p.alignment = Alignment(horizontal="center"); c_p.font = Font(color="7F7F7F", italic=True)
+
+    for col in ws.columns:
+        col_letter = get_column_letter(col[0].column)
+        ws.column_dimensions[col_letter].width = 24
+
+saved_paths = []
+target_list = [
+    out_path_rankwise, out_path_all, out_path_clean, out_path_dynamic, out_path_master
+]
+for target_path in target_list:
+    try:
+        wb.save(target_path)
+        print(f"  • Successfully generated: {target_path.name}")
+        saved_paths.append(target_path)
+    except PermissionError:
+        print(f"  • Warning: {target_path.name} is currently open and locked by Excel!")
+
+print("==========================================================================================")
+print(f"RANKWISE QUARTERLY PERFORMANCE MASTER V7 CREATED SUCCESSFULLY! ({len(saved_paths)} files saved)")
+print("==========================================================================================")

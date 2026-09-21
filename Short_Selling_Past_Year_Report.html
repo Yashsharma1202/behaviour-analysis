@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        color: #111827;
+        margin: 0;
+        padding: 0;
+        background-color: #f9fafb;
+    }
+    .page {
+        width: 297mm;
+        height: 210mm;
+        box-sizing: border-box;
+        padding: 15mm;
+        background-color: #ffffff;
+        position: relative;
+        page-break-after: always;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        margin: 10px auto;
+    }
+    @media print {
+        body {
+            background-color: #ffffff;
+        }
+        .page {
+            width: 297mm;
+            height: 210mm;
+            margin: 0;
+            padding: 15mm;
+            box-shadow: none;
+            page-break-after: always;
+        }
+    }
+    header {
+        border-bottom: 2px solid #7f1d1d;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+    h1 {
+        font-size: 22px;
+        color: #7f1d1d;
+        margin: 0;
+    }
+    .subtitle {
+        font-size: 10px;
+        color: #6b7280;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 2px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 15px;
+        font-size: 10px;
+    }
+    th, td {
+        border: 1px solid #e5e7eb;
+        padding: 6px 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #7f1d1d;
+        color: #ffffff;
+        font-weight: bold;
+    }
+    .best-row {
+        background-color: #fef2f2;
+        font-weight: bold;
+    }
+    footer {
+        position: absolute;
+        bottom: 15mm;
+        left: 15mm;
+        right: 15mm;
+        display: flex;
+        justify-content: space-between;
+        font-size: 8px;
+        color: #9ca3af;
+        border-top: 1px solid #e5e7eb;
+        padding-top: 5px;
+    }
+    .cover-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .cover-main {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-bottom: 30px;
+    }
+    .cover-title {
+        font-size: 32px;
+        font-weight: 800;
+        color: #7f1d1d;
+        line-height: 1.1;
+        margin-bottom: 10px;
+    }
+    .cover-subtitle {
+        font-size: 14px;
+        color: #4b5563;
+        margin-bottom: 25px;
+    }
+</style>
+</head>
+<body>
+
+    <!-- PAGE 1: COVER & LEAGUE TABLE -->
+    <div class="page cover-page">
+        <header>
+            <h1>Short Selling Past Year Report & Optimization</h1>
+            <div class="subtitle">Second Part of Capital Utilisation Model - Sell Before, Buy After Strategy</div>
+        </header>
+        
+        <div class="cover-main" style="width: 100%;">
+            <div class="cover-title">Short Selling Exit Offset Optimization</div>
+            <div class="cover-subtitle">Simulating Short Positions on 350 Trades Across 7 Quarters (T+1 to T+15 Cover Offsets)</div>
+            
+            <h3 style="margin-top: 5px; margin-bottom: 5px; color: #7f1d1d; font-size: 11px; text-transform: uppercase;">Overall Performance League Table</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Exit Offset</th>
+                        <th style="text-align: right;">Capital Required (Rs.)</th>
+                        <th style="text-align: right;">Net Short Profit (Rs.)</th>
+                        <th style="text-align: right;">Overall Return (%)</th>
+                        <th style="text-align: center;">Rank</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr style="background-color: #fef2f2; font-weight: bold;">
+            <td>T+1</td>
+            <td style="text-align: right;">Rs. 189,851.85</td>
+            <td style="text-align: right; color: #15803d; font-weight: bold;">Rs. +1,932.59</td>
+            <td style="text-align: right; color: #15803d; font-weight: bold;">+1.02%</td>
+            <td style="text-align: center;">Rank 1</td>
+        </tr>
+        
+        <tr style="">
+            <td>T+2</td>
+            <td style="text-align: right;">Rs. 202,959.15</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">Rs. -123.09</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.06%</td>
+            <td style="text-align: center;">Rank 2</td>
+        </tr>
+        
+        <tr style="">
+            <td>T+15</td>
+            <td style="text-align: right;">Rs. 332,697.07</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">Rs. -579.69</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.17%</td>
+            <td style="text-align: center;">Rank 3</td>
+        </tr>
+        
+        <tr style="">
+            <td>T+14</td>
+            <td style="text-align: right;">Rs. 334,707.90</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">Rs. -1,232.67</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.37%</td>
+            <td style="text-align: center;">Rank 4</td>
+        </tr>
+        
+        <tr style="">
+            <td>T+4</td>
+            <td style="text-align: right;">Rs. 223,924.20</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">Rs. -1,084.41</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.48%</td>
+            <td style="text-align: center;">Rank 5</td>
+        </tr>
+        
+        <tr style="">
+            <td>T+13</td>
+            <td style="text-align: right;">Rs. 325,046.40</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">Rs. -1,690.99</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.52%</td>
+            <td style="text-align: center;">Rank 6</td>
+        </tr>
+        
+        <tr style="">
+            <td>T+3</td>
+            <td style="text-align: right;">Rs. 213,139.40</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">Rs. -1,118.81</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.52%</td>
+            <td style="text-align: center;">Rank 7</td>
+        </tr>
+        
+        <tr style="">
+            <td>T+5</td>
+            <td style="text-align: right;">Rs. 234,357.82</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">Rs. -1,248.05</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.53%</td>
+            <td style="text-align: center;">Rank 8</td>
+        </tr>
+        
+        <tr style="">
+            <td>T+6</td>
+            <td style="text-align: right;">Rs. 245,298.37</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">Rs. -1,682.92</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.69%</td>
+            <td style="text-align: center;">Rank 9</td>
+        </tr>
+        
+        <tr style="">
+            <td>T+10</td>
+            <td style="text-align: right;">Rs. 297,410.47</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">Rs. -2,417.71</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.81%</td>
+            <td style="text-align: center;">Rank 10</td>
+        </tr>
+        
+        <tr style="">
+            <td>T+9</td>
+            <td style="text-align: right;">Rs. 281,249.02</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">Rs. -2,459.53</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.87%</td>
+            <td style="text-align: center;">Rank 11</td>
+        </tr>
+        
+        <tr style="">
+            <td>T+8</td>
+            <td style="text-align: right;">Rs. 269,776.14</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">Rs. -2,531.89</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.94%</td>
+            <td style="text-align: center;">Rank 12</td>
+        </tr>
+        
+        <tr style="">
+            <td>T+12</td>
+            <td style="text-align: right;">Rs. 308,102.88</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">Rs. -3,734.74</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.21%</td>
+            <td style="text-align: center;">Rank 13</td>
+        </tr>
+        
+        <tr style="">
+            <td>T+7</td>
+            <td style="text-align: right;">Rs. 274,254.27</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">Rs. -3,458.42</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.26%</td>
+            <td style="text-align: center;">Rank 14</td>
+        </tr>
+        
+        <tr style="">
+            <td>T+11</td>
+            <td style="text-align: right;">Rs. 290,259.03</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">Rs. -3,975.46</td>
+            <td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.37%</td>
+            <td style="text-align: center;">Rank 15</td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+        
+        <footer>
+            <span>Nifty 50 Short Selling Past Year Optimization Report</span>
+            <span>Page 1</span>
+        </footer>
+    </div>
+
+    <!-- PAGE 2: QUARTERLY BREAKDOWN MATRIX -->
+    <div class="page">
+        <header>
+            <h1>Quarterly Performance Matrix</h1>
+            <div class="subtitle">Short Selling Return (%) Breakdown Across Quarters (T+1 to T+15)</div>
+        </header>
+        
+        <h3 style="margin-top: 5px; margin-bottom: 5px; color: #7f1d1d; font-size: 11px; text-transform: uppercase;">Quarterly Return Matrix Table</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Exit Offset</th>
+                    <th>Q2 2026-27</th><th>FY25-26Q4</th><th>FY25-26Q3</th><th>FY25-26Q2</th><th>FY25-26Q1</th><th>FY24-25Q4</th><th>FY24-25Q3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><th>T+1</th><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.37%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.30%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.69%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+1.68%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.04%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+1.93%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+5.57%</td></tr><tr><th>T+2</th><td style="text-align: right; color: #b91c1c; font-weight: bold;">-4.66%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.46%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.33%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+1.51%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.16%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.70%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+5.61%</td></tr><tr><th>T+3</th><td style="text-align: right; color: #b91c1c; font-weight: bold;">-4.29%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.95%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.12%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+1.86%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.22%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.17%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+4.49%</td></tr><tr><th>T+4</th><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.95%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.93%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.47%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+1.61%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.02%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.38%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+5.06%</td></tr><tr><th>T+5</th><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.58%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.08%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.49%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+1.06%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.27%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.22%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+4.69%</td></tr><tr><th>T+6</th><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.76%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.74%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.82%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.83%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.06%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.02%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+5.05%</td></tr><tr><th>T+7</th><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.73%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.57%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.06%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.29%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-0.84%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.24%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+4.94%</td></tr><tr><th>T+8</th><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.56%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.78%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.40%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.34%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.36%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.72%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+5.84%</td></tr><tr><th>T+9</th><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.76%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.15%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.85%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.52%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.35%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.87%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+5.61%</td></tr><tr><th>T+10</th><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.52%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.81%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.28%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.66%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.11%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+1.18%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+5.25%</td></tr><tr><th>T+11</th><td style="text-align: right; color: #b91c1c; font-weight: bold;">-4.00%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.64%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.16%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.50%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.53%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+1.25%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+5.45%</td></tr><tr><th>T+12</th><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.70%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.46%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.03%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.52%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.70%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+1.52%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+5.63%</td></tr><tr><th>T+13</th><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.45%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.61%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.72%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.60%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.74%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+1.94%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+6.50%</td></tr><tr><th>T+14</th><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.62%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.60%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.11%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.72%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.53%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+1.75%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+6.13%</td></tr><tr><th>T+15</th><td style="text-align: right; color: #b91c1c; font-weight: bold;">-3.34%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-1.55%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.02%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+0.39%</td><td style="text-align: right; color: #b91c1c; font-weight: bold;">-2.92%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+1.90%</td><td style="text-align: right; color: #15803d; font-weight: bold;">+6.85%</td></tr>
+            </tbody>
+        </table>
+        
+        <div style="background-color: #fef2f2; border: 1px solid #fca5a5; padding: 8px; border-radius: 4px; font-size: 9px; margin-top: 10px; color: #7f1d1d;">
+            <strong>Analysis Insight:</strong> The optimal uniform exit day across the entire past year is <strong>T+1</strong>, yielding an overall return of <strong>1.02%</strong> on a required capital of <strong>Rs. 189,851.85</strong>. However, looking at the matrix, returns vary significantly by quarter, indicating that market regimes heavily affect short-selling performance.
+        </div>
+        
+        <footer>
+            <span>Nifty 50 Short Selling Past Year Optimization Report</span>
+            <span>Page 2</span>
+        </footer>
+    </div>
+
+</body>
+</html>
