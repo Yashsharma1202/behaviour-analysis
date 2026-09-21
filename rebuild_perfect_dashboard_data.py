@@ -118,10 +118,8 @@ for sym, meta in meta_17q.items():
         en_date = f"T - {meta['lead']} trading days"
         ex_date = f"T + {meta['hold']} trading days"
 
-    # Expected Return is empirically positive based on direction
+    # Expected Return is the trader's expected strategy yield (positive for both LONG and SHORT)
     exp_ret_pct = round(abs(meta['exp_pnl_1lot']) / meta['margin'] * 100 * 0.20, 2)
-    if meta['direction'] == 'SHORT':
-        exp_ret_pct = -exp_ret_pct
 
     active_q3_stocks.append({
         "symbol": sym,
