@@ -636,17 +636,21 @@
 
     <!-- Master Navigation Tabs -->
     <div class="tabs-nav">
-      <button class="tab-btn active" onclick="switchTab('quarterly')">
-        <span>⚡ Futures & F&O</span>
+      <button class="tab-btn active" onclick="switchTab('nifty-index')">
+        <span>⚡ Nifty Futures Index</span>
+        <span class="tab-badge" style="background:#2563EB; color:#FFF;">26Y FULL DATA</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab('holidays')">
+        <span>🏖️ Stock Holidays (50)</span>
+        <span class="tab-badge badge-urgent">STARTS TOMORROW</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab('quarterly')">
+        <span>📊 Futures & F&O Earnings</span>
         <span class="tab-badge badge-active">DERIVATIVES</span>
       </button>
       <button class="tab-btn" onclick="switchTab('equity')">
-        <span>📈 Cash Equity</span>
+        <span>📈 Cash Equity Earnings</span>
         <span class="tab-badge badge-count">SPOT / CNC</span>
-      </button>
-      <button class="tab-btn" onclick="switchTab('holidays')">
-        <span>🏖️ Holiday Trading</span>
-        <span class="tab-badge badge-urgent">STARTS TOMORROW</span>
       </button>
       <button class="tab-btn" onclick="switchTab('rbi')">
         <span>🏦 RBI Monetary Policy</span>
@@ -658,8 +662,138 @@
       </button>
     </div>
 
+    <!-- TAB 0: NIFTY FUTURES INDEX (26-YEAR EMPIRICAL HOLIDAY BEHAVIORAL ENGINE) -->
+    <div id="tab-nifty-index" class="tab-content">
+      
+      <!-- Top Banner with Data Stats -->
+      <div class="timing-banner" style="background: linear-gradient(90deg, rgba(37, 99, 235, 0.2) 0%, rgba(30, 27, 75, 0.4) 100%); border-left-color: #3B82F6;">
+        <div>
+          <strong style="color: #60A5FA; font-size: 0.95rem;">⚡ NIFTY 50 FUTURES INDEX — Dedicated Continuous Contract Behavioral Engine</strong>
+          <p style="color: #E2E8F0;">
+            Institutional empirical seasonal analysis across all 17 NSE Market Holidays using the full 26-year continuous Nifty Futures dataset (2000–2026, 6,473 daily bars).
+          </p>
+        </div>
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <a href="Nifty_Futures_Index_Holiday_Behaviour_Master_2000_2026.xlsx" download class="filter-pill" style="background:#10B981; color:#FFF; border:none; text-decoration:none; font-weight:700; padding:0.45rem 1rem; display:inline-flex; align-items:center; gap:0.4rem;">
+            <span>📊 Download 26Y Master (.xlsx)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Key Quantitative Highlights -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.85rem; margin-bottom: 1.25rem;">
+        <div class="card" style="padding: 0.85rem 1rem; margin-bottom: 0;">
+          <div style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; font-weight: 700;">Dataset Scope</div>
+          <div style="font-size: 1.2rem; font-weight: 800; color: #38BDF8; font-family: 'JetBrains Mono';">2000–2026</div>
+          <div style="font-size: 0.7rem; color: #64748B;">6,473 Trading Days · Continuous</div>
+        </div>
+        <div class="card" style="padding: 0.85rem 1rem; margin-bottom: 0;">
+          <div style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; font-weight: 700;">Contract Specifications</div>
+          <div style="font-size: 1.2rem; font-weight: 800; color: #F1F5F9; font-family: 'JetBrains Mono';">25 Qty / Lot</div>
+          <div style="font-size: 0.7rem; color: #64748B;">SPAN Margin ~₹1,25,000 / Lot</div>
+        </div>
+        <div class="card" style="padding: 0.85rem 1rem; margin-bottom: 0;">
+          <div style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; font-weight: 700;">Peak Win Rate</div>
+          <div style="font-size: 1.2rem; font-weight: 800; color: #34D399; font-family: 'JetBrains Mono';">88.5%</div>
+          <div style="font-size: 0.7rem; color: #64748B;">Diwali Pre-Rally (T-4 to T+3)</div>
+        </div>
+        <div class="card" style="padding: 0.85rem 1rem; margin-bottom: 0;">
+          <div style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; font-weight: 700;">Highest Cumulative Edge</div>
+          <div style="font-size: 1.2rem; font-weight: 800; color: #FBBF24; font-family: 'JetBrains Mono';">+5,660.7 Pts</div>
+          <div style="font-size: 0.7rem; color: #64748B;">Good Friday (+₹1.41 Lakh/lot)</div>
+        </div>
+        <div class="card" style="padding: 0.85rem 1rem; margin-bottom: 0;">
+          <div style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; font-weight: 700;">Immediate Trigger</div>
+          <div style="font-size: 1.2rem; font-weight: 800; color: #EF4444; font-family: 'JetBrains Mono';">02-Oct (Gandhi)</div>
+          <div style="font-size: 0.7rem; color: #64748B;">T-6 Entry: Thu 24-Sep · LONG</div>
+        </div>
+      </div>
+
+      <!-- Master Holiday Selector Table for NIFTY FUTURES INDEX -->
+      <div class="card" style="padding: 1rem 1.15rem; margin-bottom: 1.25rem;">
+        <div class="card-title-group" style="margin-bottom: 0.85rem;">
+          <h2>🏖️ Nifty Futures Index — Market Holidays Master Event Table</h2>
+          <p>Click on any holiday row to load its 26-year historical Nifty Futures trade-by-trade audit log and position taking playbook below.</p>
+        </div>
+        
+        <div class="table-container">
+          <table class="event-master-table">
+            <thead>
+              <tr>
+                <th style="width:28px;">#</th>
+                <th>Holiday Occasion</th>
+                <th>2026 Holiday Date</th>
+                <th>Category</th>
+                <th>Optimal Window</th>
+                <th>Recommended Direction</th>
+                <th>26Y Win Rate</th>
+                <th>Avg Return (%)</th>
+                <th>Avg Points / Trade</th>
+                <th>Cumulative 26Y Points</th>
+                <th>Profit Factor</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="nifty-index-master-tbody">
+              <!-- Dynamically populated via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Selected Holiday Position Taking & Execution Playbook for NIFTY FUTURES -->
+      <div class="card" style="padding: 1rem 1.15rem; margin-bottom: 1.25rem; border: 1px solid rgba(59, 130, 246, 0.3);">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+          <div>
+            <h2 id="nifty-selected-heading" style="font-family: 'Outfit'; font-size: 1.2rem; font-weight: 700; color: #FFF; margin: 0 0 0.25rem 0;">
+              Mahatma Gandhi Jayanti (2-Oct-2026) 26-Year Nifty Futures Position Taking Playbook
+            </h2>
+            <p id="nifty-selected-subheading" style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">
+              Empirical backtest across 26 years of continuous Nifty Futures contract history (2000–2026).
+            </p>
+          </div>
+          <div style="display: flex; gap: 0.5rem; align-items: center;">
+            <button class="filter-pill active" id="nifty-filter-all" onclick="setNiftyTradeFilter('all', this)">All Years</button>
+            <button class="filter-pill" id="nifty-filter-win" onclick="setNiftyTradeFilter('WIN', this)">🟢 Wins Only</button>
+            <button class="filter-pill" id="nifty-filter-loss" onclick="setNiftyTradeFilter('LOSS', this)">🔴 Losses Only</button>
+          </div>
+        </div>
+
+        <!-- Selected Holiday Order Ticket Card -->
+        <div id="nifty-order-ticket-card" style="margin-bottom: 1rem;">
+          <!-- Dynamically populated via JS -->
+        </div>
+
+        <!-- Year-by-Year Historical Execution Table for Nifty Futures -->
+        <div class="table-container" style="max-height: 480px; overflow-y: auto;">
+          <table class="event-master-table">
+            <thead>
+              <tr>
+                <th style="width: 50px;">Year</th>
+                <th>Holiday Date</th>
+                <th>Strategy Bias</th>
+                <th>Execution Window</th>
+                <th>Position Entry (09:20 AM)</th>
+                <th>Entry Price (₹)</th>
+                <th>Position Exit (03:15 PM)</th>
+                <th>Exit Price (₹)</th>
+                <th>Points P&L</th>
+                <th>Return (%)</th>
+                <th>1-Lot P&L (₹)</th>
+                <th>Outcome</th>
+              </tr>
+            </thead>
+            <tbody id="nifty-trades-tbody">
+              <!-- Dynamically populated via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
     <!-- TAB 1: FUTURES & F&O RESULTS -->
-    <div id="tab-quarterly" class="tab-content">
+    <div id="tab-quarterly" class="tab-content" style="display:none;">
       
       <!-- Segment Switcher Header -->
       <div class="seg-switch-bar">
@@ -1080,78 +1214,6 @@
         <button class="filter-pill active" style="background:#EF4444; color:#FFF; border:none;" onclick="selectHolidayRow('gandhi_2026')">View 2-Oct Setups</button>
       </div>
 
-      <!-- NIFTY 50 FUTURES INDEX: 26-YEAR FULL-HISTORY EMPIRICAL PLAYBOOK -->
-      <div class="card" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; border: 1px solid rgba(59, 130, 246, 0.4); background: linear-gradient(180deg, rgba(14, 22, 38, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);">
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.85rem;">
-          <div>
-            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.25rem;">
-              <span style="background: #2563EB; color: #FFF; font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;">Continuous Contract History</span>
-              <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.35rem; font-weight: 700; color: #FFF; margin: 0;">⚡ NIFTY 50 FUTURES INDEX — 26-Year Empirical Holiday Behavioral Engine (2000–2026)</h2>
-            </div>
-            <p style="color: var(--text-muted); font-size: 0.82rem; margin: 0;">
-              Exhaustive T-n to T+m backtests on continuous Nifty Futures (6,473 daily bars) across all 17 NSE Market Holidays.
-            </p>
-          </div>
-          <div style="display: flex; align-items: center; gap: 0.75rem;">
-            <a href="Nifty_Futures_Index_Holiday_Behaviour_Master_2000_2026.xlsx" download class="btn-select-event" style="background: #10B981; color: #FFF; text-decoration: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.5rem;">
-              <span>📊 Download 26Y Master (.xlsx)</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Metric Highlights Banner -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.85rem; margin-bottom: 1.25rem;">
-          <div style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 0.75rem 1rem;">
-            <div style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; font-weight: 600;">Data Range</div>
-            <div style="font-size: 1.15rem; font-weight: 800; color: #38BDF8; font-family: 'JetBrains Mono', monospace;">2000–2026</div>
-            <div style="font-size: 0.7rem; color: #64748B;">6,473 Daily Bars · 26 Years</div>
-          </div>
-          <div style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 0.75rem 1rem;">
-            <div style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; font-weight: 600;">Historical Trades</div>
-            <div style="font-size: 1.15rem; font-weight: 800; color: #F1F5F9; font-family: 'JetBrains Mono', monospace;">436 Windows</div>
-            <div style="font-size: 0.7rem; color: #64748B;">Across All 17 Holidays</div>
-          </div>
-          <div style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 0.75rem 1rem;">
-            <div style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; font-weight: 600;">Peak Win Rate</div>
-            <div style="font-size: 1.15rem; font-weight: 800; color: #34D399; font-family: 'JetBrains Mono', monospace;">88.5% (Diwali)</div>
-            <div style="font-size: 0.7rem; color: #64748B;">88.0% (Ganesh Chaturthi)</div>
-          </div>
-          <div style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 0.75rem 1rem;">
-            <div style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; font-weight: 600;">Highest Cumulative Edge</div>
-            <div style="font-size: 1.15rem; font-weight: 800; color: #FBBF24; font-family: 'JetBrains Mono', monospace;">+5,660.65 Pts</div>
-            <div style="font-size: 0.7rem; color: #64748B;">Good Friday (+₹1.41L / lot)</div>
-          </div>
-          <div style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 0.75rem 1rem;">
-            <div style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; font-weight: 600;">Contract Specifications</div>
-            <div style="font-size: 1.15rem; font-weight: 800; color: #A78BFA; font-family: 'JetBrains Mono', monospace;">25 Qty / Lot</div>
-            <div style="font-size: 0.7rem; color: #64748B;">SPAN Margin ~₹1,25,000</div>
-          </div>
-        </div>
-
-        <div class="table-container" style="max-height: 480px; overflow-y: auto;">
-          <table class="event-master-table">
-            <thead>
-              <tr>
-                <th style="width: 28px;">#</th>
-                <th>Holiday Occasion</th>
-                <th>Category</th>
-                <th>Optimal Window</th>
-                <th>Recommended Direction</th>
-                <th>26Y Win Rate</th>
-                <th>Avg Return (%)</th>
-                <th>Avg Points / Trade</th>
-                <th>Cumulative 26Y Points</th>
-                <th>Profit Factor</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody id="nifty-futures-holiday-tbody">
-              <!-- Populated dynamically by JavaScript -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-
       <!-- Holiday Events in TABULAR FORM -->
       <div class="card" style="padding: 1rem 1.15rem; margin-bottom: 1.25rem;">
         <div class="card-title-group" style="margin-bottom: 0.85rem;">
@@ -1388,6 +1450,8 @@
     let currentHolidayFilter = 'all';
 
     let niftyFuturesHolidayData = null;
+    let currentNiftyHolidayId = 'gandhi';
+    let currentNiftyTradeFilter = 'all';
 
     async function loadData() {
       try {
@@ -1415,6 +1479,12 @@
 
       if (tabId === 'equity') renderEquityTable();
       if (tabId === 'quarterly') renderQuarterTable();
+      if (tabId === 'holidays') renderHolidayTable();
+      if (tabId === 'rbi') renderRbiTable();
+      if (tabId === 'nifty-index') {
+        renderNiftyFuturesMasterTable();
+        renderNiftySelectedHolidayPlaybook();
+      }
     }
 
     function selectEquityQuarterRow(qCode, rowElement) {
@@ -1841,27 +1911,30 @@
       try {
         const res = await fetch('dashboard_data/nifty_futures_holiday_behaviour.json');
         niftyFuturesHolidayData = await res.json();
-        renderNiftyFuturesHolidayTable();
+        renderNiftyFuturesMasterTable();
+        renderNiftySelectedHolidayPlaybook();
       } catch (err) {
         console.warn('Failed to load nifty_futures_holiday_behaviour.json', err);
       }
     }
 
-    function renderNiftyFuturesHolidayTable() {
-      const tbody = document.getElementById('nifty-futures-holiday-tbody');
+    function renderNiftyFuturesMasterTable() {
+      const tbody = document.getElementById('nifty-index-master-tbody');
       if (!tbody || !niftyFuturesHolidayData || !niftyFuturesHolidayData.holidays) return;
 
       tbody.innerHTML = '';
       niftyFuturesHolidayData.holidays.forEach((h, idx) => {
+        const isSelected = h.id === currentNiftyHolidayId;
         const tr = document.createElement('tr');
         tr.style.cursor = 'pointer';
-        tr.className = 'event-master-row';
-        tr.onclick = () => showNiftyHolidayModal(h.id);
+        tr.className = 'event-master-row' + (isSelected ? ' selected' : '');
+        tr.id = 'nifty-hrow-' + h.id;
+        tr.onclick = () => selectNiftyHoliday(h.id, tr);
 
         const isLong = h.direction === 'LONG';
         const dirBadge = isLong 
-          ? `<span class="badge-long" style="font-weight:700;">🟢 NIFTY LONG</span>`
-          : `<span class="badge-short" style="font-weight:700;">🔴 NIFTY SHORT</span>`;
+          ? `<span class="badge-long" style="font-weight:700;">▲ NIFTY LONG</span>`
+          : `<span class="badge-short" style="font-weight:700;">▼ NIFTY SHORT</span>`;
 
         tr.innerHTML = `
           <td><span style="color:#64748B; font-family:'JetBrains Mono'; font-size:0.75rem;">${idx + 1}</span></td>
@@ -1869,8 +1942,9 @@
             <strong style="color:#FFF;">${h.name}</strong>
             <div style="font-size:0.72rem; color:#94A3B8;">2026 Target: ${h['2026_date_str']}</div>
           </td>
+          <td><span class="date-badge date-confirmed">${h['2026_date_str']}</span></td>
           <td><span style="font-size:0.75rem; color:#CBD5E1;">${h.category}</span></td>
-          <td><strong style="color:#38BDF8; font-family:'JetBrains Mono'; font-size:0.8rem;">${h.optimal_window}</strong></td>
+          <td><span class="window-pill" style="color:#38BDF8; font-weight:700;">${h.optimal_window}</span></td>
           <td>${dirBadge}</td>
           <td>
             <span style="font-family:'JetBrains Mono'; font-weight:800; font-size:0.85rem; color:${h.win_rate >= 80 ? '#34D399' : (h.win_rate >= 70 ? '#6EE7B7' : '#FBBF24')};">
@@ -1889,8 +1963,8 @@
           </td>
           <td><span style="font-family:'JetBrains Mono'; font-size:0.8rem; color:#E2E8F0;">${h.profit_factor.toFixed(2)}</span></td>
           <td>
-            <button class="btn-select-event" onclick="event.stopPropagation(); showNiftyHolidayModal('${h.id}')">
-              View 26Y Audit
+            <button class="btn-select-event" onclick="event.stopPropagation(); selectNiftyHoliday('${h.id}', this.closest('tr'))">
+              ${isSelected ? '✓ Loaded Below' : 'View Playbook'}
             </button>
           </td>
         `;
@@ -1898,73 +1972,142 @@
       });
     }
 
-    function showNiftyHolidayModal(hId) {
-      if (!niftyFuturesHolidayData || !niftyFuturesHolidayData.holidays) return;
-      const h = niftyFuturesHolidayData.holidays.find(x => x.id === hId);
-      if (!h) return;
-
-      document.getElementById('m-title').innerHTML = `⚡ Nifty Futures Index — ${h.name} (${h.optimal_window})`;
-      
-      let rowsHtml = '';
-      h.trades.forEach(t => {
-        const isWin = t.outcome === 'WIN';
-        rowsHtml += `
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-            <td style="padding:6px 10px; font-weight:700; font-family:'JetBrains Mono'; color:#F1F5F9;">${t.year}</td>
-            <td style="padding:6px 10px; color:#94A3B8; font-size:0.8rem;">${t.holiday_date}</td>
-            <td style="padding:6px 10px; font-size:0.8rem; color:#CBD5E1;">${t.entry_date}</td>
-            <td style="padding:6px 10px; font-family:'JetBrains Mono'; color:#38BDF8;">₹${t.entry_price.toLocaleString('en-IN', {minimumFractionDigits:2})}</td>
-            <td style="padding:6px 10px; font-size:0.8rem; color:#CBD5E1;">${t.exit_date}</td>
-            <td style="padding:6px 10px; font-family:'JetBrains Mono'; color:#38BDF8;">₹${t.exit_price.toLocaleString('en-IN', {minimumFractionDigits:2})}</td>
-            <td style="padding:6px 10px; font-family:'JetBrains Mono'; font-weight:700; color:${isWin ? '#34D399' : '#F87171'};">
-              ${t.points >= 0 ? '+' : ''}${t.points.toFixed(2)} pts
-            </td>
-            <td style="padding:6px 10px; font-family:'JetBrains Mono'; color:${isWin ? '#34D399' : '#F87171'};">
-              ${t.ret_pct >= 0 ? '+' : ''}${t.ret_pct.toFixed(2)}%
-            </td>
-            <td style="padding:6px 10px; font-family:'JetBrains Mono'; font-weight:700; color:${isWin ? '#34D399' : '#F87171'};">
-              ${t.pnl_rs >= 0 ? '+₹' : '-₹'}${Math.abs(t.pnl_rs).toLocaleString('en-IN', {minimumFractionDigits:2})}
-            </td>
-            <td style="padding:6px 10px;">
-              <span class="${isWin ? 'badge-long' : 'badge-short'}" style="font-size:0.7rem; font-weight:800;">${t.outcome}</span>
-            </td>
-          </tr>
-        `;
+    function selectNiftyHoliday(hId, rowElement) {
+      currentNiftyHolidayId = hId;
+      document.querySelectorAll('#nifty-index-master-tbody .event-master-row').forEach(r => {
+        r.classList.remove('selected');
+        const btn = r.querySelector('.btn-select-event');
+        if (btn) btn.innerText = 'View Playbook';
       });
 
-      const bodyHtml = `
-        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1rem; background:rgba(30,41,59,0.5); padding:0.75rem; border-radius:8px;">
-          <div><span style="color:#94A3B8; font-size:0.75rem;">STRATEGY:</span> <strong style="color:#FFF;">NIFTY ${h.direction} (${h.optimal_window})</strong></div>
-          <div><span style="color:#94A3B8; font-size:0.75rem;">26Y WIN RATE:</span> <strong style="color:#34D399;">${h.win_rate}% (${h.wins}W / ${h.losses}L)</strong></div>
-          <div><span style="color:#94A3B8; font-size:0.75rem;">AVG RETURN:</span> <strong style="color:#38BDF8;">+${h.avg_return_pct}% (+${h.avg_points} pts)</strong></div>
-          <div><span style="color:#94A3B8; font-size:0.75rem;">CUMULATIVE P&L:</span> <strong style="color:#FBBF24;">+${h.tot_points} pts (+₹${h.tot_pnl_rs.toLocaleString('en-IN')} / lot)</strong></div>
-          <div><span style="color:#94A3B8; font-size:0.75rem;">PROFIT FACTOR:</span> <strong style="color:#FFF;">${h.profit_factor}</strong></div>
-        </div>
-        <div style="max-height:360px; overflow-y:auto; border:1px solid rgba(255,255,255,0.08); border-radius:6px;">
-          <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.8rem;">
-            <thead style="background:#1E293B; position:sticky; top:0; z-index:10;">
-              <tr>
-                <th style="padding:8px 10px; color:#94A3B8;">Year</th>
-                <th style="padding:8px 10px; color:#94A3B8;">Holiday Date</th>
-                <th style="padding:8px 10px; color:#94A3B8;">Entry Date</th>
-                <th style="padding:8px 10px; color:#94A3B8;">Entry Price</th>
-                <th style="padding:8px 10px; color:#94A3B8;">Exit Date</th>
-                <th style="padding:8px 10px; color:#94A3B8;">Exit Price</th>
-                <th style="padding:8px 10px; color:#94A3B8;">Points P&L</th>
-                <th style="padding:8px 10px; color:#94A3B8;">Return (%)</th>
-                <th style="padding:8px 10px; color:#94A3B8;">1-Lot P&L (₹)</th>
-                <th style="padding:8px 10px; color:#94A3B8;">Outcome</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${rowsHtml}
-            </tbody>
-          </table>
-        </div>
-      `;
+      const selectedRow = rowElement || document.getElementById('nifty-hrow-' + hId);
+      if (selectedRow) {
+        selectedRow.classList.add('selected');
+        const activeBtn = selectedRow.querySelector('.btn-select-event');
+        if (activeBtn) activeBtn.innerText = '✓ Loaded Below';
+      }
 
-      document.getElementById('m-body').innerHTML = bodyHtml;
-      document.getElementById('stock-modal').classList.add('active');
+      renderNiftySelectedHolidayPlaybook();
+    }
+
+    function setNiftyTradeFilter(filter, el) {
+      currentNiftyTradeFilter = filter;
+      document.querySelectorAll('#tab-nifty-index .filter-pill').forEach(b => b.classList.remove('active'));
+      if (el) el.classList.add('active');
+      renderNiftySelectedHolidayPlaybook();
+    }
+
+    function renderNiftySelectedHolidayPlaybook() {
+      if (!niftyFuturesHolidayData || !niftyFuturesHolidayData.holidays) return;
+      const h = niftyFuturesHolidayData.holidays.find(x => x.id === currentNiftyHolidayId) || niftyFuturesHolidayData.holidays[0];
+      if (!h) return;
+
+      const heading = document.getElementById('nifty-selected-heading');
+      if (heading) {
+        heading.innerHTML = `${h.name} (${h['2026_date_str']}) &mdash; 26-Year Continuous Nifty Futures Position Taking Playbook`;
+      }
+
+      const subheading = document.getElementById('nifty-selected-subheading');
+      if (subheading) {
+        subheading.innerHTML = `${h.desc} &bull; Continuous 26-Year Front-Month Contract (2000–2026) &bull; Optimal Window: <strong style="color:#38BDF8;">${h.optimal_window}</strong> (${h.direction})`;
+      }
+
+      const ticketCard = document.getElementById('nifty-order-ticket-card');
+      if (ticketCard) {
+        const isLong = h.direction === 'LONG';
+        const dirColor = isLong ? '#34D399' : '#F87171';
+        ticketCard.innerHTML = `
+          <div style="background: rgba(14, 22, 38, 0.75); border: 1px solid rgba(59, 130, 246, 0.35); border-radius: 12px; padding: 1.25rem; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+              <div style="background: var(--surface-light); padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid var(--surface-border);">
+                <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 0.25rem;">Continuous Bias & Model Direction</div>
+                <div style="font-size: 1.25rem; font-weight: 800; color: ${dirColor}; display: flex; align-items: center; gap: 0.5rem;">
+                  <span>${isLong ? '▲ NIFTY LONG' : '▼ NIFTY SHORT'}</span>
+                  <span style="font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; background: ${isLong ? 'rgba(16,185,129,0.2)' : 'rgba(239,68,68,0.2)'}; color: ${dirColor}; font-family:'JetBrains Mono';">${h.optimal_window}</span>
+                </div>
+                <div style="font-size: 0.72rem; color: #94A3B8; margin-top: 0.25rem;">Lead T-${h.lead_n} trading days to Lag T+${h.lag_m} days</div>
+              </div>
+              
+              <div style="background: var(--surface-light); padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid var(--surface-border);">
+                <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 0.25rem;">2026 Target Execution Timing</div>
+                <div style="font-size: 0.92rem; font-weight: 700; color: #60A5FA;">
+                  Entry: <span style="color:#FFF;">${h.upcoming_entry}</span> <span style="font-size:0.75rem; color:#60A5FA;">⏰ 09:20 AM</span>
+                </div>
+                <div style="font-size: 0.92rem; font-weight: 700; color: #94A3B8; margin-top: 0.25rem;">
+                  Exit: <span style="color:#FFF;">${h.upcoming_exit}</span> <span style="font-size:0.75rem; color:#94A3B8;">⏰ 03:15 PM</span>
+                </div>
+              </div>
+
+              <div style="background: var(--surface-light); padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid var(--surface-border);">
+                <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 0.25rem;">Nifty Contract Margin Specs</div>
+                <div style="font-size: 1.15rem; font-weight: 800; color: #F1F5F9; font-family: 'JetBrains Mono';">25 Qty / Lot</div>
+                <div style="font-size: 0.75rem; color: #38BDF8; margin-top: 0.25rem;">SPAN Margin: ~₹1,25,000 / Lot</div>
+              </div>
+
+              <div style="background: var(--surface-light); padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid var(--surface-border);">
+                <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 0.25rem;">26-Year Empirical Track Record</div>
+                <div style="font-size: 1.25rem; font-weight: 800; color: #34D399; font-family: 'JetBrains Mono';">
+                  ${h.win_rate.toFixed(1)}% <span style="font-size:0.75rem; color:#94A3B8; font-weight:500;">(${h.wins}W / ${h.losses}L)</span>
+                </div>
+                <div style="font-size: 0.75rem; color: #FBBF24; margin-top: 0.25rem;">
+                  +${h.tot_points.toLocaleString('en-IN', {minimumFractionDigits: 1})} pts (+₹${h.tot_pnl_rs.toLocaleString('en-IN')} / lot)
+                </div>
+              </div>
+            </div>
+
+            <div style="background: ${isLong ? 'rgba(16, 185, 129, 0.12)' : 'rgba(239, 68, 68, 0.12)'}; border-left: 4px solid ${dirColor}; border-radius: 6px; padding: 0.75rem 1rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+              <div>
+                <strong style="color: ${dirColor}; font-size: 0.85rem;">⚡ NIFTY FUTURES INSTITUTIONAL PROTOCOL:</strong>
+                <span style="color: #E2E8F0; font-size: 0.82rem; margin-left: 0.5rem;">
+                  ${isLong 
+                    ? `Enter Near-Month NIFTY Futures BUY or ATM/ITM Call Option at <strong>09:20 AM</strong> on <strong>${h.upcoming_entry}</strong>. Square off position at <strong>03:15 PM</strong> on <strong>${h.upcoming_exit}</strong>.`
+                    : `Enter Near-Month NIFTY Futures SHORT or ATM/ITM Put Option at <strong>09:20 AM</strong> on <strong>${h.upcoming_entry}</strong>. Square off position at <strong>03:15 PM</strong> on <strong>${h.upcoming_exit}</strong>.`}
+                </span>
+              </div>
+              <div style="font-family: 'JetBrains Mono'; font-size: 0.75rem; color: #94A3B8;">
+                Max Streak: <strong style="color:#FFF;">${h.max_win_streak}W</strong> &bull; Profit Factor: <strong style="color:#FFF;">${h.profit_factor.toFixed(2)}</strong> &bull; Max DD: <strong style="color:#F87171;">-${h.max_dd_points.toFixed(1)} pts</strong>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      const tbody = document.getElementById('nifty-trades-tbody');
+      if (!tbody || !h.trades) return;
+      tbody.innerHTML = '';
+
+      h.trades.forEach(t => {
+        if (currentNiftyTradeFilter === 'WIN' && t.outcome !== 'WIN') return;
+        if (currentNiftyTradeFilter === 'LOSS' && t.outcome !== 'LOSS') return;
+
+        const isWin = t.outcome === 'WIN';
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong style="font-family:'JetBrains Mono'; color:#F1F5F9;">${t.year}</strong></td>
+          <td style="color:#94A3B8; font-size:0.8rem;">${t.holiday_date}</td>
+          <td><span class="${h.direction === 'LONG' ? 'badge-long' : 'badge-short'}" style="font-size:0.72rem; padding:0.15rem 0.45rem;">${h.direction}</span></td>
+          <td><span class="window-pill" style="font-size:0.75rem;">${h.optimal_window}</span></td>
+          <td><span class="date-badge date-confirmed">${t.entry_date}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span></td>
+          <td style="font-family:'JetBrains Mono'; color:#38BDF8; font-weight:600;">₹${t.entry_price.toLocaleString('en-IN', {minimumFractionDigits:2, maximumFractionDigits:2})}</td>
+          <td><span class="date-badge">${t.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem;">⏰ 03:15 PM</small></span></td>
+          <td style="font-family:'JetBrains Mono'; color:#38BDF8; font-weight:600;">₹${t.exit_price.toLocaleString('en-IN', {minimumFractionDigits:2, maximumFractionDigits:2})}</td>
+          <td style="font-family:'JetBrains Mono'; font-weight:700; color:${isWin ? '#34D399' : '#F87171'};">
+            ${t.points >= 0 ? '+' : ''}${t.points.toFixed(2)} pts
+          </td>
+          <td style="font-family:'JetBrains Mono'; font-weight:700; color:${isWin ? '#34D399' : '#F87171'};">
+            ${t.ret_pct >= 0 ? '+' : ''}${t.ret_pct.toFixed(2)}%
+          </td>
+          <td style="font-family:'JetBrains Mono'; font-weight:700; color:${isWin ? '#34D399' : '#F87171'};">
+            ${t.pnl_rs >= 0 ? '+₹' : '-₹'}${Math.abs(t.pnl_rs).toLocaleString('en-IN', {minimumFractionDigits:2, maximumFractionDigits:2})}
+          </td>
+          <td>
+            <span class="${isWin ? 'badge-long' : 'badge-short'}" style="font-size:0.72rem; font-weight:800;">
+              ${t.outcome}
+            </span>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
     }
 
     function openStockModal(stock, type) {
