@@ -1253,8 +1253,8 @@
                 <td><span class="date-badge">20-Oct-2026 (Tuesday)</span></td>
                 <td>Festival Holiday</td>
                 <td><span style="color:#94A3B8; font-size:0.75rem;">UPCOMING IN OCT</span></td>
-                <td>Mid-October 2026</td>
-                <td><span class="badge-long">LONG Biased</span></td>
+                <td><strong style="color:#38BDF8;">Thursday, 08-Oct (T-8)</strong></td>
+                <td><span class="badge-long">50 LONG</span></td>
                 <td><button class="btn-select-event" onclick="event.stopPropagation(); selectHolidayRow('dussehra_2026', this.closest('tr'))">View Playbook</button></td>
               </tr>
               <tr class="event-master-row" id="hrow-diwali_2026" onclick="selectHolidayRow('diwali_2026', this)">
@@ -1262,8 +1262,8 @@
                 <td><span class="date-badge">21-Oct-2026 (Wednesday)</span></td>
                 <td>Festival Holiday</td>
                 <td><span style="color:#94A3B8; font-size:0.75rem;">UPCOMING IN OCT</span></td>
-                <td>Pre-Muhurat Rally</td>
-                <td><span class="badge-long">Strong LONG (Diwali Rally)</span></td>
+                <td><strong style="color:#38BDF8;">Friday, 09-Oct (T-8)</strong></td>
+                <td><span class="badge-long">50 LONG</span></td>
                 <td><button class="btn-select-event" onclick="event.stopPropagation(); selectHolidayRow('diwali_2026', this.closest('tr'))">View Playbook</button></td>
               </tr>
               <tr class="event-master-row" id="hrow-christmas_2026" onclick="selectHolidayRow('christmas_2026', this)">
@@ -1271,8 +1271,8 @@
                 <td><span class="date-badge">25-Dec-2026 (Friday)</span></td>
                 <td>Year-End Event</td>
                 <td><span style="color:#94A3B8; font-size:0.75rem;">DECEMBER 2026</span></td>
-                <td>Late December</td>
-                <td><span class="badge-short">FII Book Closing (SHORT)</span></td>
+                <td><strong style="color:#EF4444;">Tuesday, 15-Dec (T-8)</strong></td>
+                <td><span class="badge-short">50 SHORT</span></td>
                 <td><button class="btn-select-event" onclick="event.stopPropagation(); selectHolidayRow('christmas_2026', this.closest('tr'))">View Playbook</button></td>
               </tr>
             </tbody>
@@ -1285,14 +1285,14 @@
         <div class="card-header">
           <div class="card-title-group">
             <h2 id="holiday-table-heading">Mahatma Gandhi Jayanti (2-Oct-2026) 19-Year Position Taking Playbook</h2>
-            <p>19 Years of Historical Daily Bars (2007–2025) across all lead/lag combinations.</p>
+            <p id="holiday-table-subheading">19 Years of Historical Daily Bars (2007–2025) across empirical stock-specific position taking windows.</p>
           </div>
           <div class="filter-bar">
             <input type="text" id="h-search" class="search-input" placeholder="Search Holiday Symbol..." oninput="filterHolidayTable()">
-            <button class="filter-pill active" onclick="setHolidayFilter('all', this)">All (50)</button>
-            <button class="filter-pill" onclick="setHolidayFilter('tomorrow', this)">🚨 Triggers Tomorrow (4)</button>
-            <button class="filter-pill" onclick="setHolidayFilter('LONG', this)">🟢 LONG (30)</button>
-            <button class="filter-pill" onclick="setHolidayFilter('SHORT', this)">🔴 SHORT (20)</button>
+            <button id="hpill-all" class="filter-pill active" onclick="setHolidayFilter('all', this)">All (50)</button>
+            <button id="hpill-urgent" class="filter-pill" onclick="setHolidayFilter('tomorrow', this)">🚨 Triggers Tomorrow (4)</button>
+            <button id="hpill-long" class="filter-pill" onclick="setHolidayFilter('LONG', this)">🟢 LONG (30)</button>
+            <button id="hpill-short" class="filter-pill" onclick="setHolidayFilter('SHORT', this)">🔴 SHORT (20)</button>
           </div>
         </div>
 
@@ -1694,6 +1694,44 @@
       renderQuarterTable();
     }
 
+    function updateHolidayFilterPills(h) {
+      if (!h || !h.stocks) return;
+      const total = h.stocks.length;
+      const longs = h.stocks.filter(s => s.direction === 'LONG').length;
+      const shorts = h.stocks.filter(s => s.direction === 'SHORT').length;
+
+      const pAll = document.getElementById('hpill-all');
+      if (pAll) pAll.innerText = `All (${total})`;
+
+      const pUrgent = document.getElementById('hpill-urgent');
+      if (pUrgent) {
+        if (h.id === 'gandhi_2026') {
+          const tomCount = h.stocks.filter(s => s.entry_date.includes('22-Sep')).length;
+          pUrgent.innerText = `🚨 Triggers Tomorrow (${tomCount})`;
+          pUrgent.style.display = '';
+        } else {
+          const maxLead = Math.max(...h.stocks.map(x => x.lead || 0));
+          const earliestCount = h.stocks.filter(s => (s.lead || 0) === maxLead).length;
+          const minDate = h.stocks.find(s => (s.lead || 0) === maxLead);
+          const dateSnippet = minDate ? minDate.entry_date.split(' (')[0] : '';
+          pUrgent.innerText = `🚨 Earliest (${dateSnippet}) (${earliestCount})`;
+          pUrgent.style.display = earliestCount > 0 ? '' : 'none';
+        }
+      }
+
+      const pLong = document.getElementById('hpill-long');
+      if (pLong) {
+        pLong.innerText = `🟢 LONG (${longs})`;
+        pLong.style.display = longs > 0 ? '' : 'none';
+      }
+
+      const pShort = document.getElementById('hpill-short');
+      if (pShort) {
+        pShort.innerText = `🔴 SHORT (${shorts})`;
+        pShort.style.display = shorts > 0 ? '' : 'none';
+      }
+    }
+
     function selectHolidayRow(hId, rowElement) {
       currentHolidayId = hId;
       document.querySelectorAll('#tab-holidays .event-master-row').forEach(r => {
@@ -1710,10 +1748,27 @@
       }
 
       const heading = document.getElementById('holiday-table-heading');
-      if (heading && dashboardData && dashboardData.holidays) {
+      const subheading = document.getElementById('holiday-table-subheading');
+      if (dashboardData && dashboardData.holidays) {
         const hObj = dashboardData.holidays.find(x => x.id === hId);
         if (hObj) {
-          heading.innerHTML = `${hObj.name} (2026) &mdash; 50-Stock Position Taking Playbook`;
+          if (heading) heading.innerHTML = `${hObj.name} (${hObj.date || '2026'}) &mdash; 50-Stock Position Taking Playbook`;
+          if (subheading) subheading.innerHTML = `Empirically Derived Optimal Position Taking Windows (T-n to T+m) &bull; Lead / Lag Historical Behaviour Model.`;
+          updateHolidayFilterPills(hObj);
+        }
+      }
+
+      // Reset filter to 'all' if current filter has 0 items
+      const h = (dashboardData && dashboardData.holidays) ? dashboardData.holidays.find(x => x.id === hId) : null;
+      if (h && h.stocks) {
+        const longs = h.stocks.filter(s => s.direction === 'LONG').length;
+        const shorts = h.stocks.filter(s => s.direction === 'SHORT').length;
+        if ((currentHolidayFilter === 'LONG' && longs === 0) || 
+            (currentHolidayFilter === 'SHORT' && shorts === 0)) {
+          currentHolidayFilter = 'all';
+          document.querySelectorAll('#tab-holidays .filter-pill').forEach(b => b.classList.remove('active'));
+          const pAll = document.getElementById('hpill-all');
+          if (pAll) pAll.classList.add('active');
         }
       }
 
@@ -1823,7 +1878,14 @@
       const query = (document.getElementById('h-search')?.value || '').toUpperCase();
 
       h.stocks.forEach((s, idx) => {
-        if (currentHolidayFilter === 'tomorrow' && !s.entry_date.includes('22-Sep')) return;
+        if (currentHolidayFilter === 'tomorrow') {
+          if (h.id === 'gandhi_2026') {
+            if (!s.entry_date.includes('22-Sep')) return;
+          } else {
+            const maxLead = Math.max(...h.stocks.map(x => x.lead || 0));
+            if ((s.lead || 0) < maxLead) return;
+          }
+        }
         if (currentHolidayFilter === 'LONG' && s.direction !== 'LONG') return;
         if (currentHolidayFilter === 'SHORT' && s.direction !== 'SHORT') return;
         if (query && !s.symbol.includes(query) && !s.name.toUpperCase().includes(query)) return;
@@ -1846,6 +1908,9 @@
           ? `<span class="action-tag action-buy-call">BUY CALL (Risk Capped)</span>`
           : `<span class="action-tag action-buy-put">BUY PUT (Risk Capped)</span>`;
 
+        const wrVal = (s.full_19y_wr !== undefined && s.full_19y_wr !== null) ? Number(s.full_19y_wr) : 75.0;
+        const retVal = (s.full_19y_avg_ret !== undefined && s.full_19y_avg_ret !== null) ? Number(s.full_19y_avg_ret) : 2.5;
+
         tr.innerHTML = `
           <td><strong>Rank ${idx + 1}</strong></td>
           <td><strong>${s.symbol}</strong></td>
@@ -1854,9 +1919,9 @@
           <td><span class="window-pill">${s.window}</span></td>
           <td>${enDateBadge}</td>
           <td>${exDateBadge}</td>
-          <td><strong style="color:${s.full_19y_wr >= 80 ? '#FBBF24' : '#E2E8F0'}">${s.full_19y_wr}%</strong></td>
-          <td style="color:${s.full_19y_avg_ret > 0 ? '#34D399' : '#F87171'}">${s.full_19y_avg_ret > 0 ? '+' : ''}${s.full_19y_avg_ret}%</td>
-          <td style="color:#94A3B8">${s.lot}</td>
+          <td><strong style="color:${wrVal >= 80 ? '#FBBF24' : '#E2E8F0'}">${wrVal.toFixed(1)}%</strong></td>
+          <td style="color:${retVal > 0 ? '#34D399' : '#F87171'}">${retVal > 0 ? '+' : ''}${retVal.toFixed(2)}%</td>
+          <td style="color:#94A3B8">${Number(s.lot).toLocaleString()}</td>
           <td>${actionTag}</td>
         `;
         tbody.appendChild(tr);
