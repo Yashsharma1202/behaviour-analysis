@@ -8,6 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   
+  <!-- Standalone Data Bundles (Guarantees 100% offline & file:// protocol execution) -->
+  <script src="dashboard_data/event_dashboard_data.js"></script>
+  <script src="dashboard_data/nifty_futures_holiday_behaviour.js"></script>
+  
   <style>
     :root {
       --bg-dark: #070B14;
@@ -636,27 +640,27 @@
 
     <!-- Master Navigation Tabs -->
     <div class="tabs-nav">
-      <button class="tab-btn active" onclick="switchTab('nifty-index')">
+      <button class="tab-btn active" id="tab-btn-nifty-index" onclick="switchTab('nifty-index')">
         <span>⚡ Nifty Futures Index</span>
         <span class="tab-badge" style="background:#2563EB; color:#FFF;">26Y FULL DATA</span>
       </button>
-      <button class="tab-btn" onclick="switchTab('holidays')">
+      <button class="tab-btn" id="tab-btn-holidays" onclick="switchTab('holidays')">
         <span>🏖️ Stock Holidays (50)</span>
         <span class="tab-badge badge-urgent">STARTS TOMORROW</span>
       </button>
-      <button class="tab-btn" onclick="switchTab('quarterly')">
+      <button class="tab-btn" id="tab-btn-quarterly" onclick="switchTab('quarterly')">
         <span>📊 Futures & F&O Earnings</span>
         <span class="tab-badge badge-active">DERIVATIVES</span>
       </button>
-      <button class="tab-btn" onclick="switchTab('equity')">
+      <button class="tab-btn" id="tab-btn-equity" onclick="switchTab('equity')">
         <span>📈 Cash Equity Earnings</span>
         <span class="tab-badge badge-count">SPOT / CNC</span>
       </button>
-      <button class="tab-btn" onclick="switchTab('rbi')">
+      <button class="tab-btn" id="tab-btn-rbi" onclick="switchTab('rbi')">
         <span>🏦 RBI Monetary Policy</span>
         <span class="tab-badge badge-count">2026 MPC</span>
       </button>
-      <button class="tab-btn" onclick="switchTab('custom')">
+      <button class="tab-btn" id="tab-btn-custom" onclick="switchTab('custom')">
         <span>➕ Custom Events Hub</span>
         <span class="tab-badge badge-count">EXTENSIBLE</span>
       </button>
@@ -1454,36 +1458,92 @@
     let currentNiftyTradeFilter = 'all';
 
     async function loadData() {
-      try {
-        const res = await fetch('dashboard_data/event_dashboard_data.json');
-        dashboardData = await res.json();
-      } catch (err) {
-        console.warn('Direct fetch failed, using window fallback');
+      // 1. Ingest Event Dashboard Data from window bundle or fetch
+      if (window.EVENT_DASHBOARD_DATA) {
+        dashboardData = window.EVENT_DASHBOARD_DATA;
+      } else {
+        try {
+          const res = await fetch('dashboard_data/event_dashboard_data.json');
+          if (res.ok) dashboardData = await res.json();
+        } catch (err) {
+          console.warn('Direct fetch failed, waiting for bundle', err);
+        }
       }
-      renderQuarterTable();
-      renderEquityTable();
-      renderHolidayTable();
-      renderRbiTable();
-      loadNiftyFuturesHolidayData();
+
+      // 2. Ingest Nifty Futures Holiday Data from window bundle or fetch
+      if (window.NIFTY_FUTURES_HOLIDAY_DATA) {
+        niftyFuturesHolidayData = window.NIFTY_FUTURES_HOLIDAY_DATA;
+      } else {
+        try {
+          const res = await fetch('dashboard_data/nifty_futures_holiday_behaviour.json');
+          if (res.ok) niftyFuturesHolidayData = await res.json();
+        } catch (err) {
+          console.warn('Direct fetch failed, waiting for bundle', err);
+        }
+      }
+
+      // 3. Render all active views safely
+      try { renderNiftyFuturesMasterTable(); } catch(e) { console.error(e); }
+      try { renderNiftySelectedHolidayPlaybook(); } catch(e) { console.error(e); }
+      try { renderHolidayTable(); } catch(e) { console.error(e); }
+      try { renderQuarterTable(); } catch(e) { console.error(e); }
+      try { renderEquityTable(); } catch(e) { console.error(e); }
+      try { renderRbiTable(); } catch(e) { console.error(e); }
     }
 
     function switchTab(tabId) {
-      document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
-      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      
-      const target = document.getElementById('tab-' + tabId);
-      if (target) target.style.display = 'block';
-      
-      const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick') && b.getAttribute('onclick').includes(tabId));
-      if (activeBtn) activeBtn.classList.add('active');
+      if (!tabId) return;
 
-      if (tabId === 'equity') renderEquityTable();
-      if (tabId === 'quarterly') renderQuarterTable();
-      if (tabId === 'holidays') renderHolidayTable();
-      if (tabId === 'rbi') renderRbiTable();
-      if (tabId === 'nifty-index') {
-        renderNiftyFuturesMasterTable();
-        renderNiftySelectedHolidayPlaybook();
+      // 1. Hide all tab contents
+      document.querySelectorAll('.tab-content').forEach(el => {
+        el.style.display = 'none';
+      });
+
+      // 2. Display the selected tab content
+      const target = document.getElementById('tab-' + tabId);
+      if (target) {
+        target.style.display = 'block';
+      }
+
+      // 3. Remove active class from all main nav buttons & highlight selected
+      document.querySelectorAll('.tabs-nav .tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      const activeBtn = document.getElementById('tab-btn-' + tabId) ||
+        Array.from(document.querySelectorAll('.tab-btn')).find(b => {
+          const oc = b.getAttribute('onclick') || '';
+          return oc.includes("'" + tabId + "'") || oc.includes('"' + tabId + '"');
+        });
+      if (activeBtn) {
+        activeBtn.classList.add('active');
+      }
+
+      // 4. Update segment pills in quarterly / equity tabs
+      document.querySelectorAll('.seg-pill').forEach(pill => {
+        const oc = pill.getAttribute('onclick') || '';
+        if (oc.includes("'" + tabId + "'") || oc.includes('"' + tabId + '"')) {
+          pill.classList.add('active');
+        } else {
+          pill.classList.remove('active');
+        }
+      });
+
+      // 5. Trigger tab-specific renders safely
+      try {
+        if (tabId === 'nifty-index') {
+          renderNiftyFuturesMasterTable();
+          renderNiftySelectedHolidayPlaybook();
+        } else if (tabId === 'holidays') {
+          renderHolidayTable();
+        } else if (tabId === 'quarterly') {
+          renderQuarterTable();
+        } else if (tabId === 'equity') {
+          renderEquityTable();
+        } else if (tabId === 'rbi') {
+          renderRbiTable();
+        }
+      } catch (err) {
+        console.error('Error rendering tab ' + tabId, err);
       }
     }
 
@@ -1760,7 +1820,7 @@
       if (!tbody || !h.stocks) return;
       tbody.innerHTML = '';
 
-      const query = (document.getElementById('h-search').value || '').toUpperCase();
+      const query = (document.getElementById('h-search')?.value || '').toUpperCase();
 
       h.stocks.forEach((s, idx) => {
         if (currentHolidayFilter === 'tomorrow' && !s.entry_date.includes('22-Sep')) return;
@@ -1908,14 +1968,18 @@
     function filterHolidayTable() { renderHolidayTable(); }
 
     async function loadNiftyFuturesHolidayData() {
-      try {
-        const res = await fetch('dashboard_data/nifty_futures_holiday_behaviour.json');
-        niftyFuturesHolidayData = await res.json();
-        renderNiftyFuturesMasterTable();
-        renderNiftySelectedHolidayPlaybook();
-      } catch (err) {
-        console.warn('Failed to load nifty_futures_holiday_behaviour.json', err);
+      if (window.NIFTY_FUTURES_HOLIDAY_DATA) {
+        niftyFuturesHolidayData = window.NIFTY_FUTURES_HOLIDAY_DATA;
+      } else {
+        try {
+          const res = await fetch('dashboard_data/nifty_futures_holiday_behaviour.json');
+          if (res.ok) niftyFuturesHolidayData = await res.json();
+        } catch (err) {
+          console.warn('Failed to load nifty_futures_holiday_behaviour.json', err);
+        }
       }
+      try { renderNiftyFuturesMasterTable(); } catch(e) { console.error(e); }
+      try { renderNiftySelectedHolidayPlaybook(); } catch(e) { console.error(e); }
     }
 
     function renderNiftyFuturesMasterTable() {
