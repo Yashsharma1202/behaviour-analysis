@@ -1080,6 +1080,78 @@
         <button class="filter-pill active" style="background:#EF4444; color:#FFF; border:none;" onclick="selectHolidayRow('gandhi_2026')">View 2-Oct Setups</button>
       </div>
 
+      <!-- NIFTY 50 FUTURES INDEX: 26-YEAR FULL-HISTORY EMPIRICAL PLAYBOOK -->
+      <div class="card" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; border: 1px solid rgba(59, 130, 246, 0.4); background: linear-gradient(180deg, rgba(14, 22, 38, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.85rem;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.25rem;">
+              <span style="background: #2563EB; color: #FFF; font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;">Continuous Contract History</span>
+              <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.35rem; font-weight: 700; color: #FFF; margin: 0;">⚡ NIFTY 50 FUTURES INDEX — 26-Year Empirical Holiday Behavioral Engine (2000–2026)</h2>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.82rem; margin: 0;">
+              Exhaustive T-n to T+m backtests on continuous Nifty Futures (6,473 daily bars) across all 17 NSE Market Holidays.
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <a href="Nifty_Futures_Index_Holiday_Behaviour_Master_2000_2026.xlsx" download class="btn-select-event" style="background: #10B981; color: #FFF; text-decoration: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+              <span>📊 Download 26Y Master (.xlsx)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Metric Highlights Banner -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.85rem; margin-bottom: 1.25rem;">
+          <div style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 0.75rem 1rem;">
+            <div style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; font-weight: 600;">Data Range</div>
+            <div style="font-size: 1.15rem; font-weight: 800; color: #38BDF8; font-family: 'JetBrains Mono', monospace;">2000–2026</div>
+            <div style="font-size: 0.7rem; color: #64748B;">6,473 Daily Bars · 26 Years</div>
+          </div>
+          <div style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 0.75rem 1rem;">
+            <div style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; font-weight: 600;">Historical Trades</div>
+            <div style="font-size: 1.15rem; font-weight: 800; color: #F1F5F9; font-family: 'JetBrains Mono', monospace;">436 Windows</div>
+            <div style="font-size: 0.7rem; color: #64748B;">Across All 17 Holidays</div>
+          </div>
+          <div style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 0.75rem 1rem;">
+            <div style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; font-weight: 600;">Peak Win Rate</div>
+            <div style="font-size: 1.15rem; font-weight: 800; color: #34D399; font-family: 'JetBrains Mono', monospace;">88.5% (Diwali)</div>
+            <div style="font-size: 0.7rem; color: #64748B;">88.0% (Ganesh Chaturthi)</div>
+          </div>
+          <div style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 0.75rem 1rem;">
+            <div style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; font-weight: 600;">Highest Cumulative Edge</div>
+            <div style="font-size: 1.15rem; font-weight: 800; color: #FBBF24; font-family: 'JetBrains Mono', monospace;">+5,660.65 Pts</div>
+            <div style="font-size: 0.7rem; color: #64748B;">Good Friday (+₹1.41L / lot)</div>
+          </div>
+          <div style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 0.75rem 1rem;">
+            <div style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; font-weight: 600;">Contract Specifications</div>
+            <div style="font-size: 1.15rem; font-weight: 800; color: #A78BFA; font-family: 'JetBrains Mono', monospace;">25 Qty / Lot</div>
+            <div style="font-size: 0.7rem; color: #64748B;">SPAN Margin ~₹1,25,000</div>
+          </div>
+        </div>
+
+        <div class="table-container" style="max-height: 480px; overflow-y: auto;">
+          <table class="event-master-table">
+            <thead>
+              <tr>
+                <th style="width: 28px;">#</th>
+                <th>Holiday Occasion</th>
+                <th>Category</th>
+                <th>Optimal Window</th>
+                <th>Recommended Direction</th>
+                <th>26Y Win Rate</th>
+                <th>Avg Return (%)</th>
+                <th>Avg Points / Trade</th>
+                <th>Cumulative 26Y Points</th>
+                <th>Profit Factor</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="nifty-futures-holiday-tbody">
+              <!-- Populated dynamically by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <!-- Holiday Events in TABULAR FORM -->
       <div class="card" style="padding: 1rem 1.15rem; margin-bottom: 1.25rem;">
         <div class="card-title-group" style="margin-bottom: 0.85rem;">
@@ -1315,6 +1387,8 @@
     let currentEquityFilter = 'all';
     let currentHolidayFilter = 'all';
 
+    let niftyFuturesHolidayData = null;
+
     async function loadData() {
       try {
         const res = await fetch('dashboard_data/event_dashboard_data.json');
@@ -1326,6 +1400,7 @@
       renderEquityTable();
       renderHolidayTable();
       renderRbiTable();
+      loadNiftyFuturesHolidayData();
     }
 
     function switchTab(tabId) {
@@ -1761,6 +1836,136 @@
 
     function filterQuarterTable() { renderQuarterTable(); }
     function filterHolidayTable() { renderHolidayTable(); }
+
+    async function loadNiftyFuturesHolidayData() {
+      try {
+        const res = await fetch('dashboard_data/nifty_futures_holiday_behaviour.json');
+        niftyFuturesHolidayData = await res.json();
+        renderNiftyFuturesHolidayTable();
+      } catch (err) {
+        console.warn('Failed to load nifty_futures_holiday_behaviour.json', err);
+      }
+    }
+
+    function renderNiftyFuturesHolidayTable() {
+      const tbody = document.getElementById('nifty-futures-holiday-tbody');
+      if (!tbody || !niftyFuturesHolidayData || !niftyFuturesHolidayData.holidays) return;
+
+      tbody.innerHTML = '';
+      niftyFuturesHolidayData.holidays.forEach((h, idx) => {
+        const tr = document.createElement('tr');
+        tr.style.cursor = 'pointer';
+        tr.className = 'event-master-row';
+        tr.onclick = () => showNiftyHolidayModal(h.id);
+
+        const isLong = h.direction === 'LONG';
+        const dirBadge = isLong 
+          ? `<span class="badge-long" style="font-weight:700;">🟢 NIFTY LONG</span>`
+          : `<span class="badge-short" style="font-weight:700;">🔴 NIFTY SHORT</span>`;
+
+        tr.innerHTML = `
+          <td><span style="color:#64748B; font-family:'JetBrains Mono'; font-size:0.75rem;">${idx + 1}</span></td>
+          <td>
+            <strong style="color:#FFF;">${h.name}</strong>
+            <div style="font-size:0.72rem; color:#94A3B8;">2026 Target: ${h['2026_date_str']}</div>
+          </td>
+          <td><span style="font-size:0.75rem; color:#CBD5E1;">${h.category}</span></td>
+          <td><strong style="color:#38BDF8; font-family:'JetBrains Mono'; font-size:0.8rem;">${h.optimal_window}</strong></td>
+          <td>${dirBadge}</td>
+          <td>
+            <span style="font-family:'JetBrains Mono'; font-weight:800; font-size:0.85rem; color:${h.win_rate >= 80 ? '#34D399' : (h.win_rate >= 70 ? '#6EE7B7' : '#FBBF24')};">
+              ${h.win_rate.toFixed(1)}%
+            </span>
+            <div style="font-size:0.68rem; color:#64748B;">${h.wins}W / ${h.losses}L (${h.total_trades}Y)</div>
+          </td>
+          <td style="font-family:'JetBrains Mono'; font-weight:700; color:${h.avg_return_pct >= 0 ? '#34D399' : '#F87171'};">
+            ${h.avg_return_pct >= 0 ? '+' : ''}${h.avg_return_pct.toFixed(2)}%
+          </td>
+          <td style="font-family:'JetBrains Mono'; font-weight:700; color:#38BDF8;">
+            ${h.avg_points >= 0 ? '+' : ''}${h.avg_points.toFixed(1)} pts
+          </td>
+          <td style="font-family:'JetBrains Mono'; font-weight:800; color:#FBBF24;">
+            ${h.tot_points >= 0 ? '+' : ''}${h.tot_points.toLocaleString('en-IN', {minimumFractionDigits: 1, maximumFractionDigits: 1})} pts
+          </td>
+          <td><span style="font-family:'JetBrains Mono'; font-size:0.8rem; color:#E2E8F0;">${h.profit_factor.toFixed(2)}</span></td>
+          <td>
+            <button class="btn-select-event" onclick="event.stopPropagation(); showNiftyHolidayModal('${h.id}')">
+              View 26Y Audit
+            </button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function showNiftyHolidayModal(hId) {
+      if (!niftyFuturesHolidayData || !niftyFuturesHolidayData.holidays) return;
+      const h = niftyFuturesHolidayData.holidays.find(x => x.id === hId);
+      if (!h) return;
+
+      document.getElementById('m-title').innerHTML = `⚡ Nifty Futures Index — ${h.name} (${h.optimal_window})`;
+      
+      let rowsHtml = '';
+      h.trades.forEach(t => {
+        const isWin = t.outcome === 'WIN';
+        rowsHtml += `
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:6px 10px; font-weight:700; font-family:'JetBrains Mono'; color:#F1F5F9;">${t.year}</td>
+            <td style="padding:6px 10px; color:#94A3B8; font-size:0.8rem;">${t.holiday_date}</td>
+            <td style="padding:6px 10px; font-size:0.8rem; color:#CBD5E1;">${t.entry_date}</td>
+            <td style="padding:6px 10px; font-family:'JetBrains Mono'; color:#38BDF8;">₹${t.entry_price.toLocaleString('en-IN', {minimumFractionDigits:2})}</td>
+            <td style="padding:6px 10px; font-size:0.8rem; color:#CBD5E1;">${t.exit_date}</td>
+            <td style="padding:6px 10px; font-family:'JetBrains Mono'; color:#38BDF8;">₹${t.exit_price.toLocaleString('en-IN', {minimumFractionDigits:2})}</td>
+            <td style="padding:6px 10px; font-family:'JetBrains Mono'; font-weight:700; color:${isWin ? '#34D399' : '#F87171'};">
+              ${t.points >= 0 ? '+' : ''}${t.points.toFixed(2)} pts
+            </td>
+            <td style="padding:6px 10px; font-family:'JetBrains Mono'; color:${isWin ? '#34D399' : '#F87171'};">
+              ${t.ret_pct >= 0 ? '+' : ''}${t.ret_pct.toFixed(2)}%
+            </td>
+            <td style="padding:6px 10px; font-family:'JetBrains Mono'; font-weight:700; color:${isWin ? '#34D399' : '#F87171'};">
+              ${t.pnl_rs >= 0 ? '+₹' : '-₹'}${Math.abs(t.pnl_rs).toLocaleString('en-IN', {minimumFractionDigits:2})}
+            </td>
+            <td style="padding:6px 10px;">
+              <span class="${isWin ? 'badge-long' : 'badge-short'}" style="font-size:0.7rem; font-weight:800;">${t.outcome}</span>
+            </td>
+          </tr>
+        `;
+      });
+
+      const bodyHtml = `
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1rem; background:rgba(30,41,59,0.5); padding:0.75rem; border-radius:8px;">
+          <div><span style="color:#94A3B8; font-size:0.75rem;">STRATEGY:</span> <strong style="color:#FFF;">NIFTY ${h.direction} (${h.optimal_window})</strong></div>
+          <div><span style="color:#94A3B8; font-size:0.75rem;">26Y WIN RATE:</span> <strong style="color:#34D399;">${h.win_rate}% (${h.wins}W / ${h.losses}L)</strong></div>
+          <div><span style="color:#94A3B8; font-size:0.75rem;">AVG RETURN:</span> <strong style="color:#38BDF8;">+${h.avg_return_pct}% (+${h.avg_points} pts)</strong></div>
+          <div><span style="color:#94A3B8; font-size:0.75rem;">CUMULATIVE P&L:</span> <strong style="color:#FBBF24;">+${h.tot_points} pts (+₹${h.tot_pnl_rs.toLocaleString('en-IN')} / lot)</strong></div>
+          <div><span style="color:#94A3B8; font-size:0.75rem;">PROFIT FACTOR:</span> <strong style="color:#FFF;">${h.profit_factor}</strong></div>
+        </div>
+        <div style="max-height:360px; overflow-y:auto; border:1px solid rgba(255,255,255,0.08); border-radius:6px;">
+          <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.8rem;">
+            <thead style="background:#1E293B; position:sticky; top:0; z-index:10;">
+              <tr>
+                <th style="padding:8px 10px; color:#94A3B8;">Year</th>
+                <th style="padding:8px 10px; color:#94A3B8;">Holiday Date</th>
+                <th style="padding:8px 10px; color:#94A3B8;">Entry Date</th>
+                <th style="padding:8px 10px; color:#94A3B8;">Entry Price</th>
+                <th style="padding:8px 10px; color:#94A3B8;">Exit Date</th>
+                <th style="padding:8px 10px; color:#94A3B8;">Exit Price</th>
+                <th style="padding:8px 10px; color:#94A3B8;">Points P&L</th>
+                <th style="padding:8px 10px; color:#94A3B8;">Return (%)</th>
+                <th style="padding:8px 10px; color:#94A3B8;">1-Lot P&L (₹)</th>
+                <th style="padding:8px 10px; color:#94A3B8;">Outcome</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rowsHtml}
+            </tbody>
+          </table>
+        </div>
+      `;
+
+      document.getElementById('m-body').innerHTML = bodyHtml;
+      document.getElementById('stock-modal').classList.add('active');
+    }
 
     function openStockModal(stock, type) {
       const modal = document.getElementById('stock-modal');
