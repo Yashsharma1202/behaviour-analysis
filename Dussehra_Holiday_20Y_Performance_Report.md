@@ -6,9 +6,9 @@
 > **DUSSEHRA 20-YEAR COMPARATIVE AUDIT SUMMARY**
 > - **System B Win Rate (Combined 50 Stocks)**: **78.80%** (Average 19Y Base Rate)
 > - **System A Win Rate (Nifty Futures Index)**: **65.38%** (18 Wins / 8 Losses across 26 Years)
-> - **System B Net Realized Profit (After Cost)**: **+Rs. 11,729,604.17**
+> - **System B Net Realized Profit (After Cost)**: **+Rs. 11,736,517.37**
 > - **System A Net Realized Profit (After Cost)**: **+Rs. 57,766.33**
-> - **Futures Transaction Cost (0.05% Entry + Exit)**: Deducted on all trade rows (-Rs. 581,755.58 Stock / -Rs. 11,138.67 Index)
+> - **Futures Transaction Cost (0.05% Entry + Exit)**: Deducted on all trade rows (-Rs. 574,842.21 Stock / -Rs. 11,138.67 Index)
 > - **Calendar Date Shift Handling**: Entry dates ($T_y - N$) and exit dates ($T_y + M$) calculated dynamically for every year $y$.
 > - **Trading Day Rule**: Strictly excluding Saturdays, Sundays, and NSE Market Holidays.
 
@@ -25,10 +25,10 @@
 | **Empirical Win Rate %** | **65.38%** | **78.80%** | **System B: Combined Stocks (+9.2%)** |
 | **Total Completed Trades** | 26 Index Trades | 1000 Stock Trades | 50-Stock Portfolio |
 | **Gross Realized Profit** | Rs. 68,905.00 | Rs. 12,311,359.68 | **System B (+Rs. 44.8L Gross)** |
-| **Futures Cost (0.05% Entry/Exit)** | Rs. 11,138.67 | Rs. 581,755.58 | Index Lower Cost Friction |
-| **Net Realized Profit (After Cost)** | Rs. 57,766.33 | **+Rs. 11,729,604.17** | **System B: Combined Stocks (+Rs. 42.1L Net)** |
+| **Futures Cost (0.05% Entry/Exit)** | Rs. 11,138.67 | Rs. 574,842.21 | Index Lower Cost Friction |
+| **Net Realized Profit (After Cost)** | Rs. 57,766.33 | **+Rs. 11,736,517.37** | **System B: Combined Stocks (+Rs. 42.1L Net)** |
 | **Required Capital / Margin Pool** | Rs. 125,000.00 | Rs. 3,850,000.00 | Index Requires Lower Capital |
-| **Return on Capital Pool %** | **46.21%** | **304.67%** | **System B: Combined Stocks (Higher ROI)** |
+| **Return on Capital Pool %** | **46.21%** | **304.84%** | **System B: Combined Stocks (Higher ROI)** |
 
 ---
 
