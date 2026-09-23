@@ -642,7 +642,7 @@
       </div>
       <div class="live-badge">
         <span class="live-dot"></span>
-        <span>LIVE ENVIRONMENT: 21-SEP-2026</span>
+        <span id="live-env-date">LIVE ENVIRONMENT: AUTO</span>
       </div>
     </div>
   </header>
@@ -651,11 +651,11 @@
   <div class="ticker-bar">
     <div class="ticker-item">
       <span class="ticker-tag">Next Trigger</span>
-      <span><strong>2-Oct Gandhi Jayanti Playbook</strong> triggers <strong>TOMORROW (Tuesday 22-Sep)</strong> for T-8 stocks (BHARTIARTL, HDFCLIFE, COALINDIA, JIOFIN)</span>
+      <span id="ticker-next-trigger"><strong>2-Oct Gandhi Jayanti Playbook</strong>: Position taking window in progress</span>
     </div>
     <div class="ticker-item">
       <span class="ticker-tag" style="background:#059669">Q3 Earnings</span>
-      <span>First Quarterly Trade: <strong>HCLTECH (LONG)</strong> on <strong>06-Oct-2026</strong></span>
+      <span id="ticker-q3-trigger">First Quarterly Trade: <strong>HCLTECH (LONG)</strong> on <strong>06-Oct-2026</strong></span>
     </div>
   </div>
 
@@ -1235,8 +1235,8 @@
       
       <div class="timing-banner">
         <div>
-          <strong>⚠️ Immediate Trading Alert: Mahatma Gandhi Jayanti (2-Oct) Window Opens Tomorrow!</strong>
-          <p>The 19-year full-history backtest shows 30 LONG / 20 SHORT setups. Early T-8 wave entries begin on Tuesday, 22-Sep-2026.</p>
+          <strong id="alert-banner-header">⚠️ Immediate Trading Alert: Mahatma Gandhi Jayanti (2-Oct) Window Active</strong>
+          <p id="alert-banner-text">The 19-year full-history backtest shows 30 LONG / 20 SHORT setups. Position taking window is currently active.</p>
         </div>
         <button class="filter-pill active" style="background:#EF4444; color:#FFF; border:none;" onclick="selectHolidayRow('gandhi_2026')">View 2-Oct Setups</button>
       </div>
@@ -1594,6 +1594,7 @@
       window.RBI_POLICY_DATA = rbiPolicyData;
 
       // 4. Render all active views safely
+      try { updateDynamicDashboardDates(); } catch(e) { console.error(e); }
       try { renderNiftyFuturesMasterTable(); } catch(e) { console.error(e); }
       try { renderNiftySelectedHolidayPlaybook(); } catch(e) { console.error(e); }
       try { renderHolidayTable(); } catch(e) { console.error(e); }
@@ -1816,18 +1817,20 @@
 
       const pUrgent = document.getElementById('hpill-urgent');
       if (pUrgent) {
-        if (h.id === 'gandhi_2026') {
-          const tomCount = h.stocks.filter(s => s.entry_date.includes('22-Sep')).length;
-          pUrgent.innerText = `🚨 Triggers Tomorrow (${tomCount})`;
-          pUrgent.style.display = '';
-        } else {
-          const maxLead = Math.max(...h.stocks.map(x => x.lead || 0));
-          const earliestCount = h.stocks.filter(s => (s.lead || 0) === maxLead).length;
-          const minDate = h.stocks.find(s => (s.lead || 0) === maxLead);
-          const dateSnippet = minDate ? minDate.entry_date.split(' (')[0] : '';
-          pUrgent.innerText = `🚨 Earliest (${dateSnippet}) (${earliestCount})`;
-          pUrgent.style.display = earliestCount > 0 ? '' : 'none';
-        }
+        const now = new Date();
+        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        let activeCount = 0;
+        h.stocks.forEach(s => {
+          const sDt = parseEventDate(s.entry_date);
+          const sExDt = parseEventDate(s.exit_date);
+          if (sDt) {
+            const diffDays = Math.round((sDt - today) / (1000 * 60 * 60 * 24));
+            const diffExit = sExDt ? Math.round((sExDt - today) / (1000 * 60 * 60 * 24)) : 1;
+            if (diffDays >= -3 && diffExit >= 0) activeCount++;
+          }
+        });
+        pUrgent.innerText = `🚨 Active / Immediate Triggers (${activeCount})`;
+        pUrgent.style.display = activeCount > 0 ? '' : 'none';
       }
 
       const pLong = document.getElementById('hpill-long');
@@ -1988,14 +1991,17 @@
 
       const query = (document.getElementById('h-search')?.value || '').toUpperCase();
 
+      const now = new Date();
+      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
       h.stocks.forEach((s, idx) => {
+        const sDt = parseEventDate(s.entry_date);
+        const sExitDt = parseEventDate(s.exit_date);
+        const diffDays = sDt ? Math.round((sDt - today) / (1000 * 60 * 60 * 24)) : 999;
+        const diffExit = sExitDt ? Math.round((sExitDt - today) / (1000 * 60 * 60 * 24)) : 999;
+
         if (currentHolidayFilter === 'tomorrow') {
-          if (h.id === 'gandhi_2026') {
-            if (!s.entry_date.includes('22-Sep')) return;
-          } else {
-            const maxLead = Math.max(...h.stocks.map(x => x.lead || 0));
-            if ((s.lead || 0) < maxLead) return;
-          }
+          if (diffDays > 1 || diffExit < 0) return;
         }
         if (currentHolidayFilter === 'LONG' && s.direction !== 'LONG') return;
         if (currentHolidayFilter === 'SHORT' && s.direction !== 'SHORT') return;
@@ -2009,10 +2015,16 @@
           ? `<span class="badge-long">▲ LONG</span>`
           : `<span class="badge-short">▼ SHORT</span>`;
 
-        const isTomorrow = s.entry_date.includes('22-Sep');
-        const enDateBadge = isTomorrow 
-          ? `<span class="date-badge" style="color:#EF4444; font-weight:800;">🚨 ${s.entry_date}<br><small style="color:#EF4444; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>` 
-          : `<span class="date-badge date-confirmed">${s.entry_date}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>`;
+        let enDateBadge = '';
+        if (diffDays === 0) {
+          enDateBadge = `<span class="date-badge" style="color:#F59E0B; font-weight:800; border-color:#F59E0B;">🔥 TODAY: ${s.entry_date}<br><small style="color:#FBBF24; font-weight:700;">⏰ 09:20 AM ENTRY</small></span>`;
+        } else if (diffDays === 1) {
+          enDateBadge = `<span class="date-badge" style="color:#EF4444; font-weight:800; border-color:#EF4444;">🚨 TOMORROW: ${s.entry_date}<br><small style="color:#F87171; font-weight:700;">⏰ 09:20 AM ENTRY</small></span>`;
+        } else if (diffDays < 0 && diffExit >= 0) {
+          enDateBadge = `<span class="date-badge" style="color:#34D399; font-weight:700; border-color:#34D399;">🟢 ACTIVE (${s.entry_date})<br><small style="color:#34D399;">⏰ Entry Passed</small></span>`;
+        } else {
+          enDateBadge = `<span class="date-badge date-confirmed">${s.entry_date}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>`;
+        }
         const exDateBadge = `<span class="date-badge">${s.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem;">⏰ 03:15 PM</small></span>`;
 
         const actionTag = s.direction === 'LONG'
@@ -2286,6 +2298,115 @@
 
     function filterRbiStockTable() {
       renderRbiStockTable();
+    }
+
+    // Dynamic Real-time Date Parsing & Status Update Engine
+    function parseEventDate(dStr) {
+      if (!dStr) return null;
+      let str = String(dStr).trim();
+      if (str.includes('(')) str = str.split('(')[0].trim();
+      if (str.includes(',')) str = str.split(',')[1].trim();
+
+      const months = {
+        'jan': 0, 'feb': 1, 'mar': 2, 'apr': 3, 'may': 4, 'jun': 5,
+        'jul': 6, 'aug': 7, 'sep': 8, 'oct': 9, 'nov': 10, 'dec': 11
+      };
+      const parts = str.split('-');
+      if (parts.length >= 2) {
+        const day = parseInt(parts[0], 10);
+        const mStr = parts[1].substring(0, 3).toLowerCase();
+        const month = months[mStr];
+        const year = parts.length >= 3 ? parseInt(parts[2], 10) : 2026;
+        if (!isNaN(day) && month !== undefined) {
+          return new Date(year, month, day);
+        }
+      }
+      return null;
+    }
+
+    function updateDynamicDashboardDates() {
+      const now = new Date();
+      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+      // 1. Update Header Live Environment Date Pill
+      const envEl = document.getElementById('live-env-date');
+      if (envEl) {
+        const dStr = now.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }).toUpperCase().replace(/ /g, '-');
+        envEl.textContent = `LIVE ENVIRONMENT: ${dStr}`;
+      }
+
+      // 2. Update Master Holiday Table Rows Dynamically
+      const holidayRows = [
+        { id: 'gandhi_2026', closureDate: '02-Oct-2026', entryDate: '22-Sep-2026', name: 'Mahatma Gandhi Jayanti' },
+        { id: 'dussehra_2026', closureDate: '20-Oct-2026', entryDate: '08-Oct-2026', name: 'Dussehra / Vijayadashami' },
+        { id: 'diwali_2026', closureDate: '08-Nov-2026', entryDate: '28-Oct-2026', name: 'Diwali (Laxmi Pujan & Muhurat)' },
+        { id: 'christmas_2026', closureDate: '25-Dec-2026', entryDate: '15-Dec-2026', name: 'Christmas & Year-End' }
+      ];
+
+      let activeOrUpcoming = null;
+
+      holidayRows.forEach(h => {
+        const rowEl = document.getElementById(`hrow-${h.id}`);
+        if (!rowEl) return;
+        const cells = rowEl.querySelectorAll('td');
+        if (cells.length < 5) return;
+
+        const eDt = parseEventDate(h.entryDate);
+        const cDt = parseEventDate(h.closureDate);
+        if (!eDt || !cDt) return;
+
+        const diffEntry = Math.round((eDt - today) / (1000 * 60 * 60 * 24));
+        const diffExit = Math.round((cDt - today) / (1000 * 60 * 60 * 24));
+
+        let statusHtml = '';
+        if (diffEntry === 0) {
+          statusHtml = `<span class="badge-urgent" style="padding:0.25rem 0.6rem; border-radius:4px; background:#F59E0B; color:#000; font-weight:800;">🔥 TRIGGERS TODAY</span>`;
+          if (!activeOrUpcoming) activeOrUpcoming = { ...h, state: 'TODAY' };
+        } else if (diffEntry === 1) {
+          statusHtml = `<span class="badge-urgent" style="padding:0.25rem 0.6rem; border-radius:4px; background:#EF4444; color:#FFF; font-weight:800;">🚨 STARTS TOMORROW</span>`;
+          if (!activeOrUpcoming) activeOrUpcoming = { ...h, state: 'TOMORROW' };
+        } else if (diffEntry < 0 && diffExit >= 0) {
+          const daysAgo = Math.abs(diffEntry);
+          statusHtml = `<span style="background:rgba(16,185,129,0.15); color:#34D399; padding:0.25rem 0.6rem; border-radius:4px; font-weight:700; font-size:0.75rem; border:1px solid rgba(16,185,129,0.3)">🟢 IN PROGRESS (Day ${daysAgo+1})</span>`;
+          if (!activeOrUpcoming) activeOrUpcoming = { ...h, state: 'IN_PROGRESS', daysAgo };
+        } else if (diffExit < 0) {
+          statusHtml = `<span style="color:#64748B; font-size:0.75rem; font-weight:600">✅ COMPLETED</span>`;
+        } else {
+          const mName = cDt.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
+          statusHtml = `<span style="color:#94A3B8; font-size:0.75rem; font-weight:600">UPCOMING IN ${mName}</span>`;
+          if (!activeOrUpcoming) activeOrUpcoming = { ...h, state: 'UPCOMING', daysAway: diffEntry };
+        }
+
+        cells[3].innerHTML = statusHtml;
+      });
+
+      // 3. Update Top Alert Banner & Ticker Banner Dynamically
+      const alertHeader = document.getElementById('alert-banner-header');
+      const alertText = document.getElementById('alert-banner-text');
+      const tickerTrigger = document.getElementById('ticker-next-trigger');
+
+      if (activeOrUpcoming) {
+        const hName = activeOrUpcoming.name;
+        const st = activeOrUpcoming.state;
+
+        if (st === 'TODAY') {
+          if (alertHeader) alertHeader.innerHTML = `🔥 Immediate Trading Alert: ${hName} Window TRIGGERS TODAY!`;
+          if (alertText) alertText.innerHTML = `First entry wave begins today (${activeOrUpcoming.entryDate}). Position entry opens at 09:20 AM.`;
+          if (tickerTrigger) tickerTrigger.innerHTML = `<strong>${hName} Playbook</strong>: Entry triggers <strong>TODAY (${activeOrUpcoming.entryDate})</strong>`;
+        } else if (st === 'TOMORROW') {
+          if (alertHeader) alertHeader.innerHTML = `🚨 Immediate Trading Alert: ${hName} Window STARTS TOMORROW!`;
+          if (alertText) alertText.innerHTML = `First entry wave opens tomorrow (${activeOrUpcoming.entryDate}). Position entry opens at 09:20 AM.`;
+          if (tickerTrigger) tickerTrigger.innerHTML = `<strong>${hName} Playbook</strong>: Entry triggers <strong>TOMORROW (${activeOrUpcoming.entryDate})</strong>`;
+        } else if (st === 'IN_PROGRESS') {
+          if (alertHeader) alertHeader.innerHTML = `🟢 Position Alert: ${hName} Position Window IN PROGRESS (Started ${activeOrUpcoming.entryDate})`;
+          if (alertText) alertText.innerHTML = `The 19-year backtest model window is currently active (Day ${activeOrUpcoming.daysAgo+1} of window). Monitor open positions and exit targets.`;
+          if (tickerTrigger) tickerTrigger.innerHTML = `<strong>${hName} Playbook</strong>: Position window <strong>IN PROGRESS</strong> (Started ${activeOrUpcoming.entryDate})`;
+        } else {
+          if (alertHeader) alertHeader.innerHTML = `⏳ Upcoming Alert: ${hName} Window Triggers in ${activeOrUpcoming.daysAway} Days (${activeOrUpcoming.entryDate})`;
+          if (alertText) alertText.innerHTML = `Next major event playbook starts on ${activeOrUpcoming.entryDate}. Pre-event positioning setups loaded.`;
+          if (tickerTrigger) tickerTrigger.innerHTML = `<strong>${hName} Playbook</strong>: Triggers on <strong>${activeOrUpcoming.entryDate}</strong>`;
+        }
+      }
     }
 
     // Keep old stub for any backward compat references
