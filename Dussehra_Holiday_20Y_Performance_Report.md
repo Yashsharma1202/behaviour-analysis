@@ -32,9 +32,8 @@
 | **Futures Cost (0.05% Entry/Exit)** | Rs. 11,138.67 | Rs. 574,842.21 | Index Lower Cost Friction |
 | **Net Realized Profit (After Cost)** | Rs. 57,766.33 | **+Rs. 11,736,517.37** | **System B: Combined Stocks (+Rs. 1.17 Cr Net)** |
 | **Required Capital / Margin Pool** | Rs. 125,000.00 | Rs. 3,850,000.00 | Index Requires Lower Capital |
-| **Return on Capital Pool (ROC %)** | **46.21%** | **304.84%** | **System B: Combined Stocks (+304.8% ROC)** |
-| **Annualized Compound Return (CAGR)**| 1.48% | **7.24%** | **System B (7.24% CAGR)** |
-| **Max Annual Drawdown (Rs.)** | Rs. 57,027.93 | **Rs. 0.00** | **System B: 100% Positive Years** |
+| **Max Trade Equity Drawdown (Rs.)** | Rs. 57,027.93 (45.6%) | **Rs. 99,757.33 (2.59%)** | System B: Low Drawdown (2.59%) |
+| **Annual Event Net Loss Years** | 8 Loss Years (out of 26Y) | **0 Loss Years (100% Positive)** | System B: 100% Positive Annual Events |
 | **Annualized Sharpe Ratio** | 0.16 | **4.43** | **System B (High Sharpe: 4.43)** |
 | **Expectancy per Trade (Rs.)** | Rs. 2,221.78 | **Rs. 11,736.52** | **System B: Higher Expectancy** |
 
