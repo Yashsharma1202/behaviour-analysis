@@ -1,0 +1,69 @@
+exDate,recDate,subject,faceVal
+27-Jan-2026 14:52:11,27-Jan-2026 14:52:11,Record Date,1
+27-Jan-2026 14:44:58,27-Jan-2026 14:44:58,Dividend,1
+18-Mar-2025 13:53:22,18-Mar-2025 13:53:22,Record Date,1
+18-Mar-2025 13:48:46,18-Mar-2025 13:48:46,Dividend,1
+23-Jan-2024 14:52:54,23-Jan-2024 14:52:54,Record Date,1
+23-Jan-2024 14:45:51,23-Jan-2024 14:45:51,Dividend,1
+02-Mar-2023 11:47:00,02-Mar-2023 11:47:00,Record Date,1
+02-Mar-2023 11:39:06,02-Mar-2023 11:39:06,Dividend,1
+05-Dec-2020 17:13:59,05-Dec-2020 17:13:59,Copy of Newspaper Publication,1
+28-May-2015 20:57:00,28-May-2015 20:57:00,Outcome of Board Meeting,1
+03-Feb-2015 17:08:00,03-Feb-2015 17:08:00,Date of payment of dividend,1
+03-Feb-2015 17:05:00,03-Feb-2015 17:05:00,Dividend,1
+28-Jan-2015 17:28:00,28-Jan-2015 17:28:00,Date of payment of dividend,1
+28-Jan-2015 17:25:00,28-Jan-2015 17:25:00,Record Date,1
+16-Oct-2014 17:32:00,16-Oct-2014 17:32:00,Dividend,1
+08-Oct-2014 11:49:00,08-Oct-2014 11:49:00,Date of payment of dividend,1
+08-Oct-2014 11:46:00,08-Oct-2014 11:46:00,Record Date,1
+04-Jun-2014 11:44:00,04-Jun-2014 11:44:00,AGM/Book Closure,1
+30-May-2014 09:12:00,30-May-2014 09:12:00,Dividend,1
+20-May-2014 11:44:00,20-May-2014 11:44:00,Book Closure,1
+20-May-2014 11:44:00,20-May-2014 11:44:00,Date of payment of dividend,1
+29-Jan-2014 16:36:00,29-Jan-2014 16:36:00,Dividend,1
+20-Jan-2014 12:28:00,20-Jan-2014 12:28:00,Record Date,1
+20-Jan-2014 12:16:00,20-Jan-2014 12:16:00,Date of payment of dividend,1
+12-Nov-2013 09:52:00,12-Nov-2013 09:52:00,Dividend,1
+28-Oct-2013 13:08:00,28-Oct-2013 13:08:00,Date of payment of dividend,1
+28-Oct-2013 13:04:00,28-Oct-2013 13:04:00,Record Date,1
+24-May-2013 18:00:00,24-May-2013 18:00:00,Dividend,1
+14-May-2013 15:24:00,14-May-2013 15:24:00,Book Closure,1
+14-May-2013 15:20:00,14-May-2013 15:20:00,Date of payment of dividend,1
+05-Nov-2012 12:40:00,05-Nov-2012 12:40:00,Date of payment of dividend,1
+05-Nov-2012 12:23:00,05-Nov-2012 12:23:00,Dividend,1
+25-Oct-2012 13:19:00,25-Oct-2012 13:19:00,Record Date,1
+20-Jul-2012 17:44:00,20-Jul-2012 17:44:00,Dividend,1
+12-Jul-2012 12:06:00,12-Jul-2012 12:06:00,Book Closure (Purpose Revised),1
+23-Mar-2012 15:11:00,23-Mar-2012 15:11:00,Dividend,1
+20-Mar-2012 11:45:00,20-Mar-2012 11:45:00,Record Date,1
+31-Jan-2012 15:22:00,31-Jan-2012 15:22:00,Dividend,1
+23-Jan-2012 08:25:00,23-Jan-2012 08:25:00,Record Date,1
+19-Oct-2011 14:23:00,19-Oct-2011 14:23:00,Interim Dividend,1
+10-Oct-2011 14:59:00,10-Oct-2011 14:59:00,Record Date,1
+23-Mar-2011 14:48:00,23-Mar-2011 14:48:00,Interim Dividend,1
+14-Mar-2011 16:13:00,14-Mar-2011 16:13:00,Record Date,1
+28-Jan-2011 13:35:00,28-Jan-2011 13:35:00,Interim Dividend,1
+19-Jan-2011 11:06:00,19-Jan-2011 11:06:00,Date of payment of dividend,1
+19-Jan-2011 11:04:00,19-Jan-2011 11:04:00,Record Date,1
+25-Oct-2010 16:24:00,25-Oct-2010 16:24:00,Dividend,1
+14-Oct-2010 16:30:00,14-Oct-2010 16:30:00,Record Date,1
+28-Jan-2010 14:16:00,28-Jan-2010 14:16:00,Dividend/Bonus/Others,1
+27-Oct-2009 15:25:00,27-Oct-2009 15:25:00,Interim Dividend,1
+24-Mar-2009 14:01:00,24-Mar-2009 14:01:00,Dividend/Buyback,1
+23-Jan-2009 12:45:00,23-Jan-2009 12:45:00,Interim Dividend,1
+21-Oct-2008 14:54:00,21-Oct-2008 14:54:00,Interim Dividend,1
+28-Mar-2008 13:25:00,28-Mar-2008 13:25:00,Interim Dividend,1
+30-Jan-2008 15:15:00,30-Jan-2008 15:15:00,Interim Dividend,1
+30-Oct-2007 14:15:00,30-Oct-2007 14:15:00,Interim Dividend,1
+21-Mar-2007 15:08:00,21-Mar-2007 15:08:00,Interim Dividend,1
+25-Jan-2007 18:23:00,25-Jan-2007 18:23:00,Interim Dividend,1
+14-Oct-2006 16:05:00,14-Oct-2006 16:05:00,Interim Dividend,1
+14-Oct-2006 13:42:00,14-Oct-2006 13:42:00,Bonus,1
+03-Oct-2006 18:31:00,03-Oct-2006 18:31:00,Record date/ others,1
+19-Jul-2006 00:00:00,19-Jul-2006 00:00:00,Record date/ others,1
+29-Mar-2006 00:00:00,29-Mar-2006 00:00:00,Interim Dividend,1
+25-Jan-2006 00:00:00,25-Jan-2006 00:00:00,Interim Dividend,1
+17-Jan-2006 00:00:00,17-Jan-2006 00:00:00,Record Date,1
+14-Oct-2005 00:00:00,14-Oct-2005 00:00:00,Outcome of Board Meeting,1
+22-Mar-2005 00:00:00,22-Mar-2005 00:00:00,Interim Dividend,1
+25-Nov-2004 00:00:00,25-Nov-2004 00:00:00,Interim Dividend,1

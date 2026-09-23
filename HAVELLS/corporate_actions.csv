@@ -1,0 +1,74 @@
+exDate,recDate,subject,faceVal
+29-Apr-2026 18:08:55,29-Apr-2026 18:08:55,Record Date,1
+22-Apr-2026 14:34:02,22-Apr-2026 14:34:02,Dividend,1
+19-Jan-2026 16:31:17,19-Jan-2026 16:31:17,Dividend,1
+08-Jan-2026 12:41:42,08-Jan-2026 12:41:42,Record Date,1
+24-Apr-2025 15:59:00,24-Apr-2025 15:59:00,Record Date,1
+22-Apr-2025 16:46:46,22-Apr-2025 16:46:46,Dividend,1
+16-Jan-2025 17:45:45,16-Jan-2025 17:45:45,Dividend,1
+10-Jan-2025 16:29:27,10-Jan-2025 16:29:27,Record Date,1
+21-May-2024 18:18:34,21-May-2024 18:18:34,Book Closure,1
+30-Apr-2024 16:18:51,30-Apr-2024 16:18:51,Dividend,1
+23-Jan-2024 19:01:07,23-Jan-2024 19:01:07,Dividend,1
+16-Jan-2024 12:28:27,16-Jan-2024 12:28:27,Record Date,1
+17-May-2023 21:34:32,17-May-2023 21:34:32,Book Closure,1
+03-May-2023 14:07:42,03-May-2023 14:07:42,Dividend,1
+20-Jan-2023 12:32:50,20-Jan-2023 12:32:50,Copy of Newspaper Publication,1
+19-Jan-2023 14:26:31,19-Jan-2023 14:26:31,Dividend,1
+06-Jan-2023 13:20:25,06-Jan-2023 13:20:25,Record Date,1
+17-May-2022 16:31:48,17-May-2022 16:31:48,Book Closure,1
+04-May-2022 18:16:41,04-May-2022 18:16:41,Dividend,1
+04-May-2022 18:16:39,04-May-2022 18:16:39,Outcome of Board Meeting,1
+20-Oct-2021 17:24:05,20-Oct-2021 17:24:05,Dividend,1
+11-Oct-2021 10:00:44,11-Oct-2021 10:00:44,Record Date,1
+24-May-2021 22:46:01,24-May-2021 22:46:01,Book Closure,1
+20-May-2021 17:25:57,20-May-2021 17:25:57,Dividend,1
+20-Jan-2021 19:02:44,20-Jan-2021 19:02:44,Updates,1
+20-Jan-2021 16:45:23,20-Jan-2021 16:45:23,Dividend,1
+11-Jan-2021 13:52:22,11-Jan-2021 13:52:22,Record Date,1
+03-Jun-2020 23:31:00,03-Jun-2020 23:31:00,Updates,1
+06-Mar-2020 10:53:00,06-Mar-2020 10:53:00,Dividend,1
+27-Feb-2020 17:19:00,27-Feb-2020 17:19:00,Record Date,1
+18-Jun-2019 13:19:00,18-Jun-2019 13:19:00,AGM/Book Closure,1
+29-May-2019 15:04:00,29-May-2019 15:04:00,Dividend,1
+29-May-2019 12:34:00,29-May-2019 12:34:00,Dividend,1
+21-May-2019 17:55:00,21-May-2019 17:55:00,Updates,1
+07-Jun-2018 18:33:00,07-Jun-2018 18:33:00,Updates,1
+14-May-2018 14:36:00,14-May-2018 14:36:00,Book Closure,1
+11-May-2018 13:34:00,11-May-2018 13:34:00,Dividend,1
+11-Aug-2017 16:33:00,11-Aug-2017 16:33:00,Updates,1
+16-May-2017 12:33:00,16-May-2017 12:33:00,AGM/Book Closure,1
+11-May-2017 12:38:00,11-May-2017 12:38:00,Dividend,1
+11-May-2016 16:46:00,11-May-2016 16:46:00,AGM/Book Closure,1
+11-May-2016 14:13:00,11-May-2016 14:13:00,Dividend,1
+03-Feb-2016 10:46:00,03-Feb-2016 10:46:00,Dividend,1
+30-Jan-2016 18:35:00,30-Jan-2016 18:35:00,Record Date,1
+27-May-2015 10:29:00,27-May-2015 10:29:00,AGM/Book Closure,1
+11-May-2015 16:17:00,11-May-2015 16:17:00,Date of payment of dividend,1
+11-May-2015 13:58:00,11-May-2015 13:58:00,Dividend,1
+30-Jun-2014 10:56:00,30-Jun-2014 10:56:00,Stock split,1
+29-May-2014 12:16:00,29-May-2014 12:16:00,AGM/Book Closure,1
+28-May-2014 13:24:00,28-May-2014 13:24:00,Dividend,1
+14-Mar-2014 11:28:00,14-Mar-2014 11:28:00,Dividend,1
+14-Mar-2014 11:24:00,14-Mar-2014 11:24:00,Date of payment of dividend,1
+10-Mar-2014 12:04:00,10-Mar-2014 12:04:00,Record Date,1
+28-May-2013 14:44:00,28-May-2013 14:44:00,AGM/Book Closure,1
+28-May-2013 14:40:00,28-May-2013 14:40:00,Dividend,1
+28-May-2013 14:36:00,28-May-2013 14:36:00,Date of payment of dividend,1
+30-May-2012 14:39:00,30-May-2012 14:39:00,AGM / Book Closure,1
+30-May-2012 13:50:00,30-May-2012 13:50:00,Dividend,1
+27-May-2011 15:27:00,27-May-2011 15:27:00,AGM / Book Closure,1
+27-May-2011 14:26:00,27-May-2011 14:26:00,Dividend,1
+27-Aug-2010 16:25:00,27-Aug-2010 16:25:00,Book Closure,1
+27-Aug-2010 13:08:00,27-Aug-2010 13:08:00,Bonus,1
+27-Aug-2010 13:05:00,27-Aug-2010 13:05:00,Dividend,1
+28-Jan-2010 14:08:00,28-Jan-2010 14:08:00,Record Date,1
+28-Jan-2010 13:57:00,28-Jan-2010 13:57:00,Interim Dividend,1
+27-Jun-2009 17:16:00,27-Jun-2009 17:16:00,Dividend/Book Closure/Date of AGM/Others,1
+23-May-2008 18:12:00,23-May-2008 18:12:00,Book Closure,1
+22-May-2008 13:55:00,22-May-2008 13:55:00,Final Dividend,1
+18-May-2007 11:45:00,18-May-2007 11:45:00,Book Closure,1
+15-May-2007 13:52:00,15-May-2007 13:52:00,Dividend,1
+18-May-2006 00:00:00,18-May-2006 00:00:00,Dividend/Bonus,1
+18-May-2006 00:00:00,18-May-2006 00:00:00,AGM/Book Closure/Others,1
+12-May-2005 00:00:00,12-May-2005 00:00:00,Dividend/Bonus/Others,1

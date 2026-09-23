@@ -76,9 +76,9 @@ holidays = [
         'key': 'DIWALI',
         'sheet_title': 'Diwali Laxmi Pujan',
         'name': 'Diwali (Laxmi Pujan / Balipratipada)',
-        '2026_date': '21-Oct-2026 (Wednesday)',
-        'pre_entry': '14-Oct-2026 (Wednesday)',
-        'post_exit': '23-Oct-2026 (Friday)',
+        '2026_date': '08-Nov-2026 (Sunday)',
+        'pre_entry': '28-Oct-2026 (Wednesday)',
+        'post_exit': '16-Nov-2026 (Monday)',
         'window': 'T-5 to T+2',
         'bias': 'PRE-FESTIVAL RALLY (LONG)',
         'desc': 'Pre-Diwali accumulation 5 trading days prior; exit 2 days post-Diwali'

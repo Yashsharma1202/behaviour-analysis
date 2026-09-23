@@ -1,0 +1,54 @@
+Year,Meeting_Type,Date,Repo_Rate,Action
+2018,Bi-Monthly,2018-02-07,6.0,Status Quo
+2018,Bi-Monthly,2018-04-05,6.0,Status Quo
+2018,Bi-Monthly,2018-06-06,6.25,Hike (+25 bps)
+2018,Bi-Monthly,2018-08-01,6.5,Hike (+25 bps)
+2018,Bi-Monthly,2018-10-05,6.5,Status Quo
+2018,Bi-Monthly,2018-12-05,6.5,Status Quo
+2019,Bi-Monthly,2019-02-07,6.25,Cut (-25 bps)
+2019,Bi-Monthly,2019-04-04,6.0,Cut (-25 bps)
+2019,Bi-Monthly,2019-06-06,5.75,Cut (-25 bps)
+2019,Bi-Monthly,2019-08-07,5.4,Cut (-35 bps)
+2019,Bi-Monthly,2019-10-04,5.15,Cut (-25 bps)
+2019,Bi-Monthly,2019-12-05,5.15,Status Quo
+2020,Bi-Monthly,2020-02-06,5.15,Status Quo
+2020,Off-Cycle (Covid),2020-03-27,4.4,Cut (-75 bps)
+2020,Off-Cycle (Covid),2020-05-22,4.0,Cut (-40 bps)
+2020,Bi-Monthly,2020-08-06,4.0,Status Quo
+2020,Bi-Monthly,2020-10-09,4.0,Status Quo
+2020,Bi-Monthly,2020-12-04,4.0,Status Quo
+2021,Bi-Monthly,2021-02-05,4.0,Status Quo
+2021,Bi-Monthly,2021-04-07,4.0,Status Quo
+2021,Bi-Monthly,2021-06-04,4.0,Status Quo
+2021,Bi-Monthly,2021-08-06,4.0,Status Quo
+2021,Bi-Monthly,2021-10-08,4.0,Status Quo
+2021,Bi-Monthly,2021-12-08,4.0,Status Quo
+2022,Bi-Monthly,2022-02-10,4.0,Status Quo
+2022,Bi-Monthly,2022-04-08,4.0,Status Quo
+2022,Off-Cycle,2022-05-04,4.4,Hike (+40 bps)
+2022,Bi-Monthly,2022-06-08,4.9,Hike (+50 bps)
+2022,Bi-Monthly,2022-08-05,5.4,Hike (+50 bps)
+2022,Bi-Monthly,2022-09-30,5.9,Hike (+50 bps)
+2022,Bi-Monthly,2022-12-07,6.25,Hike (+35 bps)
+2023,Bi-Monthly,2023-02-08,6.5,Hike (+25 bps)
+2023,Bi-Monthly,2023-04-06,6.5,Status Quo
+2023,Bi-Monthly,2023-06-08,6.5,Status Quo
+2023,Bi-Monthly,2023-08-10,6.5,Status Quo
+2023,Bi-Monthly,2023-10-06,6.5,Status Quo
+2023,Bi-Monthly,2023-12-08,6.5,Status Quo
+2024,Bi-Monthly,2024-02-08,6.5,Status Quo
+2024,Bi-Monthly,2024-04-05,6.5,Status Quo
+2024,Bi-Monthly,2024-06-07,6.5,Status Quo
+2024,Bi-Monthly,2024-08-08,6.5,Status Quo
+2024,Bi-Monthly,2024-10-09,6.5,Status Quo
+2024,Bi-Monthly,2024-12-06,6.5,Status Quo
+2025,Bi-Monthly,2025-02-07,6.25,Cut (-25 bps)
+2025,Bi-Monthly,2025-04-09,6.0,Cut (-25 bps)
+2025,Bi-Monthly,2025-06-06,5.5,Cut (-50 bps)
+2025,Bi-Monthly,2025-08-08,5.5,Status Quo
+2025,Bi-Monthly,2025-10-08,5.5,Status Quo
+2025,Bi-Monthly,2025-12-05,5.25,Cut (-25 bps)
+2026,Bi-Monthly,2026-02-06,5.25,Status Quo
+2026,Bi-Monthly,2026-04-08,5.25,Status Quo
+2026,Bi-Monthly,2026-06-05,5.25,Status Quo
+2026,Bi-Monthly,2026-08-05,5.25,Status Quo

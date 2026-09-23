@@ -77,7 +77,7 @@ all_holidays = [
     {'key': 'GANESH', 'sheet': 'Ganesh Chaturthi', 'name': 'Ganesh Chaturthi', 'date': '2026-09-14', 'date_str': '14-Sep-2026 (Monday)'},
     {'key': 'GANDHI', 'sheet': 'Mahatma Gandhi Jayanti', 'name': 'Mahatma Gandhi Jayanti', 'date': '2026-10-02', 'date_str': '02-Oct-2026 (Friday)'},
     {'key': 'DUSSEHRA', 'sheet': 'Dussehra Dasera', 'name': 'Dussehra / Dasera', 'date': '2026-10-20', 'date_str': '20-Oct-2026 (Tuesday)'},
-    {'key': 'DIWALI', 'sheet': 'Diwali Laxmi Pujan', 'name': 'Diwali (Laxmi Pujan / Balipratipada)', 'date': '2026-10-21', 'date_str': '21-Oct-2026 (Wednesday)'},
+    {'key': 'DIWALI', 'sheet': 'Diwali Laxmi Pujan', 'name': 'Diwali (Laxmi Pujan / Balipratipada)', 'date': '2026-11-08', 'date_str': '08-Nov-2026 (Sunday)'},
     {'key': 'GURUNANAK', 'sheet': 'Gurunanak Jayanti', 'name': 'Gurunanak Jayanti', 'date': '2026-11-24', 'date_str': '24-Nov-2026 (Tuesday)'},
     {'key': 'CHRISTMAS', 'sheet': 'Christmas Year End', 'name': 'Christmas & Year-End', 'date': '2026-12-25', 'date_str': '25-Dec-2026 (Friday)'}
 ]

@@ -1,14 +1,6 @@
-broadCastDate,symbol,companyName,isin,consolidated,period,resultDescription,fr_source
-20-Jan-2025,ETERNAL,ETERNAL LIMITED,INE758T01015,,Quarterly,Financial Result Updates,announcements
-22-Oct-2024,ETERNAL,ETERNAL LIMITED,INE758T01015,,Quarterly,Financial Result Updates,announcements
-01-Aug-2024,ETERNAL,ETERNAL LIMITED,INE758T01015,,Quarterly,Financial Result Updates,announcements
-13-May-2024,ETERNAL,ETERNAL LIMITED,INE758T01015,,Quarterly,Financial Result Updates,announcements
-08-Feb-2024,ETERNAL,ETERNAL LIMITED,INE758T01015,,Quarterly,Financial Result Updates,announcements
-03-Nov-2023,ETERNAL,ETERNAL LIMITED,INE758T01015,,Quarterly,Financial Result Updates,announcements
-03-Aug-2023,ETERNAL,ETERNAL LIMITED,INE758T01015,,Quarterly,Financial Result Updates,announcements
-19-May-2023,ETERNAL,ETERNAL LIMITED,INE758T01015,,Quarterly,Financial Result Updates,announcements
-09-Feb-2023,ETERNAL,ETERNAL LIMITED,INE758T01015,,Quarterly,Financial Result Updates,announcements
-23-May-2022,ETERNAL,ETERNAL LIMITED,INE758T01015,,Quarterly,Financial Result Updates,announcements
-10-Feb-2022,ETERNAL,ETERNAL LIMITED,INE758T01015,,Quarterly,Financial Result Updates,announcements
-10-Nov-2021,ETERNAL,ETERNAL LIMITED,INE758T01015,,Quarterly,Financial Result Updates,announcements
-10-Aug-2021,ETERNAL,ETERNAL LIMITED,INE758T01015,,Quarterly,Financial Result Updates,announcements
+broadCastDate,relatingTo,consolidated,audited,fromDate,toDate
+20-JAN-2025,Qtr ended 31-DEC-2024,U,Audited,01-OCT-2024,31-DEC-2024
+22-OCT-2024,Qtr ended 30-SEP-2024,U,Audited,01-JUL-2024,30-SEP-2024
+01-AUG-2024,Qtr ended 30-JUN-2024,U,Audited,01-APR-2024,30-JUN-2024
+13-MAY-2024,Qtr ended 31-MAR-2024,A,Audited,01-JAN-2024,31-MAR-2024
+08-FEB-2024,Qtr ended 31-DEC-2023,U,Audited,01-OCT-2023,31-DEC-2023
