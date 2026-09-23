@@ -131,6 +131,29 @@
       50% { opacity: 0.4; transform: scale(0.85); }
     }
 
+    /* RBI Sub-Tab Pill Styling */
+    .rbi-subtab-pill {
+      padding: 0.55rem 1.1rem;
+      border-radius: 8px;
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .rbi-subtab-pill:hover {
+      color: var(--text-primary);
+      background: rgba(255,255,255,0.06);
+    }
+    .rbi-subtab-pill.active {
+      background: linear-gradient(135deg, rgba(56,189,248,0.2), rgba(129,140,248,0.2));
+      border-color: rgba(56,189,248,0.5);
+      color: #38bdf8;
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
+    }
+
     /* Ticker Banner */
     .ticker-bar {
       background: linear-gradient(90deg, #1E1B4B 0%, #0F172A 50%, #1E1B4B 100%);
@@ -1324,86 +1347,172 @@
 
     <!-- TAB 3: RBI MONETARY POLICY -->
     <div id="tab-rbi" class="tab-content" style="display:none;">
-      <!-- RBI KPI Bar -->
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem;" id="rbi-kpi-bar">
-        <div class="card" style="padding:1.25rem;">
-          <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem">Total RBI Events</div>
-          <div id="rbi-kpi-total" style="font-size:1.8rem;font-weight:700;font-family:'JetBrains Mono',monospace;color:#38bdf8">162</div>
-          <div style="font-size:0.72rem;color:var(--text-muted)">2000 – 2026 (26 years)</div>
+      <!-- RBI SUB-TAB NAVIGATION -->
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;background:rgba(255,255,255,0.03);padding:0.4rem;border-radius:12px;border:1px solid rgba(255,255,255,0.08);">
+        <div style="display:flex;gap:0.5rem;">
+          <button id="rbi-subtab-btn-index" class="rbi-subtab-pill active" onclick="switchRbiSubTab('index')">
+            <i class="fas fa-chart-line" style="margin-right:0.4rem;"></i> 📊 Nifty Futures Index
+          </button>
+          <button id="rbi-subtab-btn-stocks" class="rbi-subtab-pill" onclick="switchRbiSubTab('stocks')">
+            <i class="fas fa-building" style="margin-right:0.4rem;"></i> 🏦 Nifty 50 Individual Stocks (50)
+          </button>
         </div>
-        <div class="card" style="padding:1.25rem;">
-          <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem">Best Win Rate (Hike)</div>
-          <div id="rbi-kpi-hike-wr" style="font-size:1.8rem;font-weight:700;font-family:'JetBrains Mono',monospace;color:#34d399">65.9%</div>
-          <div id="rbi-kpi-hike-win" style="font-size:0.72rem;color:var(--text-muted)">Window: T+1 to T+5</div>
-        </div>
-        <div class="card" style="padding:1.25rem;">
-          <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem">Status Quo Optimal</div>
-          <div id="rbi-kpi-squo-ret" style="font-size:1.8rem;font-weight:700;font-family:'JetBrains Mono',monospace;color:#fbbf24">+0.56%</div>
-          <div id="rbi-kpi-squo-win" style="font-size:0.72rem;color:var(--text-muted)">Avg Return • T+0 to T+5</div>
-        </div>
-        <div class="card" style="padding:1.25rem;">
-          <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem">Rate Cut Optimal</div>
-          <div id="rbi-kpi-cut-ret" style="font-size:1.8rem;font-weight:700;font-family:'JetBrains Mono',monospace;color:#a78bfa">+0.39%</div>
-          <div id="rbi-kpi-cut-win" style="font-size:0.72rem;color:var(--text-muted)">Avg Return • T-1 to T+1</div>
+        <div style="font-size:0.75rem;color:var(--text-muted);padding-right:0.75rem;">
+          <i class="fas fa-calendar-alt" style="color:#38bdf8;margin-right:0.3rem"></i> 162 Events &bull; 2000&ndash;2026 (26 Years)
         </div>
       </div>
 
-      <!-- Optimal Windows Panel -->
-      <div class="card" style="margin-bottom:1.5rem;">
-        <div class="card-header">
-          <div class="card-title-group">
-            <h2>Empirically Optimal Position Windows &mdash; 26 Year Backtest (2000&ndash;2026)</h2>
-            <p>Pre &amp; post policy window analysis on Nifty Futures. Win rates and avg returns computed across 162 events.</p>
+      <!-- SUB-TAB PANEL 1: NIFTY FUTURES INDEX -->
+      <div id="rbi-panel-index">
+        <!-- RBI KPI Bar -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem;" id="rbi-kpi-bar">
+          <div class="card" style="padding:1.25rem;">
+            <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem">Total RBI Events</div>
+            <div id="rbi-kpi-total" style="font-size:1.8rem;font-weight:700;font-family:'JetBrains Mono',monospace;color:#38bdf8">162</div>
+            <div style="font-size:0.72rem;color:var(--text-muted)">2000 &ndash; 2026 (26 years)</div>
           </div>
-          <a href="rbi_policy_dashboard.html" target="_blank" style="display:inline-flex;align-items:center;gap:.4rem;padding:.4rem 1rem;border:1px solid rgba(56,189,248,.3);border-radius:8px;color:#38bdf8;font-size:.78rem;text-decoration:none;white-space:nowrap">
-            <i class="fas fa-external-link-alt"></i> Full RBI Dashboard
-          </a>
+          <div class="card" style="padding:1.25rem;">
+            <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem">Best Win Rate (Hike)</div>
+            <div id="rbi-kpi-hike-wr" style="font-size:1.8rem;font-weight:700;font-family:'JetBrains Mono',monospace;color:#34d399">65.9%</div>
+            <div id="rbi-kpi-hike-win" style="font-size:0.72rem;color:var(--text-muted)">Window: T+1 to T+5</div>
+          </div>
+          <div class="card" style="padding:1.25rem;">
+            <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem">Status Quo Optimal</div>
+            <div id="rbi-kpi-squo-ret" style="font-size:1.8rem;font-weight:700;font-family:'JetBrains Mono',monospace;color:#fbbf24">+0.56%</div>
+            <div id="rbi-kpi-squo-win" style="font-size:0.72rem;color:var(--text-muted)">Avg Return &bull; T+0 to T+5</div>
+          </div>
+          <div class="card" style="padding:1.25rem;">
+            <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem">Rate Cut Optimal</div>
+            <div id="rbi-kpi-cut-ret" style="font-size:1.8rem;font-weight:700;font-family:'JetBrains Mono',monospace;color:#a78bfa">+0.39%</div>
+            <div id="rbi-kpi-cut-win" style="font-size:0.72rem;color:var(--text-muted)">Avg Return &bull; T-1 to T+1</div>
+          </div>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;" id="rbi-optimal-grid">
-          <!-- filled by renderRbiTab() -->
-          <div style="color:var(--text-muted);font-size:.85rem;grid-column:1/-1;text-align:center;padding:2rem">Loading optimal windows...</div>
+
+        <!-- Optimal Windows Panel -->
+        <div class="card" style="margin-bottom:1.5rem;">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h2>Empirically Optimal Position Windows &mdash; 26 Year Backtest (2000&ndash;2026)</h2>
+              <p>Pre &amp; post policy window analysis on Nifty Futures. Win rates and avg returns computed across 162 events.</p>
+            </div>
+            <a href="rbi_policy_dashboard.html" target="_blank" style="display:inline-flex;align-items:center;gap:.4rem;padding:.4rem 1rem;border:1px solid rgba(56,189,248,.3);border-radius:8px;color:#38bdf8;font-size:.78rem;text-decoration:none;white-space:nowrap">
+              <i class="fas fa-external-link-alt"></i> Full RBI Dashboard
+            </a>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;" id="rbi-optimal-grid">
+            <!-- filled by renderRbiTab() -->
+            <div style="color:var(--text-muted);font-size:.85rem;grid-column:1/-1;text-align:center;padding:2rem">Loading optimal windows...</div>
+          </div>
+        </div>
+
+        <!-- Full Event History -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h2 id="rbi-table-heading">RBI Policy Event History (2000&ndash;2026)</h2>
+              <p>162 events &bull; Pre/Post Nifty Futures window backtest &bull; Empirical optimal entry/exit per action category</p>
+            </div>
+            <div class="filter-bar">
+              <input type="text" id="rbi-search" class="search-input" placeholder="Search year, action..." oninput="filterRbiEventTable()">
+              <button class="filter-pill active" id="rpill-ALL" onclick="setRbiCatFilter('ALL', this)">All (162)</button>
+              <button class="filter-pill" id="rpill-CUT" onclick="setRbiCatFilter('CUT', this)">&#8595; Cut (44)</button>
+              <button class="filter-pill" id="rpill-HIKE" onclick="setRbiCatFilter('HIKE', this)">&#8593; Hike (41)</button>
+              <button class="filter-pill" id="rpill-STATUS QUO" onclick="setRbiCatFilter('STATUS QUO', this)">&#8212; Status Quo (75)</button>
+            </div>
+          </div>
+          <div class="table-container">
+            <table id="rbi-event-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Policy Date</th>
+                  <th>Year</th>
+                  <th>Action</th>
+                  <th>Category</th>
+                  <th>Repo Rate</th>
+                  <th>Optimal Window</th>
+                  <th>Spot Day Chg</th>
+                  <th>Fut Day Chg</th>
+                  <th>Intraday Range</th>
+                  <th>OI Change</th>
+                </tr>
+              </thead>
+              <tbody id="rbi-event-tbody">
+                <tr><td colspan="11" style="text-align:center;color:var(--text-muted);padding:2rem">Loading...</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
-      <!-- Full Event History -->
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title-group">
-            <h2 id="rbi-table-heading">RBI Policy Event History (2000&ndash;2026)</h2>
-            <p>162 events &bull; Pre/Post Nifty Futures window backtest &bull; Empirical optimal entry/exit per action category</p>
+      <!-- SUB-TAB PANEL 2: NIFTY 50 INDIVIDUAL STOCKS -->
+      <div id="rbi-panel-stocks" style="display:none;">
+        <!-- Stock KPI Highlights Row -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem;">
+          <div class="card" style="padding:1.25rem;">
+            <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem">Nifty 50 Universe</div>
+            <div style="font-size:1.8rem;font-weight:700;font-family:'JetBrains Mono',monospace;color:#38bdf8">50 Stocks</div>
+            <div style="font-size:0.72rem;color:var(--text-muted)">All 162 RBI events (2000&ndash;2026)</div>
           </div>
-          <div class="filter-bar">
-            <input type="text" id="rbi-search" class="search-input" placeholder="Search year, action..." oninput="filterRbiEventTable()">
-            <button class="filter-pill active" id="rpill-ALL" onclick="setRbiCatFilter('ALL', this)">All (162)</button>
-            <button class="filter-pill" id="rpill-CUT" onclick="setRbiCatFilter('CUT', this)">&#8595; Cut (44)</button>
-            <button class="filter-pill" id="rpill-HIKE" onclick="setRbiCatFilter('HIKE', this)">&#8593; Hike (41)</button>
-            <button class="filter-pill" id="rpill-STATUS QUO" onclick="setRbiCatFilter('STATUS QUO', this)">&#8212; Status Quo (75)</button>
+          <div class="card" style="padding:1.25rem;">
+            <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem">Top Rate Cut Stock</div>
+            <div id="rbi-kpi-stock-cut" style="font-size:1.3rem;font-weight:700;font-family:'JetBrains Mono',monospace;color:#34d399">Loading...</div>
+            <div style="font-size:0.72rem;color:var(--text-muted)">Highest Win Rate under Cuts</div>
+          </div>
+          <div class="card" style="padding:1.25rem;">
+            <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem">Top Rate Hike Stock</div>
+            <div id="rbi-kpi-stock-hike" style="font-size:1.3rem;font-weight:700;font-family:'JetBrains Mono',monospace;color:#f87171">Loading...</div>
+            <div style="font-size:0.72rem;color:var(--text-muted)">Highest Win Rate under Hikes</div>
+          </div>
+          <div class="card" style="padding:1.25rem;">
+            <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem">Top Status Quo Stock</div>
+            <div id="rbi-kpi-stock-squo" style="font-size:1.3rem;font-weight:700;font-family:'JetBrains Mono',monospace;color:#fbbf24">Loading...</div>
+            <div style="font-size:0.72rem;color:var(--text-muted)">Highest Win Rate under Status Quo</div>
           </div>
         </div>
-        <div class="table-container">
-          <table id="rbi-event-table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Policy Date</th>
-                <th>Year</th>
-                <th>Action</th>
-                <th>Category</th>
-                <th>Repo Rate</th>
-                <th>Optimal Window</th>
-                <th>Spot Day Chg</th>
-                <th>Fut Day Chg</th>
-                <th>Intraday Range</th>
-                <th>OI Change</th>
-              </tr>
-            </thead>
-            <tbody id="rbi-event-tbody">
-              <tr><td colspan="11" style="text-align:center;color:var(--text-muted);padding:2rem">Loading...</td></tr>
-            </tbody>
-          </table>
+
+        <!-- Stock Master Table Card -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h2>Nifty 50 Individual Stock RBI Policy Playbook</h2>
+              <p>Per-stock optimal entry/exit windows, win rates, and return profiles across 162 RBI policy dates (2000&ndash;2026)</p>
+            </div>
+            <div class="filter-bar">
+              <input type="text" id="rbi-stock-search" class="search-input" placeholder="Search symbol or sector..." oninput="filterRbiStockTable()">
+              <select id="rbi-stock-sector" class="search-input" style="padding:0.4rem 0.6rem;font-size:0.75rem;cursor:pointer;" onchange="filterRbiStockTable()">
+                <option value="ALL">All Sectors</option>
+              </select>
+              <button class="filter-pill active" id="rspill-ALL" onclick="setRbiStockCatFilter('ALL', this)">All Category</button>
+              <button class="filter-pill" id="rspill-CUT" onclick="setRbiStockCatFilter('CUT', this)">&#8595; Rate Cut</button>
+              <button class="filter-pill" id="rspill-HIKE" onclick="setRbiStockCatFilter('HIKE', this)">&#8593; Rate Hike</button>
+              <button class="filter-pill" id="rspill-STATUS QUO" onclick="setRbiStockCatFilter('STATUS QUO', this)">&#8212; Status Quo</button>
+            </div>
+          </div>
+          <div class="table-container">
+            <table id="rbi-stock-table">
+              <thead>
+                <tr>
+                  <th style="text-align:center">#</th>
+                  <th>Symbol</th>
+                  <th>Sector</th>
+                  <th style="text-align:center">Events Traded</th>
+                  <th>Optimal Window</th>
+                  <th>Win Rate %</th>
+                  <th>Avg Return %</th>
+                  <th>Median Return %</th>
+                  <th>Composite Score</th>
+                </tr>
+              </thead>
+              <tbody id="rbi-stock-tbody">
+                <tr><td colspan="9" style="text-align:center;color:var(--text-muted);padding:2rem">Loading stock analysis...</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
+
 
 
     <!-- TAB 4: EXTENSIBLE CUSTOM EVENTS -->
@@ -1931,6 +2040,29 @@
     }
 
     let currentRbiCatFilter = 'ALL';
+    let currentRbiSubTab = 'index';
+    let currentRbiStockCatFilter = 'ALL';
+
+    function switchRbiSubTab(sub) {
+      currentRbiSubTab = sub;
+      const pIndex = document.getElementById('rbi-panel-index');
+      const pStocks = document.getElementById('rbi-panel-stocks');
+      const bIndex = document.getElementById('rbi-subtab-btn-index');
+      const bStocks = document.getElementById('rbi-subtab-btn-stocks');
+
+      if (sub === 'index') {
+        if (pIndex) pIndex.style.display = 'block';
+        if (pStocks) pStocks.style.display = 'none';
+        if (bIndex) bIndex.classList.add('active');
+        if (bStocks) bStocks.classList.remove('active');
+      } else {
+        if (pIndex) pIndex.style.display = 'none';
+        if (pStocks) pStocks.style.display = 'block';
+        if (bIndex) bIndex.classList.remove('active');
+        if (bStocks) bStocks.classList.add('active');
+        renderRbiStockTab();
+      }
+    }
 
     function renderRbiTab() {
       const d = window.RBI_POLICY_DATA;
@@ -1991,6 +2123,11 @@
 
       // Render event table
       renderRbiEventTable();
+
+      // Render stock tab if active
+      if (currentRbiSubTab === 'stocks') {
+        renderRbiStockTab();
+      }
     }
 
     function renderRbiEventTable() {
@@ -2041,17 +2178,121 @@
 
     function setRbiCatFilter(cat, el) {
       currentRbiCatFilter = cat;
-      document.querySelectorAll('#tab-rbi .filter-pill').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('#tab-rbi #rbi-panel-index .filter-pill').forEach(b => b.classList.remove('active'));
       if (el) el.classList.add('active');
       renderRbiEventTable();
     }
 
     function filterRbiEventTable() { renderRbiEventTable(); }
 
+    function renderRbiStockTab() {
+      const d = window.RBI_POLICY_DATA;
+      if (!d || !d.stock_analysis) return;
+      const stocks = d.stock_analysis;
+
+      // Render sector dropdown options if not populated
+      const sectorSelect = document.getElementById('rbi-stock-sector');
+      if (sectorSelect && sectorSelect.options.length <= 1) {
+        const sectors = Array.from(new Set(stocks.map(s => s.sector))).sort();
+        sectors.forEach(sec => {
+          const opt = document.createElement('option');
+          opt.value = sec;
+          opt.textContent = sec;
+          sectorSelect.appendChild(opt);
+        });
+      }
+
+      // Stock KPI top highlights
+      const topCut = [...stocks].sort((a,b) => (b.optimal_cut?.win_rate || 0) - (a.optimal_cut?.win_rate || 0))[0];
+      if (topCut && topCut.optimal_cut) {
+        const el = document.getElementById('rbi-kpi-stock-cut');
+        if (el) el.innerHTML = `<span style="color:#34d399">${topCut.symbol}</span> <span style="font-size:0.75rem;color:var(--text-muted)">(${topCut.optimal_cut.win_rate}%)</span>`;
+      }
+      const topHike = [...stocks].sort((a,b) => (b.optimal_hike?.win_rate || 0) - (a.optimal_hike?.win_rate || 0))[0];
+      if (topHike && topHike.optimal_hike) {
+        const el = document.getElementById('rbi-kpi-stock-hike');
+        if (el) el.innerHTML = `<span style="color:#f87171">${topHike.symbol}</span> <span style="font-size:0.75rem;color:var(--text-muted)">(${topHike.optimal_hike.win_rate}%)</span>`;
+      }
+      const topSquo = [...stocks].sort((a,b) => (b.optimal_status_quo?.win_rate || 0) - (a.optimal_status_quo?.win_rate || 0))[0];
+      if (topSquo && topSquo.optimal_status_quo) {
+        const el = document.getElementById('rbi-kpi-stock-squo');
+        if (el) el.innerHTML = `<span style="color:#fbbf24">${topSquo.symbol}</span> <span style="font-size:0.75rem;color:var(--text-muted)">(${topSquo.optimal_status_quo.win_rate}%)</span>`;
+      }
+
+      renderRbiStockTable();
+    }
+
+    function renderRbiStockTable() {
+      const d = window.RBI_POLICY_DATA;
+      const tbody = document.getElementById('rbi-stock-tbody');
+      if (!d || !d.stock_analysis || !tbody) return;
+
+      let stocks = d.stock_analysis;
+      const query = (document.getElementById('rbi-stock-search')?.value || '').toLowerCase().trim();
+      const selectedSector = document.getElementById('rbi-stock-sector')?.value || 'ALL';
+      const cat = currentRbiStockCatFilter;
+
+      if (query) {
+        stocks = stocks.filter(s => s.symbol.toLowerCase().includes(query) || (s.sector || '').toLowerCase().includes(query));
+      }
+      if (selectedSector !== 'ALL') {
+        stocks = stocks.filter(s => s.sector === selectedSector);
+      }
+
+      const getOpt = (s) => {
+        if (cat === 'CUT') return s.optimal_cut;
+        if (cat === 'HIKE') return s.optimal_hike;
+        if (cat === 'STATUS QUO') return s.optimal_status_quo;
+        return s.optimal_all;
+      };
+
+      stocks = [...stocks].sort((a, b) => {
+        const optA = getOpt(a) || {};
+        const optB = getOpt(b) || {};
+        return (optB.win_rate || 0) - (optA.win_rate || 0) || (optB.avg_return || 0) - (optA.avg_return || 0);
+      });
+
+      tbody.innerHTML = stocks.map((s, i) => {
+        const opt = getOpt(s) || { window: '—', win_rate: 0, avg_return: 0, median_return: 0, score: 0 };
+        const wrCol = opt.win_rate >= 65 ? '#34d399' : opt.win_rate >= 55 ? '#38bdf8' : '#fbbf24';
+        const retCol = opt.avg_return > 0 ? '#34d399' : opt.avg_return < 0 ? '#f87171' : '#fbbf24';
+        const retSign = opt.avg_return > 0 ? '+' : '';
+
+        return `<tr>
+          <td style="color:var(--text-muted);font-size:.72rem;text-align:center">${i + 1}</td>
+          <td style="font-weight:700;font-family:'JetBrains Mono',monospace;color:#f8fafc">${s.symbol}</td>
+          <td style="font-size:.73rem;color:var(--text-secondary)">${s.sector}</td>
+          <td style="font-family:'JetBrains Mono',monospace;text-align:center;color:var(--text-muted)">${s.total_events}</td>
+          <td style="font-family:'JetBrains Mono',monospace;font-size:.75rem;color:#38bdf8;font-weight:600">${opt.window}</td>
+          <td style="font-family:'JetBrains Mono',monospace;">
+            <span style="color:${wrCol};font-weight:700">${opt.win_rate}%</span>
+            <div style="width:50px;height:4px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:3px;overflow:hidden">
+              <div style="width:${Math.min(100, opt.win_rate)}%;height:100%;background:${wrCol}"></div>
+            </div>
+          </td>
+          <td style="font-family:'JetBrains Mono',monospace;color:${retCol};font-weight:600">${retSign}${opt.avg_return}%</td>
+          <td style="font-family:'JetBrains Mono',monospace;color:var(--text-secondary)">${opt.median_return != null ? (opt.median_return > 0 ? '+' : '') + opt.median_return + '%' : '—'}</td>
+          <td style="font-family:'JetBrains Mono',monospace;color:#a78bfa;font-weight:600">${opt.score}</td>
+        </tr>`;
+      }).join('');
+    }
+
+    function setRbiStockCatFilter(cat, el) {
+      currentRbiStockCatFilter = cat;
+      document.querySelectorAll('#tab-rbi #rbi-panel-stocks .filter-pill').forEach(b => b.classList.remove('active'));
+      if (el) el.classList.add('active');
+      renderRbiStockTable();
+    }
+
+    function filterRbiStockTable() {
+      renderRbiStockTable();
+    }
+
     // Keep old stub for any backward compat references
     function renderRbiTable() { renderRbiTab(); }
     function filterRbiTable() { renderRbiEventTable(); }
     function setRbiFilter(f, el) { setRbiCatFilter(f, el); }
+
 
     function setQuarterFilter(filter, el) {
       currentQuarterFilter = filter;
