@@ -7555,7 +7555,9 @@
           "fut_action": "BUY FUTURES (600 qty)",
           "opt_action": "BUY OCT CALL OPTION"
         }
-      ]
+      ],
+      "date_str": "08-Nov-2026 (Sunday)",
+      "opt_month": "NOV"
     },
     {
       "id": "christmas_2026",

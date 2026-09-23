@@ -12,7 +12,7 @@
       "name": "Diwali (Laxmi Pujan & Balipratipada)",
       "category": "Festival of Lights",
       "desc": "Samvat New Year Muhurat trading, festive demand surge & pre-Diwali run-up",
-      "2026_date_str": "21-Oct-2026 (Wed)",
+      "2026_date_str": "08-Nov-2026 (Sun)",
       "optimal_window": "T-4 to T+3",
       "lead_n": 4,
       "lag_m": 3,
@@ -31,8 +31,8 @@
       "profit_factor": 7.67,
       "max_dd_points": 339.15,
       "max_win_streak": 12,
-      "upcoming_entry": "15-Sep-2026 (Tue)",
-      "upcoming_exit": "21-Sep-2026 (Mon)",
+      "upcoming_entry": "28-Oct-2026 (Wed)",
+      "upcoming_exit": "16-Nov-2026 (Mon)",
       "trades": [
         {
           "year": 2000,
@@ -4738,7 +4738,7 @@
       "name": "Holi Festival",
       "category": "Festival",
       "desc": "Spring festival consumption surge and pre-Holi equity momentum",
-      "2026_date_str": "14-Mar-2026 (Sat)",
+      "2026_date_str": "04-Mar-2026 (Wed)",
       "optimal_window": "T-1 to T+6",
       "lead_n": 1,
       "lag_m": 6,
@@ -4757,8 +4757,8 @@
       "profit_factor": 1.0,
       "max_dd_points": 2521.4,
       "max_win_streak": 5,
-      "upcoming_entry": "12-Mar-2026 (Thu)",
-      "upcoming_exit": "23-Mar-2026 (Mon)",
+      "upcoming_entry": "23-Feb-2026 (Mon)",
+      "upcoming_exit": "11-Mar-2026 (Wed)",
       "trades": [
         {
           "year": 2001,
