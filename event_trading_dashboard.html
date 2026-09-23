@@ -1003,8 +1003,10 @@
                 <th>Futures Bias</th>
                 <th>Position Window</th>
                 <th>Entry Date (09:20 AM)</th>
+                <th>Entry Price (₹ @ 09:20 AM)</th>
                 <th>Result Date (T)</th>
                 <th>Exit Date (03:15 PM)</th>
+                <th>Exit Price (₹ @ 03:15 PM)</th>
                 <th>Historical Stock Win Rate (17Q Avg)</th>
                 <th>Lot Size</th>
                 <th>Expected Ret %</th>
@@ -1215,8 +1217,10 @@
                 <th>Equity Signal</th>
                 <th>Position Window</th>
                 <th>Entry Date (09:20 AM)</th>
+                <th>Entry Price (₹ @ 09:20 AM)</th>
                 <th>Result Date (T)</th>
                 <th>Exit Date (03:15 PM)</th>
+                <th>Exit Price (₹ @ 03:15 PM)</th>
                 <th>Historical Stock Win Rate (17Q Avg)</th>
                 <th>Spot LTP (₹)</th>
                 <th>Shares (₹1L Basis)</th>
@@ -1933,8 +1937,10 @@
           <td>${signalBadge}</td>
           <td><span class="window-pill">${s.window}</span></td>
           <td>${enDateStr}</td>
+          <td style="color:#60A5FA; font-weight:700; font-family:'JetBrains Mono';">₹${Number(s.entry_px || s.spot_ltp || 1000).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
           <td>${resDateStr}</td>
           <td>${exDateStr}</td>
+          <td style="color:#34D399; font-weight:700; font-family:'JetBrains Mono';">₹${Number(s.exit_px || s.entry_px || 1000).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
           <td>${eqWrStr}</td>
           <td style="color:#FFF; font-weight:600;">${ltpStr}</td>
           <td style="color:#60A5FA; font-weight:600;">${sharesStr}</td>
@@ -2140,8 +2146,10 @@
           <td>${dirBadge}</td>
           <td><span class="window-pill">${s.window}</span></td>
           <td>${enDateStr}</td>
+          <td style="color:#60A5FA; font-weight:700; font-family:'JetBrains Mono';">₹${Number(s.entry_px || s.spot_ltp || 1000).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
           <td>${resDateStr}</td>
           <td>${exDateStr}</td>
+          <td style="color:#34D399; font-weight:700; font-family:'JetBrains Mono';">₹${Number(s.exit_px || s.entry_px || 1000).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
           <td>${futWrStr}</td>
           <td style="color:#60A5FA; font-weight:600;">${Number(s.lot).toLocaleString()}</td>
           <td>${expStr}</td>
