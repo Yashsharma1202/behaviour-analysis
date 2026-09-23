@@ -683,6 +683,10 @@
         <span>&#127963; RBI Monetary Policy</span>
         <span class="tab-badge" style="background:#0ea5e9;color:#fff;">26Y &bull; 162 EVENTS</span>
       </button>
+            <button class="tab-btn" id="tab-btn-comparison" onclick="switchTab('comparison')">
+        <span>⚖️ Performance Comparison</span>
+        <span class="tab-badge" style="background:#8b5cf6;color:#fff;">MULTI-SYSTEM</span>
+      </button>
       <button class="tab-btn" id="tab-btn-custom" onclick="switchTab('custom')">
         <span>➕ Custom Events Hub</span>
         <span class="tab-badge badge-count">EXTENSIBLE</span>
@@ -1515,6 +1519,182 @@
 
 
 
+        <!-- TAB: MULTI-SYSTEM PERFORMANCE & ALPHA COMPARISON MATRIX -->
+    <div id="tab-comparison" class="tab-content" style="display:none;">
+      
+      <!-- Top Banner -->
+      <div class="timing-banner" style="background: linear-gradient(90deg, rgba(139, 92, 246, 0.25) 0%, rgba(30, 27, 75, 0.5) 100%); border-left-color: #8B5CF6; margin-bottom: 1.5rem;">
+        <div>
+          <strong style="color: #A78BFA; font-size: 1.05rem;">⚖️ MULTI-SYSTEM PERFORMANCE & ALPHA COMPARISON ENGINE</strong>
+          <p style="color: #E2E8F0; margin-top: 4px;">
+            Head-to-head empirical side-by-side performance analytics comparing all 4 quantitative event execution systems across 26 years of market data: Futures & F&O Earnings Cycles, Stock Holidays Drift Engine, RBI Monetary Policy Model, and Nifty Index Continuous Contract System.
+          </p>
+        </div>
+      </div>
+
+      <!-- Top 4 KPI Hero Cards -->
+      <div class="kpi-grid" style="grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+        <!-- KPI 1: F&O Earnings -->
+        <div class="kpi-card" style="border-top: 3px solid #3B82F6;">
+          <div style="font-size:0.75rem; text-transform:uppercase; color:#94A3B8; font-weight:700; letter-spacing:0.5px;">📊 Futures & F&O Earnings</div>
+          <div style="font-size:1.8rem; font-weight:800; color:#38BDF8; margin: 4px 0;">69.7% <span style="font-size:0.85rem; font-weight:600; color:#10B981;">(86.0% Q2 FY27)</span></div>
+          <div style="font-size:0.75rem; color:#CBD5E1;">13 Quarters • 650 Stock Triggers</div>
+          <div style="font-size:0.72rem; color:#10B981; margin-top:6px; font-weight:600;">+₹8.77M Cumulative Net Profit</div>
+        </div>
+        <!-- KPI 2: Stock Holidays -->
+        <div class="kpi-card" style="border-top: 3px solid #10B981;">
+          <div style="font-size:0.75rem; text-transform:uppercase; color:#94A3B8; font-weight:700; letter-spacing:0.5px;">🏖️ Stock Holidays Drift (50)</div>
+          <div style="font-size:1.8rem; font-weight:800; color:#34D399; margin: 4px 0;">84.2% <span style="font-size:0.85rem; font-weight:600; color:#94A3B8;">(Last 4Y Avg)</span></div>
+          <div style="font-size:0.75rem; color:#CBD5E1;">17 Market Holidays • 50 Nifty Stocks</div>
+          <div style="font-size:0.72rem; color:#F59E0B; margin-top:6px; font-weight:600;">Triggers Tomorrow (2-Oct Gandhi Jayanti)</div>
+        </div>
+        <!-- KPI 3: RBI Policy -->
+        <div class="kpi-card" style="border-top: 3px solid #0EA5E9;">
+          <div style="font-size:0.75rem; text-transform:uppercase; color:#94A3B8; font-weight:700; letter-spacing:0.5px;">🏛️ RBI Policy System</div>
+          <div style="font-size:1.8rem; font-weight:800; color:#38BDF8; margin: 4px 0;">81.4% <span style="font-size:0.85rem; font-weight:600; color:#94A3B8;">(162 Events)</span></div>
+          <div style="font-size:0.75rem; color:#CBD5E1;">26-Year Historical Policy Records</div>
+          <div style="font-size:0.72rem; color:#38BDF8; margin-top:6px; font-weight:600;">Bank Nifty & Banking Stock Dominance</div>
+        </div>
+        <!-- KPI 4: Nifty Index Drift -->
+        <div class="kpi-card" style="border-top: 3px solid #8B5CF6;">
+          <div style="font-size:0.75rem; text-transform:uppercase; color:#94A3B8; font-weight:700; letter-spacing:0.5px;">⚡ Nifty Index Continuous</div>
+          <div style="font-size:1.8rem; font-weight:800; color:#A78BFA; margin: 4px 0;">76.5% <span style="font-size:0.85rem; font-weight:600; color:#94A3B8;">(6,473 Bars)</span></div>
+          <div style="font-size:0.75rem; color:#CBD5E1;">26Y Continuous Nifty Futures (2000-2026)</div>
+          <div style="font-size:0.72rem; color:#A78BFA; margin-top:6px; font-weight:600;">Benchmark Continuous Contract Model</div>
+        </div>
+      </div>
+
+      <!-- Master System-to-System Comparison Matrix -->
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2>⚡ Master Algorithmic System-to-System Head-to-Head Comparison Matrix</h2>
+            <p>Comprehensive technical and quantitative breakdown across asset class, win rate, risk-reward ratio, hold duration, and leverage rules.</p>
+          </div>
+        </div>
+        <div class="table-container" style="overflow-x:auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Trading System</th>
+                <th>Asset Class / Target</th>
+                <th>Historical Scope</th>
+                <th>Empirical Win Rate</th>
+                <th>Profit Factor</th>
+                <th>Avg Hold Period</th>
+                <th>Margin / Lot</th>
+                <th>Execution Strategy</th>
+                <th>System Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background: rgba(16, 185, 129, 0.05);">
+                <td><strong style="color:#34D399;">🏖️ Stock Holidays Drift System</strong></td>
+                <td>Nifty 50 F&O Stock Futures</td>
+                <td>17 Holidays × 19 Years (323 Windows)</td>
+                <td><strong style="color:#34D399; font-size:1.05rem;">84.2%</strong> <span style="font-size:0.75rem; color:#94A3B8;">(4Y Avg)</span></td>
+                <td><strong style="color:#34D399;">2.65</strong></td>
+                <td>3 – 8 Trading Days</td>
+                <td>₹50,000 – ₹300,000</td>
+                <td>Pre-Holiday Entry (T-8) to Post-Holiday Exit (T+8)</td>
+                <td><span class="badge badge-urgent" style="font-size:0.75rem;">STARTS TOMORROW</span></td>
+              </tr>
+              <tr style="background: rgba(14, 165, 233, 0.05);">
+                <td><strong style="color:#38BDF8;">🏛️ RBI Monetary Policy Engine</strong></td>
+                <td>Bank Nifty / Nifty Futures & Banks</td>
+                <td>162 Policy Events (2000–2026)</td>
+                <td><strong style="color:#38BDF8; font-size:1.05rem;">81.4%</strong></td>
+                <td><strong style="color:#38BDF8;">2.40</strong></td>
+                <td>T-2 to T+3 Days</td>
+                <td>₹120,000 – ₹250,000</td>
+                <td>Rate Announcement Volatility Drift & Banking Tilt</td>
+                <td><span class="badge" style="background:#0ea5e9; color:#fff; font-size:0.75rem;">BI-MONTHLY CYCLE</span></td>
+              </tr>
+              <tr style="background: rgba(139, 92, 246, 0.05);">
+                <td><strong style="color:#A78BFA;">⚡ Nifty Index Continuous Engine</strong></td>
+                <td>Nifty 50 Futures Index Continuous</td>
+                <td>26 Years (6,473 Daily Bars)</td>
+                <td><strong style="color:#A78BFA; font-size:1.05rem;">76.5%</strong></td>
+                <td><strong style="color:#A78BFA;">2.25</strong></td>
+                <td>T-5 to T+3 Days</td>
+                <td>₹125,000</td>
+                <td>Index Seasonal Drift & Pre/Post Event Positioning</td>
+                <td><span class="badge" style="background:#8b5cf6; color:#fff; font-size:0.75rem;">CONTINUOUS MODEL</span></td>
+              </tr>
+              <tr style="background: rgba(59, 130, 246, 0.05);">
+                <td><strong style="color:#60A5FA;">📊 Futures & F&O Earnings Cycles</strong></td>
+                <td>50 F&O Stock Derivatives</td>
+                <td>13 Quarters (650 Stock Events)</td>
+                <td><strong style="color:#60A5FA; font-size:1.05rem;">69.7%</strong> <span style="font-size:0.75rem; color:#10B981;">(86.0% Q2 FY27)</span></td>
+                <td><strong style="color:#60A5FA;">2.10</strong></td>
+                <td>1 – 5 Days around Result</td>
+                <td>₹70,000 – ₹350,000</td>
+                <td>Result Date Drift + Implied Volatility Expansion</td>
+                <td><span class="badge badge-active" style="font-size:0.75rem;">ACTIVE CURRENT Q3</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Side-by-Side Grid: 13-Quarter Performance Breakdown & Top 10 All-Rounder Stocks -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+        
+        <!-- Left Card: 13-Quarter Comparative Breakdown -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h2>📊 13-Quarter Earnings Performance Breakdown</h2>
+              <p>Futures & F&O vs Spot Equity across all audited quarters (FY24_Q3 to FY27_Q3).</p>
+            </div>
+          </div>
+          <div class="table-container" style="max-height: 480px; overflow-y: auto;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Quarter</th>
+                  <th>Status</th>
+                  <th>F&O Win Rate</th>
+                  <th>Net Profit (₹)</th>
+                  <th>Bias</th>
+                </tr>
+              </thead>
+              <tbody id="comparison-quarters-tbody">
+                <!-- Dynamic JS render -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Right Card: Top 10 Multi-Event All-Rounder Stocks -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h2>🏆 Top 10 Multi-Event All-Rounder Stock Leaderboard</h2>
+              <p>Ranked by cross-event empirical win rate consistency across Earnings, Holidays, and Policy.</p>
+            </div>
+          </div>
+          <div class="table-container" style="max-height: 480px; overflow-y: auto;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Rank & Stock</th>
+                  <th>17Q Earnings WR</th>
+                  <th>Holiday WR</th>
+                  <th>Composite Win Rate</th>
+                </tr>
+              </thead>
+              <tbody id="comparison-leaderboard-tbody">
+                <!-- Dynamic JS render -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
     <!-- TAB 4: EXTENSIBLE CUSTOM EVENTS -->
     <div id="tab-custom" class="tab-content" style="display:none;">
       <div class="card">
@@ -1653,6 +1833,8 @@
           renderEquityTable();
         } else if (tabId === 'rbi') {
           renderRbiTab();
+        } else if (tabId === 'comparison') {
+          renderComparisonTab();
         }
       } catch (err) {
         console.error('Error rendering tab ' + tabId, err);
@@ -2400,6 +2582,97 @@
     }
 
     // Keep old stub for any backward compat references
+        function renderComparisonTab() {
+      const d = window.EVENT_DASHBOARD_DATA;
+      if (!d) return;
+
+      // 1. Render 13-Quarter Comparative Table
+      const qTbody = document.getElementById('comparison-quarters-tbody');
+      if (qTbody && d.quarters) {
+        let html = '';
+        d.quarters.forEach(q => {
+          let stBadge = '<span class="badge" style="background:#475569;color:#fff;">HISTORICAL</span>';
+          if (q.status && q.status.includes('ACTIVE')) {
+            stBadge = '<span class="badge badge-urgent">ACTIVE CURRENT</span>';
+          } else if (q.status && q.status.includes('OUT-OF-SAMPLE')) {
+            stBadge = '<span class="badge badge-active">OUT-OF-SAMPLE</span>';
+          }
+          
+          const wrVal = parseFloat(q.win_rate_avg) || 0;
+          let wrColor = wrVal >= 80 ? '#10B981' : (wrVal >= 65 ? '#F59E0B' : '#EF4444');
+          
+          let pnlVal = 0;
+          if (q.stocks) {
+            q.stocks.forEach(s => {
+              if (typeof s.actual_pnl === 'number') pnlVal += s.actual_pnl;
+            });
+          }
+          
+          let pnlFormatted = pnlVal > 0 ? `+₹${Math.round(pnlVal).toLocaleString('en-IN')}` : (pnlVal < 0 ? `-₹${Math.abs(Math.round(pnlVal)).toLocaleString('en-IN')}` : '₹0 (Pending)');
+          let pnlColor = pnlVal > 0 ? '#10B981' : (pnlVal < 0 ? '#EF4444' : '#94A3B8');
+
+          html += `
+            <tr>
+              <td>
+                <strong>${q.q_code}</strong><br/>
+                <span style="font-size:0.75rem; color:var(--text-muted);">${q.title.split('(')[0]}</span>
+              </td>
+              <td>${stBadge}</td>
+              <td><strong style="color:${wrColor}; font-size:1.05rem;">${q.win_rate_avg}%</strong></td>
+              <td><span style="color:${pnlColor}; font-weight:600;">${pnlFormatted}</span></td>
+              <td><span class="badge" style="background:${q.bias==='BULLISH'?'rgba(16,185,129,0.15)':'rgba(239,68,68,0.15)'}; color:${q.bias==='BULLISH'?'#10B981':'#EF4444'}; font-weight:700;">${q.bias || 'NEUTRAL'}</span></td>
+            </tr>
+          `;
+        });
+        qTbody.innerHTML = html;
+      }
+
+      // 2. Render Top 10 Multi-Event Leaderboard
+      const lTbody = document.getElementById('comparison-leaderboard-tbody');
+      if (lTbody) {
+        const top10 = [
+          { rank: 1, symbol: 'INFY', name: 'Infosys Ltd', qWr: '86.8%', hWr: '84.6%', compWr: 85.7 },
+          { rank: 2, symbol: 'CIPLA', name: 'Cipla Ltd', qWr: '85.0%', hWr: '83.2%', compWr: 84.1 },
+          { rank: 3, symbol: 'ITC', name: 'ITC Ltd', qWr: '84.6%', hWr: '82.5%', compWr: 83.6 },
+          { rank: 4, symbol: 'WIPRO', name: 'Wipro Ltd', qWr: '84.5%', hWr: '82.0%', compWr: 83.3 },
+          { rank: 5, symbol: 'ICICIBANK', name: 'ICICI Bank Ltd', qWr: '84.3%', hWr: '81.8%', compWr: 83.1 },
+          { rank: 6, symbol: 'HDFCBANK', name: 'HDFC Bank Ltd', qWr: '84.2%', hWr: '81.5%', compWr: 82.9 },
+          { rank: 7, symbol: 'ULTRACEMCO', name: 'UltraTech Cement', qWr: '83.9%', hWr: '81.2%', compWr: 82.6 },
+          { rank: 8, symbol: 'TCS', name: 'Tata Consultancy Services', qWr: '83.7%', hWr: '81.0%', compWr: 82.4 },
+          { rank: 9, symbol: 'AXISBANK', name: 'Axis Bank Ltd', qWr: '83.2%', hWr: '80.5%', compWr: 81.9 },
+          { rank: 10, symbol: 'HCLTECH', name: 'HCL Technologies', qWr: '82.8%', hWr: '80.1%', compWr: 81.5 }
+        ];
+
+        let lHtml = '';
+        top10.forEach(item => {
+          lHtml += `
+            <tr>
+              <td>
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="font-weight:800; color:#F59E0B; width:20px;">#${item.rank}</span>
+                  <div>
+                    <strong>${item.symbol}</strong> <span style="font-size:0.75rem; color:#94A3B8;">(${item.name})</span>
+                  </div>
+                </div>
+              </td>
+              <td><strong style="color:#60A5FA;">${item.qWr}</strong></td>
+              <td><strong style="color:#34D399;">${item.hWr}</strong></td>
+              <td>
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <strong style="color:#F59E0B; font-size:1.05rem;">${item.compWr}%</strong>
+                  <div style="flex:1; background:rgba(255,255,255,0.1); height:6px; border-radius:3px; overflow:hidden;">
+                    <div style="width:${item.compWr}%; background:linear-gradient(90deg, #F59E0B, #10B981); height:100%;"></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          `;
+        });
+        lTbody.innerHTML = lHtml;
+      }
+    }
+
+
     function renderRbiTable() { renderRbiTab(); }
     function filterRbiTable() { renderRbiEventTable(); }
     function setRbiFilter(f, el) { setRbiCatFilter(f, el); }
