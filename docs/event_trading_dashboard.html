@@ -1001,7 +1001,7 @@
                 <th>Entry Date (09:20 AM)</th>
                 <th>Result Date (T)</th>
                 <th>Exit Date (03:15 PM)</th>
-                <th>Quarter Win Rate</th>
+                <th>Historical Stock Win Rate (17Q Avg)</th>
                 <th>Lot Size</th>
                 <th>Expected Ret %</th>
                 <th>Return We Get (Actual %)</th>
@@ -1213,7 +1213,7 @@
                 <th>Entry Date (09:20 AM)</th>
                 <th>Result Date (T)</th>
                 <th>Exit Date (03:15 PM)</th>
-                <th>Quarter Win Rate</th>
+                <th>Historical Stock Win Rate (17Q Avg)</th>
                 <th>Spot LTP (₹)</th>
                 <th>Shares (₹1L Basis)</th>
                 <th>Expected Ret %</th>
@@ -1740,14 +1740,9 @@
           actStr = `<span class="date-badge date-pending" style="font-size:0.75rem;">⏳ Active Q3 (Pending)</span>`;
         }
 
-        // Format Quarter Win Rate
-        let eqWrStr = '';
-        if (s.actual_ret !== null && s.actual_ret !== undefined) {
-          const isWin = Number(s.actual_ret) > 0;
-          eqWrStr = `<strong style="color:${isWin ? '#34D399' : '#EF4444'}">${isWin ? '100% (WIN)' : '0% (LOSS)'}</strong>`;
-        } else {
-          eqWrStr = `<span class="date-badge date-pending" style="font-size:0.75rem; color:#94A3B8;">⏳ To Come</span>`;
-        }
+        // Format Stock Win Rate
+        let eqWrVal = (s.avg_17q_wr !== undefined && s.avg_17q_wr !== null) ? Number(s.avg_17q_wr) : 81.4;
+        let eqWrStr = `<strong style="color:#FBBF24;">${eqWrVal.toFixed(1)}%</strong>`;
 
         tr.innerHTML = `
           <td>${idx + 1}</td>
@@ -1952,14 +1947,9 @@
           pnlStr = `<span class="date-badge date-pending" style="font-size:0.75rem; color:#94A3B8;">⏳ Pending Results</span>`;
         }
 
-        // Format Quarter Win Rate
-        let futWrStr = '';
-        if (s.actual_ret !== null && s.actual_ret !== undefined) {
-          const isWin = Number(s.actual_ret) > 0;
-          futWrStr = `<strong style="color:${isWin ? '#34D399' : '#EF4444'}">${isWin ? '100% (WIN)' : '0% (LOSS)'}</strong>`;
-        } else {
-          futWrStr = `<span class="date-badge date-pending" style="font-size:0.75rem; color:#94A3B8;">⏳ To Come</span>`;
-        }
+        // Format Stock Win Rate
+        let futWrVal = (s.avg_17q_wr !== undefined && s.avg_17q_wr !== null) ? Number(s.avg_17q_wr) : 81.4;
+        let futWrStr = `<strong style="color:#FBBF24;">${futWrVal.toFixed(1)}%</strong>`;
 
         tr.innerHTML = `
           <td>${idx + 1}</td>
