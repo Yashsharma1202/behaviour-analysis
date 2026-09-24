@@ -114,7 +114,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.4,
           "actual_ret": 2.55,
           "actual_return": 2.55,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 1952.5
         },
         {
           "symbol": "BEL",
@@ -713,7 +714,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.99,
           "actual_ret": -2.14,
           "actual_return": -2.14,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -2867.5
         },
         {
           "symbol": "ADANIGREEN",
@@ -762,7 +764,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.0,
           "actual_ret": 0.15,
           "actual_return": 0.15,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 510.0
         },
         {
           "symbol": "RVNL",
@@ -811,7 +814,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.93,
           "actual_ret": 7.08,
           "actual_return": 7.08,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 3945.0
         },
         {
           "symbol": "BAJAJFINSV",
@@ -910,7 +914,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.93,
           "actual_ret": 0.08,
           "actual_return": 0.08,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 127.5
         },
         {
           "symbol": "COLPAL",
@@ -959,7 +964,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.85,
           "actual_ret": -3.0,
           "actual_return": -3.0,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -15200.0
         },
         {
           "symbol": "IREDA",
@@ -1008,7 +1014,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 1347.5
         },
         {
           "symbol": "BANKINDIA",
@@ -1057,7 +1064,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.42,
           "actual_ret": 1.57,
           "actual_return": 1.57,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 570.0
         },
         {
           "symbol": "BHARATFORG",
@@ -1106,7 +1114,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.05,
           "actual_ret": 0.2,
           "actual_return": 0.2,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 1050.0
         },
         {
           "symbol": "PRESTIGE",
@@ -1155,7 +1164,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.45,
           "actual_ret": 0.6,
           "actual_return": 0.6,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 2392.5
         },
         {
           "symbol": "ICICIGI",
@@ -1204,7 +1214,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.22,
           "actual_ret": 3.37,
           "actual_return": 3.37,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 13850.0
         },
         {
           "symbol": "SUPREMEIND",
@@ -1253,7 +1264,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.77,
           "actual_ret": -0.92,
           "actual_return": -0.92,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -7957.5
         },
         {
           "symbol": "IDEA",
@@ -1302,7 +1314,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.32,
           "actual_ret": 7.47,
           "actual_return": 7.47,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 265.0
         },
         {
           "symbol": "BIOCON",
@@ -1351,7 +1364,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.99,
           "actual_ret": 7.14,
           "actual_return": 7.14,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 7337.5
         },
         {
           "symbol": "CAMS",
@@ -1400,7 +1414,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.65,
           "actual_ret": -0.8,
           "actual_return": -0.8,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -1537.5
         },
         {
           "symbol": "ICICIPRULI",
@@ -1449,7 +1464,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.0,
           "actual_ret": -3.15,
           "actual_return": -3.15,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -4020.0
         },
         {
           "symbol": "TATACONSUM",
@@ -1548,7 +1564,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.73,
           "actual_ret": 1.88,
           "actual_return": 1.88,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 11875.0
         },
         {
           "symbol": "GODREJCP",
@@ -1597,7 +1614,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.48,
           "actual_ret": 1.63,
           "actual_return": 1.63,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 4370.0
         },
         {
           "symbol": "JUBLFOOD",
@@ -1646,7 +1664,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.59,
           "actual_ret": 0.74,
           "actual_return": 0.74,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 775.0
         },
         {
           "symbol": "NAM-INDIA",
@@ -1695,7 +1714,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.09,
           "actual_ret": 0.24,
           "actual_return": 0.24,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 687.5
         },
         {
           "symbol": "PFC",
@@ -1744,7 +1764,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.25,
           "actual_ret": -6.4,
           "actual_return": -6.4,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -6820.0
         },
         {
           "symbol": "HAVELLS",
@@ -1793,7 +1814,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.89,
           "actual_ret": -6.04,
           "actual_return": -6.04,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -19052.5
         },
         {
           "symbol": "IEX",
@@ -1842,7 +1864,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.08,
           "actual_ret": -1.23,
           "actual_return": -1.23,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -405.0
         },
         {
           "symbol": "CIPLA",
@@ -1941,7 +1964,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.87,
           "actual_ret": -6.02,
           "actual_return": -6.02,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -32082.5
         },
         {
           "symbol": "BHEL",
@@ -1990,7 +2014,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.48,
           "actual_ret": -1.63,
           "actual_return": -1.63,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -1642.5
         },
         {
           "symbol": "MPHASIS",
@@ -2039,7 +2064,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.03,
           "actual_ret": 2.18,
           "actual_return": 2.18,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 12775.0
         },
         {
           "symbol": "NAUKRI",
@@ -2088,7 +2114,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.77,
           "actual_ret": -4.92,
           "actual_return": -4.92,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -15302.5
         },
         {
           "symbol": "INDHOTEL",
@@ -2137,7 +2164,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.03,
           "actual_ret": -1.18,
           "actual_return": -1.18,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -2137.5
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -2236,7 +2264,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 3330.0
         },
         {
           "symbol": "LAURUSLABS",
@@ -2285,7 +2314,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.35,
           "actual_ret": 1.5,
           "actual_return": 1.5,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 6680.0
         },
         {
           "symbol": "CGPOWER",
@@ -2334,7 +2364,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.88,
           "actual_ret": -1.03,
           "actual_return": -1.03,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -2337.5
         },
         {
           "symbol": "BANDHANBNK",
@@ -2383,7 +2414,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.47,
           "actual_ret": 1.62,
           "actual_return": 1.62,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 700.0
         },
         {
           "symbol": "NBCC",
@@ -2432,7 +2464,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.18,
           "actual_ret": -1.33,
           "actual_return": -1.33,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -310.0
         },
         {
           "symbol": "SONACOMS",
@@ -2481,7 +2514,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.75,
           "actual_ret": 0.9,
           "actual_return": 0.9,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 1717.5
         },
         {
           "symbol": "PATANJALI",
@@ -2530,7 +2564,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.9,
           "actual_ret": -0.05,
           "actual_return": -0.05,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -45.0
         },
         {
           "symbol": "HDFCLIFE",
@@ -2629,7 +2664,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.15,
           "actual_ret": -0.3,
           "actual_return": -0.3,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -1222.5
         },
         {
           "symbol": "TVSMOTOR",
@@ -2678,7 +2714,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.32,
           "actual_ret": -4.47,
           "actual_return": -4.47,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -47030.0
         },
         {
           "symbol": "UNOMINDA",
@@ -2727,7 +2764,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.26,
           "actual_ret": 2.41,
           "actual_return": 2.41,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 6950.0
         },
         {
           "symbol": "DIXON",
@@ -2776,7 +2814,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.9,
           "actual_ret": -2.05,
           "actual_return": -2.05,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -73482.5
         },
         {
           "symbol": "PAGEIND",
@@ -2825,7 +2864,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.26,
           "actual_ret": 1.41,
           "actual_return": 1.41,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 138750.0
         },
         {
           "symbol": "PAYTM",
@@ -2874,7 +2914,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.39,
           "actual_ret": -1.54,
           "actual_return": -1.54,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -5130.0
         },
         {
           "symbol": "RBLBANK",
@@ -2923,7 +2964,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.3,
           "actual_ret": 2.45,
           "actual_return": 2.45,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 2315.0
         },
         {
           "symbol": "FORTIS",
@@ -2972,7 +3014,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.69,
           "actual_ret": -1.84,
           "actual_return": -1.84,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -4382.5
         },
         {
           "symbol": "SBICARD",
@@ -3021,7 +3064,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.01,
           "actual_ret": -1.16,
           "actual_return": -1.16,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -1900.0
         },
         {
           "symbol": "BSE",
@@ -3070,7 +3114,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.55,
           "actual_ret": 1.7,
           "actual_return": 1.7,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 15005.0
         },
         {
           "symbol": "UNITDSPR",
@@ -3119,7 +3164,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.38,
           "actual_ret": 0.53,
           "actual_return": 0.53,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 2030.0
         },
         {
           "symbol": "ICICIBANK",
@@ -3268,7 +3314,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.35,
           "actual_ret": -3.5,
           "actual_return": -3.5,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -1827.5
         },
         {
           "symbol": "ANGELONE",
@@ -3317,7 +3364,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.06,
           "actual_ret": -1.21,
           "actual_return": -1.21,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -882.5
         },
         {
           "symbol": "HINDPETRO",
@@ -3366,7 +3414,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.11,
           "actual_ret": -0.26,
           "actual_return": -0.26,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -252.5
         },
         {
           "symbol": "FEDERALBNK",
@@ -3415,7 +3464,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.8,
           "actual_ret": -0.95,
           "actual_return": -0.95,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -840.0
         },
         {
           "symbol": "UPL",
@@ -3464,7 +3514,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.73,
           "actual_ret": 0.88,
           "actual_return": 0.88,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 1325.0
         },
         {
           "symbol": "PETRONET",
@@ -3513,7 +3564,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.87,
           "actual_ret": 0.02,
           "actual_return": 0.02,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 15.0
         },
         {
           "symbol": "BHARTIARTL",
@@ -3612,7 +3664,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.39,
           "actual_ret": -1.54,
           "actual_return": -1.54,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -3437.5
         },
         {
           "symbol": "DLF",
@@ -3661,7 +3714,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.8,
           "actual_ret": -1.95,
           "actual_return": -1.95,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -3192.5
         },
         {
           "symbol": "ABB",
@@ -3710,7 +3764,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.79,
           "actual_ret": -0.94,
           "actual_return": -0.94,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -17135.0
         },
         {
           "symbol": "ADANIENSOL",
@@ -3759,7 +3814,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.46,
           "actual_ret": 7.61,
           "actual_return": 7.61,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 30775.0
         },
         {
           "symbol": "COCHINSHIP",
@@ -3808,7 +3864,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.09,
           "actual_ret": -5.24,
           "actual_return": -5.24,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -18367.5
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -3857,7 +3914,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.21,
           "actual_ret": -2.36,
           "actual_return": -2.36,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -500.0
         },
         {
           "symbol": "ALKEM",
@@ -3906,7 +3964,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.47,
           "actual_ret": 1.62,
           "actual_return": 1.62,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 23557.5
         },
         {
           "symbol": "LTF",
@@ -3955,7 +4014,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.25,
           "actual_ret": -2.4,
           "actual_return": -2.4,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -1887.5
         },
         {
           "symbol": "TIINDIA",
@@ -4004,7 +4064,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.72,
           "actual_ret": -5.87,
           "actual_return": -5.87,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -43175.0
         },
         {
           "symbol": "SAGILITY",
@@ -4053,7 +4114,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 517.5
         },
         {
           "symbol": "UNIONBANK",
@@ -4102,7 +4164,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.89,
           "actual_ret": -1.04,
           "actual_return": -1.04,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -442.5
         },
         {
           "symbol": "CROMPTON",
@@ -4151,7 +4214,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.83,
           "actual_ret": -1.98,
           "actual_return": -1.98,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -1287.5
         },
         {
           "symbol": "MOTILALOFS",
@@ -4200,7 +4264,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.08,
           "actual_ret": 3.23,
           "actual_return": 3.23,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 6757.5
         },
         {
           "symbol": "FORCEMOT",
@@ -4249,7 +4314,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.77,
           "actual_ret": -0.92,
           "actual_return": -0.92,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -40522.5
         },
         {
           "symbol": "KFINTECH",
@@ -4298,7 +4364,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.45,
           "actual_ret": 0.6,
           "actual_return": 0.6,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 1410.0
         },
         {
           "symbol": "OFSS",
@@ -4347,7 +4414,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.5,
           "actual_ret": -4.65,
           "actual_return": -4.65,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -130750.0
         },
         {
           "symbol": "RADICO",
@@ -4396,7 +4464,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.53,
           "actual_ret": 3.68,
           "actual_return": 3.68,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 36245.0
         },
         {
           "symbol": "NHPC",
@@ -4445,7 +4514,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.21,
           "actual_ret": 0.36,
           "actual_return": 0.36,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 70.0
         },
         {
           "symbol": "DABUR",
@@ -4494,7 +4564,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.99,
           "actual_ret": -2.14,
           "actual_return": -2.14,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -2280.0
         },
         {
           "symbol": "OIL",
@@ -4543,7 +4614,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.26,
           "actual_ret": -1.41,
           "actual_return": -1.41,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -1610.0
         },
         {
           "symbol": "ADANIPORTS",
@@ -4642,7 +4714,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.49,
           "actual_ret": -6.64,
           "actual_return": -6.64,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -29445.0
         },
         {
           "symbol": "INDUSINDBK",
@@ -4691,7 +4764,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.71,
           "actual_ret": 0.86,
           "actual_return": 0.86,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 2172.5
         },
         {
           "symbol": "LODHA",
@@ -4740,7 +4814,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.75,
           "actual_ret": -3.9,
           "actual_return": -3.9,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -12550.0
         },
         {
           "symbol": "NESTLEIND",
@@ -4839,7 +4914,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.25,
           "actual_ret": 2.4,
           "actual_return": 2.4,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 3575.0
         },
         {
           "symbol": "INDIANB",
@@ -4888,7 +4964,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.95,
           "actual_ret": 0.1,
           "actual_return": 0.1,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 207.5
         },
         {
           "symbol": "GVT&D",
@@ -4937,7 +5014,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.42,
           "actual_ret": 2.57,
           "actual_return": 2.57,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 27000.0
         },
         {
           "symbol": "PREMIERENE",
@@ -4986,7 +5064,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 11055.0
         },
         {
           "symbol": "SOLARINDS",
@@ -5035,7 +5114,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.25,
           "actual_ret": -1.4,
           "actual_return": -1.4,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -63185.0
         },
         {
           "symbol": "AUBANK",
@@ -5084,7 +5164,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.71,
           "actual_ret": -2.86,
           "actual_return": -2.86,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -7575.0
         },
         {
           "symbol": "WAAREEENER",
@@ -5133,7 +5214,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.41,
           "actual_ret": 7.56,
           "actual_return": 7.56,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 55225.0
         },
         {
           "symbol": "MOTHERSON",
@@ -5182,7 +5264,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.38,
           "actual_ret": 0.53,
           "actual_return": 0.53,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 195.0
         },
         {
           "symbol": "PERSISTENT",
@@ -5231,7 +5314,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.93,
           "actual_ret": -6.08,
           "actual_return": -6.08,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -72200.0
         },
         {
           "symbol": "ASHOKLEY",
@@ -5280,7 +5364,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.98,
           "actual_ret": -0.13,
           "actual_return": -0.13,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -52.5
         },
         {
           "symbol": "COFORGE",
@@ -5329,7 +5414,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.52,
           "actual_ret": -1.67,
           "actual_return": -1.67,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -7292.5
         },
         {
           "symbol": "INFY",
@@ -5428,7 +5514,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.34,
           "actual_ret": 1.49,
           "actual_return": 1.49,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 5872.5
         },
         {
           "symbol": "HEROMOTOCO",
@@ -5477,7 +5564,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.02,
           "actual_ret": -0.17,
           "actual_return": -0.17,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -2085.0
         },
         {
           "symbol": "MFSL",
@@ -5526,7 +5614,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.76,
           "actual_ret": 0.91,
           "actual_return": 0.91,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 3625.0
         },
         {
           "symbol": "SAIL",
@@ -5575,7 +5664,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.79,
           "actual_ret": 1.94,
           "actual_return": 1.94,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 797.5
         },
         {
           "symbol": "JINDALSTEL",
@@ -5624,7 +5714,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.38,
           "actual_ret": -1.53,
           "actual_return": -1.53,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -4182.5
         },
         {
           "symbol": "BAJAJHLDNG",
@@ -5673,7 +5764,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.28,
           "actual_ret": -1.43,
           "actual_return": -1.43,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -39217.5
         },
         {
           "symbol": "ASTRAL",
@@ -5722,7 +5814,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.24,
           "actual_ret": -2.39,
           "actual_return": -2.39,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -8795.0
         },
         {
           "symbol": "ETERNAL",
@@ -5821,7 +5914,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.48,
           "actual_ret": -0.63,
           "actual_return": -0.63,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -6995.0
         },
         {
           "symbol": "MCX",
@@ -5870,7 +5964,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.21,
           "actual_ret": -1.36,
           "actual_return": -1.36,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -9102.5
         },
         {
           "symbol": "LICHSGFIN",
@@ -5919,7 +6014,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.79,
           "actual_ret": 0.94,
           "actual_return": 0.94,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 1270.0
         },
         {
           "symbol": "ADANIENT",
@@ -6018,7 +6114,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.52,
           "actual_ret": 2.67,
           "actual_return": 2.67,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 2510.0
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -6067,7 +6164,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.76,
           "actual_ret": 0.91,
           "actual_return": 0.91,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 6845.0
         },
         {
           "symbol": "INOXWIND",
@@ -6116,7 +6214,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.89,
           "actual_ret": -1.04,
           "actual_return": -1.04,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -205.0
         },
         {
           "symbol": "KPITTECH",
@@ -6165,7 +6264,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.58,
           "actual_ret": 5.73,
           "actual_return": 5.73,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 7900.0
         },
         {
           "symbol": "GRASIM",
@@ -6264,7 +6364,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.86,
           "actual_ret": 0.01,
           "actual_return": 0.01,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 25.0
         },
         {
           "symbol": "HDFCAMC",
@@ -6313,7 +6414,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.92,
           "actual_ret": -7.07,
           "actual_return": -7.07,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -49500.0
         },
         {
           "symbol": "TORNTPHARM",
@@ -6362,7 +6464,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.45,
           "actual_ret": -4.6,
           "actual_return": -4.6,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -54825.0
         },
         {
           "symbol": "AMBER",
@@ -6411,7 +6514,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.74,
           "actual_ret": -4.89,
           "actual_return": -4.89,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -91500.0
         },
         {
           "symbol": "JSWENERGY",
@@ -6460,7 +6564,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.12,
           "actual_ret": -4.27,
           "actual_return": -4.27,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -5805.0
         },
         {
           "symbol": "HCLTECH",
@@ -6559,7 +6664,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.05,
           "actual_ret": 4.2,
           "actual_return": 4.2,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 53625.0
         },
         {
           "symbol": "KOTAKBANK",
@@ -6658,7 +6764,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.68,
           "actual_ret": -1.83,
           "actual_return": -1.83,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -6115.0
         },
         {
           "symbol": "NATIONALUM",
@@ -6707,7 +6814,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.82,
           "actual_ret": 1.97,
           "actual_return": 1.97,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 1712.5
         },
         {
           "symbol": "VBL",
@@ -6756,7 +6864,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.67,
           "actual_ret": -1.82,
           "actual_return": -1.82,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -2052.5
         },
         {
           "symbol": "AMBUJACEM",
@@ -6805,7 +6914,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.12,
           "actual_ret": 1.27,
           "actual_return": 1.27,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 1377.5
         },
         {
           "symbol": "BOSCHLTD",
@@ -6854,7 +6964,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.46,
           "actual_ret": 0.61,
           "actual_return": 0.61,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 63365.0
         },
         {
           "symbol": "SIEMENS",
@@ -6903,7 +7014,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.28,
           "actual_ret": 6.43,
           "actual_return": 6.43,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 55152.5
         },
         {
           "symbol": "POLYCAB",
@@ -6952,7 +7064,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.27,
           "actual_ret": 0.42,
           "actual_return": 0.42,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 9340.0
         },
         {
           "symbol": "RECLTD",
@@ -7001,7 +7114,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.13,
           "actual_ret": 4.28,
           "actual_return": 4.28,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 4012.5
         },
         {
           "symbol": "TATAELXSI",
@@ -7050,7 +7164,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.68,
           "actual_ret": -3.83,
           "actual_return": -3.83,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -33900.0
         },
         {
           "symbol": "MANAPPURAM",
@@ -7099,7 +7214,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.73,
           "actual_ret": 1.88,
           "actual_return": 1.88,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 1730.0
         },
         {
           "symbol": "LICI",
@@ -7148,7 +7264,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.52,
           "actual_ret": -0.67,
           "actual_return": -0.67,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -725.0
         },
         {
           "symbol": "ABCAPITAL",
@@ -7197,7 +7314,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.45,
           "actual_ret": 4.6,
           "actual_return": 4.6,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 4532.5
         },
         {
           "symbol": "VOLTAS",
@@ -7246,7 +7364,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.02,
           "actual_ret": -2.17,
           "actual_return": -2.17,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -7232.5
         },
         {
           "symbol": "SBILIFE",
@@ -7345,7 +7464,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.19,
           "actual_ret": -1.34,
           "actual_return": -1.34,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -1760.0
         },
         {
           "symbol": "MARICO",
@@ -7394,7 +7514,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.19,
           "actual_ret": -1.34,
           "actual_return": -1.34,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -2965.0
         },
         {
           "symbol": "PIIND",
@@ -7443,7 +7564,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.95,
           "actual_ret": 8.1,
           "actual_return": 8.1,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 51350.0
         },
         {
           "symbol": "360ONE",
@@ -7492,7 +7614,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.26,
           "actual_ret": -2.41,
           "actual_return": -2.41,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -6575.0
         },
         {
           "symbol": "INDUSTOWER",
@@ -7541,7 +7664,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.69,
           "actual_ret": -1.84,
           "actual_return": -1.84,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -1807.5
         },
         {
           "symbol": "SRF",
@@ -7590,7 +7714,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.03,
           "actual_ret": -1.18,
           "actual_return": -1.18,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -8010.0
         },
         {
           "symbol": "IRFC",
@@ -7639,7 +7764,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.2,
           "actual_ret": -1.35,
           "actual_return": -1.35,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -302.5
         },
         {
           "symbol": "HYUNDAI",
@@ -7688,7 +7814,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.84,
           "actual_ret": 11.99,
           "actual_return": 11.99,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 60495.0
         },
         {
           "symbol": "BANKBARODA",
@@ -7737,7 +7864,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.44,
           "actual_ret": 0.59,
           "actual_return": 0.59,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 357.5
         },
         {
           "symbol": "BRITANNIA",
@@ -7786,7 +7914,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.18,
           "actual_ret": -1.33,
           "actual_return": -1.33,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -17740.0
         },
         {
           "symbol": "JSWSTEEL",
@@ -7885,7 +8014,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.31,
           "actual_ret": 1.46,
           "actual_return": 1.46,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 6622.5
         },
         {
           "symbol": "TCS",
@@ -7984,7 +8114,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.05,
           "actual_ret": -0.2,
           "actual_return": -0.2,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -62.5
         },
         {
           "symbol": "GODREJPROP",
@@ -8033,7 +8164,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.26,
           "actual_ret": 5.41,
           "actual_return": 5.41,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 26870.0
         },
         {
           "symbol": "KAYNES",
@@ -8082,7 +8214,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.04,
           "actual_ret": -4.19,
           "actual_return": -4.19,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -37935.0
         },
         {
           "symbol": "CUMMINSIND",
@@ -8131,7 +8264,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.61,
           "actual_ret": -1.76,
           "actual_return": -1.76,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -24162.5
         },
         {
           "symbol": "VMM",
@@ -8180,7 +8314,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.46,
           "actual_ret": -3.61,
           "actual_return": -3.61,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -972.5
         },
         {
           "symbol": "NYKAA",
@@ -8229,7 +8364,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.91,
           "actual_ret": -1.06,
           "actual_return": -1.06,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -885.0
         },
         {
           "symbol": "MAXHEALTH",
@@ -8378,7 +8514,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.23,
           "actual_ret": 1.38,
           "actual_return": 1.38,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 77.5
         },
         {
           "symbol": "M&M",
@@ -8527,7 +8664,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.6,
           "actual_ret": 0.75,
           "actual_return": 0.75,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 3540.0
         },
         {
           "symbol": "POWERINDIA",
@@ -8576,7 +8714,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.74,
           "actual_ret": 0.89,
           "actual_return": 0.89,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 71250.0
         },
         {
           "symbol": "MAZDOCK",
@@ -8625,7 +8764,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.56,
           "actual_ret": -2.71,
           "actual_return": -2.71,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -15712.5
         },
         {
           "symbol": "VEDL",
@@ -8674,7 +8814,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.6,
           "actual_ret": 9.75,
           "actual_return": 9.75,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 6837.5
         },
         {
           "symbol": "BLUESTARCO",
@@ -8723,7 +8864,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.38,
           "actual_ret": 0.53,
           "actual_return": 0.53,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 2240.0
         },
         {
           "symbol": "POLICYBZR",
@@ -8772,7 +8914,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.41,
           "actual_ret": -2.56,
           "actual_return": -2.56,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -10275.0
         },
         {
           "symbol": "GMRAIRPORT",
@@ -8821,7 +8964,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.17,
           "actual_ret": 4.32,
           "actual_return": 4.32,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 1210.0
         },
         {
           "symbol": "APLAPOLLO",
@@ -8870,7 +9014,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.16,
           "actual_ret": 0.31,
           "actual_return": 0.31,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 1400.0
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -8919,7 +9064,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.36,
           "actual_ret": -0.51,
           "actual_return": -0.51,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -1472.5
         },
         {
           "symbol": "DMART",
@@ -8968,7 +9114,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.41,
           "actual_ret": -1.56,
           "actual_return": -1.56,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -15750.0
         },
         {
           "symbol": "NMDC",
@@ -9017,7 +9164,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.19,
           "actual_ret": -0.34,
           "actual_return": -0.34,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -72.5
         },
         {
           "symbol": "DIVISLAB",
@@ -9066,7 +9214,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.89,
           "actual_ret": 8.04,
           "actual_return": 8.04,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 135567.5
         },
         {
           "symbol": "INDIGO",
@@ -9165,7 +9314,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.43,
           "actual_ret": -1.58,
           "actual_return": -1.58,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -440.0
         },
         {
           "symbol": "BDL",
@@ -9214,7 +9364,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.09,
           "actual_ret": 7.24,
           "actual_return": 7.24,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 23500.0
         },
         {
           "symbol": "SUNPHARMA",
@@ -9513,7 +9664,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.78,
           "actual_ret": -2.93,
           "actual_return": -2.93,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -580.0
         },
         {
           "symbol": "DELHIVERY",
@@ -9562,7 +9714,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.61,
           "actual_ret": -1.76,
           "actual_return": -1.76,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -2060.0
         },
         {
           "symbol": "ATHERENERG",
@@ -9611,7 +9764,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.67,
           "actual_ret": -16.82,
           "actual_return": -16.82,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -62877.5
         },
         {
           "symbol": "GLENMARK",
@@ -9660,7 +9814,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.19,
           "actual_ret": 0.34,
           "actual_return": 0.34,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 1862.5
         },
         {
           "symbol": "HAL",
@@ -9709,7 +9864,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.31,
           "actual_ret": -3.46,
           "actual_return": -3.46,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -38225.0
         },
         {
           "symbol": "IOC",
@@ -9758,7 +9914,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.97,
           "actual_ret": -0.12,
           "actual_return": -0.12,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -42.5
         },
         {
           "symbol": "SHREECEM",
@@ -9807,7 +9964,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.55,
           "actual_ret": 1.7,
           "actual_return": 1.7,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 112432.5
         },
         {
           "symbol": "LUPIN",
@@ -9856,7 +10014,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.55,
           "actual_ret": 0.7,
           "actual_return": 0.7,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 4237.5
         },
         {
           "symbol": "SUZLON",
@@ -9905,7 +10064,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.84,
           "actual_ret": 0.99,
           "actual_return": 0.99,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 132.5
         },
         {
           "symbol": "LT",
@@ -10004,7 +10164,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.52,
           "actual_ret": -0.67,
           "actual_return": -0.67,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -290.0
         },
         {
           "symbol": "RELIANCE",
@@ -10862,7 +11023,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.02,
           "actual_ret": 5.17,
           "actual_return": 5.17,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 3787.5
         },
         {
           "symbol": "HDFCLIFE",
@@ -11211,7 +11373,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.97,
           "actual_ret": 0.12,
           "actual_return": 0.12,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 322.5
         },
         {
           "symbol": "SRF",
@@ -11260,7 +11423,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.82,
           "actual_ret": -1.97,
           "actual_return": -1.97,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -11777.5
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -11359,7 +11523,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.26,
           "actual_ret": -3.41,
           "actual_return": -3.41,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -1682.5
         },
         {
           "symbol": "SAGILITY",
@@ -11408,7 +11573,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.31,
           "actual_ret": 1.46,
           "actual_return": 1.46,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 142.5
         },
         {
           "symbol": "INDUSINDBK",
@@ -11457,7 +11623,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.92,
           "actual_ret": -3.07,
           "actual_return": -3.07,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -6365.0
         },
         {
           "symbol": "MANKIND",
@@ -11506,7 +11673,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.31,
           "actual_ret": 9.46,
           "actual_return": 9.46,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 48275.0
         },
         {
           "symbol": "OFSS",
@@ -11555,7 +11723,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 16.44,
           "actual_ret": -15.59,
           "actual_return": -15.59,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -264912.5
         },
         {
           "symbol": "BHEL",
@@ -11604,7 +11773,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.0,
           "actual_ret": 0.15,
           "actual_return": 0.15,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 150.0
         },
         {
           "symbol": "SONACOMS",
@@ -11653,7 +11823,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.38,
           "actual_ret": -2.53,
           "actual_return": -2.53,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -3775.0
         },
         {
           "symbol": "SOLARINDS",
@@ -11702,7 +11873,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.49,
           "actual_ret": 1.64,
           "actual_return": 1.64,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 64960.0
         },
         {
           "symbol": "CROMPTON",
@@ -11751,7 +11923,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.24,
           "actual_ret": 7.39,
           "actual_return": 7.39,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 4692.5
         },
         {
           "symbol": "HEROMOTOCO",
@@ -11800,7 +11973,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.17,
           "actual_ret": 4.32,
           "actual_return": 4.32,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 59000.0
         },
         {
           "symbol": "PREMIERENE",
@@ -11849,7 +12023,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.37,
           "actual_ret": -3.52,
           "actual_return": -3.52,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -8950.0
         },
         {
           "symbol": "UNITDSPR",
@@ -11898,7 +12073,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.67,
           "actual_ret": -3.82,
           "actual_return": -3.82,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -11932.5
         },
         {
           "symbol": "SBICARD",
@@ -11947,7 +12123,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.47,
           "actual_ret": -2.62,
           "actual_return": -2.62,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -4200.0
         },
         {
           "symbol": "JSWENERGY",
@@ -11996,7 +12173,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.07,
           "actual_ret": -8.22,
           "actual_return": -8.22,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -11487.5
         },
         {
           "symbol": "APLAPOLLO",
@@ -12045,7 +12223,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.03,
           "actual_ret": 7.18,
           "actual_return": 7.18,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 35525.0
         },
         {
           "symbol": "HYUNDAI",
@@ -12094,7 +12273,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.36,
           "actual_ret": 1.51,
           "actual_return": 1.51,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 7325.0
         },
         {
           "symbol": "CIPLA",
@@ -12193,7 +12373,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.38,
           "actual_ret": -3.53,
           "actual_return": -3.53,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -4262.5
         },
         {
           "symbol": "INDHOTEL",
@@ -12242,7 +12423,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.81,
           "actual_ret": -8.96,
           "actual_return": -8.96,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -12990.0
         },
         {
           "symbol": "SBILIFE",
@@ -12341,7 +12523,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.91,
           "actual_ret": -1.06,
           "actual_return": -1.06,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -4150.0
         },
         {
           "symbol": "TMPV",
@@ -12440,7 +12623,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.17,
           "actual_ret": -6.32,
           "actual_return": -6.32,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -7962.5
         },
         {
           "symbol": "SBIN",
@@ -12589,7 +12773,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.11,
           "actual_ret": -2.26,
           "actual_return": -2.26,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -23265.0
         },
         {
           "symbol": "IOC",
@@ -12638,7 +12823,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.05,
           "actual_ret": 4.2,
           "actual_return": 4.2,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 1472.5
         },
         {
           "symbol": "CAMS",
@@ -12687,7 +12873,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.74,
           "actual_ret": 0.89,
           "actual_return": 0.89,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 1552.5
         },
         {
           "symbol": "PERSISTENT",
@@ -12736,7 +12923,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.71,
           "actual_ret": -2.86,
           "actual_return": -2.86,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -37295.0
         },
         {
           "symbol": "PFC",
@@ -12785,7 +12973,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.37,
           "actual_ret": 1.52,
           "actual_return": 1.52,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 1637.5
         },
         {
           "symbol": "TIINDIA",
@@ -12834,7 +13023,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.23,
           "actual_ret": 11.38,
           "actual_return": 11.38,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 77225.0
         },
         {
           "symbol": "YESBANK",
@@ -12883,7 +13073,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.25,
           "actual_ret": -4.4,
           "actual_return": -4.4,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -262.5
         },
         {
           "symbol": "NBCC",
@@ -12932,7 +13123,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.69,
           "actual_ret": -3.84,
           "actual_return": -3.84,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -1070.0
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -12981,7 +13173,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.58,
           "actual_ret": -6.73,
           "actual_return": -6.73,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -14525.0
         },
         {
           "symbol": "TATAELXSI",
@@ -13030,7 +13223,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.49,
           "actual_ret": 8.64,
           "actual_return": 8.64,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 96322.5
         },
         {
           "symbol": "KALYANKJIL",
@@ -13079,7 +13273,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.84,
           "actual_ret": -16.99,
           "actual_return": -16.99,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -18037.5
         },
         {
           "symbol": "ADANIPOWER",
@@ -13128,7 +13323,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.07,
           "actual_ret": -1.22,
           "actual_return": -1.22,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -675.0
         },
         {
           "symbol": "NAUKRI",
@@ -13177,7 +13373,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.72,
           "actual_ret": -4.87,
           "actual_return": -4.87,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -11900.0
         },
         {
           "symbol": "ANGELONE",
@@ -13226,7 +13423,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.08,
           "actual_ret": -7.23,
           "actual_return": -7.23,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -5945.0
         },
         {
           "symbol": "UNIONBANK",
@@ -13275,7 +13473,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.06,
           "actual_ret": -6.21,
           "actual_return": -6.21,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -2397.5
         },
         {
           "symbol": "BANKINDIA",
@@ -13324,7 +13523,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.56,
           "actual_ret": -1.71,
           "actual_return": -1.71,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -600.0
         },
         {
           "symbol": "GMRAIRPORT",
@@ -13373,7 +13573,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.66,
           "actual_ret": 2.81,
           "actual_return": 2.81,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 697.5
         },
         {
           "symbol": "ALKEM",
@@ -13422,7 +13623,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.0,
           "actual_ret": 2.15,
           "actual_return": 2.15,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 28500.0
         },
         {
           "symbol": "TVSMOTOR",
@@ -13471,7 +13673,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.53,
           "actual_ret": 3.68,
           "actual_return": 3.68,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 31700.0
         },
         {
           "symbol": "LTF",
@@ -13520,7 +13723,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.73,
           "actual_ret": 5.88,
           "actual_return": 5.88,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 3985.0
         },
         {
           "symbol": "MPHASIS",
@@ -13569,7 +13773,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.49,
           "actual_ret": -0.64,
           "actual_return": -0.64,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -3627.5
         },
         {
           "symbol": "PIIND",
@@ -13618,7 +13823,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.75,
           "actual_ret": 5.9,
           "actual_return": 5.9,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 42950.0
         },
         {
           "symbol": "KPITTECH",
@@ -13667,7 +13873,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.62,
           "actual_ret": 0.77,
           "actual_return": 0.77,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 1412.5
         },
         {
           "symbol": "ADANIENSOL",
@@ -13716,7 +13923,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 28.32,
           "actual_ret": 27.47,
           "actual_return": 27.47,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 73700.0
         },
         {
           "symbol": "POLICYBZR",
@@ -13765,7 +13973,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.55,
           "actual_ret": -2.7,
           "actual_return": -2.7,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -10075.0
         },
         {
           "symbol": "LAURUSLABS",
@@ -13814,7 +14023,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.02,
           "actual_ret": 6.17,
           "actual_return": 6.17,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 19525.0
         },
         {
           "symbol": "COCHINSHIP",
@@ -13863,7 +14073,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.62,
           "actual_ret": -13.77,
           "actual_return": -13.77,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -61150.0
         },
         {
           "symbol": "LICHSGFIN",
@@ -13912,7 +14123,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.45,
           "actual_ret": 0.6,
           "actual_return": 0.6,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 825.0
         },
         {
           "symbol": "DMART",
@@ -13961,7 +14173,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.38,
           "actual_ret": 3.53,
           "actual_return": 3.53,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 39300.0
         },
         {
           "symbol": "OBEROIRLTY",
@@ -14010,7 +14223,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.37,
           "actual_ret": -10.52,
           "actual_return": -10.52,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -41580.0
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -14059,7 +14273,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.77,
           "actual_ret": -1.92,
           "actual_return": -1.92,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -335.0
         },
         {
           "symbol": "DABUR",
@@ -14108,7 +14323,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.21,
           "actual_ret": -4.36,
           "actual_return": -4.36,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -5097.5
         },
         {
           "symbol": "PIDILITIND",
@@ -14157,7 +14373,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.93,
           "actual_ret": 7.08,
           "actual_return": 7.08,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 25940.0
         },
         {
           "symbol": "MOTHERSON",
@@ -14206,7 +14423,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.65,
           "actual_ret": -7.8,
           "actual_return": -7.8,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -2460.0
         },
         {
           "symbol": "COLPAL",
@@ -14255,7 +14473,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.49,
           "actual_ret": -11.64,
           "actual_return": -11.64,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -54852.5
         },
         {
           "symbol": "PNBHOUSING",
@@ -14304,7 +14523,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.53,
           "actual_ret": 0.68,
           "actual_return": 0.68,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 1725.0
         },
         {
           "symbol": "PHOENIXLTD",
@@ -14353,7 +14573,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.77,
           "actual_ret": -1.92,
           "actual_return": -1.92,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -8325.0
         },
         {
           "symbol": "INOXWIND",
@@ -14402,7 +14623,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 15.22,
           "actual_ret": 14.37,
           "actual_return": 14.37,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 3145.0
         },
         {
           "symbol": "ASHOKLEY",
@@ -14451,7 +14673,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.63,
           "actual_ret": 11.78,
           "actual_return": 11.78,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 4082.5
         },
         {
           "symbol": "CANBK",
@@ -14500,7 +14723,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.98,
           "actual_ret": -0.13,
           "actual_return": -0.13,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -40.0
         },
         {
           "symbol": "ATHERENERG",
@@ -14549,7 +14773,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.67,
           "actual_ret": -16.82,
           "actual_return": -16.82,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -42050.0
         },
         {
           "symbol": "AUROPHARMA",
@@ -14598,7 +14823,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.99,
           "actual_ret": -4.14,
           "actual_return": -4.14,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -15725.0
         },
         {
           "symbol": "HINDUNILVR",
@@ -14697,7 +14923,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.22,
           "actual_ret": -0.37,
           "actual_return": -0.37,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -245.0
         },
         {
           "symbol": "ETERNAL",
@@ -14796,7 +15023,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.17,
           "actual_ret": 2.32,
           "actual_return": 2.32,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 7165.0
         },
         {
           "symbol": "KOTAKBANK",
@@ -14895,7 +15123,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.32,
           "actual_ret": 0.47,
           "actual_return": 0.47,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 535.0
         },
         {
           "symbol": "TATACONSUM",
@@ -14994,7 +15223,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.98,
           "actual_ret": -1.13,
           "actual_return": -1.13,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -900.0
         },
         {
           "symbol": "NMDC",
@@ -15043,7 +15273,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.36,
           "actual_ret": -0.51,
           "actual_return": -0.51,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -112.5
         },
         {
           "symbol": "RBLBANK",
@@ -15092,7 +15323,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.5,
           "actual_ret": -2.65,
           "actual_return": -2.65,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -2275.0
         },
         {
           "symbol": "FORTIS",
@@ -15141,7 +15373,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.67,
           "actual_ret": -9.82,
           "actual_return": -9.82,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -20615.0
         },
         {
           "symbol": "INDUSTOWER",
@@ -15190,7 +15423,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.27,
           "actual_ret": 1.42,
           "actual_return": 1.42,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 1525.0
         },
         {
           "symbol": "UPL",
@@ -15239,7 +15473,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.49,
           "actual_ret": 2.64,
           "actual_return": 2.64,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 4245.0
         },
         {
           "symbol": "LODHA",
@@ -15288,7 +15523,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.98,
           "actual_ret": 3.13,
           "actual_return": 3.13,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 6875.0
         },
         {
           "symbol": "MFSL",
@@ -15337,7 +15573,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.57,
           "actual_ret": 4.72,
           "actual_return": 4.72,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 18950.0
         },
         {
           "symbol": "HAL",
@@ -15386,7 +15623,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.18,
           "actual_ret": -7.33,
           "actual_return": -7.33,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -75175.0
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -15435,7 +15673,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.31,
           "actual_ret": -2.46,
           "actual_return": -2.46,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -21175.0
         },
         {
           "symbol": "360ONE",
@@ -15484,7 +15723,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.49,
           "actual_ret": -8.64,
           "actual_return": -8.64,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -19945.0
         },
         {
           "symbol": "TATAMOTORS",
@@ -15533,7 +15773,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.39,
           "actual_ret": -1.54,
           "actual_return": -1.54,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -3437.5
         },
         {
           "symbol": "AMBUJACEM",
@@ -15582,7 +15823,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.32,
           "actual_ret": 0.47,
           "actual_return": 0.47,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 510.0
         },
         {
           "symbol": "SIEMENS",
@@ -15631,7 +15873,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.78,
           "actual_ret": 10.93,
           "actual_return": 10.93,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 90927.5
         },
         {
           "symbol": "INFY",
@@ -15730,7 +15973,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.56,
           "actual_ret": -5.71,
           "actual_return": -5.71,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -7387.5
         },
         {
           "symbol": "FEDERALBNK",
@@ -15779,7 +16023,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.85,
           "actual_ret": -2.0,
           "actual_return": -2.0,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -1462.5
         },
         {
           "symbol": "MOTILALOFS",
@@ -15828,7 +16073,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.22,
           "actual_ret": 13.37,
           "actual_return": 13.37,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 28112.5
         },
         {
           "symbol": "TORNTPHARM",
@@ -15877,7 +16123,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.17,
           "actual_ret": -4.32,
           "actual_return": -4.32,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -42940.0
         },
         {
           "symbol": "RADICO",
@@ -15926,7 +16173,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 19.56,
           "actual_ret": 18.71,
           "actual_return": 18.71,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 125270.0
         },
         {
           "symbol": "IREDA",
@@ -15975,7 +16223,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.68,
           "actual_ret": -4.83,
           "actual_return": -4.83,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -1507.5
         },
         {
           "symbol": "HDFCAMC",
@@ -16024,7 +16273,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.27,
           "actual_ret": 13.42,
           "actual_return": 13.42,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 77090.0
         },
         {
           "symbol": "SAIL",
@@ -16073,7 +16323,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.64,
           "actual_ret": -7.79,
           "actual_return": -7.79,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -3362.5
         },
         {
           "symbol": "MAHABANK",
@@ -16122,7 +16373,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.64,
           "actual_ret": 3.79,
           "actual_return": 3.79,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 760.0
         },
         {
           "symbol": "DLF",
@@ -16171,7 +16423,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.06,
           "actual_ret": 8.21,
           "actual_return": 8.21,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 11790.0
         },
         {
           "symbol": "SUZLON",
@@ -16220,7 +16473,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 24.23,
           "actual_ret": -23.38,
           "actual_return": -23.38,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -2585.0
         },
         {
           "symbol": "PRESTIGE",
@@ -16269,7 +16523,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 15.79,
           "actual_ret": -14.94,
           "actual_return": -14.94,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -50575.0
         },
         {
           "symbol": "KFINTECH",
@@ -16318,7 +16573,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.28,
           "actual_ret": 2.43,
           "actual_return": 2.43,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 4957.5
         },
         {
           "symbol": "JINDALSTEL",
@@ -16367,7 +16623,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.28,
           "actual_ret": -1.43,
           "actual_return": -1.43,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -4125.0
         },
         {
           "symbol": "VOLTAS",
@@ -16416,7 +16673,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.65,
           "actual_ret": -3.8,
           "actual_return": -3.8,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -12292.5
         },
         {
           "symbol": "RVNL",
@@ -16465,7 +16723,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.27,
           "actual_ret": -6.42,
           "actual_return": -6.42,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -4325.0
         },
         {
           "symbol": "ASTRAL",
@@ -16514,7 +16773,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.92,
           "actual_ret": 8.07,
           "actual_return": 8.07,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 31800.0
         },
         {
           "symbol": "ADANIGREEN",
@@ -16563,7 +16823,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.85,
           "actual_ret": 1.0,
           "actual_return": 1.0,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 3850.0
         },
         {
           "symbol": "GODREJCP",
@@ -16612,7 +16873,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.02,
           "actual_ret": 1.17,
           "actual_return": 1.17,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 2950.0
         },
         {
           "symbol": "TITAN",
@@ -16711,7 +16973,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.57,
           "actual_ret": -13.72,
           "actual_return": -13.72,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -166875.0
         },
         {
           "symbol": "BLUESTARCO",
@@ -16760,7 +17023,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.9,
           "actual_ret": -0.05,
           "actual_return": -0.05,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -225.0
         },
         {
           "symbol": "MAXHEALTH",
@@ -16859,7 +17123,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.91,
           "actual_ret": -13.06,
           "actual_return": -13.06,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -11880.0
         },
         {
           "symbol": "PAGEIND",
@@ -16908,7 +17173,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.85,
           "actual_ret": 5.0,
           "actual_return": 5.0,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 448750.0
         },
         {
           "symbol": "IRFC",
@@ -16957,7 +17223,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.38,
           "actual_ret": 0.53,
           "actual_return": 0.53,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 130.0
         },
         {
           "symbol": "DIXON",
@@ -17006,7 +17273,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.48,
           "actual_ret": 16.63,
           "actual_return": 16.63,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 421500.0
         },
         {
           "symbol": "FORCEMOT",
@@ -17055,7 +17323,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.48,
           "actual_ret": 4.63,
           "actual_return": 4.63,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 216500.0
         },
         {
           "symbol": "KAYNES",
@@ -17104,7 +17373,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.95,
           "actual_ret": 3.1,
           "actual_return": 3.1,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 25250.0
         },
         {
           "symbol": "HINDZINC",
@@ -17153,7 +17423,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.47,
           "actual_ret": 0.62,
           "actual_return": 0.62,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 987.5
         },
         {
           "symbol": "BHARATFORG",
@@ -17202,7 +17473,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.51,
           "actual_ret": 9.66,
           "actual_return": 9.66,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 39555.0
         },
         {
           "symbol": "VBL",
@@ -17251,7 +17523,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.21,
           "actual_ret": -2.36,
           "actual_return": -2.36,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -3062.5
         },
         {
           "symbol": "GAIL",
@@ -17300,7 +17573,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.58,
           "actual_ret": -0.73,
           "actual_return": -0.73,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -300.0
         },
         {
           "symbol": "BAJAJFINSV",
@@ -17399,7 +17673,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.09,
           "actual_ret": 3.24,
           "actual_return": 3.24,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 18317.5
         },
         {
           "symbol": "SUPREMEIND",
@@ -17448,7 +17723,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.4,
           "actual_ret": -8.55,
           "actual_return": -8.55,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -74700.0
         },
         {
           "symbol": "VMM",
@@ -17497,7 +17773,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.97,
           "actual_ret": 3.12,
           "actual_return": 3.12,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 917.5
         },
         {
           "symbol": "POWERINDIA",
@@ -17546,7 +17823,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.9,
           "actual_ret": 7.05,
           "actual_return": 7.05,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 500000.0
         },
         {
           "symbol": "PATANJALI",
@@ -17595,7 +17873,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.64,
           "actual_ret": -2.79,
           "actual_return": -2.79,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -3200.0
         },
         {
           "symbol": "MAZDOCK",
@@ -17644,7 +17923,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.18,
           "actual_ret": 4.33,
           "actual_return": 4.33,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 27750.0
         },
         {
           "symbol": "NESTLEIND",
@@ -17743,7 +18023,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.54,
           "actual_ret": -1.69,
           "actual_return": -1.69,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -21745.0
         },
         {
           "symbol": "MCX",
@@ -17792,7 +18073,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.73,
           "actual_ret": 1.88,
           "actual_return": 1.88,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 13050.0
         },
         {
           "symbol": "M&M",
@@ -17891,7 +18173,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.45,
           "actual_ret": 0.6,
           "actual_return": 0.6,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 120.0
         },
         {
           "symbol": "NAM-INDIA",
@@ -17940,7 +18223,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.97,
           "actual_ret": 11.12,
           "actual_return": 11.12,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 28637.5
         },
         {
           "symbol": "NATIONALUM",
@@ -17989,7 +18273,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.35,
           "actual_ret": 5.5,
           "actual_return": 5.5,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 5497.5
         },
         {
           "symbol": "MARICO",
@@ -18038,7 +18323,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.25,
           "actual_ret": 1.4,
           "actual_return": 1.4,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 2912.5
         },
         {
           "symbol": "AMBER",
@@ -18087,7 +18373,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 16.38,
           "actual_ret": -15.53,
           "actual_return": -15.53,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -267500.0
         },
         {
           "symbol": "GODFRYPHLP",
@@ -18136,7 +18423,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.19,
           "actual_ret": 3.34,
           "actual_return": 3.34,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 20000.0
         },
         {
           "symbol": "HCLTECH",
@@ -18235,7 +18523,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.58,
           "actual_ret": 3.73,
           "actual_return": 3.73,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 15750.0
         },
         {
           "symbol": "BOSCHLTD",
@@ -18284,7 +18573,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.36,
           "actual_ret": -7.51,
           "actual_return": -7.51,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -698750.0
         },
         {
           "symbol": "LTM",
@@ -18333,7 +18623,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.46,
           "actual_ret": 3.61,
           "actual_return": 3.61,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 38237.5
         },
         {
           "symbol": "ABB",
@@ -18382,7 +18673,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.77,
           "actual_ret": 0.92,
           "actual_return": 0.92,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 14625.0
         },
         {
           "symbol": "LT",
@@ -18481,7 +18773,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.54,
           "actual_ret": -2.69,
           "actual_return": -2.69,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -2612.5
         },
         {
           "symbol": "VEDL",
@@ -18530,7 +18823,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.97,
           "actual_ret": -12.12,
           "actual_return": -12.12,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -20837.5
         },
         {
           "symbol": "ASIANPAINT",
@@ -18629,7 +18923,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.95,
           "actual_ret": -0.1,
           "actual_return": -0.1,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -450.0
         },
         {
           "symbol": "ADANIPORTS",
@@ -18828,7 +19123,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.72,
           "actual_ret": 0.87,
           "actual_return": 0.87,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 7275.0
         },
         {
           "symbol": "DRREDDY",
@@ -18977,7 +19273,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.43,
           "actual_ret": -6.58,
           "actual_return": -6.58,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -4337.5
         },
         {
           "symbol": "HINDPETRO",
@@ -19026,7 +19323,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.4,
           "actual_ret": -7.55,
           "actual_return": -7.55,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -7062.5
         },
         {
           "symbol": "RELIANCE",
@@ -19175,7 +19473,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.13,
           "actual_ret": -8.28,
           "actual_return": -8.28,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -93350.0
         },
         {
           "symbol": "TECHM",
@@ -19274,7 +19573,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.18,
           "actual_ret": 6.33,
           "actual_return": 6.33,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 23150.0
         },
         {
           "symbol": "BIOCON",
@@ -19323,7 +19623,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.55,
           "actual_ret": 3.7,
           "actual_return": 3.7,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 3222.5
         },
         {
           "symbol": "SUNPHARMA",
@@ -19422,7 +19723,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.06,
           "actual_ret": 1.21,
           "actual_return": 1.21,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 27617.5
         },
         {
           "symbol": "BAJAJHLDNG",
@@ -19471,7 +19773,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.31,
           "actual_ret": -7.46,
           "actual_return": -7.46,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -181740.0
         },
         {
           "symbol": "IDEA",
@@ -19520,7 +19823,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.77,
           "actual_ret": -2.92,
           "actual_return": -2.92,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -67.5
         },
         {
           "symbol": "ULTRACEMCO",
@@ -19669,7 +19973,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.0,
           "actual_ret": 4.15,
           "actual_return": 4.15,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 3687.5
         },
         {
           "symbol": "INDIANB",
@@ -19718,7 +20023,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.32,
           "actual_ret": -1.47,
           "actual_return": -1.47,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -2937.5
         },
         {
           "symbol": "ABCAPITAL",
@@ -19767,7 +20073,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.3,
           "actual_ret": -3.45,
           "actual_return": -3.45,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -3212.5
         },
         {
           "symbol": "BDL",
@@ -19816,7 +20123,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.13,
           "actual_ret": -0.28,
           "actual_return": -0.28,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -950.0
         },
         {
           "symbol": "IEX",
@@ -19865,7 +20173,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.18,
           "actual_ret": 1.33,
           "actual_return": 1.33,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 410.0
         },
         {
           "symbol": "PGEL",
@@ -19914,7 +20223,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 16.34,
           "actual_ret": 15.49,
           "actual_return": 15.49,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 18850.0
         },
         {
           "symbol": "BHARTIARTL",
@@ -20013,7 +20323,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.91,
           "actual_ret": 6.06,
           "actual_return": 6.06,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 6875.0
         },
         {
           "symbol": "SWIGGY",
@@ -20062,7 +20373,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.79,
           "actual_ret": 1.94,
           "actual_return": 1.94,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 1225.0
         },
         {
           "symbol": "DIVISLAB",
@@ -20111,7 +20423,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.86,
           "actual_ret": 7.01,
           "actual_return": 7.01,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 101582.5
         },
         {
           "symbol": "CDSL",
@@ -20160,7 +20473,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.77,
           "actual_ret": 5.92,
           "actual_return": 5.92,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 17490.0
         },
         {
           "symbol": "CGPOWER",
@@ -20209,7 +20523,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.6,
           "actual_ret": -12.75,
           "actual_return": -12.75,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -23312.5
         },
         {
           "symbol": "PAYTM",
@@ -20258,7 +20573,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.76,
           "actual_ret": 1.91,
           "actual_return": 1.91,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 5300.0
         },
         {
           "symbol": "PNB",
@@ -20307,7 +20623,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.3,
           "actual_ret": -2.45,
           "actual_return": -2.45,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -622.5
         },
         {
           "symbol": "EICHERMOT",
@@ -20406,7 +20723,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.75,
           "actual_ret": 0.9,
           "actual_return": 0.9,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 2200.0
         },
         {
           "symbol": "BRITANNIA",
@@ -20455,7 +20773,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.93,
           "actual_ret": -0.08,
           "actual_return": -0.08,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -1125.0
         },
         {
           "symbol": "SHREECEM",
@@ -20504,7 +20823,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.84,
           "actual_ret": 1.99,
           "actual_return": 1.99,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 123430.0
         },
         {
           "symbol": "GLENMARK",
@@ -20553,7 +20873,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.65,
           "actual_ret": 0.8,
           "actual_return": 0.8,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 4425.0
         },
         {
           "symbol": "NYKAA",
@@ -20602,7 +20923,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.44,
           "actual_ret": 0.59,
           "actual_return": 0.59,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 400.0
         },
         {
           "symbol": "TCS",
@@ -21160,7 +21482,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.2,
           "actual_ret": -3.35,
           "actual_return": -3.35,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -2942.5
         },
         {
           "symbol": "NTPC",
@@ -21409,7 +21732,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.18,
           "actual_ret": -2.33,
           "actual_return": -2.33,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -5197.5
         },
         {
           "symbol": "CIPLA",
@@ -21508,7 +21832,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.52,
           "actual_ret": 3.67,
           "actual_return": 3.67,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 2587.5
         },
         {
           "symbol": "ATHERENERG",
@@ -21557,7 +21882,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.67,
           "actual_ret": -16.82,
           "actual_return": -16.82,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -42050.0
         },
         {
           "symbol": "PREMIERENE",
@@ -21606,7 +21932,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.86,
           "actual_ret": 4.01,
           "actual_return": 4.01,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 7357.5
         },
         {
           "symbol": "SAGILITY",
@@ -21655,7 +21982,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.68,
           "actual_ret": -1.83,
           "actual_return": -1.83,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -182.5
         },
         {
           "symbol": "PIDILITIND",
@@ -21704,7 +22032,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.55,
           "actual_ret": -5.7,
           "actual_return": -5.7,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -20377.5
         },
         {
           "symbol": "HDFCLIFE",
@@ -21803,7 +22132,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.24,
           "actual_ret": -9.39,
           "actual_return": -9.39,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -70115.0
         },
         {
           "symbol": "ADANIGREEN",
@@ -21852,7 +22182,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.4,
           "actual_ret": 0.55,
           "actual_return": 0.55,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 1175.0
         },
         {
           "symbol": "AXISBANK",
@@ -21951,7 +22282,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.28,
           "actual_ret": 6.43,
           "actual_return": 6.43,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 9630.0
         },
         {
           "symbol": "JSWENERGY",
@@ -22000,7 +22332,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.55,
           "actual_ret": 7.7,
           "actual_return": 7.7,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 8657.5
         },
         {
           "symbol": "BANDHANBNK",
@@ -22049,7 +22382,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.85,
           "actual_ret": -10.0,
           "actual_return": -10.0,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -4100.0
         },
         {
           "symbol": "VMM",
@@ -22098,7 +22432,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.24,
           "actual_ret": -3.39,
           "actual_return": -3.39,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -1032.5
         },
         {
           "symbol": "CGPOWER",
@@ -22147,7 +22482,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.53,
           "actual_ret": 7.68,
           "actual_return": 7.68,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 11387.5
         },
         {
           "symbol": "SBICARD",
@@ -22196,7 +22532,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.84,
           "actual_ret": 2.99,
           "actual_return": 2.99,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 5725.0
         },
         {
           "symbol": "NHPC",
@@ -22245,7 +22582,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.73,
           "actual_ret": 0.88,
           "actual_return": 0.88,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 167.5
         },
         {
           "symbol": "BDL",
@@ -22294,7 +22632,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.02,
           "actual_ret": -3.17,
           "actual_return": -3.17,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -10325.0
         },
         {
           "symbol": "PAYTM",
@@ -22343,7 +22682,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.64,
           "actual_ret": -2.79,
           "actual_return": -2.79,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -7150.0
         },
         {
           "symbol": "VOLTAS",
@@ -22392,7 +22732,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.07,
           "actual_ret": 6.22,
           "actual_return": 6.22,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 22255.0
         },
         {
           "symbol": "RECLTD",
@@ -22441,7 +22782,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.32,
           "actual_ret": -0.47,
           "actual_return": -0.47,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -390.0
         },
         {
           "symbol": "ETERNAL",
@@ -22540,7 +22882,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.21,
           "actual_ret": -10.36,
           "actual_return": -10.36,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -304000.0
         },
         {
           "symbol": "SBILIFE",
@@ -22639,7 +22982,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.89,
           "actual_ret": -0.04,
           "actual_return": -0.04,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -25.0
         },
         {
           "symbol": "ADANIPORTS",
@@ -22738,7 +23082,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.46,
           "actual_ret": -2.61,
           "actual_return": -2.61,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -7460.0
         },
         {
           "symbol": "SOLARINDS",
@@ -22787,7 +23132,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.86,
           "actual_ret": -0.01,
           "actual_return": -0.01,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -500.0
         },
         {
           "symbol": "AUROPHARMA",
@@ -22836,7 +23182,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.33,
           "actual_ret": 4.48,
           "actual_return": 4.48,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 12975.0
         },
         {
           "symbol": "ADANIPOWER",
@@ -22885,7 +23232,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.78,
           "actual_ret": -5.93,
           "actual_return": -5.93,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -2275.0
         },
         {
           "symbol": "LODHA",
@@ -22934,7 +23282,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.79,
           "actual_ret": -4.94,
           "actual_return": -4.94,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -13525.0
         },
         {
           "symbol": "SUPREMEIND",
@@ -22983,7 +23332,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.5,
           "actual_ret": -4.65,
           "actual_return": -4.65,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -45305.0
         },
         {
           "symbol": "VEDL",
@@ -23032,7 +23382,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.82,
           "actual_ret": -7.97,
           "actual_return": -7.97,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -12195.0
         },
         {
           "symbol": "HYUNDAI",
@@ -23081,7 +23432,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.91,
           "actual_ret": -10.06,
           "actual_return": -10.06,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -50800.0
         },
         {
           "symbol": "BANKBARODA",
@@ -23130,7 +23482,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.22,
           "actual_ret": 5.37,
           "actual_return": 5.37,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 3742.5
         },
         {
           "symbol": "BOSCHLTD",
@@ -23179,7 +23532,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.07,
           "actual_ret": 8.22,
           "actual_return": 8.22,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 686250.0
         },
         {
           "symbol": "PAGEIND",
@@ -23228,7 +23582,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.13,
           "actual_ret": -3.28,
           "actual_return": -3.28,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -281250.0
         },
         {
           "symbol": "FORTIS",
@@ -23277,7 +23632,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.14,
           "actual_ret": 10.29,
           "actual_return": 10.29,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 24185.0
         },
         {
           "symbol": "INOXWIND",
@@ -23326,7 +23682,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.17,
           "actual_ret": -7.32,
           "actual_return": -7.32,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -2045.0
         },
         {
           "symbol": "GVT&D",
@@ -23375,7 +23732,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.44,
           "actual_ret": 2.59,
           "actual_return": 2.59,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 24375.0
         },
         {
           "symbol": "TATAPOWER",
@@ -23424,7 +23782,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.26,
           "actual_ret": 2.41,
           "actual_return": 2.41,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 2397.5
         },
         {
           "symbol": "HINDPETRO",
@@ -23473,7 +23832,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.82,
           "actual_ret": 9.97,
           "actual_return": 9.97,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 9587.5
         },
         {
           "symbol": "LUPIN",
@@ -23522,7 +23882,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.18,
           "actual_ret": 0.33,
           "actual_return": 0.33,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 1885.0
         },
         {
           "symbol": "AMBER",
@@ -23571,7 +23932,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.71,
           "actual_ret": 8.86,
           "actual_return": 8.86,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 148500.0
         },
         {
           "symbol": "HCLTECH",
@@ -23670,7 +24032,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.27,
           "actual_ret": -1.42,
           "actual_return": -1.42,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -11382.5
         },
         {
           "symbol": "BHARTIARTL",
@@ -23769,7 +24132,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.64,
           "actual_ret": -3.79,
           "actual_return": -3.79,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -22605.0
         },
         {
           "symbol": "NYKAA",
@@ -23818,7 +24182,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.4,
           "actual_ret": 3.55,
           "actual_return": 3.55,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 2292.5
         },
         {
           "symbol": "PRESTIGE",
@@ -23867,7 +24232,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.81,
           "actual_ret": 1.96,
           "actual_return": 1.96,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 6150.0
         },
         {
           "symbol": "GMRAIRPORT",
@@ -23916,7 +24282,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.89,
           "actual_ret": 6.04,
           "actual_return": 6.04,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 1512.5
         },
         {
           "symbol": "BLUESTARCO",
@@ -23965,7 +24332,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.47,
           "actual_ret": -1.62,
           "actual_return": -1.62,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -8035.0
         },
         {
           "symbol": "RADICO",
@@ -24014,7 +24382,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.41,
           "actual_ret": -6.56,
           "actual_return": -6.56,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -50662.5
         },
         {
           "symbol": "MFSL",
@@ -24063,7 +24432,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.6,
           "actual_ret": -4.75,
           "actual_return": -4.75,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -20550.0
         },
         {
           "symbol": "MOTILALOFS",
@@ -24112,7 +24482,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.62,
           "actual_ret": -1.77,
           "actual_return": -1.77,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -3062.5
         },
         {
           "symbol": "KAYNES",
@@ -24161,7 +24532,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.43,
           "actual_ret": -4.58,
           "actual_return": -4.58,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -40725.0
         },
         {
           "symbol": "HDFCBANK",
@@ -24260,7 +24632,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.26,
           "actual_ret": 6.41,
           "actual_return": 6.41,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 14850.0
         },
         {
           "symbol": "PATANJALI",
@@ -24309,7 +24682,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.1,
           "actual_ret": -0.25,
           "actual_return": -0.25,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -337.5
         },
         {
           "symbol": "CANBK",
@@ -24358,7 +24732,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.53,
           "actual_ret": -7.68,
           "actual_return": -7.68,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -2710.0
         },
         {
           "symbol": "ITC",
@@ -24457,7 +24832,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.75,
           "actual_ret": 0.9,
           "actual_return": 0.9,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 490.0
         },
         {
           "symbol": "CAMS",
@@ -24506,7 +24882,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.17,
           "actual_ret": -3.32,
           "actual_return": -3.32,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -6127.5
         },
         {
           "symbol": "NATIONALUM",
@@ -24555,7 +24932,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.56,
           "actual_ret": 13.71,
           "actual_return": 13.71,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 10590.0
         },
         {
           "symbol": "INDIANB",
@@ -24604,7 +24982,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.34,
           "actual_ret": -7.49,
           "actual_return": -7.49,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -16155.0
         },
         {
           "symbol": "CHOLAFIN",
@@ -24653,7 +25032,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.63,
           "actual_ret": 7.78,
           "actual_return": 7.78,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 30962.5
         },
         {
           "symbol": "IOC",
@@ -24702,7 +25082,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.42,
           "actual_ret": 0.57,
           "actual_return": 0.57,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 250.0
         },
         {
           "symbol": "POLICYBZR",
@@ -24751,7 +25132,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.53,
           "actual_ret": -2.68,
           "actual_return": -2.68,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -11350.0
         },
         {
           "symbol": "TVSMOTOR",
@@ -24800,7 +25182,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.68,
           "actual_ret": -0.83,
           "actual_return": -0.83,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -7375.0
         },
         {
           "symbol": "PGEL",
@@ -24849,7 +25232,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.81,
           "actual_ret": -10.96,
           "actual_return": -10.96,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -16325.0
         },
         {
           "symbol": "UNITDSPR",
@@ -24898,7 +25282,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.86,
           "actual_ret": 4.01,
           "actual_return": 4.01,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 13497.5
         },
         {
           "symbol": "360ONE",
@@ -24947,7 +25332,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.04,
           "actual_ret": 5.19,
           "actual_return": 5.19,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 15460.0
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -24996,7 +25382,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.92,
           "actual_ret": 6.07,
           "actual_return": 6.07,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 55977.5
         },
         {
           "symbol": "PNB",
@@ -25045,7 +25432,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.18,
           "actual_ret": -2.33,
           "actual_return": -2.33,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -697.5
         },
         {
           "symbol": "PFC",
@@ -25094,7 +25482,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.51,
           "actual_ret": 7.66,
           "actual_return": 7.66,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 8212.5
         },
         {
           "symbol": "COLPAL",
@@ -25143,7 +25532,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.02,
           "actual_ret": -4.17,
           "actual_return": -4.17,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -21572.5
         },
         {
           "symbol": "OIL",
@@ -25192,7 +25582,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.77,
           "actual_ret": 7.92,
           "actual_return": 7.92,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 8877.5
         },
         {
           "symbol": "TMPV",
@@ -25341,7 +25732,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.84,
           "actual_ret": -1.99,
           "actual_return": -1.99,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -29130.0
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -25390,7 +25782,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.51,
           "actual_ret": -1.66,
           "actual_return": -1.66,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -352.5
         },
         {
           "symbol": "MARICO",
@@ -25439,7 +25832,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.44,
           "actual_ret": -0.59,
           "actual_return": -0.59,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -1132.5
         },
         {
           "symbol": "CDSL",
@@ -25488,7 +25882,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.1,
           "actual_ret": -3.25,
           "actual_return": -3.25,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -9982.5
         },
         {
           "symbol": "INDHOTEL",
@@ -25537,7 +25932,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.17,
           "actual_ret": 4.32,
           "actual_return": 4.32,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 7690.0
         },
         {
           "symbol": "ALKEM",
@@ -25586,7 +25982,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.42,
           "actual_ret": 1.57,
           "actual_return": 1.57,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 21000.0
         },
         {
           "symbol": "DABUR",
@@ -25635,7 +26032,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.59,
           "actual_ret": -0.74,
           "actual_return": -0.74,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -937.5
         },
         {
           "symbol": "SUNPHARMA",
@@ -25734,7 +26132,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.71,
           "actual_ret": 4.86,
           "actual_return": 4.86,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 237.5
         },
         {
           "symbol": "DLF",
@@ -25783,7 +26182,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.45,
           "actual_ret": -5.6,
           "actual_return": -5.6,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -7950.0
         },
         {
           "symbol": "IDEA",
@@ -25832,7 +26232,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.97,
           "actual_ret": 10.12,
           "actual_return": 10.12,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 285.0
         },
         {
           "symbol": "RVNL",
@@ -25881,7 +26282,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.42,
           "actual_ret": 2.57,
           "actual_return": 2.57,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 1987.5
         },
         {
           "symbol": "MAZDOCK",
@@ -25930,7 +26332,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.82,
           "actual_ret": 0.97,
           "actual_return": 0.97,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 5787.5
         },
         {
           "symbol": "SUZLON",
@@ -25979,7 +26382,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.46,
           "actual_ret": 13.61,
           "actual_return": 13.61,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 1800.0
         },
         {
           "symbol": "IEX",
@@ -26028,7 +26432,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.74,
           "actual_ret": -1.89,
           "actual_return": -1.89,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -572.5
         },
         {
           "symbol": "MAHABANK",
@@ -26077,7 +26482,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.47,
           "actual_ret": -2.62,
           "actual_return": -2.62,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -432.5
         },
         {
           "symbol": "INDUSTOWER",
@@ -26126,7 +26532,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.0,
           "actual_ret": -1.15,
           "actual_return": -1.15,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -1337.5
         },
         {
           "symbol": "SBIN",
@@ -26325,7 +26732,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.64,
           "actual_ret": 1.79,
           "actual_return": 1.79,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 1275.0
         },
         {
           "symbol": "SONACOMS",
@@ -26374,7 +26782,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.01,
           "actual_ret": -4.16,
           "actual_return": -4.16,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -5035.0
         },
         {
           "symbol": "MOTHERSON",
@@ -26423,7 +26832,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.28,
           "actual_ret": 0.43,
           "actual_return": 0.43,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 142.5
         },
         {
           "symbol": "SRF",
@@ -26472,7 +26882,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.46,
           "actual_ret": 1.61,
           "actual_return": 1.61,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 12377.5
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -26571,7 +26982,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.98,
           "actual_ret": 1.13,
           "actual_return": 1.13,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 4900.0
         },
         {
           "symbol": "ADANIENT",
@@ -26670,7 +27082,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.14,
           "actual_ret": -2.29,
           "actual_return": -2.29,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -5042.5
         },
         {
           "symbol": "GODFRYPHLP",
@@ -26719,7 +27132,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.08,
           "actual_ret": -4.23,
           "actual_return": -4.23,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -20950.0
         },
         {
           "symbol": "COFORGE",
@@ -26768,7 +27182,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.48,
           "actual_ret": -7.63,
           "actual_return": -7.63,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -20625.0
         },
         {
           "symbol": "KEI",
@@ -26817,7 +27232,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.08,
           "actual_ret": 12.23,
           "actual_return": 12.23,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 133892.5
         },
         {
           "symbol": "NBCC",
@@ -26866,7 +27282,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.28,
           "actual_ret": -4.43,
           "actual_return": -4.43,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -980.0
         },
         {
           "symbol": "AMBUJACEM",
@@ -26915,7 +27332,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.17,
           "actual_ret": 4.32,
           "actual_return": 4.32,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 5620.0
         },
         {
           "symbol": "GODREJCP",
@@ -26964,7 +27382,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.2,
           "actual_ret": -1.35,
           "actual_return": -1.35,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -3532.5
         },
         {
           "symbol": "VBL",
@@ -27013,7 +27432,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.58,
           "actual_ret": -9.73,
           "actual_return": -9.73,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -10465.0
         },
         {
           "symbol": "LTM",
@@ -27062,7 +27482,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.23,
           "actual_ret": 7.38,
           "actual_return": 7.38,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 102377.5
         },
         {
           "symbol": "IREDA",
@@ -27111,7 +27532,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.17,
           "actual_ret": 6.32,
           "actual_return": 6.32,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 1855.0
         },
         {
           "symbol": "SHREECEM",
@@ -27160,7 +27582,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.89,
           "actual_ret": -1.04,
           "actual_return": -1.04,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -69820.0
         },
         {
           "symbol": "SIEMENS",
@@ -27209,7 +27632,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.21,
           "actual_ret": -3.36,
           "actual_return": -3.36,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -24655.0
         },
         {
           "symbol": "OBEROIRLTY",
@@ -27258,7 +27682,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.99,
           "actual_ret": 2.14,
           "actual_return": 2.14,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 7930.0
         },
         {
           "symbol": "KPITTECH",
@@ -27307,7 +27732,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.9,
           "actual_ret": -5.05,
           "actual_return": -5.05,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -14642.5
         },
         {
           "symbol": "BIOCON",
@@ -27356,7 +27782,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.59,
           "actual_ret": -1.74,
           "actual_return": -1.74,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -1650.0
         },
         {
           "symbol": "GLENMARK",
@@ -27405,7 +27832,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.47,
           "actual_ret": -2.62,
           "actual_return": -2.62,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -13925.0
         },
         {
           "symbol": "NMDC",
@@ -27454,7 +27882,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.96,
           "actual_ret": 0.11,
           "actual_return": 0.11,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 22.5
         },
         {
           "symbol": "APLAPOLLO",
@@ -27503,7 +27932,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.57,
           "actual_ret": 3.72,
           "actual_return": 3.72,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 17700.0
         },
         {
           "symbol": "INFY",
@@ -27602,7 +28032,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.05,
           "actual_ret": -3.2,
           "actual_return": -3.2,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -1502.5
         },
         {
           "symbol": "PNBHOUSING",
@@ -27651,7 +28082,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.9,
           "actual_ret": 7.05,
           "actual_return": 7.05,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 14225.0
         },
         {
           "symbol": "KFINTECH",
@@ -27700,7 +28132,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.03,
           "actual_ret": -0.18,
           "actual_return": -0.18,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -445.0
         },
         {
           "symbol": "CUMMINSIND",
@@ -27749,7 +28182,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.4,
           "actual_ret": 2.55,
           "actual_return": 2.55,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 25422.5
         },
         {
           "symbol": "PETRONET",
@@ -27798,7 +28232,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.05,
           "actual_ret": -3.2,
           "actual_return": -3.2,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -2347.5
         },
         {
           "symbol": "EICHERMOT",
@@ -27947,7 +28382,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.76,
           "actual_ret": -3.91,
           "actual_return": -3.91,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -1465.0
         },
         {
           "symbol": "SWIGGY",
@@ -27996,7 +28432,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.46,
           "actual_ret": -12.61,
           "actual_return": -12.61,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -10425.0
         },
         {
           "symbol": "TATAELXSI",
@@ -28045,7 +28482,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.0,
           "actual_ret": 4.15,
           "actual_return": 4.15,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 56735.0
         },
         {
           "symbol": "BHEL",
@@ -28094,7 +28532,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.89,
           "actual_ret": 2.04,
           "actual_return": 2.04,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 1320.0
         },
         {
           "symbol": "HAVELLS",
@@ -28143,7 +28582,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.56,
           "actual_ret": -6.71,
           "actual_return": -6.71,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -22440.0
         },
         {
           "symbol": "MAXHEALTH",
@@ -28242,7 +28682,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.26,
           "actual_ret": 0.41,
           "actual_return": 0.41,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 170.0
         },
         {
           "symbol": "CONCOR",
@@ -28291,7 +28732,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.46,
           "actual_ret": -0.61,
           "actual_return": -0.61,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -762.5
         },
         {
           "symbol": "UPL",
@@ -28340,7 +28782,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.18,
           "actual_ret": -2.33,
           "actual_return": -2.33,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -4310.0
         },
         {
           "symbol": "DELHIVERY",
@@ -28389,7 +28832,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.57,
           "actual_ret": 6.72,
           "actual_return": 6.72,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 6775.0
         },
         {
           "symbol": "LT",
@@ -28488,7 +28932,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.55,
           "actual_ret": 1.7,
           "actual_return": 1.7,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 27430.0
         },
         {
           "symbol": "MANKIND",
@@ -28537,7 +28982,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.68,
           "actual_ret": -8.83,
           "actual_return": -8.83,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -51050.0
         },
         {
           "symbol": "ASTRAL",
@@ -28586,7 +29032,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.68,
           "actual_ret": -2.83,
           "actual_return": -2.83,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -11250.0
         },
         {
           "symbol": "LICI",
@@ -28635,7 +29082,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.9,
           "actual_ret": 3.05,
           "actual_return": 3.05,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 3152.5
         },
         {
           "symbol": "ASHOKLEY",
@@ -28684,7 +29132,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.17,
           "actual_ret": -16.32,
           "actual_return": -16.32,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -7762.5
         },
         {
           "symbol": "JSWSTEEL",
@@ -28783,7 +29232,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.85,
           "actual_ret": -2.0,
           "actual_return": -2.0,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -31745.0
         },
         {
           "symbol": "NAM-INDIA",
@@ -28832,7 +29282,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.68,
           "actual_ret": -6.83,
           "actual_return": -6.83,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -14815.0
         },
         {
           "symbol": "TCS",
@@ -28931,7 +29382,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.06,
           "actual_ret": 2.21,
           "actual_return": 2.21,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 15485.0
         },
         {
           "symbol": "INDIGO",
@@ -29030,7 +29482,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.2,
           "actual_ret": -2.35,
           "actual_return": -2.35,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -22375.0
         },
         {
           "symbol": "BHARATFORG",
@@ -29079,7 +29532,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.6,
           "actual_ret": -1.75,
           "actual_return": -1.75,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -6472.5
         },
         {
           "symbol": "BAJAJFINSV",
@@ -29278,7 +29732,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.4,
           "actual_ret": 0.55,
           "actual_return": 0.55,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 2600.0
         },
         {
           "symbol": "COCHINSHIP",
@@ -29327,7 +29782,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.55,
           "actual_ret": -0.7,
           "actual_return": -0.7,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -2625.0
         },
         {
           "symbol": "GODREJPROP",
@@ -29376,7 +29832,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.9,
           "actual_ret": -12.05,
           "actual_return": -12.05,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -63815.0
         },
         {
           "symbol": "HINDZINC",
@@ -29425,7 +29882,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.22,
           "actual_ret": 4.37,
           "actual_return": 4.37,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 6555.0
         },
         {
           "symbol": "OFSS",
@@ -29474,7 +29932,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.95,
           "actual_ret": 0.1,
           "actual_return": 0.1,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 1822.5
         },
         {
           "symbol": "MCX",
@@ -29523,7 +29982,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.15,
           "actual_ret": -5.3,
           "actual_return": -5.3,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -34500.0
         },
         {
           "symbol": "LICHSGFIN",
@@ -29572,7 +30032,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.91,
           "actual_ret": 0.06,
           "actual_return": 0.06,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 75.0
         },
         {
           "symbol": "FORCEMOT",
@@ -29621,7 +30082,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.2,
           "actual_ret": 6.35,
           "actual_return": 6.35,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 328750.0
         },
         {
           "symbol": "HAL",
@@ -29670,7 +30132,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.08,
           "actual_ret": 2.23,
           "actual_return": 2.23,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 24595.0
         },
         {
           "symbol": "JUBLFOOD",
@@ -29719,7 +30182,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.4,
           "actual_ret": 4.55,
           "actual_return": 4.55,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 6270.0
         },
         {
           "symbol": "DMART",
@@ -29768,7 +30232,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.17,
           "actual_ret": -4.32,
           "actual_return": -4.32,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -41325.0
         },
         {
           "symbol": "HEROMOTOCO",
@@ -29817,7 +30282,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.37,
           "actual_ret": -1.52,
           "actual_return": -1.52,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -21090.0
         },
         {
           "symbol": "RBLBANK",
@@ -29866,7 +30332,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.69,
           "actual_ret": 2.84,
           "actual_return": 2.84,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 2250.0
         },
         {
           "symbol": "RELIANCE",
@@ -29965,7 +30432,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.95,
           "actual_ret": 7.1,
           "actual_return": 7.1,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 5587.5
         },
         {
           "symbol": "BANKINDIA",
@@ -30014,7 +30482,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.7,
           "actual_ret": -7.85,
           "actual_return": -7.85,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -2775.0
         },
         {
           "symbol": "JINDALSTEL",
@@ -30063,7 +30532,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.11,
           "actual_ret": -2.26,
           "actual_return": -2.26,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -6675.0
         },
         {
           "symbol": "ADANIENSOL",
@@ -30112,7 +30582,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 22.21,
           "actual_ret": -21.36,
           "actual_return": -21.36,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -55200.0
         },
         {
           "symbol": "CROMPTON",
@@ -30161,7 +30632,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.61,
           "actual_ret": -1.76,
           "actual_return": -1.76,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -1075.0
         },
         {
           "symbol": "BAJAJ-AUTO",
@@ -30260,7 +30732,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.19,
           "actual_ret": 6.34,
           "actual_return": 6.34,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 120552.5
         },
         {
           "symbol": "BAJAJHLDNG",
@@ -30309,7 +30782,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.94,
           "actual_ret": 10.09,
           "actual_return": 10.09,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 253597.5
         },
         {
           "symbol": "HDFCAMC",
@@ -30358,7 +30832,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.83,
           "actual_ret": -6.98,
           "actual_return": -6.98,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -45625.0
         },
         {
           "symbol": "POWERINDIA",
@@ -30407,7 +30882,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.03,
           "actual_ret": -7.18,
           "actual_return": -7.18,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -317500.0
         },
         {
           "symbol": "IRFC",
@@ -30456,7 +30932,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.21,
           "actual_ret": -1.36,
           "actual_return": -1.36,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -420.0
         },
         {
           "symbol": "KALYANKJIL",
@@ -30505,7 +30982,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.77,
           "actual_ret": -5.92,
           "actual_return": -5.92,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -6400.0
         },
         {
           "symbol": "UNOMINDA",
@@ -30554,7 +31032,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.83,
           "actual_ret": 3.98,
           "actual_return": 3.98,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 11822.5
         },
         {
           "symbol": "AUBANK",
@@ -30603,7 +31082,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.42,
           "actual_ret": 4.57,
           "actual_return": 4.57,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 11150.0
         },
         {
           "symbol": "DRREDDY",
@@ -30702,7 +31182,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.79,
           "actual_ret": 4.94,
           "actual_return": 4.94,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 31400.0
         },
         {
           "symbol": "LAURUSLABS",
@@ -30751,7 +31232,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.12,
           "actual_ret": 5.27,
           "actual_return": 5.27,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 12975.0
         },
         {
           "symbol": "KOTAKBANK",
@@ -30950,7 +31432,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 65750.0
         },
         {
           "symbol": "BAJFINANCE",
@@ -31558,7 +32041,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.22,
           "actual_ret": -1.37,
           "actual_return": -1.37,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -1097.5
         },
         {
           "symbol": "AXISBANK",
@@ -31757,7 +32241,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.13,
           "actual_ret": -3.28,
           "actual_return": -3.28,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -7315.0
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -31806,7 +32291,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.24,
           "actual_ret": -1.39,
           "actual_return": -1.39,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -282.5
         },
         {
           "symbol": "MANKIND",
@@ -31855,7 +32341,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.21,
           "actual_ret": -0.36,
           "actual_return": -0.36,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -2225.0
         },
         {
           "symbol": "DELHIVERY",
@@ -31904,7 +32391,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.97,
           "actual_ret": -1.12,
           "actual_return": -1.12,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -1150.0
         },
         {
           "symbol": "PHOENIXLTD",
@@ -31953,7 +32441,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.88,
           "actual_ret": 0.03,
           "actual_return": 0.03,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 125.0
         },
         {
           "symbol": "RADICO",
@@ -32002,7 +32491,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.56,
           "actual_ret": 3.71,
           "actual_return": 3.71,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 27715.0
         },
         {
           "symbol": "MOTHERSON",
@@ -32051,7 +32541,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.02,
           "actual_ret": -0.17,
           "actual_return": -0.17,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -47.5
         },
         {
           "symbol": "HAVELLS",
@@ -32100,7 +32591,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.71,
           "actual_ret": 1.86,
           "actual_return": 1.86,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 6920.0
         },
         {
           "symbol": "NTPC",
@@ -32199,7 +32691,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.64,
           "actual_ret": 7.79,
           "actual_return": 7.79,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 5557.5
         },
         {
           "symbol": "TATAPOWER",
@@ -32248,7 +32741,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.92,
           "actual_ret": -0.07,
           "actual_return": -0.07,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -62.5
         },
         {
           "symbol": "POWERGRID",
@@ -32347,7 +32841,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.65,
           "actual_ret": -5.8,
           "actual_return": -5.8,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -42142.5
         },
         {
           "symbol": "BHARATFORG",
@@ -32396,7 +32891,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.15,
           "actual_ret": 1.3,
           "actual_return": 1.3,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 3935.0
         },
         {
           "symbol": "ICICIBANK",
@@ -32495,7 +32991,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.14,
           "actual_ret": 3.29,
           "actual_return": 3.29,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 1950.0
         },
         {
           "symbol": "BAJAJFINSV",
@@ -32594,7 +33091,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.44,
           "actual_ret": 5.59,
           "actual_return": 5.59,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 121577.5
         },
         {
           "symbol": "360ONE",
@@ -32643,7 +33141,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.45,
           "actual_ret": -10.6,
           "actual_return": -10.6,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -27497.5
         },
         {
           "symbol": "NAM-INDIA",
@@ -32692,7 +33191,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.14,
           "actual_ret": 10.29,
           "actual_return": 10.29,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 20835.0
         },
         {
           "symbol": "HAL",
@@ -32741,7 +33241,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.32,
           "actual_ret": 0.47,
           "actual_return": 0.47,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 5630.0
         },
         {
           "symbol": "JSWSTEEL",
@@ -32840,7 +33341,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.0,
           "actual_ret": -5.15,
           "actual_return": -5.15,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -22725.0
         },
         {
           "symbol": "M&M",
@@ -32939,7 +33441,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.24,
           "actual_ret": -1.39,
           "actual_return": -1.39,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -930.0
         },
         {
           "symbol": "TIINDIA",
@@ -32988,7 +33491,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.35,
           "actual_ret": 1.5,
           "actual_return": 1.5,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 11840.0
         },
         {
           "symbol": "AUROPHARMA",
@@ -33037,7 +33541,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.19,
           "actual_ret": -2.34,
           "actual_return": -2.34,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -7225.0
         },
         {
           "symbol": "MPHASIS",
@@ -33086,7 +33591,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.42,
           "actual_ret": -0.57,
           "actual_return": -0.57,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -3895.0
         },
         {
           "symbol": "ALKEM",
@@ -33135,7 +33641,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.45,
           "actual_ret": -0.6,
           "actual_return": -0.6,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -8432.5
         },
         {
           "symbol": "BOSCHLTD",
@@ -33184,7 +33691,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.32,
           "actual_ret": 0.47,
           "actual_return": 0.47,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 42500.0
         },
         {
           "symbol": "TATACONSUM",
@@ -33283,7 +33791,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.87,
           "actual_ret": 2.02,
           "actual_return": 2.02,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 13762.5
         },
         {
           "symbol": "GVT&D",
@@ -33332,7 +33841,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.59,
           "actual_ret": -7.74,
           "actual_return": -7.74,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -53325.0
         },
         {
           "symbol": "BHEL",
@@ -33381,7 +33891,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.63,
           "actual_ret": -1.78,
           "actual_return": -1.78,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -1232.5
         },
         {
           "symbol": "LTM",
@@ -33430,7 +33941,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.3,
           "actual_ret": -3.45,
           "actual_return": -3.45,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -48105.0
         },
         {
           "symbol": "RBLBANK",
@@ -33479,7 +33991,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.53,
           "actual_ret": -5.68,
           "actual_return": -5.68,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -4662.5
         },
         {
           "symbol": "BDL",
@@ -33528,7 +34041,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.33,
           "actual_ret": 2.48,
           "actual_return": 2.48,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 9165.0
         },
         {
           "symbol": "VBL",
@@ -33577,7 +34091,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.95,
           "actual_ret": 1.1,
           "actual_return": 1.1,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 1310.0
         },
         {
           "symbol": "DLF",
@@ -33626,7 +34141,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.37,
           "actual_ret": 1.52,
           "actual_return": 1.52,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 2580.0
         },
         {
           "symbol": "KEI",
@@ -33675,7 +34191,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.33,
           "actual_ret": 2.48,
           "actual_return": 2.48,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 26292.5
         },
         {
           "symbol": "PNBHOUSING",
@@ -33724,7 +34241,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.98,
           "actual_ret": -2.13,
           "actual_return": -2.13,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -4862.5
         },
         {
           "symbol": "TORNTPHARM",
@@ -33773,7 +34291,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.38,
           "actual_ret": 0.53,
           "actual_return": 0.53,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 4635.0
         },
         {
           "symbol": "INDIANB",
@@ -33822,7 +34341,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.52,
           "actual_ret": -1.67,
           "actual_return": -1.67,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -3537.5
         },
         {
           "symbol": "UNOMINDA",
@@ -33871,7 +34391,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.18,
           "actual_ret": -1.33,
           "actual_return": -1.33,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -3940.0
         },
         {
           "symbol": "PFC",
@@ -33920,7 +34441,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.93,
           "actual_ret": -4.08,
           "actual_return": -4.08,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -3362.5
         },
         {
           "symbol": "RVNL",
@@ -33969,7 +34491,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.08,
           "actual_ret": 1.23,
           "actual_return": 1.23,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 985.0
         },
         {
           "symbol": "COFORGE",
@@ -34018,7 +34541,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.29,
           "actual_ret": 11.44,
           "actual_return": 11.44,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 53322.5
         },
         {
           "symbol": "PRESTIGE",
@@ -34067,7 +34591,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.92,
           "actual_ret": 2.07,
           "actual_return": 2.07,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 8550.0
         },
         {
           "symbol": "PERSISTENT",
@@ -34116,7 +34641,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.45,
           "actual_ret": -8.6,
           "actual_return": -8.6,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -112555.0
         },
         {
           "symbol": "APLAPOLLO",
@@ -34165,7 +34691,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.71,
           "actual_ret": 0.86,
           "actual_return": 0.86,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 3750.0
         },
         {
           "symbol": "SHREECEM",
@@ -34214,7 +34741,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.6,
           "actual_ret": -0.75,
           "actual_return": -0.75,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -49870.0
         },
         {
           "symbol": "ABB",
@@ -34263,7 +34791,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.35,
           "actual_ret": -1.5,
           "actual_return": -1.5,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -18797.5
         },
         {
           "symbol": "CROMPTON",
@@ -34312,7 +34841,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.15,
           "actual_ret": 2.3,
           "actual_return": 2.3,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 1420.0
         },
         {
           "symbol": "HDFCBANK",
@@ -34411,7 +34941,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.02,
           "actual_ret": -0.17,
           "actual_return": -0.17,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -50.0
         },
         {
           "symbol": "INFY",
@@ -34510,7 +35041,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.19,
           "actual_ret": -0.34,
           "actual_return": -0.34,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -130.0
         },
         {
           "symbol": "KOTAKBANK",
@@ -34609,7 +35141,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.69,
           "actual_ret": -0.84,
           "actual_return": -0.84,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -22965.0
         },
         {
           "symbol": "UNIONBANK",
@@ -34658,7 +35191,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.65,
           "actual_ret": 0.8,
           "actual_return": 0.8,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 297.5
         },
         {
           "symbol": "HEROMOTOCO",
@@ -34707,7 +35241,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.33,
           "actual_ret": -1.48,
           "actual_return": -1.48,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -20107.5
         },
         {
           "symbol": "COLPAL",
@@ -34756,7 +35291,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.46,
           "actual_ret": -1.61,
           "actual_return": -1.61,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -8702.5
         },
         {
           "symbol": "IOC",
@@ -34805,7 +35341,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.32,
           "actual_ret": -0.47,
           "actual_return": -0.47,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -195.0
         },
         {
           "symbol": "KPITTECH",
@@ -34854,7 +35391,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.73,
           "actual_ret": 3.88,
           "actual_return": 3.88,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "JINDALSTEL",
@@ -34903,7 +35441,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.82,
           "actual_ret": -1.97,
           "actual_return": -1.97,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -4950.0
         },
         {
           "symbol": "SAIL",
@@ -34952,7 +35491,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.98,
           "actual_ret": 1.13,
           "actual_return": 1.13,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 370.0
         },
         {
           "symbol": "SBIN",
@@ -35051,7 +35591,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.91,
           "actual_ret": 2.06,
           "actual_return": 2.06,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 1737.5
         },
         {
           "symbol": "HINDZINC",
@@ -35100,7 +35641,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.03,
           "actual_ret": 3.18,
           "actual_return": 3.18,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 3695.0
         },
         {
           "symbol": "POWERINDIA",
@@ -35149,7 +35691,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.77,
           "actual_ret": -5.92,
           "actual_return": -5.92,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -263500.0
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -35248,7 +35791,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.21,
           "actual_ret": -2.36,
           "actual_return": -2.36,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -4367.5
         },
         {
           "symbol": "SUNPHARMA",
@@ -35347,7 +35891,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.73,
           "actual_ret": -4.88,
           "actual_return": -4.88,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -16172.5
         },
         {
           "symbol": "TVSMOTOR",
@@ -35396,7 +35941,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.05,
           "actual_ret": -1.2,
           "actual_return": -1.2,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -11062.5
         },
         {
           "symbol": "OIL",
@@ -35445,7 +35991,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.44,
           "actual_ret": -3.59,
           "actual_return": -3.59,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -3827.5
         },
         {
           "symbol": "TATAELXSI",
@@ -35494,7 +36041,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.77,
           "actual_ret": -3.92,
           "actual_return": -3.92,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -51330.0
         },
         {
           "symbol": "IRFC",
@@ -35543,7 +36091,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.58,
           "actual_ret": -1.73,
           "actual_return": -1.73,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -550.0
         },
         {
           "symbol": "GODREJPROP",
@@ -35592,7 +36141,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.66,
           "actual_ret": 12.81,
           "actual_return": 12.81,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 64762.5
         },
         {
           "symbol": "KAYNES",
@@ -35641,7 +36191,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.07,
           "actual_ret": 6.22,
           "actual_return": 6.22,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 65250.0
         },
         {
           "symbol": "ITC",
@@ -35790,7 +36341,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.65,
           "actual_ret": -8.8,
           "actual_return": -8.8,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -192.5
         },
         {
           "symbol": "ICICIPRULI",
@@ -35839,7 +36391,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.52,
           "actual_ret": -3.67,
           "actual_return": -3.67,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -5630.0
         },
         {
           "symbol": "PGEL",
@@ -35888,7 +36441,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.16,
           "actual_ret": 13.31,
           "actual_return": 13.31,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 17125.0
         },
         {
           "symbol": "CAMS",
@@ -35937,7 +36491,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.79,
           "actual_ret": 0.94,
           "actual_return": 0.94,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 1755.0
         },
         {
           "symbol": "AMBUJACEM",
@@ -35986,7 +36541,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.43,
           "actual_ret": 2.58,
           "actual_return": 2.58,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 3595.0
         },
         {
           "symbol": "GODFRYPHLP",
@@ -36035,7 +36591,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.17,
           "actual_ret": 2.32,
           "actual_return": 2.32,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 17500.0
         },
         {
           "symbol": "PIIND",
@@ -36084,7 +36641,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.11,
           "actual_ret": -0.26,
           "actual_return": -0.26,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -2272.5
         },
         {
           "symbol": "MFSL",
@@ -36133,7 +36691,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.79,
           "actual_ret": -3.94,
           "actual_return": -3.94,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -15725.0
         },
         {
           "symbol": "MAXHEALTH",
@@ -36232,7 +36791,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.75,
           "actual_ret": 4.9,
           "actual_return": 4.9,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 4270.0
         },
         {
           "symbol": "MARICO",
@@ -36281,7 +36841,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.73,
           "actual_ret": 2.88,
           "actual_return": 2.88,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 5302.5
         },
         {
           "symbol": "CANBK",
@@ -36330,7 +36891,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.5,
           "actual_ret": -3.65,
           "actual_return": -3.65,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -1267.5
         },
         {
           "symbol": "CHOLAFIN",
@@ -36379,7 +36941,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.75,
           "actual_ret": -2.9,
           "actual_return": -2.9,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -12635.0
         },
         {
           "symbol": "CUMMINSIND",
@@ -36428,7 +36991,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.26,
           "actual_ret": -9.41,
           "actual_return": -9.41,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -91547.5
         },
         {
           "symbol": "NMDC",
@@ -36477,7 +37041,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.32,
           "actual_ret": 2.47,
           "actual_return": 2.47,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 447.5
         },
         {
           "symbol": "SBICARD",
@@ -36526,7 +37091,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.27,
           "actual_ret": 0.42,
           "actual_return": 0.42,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 912.5
         },
         {
           "symbol": "BANDHANBNK",
@@ -36575,7 +37141,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.17,
           "actual_ret": 3.32,
           "actual_return": 3.32,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 1275.0
         },
         {
           "symbol": "LAURUSLABS",
@@ -36624,7 +37191,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.35,
           "actual_ret": 0.5,
           "actual_return": 0.5,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 1237.5
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -36673,7 +37241,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.62,
           "actual_ret": -16.77,
           "actual_return": -16.77,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -132627.5
         },
         {
           "symbol": "BSE",
@@ -36722,7 +37291,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.9,
           "actual_ret": 5.05,
           "actual_return": 5.05,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 32815.0
         },
         {
           "symbol": "PREMIERENE",
@@ -36771,7 +37341,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.26,
           "actual_ret": -4.41,
           "actual_return": -4.41,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -11465.0
         },
         {
           "symbol": "MAHABANK",
@@ -36820,7 +37391,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.44,
           "actual_ret": 1.59,
           "actual_return": 1.59,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 230.0
         },
         {
           "symbol": "BHARTIARTL",
@@ -36919,7 +37491,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.98,
           "actual_ret": -1.13,
           "actual_return": -1.13,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -1512.5
         },
         {
           "symbol": "ADANIPORTS",
@@ -37018,7 +37591,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.9,
           "actual_ret": -4.05,
           "actual_return": -4.05,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -4512.5
         },
         {
           "symbol": "ATHERENERG",
@@ -37067,7 +37641,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "KALYANKJIL",
@@ -37116,7 +37691,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.42,
           "actual_ret": -2.57,
           "actual_return": -2.57,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -3300.0
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -37165,7 +37741,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.92,
           "actual_ret": 1.07,
           "actual_return": 1.07,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 2647.5
         },
         {
           "symbol": "CDSL",
@@ -37214,7 +37791,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.89,
           "actual_ret": -3.04,
           "actual_return": -3.04,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -11567.5
         },
         {
           "symbol": "RELIANCE",
@@ -37313,7 +37891,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.31,
           "actual_ret": 2.46,
           "actual_return": 2.46,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 12500.0
         },
         {
           "symbol": "HYUNDAI",
@@ -37362,7 +37941,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.88,
           "actual_ret": 1.03,
           "actual_return": 1.03,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 5925.0
         },
         {
           "symbol": "CGPOWER",
@@ -37411,7 +37991,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.55,
           "actual_ret": 2.7,
           "actual_return": 2.7,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 5012.5
         },
         {
           "symbol": "SBILIFE",
@@ -37510,7 +38091,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.41,
           "actual_ret": -3.56,
           "actual_return": -3.56,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -10875.0
         },
         {
           "symbol": "IREDA",
@@ -37559,7 +38141,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.48,
           "actual_ret": -3.63,
           "actual_return": -3.63,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -1210.0
         },
         {
           "symbol": "ETERNAL",
@@ -37758,7 +38341,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.55,
           "actual_ret": 3.7,
           "actual_return": 3.7,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 10577.5
         },
         {
           "symbol": "DIXON",
@@ -37807,7 +38391,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.17,
           "actual_ret": -4.32,
           "actual_return": -4.32,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -169000.0
         },
         {
           "symbol": "NYKAA",
@@ -37856,7 +38441,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.9,
           "actual_ret": 7.05,
           "actual_return": 7.05,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 4422.5
         },
         {
           "symbol": "SAGILITY",
@@ -37905,7 +38491,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.16,
           "actual_ret": 5.31,
           "actual_return": 5.31,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 642.5
         },
         {
           "symbol": "LICI",
@@ -37954,7 +38541,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.42,
           "actual_ret": 0.57,
           "actual_return": 0.57,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 630.0
         },
         {
           "symbol": "GLENMARK",
@@ -38003,7 +38591,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.33,
           "actual_ret": -4.48,
           "actual_return": -4.48,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -21850.0
         },
         {
           "symbol": "PATANJALI",
@@ -38052,7 +38641,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.74,
           "actual_ret": 2.89,
           "actual_return": 2.89,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 4137.5
         },
         {
           "symbol": "MOTILALOFS",
@@ -38101,7 +38691,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.17,
           "actual_ret": -1.32,
           "actual_return": -1.32,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -2765.0
         },
         {
           "symbol": "BANKBARODA",
@@ -38150,7 +38741,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.71,
           "actual_ret": 1.86,
           "actual_return": 1.86,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 1295.0
         },
         {
           "symbol": "ADANIGREEN",
@@ -38199,7 +38791,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.98,
           "actual_ret": 3.13,
           "actual_return": 3.13,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 7750.0
         },
         {
           "symbol": "POLYCAB",
@@ -38248,7 +38841,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.5,
           "actual_ret": -3.65,
           "actual_return": -3.65,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -70167.5
         },
         {
           "symbol": "AUBANK",
@@ -38297,7 +38891,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.64,
           "actual_ret": 12.79,
           "actual_return": 12.79,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 24525.0
         },
         {
           "symbol": "NESTLEIND",
@@ -38396,7 +38991,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.44,
           "actual_ret": 0.59,
           "actual_return": 0.59,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 3077.5
         },
         {
           "symbol": "BRITANNIA",
@@ -38445,7 +39041,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.69,
           "actual_ret": -0.84,
           "actual_return": -0.84,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -12375.0
         },
         {
           "symbol": "VEDL",
@@ -38494,7 +39091,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.51,
           "actual_ret": -0.66,
           "actual_return": -0.66,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -762.5
         },
         {
           "symbol": "IEX",
@@ -38543,7 +39141,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.74,
           "actual_ret": -0.89,
           "actual_return": -0.89,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -305.0
         },
         {
           "symbol": "JSWENERGY",
@@ -38592,7 +39191,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.07,
           "actual_ret": -0.22,
           "actual_return": -0.22,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -287.5
         },
         {
           "symbol": "FORTIS",
@@ -38641,7 +39241,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.87,
           "actual_ret": 1.02,
           "actual_return": 1.02,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 2710.0
         },
         {
           "symbol": "YESBANK",
@@ -38690,7 +39291,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.73,
           "actual_ret": -0.88,
           "actual_return": -0.88,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -47.5
         },
         {
           "symbol": "OBEROIRLTY",
@@ -38739,7 +39341,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.34,
           "actual_ret": -1.49,
           "actual_return": -1.49,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -6150.0
         },
         {
           "symbol": "BLUESTARCO",
@@ -38788,7 +39391,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.7,
           "actual_ret": -2.85,
           "actual_return": -2.85,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -12762.5
         },
         {
           "symbol": "FORCEMOT",
@@ -38837,7 +39441,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 19.72,
           "actual_ret": -18.87,
           "actual_return": -18.87,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -816250.0
         },
         {
           "symbol": "ASTRAL",
@@ -38886,7 +39491,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.66,
           "actual_ret": 6.81,
           "actual_return": 6.81,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 26500.0
         },
         {
           "symbol": "GAIL",
@@ -38935,7 +39541,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.84,
           "actual_ret": 3.99,
           "actual_return": 3.99,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 1775.0
         },
         {
           "symbol": "NAUKRI",
@@ -38984,7 +39591,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.05,
           "actual_ret": -1.2,
           "actual_return": -1.2,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -3997.5
         },
         {
           "symbol": "PNB",
@@ -39033,7 +39641,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.3,
           "actual_ret": 0.45,
           "actual_return": 0.45,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 132.5
         },
         {
           "symbol": "ANGELONE",
@@ -39082,7 +39691,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.34,
           "actual_ret": 1.49,
           "actual_return": 1.49,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 930.0
         },
         {
           "symbol": "UPL",
@@ -39131,7 +39741,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.52,
           "actual_ret": -2.67,
           "actual_return": -2.67,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -4827.5
         },
         {
           "symbol": "DIVISLAB",
@@ -39180,7 +39791,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 15.96,
           "actual_ret": 15.11,
           "actual_return": 15.11,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 214865.0
         },
         {
           "symbol": "AMBER",
@@ -39229,7 +39841,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.86,
           "actual_ret": 0.01,
           "actual_return": 0.01,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 250.0
         },
         {
           "symbol": "MCX",
@@ -39278,7 +39891,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.4,
           "actual_ret": 6.55,
           "actual_return": 6.55,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 33300.0
         },
         {
           "symbol": "COCHINSHIP",
@@ -39327,7 +39941,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.16,
           "actual_ret": -1.31,
           "actual_return": -1.31,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -5607.5
         },
         {
           "symbol": "SUPREMEIND",
@@ -39376,7 +39991,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.35,
           "actual_ret": 2.5,
           "actual_return": 2.5,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 20305.0
         },
         {
           "symbol": "HCLTECH",
@@ -39525,7 +40141,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.08,
           "actual_ret": 1.23,
           "actual_return": 1.23,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 1580.0
         },
         {
           "symbol": "INDIGO",
@@ -39624,7 +40241,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.68,
           "actual_ret": 3.83,
           "actual_return": 3.83,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 2010.0
         },
         {
           "symbol": "ASHOKLEY",
@@ -39673,7 +40291,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.8,
           "actual_ret": 10.95,
           "actual_return": 10.95,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 4295.0
         },
         {
           "symbol": "TCS",
@@ -39822,7 +40441,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.72,
           "actual_ret": 1.87,
           "actual_return": 1.87,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 190000.0
         },
         {
           "symbol": "CONCOR",
@@ -39871,7 +40491,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.57,
           "actual_ret": -0.72,
           "actual_return": -0.72,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -917.5
         },
         {
           "symbol": "UNITDSPR",
@@ -39920,7 +40541,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.52,
           "actual_ret": 2.67,
           "actual_return": 2.67,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 9435.0
         },
         {
           "symbol": "VMM",
@@ -39969,7 +40591,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.73,
           "actual_ret": -0.88,
           "actual_return": -0.88,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -300.0
         },
         {
           "symbol": "TRENT",
@@ -40068,7 +40691,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.26,
           "actual_ret": -0.41,
           "actual_return": -0.41,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -55.0
         },
         {
           "symbol": "BANKINDIA",
@@ -40117,7 +40741,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.12,
           "actual_ret": -7.27,
           "actual_return": -7.27,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -2225.0
         },
         {
           "symbol": "WAAREEENER",
@@ -40166,7 +40791,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.25,
           "actual_ret": -1.4,
           "actual_return": -1.4,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -12267.5
         },
         {
           "symbol": "SIEMENS",
@@ -40215,7 +40841,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.55,
           "actual_ret": -0.7,
           "actual_return": -0.7,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -5422.5
         },
         {
           "symbol": "NHPC",
@@ -40264,7 +40891,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.8,
           "actual_ret": 4.95,
           "actual_return": 4.95,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 987.5
         },
         {
           "symbol": "SWIGGY",
@@ -40313,7 +40941,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.61,
           "actual_ret": -3.76,
           "actual_return": -3.76,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -3700.0
         },
         {
           "symbol": "TITAN",
@@ -40412,7 +41041,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.22,
           "actual_ret": -2.37,
           "actual_return": -2.37,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -6315.0
         },
         {
           "symbol": "INOXWIND",
@@ -40461,7 +41091,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.51,
           "actual_ret": 3.66,
           "actual_return": 3.66,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 1342.5
         },
         {
           "symbol": "DRREDDY",
@@ -40560,7 +41191,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.53,
           "actual_ret": -1.68,
           "actual_return": -1.68,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -1475.0
         },
         {
           "symbol": "TMPV",
@@ -40659,7 +41291,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.6,
           "actual_ret": 0.75,
           "actual_return": 0.75,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 1370.0
         },
         {
           "symbol": "MAZDOCK",
@@ -40708,7 +41341,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.45,
           "actual_ret": -2.6,
           "actual_return": -2.6,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -17892.5
         },
         {
           "symbol": "ADANIENSOL",
@@ -40757,7 +41391,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.72,
           "actual_ret": 2.87,
           "actual_return": 2.87,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 6637.5
         },
         {
           "symbol": "DMART",
@@ -40806,7 +41441,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.22,
           "actual_ret": 0.37,
           "actual_return": 0.37,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 3925.0
         },
         {
           "symbol": "JUBLFOOD",
@@ -40855,7 +41491,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.31,
           "actual_ret": 3.46,
           "actual_return": 3.46,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 5297.5
         },
         {
           "symbol": "GMRAIRPORT",
@@ -40904,7 +41541,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.76,
           "actual_ret": -4.91,
           "actual_return": -4.91,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -1090.0
         },
         {
           "symbol": "PIDILITIND",
@@ -40953,7 +41591,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.05,
           "actual_ret": 1.2,
           "actual_return": 1.2,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 4320.0
         },
         {
           "symbol": "PAYTM",
@@ -41002,7 +41641,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.23,
           "actual_ret": -3.38,
           "actual_return": -3.38,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -10825.0
         },
         {
           "symbol": "LTF",
@@ -41051,7 +41691,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.33,
           "actual_ret": -1.48,
           "actual_return": -1.48,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -992.5
         },
         {
           "symbol": "SOLARINDS",
@@ -41100,7 +41741,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.71,
           "actual_ret": -2.86,
           "actual_return": -2.86,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -95695.0
         },
         {
           "symbol": "INDUSTOWER",
@@ -41149,7 +41791,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.67,
           "actual_ret": -0.82,
           "actual_return": -0.82,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -837.5
         },
         {
           "symbol": "SONACOMS",
@@ -41198,7 +41841,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.04,
           "actual_ret": -0.19,
           "actual_return": -0.19,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -237.5
         },
         {
           "symbol": "ADANIENT",
@@ -42106,7 +42750,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.13,
           "actual_ret": 0.28,
           "actual_return": 0.28,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 222.5
         },
         {
           "symbol": "JSWSTEEL",
@@ -42355,7 +43000,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.28,
           "actual_ret": 3.43,
           "actual_return": 3.43,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 12610.0
         },
         {
           "symbol": "GVT&D",
@@ -42404,7 +43050,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.47,
           "actual_ret": -8.62,
           "actual_return": -8.62,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -59250.0
         },
         {
           "symbol": "INDHOTEL",
@@ -42453,7 +43100,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.32,
           "actual_ret": 0.47,
           "actual_return": 0.47,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 872.5
         },
         {
           "symbol": "NHPC",
@@ -42502,7 +43150,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.87,
           "actual_ret": 3.02,
           "actual_return": 3.02,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 610.0
         },
         {
           "symbol": "JSWENERGY",
@@ -42551,7 +43200,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.63,
           "actual_ret": -0.78,
           "actual_return": -0.78,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -1047.5
         },
         {
           "symbol": "LODHA",
@@ -42600,7 +43250,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.88,
           "actual_ret": 5.03,
           "actual_return": 5.03,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 15450.0
         },
         {
           "symbol": "MAXHEALTH",
@@ -42649,7 +43300,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.28,
           "actual_ret": 3.43,
           "actual_return": 3.43,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 20815.0
         },
         {
           "symbol": "SWIGGY",
@@ -42698,7 +43350,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.86,
           "actual_ret": 0.01,
           "actual_return": 0.01,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 12.5
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -42747,7 +43400,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.82,
           "actual_ret": 0.97,
           "actual_return": 0.97,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 167.5
         },
         {
           "symbol": "TATACONSUM",
@@ -42896,7 +43550,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.09,
           "actual_ret": -2.24,
           "actual_return": -2.24,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -802.5
         },
         {
           "symbol": "CANBK",
@@ -42945,7 +43600,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.08,
           "actual_ret": 3.23,
           "actual_return": 3.23,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 857.5
         },
         {
           "symbol": "KOTAKBANK",
@@ -43044,7 +43700,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.52,
           "actual_ret": 1.67,
           "actual_return": 1.67,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 13530.0
         },
         {
           "symbol": "KEI",
@@ -43093,7 +43750,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.22,
           "actual_ret": -6.37,
           "actual_return": -6.37,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -59352.5
         },
         {
           "symbol": "COALINDIA",
@@ -43192,7 +43850,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.82,
           "actual_ret": -4.97,
           "actual_return": -4.97,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -9730.0
         },
         {
           "symbol": "HINDPETRO",
@@ -43241,7 +43900,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.53,
           "actual_ret": -7.68,
           "actual_return": -7.68,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -7287.5
         },
         {
           "symbol": "ICICIGI",
@@ -43290,7 +43950,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.55,
           "actual_ret": -0.7,
           "actual_return": -0.7,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -3350.0
         },
         {
           "symbol": "CONCOR",
@@ -43339,7 +44000,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.63,
           "actual_ret": -4.78,
           "actual_return": -4.78,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -6560.0
         },
         {
           "symbol": "MARICO",
@@ -43388,7 +44050,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.14,
           "actual_ret": 0.29,
           "actual_return": 0.29,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 522.5
         },
         {
           "symbol": "GMRAIRPORT",
@@ -43437,7 +44100,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.8,
           "actual_ret": 4.95,
           "actual_return": 4.95,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 1167.5
         },
         {
           "symbol": "MFSL",
@@ -43486,7 +44150,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.02,
           "actual_ret": -0.17,
           "actual_return": -0.17,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -675.0
         },
         {
           "symbol": "PIIND",
@@ -43535,7 +44200,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.98,
           "actual_ret": -1.13,
           "actual_return": -1.13,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -11577.5
         },
         {
           "symbol": "UNOMINDA",
@@ -43584,7 +44250,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.91,
           "actual_ret": 0.06,
           "actual_return": 0.06,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 150.0
         },
         {
           "symbol": "SBILIFE",
@@ -43683,7 +44350,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.69,
           "actual_ret": -0.84,
           "actual_return": -0.84,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -3240.0
         },
         {
           "symbol": "APLAPOLLO",
@@ -43732,7 +44400,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.17,
           "actual_ret": -2.32,
           "actual_return": -2.32,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -9940.0
         },
         {
           "symbol": "ANGELONE",
@@ -43781,7 +44450,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.21,
           "actual_ret": 1.36,
           "actual_return": 1.36,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 765.0
         },
         {
           "symbol": "INFY",
@@ -43930,7 +44600,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.87,
           "actual_ret": -4.02,
           "actual_return": -4.02,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -8325.0
         },
         {
           "symbol": "SHREECEM",
@@ -43979,7 +44650,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.52,
           "actual_ret": 0.67,
           "actual_return": 0.67,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 50972.5
         },
         {
           "symbol": "LTF",
@@ -44028,7 +44700,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.68,
           "actual_ret": 1.83,
           "actual_return": 1.83,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 930.0
         },
         {
           "symbol": "POLICYBZR",
@@ -44077,7 +44750,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.88,
           "actual_ret": 1.03,
           "actual_return": 1.03,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 4625.0
         },
         {
           "symbol": "SUPREMEIND",
@@ -44126,7 +44800,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.22,
           "actual_ret": -6.37,
           "actual_return": -6.37,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -70570.0
         },
         {
           "symbol": "HYUNDAI",
@@ -44175,7 +44850,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.92,
           "actual_ret": 3.07,
           "actual_return": 3.07,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 19625.0
         },
         {
           "symbol": "CAMS",
@@ -44224,7 +44900,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.97,
           "actual_ret": -0.12,
           "actual_return": -0.12,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -252.5
         },
         {
           "symbol": "INDIANB",
@@ -44273,7 +44950,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.92,
           "actual_ret": -3.07,
           "actual_return": -3.07,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -4897.5
         },
         {
           "symbol": "PAYTM",
@@ -44322,7 +45000,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.81,
           "actual_ret": 3.96,
           "actual_return": 3.96,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 12150.0
         },
         {
           "symbol": "PGEL",
@@ -44371,7 +45050,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.42,
           "actual_ret": 6.57,
           "actual_return": 6.57,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 12467.5
         },
         {
           "symbol": "MPHASIS",
@@ -44420,7 +45100,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.21,
           "actual_ret": 4.36,
           "actual_return": 4.36,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 30362.5
         },
         {
           "symbol": "LICI",
@@ -44469,7 +45150,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.07,
           "actual_ret": 3.22,
           "actual_return": 3.22,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 3670.0
         },
         {
           "symbol": "KAYNES",
@@ -44518,7 +45200,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.0,
           "actual_ret": -1.15,
           "actual_return": -1.15,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -20875.0
         },
         {
           "symbol": "SAIL",
@@ -44567,7 +45250,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.73,
           "actual_ret": 6.88,
           "actual_return": 6.88,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 2292.5
         },
         {
           "symbol": "NATIONALUM",
@@ -44616,7 +45300,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.2,
           "actual_ret": -1.35,
           "actual_return": -1.35,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -620.0
         },
         {
           "symbol": "DLF",
@@ -44665,7 +45350,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.69,
           "actual_ret": 2.84,
           "actual_return": 2.84,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 5282.5
         },
         {
           "symbol": "DABUR",
@@ -44714,7 +45400,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.42,
           "actual_ret": 1.57,
           "actual_return": 1.57,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 1977.5
         },
         {
           "symbol": "FORCEMOT",
@@ -44763,7 +45450,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.87,
           "actual_ret": 11.02,
           "actual_return": 11.02,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 521750.0
         },
         {
           "symbol": "POWERGRID",
@@ -44862,7 +45550,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.31,
           "actual_ret": -0.46,
           "actual_return": -0.46,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -685.0
         },
         {
           "symbol": "CROMPTON",
@@ -44911,7 +45600,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.43,
           "actual_ret": -1.58,
           "actual_return": -1.58,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -1260.0
         },
         {
           "symbol": "CDSL",
@@ -44960,7 +45650,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.03,
           "actual_ret": 4.18,
           "actual_return": 4.18,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 15707.5
         },
         {
           "symbol": "MAZDOCK",
@@ -45009,7 +45700,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.49,
           "actual_ret": 1.64,
           "actual_return": 1.64,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 11377.5
         },
         {
           "symbol": "SOLARINDS",
@@ -45058,7 +45750,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.65,
           "actual_ret": -0.8,
           "actual_return": -0.8,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -29732.5
         },
         {
           "symbol": "OFSS",
@@ -45107,7 +45800,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.25,
           "actual_ret": 2.4,
           "actual_return": 2.4,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 51695.0
         },
         {
           "symbol": "VOLTAS",
@@ -45156,7 +45850,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.09,
           "actual_ret": -2.24,
           "actual_return": -2.24,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -7800.0
         },
         {
           "symbol": "COFORGE",
@@ -45205,7 +45900,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.99,
           "actual_ret": 14.14,
           "actual_return": 14.14,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 63057.5
         },
         {
           "symbol": "MOTHERSON",
@@ -45254,7 +45950,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.86,
           "actual_ret": -2.01,
           "actual_return": -2.01,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -465.0
         },
         {
           "symbol": "TATAMOTORS",
@@ -45303,7 +46000,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.87,
           "actual_ret": 4.02,
           "actual_return": 4.02,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 14382.5
         },
         {
           "symbol": "PNB",
@@ -45352,7 +46050,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.06,
           "actual_ret": 0.21,
           "actual_return": 0.21,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 55.0
         },
         {
           "symbol": "LTM",
@@ -45401,7 +46100,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.18,
           "actual_ret": 0.33,
           "actual_return": 0.33,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 4177.5
         },
         {
           "symbol": "HINDZINC",
@@ -45450,7 +46150,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.26,
           "actual_ret": -2.41,
           "actual_return": -2.41,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -2492.5
         },
         {
           "symbol": "BANDHANBNK",
@@ -45499,7 +46200,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.72,
           "actual_ret": -4.87,
           "actual_return": -4.87,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -1992.5
         },
         {
           "symbol": "OIL",
@@ -45548,7 +46250,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.54,
           "actual_ret": -3.69,
           "actual_return": -3.69,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -3820.0
         },
         {
           "symbol": "MCX",
@@ -45597,7 +46300,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.88,
           "actual_ret": 0.03,
           "actual_return": 0.03,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 100.0
         },
         {
           "symbol": "COCHINSHIP",
@@ -45646,7 +46350,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.29,
           "actual_ret": 1.44,
           "actual_return": 1.44,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 6037.5
         },
         {
           "symbol": "PHOENIXLTD",
@@ -45695,7 +46400,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.48,
           "actual_ret": -5.63,
           "actual_return": -5.63,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -21117.5
         },
         {
           "symbol": "TMPV",
@@ -45744,7 +46450,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.61,
           "actual_ret": 0.76,
           "actual_return": 0.76,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 4050.0
         },
         {
           "symbol": "WAAREEENER",
@@ -45793,7 +46500,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.21,
           "actual_ret": 0.36,
           "actual_return": 0.36,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 2800.0
         },
         {
           "symbol": "CUMMINSIND",
@@ -45842,7 +46550,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.24,
           "actual_ret": 0.39,
           "actual_return": 0.39,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 3377.5
         },
         {
           "symbol": "BSE",
@@ -45891,7 +46600,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.57,
           "actual_ret": -4.72,
           "actual_return": -4.72,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -26232.5
         },
         {
           "symbol": "BIOCON",
@@ -45940,7 +46650,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.01,
           "actual_ret": 7.16,
           "actual_return": 7.16,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 6652.5
         },
         {
           "symbol": "UNIONBANK",
@@ -45989,7 +46700,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.68,
           "actual_ret": 3.83,
           "actual_return": 3.83,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 1255.0
         },
         {
           "symbol": "TECHM",
@@ -46088,7 +46800,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.01,
           "actual_ret": -0.16,
           "actual_return": -0.16,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -1242.5
         },
         {
           "symbol": "ASHOKLEY",
@@ -46137,7 +46850,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.03,
           "actual_ret": 5.18,
           "actual_return": 5.18,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 1695.0
         },
         {
           "symbol": "VBL",
@@ -46186,7 +46900,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.18,
           "actual_ret": -5.33,
           "actual_return": -5.33,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -6250.0
         },
         {
           "symbol": "AUROPHARMA",
@@ -46235,7 +46950,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.36,
           "actual_ret": -3.51,
           "actual_return": -3.51,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -9500.0
         },
         {
           "symbol": "GODFRYPHLP",
@@ -46284,7 +47000,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.33,
           "actual_ret": 3.48,
           "actual_return": 3.48,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 28640.0
         },
         {
           "symbol": "NAUKRI",
@@ -46333,7 +47050,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.94,
           "actual_ret": 2.09,
           "actual_return": 2.09,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 6877.5
         },
         {
           "symbol": "NBCC",
@@ -46382,7 +47100,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.94,
           "actual_ret": -5.09,
           "actual_return": -5.09,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -1405.0
         },
         {
           "symbol": "HINDUNILVR",
@@ -46531,7 +47250,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.67,
           "actual_ret": -16.82,
           "actual_return": -16.82,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -42050.0
         },
         {
           "symbol": "HCLTECH",
@@ -46730,7 +47450,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.27,
           "actual_ret": -4.42,
           "actual_return": -4.42,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -4107.5
         },
         {
           "symbol": "KALYANKJIL",
@@ -46779,7 +47500,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.75,
           "actual_ret": -0.9,
           "actual_return": -0.9,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -1160.0
         },
         {
           "symbol": "GRASIM",
@@ -46878,7 +47600,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.93,
           "actual_ret": -3.08,
           "actual_return": -3.08,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -2237.5
         },
         {
           "symbol": "M&M",
@@ -46977,7 +47700,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.25,
           "actual_ret": 2.4,
           "actual_return": 2.4,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 9362.5
         },
         {
           "symbol": "BLUESTARCO",
@@ -47026,7 +47750,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.11,
           "actual_ret": -1.26,
           "actual_return": -1.26,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -6070.0
         },
         {
           "symbol": "NAM-INDIA",
@@ -47075,7 +47800,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.16,
           "actual_ret": 0.31,
           "actual_return": 0.31,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 622.5
         },
         {
           "symbol": "OBEROIRLTY",
@@ -47124,7 +47850,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.36,
           "actual_ret": 1.51,
           "actual_return": 1.51,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 6022.5
         },
         {
           "symbol": "BANKINDIA",
@@ -47173,7 +47900,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.1,
           "actual_ret": 1.25,
           "actual_return": 1.25,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 347.5
         },
         {
           "symbol": "SUZLON",
@@ -47222,7 +47950,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.91,
           "actual_ret": -0.06,
           "actual_return": -0.06,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -10.0
         },
         {
           "symbol": "KFINTECH",
@@ -47271,7 +48000,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.56,
           "actual_ret": -5.71,
           "actual_return": -5.71,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -15740.0
         },
         {
           "symbol": "UNITDSPR",
@@ -47320,7 +48050,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.08,
           "actual_ret": -1.23,
           "actual_return": -1.23,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -3977.5
         },
         {
           "symbol": "DIXON",
@@ -47369,7 +48100,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.15,
           "actual_ret": 3.3,
           "actual_return": 3.3,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 133440.0
         },
         {
           "symbol": "AMBUJACEM",
@@ -47418,7 +48150,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.36,
           "actual_ret": -0.51,
           "actual_return": -0.51,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -735.0
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -47467,7 +48200,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.77,
           "actual_ret": 3.92,
           "actual_return": 3.92,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 25385.0
         },
         {
           "symbol": "SONACOMS",
@@ -47516,7 +48250,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.08,
           "actual_ret": 4.23,
           "actual_return": 4.23,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 4620.0
         },
         {
           "symbol": "BAJAJFINSV",
@@ -47615,7 +48350,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.65,
           "actual_ret": 3.8,
           "actual_return": 3.8,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 393750.0
         },
         {
           "symbol": "RVNL",
@@ -47664,7 +48400,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.95,
           "actual_ret": -4.1,
           "actual_return": -4.1,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -3327.5
         },
         {
           "symbol": "ADANIPOWER",
@@ -47713,7 +48450,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.27,
           "actual_ret": 3.42,
           "actual_return": 3.42,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 990.0
         },
         {
           "symbol": "IREDA",
@@ -47762,7 +48500,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.99,
           "actual_ret": -2.14,
           "actual_return": -2.14,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -812.5
         },
         {
           "symbol": "PETRONET",
@@ -47811,7 +48550,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.66,
           "actual_ret": -1.81,
           "actual_return": -1.81,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -1192.5
         },
         {
           "symbol": "HEROMOTOCO",
@@ -47910,7 +48650,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.26,
           "actual_ret": 3.41,
           "actual_return": 3.41,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 110620.0
         },
         {
           "symbol": "PFC",
@@ -47959,7 +48700,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.69,
           "actual_ret": -0.84,
           "actual_return": -0.84,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -827.5
         },
         {
           "symbol": "INOXWIND",
@@ -48008,7 +48750,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.59,
           "actual_ret": -0.74,
           "actual_return": -0.74,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -302.5
         },
         {
           "symbol": "DELHIVERY",
@@ -48057,7 +48800,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.99,
           "actual_ret": -1.14,
           "actual_return": -1.14,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -1325.0
         },
         {
           "symbol": "UPL",
@@ -48106,7 +48850,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.29,
           "actual_ret": -3.44,
           "actual_return": -3.44,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -5867.5
         },
         {
           "symbol": "MANAPPURAM",
@@ -48155,7 +48900,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.87,
           "actual_ret": -2.02,
           "actual_return": -2.02,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -1467.5
         },
         {
           "symbol": "PERSISTENT",
@@ -48204,7 +48950,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.93,
           "actual_ret": 5.08,
           "actual_return": 5.08,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 74137.5
         },
         {
           "symbol": "NMDC",
@@ -48253,7 +49000,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.53,
           "actual_ret": 2.68,
           "actual_return": 2.68,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 485.0
         },
         {
           "symbol": "GAIL",
@@ -48302,7 +49050,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.89,
           "actual_ret": 1.04,
           "actual_return": 1.04,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 440.0
         },
         {
           "symbol": "POWERINDIA",
@@ -48351,7 +49100,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "JINDALSTEL",
@@ -48400,7 +49150,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.57,
           "actual_ret": 1.72,
           "actual_return": 1.72,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 4412.5
         },
         {
           "symbol": "RADICO",
@@ -48449,7 +49200,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.95,
           "actual_ret": 9.1,
           "actual_return": 9.1,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 57092.5
         },
         {
           "symbol": "TCS",
@@ -48598,7 +49350,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.57,
           "actual_ret": -0.72,
           "actual_return": -0.72,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -9797.5
         },
         {
           "symbol": "RELIANCE",
@@ -48697,7 +49450,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.99,
           "actual_ret": 0.14,
           "actual_return": 0.14,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 87.5
         },
         {
           "symbol": "TVSMOTOR",
@@ -48746,7 +49500,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.11,
           "actual_ret": -3.26,
           "actual_return": -3.26,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -28650.0
         },
         {
           "symbol": "BHARATFORG",
@@ -48795,7 +49550,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.72,
           "actual_ret": -5.87,
           "actual_return": -5.87,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -19195.0
         },
         {
           "symbol": "LAURUSLABS",
@@ -48844,7 +49600,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.55,
           "actual_ret": 5.7,
           "actual_return": 5.7,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 11902.5
         },
         {
           "symbol": "ADANIENT",
@@ -48943,7 +49700,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.24,
           "actual_ret": -6.39,
           "actual_return": -6.39,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -19605.0
         },
         {
           "symbol": "JUBLFOOD",
@@ -48992,7 +49750,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.93,
           "actual_ret": 4.08,
           "actual_return": 4.08,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 7192.5
         },
         {
           "symbol": "HDFCBANK",
@@ -49141,7 +49900,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.68,
           "actual_ret": 3.83,
           "actual_return": 3.83,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 64817.5
         },
         {
           "symbol": "MOTILALOFS",
@@ -49190,7 +49950,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.58,
           "actual_ret": 5.73,
           "actual_return": 5.73,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 12400.0
         },
         {
           "symbol": "TORNTPHARM",
@@ -49239,7 +50000,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.45,
           "actual_ret": 1.6,
           "actual_return": 1.6,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 13332.5
         },
         {
           "symbol": "YESBANK",
@@ -49288,7 +50050,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.61,
           "actual_ret": -1.76,
           "actual_return": -1.76,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -92.5
         },
         {
           "symbol": "COLPAL",
@@ -49337,7 +50100,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.75,
           "actual_ret": 3.9,
           "actual_return": 3.9,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 22682.5
         },
         {
           "symbol": "NYKAA",
@@ -49386,7 +50150,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.14,
           "actual_ret": 11.29,
           "actual_return": 11.29,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 5705.0
         },
         {
           "symbol": "FEDERALBNK",
@@ -49435,7 +50200,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.93,
           "actual_ret": 0.08,
           "actual_return": 0.08,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 40.0
         },
         {
           "symbol": "PAGEIND",
@@ -49484,7 +50250,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.03,
           "actual_ret": -3.18,
           "actual_return": -3.18,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -380000.0
         },
         {
           "symbol": "PNBHOUSING",
@@ -49533,7 +50300,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.61,
           "actual_ret": -6.76,
           "actual_return": -6.76,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -14112.5
         },
         {
           "symbol": "HAL",
@@ -49582,7 +50350,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.91,
           "actual_ret": 4.06,
           "actual_return": 4.06,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 49372.5
         },
         {
           "symbol": "BAJFINANCE",
@@ -49681,7 +50450,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.81,
           "actual_ret": 0.96,
           "actual_return": 0.96,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 4715.0
         },
         {
           "symbol": "TITAN",
@@ -49780,7 +50550,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.2,
           "actual_ret": -2.35,
           "actual_return": -2.35,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -3530.0
         },
         {
           "symbol": "TIINDIA",
@@ -49829,7 +50600,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.67,
           "actual_ret": 1.82,
           "actual_return": 1.82,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 13155.0
         },
         {
           "symbol": "ADANIENSOL",
@@ -49878,7 +50650,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.89,
           "actual_ret": -3.04,
           "actual_return": -3.04,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -6762.5
         },
         {
           "symbol": "GODREJPROP",
@@ -49927,7 +50700,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.77,
           "actual_ret": -0.92,
           "actual_return": -0.92,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -5300.0
         },
         {
           "symbol": "GLENMARK",
@@ -49976,7 +50750,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.2,
           "actual_ret": 0.35,
           "actual_return": 0.35,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 1772.5
         },
         {
           "symbol": "LT",
@@ -50125,7 +50900,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.46,
           "actual_ret": 7.61,
           "actual_return": 7.61,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 2662.5
         },
         {
           "symbol": "INDUSTOWER",
@@ -50174,7 +50950,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.2,
           "actual_ret": 4.35,
           "actual_return": 4.35,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 3700.0
         },
         {
           "symbol": "HAVELLS",
@@ -50223,7 +51000,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.16,
           "actual_ret": 2.31,
           "actual_return": 2.31,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 8605.0
         },
         {
           "symbol": "SAGILITY",
@@ -50272,7 +51050,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.59,
           "actual_ret": 6.74,
           "actual_return": 6.74,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 732.5
         },
         {
           "symbol": "BHEL",
@@ -50321,7 +51100,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.62,
           "actual_ret": -0.77,
           "actual_return": -0.77,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -445.0
         },
         {
           "symbol": "IOC",
@@ -50370,7 +51150,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.63,
           "actual_ret": 0.78,
           "actual_return": 0.78,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 265.0
         },
         {
           "symbol": "ASTRAL",
@@ -50419,7 +51200,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.7,
           "actual_ret": -1.85,
           "actual_return": -1.85,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -5955.0
         },
         {
           "symbol": "ADANIPORTS",
@@ -50518,7 +51300,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.49,
           "actual_ret": 1.64,
           "actual_return": 1.64,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 10092.5
         },
         {
           "symbol": "AMBER",
@@ -50567,7 +51350,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.05,
           "actual_ret": -1.2,
           "actual_return": -1.2,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -22500.0
         },
         {
           "symbol": "CGPOWER",
@@ -50616,7 +51400,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.66,
           "actual_ret": 1.81,
           "actual_return": 1.81,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 3055.0
         },
         {
           "symbol": "EICHERMOT",
@@ -50765,7 +51550,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.92,
           "actual_ret": 1.07,
           "actual_return": 1.07,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 14375.0
         },
         {
           "symbol": "IDEA",
@@ -50814,7 +51600,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.64,
           "actual_ret": -2.79,
           "actual_return": -2.79,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -50.0
         },
         {
           "symbol": "ABB",
@@ -50863,7 +51650,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.33,
           "actual_ret": 0.48,
           "actual_return": 0.48,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 6042.5
         },
         {
           "symbol": "MAHABANK",
@@ -50912,7 +51700,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.42,
           "actual_ret": -1.57,
           "actual_return": -1.57,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -205.0
         },
         {
           "symbol": "ADANIGREEN",
@@ -50961,7 +51750,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.24,
           "actual_ret": 5.39,
           "actual_return": 5.39,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 12525.0
         },
         {
           "symbol": "360ONE",
@@ -51010,7 +51800,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.58,
           "actual_ret": -1.73,
           "actual_return": -1.73,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -5045.0
         },
         {
           "symbol": "IRFC",
@@ -51059,7 +51850,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.61,
           "actual_ret": -2.76,
           "actual_return": -2.76,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -960.0
         },
         {
           "symbol": "BANKBARODA",
@@ -51108,7 +51900,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.45,
           "actual_ret": -4.6,
           "actual_return": -4.6,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -2650.0
         },
         {
           "symbol": "TATAPOWER",
@@ -51157,7 +51950,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.6,
           "actual_ret": 2.75,
           "actual_return": 2.75,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 2695.0
         },
         {
           "symbol": "DRREDDY",
@@ -51256,7 +52050,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.97,
           "actual_ret": 2.12,
           "actual_return": 2.12,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 32050.0
         },
         {
           "symbol": "VEDL",
@@ -51305,7 +52100,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.15,
           "actual_ret": 2.3,
           "actual_return": 2.3,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 2490.0
         },
         {
           "symbol": "PRESTIGE",
@@ -51354,7 +52150,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.59,
           "actual_ret": 3.74,
           "actual_return": 3.74,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 14925.0
         },
         {
           "symbol": "KPITTECH",
@@ -51403,7 +52200,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.07,
           "actual_ret": -7.22,
           "actual_return": -7.22,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -23142.5
         },
         {
           "symbol": "SBICARD",
@@ -51452,7 +52250,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.41,
           "actual_ret": 3.56,
           "actual_return": 3.56,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 7062.5
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -51501,7 +52300,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.18,
           "actual_ret": 3.33,
           "actual_return": 3.33,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 8235.0
         },
         {
           "symbol": "PREMIERENE",
@@ -51550,7 +52350,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.88,
           "actual_ret": -2.03,
           "actual_return": -2.03,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -5167.5
         },
         {
           "symbol": "INDIGO",
@@ -51599,7 +52400,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.21,
           "actual_ret": -0.36,
           "actual_return": -0.36,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -3075.0
         },
         {
           "symbol": "DMART",
@@ -51648,7 +52450,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.01,
           "actual_ret": 0.16,
           "actual_return": 0.16,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 1650.0
         },
         {
           "symbol": "LICHSGFIN",
@@ -51697,7 +52500,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.74,
           "actual_ret": -3.89,
           "actual_return": -3.89,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -5450.0
         },
         {
           "symbol": "MANKIND",
@@ -51746,7 +52550,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.72,
           "actual_ret": 2.87,
           "actual_return": 2.87,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 18095.0
         },
         {
           "symbol": "MARUTI",
@@ -51945,7 +52750,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.15,
           "actual_ret": -2.3,
           "actual_return": -2.3,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -39532.5
         },
         {
           "symbol": "TRENT",
@@ -52203,7 +53009,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.07,
           "actual_ret": 1.22,
           "actual_return": 1.22,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 857.5
         },
         {
           "symbol": "ITC",
@@ -52752,7 +53559,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.18,
           "actual_ret": 1.33,
           "actual_return": 1.33,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 2987.5
         },
         {
           "symbol": "DIXON",
@@ -52801,7 +53609,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.14,
           "actual_ret": -6.29,
           "actual_return": -6.29,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -261882.5
         },
         {
           "symbol": "SBIN",
@@ -52900,7 +53709,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.83,
           "actual_ret": 9.98,
           "actual_return": 9.98,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 36672.5
         },
         {
           "symbol": "YESBANK",
@@ -52949,7 +53759,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.49,
           "actual_ret": 2.64,
           "actual_return": 2.64,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 135.0
         },
         {
           "symbol": "OIL",
@@ -52998,7 +53809,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.75,
           "actual_ret": 0.9,
           "actual_return": 0.9,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 925.0
         },
         {
           "symbol": "IREDA",
@@ -53047,7 +53859,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.44,
           "actual_ret": -2.59,
           "actual_return": -2.59,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -1077.5
         },
         {
           "symbol": "FEDERALBNK",
@@ -53096,7 +53909,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.47,
           "actual_ret": 4.62,
           "actual_return": 4.62,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 2232.5
         },
         {
           "symbol": "DMART",
@@ -53145,7 +53959,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.21,
           "actual_ret": 7.36,
           "actual_return": 7.36,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 76025.0
         },
         {
           "symbol": "PREMIERENE",
@@ -53194,7 +54009,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 19.28,
           "actual_ret": 18.43,
           "actual_return": 18.43,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 43735.0
         },
         {
           "symbol": "HDFCBANK",
@@ -53343,7 +54159,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.04,
           "actual_ret": -13.19,
           "actual_return": -13.19,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -1747.5
         },
         {
           "symbol": "GLENMARK",
@@ -53392,7 +54209,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.08,
           "actual_ret": -0.23,
           "actual_return": -0.23,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -947.5
         },
         {
           "symbol": "IRFC",
@@ -53441,7 +54259,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.0,
           "actual_ret": 0.15,
           "actual_return": 0.15,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 50.0
         },
         {
           "symbol": "HINDZINC",
@@ -53490,7 +54309,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.43,
           "actual_ret": -4.58,
           "actual_return": -4.58,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -4660.0
         },
         {
           "symbol": "JINDALSTEL",
@@ -53539,7 +54359,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.67,
           "actual_ret": -7.82,
           "actual_return": -7.82,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -18787.5
         },
         {
           "symbol": "UNITDSPR",
@@ -53588,7 +54409,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.75,
           "actual_ret": 7.9,
           "actual_return": 7.9,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 30737.5
         },
         {
           "symbol": "TIINDIA",
@@ -53637,7 +54459,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.01,
           "actual_ret": 6.16,
           "actual_return": 6.16,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 38460.0
         },
         {
           "symbol": "KAYNES",
@@ -53686,7 +54509,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.56,
           "actual_ret": -4.71,
           "actual_return": -4.71,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -69000.0
         },
         {
           "symbol": "PIDILITIND",
@@ -53735,7 +54559,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.86,
           "actual_ret": -2.01,
           "actual_return": -2.01,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -7570.0
         },
         {
           "symbol": "PIIND",
@@ -53784,7 +54609,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.21,
           "actual_ret": 0.36,
           "actual_return": 0.36,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 3262.5
         },
         {
           "symbol": "GMRAIRPORT",
@@ -53833,7 +54659,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.3,
           "actual_ret": -3.45,
           "actual_return": -3.45,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -742.5
         },
         {
           "symbol": "RVNL",
@@ -53882,7 +54709,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.41,
           "actual_ret": -3.56,
           "actual_return": -3.56,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -3805.0
         },
         {
           "symbol": "PETRONET",
@@ -53931,7 +54759,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.22,
           "actual_ret": -5.37,
           "actual_return": -5.37,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -3912.5
         },
         {
           "symbol": "DELHIVERY",
@@ -53980,7 +54809,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.35,
           "actual_ret": 0.5,
           "actual_return": 0.5,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 450.0
         },
         {
           "symbol": "LICHSGFIN",
@@ -54029,7 +54859,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.42,
           "actual_ret": 1.57,
           "actual_return": 1.57,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 2320.0
         },
         {
           "symbol": "PATANJALI",
@@ -54078,7 +54909,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.49,
           "actual_ret": -3.64,
           "actual_return": -3.64,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -5572.5
         },
         {
           "symbol": "PNBHOUSING",
@@ -54127,7 +54959,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.46,
           "actual_ret": -2.61,
           "actual_return": -2.61,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -6840.0
         },
         {
           "symbol": "VBL",
@@ -54176,7 +55009,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.71,
           "actual_ret": -1.86,
           "actual_return": -1.86,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -2182.5
         },
         {
           "symbol": "PERSISTENT",
@@ -54225,7 +55059,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.68,
           "actual_ret": 1.83,
           "actual_return": 1.83,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 21750.0
         },
         {
           "symbol": "GVT&D",
@@ -54274,7 +55109,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.38,
           "actual_ret": 2.53,
           "actual_return": 2.53,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 14897.5
         },
         {
           "symbol": "AMBER",
@@ -54323,7 +55159,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.49,
           "actual_ret": -9.64,
           "actual_return": -9.64,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -148275.0
         },
         {
           "symbol": "OBEROIRLTY",
@@ -54372,7 +55209,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.25,
           "actual_ret": -0.4,
           "actual_return": -0.4,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -1887.5
         },
         {
           "symbol": "CROMPTON",
@@ -54421,7 +55259,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.29,
           "actual_ret": -3.44,
           "actual_return": -3.44,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -2965.0
         },
         {
           "symbol": "ADANIENSOL",
@@ -54470,7 +55309,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.98,
           "actual_ret": 11.13,
           "actual_return": 11.13,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 23500.0
         },
         {
           "symbol": "MPHASIS",
@@ -54519,7 +55359,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.27,
           "actual_ret": -13.42,
           "actual_return": -13.42,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -67840.0
         },
         {
           "symbol": "ETERNAL",
@@ -54618,7 +55459,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.89,
           "actual_ret": -1.04,
           "actual_return": -1.04,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -127.5
         },
         {
           "symbol": "CAMS",
@@ -54667,7 +55509,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.4,
           "actual_ret": 1.55,
           "actual_return": 1.55,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 2897.5
         },
         {
           "symbol": "ADANIPORTS",
@@ -54766,7 +55609,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.18,
           "actual_ret": -6.33,
           "actual_return": -6.33,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -63085.0
         },
         {
           "symbol": "TATAELXSI",
@@ -54815,7 +55659,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 20.87,
           "actual_ret": -20.02,
           "actual_return": -20.02,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -239692.5
         },
         {
           "symbol": "GAIL",
@@ -54864,7 +55709,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.69,
           "actual_ret": -4.84,
           "actual_return": -4.84,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -2160.0
         },
         {
           "symbol": "BLUESTARCO",
@@ -54913,7 +55759,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.94,
           "actual_ret": -4.09,
           "actual_return": -4.09,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -16367.5
         },
         {
           "symbol": "KPITTECH",
@@ -54962,7 +55809,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.97,
           "actual_ret": 9.12,
           "actual_return": 9.12,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 25330.0
         },
         {
           "symbol": "HEROMOTOCO",
@@ -55011,7 +55859,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.33,
           "actual_ret": -8.48,
           "actual_return": -8.48,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -73942.5
         },
         {
           "symbol": "VMM",
@@ -55060,7 +55909,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.71,
           "actual_ret": -0.86,
           "actual_return": -0.86,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -272.5
         },
         {
           "symbol": "GODREJCP",
@@ -55109,7 +55959,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.71,
           "actual_ret": -0.86,
           "actual_return": -0.86,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -2530.0
         },
         {
           "symbol": "MFSL",
@@ -55158,7 +56009,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.05,
           "actual_ret": 7.2,
           "actual_return": 7.2,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 20312.5
         },
         {
           "symbol": "INDIANB",
@@ -55207,7 +56059,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.47,
           "actual_ret": -8.62,
           "actual_return": -8.62,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -11397.5
         },
         {
           "symbol": "LAURUSLABS",
@@ -55256,7 +56109,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.11,
           "actual_ret": -2.26,
           "actual_return": -2.26,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -3472.5
         },
         {
           "symbol": "NATIONALUM",
@@ -55305,7 +56159,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.17,
           "actual_ret": -2.32,
           "actual_return": -2.32,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -812.5
         },
         {
           "symbol": "MCX",
@@ -55354,7 +56209,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.14,
           "actual_ret": 9.29,
           "actual_return": 9.29,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 36685.0
         },
         {
           "symbol": "AUBANK",
@@ -55403,7 +56259,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.35,
           "actual_ret": 12.5,
           "actual_return": 12.5,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 17302.5
         },
         {
           "symbol": "ATHERENERG",
@@ -55452,7 +56309,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.67,
           "actual_ret": -16.82,
           "actual_return": -16.82,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -42050.0
         },
         {
           "symbol": "NBCC",
@@ -55501,7 +56359,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.05,
           "actual_ret": 4.2,
           "actual_return": 4.2,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 1240.0
         },
         {
           "symbol": "INDHOTEL",
@@ -55550,7 +56409,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.17,
           "actual_ret": -1.32,
           "actual_return": -1.32,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -2730.0
         },
         {
           "symbol": "HYUNDAI",
@@ -55599,7 +56459,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.49,
           "actual_ret": 12.64,
           "actual_return": 12.64,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 60910.0
         },
         {
           "symbol": "POLYCAB",
@@ -55648,7 +56509,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.27,
           "actual_ret": 3.42,
           "actual_return": 3.42,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 48867.5
         },
         {
           "symbol": "AXISBANK",
@@ -55747,7 +56609,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.27,
           "actual_ret": -3.42,
           "actual_return": -3.42,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -575.0
         },
         {
           "symbol": "LTM",
@@ -55796,7 +56659,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.94,
           "actual_ret": -10.09,
           "actual_return": -10.09,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -112337.5
         },
         {
           "symbol": "SONACOMS",
@@ -55845,7 +56709,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.6,
           "actual_ret": 6.75,
           "actual_return": 6.75,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 8630.0
         },
         {
           "symbol": "HINDUNILVR",
@@ -55944,7 +56809,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 16.11,
           "actual_ret": -15.26,
           "actual_return": -15.26,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -26255.0
         },
         {
           "symbol": "KFINTECH",
@@ -55993,7 +56859,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.88,
           "actual_ret": 0.03,
           "actual_return": 0.03,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 72.5
         },
         {
           "symbol": "VEDL",
@@ -56042,7 +56909,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.79,
           "actual_ret": 9.94,
           "actual_return": 9.94,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 10202.5
         },
         {
           "symbol": "LODHA",
@@ -56091,7 +56959,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.87,
           "actual_ret": 1.02,
           "actual_return": 1.02,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 3537.5
         },
         {
           "symbol": "GODREJPROP",
@@ -56140,7 +57009,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.65,
           "actual_ret": 3.8,
           "actual_return": 3.8,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 18200.0
         },
         {
           "symbol": "SUPREMEIND",
@@ -56189,7 +57059,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.12,
           "actual_ret": -5.27,
           "actual_return": -5.27,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -60272.5
         },
         {
           "symbol": "IEX",
@@ -56238,7 +57109,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.86,
           "actual_ret": -4.01,
           "actual_return": -4.01,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -1855.0
         },
         {
           "symbol": "BOSCHLTD",
@@ -56287,7 +57159,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.06,
           "actual_ret": -1.21,
           "actual_return": -1.21,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -94960.0
         },
         {
           "symbol": "ADANIGREEN",
@@ -56336,7 +57209,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.63,
           "actual_ret": -10.78,
           "actual_return": -10.78,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -28200.0
         },
         {
           "symbol": "JUBLFOOD",
@@ -56385,7 +57259,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.95,
           "actual_ret": -3.1,
           "actual_return": -3.1,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -5252.5
         },
         {
           "symbol": "IDEA",
@@ -56434,7 +57309,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.6,
           "actual_ret": -2.75,
           "actual_return": -2.75,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -50.0
         },
         {
           "symbol": "POWERINDIA",
@@ -56483,7 +57359,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "NYKAA",
@@ -56532,7 +57409,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.32,
           "actual_ret": 2.47,
           "actual_return": 2.47,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 1210.0
         },
         {
           "symbol": "SIEMENS",
@@ -56581,7 +57459,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.57,
           "actual_ret": 4.72,
           "actual_return": 4.72,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 32017.5
         },
         {
           "symbol": "JSWENERGY",
@@ -56630,7 +57509,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.93,
           "actual_ret": 8.08,
           "actual_return": 8.08,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 9345.0
         },
         {
           "symbol": "UNIONBANK",
@@ -56679,7 +57559,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.61,
           "actual_ret": -6.76,
           "actual_return": -6.76,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -2100.0
         },
         {
           "symbol": "INOXWIND",
@@ -56728,7 +57609,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.57,
           "actual_ret": 10.72,
           "actual_return": 10.72,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 4362.5
         },
         {
           "symbol": "BAJAJHLDNG",
@@ -56777,7 +57659,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.56,
           "actual_ret": -2.71,
           "actual_return": -2.71,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -91610.0
         },
         {
           "symbol": "LUPIN",
@@ -56826,7 +57709,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.54,
           "actual_ret": -3.69,
           "actual_return": -3.69,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -18255.0
         },
         {
           "symbol": "DABUR",
@@ -56875,7 +57759,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.93,
           "actual_ret": -1.08,
           "actual_return": -1.08,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -1262.5
         },
         {
           "symbol": "OFSS",
@@ -56924,7 +57809,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.68,
           "actual_ret": -2.83,
           "actual_return": -2.83,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -49787.5
         },
         {
           "symbol": "AMBUJACEM",
@@ -56973,7 +57859,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.48,
           "actual_ret": -5.63,
           "actual_return": -5.63,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -7497.5
         },
         {
           "symbol": "COLPAL",
@@ -57022,7 +57909,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.95,
           "actual_ret": -2.1,
           "actual_return": -2.1,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -12657.5
         },
         {
           "symbol": "MARICO",
@@ -57071,7 +57959,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.54,
           "actual_ret": 0.69,
           "actual_return": 0.69,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 1220.0
         },
         {
           "symbol": "SAIL",
@@ -57120,7 +58009,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.82,
           "actual_ret": -5.97,
           "actual_return": -5.97,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -1597.5
         },
         {
           "symbol": "KEI",
@@ -57169,7 +58059,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.92,
           "actual_ret": -11.07,
           "actual_return": -11.07,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -72102.5
         },
         {
           "symbol": "GODFRYPHLP",
@@ -57218,7 +58109,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.43,
           "actual_ret": 0.58,
           "actual_return": 0.58,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 4120.0
         },
         {
           "symbol": "RECLTD",
@@ -57267,7 +58159,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.37,
           "actual_ret": 1.52,
           "actual_return": 1.52,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 1422.5
         },
         {
           "symbol": "NAM-INDIA",
@@ -57316,7 +58209,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.07,
           "actual_ret": -0.22,
           "actual_return": -0.22,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -387.5
         },
         {
           "symbol": "BSE",
@@ -57365,7 +58259,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.72,
           "actual_ret": 2.87,
           "actual_return": 2.87,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 19397.5
         },
         {
           "symbol": "NHPC",
@@ -57414,7 +58309,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.99,
           "actual_ret": -0.14,
           "actual_return": -0.14,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -30.0
         },
         {
           "symbol": "WAAREEENER",
@@ -57463,7 +58359,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 20.89,
           "actual_ret": -20.04,
           "actual_return": -20.04,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -111662.5
         },
         {
           "symbol": "KOTAKBANK",
@@ -57562,7 +58459,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.63,
           "actual_ret": -1.78,
           "actual_return": -1.78,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -6440.0
         },
         {
           "symbol": "ASHOKLEY",
@@ -57611,7 +58509,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.85,
           "actual_ret": -1.0,
           "actual_return": -1.0,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -287.5
         },
         {
           "symbol": "LTF",
@@ -57660,7 +58559,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.35,
           "actual_ret": 11.5,
           "actual_return": 11.5,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 4352.5
         },
         {
           "symbol": "ASTRAL",
@@ -57709,7 +58609,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.42,
           "actual_ret": -1.57,
           "actual_return": -1.57,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -5260.0
         },
         {
           "symbol": "SOLARINDS",
@@ -57758,7 +58659,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.86,
           "actual_ret": -5.01,
           "actual_return": -5.01,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -163555.0
         },
         {
           "symbol": "TORNTPHARM",
@@ -57807,7 +58709,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.47,
           "actual_ret": 3.62,
           "actual_return": 3.62,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 29085.0
         },
         {
           "symbol": "GRASIM",
@@ -57906,7 +58809,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.65,
           "actual_ret": 5.8,
           "actual_return": 5.8,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 22140.0
         },
         {
           "symbol": "IOC",
@@ -57955,7 +58859,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.5,
           "actual_ret": -2.65,
           "actual_return": -2.65,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -875.0
         },
         {
           "symbol": "WIPRO",
@@ -58054,7 +58959,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 23.28,
           "actual_ret": 22.43,
           "actual_return": 22.43,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 82750.0
         },
         {
           "symbol": "ABB",
@@ -58103,7 +59009,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.54,
           "actual_ret": -6.69,
           "actual_return": -6.69,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -92942.5
         },
         {
           "symbol": "DLF",
@@ -58152,7 +59059,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.08,
           "actual_ret": -2.23,
           "actual_return": -2.23,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -4805.0
         },
         {
           "symbol": "CUMMINSIND",
@@ -58201,7 +59109,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.49,
           "actual_ret": -1.64,
           "actual_return": -1.64,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -11282.5
         },
         {
           "symbol": "HAVELLS",
@@ -58250,7 +59159,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.02,
           "actual_ret": -0.17,
           "actual_return": -0.17,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -667.5
         },
         {
           "symbol": "INDUSTOWER",
@@ -58299,7 +59209,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.06,
           "actual_ret": -2.21,
           "actual_return": -2.21,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -2150.0
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -58348,7 +59259,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.87,
           "actual_ret": 6.02,
           "actual_return": 6.02,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 982.5
         },
         {
           "symbol": "ADANIENT",
@@ -58447,7 +59359,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.82,
           "actual_ret": 0.97,
           "actual_return": 0.97,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 3850.0
         },
         {
           "symbol": "BANKBARODA",
@@ -58496,7 +59409,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.54,
           "actual_ret": 0.69,
           "actual_return": 0.69,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 405.0
         },
         {
           "symbol": "ALKEM",
@@ -58545,7 +59459,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.7,
           "actual_ret": 0.85,
           "actual_return": 0.85,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 10152.5
         },
         {
           "symbol": "UPL",
@@ -58594,7 +59509,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.06,
           "actual_ret": 7.21,
           "actual_return": 7.21,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 12170.0
         },
         {
           "symbol": "BANKINDIA",
@@ -58643,7 +59559,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.02,
           "actual_ret": 0.17,
           "actual_return": 0.17,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 45.0
         },
         {
           "symbol": "DIVISLAB",
@@ -58692,7 +59609,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.13,
           "actual_ret": 6.28,
           "actual_return": 6.28,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 81875.0
         },
         {
           "symbol": "VOLTAS",
@@ -58741,7 +59659,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.15,
           "actual_ret": -5.3,
           "actual_return": -5.3,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -16382.5
         },
         {
           "symbol": "RADICO",
@@ -58790,7 +59709,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.79,
           "actual_ret": 4.94,
           "actual_return": 4.94,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 28570.0
         },
         {
           "symbol": "SBILIFE",
@@ -58939,7 +59859,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.46,
           "actual_ret": -10.61,
           "actual_return": -10.61,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -15142.5
         },
         {
           "symbol": "BHARATFORG",
@@ -58988,7 +59909,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.4,
           "actual_ret": -5.55,
           "actual_return": -5.55,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -15365.0
         },
         {
           "symbol": "BDL",
@@ -59037,7 +59959,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 16.45,
           "actual_ret": 15.6,
           "actual_return": 15.6,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 59362.5
         },
         {
           "symbol": "SWIGGY",
@@ -59086,7 +60009,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.08,
           "actual_ret": 1.23,
           "actual_return": 1.23,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 975.0
         },
         {
           "symbol": "BHARTIARTL",
@@ -59185,7 +60109,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.12,
           "actual_ret": -0.27,
           "actual_return": -0.27,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -422.5
         },
         {
           "symbol": "HCLTECH",
@@ -59284,7 +60209,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.91,
           "actual_ret": -11.06,
           "actual_return": -11.06,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -2522.5
         },
         {
           "symbol": "SRF",
@@ -59333,7 +60259,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.7,
           "actual_ret": -3.85,
           "actual_return": -3.85,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -27585.0
         },
         {
           "symbol": "ADANIPOWER",
@@ -59382,7 +60309,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.71,
           "actual_ret": 0.86,
           "actual_return": 0.86,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 235.0
         },
         {
           "symbol": "COFORGE",
@@ -59431,7 +60359,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.79,
           "actual_ret": -4.94,
           "actual_return": -4.94,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -22470.0
         },
         {
           "symbol": "AUROPHARMA",
@@ -59480,7 +60409,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.47,
           "actual_ret": -3.62,
           "actual_return": -3.62,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -10960.0
         },
         {
           "symbol": "EICHERMOT",
@@ -59579,7 +60509,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.45,
           "actual_ret": 3.6,
           "actual_return": 3.6,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 350.0
         },
         {
           "symbol": "CIPLA",
@@ -59678,7 +60609,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.98,
           "actual_ret": -5.13,
           "actual_return": -5.13,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -179355.0
         },
         {
           "symbol": "PNB",
@@ -59727,7 +60659,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.11,
           "actual_ret": 8.26,
           "actual_return": 8.26,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 1782.5
         },
         {
           "symbol": "TCS",
@@ -59826,7 +60759,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.52,
           "actual_ret": 0.67,
           "actual_return": 0.67,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 3100.0
         },
         {
           "symbol": "HDFCAMC",
@@ -59875,7 +60809,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.78,
           "actual_ret": 3.93,
           "actual_return": 3.93,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 18120.0
         },
         {
           "symbol": "TMPV",
@@ -59974,7 +60909,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.67,
           "actual_ret": -0.82,
           "actual_return": -0.82,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -1675.0
         },
         {
           "symbol": "BRITANNIA",
@@ -60023,7 +60959,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.9,
           "actual_ret": 2.05,
           "actual_return": 2.05,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 27270.0
         },
         {
           "symbol": "HINDPETRO",
@@ -60072,7 +61009,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.38,
           "actual_ret": 3.53,
           "actual_return": 3.53,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 3460.0
         },
         {
           "symbol": "PRESTIGE",
@@ -60121,7 +61059,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.02,
           "actual_ret": -3.17,
           "actual_return": -3.17,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -13160.0
         },
         {
           "symbol": "PAGEIND",
@@ -60170,7 +61109,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.63,
           "actual_ret": -0.78,
           "actual_return": -0.78,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -87500.0
         },
         {
           "symbol": "RELIANCE",
@@ -60269,7 +61209,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.45,
           "actual_ret": 0.6,
           "actual_return": 0.6,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 1350.0
         },
         {
           "symbol": "PHOENIXLTD",
@@ -60318,7 +61259,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.45,
           "actual_ret": 0.6,
           "actual_return": 0.6,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 2397.5
         },
         {
           "symbol": "LICI",
@@ -60367,7 +61309,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.35,
           "actual_ret": -0.5,
           "actual_return": -0.5,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -465.0
         },
         {
           "symbol": "FORTIS",
@@ -60416,7 +61359,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.02,
           "actual_ret": -4.17,
           "actual_return": -4.17,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -6757.5
         },
         {
           "symbol": "UNOMINDA",
@@ -60465,7 +61409,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.73,
           "actual_ret": -4.88,
           "actual_return": -4.88,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -10372.5
         },
         {
           "symbol": "MOTHERSON",
@@ -60514,7 +61459,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.14,
           "actual_ret": -5.29,
           "actual_return": -5.29,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -1247.5
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -60563,7 +61509,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.7,
           "actual_ret": 8.85,
           "actual_return": 8.85,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 19705.0
         },
         {
           "symbol": "CDSL",
@@ -60612,7 +61559,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.63,
           "actual_ret": -7.78,
           "actual_return": -7.78,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -33960.0
         },
         {
           "symbol": "BHEL",
@@ -60661,7 +61609,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.15,
           "actual_ret": -4.3,
           "actual_return": -4.3,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -2712.5
         },
         {
           "symbol": "MAXHEALTH",
@@ -60860,7 +61809,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 18.31,
           "actual_ret": -17.46,
           "actual_return": -17.46,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -125990.0
         },
         {
           "symbol": "RBLBANK",
@@ -60909,7 +61859,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.65,
           "actual_ret": 5.8,
           "actual_return": 5.8,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 2842.5
         },
         {
           "symbol": "POLICYBZR",
@@ -60958,7 +61909,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.39,
           "actual_ret": 5.54,
           "actual_return": 5.54,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 21675.0
         },
         {
           "symbol": "NESTLEIND",
@@ -61057,7 +62009,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.88,
           "actual_ret": 3.03,
           "actual_return": 3.03,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 2030.0
         },
         {
           "symbol": "TVSMOTOR",
@@ -61106,7 +62059,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.36,
           "actual_ret": 5.51,
           "actual_return": 5.51,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 38117.5
         },
         {
           "symbol": "BIOCON",
@@ -61155,7 +62109,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.51,
           "actual_ret": 4.66,
           "actual_return": 4.66,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 3677.5
         },
         {
           "symbol": "BAJAJFINSV",
@@ -61254,7 +62209,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.24,
           "actual_ret": -3.39,
           "actual_return": -3.39,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -3325.0
         },
         {
           "symbol": "INFY",
@@ -61353,7 +62309,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.92,
           "actual_ret": -10.07,
           "actual_return": -10.07,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -6422.5
         },
         {
           "symbol": "PGEL",
@@ -61402,7 +62359,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.19,
           "actual_ret": 3.34,
           "actual_return": 3.34,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 7657.5
         },
         {
           "symbol": "TATAPOWER",
@@ -61451,7 +62409,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.22,
           "actual_ret": -2.37,
           "actual_return": -2.37,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -2315.0
         },
         {
           "symbol": "KALYANKJIL",
@@ -61500,7 +62459,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.05,
           "actual_ret": 5.2,
           "actual_return": 5.2,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 6730.0
         },
         {
           "symbol": "CONCOR",
@@ -61549,7 +62509,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.02,
           "actual_ret": 4.17,
           "actual_return": 4.17,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 6125.0
         },
         {
           "symbol": "MANKIND",
@@ -61598,7 +62559,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.15,
           "actual_ret": 8.3,
           "actual_return": 8.3,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 48732.5
         },
         {
           "symbol": "BAJFINANCE",
@@ -61697,7 +62659,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.58,
           "actual_ret": -7.73,
           "actual_return": -7.73,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -16872.5
         },
         {
           "symbol": "SHREECEM",
@@ -61746,7 +62709,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.25,
           "actual_ret": -0.4,
           "actual_return": -0.4,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -31020.0
         },
         {
           "symbol": "INDIGO",
@@ -61895,7 +62859,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.48,
           "actual_ret": 2.63,
           "actual_return": 2.63,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 1097.5
         },
         {
           "symbol": "ANGELONE",
@@ -61944,7 +62909,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.0,
           "actual_ret": 8.15,
           "actual_return": 8.15,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 6252.5
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -61993,7 +62959,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.21,
           "actual_ret": -0.36,
           "actual_return": -0.36,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -2032.5
         },
         {
           "symbol": "SUNPHARMA",
@@ -63001,7 +63968,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.52,
           "actual_ret": -8.67,
           "actual_return": -8.67,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -13135.0
         },
         {
           "symbol": "MCX",
@@ -63050,7 +64018,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.52,
           "actual_ret": 3.67,
           "actual_return": 3.67,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 9060.0
         },
         {
           "symbol": "RECLTD",
@@ -63099,7 +64068,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.58,
           "actual_ret": 1.73,
           "actual_return": 1.73,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 1752.5
         },
         {
           "symbol": "POLICYBZR",
@@ -63148,7 +64118,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 21.43,
           "actual_ret": -20.58,
           "actual_return": -20.58,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -113362.5
         },
         {
           "symbol": "GMRAIRPORT",
@@ -63197,7 +64168,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.03,
           "actual_ret": 7.18,
           "actual_return": 7.18,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 1377.5
         },
         {
           "symbol": "IRFC",
@@ -63246,7 +64218,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.68,
           "actual_ret": -3.83,
           "actual_return": -3.83,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -1455.0
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -63345,7 +64318,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.67,
           "actual_ret": -16.82,
           "actual_return": -16.82,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -42050.0
         },
         {
           "symbol": "CONCOR",
@@ -63394,7 +64368,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.72,
           "actual_ret": -1.87,
           "actual_return": -1.87,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -2487.5
         },
         {
           "symbol": "LTF",
@@ -63443,7 +64418,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.91,
           "actual_ret": 0.06,
           "actual_return": 0.06,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 20.0
         },
         {
           "symbol": "JIOFIN",
@@ -63542,7 +64518,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.71,
           "actual_ret": 0.86,
           "actual_return": 0.86,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 297.5
         },
         {
           "symbol": "PGEL",
@@ -63591,7 +64568,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.16,
           "actual_ret": -2.31,
           "actual_return": -2.31,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -5085.0
         },
         {
           "symbol": "JSWENERGY",
@@ -63640,7 +64618,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.79,
           "actual_ret": 4.94,
           "actual_return": 4.94,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 5460.0
         },
         {
           "symbol": "YESBANK",
@@ -63689,7 +64668,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.33,
           "actual_ret": -6.48,
           "actual_return": -6.48,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -265.0
         },
         {
           "symbol": "ICICIBANK",
@@ -63788,7 +64768,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.76,
           "actual_ret": 5.91,
           "actual_return": 5.91,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 11387.5
         },
         {
           "symbol": "ALKEM",
@@ -63837,7 +64818,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.69,
           "actual_ret": 3.84,
           "actual_return": 3.84,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 45817.5
         },
         {
           "symbol": "ICICIGI",
@@ -63886,7 +64868,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.44,
           "actual_ret": 3.59,
           "actual_return": 3.59,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 15937.5
         },
         {
           "symbol": "KEI",
@@ -63935,7 +64918,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.26,
           "actual_ret": 3.41,
           "actual_return": 3.41,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 35550.0
         },
         {
           "symbol": "AUROPHARMA",
@@ -63984,7 +64968,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.39,
           "actual_ret": -7.54,
           "actual_return": -7.54,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -21482.5
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -64033,7 +65018,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.44,
           "actual_ret": 0.59,
           "actual_return": 0.59,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 1445.0
         },
         {
           "symbol": "INDUSINDBK",
@@ -64082,7 +65068,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.41,
           "actual_ret": -3.56,
           "actual_return": -3.56,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -8325.0
         },
         {
           "symbol": "BAJAJFINSV",
@@ -64181,7 +65168,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.12,
           "actual_ret": -5.27,
           "actual_return": -5.27,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -1410.0
         },
         {
           "symbol": "AMBUJACEM",
@@ -64230,7 +65218,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.2,
           "actual_ret": 6.35,
           "actual_return": 6.35,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 7892.5
         },
         {
           "symbol": "CGPOWER",
@@ -64279,7 +65268,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.91,
           "actual_ret": 3.06,
           "actual_return": 3.06,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 4880.0
         },
         {
           "symbol": "SUZLON",
@@ -64328,7 +65318,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.08,
           "actual_ret": 3.23,
           "actual_return": 3.23,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 485.0
         },
         {
           "symbol": "VEDL",
@@ -64377,7 +65368,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.3,
           "actual_ret": -3.45,
           "actual_return": -3.45,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -3537.5
         },
         {
           "symbol": "BPCL",
@@ -64426,7 +65418,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.01,
           "actual_ret": -1.16,
           "actual_return": -1.16,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -712.5
         },
         {
           "symbol": "SHREECEM",
@@ -64475,7 +65468,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.91,
           "actual_ret": -0.06,
           "actual_return": -0.06,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -4157.5
         },
         {
           "symbol": "HINDPETRO",
@@ -64524,7 +65518,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.41,
           "actual_ret": -9.56,
           "actual_return": -9.56,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -7512.5
         },
         {
           "symbol": "PRESTIGE",
@@ -64573,7 +65568,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.88,
           "actual_ret": -8.03,
           "actual_return": -8.03,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -22650.0
         },
         {
           "symbol": "SBIN",
@@ -64672,7 +65668,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.56,
           "actual_ret": 12.71,
           "actual_return": 12.71,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 4847.5
         },
         {
           "symbol": "SAIL",
@@ -64721,7 +65718,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.92,
           "actual_ret": -8.07,
           "actual_return": -8.07,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -1995.0
         },
         {
           "symbol": "COFORGE",
@@ -64770,7 +65768,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.23,
           "actual_ret": -7.38,
           "actual_return": -7.38,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -27597.5
         },
         {
           "symbol": "MOTHERSON",
@@ -64819,7 +65818,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.17,
           "actual_ret": 2.32,
           "actual_return": 2.32,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 492.5
         },
         {
           "symbol": "HAL",
@@ -64868,7 +65868,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.23,
           "actual_ret": -9.38,
           "actual_return": -9.38,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -88110.0
         },
         {
           "symbol": "OBEROIRLTY",
@@ -64917,7 +65918,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.22,
           "actual_ret": -6.37,
           "actual_return": -6.37,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -24250.0
         },
         {
           "symbol": "POWERINDIA",
@@ -64966,7 +65968,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "PERSISTENT",
@@ -65015,7 +66018,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.56,
           "actual_ret": 5.71,
           "actual_return": 5.71,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 91275.0
         },
         {
           "symbol": "IDEA",
@@ -65064,7 +66068,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 16.12,
           "actual_ret": -15.27,
           "actual_return": -15.27,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -315.0
         },
         {
           "symbol": "DIXON",
@@ -65113,7 +66118,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.95,
           "actual_ret": -1.1,
           "actual_return": -1.1,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -39020.0
         },
         {
           "symbol": "BDL",
@@ -65162,7 +66168,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.8,
           "actual_ret": -8.95,
           "actual_return": -8.95,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -27002.5
         },
         {
           "symbol": "SAGILITY",
@@ -65211,7 +66218,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.99,
           "actual_ret": -2.14,
           "actual_return": -2.14,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -235.0
         },
         {
           "symbol": "TATACONSUM",
@@ -65360,7 +66368,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.38,
           "actual_ret": 3.53,
           "actual_return": 3.53,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 29227.5
         },
         {
           "symbol": "ADANIGREEN",
@@ -65409,7 +66418,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.93,
           "actual_ret": 7.08,
           "actual_return": 7.08,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 14812.5
         },
         {
           "symbol": "BIOCON",
@@ -65458,7 +66468,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.92,
           "actual_ret": 9.07,
           "actual_return": 9.07,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 8165.0
         },
         {
           "symbol": "KFINTECH",
@@ -65507,7 +66518,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.72,
           "actual_ret": -8.87,
           "actual_return": -8.87,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -20092.5
         },
         {
           "symbol": "WAAREEENER",
@@ -65556,7 +66568,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.19,
           "actual_ret": 7.34,
           "actual_return": 7.34,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 47972.5
         },
         {
           "symbol": "ASTRAL",
@@ -65605,7 +66618,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.92,
           "actual_ret": 3.07,
           "actual_return": 3.07,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 10832.5
         },
         {
           "symbol": "JUBLFOOD",
@@ -65654,7 +66668,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.46,
           "actual_ret": 6.61,
           "actual_return": 6.61,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 12492.5
         },
         {
           "symbol": "ADANIPORTS",
@@ -65753,7 +66768,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.82,
           "actual_ret": -7.97,
           "actual_return": -7.97,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -51875.0
         },
         {
           "symbol": "SBICARD",
@@ -65802,7 +66818,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.78,
           "actual_ret": 8.93,
           "actual_return": 8.93,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 17450.0
         },
         {
           "symbol": "MAZDOCK",
@@ -65851,7 +66868,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.08,
           "actual_ret": 0.23,
           "actual_return": 0.23,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 1267.5
         },
         {
           "symbol": "JINDALSTEL",
@@ -65900,7 +66918,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.59,
           "actual_ret": 3.74,
           "actual_return": 3.74,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 8322.5
         },
         {
           "symbol": "NHPC",
@@ -65949,7 +66968,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.13,
           "actual_ret": -0.28,
           "actual_return": -0.28,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -50.0
         },
         {
           "symbol": "COCHINSHIP",
@@ -65998,7 +67018,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.07,
           "actual_ret": 0.22,
           "actual_return": 0.22,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 720.0
         },
         {
           "symbol": "ADANIENT",
@@ -66097,7 +67118,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.13,
           "actual_ret": -3.28,
           "actual_return": -3.28,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -2800.0
         },
         {
           "symbol": "SBILIFE",
@@ -66196,7 +67218,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.57,
           "actual_ret": 9.72,
           "actual_return": 9.72,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 17560.0
         },
         {
           "symbol": "PATANJALI",
@@ -66245,7 +67268,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.09,
           "actual_ret": 0.24,
           "actual_return": 0.24,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 357.5
         },
         {
           "symbol": "PETRONET",
@@ -66294,7 +67318,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.76,
           "actual_ret": 3.91,
           "actual_return": 3.91,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 2897.5
         },
         {
           "symbol": "TORNTPHARM",
@@ -66343,7 +67368,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.31,
           "actual_ret": 4.46,
           "actual_return": 4.46,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 37230.0
         },
         {
           "symbol": "FEDERALBNK",
@@ -66392,7 +67418,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.7,
           "actual_ret": -2.85,
           "actual_return": -2.85,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -1322.5
         },
         {
           "symbol": "UNITDSPR",
@@ -66441,7 +67468,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.83,
           "actual_ret": -5.98,
           "actual_return": -5.98,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -19217.5
         },
         {
           "symbol": "IOC",
@@ -66490,7 +67518,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.03,
           "actual_ret": 4.18,
           "actual_return": 4.18,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 1227.5
         },
         {
           "symbol": "CUMMINSIND",
@@ -66539,7 +67568,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.26,
           "actual_ret": 2.41,
           "actual_return": 2.41,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 16837.5
         },
         {
           "symbol": "TVSMOTOR",
@@ -66588,7 +67618,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.63,
           "actual_ret": 8.78,
           "actual_return": 8.78,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 49380.0
         },
         {
           "symbol": "HINDZINC",
@@ -66637,7 +67668,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.2,
           "actual_ret": -2.35,
           "actual_return": -2.35,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -2360.0
         },
         {
           "symbol": "GAIL",
@@ -66686,7 +67718,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.39,
           "actual_ret": 2.54,
           "actual_return": 2.54,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 1002.5
         },
         {
           "symbol": "UNOMINDA",
@@ -66735,7 +67768,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 15.97,
           "actual_ret": 15.12,
           "actual_return": 15.12,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 39682.5
         },
         {
           "symbol": "ASHOKLEY",
@@ -66784,7 +67818,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.45,
           "actual_ret": 4.6,
           "actual_return": 4.6,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 1085.0
         },
         {
           "symbol": "PIIND",
@@ -66833,7 +67868,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.46,
           "actual_ret": 0.61,
           "actual_return": 0.61,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 5255.0
         },
         {
           "symbol": "AMBER",
@@ -66882,7 +67918,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.69,
           "actual_ret": 11.84,
           "actual_return": 11.84,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 226825.0
         },
         {
           "symbol": "TATAPOWER",
@@ -66931,7 +67968,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.05,
           "actual_ret": -7.2,
           "actual_return": -7.2,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -6237.5
         },
         {
           "symbol": "BHARATFORG",
@@ -66980,7 +68018,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.89,
           "actual_ret": -10.04,
           "actual_return": -10.04,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -32672.5
         },
         {
           "symbol": "PNB",
@@ -67029,7 +68068,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.31,
           "actual_ret": -6.46,
           "actual_return": -6.46,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -1515.0
         },
         {
           "symbol": "PNBHOUSING",
@@ -67078,7 +68118,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.26,
           "actual_ret": -8.41,
           "actual_return": -8.41,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -16800.0
         },
         {
           "symbol": "RADICO",
@@ -67127,7 +68168,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.79,
           "actual_ret": -16.94,
           "actual_return": -16.94,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -109285.0
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -67176,7 +68218,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.53,
           "actual_ret": 3.68,
           "actual_return": 3.68,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 20400.0
         },
         {
           "symbol": "GODREJCP",
@@ -67225,7 +68268,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.26,
           "actual_ret": 7.41,
           "actual_return": 7.41,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 19082.5
         },
         {
           "symbol": "ABB",
@@ -67274,7 +68318,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.26,
           "actual_ret": 3.41,
           "actual_return": 3.41,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 47065.0
         },
         {
           "symbol": "APLAPOLLO",
@@ -67323,7 +68368,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.25,
           "actual_ret": 8.4,
           "actual_return": 8.4,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 30680.0
         },
         {
           "symbol": "SOLARINDS",
@@ -67372,7 +68418,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.22,
           "actual_ret": 9.37,
           "actual_return": 9.37,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 222472.5
         },
         {
           "symbol": "COLPAL",
@@ -67421,7 +68468,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.34,
           "actual_ret": 3.49,
           "actual_return": 3.49,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 23905.0
         },
         {
           "symbol": "NAUKRI",
@@ -67470,7 +68518,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.55,
           "actual_ret": 0.7,
           "actual_return": 0.7,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 2625.0
         },
         {
           "symbol": "HEROMOTOCO",
@@ -67519,7 +68568,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.84,
           "actual_ret": 1.99,
           "actual_return": 1.99,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 19417.5
         },
         {
           "symbol": "TECHM",
@@ -67618,7 +68668,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.58,
           "actual_ret": -8.73,
           "actual_return": -8.73,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -8237.5
         },
         {
           "symbol": "MANAPPURAM",
@@ -67667,7 +68718,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.65,
           "actual_ret": 8.8,
           "actual_return": 8.8,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 4665.0
         },
         {
           "symbol": "FORCEMOT",
@@ -67716,7 +68768,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.92,
           "actual_ret": -14.07,
           "actual_return": -14.07,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -278297.5
         },
         {
           "symbol": "NAM-INDIA",
@@ -67765,7 +68818,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.33,
           "actual_ret": 7.48,
           "actual_return": 7.48,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 9487.5
         },
         {
           "symbol": "CROMPTON",
@@ -67814,7 +68868,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.89,
           "actual_ret": 5.04,
           "actual_return": 5.04,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 4235.0
         },
         {
           "symbol": "MARICO",
@@ -67863,7 +68918,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.69,
           "actual_ret": 1.84,
           "actual_return": 1.84,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 2872.5
         },
         {
           "symbol": "NATIONALUM",
@@ -67912,7 +68968,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.94,
           "actual_ret": -3.09,
           "actual_return": -3.09,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -1490.0
         },
         {
           "symbol": "IREDA",
@@ -67961,7 +69018,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 16.45,
           "actual_ret": -15.6,
           "actual_return": -15.6,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -5425.0
         },
         {
           "symbol": "MANKIND",
@@ -68010,7 +69068,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.92,
           "actual_ret": -6.07,
           "actual_return": -6.07,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -43697.5
         },
         {
           "symbol": "NBCC",
@@ -68059,7 +69118,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.0,
           "actual_ret": 6.15,
           "actual_return": 6.15,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 1190.0
         },
         {
           "symbol": "BLUESTARCO",
@@ -68108,7 +69168,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.86,
           "actual_ret": -1.01,
           "actual_return": -1.01,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -4730.0
         },
         {
           "symbol": "HINDUNILVR",
@@ -68207,7 +69268,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.84,
           "actual_ret": -8.99,
           "actual_return": -8.99,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -11802.5
         },
         {
           "symbol": "LICI",
@@ -68256,7 +69318,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.95,
           "actual_ret": 2.1,
           "actual_return": 2.1,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 2132.5
         },
         {
           "symbol": "PIDILITIND",
@@ -68305,7 +69368,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.83,
           "actual_ret": 0.98,
           "actual_return": 0.98,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 3277.5
         },
         {
           "symbol": "PREMIERENE",
@@ -68354,7 +69418,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.4,
           "actual_ret": -6.55,
           "actual_return": -6.55,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -17505.0
         },
         {
           "symbol": "PFC",
@@ -68403,7 +69468,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.65,
           "actual_ret": -3.8,
           "actual_return": -3.8,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -3680.0
         },
         {
           "symbol": "INOXWIND",
@@ -68452,7 +69518,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.62,
           "actual_ret": -13.77,
           "actual_return": -13.77,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -5702.5
         },
         {
           "symbol": "MPHASIS",
@@ -68501,7 +69568,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.75,
           "actual_ret": -0.9,
           "actual_return": -0.9,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -5970.0
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -68550,7 +69618,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.16,
           "actual_ret": -4.31,
           "actual_return": -4.31,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -680.0
         },
         {
           "symbol": "DELHIVERY",
@@ -68599,7 +69668,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.04,
           "actual_ret": 7.19,
           "actual_return": 7.19,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 4355.0
         },
         {
           "symbol": "SRF",
@@ -68648,7 +69718,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 15.3,
           "actual_ret": -14.45,
           "actual_return": -14.45,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -81735.0
         },
         {
           "symbol": "MOTILALOFS",
@@ -68697,7 +69768,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.02,
           "actual_ret": -0.17,
           "actual_return": -0.17,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -250.0
         },
         {
           "symbol": "ASIANPAINT",
@@ -68796,7 +69868,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.92,
           "actual_ret": -4.07,
           "actual_return": -4.07,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -36140.0
         },
         {
           "symbol": "AUBANK",
@@ -68845,7 +69918,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.55,
           "actual_ret": 6.7,
           "actual_return": 6.7,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 9477.5
         },
         {
           "symbol": "HDFCAMC",
@@ -68894,7 +69968,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.93,
           "actual_ret": -5.08,
           "actual_return": -5.08,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -24815.0
         },
         {
           "symbol": "HCLTECH",
@@ -68993,7 +70068,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.4,
           "actual_ret": 0.55,
           "actual_return": 0.55,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 692.5
         },
         {
           "symbol": "AXISBANK",
@@ -69092,7 +70168,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.46,
           "actual_ret": -6.61,
           "actual_return": -6.61,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -6525.0
         },
         {
           "symbol": "GODFRYPHLP",
@@ -69141,7 +70218,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 28.81,
           "actual_ret": -27.96,
           "actual_return": -27.96,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -118132.5
         },
         {
           "symbol": "LICHSGFIN",
@@ -69190,7 +70268,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.91,
           "actual_ret": -11.06,
           "actual_return": -11.06,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -14150.0
         },
         {
           "symbol": "KPITTECH",
@@ -69239,7 +70318,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.82,
           "actual_ret": 0.97,
           "actual_return": 0.97,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 3147.5
         },
         {
           "symbol": "MFSL",
@@ -69288,7 +70368,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.22,
           "actual_ret": -0.37,
           "actual_return": -0.37,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -1000.0
         },
         {
           "symbol": "NYKAA",
@@ -69337,7 +70418,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.41,
           "actual_ret": -1.56,
           "actual_return": -1.56,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -652.5
         },
         {
           "symbol": "M&M",
@@ -69436,7 +70518,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.86,
           "actual_ret": 3.01,
           "actual_return": 3.01,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 8415.0
         },
         {
           "symbol": "LT",
@@ -69535,7 +70618,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 20.16,
           "actual_ret": 19.31,
           "actual_return": 19.31,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 62810.0
         },
         {
           "symbol": "ADANIPOWER",
@@ -69584,7 +70668,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.98,
           "actual_ret": -3.13,
           "actual_return": -3.13,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -780.0
         },
         {
           "symbol": "INFY",
@@ -69683,7 +70768,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.27,
           "actual_ret": 0.42,
           "actual_return": 0.42,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 6302.5
         },
         {
           "symbol": "UPL",
@@ -69732,7 +70818,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.69,
           "actual_ret": -5.84,
           "actual_return": -5.84,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -8747.5
         },
         {
           "symbol": "ICICIPRULI",
@@ -69781,7 +70868,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.22,
           "actual_ret": -3.37,
           "actual_return": -3.37,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -4565.0
         },
         {
           "symbol": "PAYTM",
@@ -69830,7 +70918,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.15,
           "actual_ret": -7.3,
           "actual_return": -7.3,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -13012.5
         },
         {
           "symbol": "INDIGO",
@@ -69929,7 +71018,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.69,
           "actual_ret": 5.84,
           "actual_return": 5.84,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 23792.5
         },
         {
           "symbol": "ANGELONE",
@@ -69978,7 +71068,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.09,
           "actual_ret": 1.24,
           "actual_return": 1.24,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 592.5
         },
         {
           "symbol": "RVNL",
@@ -70027,7 +71118,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.59,
           "actual_ret": -2.74,
           "actual_return": -2.74,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -2442.5
         },
         {
           "symbol": "CANBK",
@@ -70076,7 +71168,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.37,
           "actual_ret": 2.52,
           "actual_return": 2.52,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 505.0
         },
         {
           "symbol": "BANKBARODA",
@@ -70125,7 +71218,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.62,
           "actual_ret": -4.77,
           "actual_return": -4.77,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -2277.5
         },
         {
           "symbol": "LUPIN",
@@ -70174,7 +71268,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.76,
           "actual_ret": 1.91,
           "actual_return": 1.91,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 9557.5
         },
         {
           "symbol": "NMDC",
@@ -70223,7 +71318,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.8,
           "actual_ret": 5.95,
           "actual_return": 5.95,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 907.5
         },
         {
           "symbol": "BHARTIARTL",
@@ -70322,7 +71418,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.64,
           "actual_ret": -4.79,
           "actual_return": -4.79,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -54900.0
         },
         {
           "symbol": "TITAN",
@@ -70521,7 +71618,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.53,
           "actual_ret": -0.68,
           "actual_return": -0.68,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -8145.0
         },
         {
           "symbol": "GLENMARK",
@@ -70570,7 +71668,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.64,
           "actual_ret": -1.79,
           "actual_return": -1.79,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -6285.0
         },
         {
           "symbol": "TATAMOTORS",
@@ -70619,7 +71718,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.38,
           "actual_ret": 0.53,
           "actual_return": 0.53,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 1980.0
         },
         {
           "symbol": "SONACOMS",
@@ -70668,7 +71768,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.47,
           "actual_ret": 4.62,
           "actual_return": 4.62,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 5917.5
         },
         {
           "symbol": "RBLBANK",
@@ -70717,7 +71818,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.02,
           "actual_ret": -2.17,
           "actual_return": -2.17,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -887.5
         },
         {
           "symbol": "DMART",
@@ -70766,7 +71868,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.23,
           "actual_ret": -3.38,
           "actual_return": -3.38,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -31162.5
         },
         {
           "symbol": "UNIONBANK",
@@ -70815,7 +71918,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.35,
           "actual_ret": 2.5,
           "actual_return": 2.5,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 675.0
         },
         {
           "symbol": "MAHABANK",
@@ -70864,7 +71968,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.43,
           "actual_ret": 0.58,
           "actual_return": 0.58,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 67.5
         },
         {
           "symbol": "CHOLAFIN",
@@ -70913,7 +72018,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.92,
           "actual_ret": 4.07,
           "actual_return": 4.07,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 13580.0
         },
         {
           "symbol": "SUNPHARMA",
@@ -71062,7 +72168,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 15.35,
           "actual_ret": 14.5,
           "actual_return": 14.5,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 394195.0
         },
         {
           "symbol": "MAXHEALTH",
@@ -71211,7 +72318,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.08,
           "actual_ret": -1.23,
           "actual_return": -1.23,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -4755.0
         },
         {
           "symbol": "HAVELLS",
@@ -71260,7 +72368,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.76,
           "actual_ret": 4.91,
           "actual_return": 4.91,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 19505.0
         },
         {
           "symbol": "PAGEIND",
@@ -71309,7 +72418,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.16,
           "actual_ret": -1.31,
           "actual_return": -1.31,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -152062.5
         },
         {
           "symbol": "VOLTAS",
@@ -71358,7 +72468,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.82,
           "actual_ret": -6.97,
           "actual_return": -6.97,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -24150.0
         },
         {
           "symbol": "LODHA",
@@ -71407,7 +72518,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.18,
           "actual_ret": 2.33,
           "actual_return": 2.33,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 6777.5
         },
         {
           "symbol": "BAJAJHLDNG",
@@ -71456,7 +72568,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.46,
           "actual_ret": -10.61,
           "actual_return": -10.61,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -294582.5
         },
         {
           "symbol": "ULTRACEMCO",
@@ -71605,7 +72718,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.93,
           "actual_ret": -1.08,
           "actual_return": -1.08,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -1765.0
         },
         {
           "symbol": "ABCAPITAL",
@@ -71654,7 +72768,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.21,
           "actual_ret": -8.36,
           "actual_return": -8.36,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -3570.0
         },
         {
           "symbol": "APOLLOHOSP",
@@ -71803,7 +72918,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.51,
           "actual_ret": -4.66,
           "actual_return": -4.66,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -1030.0
         },
         {
           "symbol": "INDHOTEL",
@@ -71852,7 +72968,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.59,
           "actual_ret": 7.74,
           "actual_return": 7.74,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 16900.0
         },
         {
           "symbol": "BOSCHLTD",
@@ -71901,7 +73018,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.21,
           "actual_ret": 2.36,
           "actual_return": 2.36,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 157045.0
         },
         {
           "symbol": "ETERNAL",
@@ -72050,7 +73168,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.7,
           "actual_ret": 2.85,
           "actual_return": 2.85,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 41080.0
         },
         {
           "symbol": "360ONE",
@@ -72099,7 +73218,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.75,
           "actual_ret": 5.9,
           "actual_return": 5.9,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 18237.5
         },
         {
           "symbol": "CAMS",
@@ -72148,7 +73268,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 15.69,
           "actual_ret": -14.84,
           "actual_return": -14.84,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -37620.0
         },
         {
           "symbol": "POLYCAB",
@@ -72197,7 +73318,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.45,
           "actual_ret": -13.6,
           "actual_return": -13.6,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -182285.0
         },
         {
           "symbol": "KOTAKBANK",
@@ -72296,7 +73418,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.21,
           "actual_ret": -8.36,
           "actual_return": -8.36,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -27375.0
         },
         {
           "symbol": "INDIANB",
@@ -72345,7 +73468,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.86,
           "actual_ret": 4.01,
           "actual_return": 4.01,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 5240.0
         },
         {
           "symbol": "VBL",
@@ -72394,7 +73518,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.79,
           "actual_ret": 5.94,
           "actual_return": 5.94,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 7212.5
         },
         {
           "symbol": "LTM",
@@ -72443,7 +73568,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.34,
           "actual_ret": 5.49,
           "actual_return": 5.49,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 77452.5
         },
         {
           "symbol": "SUPREMEIND",
@@ -72492,7 +73618,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.95,
           "actual_ret": -0.1,
           "actual_return": -0.1,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -875.0
         },
         {
           "symbol": "BHEL",
@@ -72541,7 +73668,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.7,
           "actual_ret": -3.85,
           "actual_return": -3.85,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -1967.5
         },
         {
           "symbol": "BAJAJ-AUTO",
@@ -73249,7 +74377,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.02,
           "actual_ret": -12.17,
           "actual_return": -12.17,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -9770.0
         },
         {
           "symbol": "WIPRO",
@@ -73598,7 +74727,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.83,
           "actual_ret": -10.98,
           "actual_return": -10.98,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -40597.5
         },
         {
           "symbol": "CDSL",
@@ -73647,7 +74777,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.55,
           "actual_ret": 2.7,
           "actual_return": 2.7,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 12657.5
         },
         {
           "symbol": "ADANIENSOL",
@@ -73696,7 +74827,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.64,
           "actual_ret": 2.79,
           "actual_return": 2.79,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 6862.5
         },
         {
           "symbol": "TATAELXSI",
@@ -73745,7 +74877,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.93,
           "actual_ret": 5.08,
           "actual_return": 5.08,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 90935.0
         },
         {
           "symbol": "FORCEMOT",
@@ -73794,7 +74927,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.54,
           "actual_ret": 2.69,
           "actual_return": 2.69,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 45487.5
         },
         {
           "symbol": "PERSISTENT",
@@ -73843,7 +74977,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.2,
           "actual_ret": -2.35,
           "actual_return": -2.35,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -31820.0
         },
         {
           "symbol": "BSE",
@@ -73892,7 +75027,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.78,
           "actual_ret": -4.93,
           "actual_return": -4.93,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -22677.5
         },
         {
           "symbol": "CAMS",
@@ -73941,7 +75077,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 16.25,
           "actual_ret": 15.4,
           "actual_return": 15.4,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 30665.0
         },
         {
           "symbol": "JINDALSTEL",
@@ -73990,7 +75127,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.48,
           "actual_ret": -4.63,
           "actual_return": -4.63,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -11180.0
         },
         {
           "symbol": "ICICIBANK",
@@ -74089,7 +75227,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.46,
           "actual_ret": 10.61,
           "actual_return": 10.61,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 58177.5
         },
         {
           "symbol": "TATAMOTORS",
@@ -74138,7 +75277,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.58,
           "actual_ret": -2.73,
           "actual_return": -2.73,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -12072.5
         },
         {
           "symbol": "SIEMENS",
@@ -74187,7 +75327,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.76,
           "actual_ret": -10.91,
           "actual_return": -10.91,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -122052.5
         },
         {
           "symbol": "KOTAKBANK",
@@ -74286,7 +75427,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.54,
           "actual_ret": -3.69,
           "actual_return": -3.69,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -605.0
         },
         {
           "symbol": "360ONE",
@@ -74335,7 +75477,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 16.86,
           "actual_ret": -16.01,
           "actual_return": -16.01,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -37592.5
         },
         {
           "symbol": "IOC",
@@ -74384,7 +75527,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.8,
           "actual_ret": 7.95,
           "actual_return": 7.95,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 2695.0
         },
         {
           "symbol": "WAAREEENER",
@@ -74433,7 +75577,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.14,
           "actual_ret": -12.29,
           "actual_return": -12.29,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -30725.0
         },
         {
           "symbol": "INDUSINDBK",
@@ -74482,7 +75627,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.54,
           "actual_ret": 1.69,
           "actual_return": 1.69,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 5765.0
         },
         {
           "symbol": "MOTHERSON",
@@ -74531,7 +75677,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.34,
           "actual_ret": 5.49,
           "actual_return": 5.49,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 1582.5
         },
         {
           "symbol": "VOLTAS",
@@ -74580,7 +75727,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.15,
           "actual_ret": -0.3,
           "actual_return": -0.3,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -1315.0
         },
         {
           "symbol": "PRESTIGE",
@@ -74629,7 +75777,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.28,
           "actual_ret": -2.43,
           "actual_return": -2.43,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -10637.5
         },
         {
           "symbol": "INFY",
@@ -74728,7 +75877,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.22,
           "actual_ret": 7.37,
           "actual_return": 7.37,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 66105.0
         },
         {
           "symbol": "HINDALCO",
@@ -74827,7 +75977,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.86,
           "actual_ret": 1.01,
           "actual_return": 1.01,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 522.5
         },
         {
           "symbol": "PAGEIND",
@@ -74876,7 +76027,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.83,
           "actual_ret": -5.98,
           "actual_return": -5.98,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -682500.0
         },
         {
           "symbol": "CONCOR",
@@ -74925,7 +76077,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.81,
           "actual_ret": 2.96,
           "actual_return": 2.96,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 5682.5
         },
         {
           "symbol": "BHEL",
@@ -74974,7 +76127,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.06,
           "actual_ret": 0.21,
           "actual_return": 0.21,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 125.0
         },
         {
           "symbol": "LICHSGFIN",
@@ -75023,7 +76177,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.47,
           "actual_ret": 2.62,
           "actual_return": 2.62,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 3855.0
         },
         {
           "symbol": "LAURUSLABS",
@@ -75072,7 +76227,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.52,
           "actual_ret": -2.67,
           "actual_return": -2.67,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -3327.5
         },
         {
           "symbol": "UNITDSPR",
@@ -75121,7 +76277,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.71,
           "actual_ret": -1.86,
           "actual_return": -1.86,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -6902.5
         },
         {
           "symbol": "ALKEM",
@@ -75170,7 +76327,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.52,
           "actual_ret": 0.67,
           "actual_return": 0.67,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 8855.0
         },
         {
           "symbol": "NYKAA",
@@ -75219,7 +76377,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.35,
           "actual_ret": -6.5,
           "actual_return": -6.5,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -2950.0
         },
         {
           "symbol": "DELHIVERY",
@@ -75268,7 +76427,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.9,
           "actual_ret": -3.05,
           "actual_return": -3.05,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -2825.0
         },
         {
           "symbol": "TMPV",
@@ -75367,7 +76527,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.87,
           "actual_ret": -7.02,
           "actual_return": -7.02,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -48392.5
         },
         {
           "symbol": "SWIGGY",
@@ -75416,7 +76577,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.09,
           "actual_ret": 7.24,
           "actual_return": 7.24,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 7800.0
         },
         {
           "symbol": "AMBER",
@@ -75465,7 +76627,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.2,
           "actual_ret": -6.35,
           "actual_return": -6.35,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -81950.0
         },
         {
           "symbol": "TIINDIA",
@@ -75514,7 +76677,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.61,
           "actual_ret": 3.76,
           "actual_return": 3.76,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 39620.0
         },
         {
           "symbol": "BAJAJFINSV",
@@ -75613,7 +76777,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.13,
           "actual_ret": 10.28,
           "actual_return": 10.28,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 21547.5
         },
         {
           "symbol": "OFSS",
@@ -75662,7 +76827,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.76,
           "actual_ret": -7.91,
           "actual_return": -7.91,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -200840.0
         },
         {
           "symbol": "SBILIFE",
@@ -75761,7 +76927,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.0,
           "actual_ret": -0.15,
           "actual_return": -0.15,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -1695.0
         },
         {
           "symbol": "GAIL",
@@ -75810,7 +76977,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.54,
           "actual_ret": -2.69,
           "actual_return": -2.69,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -1180.0
         },
         {
           "symbol": "BLUESTARCO",
@@ -75859,7 +77027,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.91,
           "actual_ret": 0.06,
           "actual_return": 0.06,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 247.5
         },
         {
           "symbol": "NBCC",
@@ -75908,7 +77077,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.61,
           "actual_ret": -12.76,
           "actual_return": -12.76,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -3182.5
         },
         {
           "symbol": "NAM-INDIA",
@@ -75957,7 +77127,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.8,
           "actual_ret": -2.95,
           "actual_return": -2.95,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -5510.0
         },
         {
           "symbol": "IRFC",
@@ -76006,7 +77177,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "NHPC",
@@ -76055,7 +77227,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.04,
           "actual_ret": -4.19,
           "actual_return": -4.19,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -785.0
         },
         {
           "symbol": "BANKBARODA",
@@ -76104,7 +77277,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.49,
           "actual_ret": 2.64,
           "actual_return": 2.64,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 1625.0
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -76153,7 +77327,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.52,
           "actual_ret": 1.67,
           "actual_return": 1.67,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 4445.0
         },
         {
           "symbol": "MPHASIS",
@@ -76202,7 +77377,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.62,
           "actual_ret": -0.77,
           "actual_return": -0.77,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -5467.5
         },
         {
           "symbol": "ADANIPORTS",
@@ -76301,7 +77477,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.73,
           "actual_ret": 3.88,
           "actual_return": 3.88,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 143085.0
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -76400,7 +77577,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.77,
           "actual_ret": -0.92,
           "actual_return": -0.92,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -2190.0
         },
         {
           "symbol": "PIDILITIND",
@@ -76449,7 +77627,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.36,
           "actual_ret": -2.51,
           "actual_return": -2.51,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -9787.5
         },
         {
           "symbol": "ANGELONE",
@@ -76498,7 +77677,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.91,
           "actual_ret": 1.06,
           "actual_return": 1.06,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 877.5
         },
         {
           "symbol": "M&M",
@@ -76597,7 +77777,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.01,
           "actual_ret": -4.16,
           "actual_return": -4.16,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -6435.0
         },
         {
           "symbol": "BOSCHLTD",
@@ -76646,7 +77827,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.2,
           "actual_ret": 0.35,
           "actual_return": 0.35,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 31250.0
         },
         {
           "symbol": "INDIANB",
@@ -76695,7 +77877,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.26,
           "actual_ret": 6.41,
           "actual_return": 6.41,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 8630.0
         },
         {
           "symbol": "AMBUJACEM",
@@ -76744,7 +77927,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.66,
           "actual_ret": 10.81,
           "actual_return": 10.81,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 15010.0
         },
         {
           "symbol": "MAXHEALTH",
@@ -76843,7 +78027,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.78,
           "actual_ret": 8.93,
           "actual_return": 8.93,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 97927.5
         },
         {
           "symbol": "MFSL",
@@ -76892,7 +78077,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.1,
           "actual_ret": 2.25,
           "actual_return": 2.25,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 6587.5
         },
         {
           "symbol": "LTM",
@@ -76941,7 +78127,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.14,
           "actual_ret": -2.29,
           "actual_return": -2.29,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -31817.5
         },
         {
           "symbol": "HINDPETRO",
@@ -76990,7 +78177,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.93,
           "actual_ret": -0.08,
           "actual_return": -0.08,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -72.5
         },
         {
           "symbol": "SBICARD",
@@ -77039,7 +78227,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.19,
           "actual_ret": -2.34,
           "actual_return": -2.34,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -4087.5
         },
         {
           "symbol": "GVT&D",
@@ -77088,7 +78277,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.51,
           "actual_ret": 0.66,
           "actual_return": 0.66,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 3195.0
         },
         {
           "symbol": "UPL",
@@ -77137,7 +78327,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.06,
           "actual_ret": 9.21,
           "actual_return": 9.21,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 12817.5
         },
         {
           "symbol": "MANAPPURAM",
@@ -77186,7 +78377,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.25,
           "actual_ret": -0.4,
           "actual_return": -0.4,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -182.5
         },
         {
           "symbol": "HEROMOTOCO",
@@ -77235,7 +78427,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.32,
           "actual_ret": 6.47,
           "actual_return": 6.47,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 83857.5
         },
         {
           "symbol": "OIL",
@@ -77284,7 +78477,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.74,
           "actual_ret": 6.89,
           "actual_return": 6.89,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 7780.0
         },
         {
           "symbol": "GODREJCP",
@@ -77333,7 +78527,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.47,
           "actual_ret": -3.62,
           "actual_return": -3.62,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -9805.0
         },
         {
           "symbol": "AUBANK",
@@ -77382,7 +78577,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.89,
           "actual_ret": -11.04,
           "actual_return": -11.04,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -20212.5
         },
         {
           "symbol": "GMRAIRPORT",
@@ -77431,7 +78627,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.82,
           "actual_ret": 8.97,
           "actual_return": 8.97,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 1942.5
         },
         {
           "symbol": "MAZDOCK",
@@ -77480,7 +78677,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.98,
           "actual_ret": 2.13,
           "actual_return": 2.13,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 10987.5
         },
         {
           "symbol": "SAIL",
@@ -77529,7 +78727,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.44,
           "actual_ret": 7.59,
           "actual_return": 7.59,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 2395.0
         },
         {
           "symbol": "INDHOTEL",
@@ -77578,7 +78777,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.3,
           "actual_ret": -3.45,
           "actual_return": -3.45,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -5830.0
         },
         {
           "symbol": "COCHINSHIP",
@@ -77627,7 +78827,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.53,
           "actual_ret": -0.68,
           "actual_return": -0.68,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -2312.5
         },
         {
           "symbol": "POLYCAB",
@@ -77676,7 +78877,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.16,
           "actual_ret": 11.31,
           "actual_return": 11.31,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 177100.0
         },
         {
           "symbol": "SRF",
@@ -77725,7 +78927,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.38,
           "actual_ret": 6.53,
           "actual_return": 6.53,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 39265.0
         },
         {
           "symbol": "DABUR",
@@ -77774,7 +78977,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.25,
           "actual_ret": -4.4,
           "actual_return": -4.4,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -5687.5
         },
         {
           "symbol": "JSWSTEEL",
@@ -77873,7 +79077,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.32,
           "actual_ret": -0.47,
           "actual_return": -0.47,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -4025.0
         },
         {
           "symbol": "GLENMARK",
@@ -77922,7 +79127,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.85,
           "actual_ret": -1.0,
           "actual_return": -1.0,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -3802.5
         },
         {
           "symbol": "IEX",
@@ -77971,7 +79177,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.68,
           "actual_ret": -4.83,
           "actual_return": -4.83,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -2152.5
         },
         {
           "symbol": "VBL",
@@ -78020,7 +79227,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.33,
           "actual_ret": -1.48,
           "actual_return": -1.48,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -2327.5
         },
         {
           "symbol": "HINDZINC",
@@ -78069,7 +79277,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.11,
           "actual_ret": 3.26,
           "actual_return": 3.26,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 4032.5
         },
         {
           "symbol": "BAJAJHLDNG",
@@ -78118,7 +79327,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.01,
           "actual_ret": -0.16,
           "actual_return": -0.16,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -4415.0
         },
         {
           "symbol": "CROMPTON",
@@ -78167,7 +79377,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.53,
           "actual_ret": -2.68,
           "actual_return": -2.68,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -2680.0
         },
         {
           "symbol": "RADICO",
@@ -78216,7 +79427,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.89,
           "actual_ret": 10.04,
           "actual_return": 10.04,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 49842.5
         },
         {
           "symbol": "MAHABANK",
@@ -78265,7 +79477,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.66,
           "actual_ret": -0.81,
           "actual_return": -0.81,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -100.0
         },
         {
           "symbol": "BHARTIARTL",
@@ -78364,7 +79577,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.61,
           "actual_ret": 3.76,
           "actual_return": 3.76,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 15437.5
         },
         {
           "symbol": "UNIONBANK",
@@ -78413,7 +79627,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.44,
           "actual_ret": -5.59,
           "actual_return": -5.59,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -1512.5
         },
         {
           "symbol": "INDUSTOWER",
@@ -78462,7 +79677,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.75,
           "actual_ret": 3.9,
           "actual_return": 3.9,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 3200.0
         },
         {
           "symbol": "BHARATFORG",
@@ -78511,7 +79727,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.47,
           "actual_ret": -2.62,
           "actual_return": -2.62,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -9915.0
         },
         {
           "symbol": "NAUKRI",
@@ -78560,7 +79777,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.08,
           "actual_ret": -0.23,
           "actual_return": -0.23,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -860.0
         },
         {
           "symbol": "ASTRAL",
@@ -78609,7 +79827,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.1,
           "actual_ret": 3.25,
           "actual_return": 3.25,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 14485.0
         },
         {
           "symbol": "AUROPHARMA",
@@ -78658,7 +79877,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.05,
           "actual_ret": 2.2,
           "actual_return": 2.2,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 6775.0
         },
         {
           "symbol": "POWERINDIA",
@@ -78707,7 +79927,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "RECLTD",
@@ -78756,7 +79977,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.39,
           "actual_ret": -5.54,
           "actual_return": -5.54,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -6925.0
         },
         {
           "symbol": "IDEA",
@@ -78805,7 +80027,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.09,
           "actual_ret": 9.24,
           "actual_return": 9.24,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 210.0
         },
         {
           "symbol": "LODHA",
@@ -78854,7 +80077,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.71,
           "actual_ret": 1.86,
           "actual_return": 1.86,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 5657.5
         },
         {
           "symbol": "LTF",
@@ -78903,7 +80127,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.47,
           "actual_ret": -13.62,
           "actual_return": -13.62,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -5557.5
         },
         {
           "symbol": "TVSMOTOR",
@@ -78952,7 +80177,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.74,
           "actual_ret": -6.89,
           "actual_return": -6.89,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -43242.5
         },
         {
           "symbol": "POLICYBZR",
@@ -79001,7 +80227,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.27,
           "actual_ret": -0.42,
           "actual_return": -0.42,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -1787.5
         },
         {
           "symbol": "SUZLON",
@@ -79050,7 +80277,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.21,
           "actual_ret": 7.36,
           "actual_return": 7.36,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 1362.5
         },
         {
           "symbol": "IREDA",
@@ -79099,7 +80327,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.49,
           "actual_ret": 12.64,
           "actual_return": 12.64,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 7085.0
         },
         {
           "symbol": "ADANIENT",
@@ -79198,7 +80427,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.25,
           "actual_ret": -3.4,
           "actual_return": -3.4,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -1382.5
         },
         {
           "symbol": "JUBLFOOD",
@@ -79247,7 +80477,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.34,
           "actual_ret": 0.49,
           "actual_return": 0.49,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 747.5
         },
         {
           "symbol": "PAYTM",
@@ -79296,7 +80527,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.94,
           "actual_ret": 0.09,
           "actual_return": 0.09,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 225.0
         },
         {
           "symbol": "ICICIGI",
@@ -79345,7 +80577,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.61,
           "actual_ret": -0.76,
           "actual_return": -0.76,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -3512.5
         },
         {
           "symbol": "RVNL",
@@ -79394,7 +80627,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.6,
           "actual_ret": 4.75,
           "actual_return": 4.75,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 4935.0
         },
         {
           "symbol": "ASIANPAINT",
@@ -79493,7 +80727,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.46,
           "actual_ret": 2.61,
           "actual_return": 2.61,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 5442.5
         },
         {
           "symbol": "BANKINDIA",
@@ -79542,7 +80777,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.39,
           "actual_ret": 5.54,
           "actual_return": 5.54,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 1355.0
         },
         {
           "symbol": "SAGILITY",
@@ -79591,7 +80827,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 21.42,
           "actual_ret": 20.57,
           "actual_return": 20.57,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 1845.0
         },
         {
           "symbol": "HCLTECH",
@@ -79690,7 +80927,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.94,
           "actual_ret": -6.09,
           "actual_return": -6.09,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -8847.5
         },
         {
           "symbol": "NMDC",
@@ -79739,7 +80977,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.54,
           "actual_ret": -10.69,
           "actual_return": -10.69,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -1967.5
         },
         {
           "symbol": "HDFCAMC",
@@ -79788,7 +81027,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.07,
           "actual_ret": 6.22,
           "actual_return": 6.22,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 31530.0
         },
         {
           "symbol": "SONACOMS",
@@ -79837,7 +81077,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.22,
           "actual_ret": 6.37,
           "actual_return": 6.37,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 9985.0
         },
         {
           "symbol": "MCX",
@@ -79886,7 +81127,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.15,
           "actual_ret": -3.3,
           "actual_return": -3.3,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -10792.5
         },
         {
           "symbol": "SOLARINDS",
@@ -79935,7 +81177,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.77,
           "actual_ret": 4.92,
           "actual_return": 4.92,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 125750.0
         },
         {
           "symbol": "NATIONALUM",
@@ -79984,7 +81227,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.67,
           "actual_ret": 2.82,
           "actual_return": 2.82,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 1430.0
         },
         {
           "symbol": "LICI",
@@ -80033,7 +81277,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.57,
           "actual_ret": 1.72,
           "actual_return": 1.72,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 1995.0
         },
         {
           "symbol": "NESTLEIND",
@@ -80132,7 +81377,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.93,
           "actual_ret": -6.08,
           "actual_return": -6.08,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -15895.0
         },
         {
           "symbol": "ABCAPITAL",
@@ -80181,7 +81427,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.09,
           "actual_ret": 6.24,
           "actual_return": 6.24,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 3067.5
         },
         {
           "symbol": "BRITANNIA",
@@ -80230,7 +81477,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.94,
           "actual_ret": -14.09,
           "actual_return": -14.09,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -197955.0
         },
         {
           "symbol": "SHREECEM",
@@ -80279,7 +81527,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.77,
           "actual_ret": 2.92,
           "actual_return": 2.92,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 174157.5
         },
         {
           "symbol": "COLPAL",
@@ -80328,7 +81577,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.89,
           "actual_ret": 10.04,
           "actual_return": 10.04,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 89420.0
         },
         {
           "symbol": "PIIND",
@@ -80377,7 +81627,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.9,
           "actual_ret": -5.05,
           "actual_return": -5.05,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -57220.0
         },
         {
           "symbol": "HINDUNILVR",
@@ -80476,7 +81727,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.3,
           "actual_ret": -1.45,
           "actual_return": -1.45,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -5630.0
         },
         {
           "symbol": "ASHOKLEY",
@@ -80525,7 +81777,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.18,
           "actual_ret": -6.33,
           "actual_return": -6.33,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -1760.0
         },
         {
           "symbol": "ABB",
@@ -80574,7 +81827,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.71,
           "actual_ret": 0.86,
           "actual_return": 0.86,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 14720.0
         },
         {
           "symbol": "PNBHOUSING",
@@ -80623,7 +81877,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.31,
           "actual_ret": 9.46,
           "actual_return": 9.46,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 22110.0
         },
         {
           "symbol": "HYUNDAI",
@@ -80672,7 +81927,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.85,
           "actual_ret": -1.0,
           "actual_return": -1.0,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -4467.5
         },
         {
           "symbol": "TITAN",
@@ -80771,7 +82027,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.19,
           "actual_ret": 2.34,
           "actual_return": 2.34,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 12235.0
         },
         {
           "symbol": "YESBANK",
@@ -80820,7 +82077,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.67,
           "actual_ret": 7.82,
           "actual_return": 7.82,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 422.5
         },
         {
           "symbol": "LT",
@@ -80919,7 +82177,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.26,
           "actual_ret": 2.41,
           "actual_return": 2.41,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 4270.0
         },
         {
           "symbol": "PFC",
@@ -80968,7 +82227,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.22,
           "actual_ret": 7.37,
           "actual_return": 7.37,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 8452.5
         },
         {
           "symbol": "CHOLAFIN",
@@ -81017,7 +82277,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.88,
           "actual_ret": -6.03,
           "actual_return": -6.03,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -19277.5
         },
         {
           "symbol": "TCS",
@@ -81116,7 +82377,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.67,
           "actual_ret": -16.82,
           "actual_return": -16.82,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -42050.0
         },
         {
           "symbol": "ADANIGREEN",
@@ -81165,7 +82427,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.75,
           "actual_ret": -9.9,
           "actual_return": -9.9,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -28425.0
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -81214,7 +82477,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.56,
           "actual_ret": 1.71,
           "actual_return": 1.71,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 7627.5
         },
         {
           "symbol": "TATAPOWER",
@@ -81263,7 +82527,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.49,
           "actual_ret": 5.64,
           "actual_return": 5.64,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 5965.0
         },
         {
           "symbol": "VMM",
@@ -81312,7 +82577,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.46,
           "actual_ret": -3.61,
           "actual_return": -3.61,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -9025.0
         },
         {
           "symbol": "KALYANKJIL",
@@ -81361,7 +82627,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.27,
           "actual_ret": -0.42,
           "actual_return": -0.42,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -737.5
         },
         {
           "symbol": "TECHM",
@@ -81460,7 +82727,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.0,
           "actual_ret": -2.15,
           "actual_return": -2.15,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -1857.5
         },
         {
           "symbol": "RELIANCE",
@@ -81559,7 +82827,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.73,
           "actual_ret": -11.88,
           "actual_return": -11.88,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -136850.0
         },
         {
           "symbol": "PNB",
@@ -81608,7 +82877,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.57,
           "actual_ret": -5.72,
           "actual_return": -5.72,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -1445.0
         },
         {
           "symbol": "COFORGE",
@@ -81657,7 +82927,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.06,
           "actual_ret": 0.21,
           "actual_return": 0.21,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 1002.5
         },
         {
           "symbol": "RBLBANK",
@@ -81706,7 +82977,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.04,
           "actual_ret": -2.19,
           "actual_return": -2.19,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -872.5
         },
         {
           "symbol": "TRENT",
@@ -81805,7 +83077,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.09,
           "actual_ret": -0.24,
           "actual_return": -0.24,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -1377.5
         },
         {
           "symbol": "CANBK",
@@ -81854,7 +83127,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.14,
           "actual_ret": -3.29,
           "actual_return": -3.29,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -755.0
         },
         {
           "symbol": "VEDL",
@@ -81903,7 +83177,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.55,
           "actual_ret": 3.7,
           "actual_return": 3.7,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 4320.0
         },
         {
           "symbol": "HDFCBANK",
@@ -82002,7 +83277,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.95,
           "actual_ret": 5.1,
           "actual_return": 5.1,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 38985.0
         },
         {
           "symbol": "SUPREMEIND",
@@ -82051,7 +83327,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.81,
           "actual_ret": -2.96,
           "actual_return": -2.96,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -35662.5
         },
         {
           "symbol": "EICHERMOT",
@@ -82200,7 +83477,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.52,
           "actual_ret": 0.67,
           "actual_return": 0.67,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 997.5
         },
         {
           "symbol": "KPITTECH",
@@ -82249,7 +83527,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.65,
           "actual_ret": -8.8,
           "actual_return": -8.8,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -39062.5
         },
         {
           "symbol": "KFINTECH",
@@ -82298,7 +83577,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 18.07,
           "actual_ret": 17.22,
           "actual_return": 17.22,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 41235.0
         },
         {
           "symbol": "PATANJALI",
@@ -82347,7 +83627,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.77,
           "actual_ret": 2.92,
           "actual_return": 2.92,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 4332.5
         },
         {
           "symbol": "KAYNES",
@@ -82396,7 +83677,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.31,
           "actual_ret": 0.46,
           "actual_return": 0.46,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 8225.0
         },
         {
           "symbol": "MOTILALOFS",
@@ -82445,7 +83727,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.91,
           "actual_ret": -1.06,
           "actual_return": -1.06,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -2620.0
         },
         {
           "symbol": "ADANIPOWER",
@@ -82494,7 +83777,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.87,
           "actual_ret": -11.02,
           "actual_return": -11.02,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -3245.0
         },
         {
           "symbol": "PETRONET",
@@ -82543,7 +83827,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.24,
           "actual_ret": 3.39,
           "actual_return": 3.39,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 2612.5
         },
         {
           "symbol": "PREMIERENE",
@@ -82592,7 +83877,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.21,
           "actual_ret": -11.36,
           "actual_return": -11.36,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -30975.0
         },
         {
           "symbol": "BAJFINANCE",
@@ -82691,7 +83977,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.22,
           "actual_ret": -9.37,
           "actual_return": -9.37,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -5245.0
         },
         {
           "symbol": "ICICIPRULI",
@@ -82740,7 +84027,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.66,
           "actual_ret": 0.81,
           "actual_return": 0.81,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 1355.0
         },
         {
           "symbol": "DRREDDY",
@@ -82889,7 +84177,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.94,
           "actual_ret": 10.09,
           "actual_return": 10.09,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 138707.5
         },
         {
           "symbol": "INDIGO",
@@ -83447,7 +84736,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.81,
           "actual_ret": 7.96,
           "actual_return": 7.96,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 5407.5
         },
         {
           "symbol": "POWERGRID",
@@ -83946,7 +85236,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.65,
           "actual_ret": 5.8,
           "actual_return": 5.8,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 32780.0
         },
         {
           "symbol": "JSWSTEEL",
@@ -84095,7 +85386,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.56,
           "actual_ret": 1.71,
           "actual_return": 1.71,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 8460.0
         },
         {
           "symbol": "NAM-INDIA",
@@ -84144,7 +85436,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.91,
           "actual_ret": -1.06,
           "actual_return": -1.06,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -1697.5
         },
         {
           "symbol": "ADANIGREEN",
@@ -84193,7 +85486,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.32,
           "actual_ret": 5.47,
           "actual_return": 5.47,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 25275.0
         },
         {
           "symbol": "GAIL",
@@ -84242,7 +85536,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.5,
           "actual_ret": -0.65,
           "actual_return": -0.65,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -357.5
         },
         {
           "symbol": "TATAELXSI",
@@ -84291,7 +85586,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.69,
           "actual_ret": 1.84,
           "actual_return": 1.84,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 31205.0
         },
         {
           "symbol": "MANKIND",
@@ -84340,7 +85636,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.58,
           "actual_ret": 1.73,
           "actual_return": 1.73,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 9085.0
         },
         {
           "symbol": "PGEL",
@@ -84389,7 +85686,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.23,
           "actual_ret": -9.38,
           "actual_return": -9.38,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -9230.0
         },
         {
           "symbol": "ADANIPOWER",
@@ -84438,7 +85736,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.36,
           "actual_ret": 0.51,
           "actual_return": 0.51,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 177.5
         },
         {
           "symbol": "MAZDOCK",
@@ -84487,7 +85786,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.11,
           "actual_ret": 11.26,
           "actual_return": 11.26,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 67132.5
         },
         {
           "symbol": "ABB",
@@ -84536,7 +85836,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.63,
           "actual_ret": 1.78,
           "actual_return": 1.78,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 34915.0
         },
         {
           "symbol": "SBIN",
@@ -84635,7 +85936,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.84,
           "actual_ret": 11.99,
           "actual_return": 11.99,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 29975.0
         },
         {
           "symbol": "MARICO",
@@ -84684,7 +85986,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.58,
           "actual_ret": 4.73,
           "actual_return": 4.73,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 7880.0
         },
         {
           "symbol": "POLICYBZR",
@@ -84733,7 +86036,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.29,
           "actual_ret": 2.44,
           "actual_return": 2.44,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 8400.0
         },
         {
           "symbol": "SAGILITY",
@@ -84782,7 +86086,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.36,
           "actual_ret": 4.51,
           "actual_return": 4.51,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 11275.0
         },
         {
           "symbol": "INDUSTOWER",
@@ -84831,7 +86136,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.46,
           "actual_ret": 4.61,
           "actual_return": 4.61,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 4825.0
         },
         {
           "symbol": "LUPIN",
@@ -84880,7 +86186,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.38,
           "actual_ret": 0.53,
           "actual_return": 0.53,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 2885.0
         },
         {
           "symbol": "GMRAIRPORT",
@@ -84929,7 +86236,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.75,
           "actual_ret": 2.9,
           "actual_return": 2.9,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 702.5
         },
         {
           "symbol": "SONACOMS",
@@ -84978,7 +86286,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.49,
           "actual_ret": -0.64,
           "actual_return": -0.64,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -1147.5
         },
         {
           "symbol": "AUBANK",
@@ -85027,7 +86336,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.19,
           "actual_ret": 4.34,
           "actual_return": 4.34,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 6815.0
         },
         {
           "symbol": "MOTHERSON",
@@ -85076,7 +86386,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.71,
           "actual_ret": -4.86,
           "actual_return": -4.86,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -1477.5
         },
         {
           "symbol": "OBEROIRLTY",
@@ -85125,7 +86436,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.57,
           "actual_ret": -4.72,
           "actual_return": -4.72,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -21202.5
         },
         {
           "symbol": "GODREJPROP",
@@ -85174,7 +86486,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.37,
           "actual_ret": 1.52,
           "actual_return": 1.52,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 12625.0
         },
         {
           "symbol": "IREDA",
@@ -85223,7 +86536,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.51,
           "actual_ret": -1.66,
           "actual_return": -1.66,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -945.0
         },
         {
           "symbol": "POWERINDIA",
@@ -85272,7 +86586,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "ALKEM",
@@ -85321,7 +86636,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.76,
           "actual_ret": -1.91,
           "actual_return": -1.91,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -29772.5
         },
         {
           "symbol": "BAJAJFINSV",
@@ -85420,7 +86736,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.29,
           "actual_ret": 8.44,
           "actual_return": 8.44,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 22275.0
         },
         {
           "symbol": "BLUESTARCO",
@@ -85469,7 +86786,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.14,
           "actual_ret": -0.29,
           "actual_return": -0.29,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -1262.5
         },
         {
           "symbol": "MANAPPURAM",
@@ -85518,7 +86836,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.86,
           "actual_ret": -2.01,
           "actual_return": -2.01,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -1010.0
         },
         {
           "symbol": "PHOENIXLTD",
@@ -85567,7 +86886,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.72,
           "actual_ret": -4.87,
           "actual_return": -4.87,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -21197.5
         },
         {
           "symbol": "INDHOTEL",
@@ -85616,7 +86936,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.77,
           "actual_ret": 1.92,
           "actual_return": 1.92,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 2927.5
         },
         {
           "symbol": "HDFCBANK",
@@ -85715,7 +87036,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.46,
           "actual_ret": -3.61,
           "actual_return": -3.61,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -9025.0
         },
         {
           "symbol": "INDUSINDBK",
@@ -85764,7 +87086,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.75,
           "actual_ret": -1.9,
           "actual_return": -1.9,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -6775.0
         },
         {
           "symbol": "YESBANK",
@@ -85813,7 +87136,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.33,
           "actual_ret": -0.48,
           "actual_return": -0.48,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -27.5
         },
         {
           "symbol": "BHEL",
@@ -85862,7 +87186,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.86,
           "actual_ret": -6.01,
           "actual_return": -6.01,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -3977.5
         },
         {
           "symbol": "SWIGGY",
@@ -85911,7 +87236,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "HEROMOTOCO",
@@ -85960,7 +87286,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.94,
           "actual_ret": -0.09,
           "actual_return": -0.09,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -1122.5
         },
         {
           "symbol": "INFY",
@@ -86059,7 +87386,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.99,
           "actual_ret": -0.14,
           "actual_return": -0.14,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -360.0
         },
         {
           "symbol": "INOXWIND",
@@ -86108,7 +87436,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.74,
           "actual_ret": -0.89,
           "actual_return": -0.89,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -382.5
         },
         {
           "symbol": "CDSL",
@@ -86157,7 +87486,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.59,
           "actual_ret": 1.74,
           "actual_return": 1.74,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 6057.5
         },
         {
           "symbol": "SRF",
@@ -86206,7 +87536,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.11,
           "actual_ret": 0.26,
           "actual_return": 0.26,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 1525.0
         },
         {
           "symbol": "COFORGE",
@@ -86255,7 +87586,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.11,
           "actual_ret": -0.26,
           "actual_return": -0.26,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -882.5
         },
         {
           "symbol": "IDEA",
@@ -86304,7 +87636,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.51,
           "actual_ret": 5.66,
           "actual_return": 5.66,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 227.5
         },
         {
           "symbol": "BANKINDIA",
@@ -86353,7 +87686,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.1,
           "actual_ret": 1.25,
           "actual_return": 1.25,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 352.5
         },
         {
           "symbol": "CUMMINSIND",
@@ -86402,7 +87736,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.91,
           "actual_ret": 7.06,
           "actual_return": 7.06,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 66047.5
         },
         {
           "symbol": "COLPAL",
@@ -86451,7 +87786,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.77,
           "actual_ret": -5.92,
           "actual_return": -5.92,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -41880.0
         },
         {
           "symbol": "NYKAA",
@@ -86500,7 +87836,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.86,
           "actual_ret": -1.01,
           "actual_return": -1.01,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -492.5
         },
         {
           "symbol": "BSE",
@@ -86549,7 +87886,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.09,
           "actual_ret": 6.24,
           "actual_return": 6.24,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 17742.5
         },
         {
           "symbol": "CAMS",
@@ -86598,7 +87936,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.99,
           "actual_ret": 10.14,
           "actual_return": 10.14,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 18372.5
         },
         {
           "symbol": "HINDPETRO",
@@ -86647,7 +87986,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.21,
           "actual_ret": 5.36,
           "actual_return": 5.36,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 5447.5
         },
         {
           "symbol": "UPL",
@@ -86696,7 +88036,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.04,
           "actual_ret": -0.19,
           "actual_return": -0.19,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -257.5
         },
         {
           "symbol": "PRESTIGE",
@@ -86745,7 +88086,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.23,
           "actual_ret": -0.38,
           "actual_return": -0.38,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -1737.5
         },
         {
           "symbol": "ICICIPRULI",
@@ -86794,7 +88136,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.94,
           "actual_ret": 0.09,
           "actual_return": 0.09,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 160.0
         },
         {
           "symbol": "HINDUNILVR",
@@ -86943,7 +88286,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.4,
           "actual_ret": -1.55,
           "actual_return": -1.55,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -902.5
         },
         {
           "symbol": "KPITTECH",
@@ -86992,7 +88336,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.82,
           "actual_ret": -3.97,
           "actual_return": -3.97,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -18335.0
         },
         {
           "symbol": "TECHM",
@@ -87091,7 +88436,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "CONCOR",
@@ -87140,7 +88486,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.55,
           "actual_ret": 3.7,
           "actual_return": 3.7,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 8542.5
         },
         {
           "symbol": "NMDC",
@@ -87189,7 +88536,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.31,
           "actual_ret": 1.46,
           "actual_return": 1.46,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 235.0
         },
         {
           "symbol": "NBCC",
@@ -87238,7 +88586,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.37,
           "actual_ret": 0.52,
           "actual_return": 0.52,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 152.5
         },
         {
           "symbol": "JSWENERGY",
@@ -87287,7 +88636,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.71,
           "actual_ret": -6.86,
           "actual_return": -6.86,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -12285.0
         },
         {
           "symbol": "LODHA",
@@ -87336,7 +88686,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.04,
           "actual_ret": -11.19,
           "actual_return": -11.19,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -36445.0
         },
         {
           "symbol": "TORNTPHARM",
@@ -87385,7 +88736,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.95,
           "actual_ret": -4.1,
           "actual_return": -4.1,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -28517.5
         },
         {
           "symbol": "OFSS",
@@ -87434,7 +88786,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.43,
           "actual_ret": -5.58,
           "actual_return": -5.58,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -132595.0
         },
         {
           "symbol": "IOC",
@@ -87483,7 +88836,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.78,
           "actual_ret": -1.93,
           "actual_return": -1.93,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -772.5
         },
         {
           "symbol": "FEDERALBNK",
@@ -87532,7 +88886,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.97,
           "actual_ret": 5.12,
           "actual_return": 5.12,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 2450.0
         },
         {
           "symbol": "NHPC",
@@ -87581,7 +88936,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.97,
           "actual_ret": -2.12,
           "actual_return": -2.12,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -477.5
         },
         {
           "symbol": "M&M",
@@ -87680,7 +89036,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.92,
           "actual_ret": 2.07,
           "actual_return": 2.07,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 123885.0
         },
         {
           "symbol": "KOTAKBANK",
@@ -87779,7 +89136,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.2,
           "actual_ret": 0.35,
           "actual_return": 0.35,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 2480.0
         },
         {
           "symbol": "DABUR",
@@ -87828,7 +89186,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.42,
           "actual_ret": -2.57,
           "actual_return": -2.57,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -3857.5
         },
         {
           "symbol": "COCHINSHIP",
@@ -87877,7 +89236,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.81,
           "actual_ret": -8.96,
           "actual_return": -8.96,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -51392.5
         },
         {
           "symbol": "AMBER",
@@ -87926,7 +89286,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.23,
           "actual_ret": -3.38,
           "actual_return": -3.38,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -37537.5
         },
         {
           "symbol": "AXISBANK",
@@ -88025,7 +89386,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.93,
           "actual_ret": -0.08,
           "actual_return": -0.08,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -220.0
         },
         {
           "symbol": "PAGEIND",
@@ -88074,7 +89436,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.62,
           "actual_ret": 3.77,
           "actual_return": 3.77,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 375262.5
         },
         {
           "symbol": "BANDHANBNK",
@@ -88123,7 +89486,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.03,
           "actual_ret": -6.18,
           "actual_return": -6.18,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -2882.5
         },
         {
           "symbol": "AUROPHARMA",
@@ -88172,7 +89536,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.29,
           "actual_ret": 4.44,
           "actual_return": 4.44,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 16600.0
         },
         {
           "symbol": "MAHABANK",
@@ -88221,7 +89586,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.56,
           "actual_ret": -1.71,
           "actual_return": -1.71,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -250.0
         },
         {
           "symbol": "PREMIERENE",
@@ -88270,7 +89636,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "DIXON",
@@ -88319,7 +89686,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.57,
           "actual_ret": 10.72,
           "actual_return": 10.72,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 320842.5
         },
         {
           "symbol": "CROMPTON",
@@ -88368,7 +89736,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.93,
           "actual_ret": -4.08,
           "actual_return": -4.08,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -4665.0
         },
         {
           "symbol": "FORCEMOT",
@@ -88417,7 +89786,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.02,
           "actual_ret": -3.17,
           "actual_return": -3.17,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -57397.5
         },
         {
           "symbol": "BIOCON",
@@ -88466,7 +89836,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.05,
           "actual_ret": -3.2,
           "actual_return": -3.2,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -2830.0
         },
         {
           "symbol": "ADANIENT",
@@ -88565,7 +89936,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.06,
           "actual_ret": -9.21,
           "actual_return": -9.21,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -36070.0
         },
         {
           "symbol": "WAAREEENER",
@@ -88614,7 +89986,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.14,
           "actual_ret": -12.29,
           "actual_return": -12.29,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -30725.0
         },
         {
           "symbol": "RECLTD",
@@ -88663,7 +90036,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.62,
           "actual_ret": 1.77,
           "actual_return": 1.77,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 2230.0
         },
         {
           "symbol": "VEDL",
@@ -88712,7 +90086,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.55,
           "actual_ret": 3.7,
           "actual_return": 3.7,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 3672.5
         },
         {
           "symbol": "KFINTECH",
@@ -88761,7 +90136,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.14,
           "actual_ret": 16.29,
           "actual_return": 16.29,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 39392.5
         },
         {
           "symbol": "APLAPOLLO",
@@ -88810,7 +90186,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.2,
           "actual_ret": -4.35,
           "actual_return": -4.35,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -16752.5
         },
         {
           "symbol": "TMPV",
@@ -88909,7 +90286,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.82,
           "actual_ret": 3.97,
           "actual_return": 3.97,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 5435.0
         },
         {
           "symbol": "POLYCAB",
@@ -88958,7 +90336,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.4,
           "actual_ret": 5.55,
           "actual_return": 5.55,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 88137.5
         },
         {
           "symbol": "DELHIVERY",
@@ -89007,7 +90386,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.23,
           "actual_ret": 1.38,
           "actual_return": 1.38,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 1462.5
         },
         {
           "symbol": "CGPOWER",
@@ -89056,7 +90436,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.12,
           "actual_ret": 0.27,
           "actual_return": 0.27,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 497.5
         },
         {
           "symbol": "UNITDSPR",
@@ -89105,7 +90486,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.22,
           "actual_ret": -4.37,
           "actual_return": -4.37,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -16147.5
         },
         {
           "symbol": "FORTIS",
@@ -89154,7 +90536,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.08,
           "actual_ret": -7.23,
           "actual_return": -7.23,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -8190.0
         },
         {
           "symbol": "PATANJALI",
@@ -89203,7 +90586,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.29,
           "actual_ret": 2.44,
           "actual_return": 2.44,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 3457.5
         },
         {
           "symbol": "VBL",
@@ -89252,7 +90636,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.88,
           "actual_ret": 0.03,
           "actual_return": 0.03,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 50.0
         },
         {
           "symbol": "SUNPHARMA",
@@ -89351,7 +90736,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.98,
           "actual_ret": -9.13,
           "actual_return": -9.13,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -32842.5
         },
         {
           "symbol": "HINDZINC",
@@ -89400,7 +90786,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.39,
           "actual_ret": 16.54,
           "actual_return": 16.54,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 23585.0
         },
         {
           "symbol": "ETERNAL",
@@ -89549,7 +90936,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.52,
           "actual_ret": -1.67,
           "actual_return": -1.67,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -43100.0
         },
         {
           "symbol": "BAJAJHLDNG",
@@ -89598,7 +90986,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.39,
           "actual_ret": -4.54,
           "actual_return": -4.54,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -114745.0
         },
         {
           "symbol": "SUZLON",
@@ -89647,7 +91036,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.89,
           "actual_ret": -0.04,
           "actual_return": -0.04,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -5.0
         },
         {
           "symbol": "SBILIFE",
@@ -89746,7 +91136,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.05,
           "actual_ret": -6.2,
           "actual_return": -6.2,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -494930.0
         },
         {
           "symbol": "ABCAPITAL",
@@ -89795,7 +91186,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.88,
           "actual_ret": -4.03,
           "actual_return": -4.03,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -2297.5
         },
         {
           "symbol": "UNIONBANK",
@@ -89844,7 +91236,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.26,
           "actual_ret": -3.41,
           "actual_return": -3.41,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -942.5
         },
         {
           "symbol": "ATHERENERG",
@@ -89893,7 +91286,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -89942,7 +91336,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.2,
           "actual_ret": -6.35,
           "actual_return": -6.35,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -1192.5
         },
         {
           "symbol": "CHOLAFIN",
@@ -89991,7 +91386,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.92,
           "actual_ret": -5.07,
           "actual_return": -5.07,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -17505.0
         },
         {
           "symbol": "ICICIGI",
@@ -90040,7 +91436,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.26,
           "actual_ret": -5.41,
           "actual_return": -5.41,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -26775.0
         },
         {
           "symbol": "DIVISLAB",
@@ -90089,7 +91486,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.24,
           "actual_ret": 2.39,
           "actual_return": 2.39,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 26257.5
         },
         {
           "symbol": "EICHERMOT",
@@ -90188,7 +91586,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.39,
           "actual_ret": -5.54,
           "actual_return": -5.54,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -20360.0
         },
         {
           "symbol": "PAYTM",
@@ -90237,7 +91636,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.66,
           "actual_ret": -5.81,
           "actual_return": -5.81,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -9112.5
         },
         {
           "symbol": "HCLTECH",
@@ -90336,7 +91736,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.36,
           "actual_ret": -4.51,
           "actual_return": -4.51,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -30147.5
         },
         {
           "symbol": "MFSL",
@@ -90385,7 +91786,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.11,
           "actual_ret": 4.26,
           "actual_return": 4.26,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 10625.0
         },
         {
           "symbol": "PFC",
@@ -90434,7 +91836,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.17,
           "actual_ret": -0.32,
           "actual_return": -0.32,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -362.5
         },
         {
           "symbol": "PERSISTENT",
@@ -90483,7 +91886,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.85,
           "actual_ret": 3.0,
           "actual_return": 3.0,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 35225.0
         },
         {
           "symbol": "ADANIPORTS",
@@ -90582,7 +91986,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.9,
           "actual_ret": -7.05,
           "actual_return": -7.05,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -31077.5
         },
         {
           "symbol": "HAVELLS",
@@ -90631,7 +92036,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.87,
           "actual_ret": -2.02,
           "actual_return": -2.02,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -8895.0
         },
         {
           "symbol": "CANBK",
@@ -90680,7 +92086,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.77,
           "actual_ret": -4.92,
           "actual_return": -4.92,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -1215.0
         },
         {
           "symbol": "ADANIENSOL",
@@ -90729,7 +92136,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.55,
           "actual_ret": 0.7,
           "actual_return": 0.7,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 1750.0
         },
         {
           "symbol": "GRASIM",
@@ -90828,7 +92236,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 40.33,
           "actual_ret": -39.48,
           "actual_return": -39.48,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -134212.5
         },
         {
           "symbol": "ASIANPAINT",
@@ -90977,7 +92386,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.54,
           "actual_ret": 7.69,
           "actual_return": 7.69,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 26300.0
         },
         {
           "symbol": "INDIANB",
@@ -91026,7 +92436,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.35,
           "actual_ret": 1.5,
           "actual_return": 1.5,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 1992.5
         },
         {
           "symbol": "HAL",
@@ -91075,7 +92486,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.08,
           "actual_ret": 6.23,
           "actual_return": 6.23,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 81262.5
         },
         {
           "symbol": "JUBLFOOD",
@@ -91124,7 +92536,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.51,
           "actual_ret": -1.66,
           "actual_return": -1.66,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -2357.5
         },
         {
           "symbol": "AMBUJACEM",
@@ -91173,7 +92586,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.82,
           "actual_ret": -0.97,
           "actual_return": -0.97,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -1500.0
         },
         {
           "symbol": "TATAPOWER",
@@ -91222,7 +92636,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.26,
           "actual_ret": -6.41,
           "actual_return": -6.41,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -6967.5
         },
         {
           "symbol": "LICHSGFIN",
@@ -91271,7 +92686,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.49,
           "actual_ret": -1.64,
           "actual_return": -1.64,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -2715.0
         },
         {
           "symbol": "KALYANKJIL",
@@ -91320,7 +92736,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.19,
           "actual_ret": -1.34,
           "actual_return": -1.34,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -1845.0
         },
         {
           "symbol": "LTF",
@@ -91369,7 +92786,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.86,
           "actual_ret": 0.01,
           "actual_return": 0.01,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 5.0
         },
         {
           "symbol": "LTM",
@@ -91418,7 +92836,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.07,
           "actual_ret": -3.22,
           "actual_return": -3.22,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -42145.0
         },
         {
           "symbol": "BHARATFORG",
@@ -91467,7 +92886,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.74,
           "actual_ret": -1.89,
           "actual_return": -1.89,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -7800.0
         },
         {
           "symbol": "BAJFINANCE",
@@ -91566,7 +92986,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.07,
           "actual_ret": 1.22,
           "actual_return": 1.22,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 2537.5
         },
         {
           "symbol": "PIDILITIND",
@@ -91615,7 +93036,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.13,
           "actual_ret": -1.28,
           "actual_return": -1.28,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -5102.5
         },
         {
           "symbol": "NESTLEIND",
@@ -91714,7 +93136,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.69,
           "actual_ret": 12.84,
           "actual_return": 12.84,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 147447.5
         },
         {
           "symbol": "SUPREMEIND",
@@ -91763,7 +93186,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.68,
           "actual_ret": -3.83,
           "actual_return": -3.83,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -52035.0
         },
         {
           "symbol": "TRENT",
@@ -91862,7 +93286,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.2,
           "actual_ret": 8.35,
           "actual_return": 8.35,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 4265.0
         },
         {
           "symbol": "PNB",
@@ -91911,7 +93336,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.02,
           "actual_ret": 2.17,
           "actual_return": 2.17,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 585.0
         },
         {
           "symbol": "PIIND",
@@ -91960,7 +93386,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.69,
           "actual_ret": 7.84,
           "actual_return": 7.84,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 75812.5
         },
         {
           "symbol": "MCX",
@@ -92009,7 +93436,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.57,
           "actual_ret": 9.72,
           "actual_return": 9.72,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 25490.0
         },
         {
           "symbol": "ASHOKLEY",
@@ -92058,7 +93486,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.22,
           "actual_ret": -3.37,
           "actual_return": -3.37,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -985.0
         },
         {
           "symbol": "TIINDIA",
@@ -92107,7 +93536,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.45,
           "actual_ret": 0.6,
           "actual_return": 0.6,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 6085.0
         },
         {
           "symbol": "APOLLOHOSP",
@@ -92206,7 +93636,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.0,
           "actual_ret": -2.15,
           "actual_return": -2.15,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -9162.5
         },
         {
           "symbol": "GLENMARK",
@@ -92255,7 +93686,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.45,
           "actual_ret": 4.6,
           "actual_return": 4.6,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 19785.0
         },
         {
           "symbol": "NATIONALUM",
@@ -92304,7 +93736,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.39,
           "actual_ret": 2.54,
           "actual_return": 2.54,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 1122.5
         },
         {
           "symbol": "MAXHEALTH",
@@ -92403,7 +93836,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.69,
           "actual_ret": -11.84,
           "actual_return": -11.84,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -135240.0
         },
         {
           "symbol": "OIL",
@@ -92452,7 +93886,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.32,
           "actual_ret": 3.47,
           "actual_return": 3.47,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 5410.0
         },
         {
           "symbol": "SAIL",
@@ -92501,7 +93936,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.21,
           "actual_ret": 6.36,
           "actual_return": 6.36,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 2352.5
         },
         {
           "symbol": "RBLBANK",
@@ -92550,7 +93986,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.36,
           "actual_ret": 5.51,
           "actual_return": 5.51,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 2967.5
         },
         {
           "symbol": "KAYNES",
@@ -92599,7 +94036,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.25,
           "actual_ret": 2.4,
           "actual_return": 2.4,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 33375.0
         },
         {
           "symbol": "LICI",
@@ -92648,7 +94086,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.23,
           "actual_ret": -9.38,
           "actual_return": -9.38,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -11400.0
         },
         {
           "symbol": "LT",
@@ -92747,7 +94186,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.32,
           "actual_ret": -0.47,
           "actual_return": -0.47,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -407.5
         },
         {
           "symbol": "TCS",
@@ -92846,7 +94286,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.76,
           "actual_ret": 4.91,
           "actual_return": 4.91,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 59287.5
         },
         {
           "symbol": "MOTILALOFS",
@@ -92895,7 +94336,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.69,
           "actual_ret": -0.84,
           "actual_return": -0.84,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -1575.0
         },
         {
           "symbol": "360ONE",
@@ -92944,7 +94386,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.51,
           "actual_ret": -1.66,
           "actual_return": -1.66,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -3935.0
         },
         {
           "symbol": "BAJAJ-AUTO",
@@ -93043,7 +94486,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.4,
           "actual_ret": -1.55,
           "actual_return": -1.55,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -855.0
         },
         {
           "symbol": "ASTRAL",
@@ -93092,7 +94536,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.8,
           "actual_ret": 5.95,
           "actual_return": 5.95,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 30822.5
         },
         {
           "symbol": "LAURUSLABS",
@@ -93141,7 +94586,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.39,
           "actual_ret": 0.54,
           "actual_return": 0.54,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 572.5
         },
         {
           "symbol": "SBICARD",
@@ -93190,7 +94636,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.26,
           "actual_ret": -1.41,
           "actual_return": -1.41,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -2475.0
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -93239,7 +94686,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.49,
           "actual_ret": -3.64,
           "actual_return": -3.64,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -15957.5
         },
         {
           "symbol": "JINDALSTEL",
@@ -93288,7 +94736,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.16,
           "actual_ret": 10.31,
           "actual_return": 10.31,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 24325.0
         },
         {
           "symbol": "TITAN",
@@ -93487,7 +94936,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.3,
           "actual_ret": 2.45,
           "actual_return": 2.45,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 34412.5
         },
         {
           "symbol": "MARUTI",
@@ -93845,7 +95295,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.18,
           "actual_ret": 2.33,
           "actual_return": 2.33,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 1567.5
         },
         {
           "symbol": "ONGC",
@@ -94344,7 +95795,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.32,
           "actual_ret": 16.47,
           "actual_return": 16.47,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 5577.5
         },
         {
           "symbol": "PETRONET",
@@ -94393,7 +95845,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.48,
           "actual_ret": -1.63,
           "actual_return": -1.63,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -1160.0
         },
         {
           "symbol": "PERSISTENT",
@@ -94442,7 +95895,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.61,
           "actual_ret": 1.76,
           "actual_return": 1.76,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 17420.0
         },
         {
           "symbol": "NAM-INDIA",
@@ -94491,7 +95945,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.47,
           "actual_ret": 8.62,
           "actual_return": 8.62,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 12397.5
         },
         {
           "symbol": "BAJAJHLDNG",
@@ -94540,7 +95995,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.21,
           "actual_ret": -4.36,
           "actual_return": -4.36,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -87002.5
         },
         {
           "symbol": "ASHOKLEY",
@@ -94589,7 +96045,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.82,
           "actual_ret": -0.97,
           "actual_return": -0.97,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -275.0
         },
         {
           "symbol": "INFY",
@@ -94738,7 +96195,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.07,
           "actual_ret": 0.22,
           "actual_return": 0.22,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 355.0
         },
         {
           "symbol": "ASTRAL",
@@ -94787,7 +96245,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.71,
           "actual_ret": -2.86,
           "actual_return": -2.86,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -14865.0
         },
         {
           "symbol": "FEDERALBNK",
@@ -94836,7 +96295,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.88,
           "actual_ret": 0.03,
           "actual_return": 0.03,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 12.5
         },
         {
           "symbol": "HYUNDAI",
@@ -94885,7 +96345,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.84,
           "actual_ret": 11.99,
           "actual_return": 11.99,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 29975.0
         },
         {
           "symbol": "VOLTAS",
@@ -94934,7 +96395,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.09,
           "actual_ret": -5.24,
           "actual_return": -5.24,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -18877.5
         },
         {
           "symbol": "INDIANB",
@@ -94983,7 +96445,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.73,
           "actual_ret": -0.88,
           "actual_return": -0.88,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -1097.5
         },
         {
           "symbol": "TORNTPHARM",
@@ -95032,7 +96495,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.76,
           "actual_ret": 4.91,
           "actual_return": 4.91,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 32072.5
         },
         {
           "symbol": "KEI",
@@ -95081,7 +96545,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.96,
           "actual_ret": -6.11,
           "actual_return": -6.11,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -54507.5
         },
         {
           "symbol": "GAIL",
@@ -95130,7 +96595,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.52,
           "actual_ret": 1.67,
           "actual_return": 1.67,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 790.0
         },
         {
           "symbol": "KFINTECH",
@@ -95179,7 +96645,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.11,
           "actual_ret": -1.26,
           "actual_return": -1.26,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -2315.0
         },
         {
           "symbol": "LTM",
@@ -95228,7 +96695,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.27,
           "actual_ret": -2.42,
           "actual_return": -2.42,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -27027.5
         },
         {
           "symbol": "BANKINDIA",
@@ -95277,7 +96745,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.81,
           "actual_ret": -2.96,
           "actual_return": -2.96,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -977.5
         },
         {
           "symbol": "IEX",
@@ -95326,7 +96795,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.53,
           "actual_ret": 1.68,
           "actual_return": 1.68,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 717.5
         },
         {
           "symbol": "JINDALSTEL",
@@ -95375,7 +96845,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.03,
           "actual_ret": 2.18,
           "actual_return": 2.18,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 5502.5
         },
         {
           "symbol": "RBLBANK",
@@ -95424,7 +96895,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.16,
           "actual_ret": 4.31,
           "actual_return": 4.31,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 2600.0
         },
         {
           "symbol": "AXISBANK",
@@ -95573,7 +97045,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 34.07,
           "actual_ret": -33.22,
           "actual_return": -33.22,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -33767.5
         },
         {
           "symbol": "TECHM",
@@ -95672,7 +97145,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.01,
           "actual_ret": 5.16,
           "actual_return": 5.16,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 23780.0
         },
         {
           "symbol": "NATIONALUM",
@@ -95721,7 +97195,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.93,
           "actual_ret": 10.08,
           "actual_return": 10.08,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 3817.5
         },
         {
           "symbol": "SONACOMS",
@@ -95770,7 +97245,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.38,
           "actual_ret": 2.53,
           "actual_return": 2.53,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 4067.5
         },
         {
           "symbol": "BLUESTARCO",
@@ -95819,7 +97295,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.23,
           "actual_ret": -3.38,
           "actual_return": -3.38,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -13067.5
         },
         {
           "symbol": "ADANIENSOL",
@@ -95868,7 +97345,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.61,
           "actual_ret": -1.76,
           "actual_return": -1.76,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -4712.5
         },
         {
           "symbol": "HAL",
@@ -95917,7 +97395,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.83,
           "actual_ret": -1.98,
           "actual_return": -1.98,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -17995.0
         },
         {
           "symbol": "PNBHOUSING",
@@ -95966,7 +97445,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.63,
           "actual_ret": 5.78,
           "actual_return": 5.78,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 11977.5
         },
         {
           "symbol": "360ONE",
@@ -96015,7 +97495,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.45,
           "actual_ret": -7.6,
           "actual_return": -7.6,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -12900.0
         },
         {
           "symbol": "LICI",
@@ -96064,7 +97545,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.55,
           "actual_ret": 1.7,
           "actual_return": 1.7,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 2020.0
         },
         {
           "symbol": "SOLARINDS",
@@ -96113,7 +97595,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.03,
           "actual_ret": 0.18,
           "actual_return": 0.18,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 4105.0
         },
         {
           "symbol": "COCHINSHIP",
@@ -96162,7 +97645,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 54.56,
           "actual_ret": 53.71,
           "actual_return": 53.71,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 162990.0
         },
         {
           "symbol": "KAYNES",
@@ -96211,7 +97695,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.2,
           "actual_ret": -2.35,
           "actual_return": -2.35,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -22337.5
         },
         {
           "symbol": "NAUKRI",
@@ -96260,7 +97745,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.45,
           "actual_ret": 5.6,
           "actual_return": 5.6,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 16592.5
         },
         {
           "symbol": "FORCEMOT",
@@ -96309,7 +97795,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.6,
           "actual_ret": 0.75,
           "actual_return": 0.75,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 17132.5
         },
         {
           "symbol": "TIINDIA",
@@ -96358,7 +97845,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.56,
           "actual_ret": 1.71,
           "actual_return": 1.71,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 14990.0
         },
         {
           "symbol": "HDFCBANK",
@@ -96457,7 +97945,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.24,
           "actual_ret": -6.39,
           "actual_return": -6.39,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -14610.0
         },
         {
           "symbol": "HINDPETRO",
@@ -96506,7 +97995,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.68,
           "actual_ret": -2.83,
           "actual_return": -2.83,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -2280.0
         },
         {
           "symbol": "MOTHERSON",
@@ -96555,7 +98045,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.03,
           "actual_ret": -3.18,
           "actual_return": -3.18,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -665.0
         },
         {
           "symbol": "ABB",
@@ -96604,7 +98095,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.05,
           "actual_ret": -4.2,
           "actual_return": -4.2,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -83680.0
         },
         {
           "symbol": "VBL",
@@ -96653,7 +98145,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.25,
           "actual_ret": 0.4,
           "actual_return": 0.4,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 645.0
         },
         {
           "symbol": "NHPC",
@@ -96702,7 +98195,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.66,
           "actual_ret": -1.81,
           "actual_return": -1.81,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -427.5
         },
         {
           "symbol": "GLENMARK",
@@ -96751,7 +98245,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.3,
           "actual_ret": -2.45,
           "actual_return": -2.45,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -7370.0
         },
         {
           "symbol": "AMBER",
@@ -96800,7 +98295,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.72,
           "actual_ret": 4.87,
           "actual_return": 4.87,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 46075.0
         },
         {
           "symbol": "NMDC",
@@ -96849,7 +98345,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.3,
           "actual_ret": 5.45,
           "actual_return": 5.45,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 1052.5
         },
         {
           "symbol": "VEDL",
@@ -96898,7 +98395,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.74,
           "actual_ret": -11.89,
           "actual_return": -11.89,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -8535.0
         },
         {
           "symbol": "BHEL",
@@ -96947,7 +98445,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.29,
           "actual_ret": 0.44,
           "actual_return": 0.44,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 325.0
         },
         {
           "symbol": "TVSMOTOR",
@@ -96996,7 +98495,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.57,
           "actual_ret": -4.72,
           "actual_return": -4.72,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -28915.0
         },
         {
           "symbol": "YESBANK",
@@ -97045,7 +98545,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.7,
           "actual_ret": -1.85,
           "actual_return": -1.85,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -110.0
         },
         {
           "symbol": "BHARATFORG",
@@ -97094,7 +98595,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.11,
           "actual_ret": 2.26,
           "actual_return": 2.26,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 6415.0
         },
         {
           "symbol": "FORTIS",
@@ -97143,7 +98645,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.12,
           "actual_ret": -3.27,
           "actual_return": -3.27,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -3510.0
         },
         {
           "symbol": "BAJAJFINSV",
@@ -97242,7 +98745,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.69,
           "actual_ret": 2.84,
           "actual_return": 2.84,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 3277.5
         },
         {
           "symbol": "APLAPOLLO",
@@ -97291,7 +98795,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.3,
           "actual_ret": 1.45,
           "actual_return": 1.45,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 5570.0
         },
         {
           "symbol": "DMART",
@@ -97340,7 +98845,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.7,
           "actual_ret": -2.85,
           "actual_return": -2.85,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -33412.5
         },
         {
           "symbol": "MPHASIS",
@@ -97389,7 +98895,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.64,
           "actual_ret": 2.79,
           "actual_return": 2.79,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 15060.0
         },
         {
           "symbol": "DIXON",
@@ -97438,7 +98945,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.3,
           "actual_ret": 10.45,
           "actual_return": 10.45,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 219735.0
         },
         {
           "symbol": "ABCAPITAL",
@@ -97487,7 +98995,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.83,
           "actual_ret": 0.98,
           "actual_return": 0.98,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 590.0
         },
         {
           "symbol": "MAHABANK",
@@ -97536,7 +99045,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.43,
           "actual_ret": -6.58,
           "actual_return": -6.58,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -1000.0
         },
         {
           "symbol": "SBILIFE",
@@ -97635,7 +99145,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.46,
           "actual_ret": 5.61,
           "actual_return": 5.61,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 101505.0
         },
         {
           "symbol": "ALKEM",
@@ -97684,7 +99195,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.14,
           "actual_ret": 0.29,
           "actual_return": 0.29,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 3585.0
         },
         {
           "symbol": "ADANIENT",
@@ -97783,7 +99295,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.97,
           "actual_ret": 0.12,
           "actual_return": 0.12,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 100.0
         },
         {
           "symbol": "PATANJALI",
@@ -97832,7 +99345,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.48,
           "actual_ret": -11.63,
           "actual_return": -11.63,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -14465.0
         },
         {
           "symbol": "ICICIGI",
@@ -97881,7 +99395,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.57,
           "actual_ret": 0.72,
           "actual_return": 0.72,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 3037.5
         },
         {
           "symbol": "CUMMINSIND",
@@ -97930,7 +99445,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.97,
           "actual_ret": -1.12,
           "actual_return": -1.12,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -8482.5
         },
         {
           "symbol": "RVNL",
@@ -97979,7 +99495,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 28.26,
           "actual_ret": 27.41,
           "actual_return": 27.41,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 19685.0
         },
         {
           "symbol": "MAXHEALTH",
@@ -98078,7 +99595,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.7,
           "actual_ret": -1.85,
           "actual_return": -1.85,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -2707.5
         },
         {
           "symbol": "POLYCAB",
@@ -98127,7 +99645,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.45,
           "actual_ret": 6.6,
           "actual_return": 6.6,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 100035.0
         },
         {
           "symbol": "BHARTIARTL",
@@ -98226,7 +99745,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.98,
           "actual_ret": 3.13,
           "actual_return": 3.13,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 18167.5
         },
         {
           "symbol": "POLICYBZR",
@@ -98275,7 +99795,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.95,
           "actual_ret": -8.1,
           "actual_return": -8.1,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -26400.0
         },
         {
           "symbol": "JSWENERGY",
@@ -98324,7 +99845,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.43,
           "actual_ret": 6.58,
           "actual_return": 6.58,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 9065.0
         },
         {
           "symbol": "TATAPOWER",
@@ -98373,7 +99895,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.05,
           "actual_ret": 4.2,
           "actual_return": 4.2,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 4647.5
         },
         {
           "symbol": "PNB",
@@ -98422,7 +99945,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.14,
           "actual_ret": 1.29,
           "actual_return": 1.29,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 375.0
         },
         {
           "symbol": "ICICIPRULI",
@@ -98471,7 +99995,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.82,
           "actual_ret": -7.97,
           "actual_return": -7.97,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -11142.5
         },
         {
           "symbol": "PIIND",
@@ -98520,7 +100045,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.85,
           "actual_ret": -3.0,
           "actual_return": -3.0,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -28742.5
         },
         {
           "symbol": "SHREECEM",
@@ -98569,7 +100095,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.65,
           "actual_ret": -0.8,
           "actual_return": -0.8,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -50632.5
         },
         {
           "symbol": "IRFC",
@@ -98618,7 +100145,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "CROMPTON",
@@ -98667,7 +100195,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.43,
           "actual_ret": 3.58,
           "actual_return": 3.58,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 3585.0
         },
         {
           "symbol": "COLPAL",
@@ -98716,7 +100245,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.11,
           "actual_ret": 2.26,
           "actual_return": 2.26,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 14595.0
         },
         {
           "symbol": "ADANIGREEN",
@@ -98765,7 +100295,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.67,
           "actual_ret": -4.82,
           "actual_return": -4.82,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -22675.0
         },
         {
           "symbol": "PREMIERENE",
@@ -98814,7 +100345,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "RECLTD",
@@ -98863,7 +100395,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.32,
           "actual_ret": -1.47,
           "actual_return": -1.47,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -1775.0
         },
         {
           "symbol": "SIEMENS",
@@ -98912,7 +100445,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.5,
           "actual_ret": 5.65,
           "actual_return": 5.65,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 44770.0
         },
         {
           "symbol": "OIL",
@@ -98961,7 +100495,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.33,
           "actual_ret": 5.48,
           "actual_return": 5.48,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 5360.0
         },
         {
           "symbol": "LAURUSLABS",
@@ -99010,7 +100545,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.45,
           "actual_ret": 3.6,
           "actual_return": 3.6,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 3835.0
         },
         {
           "symbol": "BANKBARODA",
@@ -99059,7 +100595,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.35,
           "actual_ret": -10.5,
           "actual_return": -10.5,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -6217.5
         },
         {
           "symbol": "GVT&D",
@@ -99108,7 +100645,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.69,
           "actual_ret": -12.84,
           "actual_return": -12.84,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -44330.0
         },
         {
           "symbol": "ETERNAL",
@@ -99257,7 +100795,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.45,
           "actual_ret": -3.6,
           "actual_return": -3.6,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -5670.0
         },
         {
           "symbol": "LODHA",
@@ -99306,7 +100845,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 19.56,
           "actual_ret": 18.71,
           "actual_return": 18.71,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 52360.0
         },
         {
           "symbol": "KPITTECH",
@@ -99355,7 +100895,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.56,
           "actual_ret": -1.71,
           "actual_return": -1.71,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -5905.0
         },
         {
           "symbol": "DLF",
@@ -99404,7 +100945,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.93,
           "actual_ret": -1.08,
           "actual_return": -1.08,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -2280.0
         },
         {
           "symbol": "M&M",
@@ -99503,7 +101045,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.76,
           "actual_ret": 3.91,
           "actual_return": 3.91,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 7385.0
         },
         {
           "symbol": "IREDA",
@@ -99552,7 +101095,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.18,
           "actual_ret": -6.33,
           "actual_return": -6.33,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -2817.5
         },
         {
           "symbol": "TATAMOTORS",
@@ -99601,7 +101145,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.87,
           "actual_ret": -7.02,
           "actual_return": -7.02,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -39270.0
         },
         {
           "symbol": "VMM",
@@ -99650,7 +101195,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.46,
           "actual_ret": -3.61,
           "actual_return": -3.61,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -9025.0
         },
         {
           "symbol": "SUNPHARMA",
@@ -99749,7 +101295,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.41,
           "actual_ret": 2.56,
           "actual_return": 2.56,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 18652.5
         },
         {
           "symbol": "SAGILITY",
@@ -99798,7 +101345,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.36,
           "actual_ret": 4.51,
           "actual_return": 4.51,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 11275.0
         },
         {
           "symbol": "GMRAIRPORT",
@@ -99847,7 +101395,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.37,
           "actual_ret": -12.52,
           "actual_return": -12.52,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -2525.0
         },
         {
           "symbol": "PIDILITIND",
@@ -99896,7 +101445,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.25,
           "actual_ret": 1.4,
           "actual_return": 1.4,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 5305.0
         },
         {
           "symbol": "WAAREEENER",
@@ -99945,7 +101495,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.14,
           "actual_ret": -12.29,
           "actual_return": -12.29,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -30725.0
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -99994,7 +101545,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.02,
           "actual_ret": -0.17,
           "actual_return": -0.17,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -687.5
         },
         {
           "symbol": "GODFRYPHLP",
@@ -100043,7 +101595,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 22.46,
           "actual_ret": -21.61,
           "actual_return": -21.61,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -57557.5
         },
         {
           "symbol": "CONCOR",
@@ -100092,7 +101645,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.3,
           "actual_ret": 1.45,
           "actual_return": 1.45,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 3832.5
         },
         {
           "symbol": "SWIGGY",
@@ -100141,7 +101695,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "EICHERMOT",
@@ -100240,7 +101795,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "COFORGE",
@@ -100289,7 +101845,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.41,
           "actual_ret": -4.56,
           "actual_return": -4.56,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -11660.0
         },
         {
           "symbol": "PHOENIXLTD",
@@ -100338,7 +101895,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.24,
           "actual_ret": -3.39,
           "actual_return": -3.39,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -12625.0
         },
         {
           "symbol": "ATHERENERG",
@@ -100387,7 +101945,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "NYKAA",
@@ -100436,7 +101995,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.37,
           "actual_ret": 0.52,
           "actual_return": 0.52,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 225.0
         },
         {
           "symbol": "BOSCHLTD",
@@ -100485,7 +102045,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.08,
           "actual_ret": -5.23,
           "actual_return": -5.23,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -393470.0
         },
         {
           "symbol": "CHOLAFIN",
@@ -100534,7 +102095,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.51,
           "actual_ret": 1.66,
           "actual_return": 1.66,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 5245.0
         },
         {
           "symbol": "SUPREMEIND",
@@ -100583,7 +102145,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.01,
           "actual_ret": -4.16,
           "actual_return": -4.16,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -61427.5
         },
         {
           "symbol": "CANBK",
@@ -100632,7 +102195,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.66,
           "actual_ret": -5.81,
           "actual_return": -5.81,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -1450.0
         },
         {
           "symbol": "BANDHANBNK",
@@ -100681,7 +102245,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.88,
           "actual_ret": 0.03,
           "actual_return": 0.03,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 12.5
         },
         {
           "symbol": "ICICIBANK",
@@ -100780,7 +102345,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.9,
           "actual_ret": 4.05,
           "actual_return": 4.05,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 12887.5
         },
         {
           "symbol": "LUPIN",
@@ -100829,7 +102395,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.75,
           "actual_ret": -2.9,
           "actual_return": -2.9,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -11445.0
         },
         {
           "symbol": "MAZDOCK",
@@ -100878,7 +102445,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 23.04,
           "actual_ret": -22.19,
           "actual_return": -22.19,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -61580.0
         },
         {
           "symbol": "TITAN",
@@ -101027,7 +102595,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.8,
           "actual_ret": -1.95,
           "actual_return": -1.95,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -2590.0
         },
         {
           "symbol": "ASIANPAINT",
@@ -101126,7 +102695,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.84,
           "actual_ret": -3.99,
           "actual_return": -3.99,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -2762.5
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -101225,7 +102795,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.92,
           "actual_ret": -8.07,
           "actual_return": -8.07,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -9935.0
         },
         {
           "symbol": "PRESTIGE",
@@ -101274,7 +102845,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.76,
           "actual_ret": -5.91,
           "actual_return": -5.91,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -27590.0
         },
         {
           "symbol": "LICHSGFIN",
@@ -101323,7 +102895,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.07,
           "actual_ret": -5.22,
           "actual_return": -5.22,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -9260.0
         },
         {
           "symbol": "DELHIVERY",
@@ -101372,7 +102945,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.43,
           "actual_ret": -2.58,
           "actual_return": -2.58,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -2625.0
         },
         {
           "symbol": "MFSL",
@@ -101421,7 +102995,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.92,
           "actual_ret": -1.07,
           "actual_return": -1.07,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -2762.5
         },
         {
           "symbol": "OFSS",
@@ -101470,7 +103045,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.19,
           "actual_ret": 6.34,
           "actual_return": 6.34,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 119600.0
         },
         {
           "symbol": "DIVISLAB",
@@ -101519,7 +103095,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.28,
           "actual_ret": 0.43,
           "actual_return": 0.43,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 3952.5
         },
         {
           "symbol": "GODREJPROP",
@@ -101568,7 +103145,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.78,
           "actual_ret": -1.93,
           "actual_return": -1.93,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -12987.5
         },
         {
           "symbol": "CDSL",
@@ -101617,7 +103195,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.15,
           "actual_ret": 0.3,
           "actual_return": 0.3,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 762.5
         },
         {
           "symbol": "KALYANKJIL",
@@ -101666,7 +103245,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.69,
           "actual_ret": -1.84,
           "actual_return": -1.84,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -1877.5
         },
         {
           "symbol": "ADANIPOWER",
@@ -101715,7 +103295,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.81,
           "actual_ret": 7.96,
           "actual_return": 7.96,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 2345.0
         },
         {
           "symbol": "TCS",
@@ -101814,7 +103395,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.25,
           "actual_ret": -0.4,
           "actual_return": -0.4,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -2605.0
         },
         {
           "symbol": "BRITANNIA",
@@ -101863,7 +103445,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.81,
           "actual_ret": -0.96,
           "actual_return": -0.96,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -12252.5
         },
         {
           "symbol": "IOC",
@@ -101912,7 +103495,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.14,
           "actual_ret": -2.29,
           "actual_return": -2.29,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -842.5
         },
         {
           "symbol": "SBICARD",
@@ -101961,7 +103545,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.49,
           "actual_ret": 0.64,
           "actual_return": 0.64,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 1137.5
         },
         {
           "symbol": "SUZLON",
@@ -102010,7 +103595,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.56,
           "actual_ret": 0.71,
           "actual_return": 0.71,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 75.0
         },
         {
           "symbol": "PGEL",
@@ -102059,7 +103645,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.76,
           "actual_ret": 4.91,
           "actual_return": 4.91,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 2212.5
         },
         {
           "symbol": "UNOMINDA",
@@ -102108,7 +103695,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.54,
           "actual_ret": -0.69,
           "actual_return": -0.69,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -1242.5
         },
         {
           "symbol": "RELIANCE",
@@ -102307,7 +103895,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.01,
           "actual_ret": 4.16,
           "actual_return": 4.16,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 4450.0
         },
         {
           "symbol": "INDUSINDBK",
@@ -102456,7 +104045,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.99,
           "actual_ret": 5.14,
           "actual_return": 5.14,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 7415.0
         },
         {
           "symbol": "AMBUJACEM",
@@ -102505,7 +104095,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.37,
           "actual_ret": -3.52,
           "actual_return": -3.52,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -5312.5
         },
         {
           "symbol": "PAGEIND",
@@ -102554,7 +104145,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.86,
           "actual_ret": -3.01,
           "actual_return": -3.01,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -281750.0
         },
         {
           "symbol": "RADICO",
@@ -102603,7 +104195,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.33,
           "actual_ret": 2.48,
           "actual_return": 2.48,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 10392.5
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -102652,7 +104245,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.97,
           "actual_ret": -1.12,
           "actual_return": -1.12,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -2707.5
         },
         {
           "symbol": "IDEA",
@@ -102701,7 +104295,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.01,
           "actual_ret": -1.16,
           "actual_return": -1.16,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -37.5
         },
         {
           "symbol": "UPL",
@@ -102750,7 +104345,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.42,
           "actual_ret": -7.57,
           "actual_return": -7.57,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -8792.5
         },
         {
           "symbol": "SAIL",
@@ -102799,7 +104395,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.0,
           "actual_ret": -5.15,
           "actual_return": -5.15,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -1827.5
         },
         {
           "symbol": "KOTAKBANK",
@@ -102948,7 +104545,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.73,
           "actual_ret": 5.88,
           "actual_return": 5.88,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 2657.5
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -102997,7 +104595,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.5,
           "actual_ret": -5.65,
           "actual_return": -5.65,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -1157.5
         },
         {
           "symbol": "GRASIM",
@@ -103096,7 +104695,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.07,
           "actual_ret": -3.22,
           "actual_return": -3.22,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -13240.0
         },
         {
           "symbol": "NBCC",
@@ -103145,7 +104745,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.85,
           "actual_ret": -1.0,
           "actual_return": -1.0,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -260.0
         },
         {
           "symbol": "TRENT",
@@ -103294,7 +104895,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.59,
           "actual_ret": -0.74,
           "actual_return": -0.74,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -3272.5
         },
         {
           "symbol": "UNIONBANK",
@@ -103343,7 +104945,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.52,
           "actual_ret": -9.67,
           "actual_return": -9.67,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -3080.0
         },
         {
           "symbol": "GODREJCP",
@@ -103392,7 +104995,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.76,
           "actual_ret": -2.91,
           "actual_return": -2.91,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -9985.0
         },
         {
           "symbol": "DRREDDY",
@@ -103491,7 +105095,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.02,
           "actual_ret": -1.17,
           "actual_return": -1.17,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -467.5
         },
         {
           "symbol": "BDL",
@@ -103540,7 +105145,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.95,
           "actual_ret": -1.1,
           "actual_return": -1.1,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -2697.5
         },
         {
           "symbol": "AUROPHARMA",
@@ -103589,7 +105195,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.89,
           "actual_ret": 3.04,
           "actual_return": 3.04,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 8830.0
         },
         {
           "symbol": "ADANIPORTS",
@@ -103688,7 +105295,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.33,
           "actual_ret": 3.48,
           "actual_return": 3.48,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 5320.0
         },
         {
           "symbol": "MARUTI",
@@ -103787,7 +105395,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.89,
           "actual_ret": -0.04,
           "actual_return": -0.04,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -25.0
         },
         {
           "symbol": "PFC",
@@ -103836,7 +105445,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.7,
           "actual_ret": 3.85,
           "actual_return": 3.85,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 4440.0
         },
         {
           "symbol": "BAJAJ-AUTO",
@@ -104444,7 +106054,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.04,
           "actual_ret": 4.19,
           "actual_return": 4.19,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 2207.5
         },
         {
           "symbol": "SBIN",
@@ -104593,7 +106204,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.57,
           "actual_ret": 5.72,
           "actual_return": 5.72,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 43605.0
         },
         {
           "symbol": "BOSCHLTD",
@@ -104642,7 +106254,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.08,
           "actual_ret": -0.23,
           "actual_return": -0.23,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -16727.5
         },
         {
           "symbol": "NMDC",
@@ -104691,7 +106304,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.99,
           "actual_ret": 1.14,
           "actual_return": 1.14,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 180.0
         },
         {
           "symbol": "OFSS",
@@ -104740,7 +106354,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.73,
           "actual_ret": -16.88,
           "actual_return": -16.88,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -165135.0
         },
         {
           "symbol": "DIXON",
@@ -104789,7 +106404,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.55,
           "actual_ret": 7.7,
           "actual_return": 7.7,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 120742.5
         },
         {
           "symbol": "KFINTECH",
@@ -104838,7 +106454,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.27,
           "actual_ret": 13.42,
           "actual_return": 13.42,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 20855.0
         },
         {
           "symbol": "COLPAL",
@@ -104887,7 +106504,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.65,
           "actual_ret": -1.8,
           "actual_return": -1.8,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -10487.5
         },
         {
           "symbol": "SIEMENS",
@@ -104936,7 +106554,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.08,
           "actual_ret": 1.23,
           "actual_return": 1.23,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 7435.0
         },
         {
           "symbol": "INOXWIND",
@@ -104985,7 +106604,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.69,
           "actual_ret": 11.84,
           "actual_return": 11.84,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 3245.0
         },
         {
           "symbol": "KAYNES",
@@ -105034,7 +106654,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.13,
           "actual_ret": -1.28,
           "actual_return": -1.28,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -8887.5
         },
         {
           "symbol": "TATAPOWER",
@@ -105083,7 +106704,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.37,
           "actual_ret": 0.52,
           "actual_return": 0.52,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 505.0
         },
         {
           "symbol": "ICICIPRULI",
@@ -105132,7 +106754,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.65,
           "actual_ret": -3.8,
           "actual_return": -3.8,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -5170.0
         },
         {
           "symbol": "CROMPTON",
@@ -105181,7 +106804,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.8,
           "actual_ret": -1.95,
           "actual_return": -1.95,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -1315.0
         },
         {
           "symbol": "DMART",
@@ -105230,7 +106854,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.63,
           "actual_ret": -2.78,
           "actual_return": -2.78,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -26687.5
         },
         {
           "symbol": "NAUKRI",
@@ -105279,7 +106904,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.78,
           "actual_ret": -0.93,
           "actual_return": -0.93,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -2472.5
         },
         {
           "symbol": "GAIL",
@@ -105328,7 +106954,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.3,
           "actual_ret": 2.45,
           "actual_return": 2.45,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 1045.0
         },
         {
           "symbol": "BSE",
@@ -105377,7 +107004,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 24.45,
           "actual_ret": 23.6,
           "actual_return": 23.6,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 39585.0
         },
         {
           "symbol": "COFORGE",
@@ -105426,7 +107054,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.0,
           "actual_ret": 10.15,
           "actual_return": 10.15,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 30655.0
         },
         {
           "symbol": "MFSL",
@@ -105475,7 +107104,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.67,
           "actual_ret": 1.82,
           "actual_return": 1.82,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 4137.5
         },
         {
           "symbol": "DABUR",
@@ -105524,7 +107154,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.83,
           "actual_ret": 1.98,
           "actual_return": 1.98,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 2540.0
         },
         {
           "symbol": "TECHM",
@@ -105673,7 +107304,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.34,
           "actual_ret": -5.49,
           "actual_return": -5.49,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -93867.5
         },
         {
           "symbol": "MAZDOCK",
@@ -105722,7 +107354,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.35,
           "actual_ret": 0.5,
           "actual_return": 0.5,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 1297.5
         },
         {
           "symbol": "CONCOR",
@@ -105771,7 +107404,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.15,
           "actual_ret": -2.3,
           "actual_return": -2.3,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -5627.5
         },
         {
           "symbol": "SWIGGY",
@@ -105820,7 +107454,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "GODREJPROP",
@@ -105869,7 +107504,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.79,
           "actual_ret": 6.94,
           "actual_return": 6.94,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 37332.5
         },
         {
           "symbol": "LODHA",
@@ -105918,7 +107554,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.22,
           "actual_ret": 5.37,
           "actual_return": 5.37,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 14540.0
         },
         {
           "symbol": "TORNTPHARM",
@@ -105967,7 +107604,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.51,
           "actual_ret": -7.66,
           "actual_return": -7.66,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -42722.5
         },
         {
           "symbol": "JINDALSTEL",
@@ -106016,7 +107654,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.05,
           "actual_ret": -5.2,
           "actual_return": -5.2,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -10670.0
         },
         {
           "symbol": "NYKAA",
@@ -106065,7 +107704,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.8,
           "actual_ret": 3.95,
           "actual_return": 3.95,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 1437.5
         },
         {
           "symbol": "AMBER",
@@ -106114,7 +107754,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.1,
           "actual_ret": -13.25,
           "actual_return": -13.25,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -109662.5
         },
         {
           "symbol": "IDEA",
@@ -106163,7 +107804,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.69,
           "actual_ret": 10.84,
           "actual_return": 10.84,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 437.5
         },
         {
           "symbol": "ASHOKLEY",
@@ -106212,7 +107854,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.43,
           "actual_ret": -2.58,
           "actual_return": -2.58,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -510.0
         },
         {
           "symbol": "PETRONET",
@@ -106261,7 +107904,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.58,
           "actual_ret": -5.73,
           "actual_return": -5.73,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -3532.5
         },
         {
           "symbol": "CUMMINSIND",
@@ -106310,7 +107954,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.86,
           "actual_ret": -8.01,
           "actual_return": -8.01,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -38617.5
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -106359,7 +108004,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.98,
           "actual_ret": -0.13,
           "actual_return": -0.13,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -435.0
         },
         {
           "symbol": "BHARTIARTL",
@@ -106458,7 +108104,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.7,
           "actual_ret": -8.85,
           "actual_return": -8.85,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -10235.0
         },
         {
           "symbol": "INDHOTEL",
@@ -106507,7 +108154,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.6,
           "actual_ret": -1.75,
           "actual_return": -1.75,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -1955.0
         },
         {
           "symbol": "BANKBARODA",
@@ -106556,7 +108204,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.88,
           "actual_ret": 7.03,
           "actual_return": 7.03,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 4372.5
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -106605,7 +108254,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.43,
           "actual_ret": -4.58,
           "actual_return": -4.58,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -947.5
         },
         {
           "symbol": "CIPLA",
@@ -106754,7 +108404,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.61,
           "actual_ret": -3.76,
           "actual_return": -3.76,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -1587.5
         },
         {
           "symbol": "PHOENIXLTD",
@@ -106803,7 +108454,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.45,
           "actual_ret": -0.6,
           "actual_return": -0.6,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -2062.5
         },
         {
           "symbol": "ABB",
@@ -106852,7 +108504,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.63,
           "actual_ret": -0.78,
           "actual_return": -0.78,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -8615.0
         },
         {
           "symbol": "CAMS",
@@ -106901,7 +108554,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.0,
           "actual_ret": 5.15,
           "actual_return": 5.15,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 6677.5
         },
         {
           "symbol": "PATANJALI",
@@ -106950,7 +108604,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.44,
           "actual_ret": -2.59,
           "actual_return": -2.59,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -3410.0
         },
         {
           "symbol": "MOTILALOFS",
@@ -106999,7 +108654,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.88,
           "actual_ret": -6.03,
           "actual_return": -6.03,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -5862.5
         },
         {
           "symbol": "RADICO",
@@ -107048,7 +108704,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.94,
           "actual_ret": 0.09,
           "actual_return": 0.09,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 385.0
         },
         {
           "symbol": "SHREECEM",
@@ -107097,7 +108754,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.06,
           "actual_ret": -5.21,
           "actual_return": -5.21,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -355715.0
         },
         {
           "symbol": "JSWSTEEL",
@@ -107196,7 +108854,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.46,
           "actual_ret": -4.61,
           "actual_return": -4.61,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -1540.0
         },
         {
           "symbol": "VEDL",
@@ -107245,7 +108904,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.32,
           "actual_ret": -2.47,
           "actual_return": -2.47,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -1357.5
         },
         {
           "symbol": "ATHERENERG",
@@ -107294,7 +108954,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "PGEL",
@@ -107343,7 +109004,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.45,
           "actual_ret": -2.6,
           "actual_return": -2.6,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -1400.0
         },
         {
           "symbol": "BAJAJFINSV",
@@ -107442,7 +109104,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.39,
           "actual_ret": 4.54,
           "actual_return": 4.54,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 15765.0
         },
         {
           "symbol": "KEI",
@@ -107491,7 +109154,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.52,
           "actual_ret": -5.67,
           "actual_return": -5.67,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -42112.5
         },
         {
           "symbol": "VMM",
@@ -107540,7 +109204,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.46,
           "actual_ret": -3.61,
           "actual_return": -3.61,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -9025.0
         },
         {
           "symbol": "LTM",
@@ -107589,7 +109254,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.86,
           "actual_ret": -2.01,
           "actual_return": -2.01,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -26487.5
         },
         {
           "symbol": "NATIONALUM",
@@ -107638,7 +109304,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.72,
           "actual_ret": -1.87,
           "actual_return": -1.87,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -572.5
         },
         {
           "symbol": "KOTAKBANK",
@@ -107737,7 +109404,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.3,
           "actual_ret": 9.45,
           "actual_return": 9.45,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 22617.5
         },
         {
           "symbol": "GMRAIRPORT",
@@ -107786,7 +109454,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.45,
           "actual_ret": 8.6,
           "actual_return": 8.6,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 1812.5
         },
         {
           "symbol": "UNIONBANK",
@@ -107835,7 +109504,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.09,
           "actual_ret": -0.24,
           "actual_return": -0.24,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -80.0
         },
         {
           "symbol": "BLUESTARCO",
@@ -107884,7 +109554,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.82,
           "actual_ret": 2.97,
           "actual_return": 2.97,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 9022.5
         },
         {
           "symbol": "SONACOMS",
@@ -107933,7 +109604,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.64,
           "actual_ret": 6.79,
           "actual_return": 6.79,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 11450.0
         },
         {
           "symbol": "MANKIND",
@@ -107982,7 +109654,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.55,
           "actual_ret": -2.7,
           "actual_return": -2.7,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -14995.0
         },
         {
           "symbol": "YESBANK",
@@ -108031,7 +109704,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.29,
           "actual_ret": -0.44,
           "actual_return": -0.44,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -25.0
         },
         {
           "symbol": "NBCC",
@@ -108080,7 +109754,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.16,
           "actual_ret": 6.31,
           "actual_return": 6.31,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 1157.5
         },
         {
           "symbol": "ADANIENSOL",
@@ -108129,7 +109804,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.26,
           "actual_ret": -9.41,
           "actual_return": -9.41,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -27287.5
         },
         {
           "symbol": "MARICO",
@@ -108178,7 +109854,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.45,
           "actual_ret": 0.6,
           "actual_return": 0.6,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 762.5
         },
         {
           "symbol": "AUROPHARMA",
@@ -108227,7 +109904,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.79,
           "actual_ret": 2.94,
           "actual_return": 2.94,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 7437.5
         },
         {
           "symbol": "DELHIVERY",
@@ -108276,7 +109954,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.31,
           "actual_ret": 2.46,
           "actual_return": 2.46,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 2737.5
         },
         {
           "symbol": "JSWENERGY",
@@ -108325,7 +110004,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.28,
           "actual_ret": -2.43,
           "actual_return": -2.43,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -2955.0
         },
         {
           "symbol": "AXISBANK",
@@ -108424,7 +110104,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.36,
           "actual_ret": 12.51,
           "actual_return": 12.51,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 24512.5
         },
         {
           "symbol": "LICHSGFIN",
@@ -108473,7 +110154,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.01,
           "actual_ret": -0.16,
           "actual_return": -0.16,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -230.0
         },
         {
           "symbol": "M&M",
@@ -108572,7 +110254,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.39,
           "actual_ret": 2.54,
           "actual_return": 2.54,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 29162.5
         },
         {
           "symbol": "TATACONSUM",
@@ -108671,7 +110354,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.13,
           "actual_ret": -1.28,
           "actual_return": -1.28,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -118750.0
         },
         {
           "symbol": "ALKEM",
@@ -108720,7 +110404,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.59,
           "actual_ret": -3.74,
           "actual_return": -3.74,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -45625.0
         },
         {
           "symbol": "SUPREMEIND",
@@ -108769,7 +110454,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.91,
           "actual_ret": 10.06,
           "actual_return": 10.06,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 94717.5
         },
         {
           "symbol": "JUBLFOOD",
@@ -108818,7 +110504,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.11,
           "actual_ret": 4.26,
           "actual_return": 4.26,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 5860.0
         },
         {
           "symbol": "TIINDIA",
@@ -108867,7 +110554,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.58,
           "actual_ret": -1.73,
           "actual_return": -1.73,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -17212.5
         },
         {
           "symbol": "ICICIBANK",
@@ -108966,7 +110654,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.06,
           "actual_ret": 1.21,
           "actual_return": 1.21,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 1192.5
         },
         {
           "symbol": "OIL",
@@ -109015,7 +110704,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 22.17,
           "actual_ret": 21.32,
           "actual_return": 21.32,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 15567.5
         },
         {
           "symbol": "RVNL",
@@ -109064,7 +110754,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.11,
           "actual_ret": 0.26,
           "actual_return": 0.26,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 172.5
         },
         {
           "symbol": "HDFCBANK",
@@ -109163,7 +110854,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.64,
           "actual_ret": -1.79,
           "actual_return": -1.79,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -867.5
         },
         {
           "symbol": "CANBK",
@@ -109212,7 +110904,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.0,
           "actual_ret": 2.15,
           "actual_return": 2.15,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 572.5
         },
         {
           "symbol": "ADANIENT",
@@ -109311,7 +111004,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.36,
           "actual_ret": 3.51,
           "actual_return": 3.51,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 13345.0
         },
         {
           "symbol": "PIIND",
@@ -109360,7 +111054,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.25,
           "actual_ret": -5.4,
           "actual_return": -5.4,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -46550.0
         },
         {
           "symbol": "PFC",
@@ -109409,7 +111104,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.04,
           "actual_ret": -6.19,
           "actual_return": -6.19,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -5320.0
         },
         {
           "symbol": "MPHASIS",
@@ -109458,7 +111154,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.38,
           "actual_ret": 3.53,
           "actual_return": 3.53,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 21650.0
         },
         {
           "symbol": "UPL",
@@ -109507,7 +111204,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.21,
           "actual_ret": -7.36,
           "actual_return": -7.36,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -8267.5
         },
         {
           "symbol": "BANKINDIA",
@@ -109556,7 +111254,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.36,
           "actual_ret": -11.51,
           "actual_return": -11.51,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -3107.5
         },
         {
           "symbol": "GLENMARK",
@@ -109605,7 +111304,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.75,
           "actual_ret": 0.9,
           "actual_return": 0.9,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 2130.0
         },
         {
           "symbol": "BHEL",
@@ -109654,7 +111354,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.76,
           "actual_ret": -6.91,
           "actual_return": -6.91,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -3852.5
         },
         {
           "symbol": "RBLBANK",
@@ -109703,7 +111404,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.02,
           "actual_ret": 1.17,
           "actual_return": 1.17,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 742.5
         },
         {
           "symbol": "BHARATFORG",
@@ -109752,7 +111454,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.33,
           "actual_ret": 1.48,
           "actual_return": 1.48,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 4582.5
         },
         {
           "symbol": "SBILIFE",
@@ -109851,7 +111554,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.31,
           "actual_ret": -0.46,
           "actual_return": -0.46,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -667.5
         },
         {
           "symbol": "HINDPETRO",
@@ -109900,7 +111604,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.21,
           "actual_ret": 2.36,
           "actual_return": 2.36,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 1780.0
         },
         {
           "symbol": "FEDERALBNK",
@@ -109949,7 +111654,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.67,
           "actual_ret": 4.82,
           "actual_return": 4.82,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 1755.0
         },
         {
           "symbol": "IREDA",
@@ -109998,7 +111704,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.91,
           "actual_ret": -2.06,
           "actual_return": -2.06,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -682.5
         },
         {
           "symbol": "AUBANK",
@@ -110047,7 +111754,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.59,
           "actual_ret": -7.74,
           "actual_return": -7.74,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -14982.5
         },
         {
           "symbol": "TATAELXSI",
@@ -110096,7 +111804,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.1,
           "actual_ret": 12.25,
           "actual_return": 12.25,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 257365.0
         },
         {
           "symbol": "HINDZINC",
@@ -110145,7 +111854,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.11,
           "actual_ret": -0.26,
           "actual_return": -0.26,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -182.5
         },
         {
           "symbol": "HDFCLIFE",
@@ -110244,7 +111954,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.14,
           "actual_ret": -12.29,
           "actual_return": -12.29,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -30725.0
         },
         {
           "symbol": "PAYTM",
@@ -110293,7 +112004,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.85,
           "actual_ret": -10.0,
           "actual_return": -10.0,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -9237.5
         },
         {
           "symbol": "IOC",
@@ -110342,7 +112054,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.07,
           "actual_ret": 2.22,
           "actual_return": 2.22,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 932.5
         },
         {
           "symbol": "PNB",
@@ -110391,7 +112104,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.45,
           "actual_ret": 3.6,
           "actual_return": 3.6,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 1040.0
         },
         {
           "symbol": "ADANIGREEN",
@@ -110440,7 +112154,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.67,
           "actual_ret": -3.82,
           "actual_return": -3.82,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -18437.5
         },
         {
           "symbol": "FORTIS",
@@ -110489,7 +112204,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.69,
           "actual_ret": 1.84,
           "actual_return": 1.84,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 1980.0
         },
         {
           "symbol": "ASTRAL",
@@ -110538,7 +112254,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.94,
           "actual_ret": -7.09,
           "actual_return": -7.09,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -34212.5
         },
         {
           "symbol": "SOLARINDS",
@@ -110587,7 +112304,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.45,
           "actual_ret": 0.6,
           "actual_return": 0.6,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 10142.5
         },
         {
           "symbol": "UNOMINDA",
@@ -110636,7 +112354,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.65,
           "actual_ret": 2.8,
           "actual_return": 2.8,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 4990.0
         },
         {
           "symbol": "CHOLAFIN",
@@ -110685,7 +112404,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.49,
           "actual_ret": -2.64,
           "actual_return": -2.64,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -7615.0
         },
         {
           "symbol": "HYUNDAI",
@@ -110734,7 +112454,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.84,
           "actual_ret": 11.99,
           "actual_return": 11.99,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 29975.0
         },
         {
           "symbol": "EICHERMOT",
@@ -110833,7 +112554,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.58,
           "actual_ret": -1.73,
           "actual_return": -1.73,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -475.0
         },
         {
           "symbol": "APLAPOLLO",
@@ -110882,7 +112604,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.3,
           "actual_ret": -3.45,
           "actual_return": -3.45,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -13315.0
         },
         {
           "symbol": "ETERNAL",
@@ -110981,7 +112704,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "IRFC",
@@ -111030,7 +112754,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "MAXHEALTH",
@@ -111129,7 +112854,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.92,
           "actual_ret": -5.07,
           "actual_return": -5.07,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -9965.0
         },
         {
           "symbol": "SRF",
@@ -111178,7 +112904,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.42,
           "actual_ret": 1.57,
           "actual_return": 1.57,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 9302.5
         },
         {
           "symbol": "GRASIM",
@@ -111277,7 +113004,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.81,
           "actual_ret": -10.96,
           "actual_return": -10.96,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -36460.0
         },
         {
           "symbol": "ICICIGI",
@@ -111326,7 +113054,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.68,
           "actual_ret": -1.83,
           "actual_return": -1.83,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -7400.0
         },
         {
           "symbol": "RECLTD",
@@ -111375,7 +113104,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.72,
           "actual_ret": 2.87,
           "actual_return": 2.87,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 2902.5
         },
         {
           "symbol": "NESTLEIND",
@@ -111474,7 +113204,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.95,
           "actual_ret": 1.1,
           "actual_return": 1.1,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 240.0
         },
         {
           "symbol": "TCS",
@@ -111573,7 +113304,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.46,
           "actual_ret": 1.61,
           "actual_return": 1.61,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 2630.0
         },
         {
           "symbol": "POWERINDIA",
@@ -111622,7 +113354,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -111721,7 +113454,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.0,
           "actual_ret": -0.15,
           "actual_return": -0.15,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -60.0
         },
         {
           "symbol": "KPITTECH",
@@ -111770,7 +113504,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.1,
           "actual_ret": -2.25,
           "actual_return": -2.25,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -8577.5
         },
         {
           "symbol": "PNBHOUSING",
@@ -111819,7 +113554,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.68,
           "actual_ret": -0.83,
           "actual_return": -0.83,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -1282.5
         },
         {
           "symbol": "RELIANCE",
@@ -111918,7 +113654,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.95,
           "actual_ret": 4.1,
           "actual_return": 4.1,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 11235.0
         },
         {
           "symbol": "ADANIPOWER",
@@ -111967,7 +113704,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.04,
           "actual_ret": 3.19,
           "actual_return": 3.19,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 872.5
         },
         {
           "symbol": "INDUSINDBK",
@@ -112066,7 +113804,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.74,
           "actual_ret": 0.89,
           "actual_return": 0.89,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 4537.5
         },
         {
           "symbol": "TVSMOTOR",
@@ -112115,7 +113854,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.39,
           "actual_ret": 4.54,
           "actual_return": 4.54,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 23207.5
         },
         {
           "symbol": "ANGELONE",
@@ -112164,7 +113904,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.0,
           "actual_ret": 3.15,
           "actual_return": 3.15,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 2075.0
         },
         {
           "symbol": "CDSL",
@@ -112213,7 +113954,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.91,
           "actual_ret": -9.06,
           "actual_return": -9.06,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -20732.5
         },
         {
           "symbol": "INDIGO",
@@ -112312,7 +114054,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.66,
           "actual_ret": -1.81,
           "actual_return": -1.81,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -1270.0
         },
         {
           "symbol": "HINDUNILVR",
@@ -112711,7 +114454,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.32,
           "actual_ret": 9.47,
           "actual_return": 9.47,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 27380.0
         },
         {
           "symbol": "LUPIN",
@@ -112760,7 +114504,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.25,
           "actual_ret": -6.4,
           "actual_return": -6.4,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -26240.0
         },
         {
           "symbol": "MAHABANK",
@@ -112809,7 +114554,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.73,
           "actual_ret": 0.88,
           "actual_return": 0.88,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 125.0
         },
         {
           "symbol": "VBL",
@@ -112858,7 +114604,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.27,
           "actual_ret": -2.42,
           "actual_return": -2.42,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -3452.5
         },
         {
           "symbol": "INDIANB",
@@ -112907,7 +114654,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.44,
           "actual_ret": -8.59,
           "actual_return": -8.59,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -9920.0
         },
         {
           "symbol": "BDL",
@@ -112956,7 +114704,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.64,
           "actual_ret": -7.79,
           "actual_return": -7.79,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -16847.5
         },
         {
           "symbol": "COCHINSHIP",
@@ -113005,7 +114754,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.33,
           "actual_ret": -8.48,
           "actual_return": -8.48,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -18987.5
         },
         {
           "symbol": "HAVELLS",
@@ -113054,7 +114804,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.79,
           "actual_ret": -2.94,
           "actual_return": -2.94,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -9690.0
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -113103,7 +114854,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.76,
           "actual_ret": 0.91,
           "actual_return": 0.91,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 1587.5
         },
         {
           "symbol": "INDUSTOWER",
@@ -113152,7 +114904,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 15.11,
           "actual_ret": 14.26,
           "actual_return": 14.26,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 7887.5
         },
         {
           "symbol": "MOTHERSON",
@@ -113201,7 +114954,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.68,
           "actual_ret": 0.83,
           "actual_return": 0.83,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 155.0
         },
         {
           "symbol": "SBICARD",
@@ -113250,7 +115004,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.18,
           "actual_ret": -0.33,
           "actual_return": -0.33,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -600.0
         },
         {
           "symbol": "KALYANKJIL",
@@ -113299,7 +115054,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.72,
           "actual_ret": 6.87,
           "actual_return": 6.87,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 6017.5
         },
         {
           "symbol": "CGPOWER",
@@ -113348,7 +115104,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.82,
           "actual_ret": -6.97,
           "actual_return": -6.97,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -8012.5
         },
         {
           "symbol": "PERSISTENT",
@@ -113397,7 +115154,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.29,
           "actual_ret": -1.44,
           "actual_return": -1.44,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -12830.0
         },
         {
           "symbol": "SAGILITY",
@@ -113446,7 +115204,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.36,
           "actual_ret": 4.51,
           "actual_return": 4.51,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 11275.0
         },
         {
           "symbol": "GODREJCP",
@@ -113495,7 +115254,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.46,
           "actual_ret": -1.61,
           "actual_return": -1.61,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -4810.0
         },
         {
           "symbol": "BAJFINANCE",
@@ -113644,7 +115404,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.65,
           "actual_ret": -10.8,
           "actual_return": -10.8,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -24285.0
         },
         {
           "symbol": "MANAPPURAM",
@@ -113693,7 +115454,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.85,
           "actual_ret": 4.0,
           "actual_return": 4.0,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 1612.5
         },
         {
           "symbol": "BRITANNIA",
@@ -113742,7 +115504,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.91,
           "actual_ret": -3.06,
           "actual_return": -3.06,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -37817.5
         },
         {
           "symbol": "SUZLON",
@@ -113791,7 +115554,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.86,
           "actual_ret": 4.01,
           "actual_return": 4.01,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 437.5
         },
         {
           "symbol": "APOLLOHOSP",
@@ -113940,7 +115704,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.29,
           "actual_ret": 4.44,
           "actual_return": 4.44,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 7052.5
         },
         {
           "symbol": "BAJAJHLDNG",
@@ -113989,7 +115754,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.32,
           "actual_ret": -2.47,
           "actual_return": -2.47,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -49335.0
         },
         {
           "symbol": "HAL",
@@ -114038,7 +115804,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.47,
           "actual_ret": 4.62,
           "actual_return": 4.62,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 34015.0
         },
         {
           "symbol": "DIVISLAB",
@@ -114087,7 +115854,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.31,
           "actual_ret": -8.46,
           "actual_return": -8.46,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -84235.0
         },
         {
           "symbol": "ULTRACEMCO",
@@ -114186,7 +115954,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.9,
           "actual_ret": -0.05,
           "actual_return": -0.05,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -147.5
         },
         {
           "symbol": "LICI",
@@ -114235,7 +116004,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.75,
           "actual_ret": -7.9,
           "actual_return": -7.9,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -7877.5
         },
         {
           "symbol": "BAJAJ-AUTO",
@@ -114943,7 +116713,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.4,
           "actual_ret": 3.55,
           "actual_return": 3.55,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 12650.0
         },
         {
           "symbol": "SAGILITY",
@@ -114992,7 +116763,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.36,
           "actual_ret": 4.51,
           "actual_return": 4.51,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 11275.0
         },
         {
           "symbol": "SHREECEM",
@@ -115041,7 +116813,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.95,
           "actual_ret": -2.1,
           "actual_return": -2.1,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -135932.5
         },
         {
           "symbol": "COALINDIA",
@@ -115140,7 +116913,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.93,
           "actual_ret": 3.08,
           "actual_return": 3.08,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 7702.5
         },
         {
           "symbol": "ASHOKLEY",
@@ -115189,7 +116963,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.11,
           "actual_ret": -3.26,
           "actual_return": -3.26,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -670.0
         },
         {
           "symbol": "POLYCAB",
@@ -115238,7 +117013,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.38,
           "actual_ret": 3.53,
           "actual_return": 3.53,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 44582.5
         },
         {
           "symbol": "HDFCAMC",
@@ -115287,7 +117063,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.86,
           "actual_ret": 9.01,
           "actual_return": 9.01,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 28277.5
         },
         {
           "symbol": "PNB",
@@ -115336,7 +117113,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.56,
           "actual_ret": 2.71,
           "actual_return": 2.71,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 480.0
         },
         {
           "symbol": "BIOCON",
@@ -115385,7 +117163,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.55,
           "actual_ret": -12.7,
           "actual_return": -12.7,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -8367.5
         },
         {
           "symbol": "TORNTPHARM",
@@ -115434,7 +117213,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.93,
           "actual_ret": -3.08,
           "actual_return": -3.08,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -13940.0
         },
         {
           "symbol": "IDEA",
@@ -115483,7 +117263,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.27,
           "actual_ret": 0.42,
           "actual_return": 0.42,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 12.5
         },
         {
           "symbol": "SBIN",
@@ -115582,7 +117363,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.25,
           "actual_ret": -0.4,
           "actual_return": -0.4,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -2255.0
         },
         {
           "symbol": "KFINTECH",
@@ -115631,7 +117413,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.94,
           "actual_ret": 0.09,
           "actual_return": 0.09,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 120.0
         },
         {
           "symbol": "FORTIS",
@@ -115680,7 +117463,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.97,
           "actual_ret": -0.12,
           "actual_return": -0.12,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -100.0
         },
         {
           "symbol": "MAHABANK",
@@ -115729,7 +117513,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.76,
           "actual_ret": 6.91,
           "actual_return": 6.91,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 737.5
         },
         {
           "symbol": "RBLBANK",
@@ -115778,7 +117563,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.52,
           "actual_ret": -1.67,
           "actual_return": -1.67,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -990.0
         },
         {
           "symbol": "BANKINDIA",
@@ -115827,7 +117613,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.18,
           "actual_ret": 5.33,
           "actual_return": 5.33,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 1280.0
         },
         {
           "symbol": "KEI",
@@ -115876,7 +117663,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.91,
           "actual_ret": -0.06,
           "actual_return": -0.06,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -412.5
         },
         {
           "symbol": "ADANIGREEN",
@@ -115925,7 +117713,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.44,
           "actual_ret": -10.59,
           "actual_return": -10.59,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -43000.0
         },
         {
           "symbol": "BHARTIARTL",
@@ -116024,7 +117813,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.37,
           "actual_ret": -1.52,
           "actual_return": -1.52,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -6542.5
         },
         {
           "symbol": "OFSS",
@@ -116073,7 +117863,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.06,
           "actual_ret": 2.21,
           "actual_return": 2.21,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 20402.5
         },
         {
           "symbol": "PFC",
@@ -116122,7 +117913,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.52,
           "actual_ret": 6.67,
           "actual_return": 6.67,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 6257.5
         },
         {
           "symbol": "PHOENIXLTD",
@@ -116171,7 +117963,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.21,
           "actual_ret": -12.36,
           "actual_return": -12.36,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -32500.0
         },
         {
           "symbol": "ABCAPITAL",
@@ -116220,7 +118013,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.67,
           "actual_ret": 1.82,
           "actual_return": 1.82,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 750.0
         },
         {
           "symbol": "TATAELXSI",
@@ -116269,7 +118063,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.14,
           "actual_ret": -0.29,
           "actual_return": -0.29,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -5135.0
         },
         {
           "symbol": "DELHIVERY",
@@ -116318,7 +118113,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.05,
           "actual_ret": 2.2,
           "actual_return": 2.2,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 2062.5
         },
         {
           "symbol": "PIDILITIND",
@@ -116367,7 +118163,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.7,
           "actual_ret": 3.85,
           "actual_return": 3.85,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 12007.5
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -116416,7 +118213,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.84,
           "actual_ret": -0.99,
           "actual_return": -0.99,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -3140.0
         },
         {
           "symbol": "UNIONBANK",
@@ -116465,7 +118263,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.58,
           "actual_ret": -0.73,
           "actual_return": -0.73,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -182.5
         },
         {
           "symbol": "ADANIPOWER",
@@ -116514,7 +118313,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.37,
           "actual_ret": -2.52,
           "actual_return": -2.52,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -505.0
         },
         {
           "symbol": "SUZLON",
@@ -116563,7 +118363,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 20.77,
           "actual_ret": -19.92,
           "actual_return": -19.92,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -1312.5
         },
         {
           "symbol": "LICI",
@@ -116612,7 +118413,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.24,
           "actual_ret": 0.39,
           "actual_return": 0.39,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 297.5
         },
         {
           "symbol": "GAIL",
@@ -116661,7 +118463,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.25,
           "actual_ret": 0.4,
           "actual_return": 0.4,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 112.5
         },
         {
           "symbol": "ALKEM",
@@ -116710,7 +118513,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.95,
           "actual_ret": -0.1,
           "actual_return": -0.1,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -1207.5
         },
         {
           "symbol": "CGPOWER",
@@ -116759,7 +118563,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.18,
           "actual_ret": 2.33,
           "actual_return": 2.33,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 2272.5
         },
         {
           "symbol": "CONCOR",
@@ -116808,7 +118613,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.95,
           "actual_ret": -0.1,
           "actual_return": -0.1,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -182.5
         },
         {
           "symbol": "ADANIPORTS",
@@ -116907,7 +118713,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "BOSCHLTD",
@@ -116956,7 +118763,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.02,
           "actual_ret": 1.17,
           "actual_return": 1.17,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 62335.0
         },
         {
           "symbol": "PIIND",
@@ -117005,7 +118813,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.61,
           "actual_ret": -4.76,
           "actual_return": -4.76,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -41065.0
         },
         {
           "symbol": "CAMS",
@@ -117054,7 +118863,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.98,
           "actual_ret": 5.13,
           "actual_return": 5.13,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 5920.0
         },
         {
           "symbol": "WIPRO",
@@ -117153,7 +118963,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.77,
           "actual_ret": -1.92,
           "actual_return": -1.92,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -2407.5
         },
         {
           "symbol": "POWERINDIA",
@@ -117202,7 +119013,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "SBICARD",
@@ -117251,7 +119063,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.37,
           "actual_ret": -2.52,
           "actual_return": -2.52,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -4737.5
         },
         {
           "symbol": "IOC",
@@ -117300,7 +119113,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.01,
           "actual_ret": -3.16,
           "actual_return": -3.16,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -697.5
         },
         {
           "symbol": "MFSL",
@@ -117349,7 +119163,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.24,
           "actual_ret": 1.39,
           "actual_return": 1.39,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 3150.0
         },
         {
           "symbol": "ICICIPRULI",
@@ -117398,7 +119213,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.58,
           "actual_ret": 4.73,
           "actual_return": 4.73,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 6572.5
         },
         {
           "symbol": "KAYNES",
@@ -117447,7 +119263,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.92,
           "actual_ret": 0.07,
           "actual_return": 0.07,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 487.5
         },
         {
           "symbol": "DIXON",
@@ -117496,7 +119313,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.69,
           "actual_ret": 0.84,
           "actual_return": 0.84,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 11005.0
         },
         {
           "symbol": "POLICYBZR",
@@ -117545,7 +119363,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.47,
           "actual_ret": -1.62,
           "actual_return": -1.62,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -3025.0
         },
         {
           "symbol": "AUROPHARMA",
@@ -117594,7 +119413,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.41,
           "actual_ret": -0.56,
           "actual_return": -0.56,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -1442.5
         },
         {
           "symbol": "HYUNDAI",
@@ -117643,7 +119463,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.84,
           "actual_ret": 11.99,
           "actual_return": 11.99,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 29975.0
         },
         {
           "symbol": "AUBANK",
@@ -117692,7 +119513,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.13,
           "actual_ret": -1.28,
           "actual_return": -1.28,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -2270.0
         },
         {
           "symbol": "PAGEIND",
@@ -117741,7 +119563,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.34,
           "actual_ret": -3.49,
           "actual_return": -3.49,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -340150.0
         },
         {
           "symbol": "NYKAA",
@@ -117790,7 +119613,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.51,
           "actual_ret": 13.66,
           "actual_return": 13.66,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 5037.5
         },
         {
           "symbol": "AMBUJACEM",
@@ -117839,7 +119663,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.78,
           "actual_ret": 0.93,
           "actual_return": 0.93,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 962.5
         },
         {
           "symbol": "FORCEMOT",
@@ -117888,7 +119713,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.42,
           "actual_ret": -2.57,
           "actual_return": -2.57,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -21440.0
         },
         {
           "symbol": "SUPREMEIND",
@@ -117937,7 +119763,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.25,
           "actual_ret": 4.4,
           "actual_return": 4.4,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 47760.0
         },
         {
           "symbol": "COLPAL",
@@ -117986,7 +119813,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.82,
           "actual_ret": -1.97,
           "actual_return": -1.97,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -9347.5
         },
         {
           "symbol": "BHARATFORG",
@@ -118035,7 +119863,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.32,
           "actual_ret": 4.47,
           "actual_return": 4.47,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 11747.5
         },
         {
           "symbol": "NAM-INDIA",
@@ -118084,7 +119913,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.9,
           "actual_ret": 3.05,
           "actual_return": 3.05,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 3172.5
         },
         {
           "symbol": "LAURUSLABS",
@@ -118133,7 +119963,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.88,
           "actual_ret": -0.03,
           "actual_return": -0.03,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -25.0
         },
         {
           "symbol": "BAJAJHLDNG",
@@ -118182,7 +120013,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.83,
           "actual_ret": 0.98,
           "actual_return": 0.98,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 19062.5
         },
         {
           "symbol": "SONACOMS",
@@ -118231,7 +120063,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.24,
           "actual_ret": -3.39,
           "actual_return": -3.39,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -4642.5
         },
         {
           "symbol": "ICICIGI",
@@ -118280,7 +120113,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.79,
           "actual_ret": -5.94,
           "actual_return": -5.94,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -20125.0
         },
         {
           "symbol": "BPCL",
@@ -118329,7 +120163,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.52,
           "actual_ret": -3.67,
           "actual_return": -3.67,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -1357.5
         },
         {
           "symbol": "LUPIN",
@@ -118378,7 +120213,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.55,
           "actual_ret": 0.7,
           "actual_return": 0.7,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 2147.5
         },
         {
           "symbol": "CDSL",
@@ -118427,7 +120263,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.52,
           "actual_ret": 2.67,
           "actual_return": 2.67,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 6055.0
         },
         {
           "symbol": "HDFCBANK",
@@ -118526,7 +120363,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.58,
           "actual_ret": -2.73,
           "actual_return": -2.73,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -4137.5
         },
         {
           "symbol": "PREMIERENE",
@@ -118575,7 +120413,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "AXISBANK",
@@ -118674,7 +120513,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.82,
           "actual_ret": 1.97,
           "actual_return": 1.97,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 1610.0
         },
         {
           "symbol": "NAUKRI",
@@ -118723,7 +120563,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.97,
           "actual_ret": 2.12,
           "actual_return": 2.12,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 4717.5
         },
         {
           "symbol": "RADICO",
@@ -118772,7 +120613,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.02,
           "actual_ret": 4.17,
           "actual_return": 4.17,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 12495.0
         },
         {
           "symbol": "IREDA",
@@ -118821,7 +120663,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.77,
           "actual_ret": 1.92,
           "actual_return": 1.92,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 535.0
         },
         {
           "symbol": "MAXHEALTH",
@@ -118920,7 +120763,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.31,
           "actual_ret": 2.46,
           "actual_return": 2.46,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 1305.0
         },
         {
           "symbol": "WAAREEENER",
@@ -118969,7 +120813,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "MAZDOCK",
@@ -119018,7 +120863,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.96,
           "actual_ret": -0.11,
           "actual_return": -0.11,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -272.5
         },
         {
           "symbol": "ETERNAL",
@@ -119117,7 +120963,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "LODHA",
@@ -119166,7 +121013,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.69,
           "actual_ret": 4.84,
           "actual_return": 4.84,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 10235.0
         },
         {
           "symbol": "DMART",
@@ -119215,7 +121063,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.31,
           "actual_ret": -4.46,
           "actual_return": -4.46,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -43037.5
         },
         {
           "symbol": "OBEROIRLTY",
@@ -119264,7 +121113,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.99,
           "actual_ret": 5.14,
           "actual_return": 5.14,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 18720.0
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -119313,7 +121163,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.2,
           "actual_ret": 4.35,
           "actual_return": 4.35,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 897.5
         },
         {
           "symbol": "BLUESTARCO",
@@ -119362,7 +121213,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.24,
           "actual_ret": 4.39,
           "actual_return": 4.39,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 10392.5
         },
         {
           "symbol": "CROMPTON",
@@ -119411,7 +121263,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.13,
           "actual_ret": 1.28,
           "actual_return": 1.28,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 912.5
         },
         {
           "symbol": "BAJAJFINSV",
@@ -119510,7 +121363,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.93,
           "actual_ret": -0.08,
           "actual_return": -0.08,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -872.5
         },
         {
           "symbol": "VMM",
@@ -119559,7 +121413,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.46,
           "actual_ret": -3.61,
           "actual_return": -3.61,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -9025.0
         },
         {
           "symbol": "TMPV",
@@ -119608,7 +121463,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.23,
           "actual_ret": -0.38,
           "actual_return": -0.38,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -2017.5
         },
         {
           "symbol": "NTPC",
@@ -119707,7 +121563,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.19,
           "actual_ret": -0.34,
           "actual_return": -0.34,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -582.5
         },
         {
           "symbol": "AMBER",
@@ -119756,7 +121613,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.38,
           "actual_ret": -1.53,
           "actual_return": -1.53,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -11062.5
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -119805,7 +121663,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.68,
           "actual_ret": 1.83,
           "actual_return": 1.83,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 2732.5
         },
         {
           "symbol": "LTF",
@@ -119854,7 +121713,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.44,
           "actual_ret": -2.59,
           "actual_return": -2.59,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -840.0
         },
         {
           "symbol": "GVT&D",
@@ -119903,7 +121763,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.51,
           "actual_ret": -11.66,
           "actual_return": -11.66,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -12312.5
         },
         {
           "symbol": "KPITTECH",
@@ -119952,7 +121813,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.13,
           "actual_ret": -6.28,
           "actual_return": -6.28,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -19065.0
         },
         {
           "symbol": "IRFC",
@@ -120001,7 +121863,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "COFORGE",
@@ -120050,7 +121913,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.12,
           "actual_ret": -0.27,
           "actual_return": -0.27,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -820.0
         },
         {
           "symbol": "GMRAIRPORT",
@@ -120099,7 +121963,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.28,
           "actual_ret": 8.43,
           "actual_return": 8.43,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 1250.0
         },
         {
           "symbol": "CANBK",
@@ -120148,7 +122013,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.27,
           "actual_ret": 2.42,
           "actual_return": 2.42,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 445.0
         },
         {
           "symbol": "PERSISTENT",
@@ -120197,7 +122063,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.41,
           "actual_ret": -0.56,
           "actual_return": -0.56,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -3937.5
         },
         {
           "symbol": "APLAPOLLO",
@@ -120246,7 +122113,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.03,
           "actual_ret": -2.18,
           "actual_return": -2.18,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -9082.5
         },
         {
           "symbol": "SAIL",
@@ -120295,7 +122163,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.41,
           "actual_ret": 6.56,
           "actual_return": 6.56,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 1422.5
         },
         {
           "symbol": "ADANIENT",
@@ -120394,7 +122263,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.67,
           "actual_ret": -0.82,
           "actual_return": -0.82,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -105.0
         },
         {
           "symbol": "TIINDIA",
@@ -120443,7 +122313,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.17,
           "actual_ret": -0.32,
           "actual_return": -0.32,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -2317.5
         },
         {
           "symbol": "RECLTD",
@@ -120492,7 +122363,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.41,
           "actual_ret": -6.56,
           "actual_return": -6.56,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -6427.5
         },
         {
           "symbol": "NATIONALUM",
@@ -120541,7 +122413,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.26,
           "actual_ret": 5.41,
           "actual_return": 5.41,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 1137.5
         },
         {
           "symbol": "JSWENERGY",
@@ -120590,7 +122463,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.44,
           "actual_ret": 3.59,
           "actual_return": 3.59,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 3425.0
         },
         {
           "symbol": "ASTRAL",
@@ -120639,7 +122513,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.09,
           "actual_ret": -2.24,
           "actual_return": -2.24,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -10537.5
         },
         {
           "symbol": "ASIANPAINT",
@@ -120738,7 +122613,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.56,
           "actual_ret": -3.71,
           "actual_return": -3.71,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -2462.5
         },
         {
           "symbol": "JUBLFOOD",
@@ -120787,7 +122663,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.8,
           "actual_ret": -0.95,
           "actual_return": -0.95,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -1255.0
         },
         {
           "symbol": "M&M",
@@ -120886,7 +122763,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.19,
           "actual_ret": -3.34,
           "actual_return": -3.34,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -5440.0
         },
         {
           "symbol": "ADANIENSOL",
@@ -120935,7 +122813,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.23,
           "actual_ret": -3.38,
           "actual_return": -3.38,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -6650.0
         },
         {
           "symbol": "HINDPETRO",
@@ -120984,7 +122863,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.67,
           "actual_ret": -0.82,
           "actual_return": -0.82,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -470.0
         },
         {
           "symbol": "YESBANK",
@@ -121033,7 +122913,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.35,
           "actual_ret": -3.5,
           "actual_return": -3.5,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -187.5
         },
         {
           "symbol": "MOTHERSON",
@@ -121082,7 +122963,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.11,
           "actual_ret": 3.26,
           "actual_return": 3.26,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 485.0
         },
         {
           "symbol": "PRESTIGE",
@@ -121131,7 +123013,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.16,
           "actual_ret": 5.31,
           "actual_return": 5.31,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 15605.0
         },
         {
           "symbol": "SUNPHARMA",
@@ -121230,7 +123113,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.08,
           "actual_ret": -4.23,
           "actual_return": -4.23,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -3657.5
         },
         {
           "symbol": "BHEL",
@@ -121279,7 +123163,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.07,
           "actual_ret": -0.22,
           "actual_return": -0.22,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -97.5
         },
         {
           "symbol": "MPHASIS",
@@ -121328,7 +123213,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.48,
           "actual_ret": 13.63,
           "actual_return": 13.63,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 78205.0
         },
         {
           "symbol": "BRITANNIA",
@@ -121377,7 +123263,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.87,
           "actual_ret": 1.02,
           "actual_return": 1.02,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 11607.5
         },
         {
           "symbol": "RVNL",
@@ -121426,7 +123313,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.91,
           "actual_ret": 0.06,
           "actual_return": 0.06,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 25.0
         },
         {
           "symbol": "IEX",
@@ -121475,7 +123363,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.93,
           "actual_ret": 1.08,
           "actual_return": 1.08,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 387.5
         },
         {
           "symbol": "TCS",
@@ -121674,7 +123563,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.14,
           "actual_ret": 1.29,
           "actual_return": 1.29,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 590.0
         },
         {
           "symbol": "MOTILALOFS",
@@ -121723,7 +123613,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.51,
           "actual_ret": 4.66,
           "actual_return": 4.66,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 13827.5
         },
         {
           "symbol": "HAVELLS",
@@ -121772,7 +123663,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.89,
           "actual_ret": -1.04,
           "actual_return": -1.04,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -3222.5
         },
         {
           "symbol": "CIPLA",
@@ -121921,7 +123813,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.09,
           "actual_ret": 0.24,
           "actual_return": 0.24,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 247.5
         },
         {
           "symbol": "LT",
@@ -122020,7 +123913,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.15,
           "actual_ret": 16.3,
           "actual_return": 16.3,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 7370.0
         },
         {
           "symbol": "JSWSTEEL",
@@ -122119,7 +124013,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.23,
           "actual_ret": 1.38,
           "actual_return": 1.38,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 1770.0
         },
         {
           "symbol": "COCHINSHIP",
@@ -122168,7 +124063,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.98,
           "actual_ret": 5.13,
           "actual_return": 5.13,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 6550.0
         },
         {
           "symbol": "GRASIM",
@@ -122267,7 +124163,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.42,
           "actual_ret": -1.57,
           "actual_return": -1.57,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -737.5
         },
         {
           "symbol": "PATANJALI",
@@ -122316,7 +124213,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.73,
           "actual_ret": 1.88,
           "actual_return": 1.88,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 2187.5
         },
         {
           "symbol": "SOLARINDS",
@@ -122365,7 +124263,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.41,
           "actual_ret": -16.56,
           "actual_return": -16.56,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -219775.0
         },
         {
           "symbol": "SBILIFE",
@@ -122464,7 +124363,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.68,
           "actual_ret": -1.83,
           "actual_return": -1.83,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -680.0
         },
         {
           "symbol": "UPL",
@@ -122513,7 +124413,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.91,
           "actual_ret": -2.06,
           "actual_return": -2.06,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -2780.0
         },
         {
           "symbol": "DLF",
@@ -122562,7 +124463,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.23,
           "actual_ret": 7.38,
           "actual_return": 7.38,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 11685.0
         },
         {
           "symbol": "GLENMARK",
@@ -122611,7 +124513,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.75,
           "actual_ret": 3.9,
           "actual_return": 3.9,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 7982.5
         },
         {
           "symbol": "INDIGO",
@@ -122710,7 +124613,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.9,
           "actual_ret": 4.05,
           "actual_return": 4.05,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 5200.0
         },
         {
           "symbol": "INFY",
@@ -122809,7 +124713,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.52,
           "actual_ret": -0.67,
           "actual_return": -0.67,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -277.5
         },
         {
           "symbol": "JINDALSTEL",
@@ -122858,7 +124763,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.14,
           "actual_ret": 6.29,
           "actual_return": 6.29,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 10745.0
         },
         {
           "symbol": "360ONE",
@@ -122907,7 +124813,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.8,
           "actual_ret": -1.95,
           "actual_return": -1.95,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -2357.5
         },
         {
           "symbol": "UNITDSPR",
@@ -122956,7 +124863,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.77,
           "actual_ret": -3.92,
           "actual_return": -3.92,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -10000.0
         },
         {
           "symbol": "TVSMOTOR",
@@ -123005,7 +124913,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.75,
           "actual_ret": 2.9,
           "actual_return": 2.9,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 14110.0
         },
         {
           "symbol": "DRREDDY",
@@ -123104,7 +125013,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.85,
           "actual_ret": -1.0,
           "actual_return": -1.0,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -467.5
         },
         {
           "symbol": "RELIANCE",
@@ -123253,7 +125163,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.89,
           "actual_ret": -1.04,
           "actual_return": -1.04,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -140.0
         },
         {
           "symbol": "BAJFINANCE",
@@ -123352,7 +125263,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.91,
           "actual_ret": 1.06,
           "actual_return": 1.06,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 4367.5
         },
         {
           "symbol": "TRENT",
@@ -123451,7 +125363,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.11,
           "actual_ret": 6.26,
           "actual_return": 6.26,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 29910.0
         },
         {
           "symbol": "LICHSGFIN",
@@ -123500,7 +125413,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.26,
           "actual_ret": 1.41,
           "actual_return": 1.41,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 1817.5
         },
         {
           "symbol": "NMDC",
@@ -123549,7 +125463,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.3,
           "actual_ret": 5.45,
           "actual_return": 5.45,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 747.5
         },
         {
           "symbol": "LTM",
@@ -123598,7 +125513,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.65,
           "actual_ret": -4.8,
           "actual_return": -4.8,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -57987.5
         },
         {
           "symbol": "VOLTAS",
@@ -123647,7 +125563,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.92,
           "actual_ret": -2.07,
           "actual_return": -2.07,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -4272.5
         },
         {
           "symbol": "INDIANB",
@@ -123696,7 +125613,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.71,
           "actual_ret": 5.86,
           "actual_return": 5.86,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 6115.0
         },
         {
           "symbol": "BANKBARODA",
@@ -123745,7 +125663,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.89,
           "actual_ret": -9.04,
           "actual_return": -9.04,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -4155.0
         },
         {
           "symbol": "MANKIND",
@@ -123794,7 +125713,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.53,
           "actual_ret": 1.68,
           "actual_return": 1.68,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 7447.5
         },
         {
           "symbol": "VEDL",
@@ -123843,7 +125763,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.85,
           "actual_ret": -2.0,
           "actual_return": -2.0,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -905.0
         },
         {
           "symbol": "INDUSINDBK",
@@ -123942,7 +125863,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.49,
           "actual_ret": -1.64,
           "actual_return": -1.64,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -1237.5
         },
         {
           "symbol": "NESTLEIND",
@@ -124041,7 +125963,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.1,
           "actual_ret": 1.25,
           "actual_return": 1.25,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 3585.0
         },
         {
           "symbol": "BSE",
@@ -124090,7 +126013,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.74,
           "actual_ret": -1.89,
           "actual_return": -1.89,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -3690.0
         },
         {
           "symbol": "KOTAKBANK",
@@ -124189,7 +126113,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.05,
           "actual_ret": -4.2,
           "actual_return": -4.2,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -23304.75
         },
         {
           "symbol": "PNBHOUSING",
@@ -124238,7 +126163,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.54,
           "actual_ret": 1.69,
           "actual_return": 1.69,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 3307.5
         },
         {
           "symbol": "HEROMOTOCO",
@@ -124387,7 +126313,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.91,
           "actual_ret": 2.06,
           "actual_return": 2.06,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 3042.5
         },
         {
           "symbol": "SIEMENS",
@@ -124436,7 +126363,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.27,
           "actual_ret": -5.42,
           "actual_return": -5.42,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -28307.5
         },
         {
           "symbol": "VBL",
@@ -124485,7 +126413,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.59,
           "actual_ret": 13.74,
           "actual_return": 13.74,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 15002.5
         },
         {
           "symbol": "INOXWIND",
@@ -124534,7 +126463,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.06,
           "actual_ret": 4.21,
           "actual_return": 4.21,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 530.0
         },
         {
           "symbol": "APOLLOHOSP",
@@ -124733,7 +126663,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.99,
           "actual_ret": -4.14,
           "actual_return": -4.14,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -37800.0
         },
         {
           "symbol": "MARUTI",
@@ -124841,7 +126772,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.97,
           "actual_ret": 2.12,
           "actual_return": 2.12,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 6297.5
         },
         {
           "symbol": "BEL",
@@ -124890,7 +126822,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.63,
           "actual_ret": 0.78,
           "actual_return": 0.78,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 1545.0
         },
         {
           "symbol": "ITC",
@@ -124939,7 +126872,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.38,
           "actual_ret": 1.53,
           "actual_return": 1.53,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 9472.0
         },
         {
           "symbol": "BPCL",
@@ -124988,7 +126922,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.3,
           "actual_ret": -1.45,
           "actual_return": -1.45,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -580.0
         },
         {
           "symbol": "HDFCLIFE",
@@ -125037,7 +126972,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.04,
           "actual_ret": 0.19,
           "actual_return": 0.19,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 1309.0
         },
         {
           "symbol": "ONGC",
@@ -125086,7 +127022,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.04,
           "actual_ret": -1.19,
           "actual_return": -1.19,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -3580.5
         },
         {
           "symbol": "JIOFIN",
@@ -125135,7 +127072,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.37,
           "actual_ret": 2.52,
           "actual_return": 2.52,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 14544.0
         },
         {
           "symbol": "COALINDIA",
@@ -125184,7 +127122,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.0,
           "actual_ret": 3.15,
           "actual_return": 3.15,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 6132.0
         },
         {
           "symbol": "TATACONSUM",
@@ -125233,7 +127172,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.08,
           "actual_ret": -0.23,
           "actual_return": -0.23,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -900.0
         },
         {
           "symbol": "CIPLA",
@@ -125282,7 +127222,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.92,
           "actual_ret": -3.07,
           "actual_return": -3.07,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -12995.5
         },
         {
           "symbol": "HINDALCO",
@@ -125331,7 +127272,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.93,
           "actual_ret": 1.08,
           "actual_return": 1.08,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 3297.0
         },
         {
           "symbol": "SBIN",
@@ -125380,7 +127322,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.62,
           "actual_ret": -2.77,
           "actual_return": -2.77,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -11685.0
         },
         {
           "symbol": "WIPRO",
@@ -125429,7 +127372,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.48,
           "actual_ret": 0.63,
           "actual_return": 0.63,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 1860.0
         },
         {
           "symbol": "KEI",
@@ -125478,7 +127422,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.9,
           "actual_ret": -0.05,
           "actual_return": -0.05,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -272.5
         },
         {
           "symbol": "SHREECEM",
@@ -125527,7 +127472,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.92,
           "actual_ret": -1.07,
           "actual_return": -1.07,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -63745.0
         },
         {
           "symbol": "LUPIN",
@@ -125576,7 +127522,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.9,
           "actual_ret": 2.05,
           "actual_return": 2.05,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 5660.0
         },
         {
           "symbol": "CROMPTON",
@@ -125625,7 +127572,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.55,
           "actual_ret": -3.7,
           "actual_return": -3.7,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -2855.0
         },
         {
           "symbol": "SUZLON",
@@ -125674,7 +127622,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.61,
           "actual_ret": -4.76,
           "actual_return": -4.76,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -212.5
         },
         {
           "symbol": "BDL",
@@ -125723,7 +127672,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.53,
           "actual_ret": -1.68,
           "actual_return": -1.68,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -2372.5
         },
         {
           "symbol": "NTPC",
@@ -125772,7 +127722,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.46,
           "actual_ret": 7.61,
           "actual_return": 7.61,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 19710.0
         },
         {
           "symbol": "BANDHANBNK",
@@ -125821,7 +127772,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.42,
           "actual_ret": -0.57,
           "actual_return": -0.57,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -322.5
         },
         {
           "symbol": "LODHA",
@@ -125870,7 +127822,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.85,
           "actual_ret": -6.0,
           "actual_return": -6.0,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -10382.5
         },
         {
           "symbol": "LICI",
@@ -125919,7 +127872,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.76,
           "actual_ret": -0.91,
           "actual_return": -0.91,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -672.5
         },
         {
           "symbol": "BLUESTARCO",
@@ -125968,7 +127922,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.33,
           "actual_ret": -0.48,
           "actual_return": -0.48,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -887.5
         },
         {
           "symbol": "IOC",
@@ -126017,7 +127972,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.93,
           "actual_ret": -1.08,
           "actual_return": -1.08,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -212.5
         },
         {
           "symbol": "COLPAL",
@@ -126066,7 +128022,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.14,
           "actual_ret": -2.29,
           "actual_return": -2.29,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -9627.5
         },
         {
           "symbol": "LTM",
@@ -126115,7 +128072,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.98,
           "actual_ret": 0.13,
           "actual_return": 0.13,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 1592.5
         },
         {
           "symbol": "TVSMOTOR",
@@ -126164,7 +128122,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.43,
           "actual_ret": 4.58,
           "actual_return": 4.58,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 16570.0
         },
         {
           "symbol": "DLF",
@@ -126213,7 +128172,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.11,
           "actual_ret": -0.26,
           "actual_return": -0.26,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -330.0
         },
         {
           "symbol": "POLYCAB",
@@ -126262,7 +128222,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.9,
           "actual_ret": 3.05,
           "actual_return": 3.05,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 36502.5
         },
         {
           "symbol": "BSE",
@@ -126311,7 +128272,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.78,
           "actual_ret": 4.93,
           "actual_return": 4.93,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 5060.0
         },
         {
           "symbol": "INOXWIND",
@@ -126360,7 +128322,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.38,
           "actual_ret": 12.53,
           "actual_return": 12.53,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 1467.5
         },
         {
           "symbol": "AXISBANK",
@@ -126409,7 +128372,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.22,
           "actual_ret": -0.37,
           "actual_return": -0.37,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -2368.75
         },
         {
           "symbol": "LICHSGFIN",
@@ -126458,7 +128422,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.15,
           "actual_ret": -4.3,
           "actual_return": -4.3,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -4582.5
         },
         {
           "symbol": "ASHOKLEY",
@@ -126507,7 +128472,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.23,
           "actual_ret": 1.38,
           "actual_return": 1.38,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 287.5
         },
         {
           "symbol": "AUROPHARMA",
@@ -126556,7 +128522,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.03,
           "actual_ret": -5.18,
           "actual_return": -5.18,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -11220.0
         },
         {
           "symbol": "BHARTIARTL",
@@ -126605,7 +128572,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.64,
           "actual_ret": -0.79,
           "actual_return": -0.79,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -3211.0
         },
         {
           "symbol": "YESBANK",
@@ -126654,7 +128622,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.54,
           "actual_ret": -1.69,
           "actual_return": -1.69,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -75.0
         },
         {
           "symbol": "INDHOTEL",
@@ -126703,7 +128672,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.88,
           "actual_ret": -3.03,
           "actual_return": -3.03,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -2857.5
         },
         {
           "symbol": "BAJAJFINSV",
@@ -126752,7 +128722,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.42,
           "actual_ret": 2.57,
           "actual_return": 2.57,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 19415.0
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -126801,7 +128772,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.87,
           "actual_ret": 8.02,
           "actual_return": 8.02,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 26142.5
         },
         {
           "symbol": "NBCC",
@@ -126850,7 +128822,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.11,
           "actual_ret": -5.26,
           "actual_return": -5.26,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -522.5
         },
         {
           "symbol": "MCX",
@@ -126899,7 +128872,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.1,
           "actual_ret": 2.25,
           "actual_return": 2.25,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 1952.5
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -126948,7 +128922,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.18,
           "actual_ret": 0.33,
           "actual_return": 0.33,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 72.5
         },
         {
           "symbol": "NAM-INDIA",
@@ -126997,7 +128972,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.59,
           "actual_ret": -0.74,
           "actual_return": -0.74,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -570.0
         },
         {
           "symbol": "ADANIPOWER",
@@ -127046,7 +129022,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.94,
           "actual_ret": 2.09,
           "actual_return": 2.09,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 292.5
         },
         {
           "symbol": "CGPOWER",
@@ -127095,7 +129072,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.37,
           "actual_ret": 0.52,
           "actual_return": 0.52,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 520.0
         },
         {
           "symbol": "DABUR",
@@ -127144,7 +129122,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.59,
           "actual_ret": -0.74,
           "actual_return": -0.74,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -1005.0
         },
         {
           "symbol": "ICICIGI",
@@ -127193,7 +129172,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.74,
           "actual_ret": 4.89,
           "actual_return": 4.89,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 17025.0
         },
         {
           "symbol": "SONACOMS",
@@ -127242,7 +129222,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.2,
           "actual_ret": 0.35,
           "actual_return": 0.35,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 515.0
         },
         {
           "symbol": "MOTILALOFS",
@@ -127291,7 +129272,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.5,
           "actual_ret": -4.65,
           "actual_return": -4.65,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -10142.5
         },
         {
           "symbol": "INDUSTOWER",
@@ -127340,7 +129322,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.62,
           "actual_ret": 10.77,
           "actual_return": 10.77,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 4362.5
         },
         {
           "symbol": "TATAPOWER",
@@ -127389,7 +129372,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.03,
           "actual_ret": 3.18,
           "actual_return": 3.18,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 2077.5
         },
         {
           "symbol": "ICICIBANK",
@@ -127438,7 +129422,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.67,
           "actual_ret": -1.82,
           "actual_return": -1.82,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -11914.0
         },
         {
           "symbol": "KAYNES",
@@ -127487,7 +129472,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.42,
           "actual_ret": -1.57,
           "actual_return": -1.57,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -8200.0
         },
         {
           "symbol": "GLENMARK",
@@ -127536,7 +129522,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.55,
           "actual_ret": -7.7,
           "actual_return": -7.7,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -15170.0
         },
         {
           "symbol": "KFINTECH",
@@ -127585,7 +129572,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.43,
           "actual_ret": 12.58,
           "actual_return": 12.58,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 11645.0
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -127634,7 +129622,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.21,
           "actual_ret": -3.36,
           "actual_return": -3.36,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -4710.0
         },
         {
           "symbol": "RADICO",
@@ -127683,7 +129672,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 15.79,
           "actual_ret": 14.94,
           "actual_return": 14.94,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 44930.0
         },
         {
           "symbol": "TATAELXSI",
@@ -127732,7 +129722,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.64,
           "actual_ret": 3.79,
           "actual_return": 3.79,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 68797.5
         },
         {
           "symbol": "MANAPPURAM",
@@ -127781,7 +129772,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.25,
           "actual_ret": 2.4,
           "actual_return": 2.4,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 827.5
         },
         {
           "symbol": "HAVELLS",
@@ -127830,7 +129822,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.83,
           "actual_ret": 1.98,
           "actual_return": 1.98,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 6372.5
         },
         {
           "symbol": "PERSISTENT",
@@ -127879,7 +129872,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.95,
           "actual_ret": 3.1,
           "actual_return": 3.1,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 18397.5
         },
         {
           "symbol": "M&M",
@@ -127928,7 +129922,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.08,
           "actual_ret": -0.23,
           "actual_return": -0.23,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -1214.5
         },
         {
           "symbol": "UPL",
@@ -127977,7 +129972,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.06,
           "actual_ret": 3.21,
           "actual_return": 3.21,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 4750.0
         },
         {
           "symbol": "ICICIPRULI",
@@ -128026,7 +130022,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.42,
           "actual_ret": -3.57,
           "actual_return": -3.57,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -4860.0
         },
         {
           "symbol": "SBICARD",
@@ -128075,7 +130072,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.64,
           "actual_ret": -4.79,
           "actual_return": -4.79,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -10562.5
         },
         {
           "symbol": "MANKIND",
@@ -128124,7 +130122,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.78,
           "actual_ret": 8.93,
           "actual_return": 8.93,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 38685.0
         },
         {
           "symbol": "HINDUNILVR",
@@ -128173,7 +130172,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.56,
           "actual_ret": 3.71,
           "actual_return": 3.71,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 28197.0
         },
         {
           "symbol": "HDFCAMC",
@@ -128222,7 +130222,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.14,
           "actual_ret": 4.29,
           "actual_return": 4.29,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 11572.5
         },
         {
           "symbol": "SRF",
@@ -128271,7 +130272,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.45,
           "actual_ret": 1.6,
           "actual_return": 1.6,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 8990.0
         },
         {
           "symbol": "PRESTIGE",
@@ -128320,7 +130322,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.27,
           "actual_ret": 6.42,
           "actual_return": 6.42,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 10347.5
         },
         {
           "symbol": "SWIGGY",
@@ -128369,7 +130372,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "BANKBARODA",
@@ -128418,7 +130422,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.17,
           "actual_ret": -6.32,
           "actual_return": -6.32,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -2822.5
         },
         {
           "symbol": "PREMIERENE",
@@ -128467,7 +130472,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "ABB",
@@ -128516,7 +130522,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.55,
           "actual_ret": 0.7,
           "actual_return": 0.7,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 7462.5
         },
         {
           "symbol": "BOSCHLTD",
@@ -128565,7 +130572,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.31,
           "actual_ret": 1.46,
           "actual_return": 1.46,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 69207.5
         },
         {
           "symbol": "PIIND",
@@ -128614,7 +130622,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.35,
           "actual_ret": -1.5,
           "actual_return": -1.5,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -13487.5
         },
         {
           "symbol": "SBILIFE",
@@ -128663,7 +130672,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.09,
           "actual_ret": -4.24,
           "actual_return": -4.24,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -21303.75
         },
         {
           "symbol": "BHARATFORG",
@@ -128712,7 +130722,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.59,
           "actual_ret": 2.74,
           "actual_return": 2.74,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 5610.0
         },
         {
           "symbol": "IEX",
@@ -128761,7 +130772,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.85,
           "actual_ret": -1.0,
           "actual_return": -1.0,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -317.5
         },
         {
           "symbol": "ADANIENT",
@@ -128810,7 +130822,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.52,
           "actual_ret": 0.67,
           "actual_return": 0.67,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 4929.0
         },
         {
           "symbol": "UNOMINDA",
@@ -128859,7 +130872,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.27,
           "actual_ret": -0.42,
           "actual_return": -0.42,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -595.0
         },
         {
           "symbol": "PHOENIXLTD",
@@ -128908,7 +130922,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.27,
           "actual_ret": -1.42,
           "actual_return": -1.42,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -3082.5
         },
         {
           "symbol": "TECHM",
@@ -128957,7 +130972,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.48,
           "actual_ret": 3.63,
           "actual_return": 3.63,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 24900.0
         },
         {
           "symbol": "WAAREEENER",
@@ -129006,7 +131022,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "TORNTPHARM",
@@ -129055,7 +131072,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.59,
           "actual_ret": -2.74,
           "actual_return": -2.74,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -12605.0
         },
         {
           "symbol": "AMBER",
@@ -129104,7 +131122,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.94,
           "actual_ret": -1.09,
           "actual_return": -1.09,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -5975.0
         },
         {
           "symbol": "ABCAPITAL",
@@ -129153,7 +131172,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.19,
           "actual_ret": 1.34,
           "actual_return": 1.34,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 612.5
         },
         {
           "symbol": "JSWENERGY",
@@ -129202,7 +131222,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 21.05,
           "actual_ret": 20.2,
           "actual_return": 20.2,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 14655.0
         },
         {
           "symbol": "MAZDOCK",
@@ -129251,7 +131272,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.27,
           "actual_ret": -2.42,
           "actual_return": -2.42,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -5352.5
         },
         {
           "symbol": "HEROMOTOCO",
@@ -129300,7 +131322,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.12,
           "actual_ret": -0.27,
           "actual_return": -0.27,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -1880.0
         },
         {
           "symbol": "HINDZINC",
@@ -129349,7 +131372,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.56,
           "actual_ret": 1.71,
           "actual_return": 1.71,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 1220.0
         },
         {
           "symbol": "GODFRYPHLP",
@@ -129398,7 +131422,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.98,
           "actual_ret": 0.13,
           "actual_return": 0.13,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 207.5
         },
         {
           "symbol": "HINDPETRO",
@@ -129447,7 +131472,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.31,
           "actual_ret": -2.46,
           "actual_return": -2.46,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -950.0
         },
         {
           "symbol": "MAXHEALTH",
@@ -129496,7 +131522,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.13,
           "actual_ret": 1.28,
           "actual_return": 1.28,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 3850.0
         },
         {
           "symbol": "MPHASIS",
@@ -129545,7 +131572,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 19.67,
           "actual_ret": -18.82,
           "actual_return": -18.82,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -83942.5
         },
         {
           "symbol": "SUPREMEIND",
@@ -129594,7 +131622,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.67,
           "actual_ret": 0.82,
           "actual_return": 0.82,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 8195.0
         },
         {
           "symbol": "UNITDSPR",
@@ -129643,7 +131672,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.01,
           "actual_ret": 1.16,
           "actual_return": 1.16,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 2902.5
         },
         {
           "symbol": "POWERGRID",
@@ -129692,7 +131722,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.55,
           "actual_ret": -0.7,
           "actual_return": -0.7,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -2196.0
         },
         {
           "symbol": "BAJAJHLDNG",
@@ -129741,7 +131772,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.36,
           "actual_ret": -2.51,
           "actual_return": -2.51,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -42830.0
         },
         {
           "symbol": "PGEL",
@@ -129790,7 +131822,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.33,
           "actual_ret": -4.48,
           "actual_return": -4.48,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -1730.0
         },
         {
           "symbol": "OBEROIRLTY",
@@ -129839,7 +131872,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.13,
           "actual_ret": 2.28,
           "actual_return": 2.28,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 6522.5
         },
         {
           "symbol": "SUNPHARMA",
@@ -129888,7 +131922,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.14,
           "actual_ret": -0.29,
           "actual_return": -0.29,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -1123.5
         },
         {
           "symbol": "AMBUJACEM",
@@ -129937,7 +131972,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.03,
           "actual_ret": -5.18,
           "actual_return": -5.18,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -5647.5
         },
         {
           "symbol": "PFC",
@@ -129986,7 +132022,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.36,
           "actual_ret": -9.51,
           "actual_return": -9.51,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -4770.0
         },
         {
           "symbol": "PNBHOUSING",
@@ -130035,7 +132072,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.89,
           "actual_ret": 4.04,
           "actual_return": 4.04,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 6940.0
         },
         {
           "symbol": "DMART",
@@ -130084,7 +132122,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.81,
           "actual_ret": -3.96,
           "actual_return": -3.96,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -37850.0
         },
         {
           "symbol": "ASTRAL",
@@ -130133,7 +132172,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.05,
           "actual_ret": -0.2,
           "actual_return": -0.2,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -970.0
         },
         {
           "symbol": "SIEMENS",
@@ -130182,7 +132222,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.9,
           "actual_ret": -4.05,
           "actual_return": -4.05,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -22125.0
         },
         {
           "symbol": "FEDERALBNK",
@@ -130231,7 +132272,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.14,
           "actual_ret": 2.29,
           "actual_return": 2.29,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 752.5
         },
         {
           "symbol": "LTF",
@@ -130280,7 +132322,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.05,
           "actual_ret": -1.2,
           "actual_return": -1.2,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -377.5
         },
         {
           "symbol": "ATHERENERG",
@@ -130329,7 +132372,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.67,
           "actual_ret": -16.82,
           "actual_return": -16.82,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -42050.0
         },
         {
           "symbol": "360ONE",
@@ -130378,7 +132422,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.02,
           "actual_ret": -9.17,
           "actual_return": -9.17,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -10502.5
         },
         {
           "symbol": "POWERINDIA",
@@ -130427,7 +132472,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "NMDC",
@@ -130476,7 +132522,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.56,
           "actual_ret": 0.71,
           "actual_return": 0.71,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 75.0
         },
         {
           "symbol": "IREDA",
@@ -130525,7 +132572,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "INDUSINDBK",
@@ -130574,7 +132622,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.41,
           "actual_ret": -0.56,
           "actual_return": -0.56,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -1927.5
         },
         {
           "symbol": "VMM",
@@ -130623,7 +132672,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.46,
           "actual_ret": -3.61,
           "actual_return": -3.61,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -9025.0
         },
         {
           "symbol": "NAUKRI",
@@ -130672,7 +132722,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.13,
           "actual_ret": -1.28,
           "actual_return": -1.28,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -2717.5
         },
         {
           "symbol": "GVT&D",
@@ -130721,7 +132772,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.23,
           "actual_ret": -16.38,
           "actual_return": -16.38,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -13272.5
         },
         {
           "symbol": "INDIANB",
@@ -130770,7 +132822,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.68,
           "actual_ret": -7.83,
           "actual_return": -7.83,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -6955.0
         },
         {
           "symbol": "ALKEM",
@@ -130819,7 +132872,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.84,
           "actual_ret": -2.99,
           "actual_return": -2.99,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -26637.5
         },
         {
           "symbol": "VBL",
@@ -130868,7 +132922,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.61,
           "actual_ret": 5.76,
           "actual_return": 5.76,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 5235.0
         },
         {
           "symbol": "MARICO",
@@ -130917,7 +132972,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.6,
           "actual_ret": 1.75,
           "actual_return": 1.75,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 2395.0
         },
         {
           "symbol": "CONCOR",
@@ -130966,7 +133022,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.16,
           "actual_ret": 1.31,
           "actual_return": 1.31,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 2055.0
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -131015,7 +133072,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.84,
           "actual_ret": -0.99,
           "actual_return": -0.99,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -1077.0
         },
         {
           "symbol": "GODREJCP",
@@ -131064,7 +133122,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.57,
           "actual_ret": -0.72,
           "actual_return": -0.72,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -1707.5
         },
         {
           "symbol": "ADANIPORTS",
@@ -131113,7 +133172,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.83,
           "actual_ret": 0.98,
           "actual_return": 0.98,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 2804.0
         },
         {
           "symbol": "GRASIM",
@@ -131162,7 +133222,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.18,
           "actual_ret": 0.33,
           "actual_return": 0.33,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 1470.0
         },
         {
           "symbol": "AUBANK",
@@ -131211,7 +133272,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.19,
           "actual_ret": 0.34,
           "actual_return": 0.34,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 652.5
         },
         {
           "symbol": "LAURUSLABS",
@@ -131260,7 +133322,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.64,
           "actual_ret": -2.79,
           "actual_return": -2.79,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -2720.0
         },
         {
           "symbol": "FORTIS",
@@ -131309,7 +133372,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.97,
           "actual_ret": -3.12,
           "actual_return": -3.12,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -2522.5
         },
         {
           "symbol": "ADANIENSOL",
@@ -131358,7 +133422,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.54,
           "actual_ret": 2.69,
           "actual_return": 2.69,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 5112.5
         },
         {
           "symbol": "COFORGE",
@@ -131407,7 +133472,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.52,
           "actual_ret": 4.67,
           "actual_return": 4.67,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 12592.5
         },
         {
           "symbol": "ANGELONE",
@@ -131456,7 +133522,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.21,
           "actual_ret": -2.36,
           "actual_return": -2.36,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -1040.0
         },
         {
           "symbol": "CAMS",
@@ -131505,7 +133572,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.12,
           "actual_ret": -1.27,
           "actual_return": -1.27,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -1380.0
         },
         {
           "symbol": "KPITTECH",
@@ -131554,7 +133622,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.93,
           "actual_ret": 0.08,
           "actual_return": 0.08,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 220.0
         },
         {
           "symbol": "RECLTD",
@@ -131603,7 +133672,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.83,
           "actual_ret": 7.98,
           "actual_return": 7.98,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 4452.5
         },
         {
           "symbol": "HCLTECH",
@@ -131652,7 +133722,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.33,
           "actual_ret": -1.48,
           "actual_return": -1.48,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -5950.0
         },
         {
           "symbol": "RBLBANK",
@@ -131701,7 +133772,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.69,
           "actual_ret": -2.84,
           "actual_return": -2.84,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -1562.5
         },
         {
           "symbol": "SAGILITY",
@@ -131750,7 +133822,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "FORCEMOT",
@@ -131799,7 +133872,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.35,
           "actual_ret": -2.5,
           "actual_return": -2.5,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -23387.5
         },
         {
           "symbol": "NHPC",
@@ -131848,7 +133922,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.25,
           "actual_ret": -1.4,
           "actual_return": -1.4,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -162.5
         },
         {
           "symbol": "GMRAIRPORT",
@@ -131897,7 +133972,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.23,
           "actual_ret": -4.38,
           "actual_return": -4.38,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -487.5
         },
         {
           "symbol": "PNB",
@@ -131946,7 +134022,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.78,
           "actual_ret": 2.93,
           "actual_return": 2.93,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 410.0
         },
         {
           "symbol": "VEDL",
@@ -131995,7 +134072,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.29,
           "actual_ret": -1.44,
           "actual_return": -1.44,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -812.5
         },
         {
           "symbol": "DIXON",
@@ -132044,7 +134122,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.51,
           "actual_ret": 1.66,
           "actual_return": 1.66,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 19772.5
         },
         {
           "symbol": "PETRONET",
@@ -132093,7 +134172,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.95,
           "actual_ret": 1.1,
           "actual_return": 1.1,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 550.0
         },
         {
           "symbol": "PAYTM",
@@ -132142,7 +134222,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.65,
           "actual_ret": -1.8,
           "actual_return": -1.8,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -3775.0
         },
         {
           "symbol": "GAIL",
@@ -132191,7 +134272,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.84,
           "actual_ret": -3.99,
           "actual_return": -3.99,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -1015.0
         },
         {
           "symbol": "TATAMOTORS",
@@ -132240,7 +134322,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.04,
           "actual_ret": -0.19,
           "actual_return": -0.19,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -632.5
         },
         {
           "symbol": "CUMMINSIND",
@@ -132289,7 +134372,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.44,
           "actual_ret": -0.59,
           "actual_return": -0.59,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -2695.0
         },
         {
           "symbol": "BANKINDIA",
@@ -132338,7 +134422,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.56,
           "actual_ret": -7.71,
           "actual_return": -7.71,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -1360.0
         },
         {
           "symbol": "UNIONBANK",
@@ -132387,7 +134472,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.48,
           "actual_ret": 4.63,
           "actual_return": 4.63,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 995.0
         },
         {
           "symbol": "ASIANPAINT",
@@ -132436,7 +134522,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.88,
           "actual_ret": -3.03,
           "actual_return": -3.03,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -19690.0
         },
         {
           "symbol": "HYUNDAI",
@@ -132485,7 +134572,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.84,
           "actual_ret": 11.99,
           "actual_return": 11.99,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 29975.0
         },
         {
           "symbol": "GODREJPROP",
@@ -132534,7 +134622,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.13,
           "actual_ret": 3.28,
           "actual_return": 3.28,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 12825.0
         },
         {
           "symbol": "NATIONALUM",
@@ -132583,7 +134672,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.74,
           "actual_ret": 11.89,
           "actual_return": 11.89,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 2182.5
         },
         {
           "symbol": "TIINDIA",
@@ -132632,7 +134722,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.61,
           "actual_ret": -2.76,
           "actual_return": -2.76,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -22150.0
         },
         {
           "symbol": "PAGEIND",
@@ -132681,7 +134772,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.59,
           "actual_ret": 0.74,
           "actual_return": 0.74,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 67250.0
         },
         {
           "symbol": "PATANJALI",
@@ -132730,7 +134822,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.66,
           "actual_ret": -4.81,
           "actual_return": -4.81,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -5262.5
         },
         {
           "symbol": "NYKAA",
@@ -132779,7 +134872,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.24,
           "actual_ret": -9.39,
           "actual_return": -9.39,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -3450.0
         },
         {
           "symbol": "PIDILITIND",
@@ -132828,7 +134922,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.36,
           "actual_ret": 0.51,
           "actual_return": 0.51,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 1552.5
         },
         {
           "symbol": "JUBLFOOD",
@@ -132877,7 +134972,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.68,
           "actual_ret": 2.83,
           "actual_return": 2.83,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 3467.5
         },
         {
           "symbol": "DIVISLAB",
@@ -132926,7 +135022,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.91,
           "actual_ret": -0.06,
           "actual_return": -0.06,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -512.5
         },
         {
           "symbol": "ADANIGREEN",
@@ -132975,7 +135072,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.96,
           "actual_ret": -0.11,
           "actual_return": -0.11,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -287.5
         },
         {
           "symbol": "BRITANNIA",
@@ -133024,7 +135122,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.1,
           "actual_ret": -6.25,
           "actual_return": -6.25,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -73077.5
         },
         {
           "symbol": "JINDALSTEL",
@@ -133073,7 +135172,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.98,
           "actual_ret": 1.13,
           "actual_return": 1.13,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 1980.0
         },
         {
           "symbol": "NESTLEIND",
@@ -133122,7 +135222,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.08,
           "actual_ret": 0.23,
           "actual_return": 0.23,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 1004.0
         },
         {
           "symbol": "KOTAKBANK",
@@ -133171,7 +135272,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.38,
           "actual_ret": 0.53,
           "actual_return": 0.53,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 764.0
         },
         {
           "symbol": "EICHERMOT",
@@ -133220,7 +135322,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.93,
           "actual_ret": 1.08,
           "actual_return": 1.08,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 5374.5
         },
         {
           "symbol": "MOTHERSON",
@@ -133269,7 +135372,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.1,
           "actual_ret": 1.25,
           "actual_return": 1.25,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 197.5
         },
         {
           "symbol": "BHEL",
@@ -133318,7 +135422,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.35,
           "actual_ret": 2.5,
           "actual_return": 2.5,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 807.5
         },
         {
           "symbol": "HAL",
@@ -133367,7 +135472,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.92,
           "actual_ret": 2.07,
           "actual_return": 2.07,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 9812.5
         },
         {
           "symbol": "ETERNAL",
@@ -133416,7 +135522,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.07,
           "actual_ret": -7.22,
           "actual_return": -7.22,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -1350.0
         },
         {
           "symbol": "HDFCBANK",
@@ -133465,7 +135572,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.81,
           "actual_ret": 1.96,
           "actual_return": 1.96,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 8321.5
         },
         {
           "symbol": "CANBK",
@@ -133514,7 +135622,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.59,
           "actual_ret": 0.74,
           "actual_return": 0.74,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 110.0
         },
         {
           "symbol": "JSWSTEEL",
@@ -133563,7 +135672,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.43,
           "actual_ret": -4.58,
           "actual_return": -4.58,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -24840.0
         },
         {
           "symbol": "CDSL",
@@ -133612,7 +135722,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.6,
           "actual_ret": 11.75,
           "actual_return": 11.75,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 17210.0
         },
         {
           "symbol": "IDEA",
@@ -133661,7 +135772,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.99,
           "actual_ret": -4.14,
           "actual_return": -4.14,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -75.0
         },
         {
           "symbol": "RVNL",
@@ -133710,7 +135822,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.71,
           "actual_ret": 0.86,
           "actual_return": 0.86,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 260.0
         },
         {
           "symbol": "RELIANCE",
@@ -133759,7 +135872,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.9,
           "actual_ret": -1.05,
           "actual_return": -1.05,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -3290.0
         },
         {
           "symbol": "BIOCON",
@@ -133808,7 +135922,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.89,
           "actual_ret": 3.04,
           "actual_return": 3.04,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 1940.0
         },
         {
           "symbol": "INFY",
@@ -133857,7 +135972,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.66,
           "actual_ret": -1.81,
           "actual_return": -1.81,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -9664.0
         },
         {
           "symbol": "SAIL",
@@ -133906,7 +136022,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.89,
           "actual_ret": -1.04,
           "actual_return": -1.04,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -230.0
         },
         {
           "symbol": "TCS",
@@ -133955,7 +136072,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.81,
           "actual_ret": -1.96,
           "actual_return": -1.96,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -10858.75
         },
         {
           "symbol": "TRENT",
@@ -134004,7 +136122,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.08,
           "actual_ret": 7.23,
           "actual_return": 7.23,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 13910.0
         },
         {
           "symbol": "OFSS",
@@ -134053,7 +136172,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.24,
           "actual_ret": -1.39,
           "actual_return": -1.39,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -12095.0
         },
         {
           "symbol": "COCHINSHIP",
@@ -134102,7 +136222,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 23.46,
           "actual_ret": 22.61,
           "actual_return": 22.61,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 18922.5
         },
         {
           "symbol": "IRFC",
@@ -134151,7 +136272,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "OIL",
@@ -134200,7 +136322,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.18,
           "actual_ret": 5.33,
           "actual_return": 5.33,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 2222.5
         },
         {
           "symbol": "SOLARINDS",
@@ -134249,7 +136372,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.68,
           "actual_ret": -9.83,
           "actual_return": -9.83,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -97012.5
         },
         {
           "symbol": "DELHIVERY",
@@ -134298,7 +136422,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.65,
           "actual_ret": 0.8,
           "actual_return": 0.8,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 837.5
         },
         {
           "symbol": "POLICYBZR",
@@ -134347,7 +136472,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.96,
           "actual_ret": 4.11,
           "actual_return": 4.11,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 7325.0
         },
         {
           "symbol": "CHOLAFIN",
@@ -134396,7 +136522,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.79,
           "actual_ret": -5.94,
           "actual_return": -5.94,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -16060.0
         },
         {
           "symbol": "LT",
@@ -134445,7 +136572,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.43,
           "actual_ret": -2.58,
           "actual_return": -2.58,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -10725.0
         },
         {
           "symbol": "KALYANKJIL",
@@ -134494,7 +136622,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.63,
           "actual_ret": 2.78,
           "actual_return": 2.78,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 1442.5
         },
         {
           "symbol": "MAHABANK",
@@ -134543,7 +136672,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.67,
           "actual_ret": 1.82,
           "actual_return": 1.82,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 162.5
         },
         {
           "symbol": "APLAPOLLO",
@@ -134592,7 +136722,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.17,
           "actual_ret": 12.32,
           "actual_return": 12.32,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 40135.0
         },
         {
           "symbol": "INDIGO",
@@ -134641,7 +136772,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.81,
           "actual_ret": -4.96,
           "actual_return": -4.96,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -18313.5
         },
         {
           "symbol": "TMPV",
@@ -134690,7 +136822,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.19,
           "actual_ret": 0.34,
           "actual_return": 0.34,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 1537.5
         },
         {
           "symbol": "MFSL",
@@ -134739,7 +136872,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.75,
           "actual_ret": 1.9,
           "actual_return": 1.9,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 3837.5
         },
         {
           "symbol": "VOLTAS",
@@ -134788,7 +136922,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.81,
           "actual_ret": 0.96,
           "actual_return": 0.96,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 2135.0
         },
         {
           "symbol": "BAJFINANCE",
@@ -134837,7 +136972,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.19,
           "actual_ret": 5.34,
           "actual_return": 5.34,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 5145.0
         },
         {
           "symbol": "MARUTI",
@@ -134886,7 +137022,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.22,
           "actual_ret": 3.37,
           "actual_return": 3.37,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 16819.5
         },
         {
           "symbol": "TITAN",
@@ -134935,7 +137072,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.31,
           "actual_ret": -2.46,
           "actual_return": -2.46,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -12705.0
         },
         {
           "symbol": "BAJAJ-AUTO",
@@ -134984,7 +137122,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.05,
           "actual_ret": -0.2,
           "actual_return": -0.2,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -1175.0
         },
         {
           "symbol": "APOLLOHOSP",
@@ -135033,7 +137172,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.64,
           "actual_ret": -2.79,
           "actual_return": -2.79,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -17288.75
         },
         {
           "symbol": "ULTRACEMCO",
@@ -135082,7 +137222,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.89,
           "actual_ret": 0.04,
           "actual_return": 0.04,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 359.0
         },
         {
           "symbol": "DRREDDY",
@@ -135131,7 +137272,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.01,
           "actual_ret": -0.16,
           "actual_return": -0.16,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -237.5
         }
       ]
     },
@@ -135189,7 +137331,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.54,
           "actual_ret": 2.69,
           "actual_return": 2.69,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 7012.5
         },
         {
           "symbol": "JIOFIN",
@@ -135238,7 +137381,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.37,
           "actual_ret": 2.52,
           "actual_return": 2.52,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 14544.0
         },
         {
           "symbol": "BEL",
@@ -135287,7 +137431,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.93,
           "actual_ret": 5.08,
           "actual_return": 5.08,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 8835.0
         },
         {
           "symbol": "ONGC",
@@ -135336,7 +137481,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.14,
           "actual_ret": -1.29,
           "actual_return": -1.29,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -3291.75
         },
         {
           "symbol": "WIPRO",
@@ -135385,7 +137531,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.27,
           "actual_ret": -1.42,
           "actual_return": -1.42,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -3795.0
         },
         {
           "symbol": "ITC",
@@ -135434,7 +137581,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.1,
           "actual_ret": -2.25,
           "actual_return": -2.25,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -12832.0
         },
         {
           "symbol": "HINDALCO",
@@ -135483,7 +137631,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.41,
           "actual_ret": 1.56,
           "actual_return": 1.56,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 4340.0
         },
         {
           "symbol": "BPCL",
@@ -135532,7 +137681,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.45,
           "actual_ret": 4.6,
           "actual_return": 4.6,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 1607.5
         },
         {
           "symbol": "COALINDIA",
@@ -135581,7 +137731,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.37,
           "actual_ret": 0.52,
           "actual_return": 0.52,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 987.0
         },
         {
           "symbol": "POWERGRID",
@@ -135630,7 +137781,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.59,
           "actual_ret": -4.74,
           "actual_return": -4.74,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -13338.0
         },
         {
           "symbol": "HDFCLIFE",
@@ -135679,7 +137831,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.32,
           "actual_ret": -1.47,
           "actual_return": -1.47,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -10296.0
         },
         {
           "symbol": "JSWSTEEL",
@@ -135728,7 +137881,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.8,
           "actual_ret": 5.95,
           "actual_return": 5.95,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 28701.0
         },
         {
           "symbol": "SBIN",
@@ -135777,7 +137931,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.1,
           "actual_ret": -3.25,
           "actual_return": -3.25,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -11947.5
         },
         {
           "symbol": "TATACONSUM",
@@ -135826,7 +137981,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.59,
           "actual_ret": -7.74,
           "actual_return": -7.74,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -27274.5
         },
         {
           "symbol": "NTPC",
@@ -135875,7 +138031,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.0,
           "actual_ret": 0.15,
           "actual_return": 0.15,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 345.0
         },
         {
           "symbol": "AXISBANK",
@@ -135924,7 +138081,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.92,
           "actual_ret": -0.07,
           "actual_return": -0.07,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -400.0
         },
         {
           "symbol": "HDFCBANK",
@@ -135973,7 +138131,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.14,
           "actual_ret": -1.29,
           "actual_return": -1.29,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -5538.5
         },
         {
           "symbol": "SUZLON",
@@ -136022,7 +138181,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.69,
           "actual_ret": 1.84,
           "actual_return": 1.84,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 37.5
         },
         {
           "symbol": "BAJAJFINSV",
@@ -136071,7 +138231,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.98,
           "actual_ret": -4.13,
           "actual_return": -4.13,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -28030.0
         },
         {
           "symbol": "APLAPOLLO",
@@ -136120,7 +138281,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.65,
           "actual_ret": 1.8,
           "actual_return": 1.8,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 5295.0
         },
         {
           "symbol": "BHEL",
@@ -136169,7 +138331,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.38,
           "actual_ret": -4.53,
           "actual_return": -4.53,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -940.0
         },
         {
           "symbol": "HEROMOTOCO",
@@ -136218,7 +138381,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.4,
           "actual_ret": -0.55,
           "actual_return": -0.55,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -3000.0
         },
         {
           "symbol": "TIINDIA",
@@ -136267,7 +138431,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.26,
           "actual_ret": -2.41,
           "actual_return": -2.41,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -15457.5
         },
         {
           "symbol": "NATIONALUM",
@@ -136316,7 +138481,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.16,
           "actual_ret": 3.31,
           "actual_return": 3.31,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 575.0
         },
         {
           "symbol": "UNOMINDA",
@@ -136365,7 +138531,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.59,
           "actual_ret": 2.74,
           "actual_return": 2.74,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 3482.5
         },
         {
           "symbol": "BAJAJHLDNG",
@@ -136414,7 +138581,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.23,
           "actual_ret": -0.38,
           "actual_return": -0.38,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -6252.5
         },
         {
           "symbol": "SHREECEM",
@@ -136463,7 +138631,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.22,
           "actual_ret": 2.37,
           "actual_return": 2.37,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 142492.5
         },
         {
           "symbol": "CROMPTON",
@@ -136512,7 +138681,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.05,
           "actual_ret": 4.2,
           "actual_return": 4.2,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 2837.5
         },
         {
           "symbol": "PRESTIGE",
@@ -136561,7 +138731,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.72,
           "actual_ret": -9.87,
           "actual_return": -9.87,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -12917.5
         },
         {
           "symbol": "MAZDOCK",
@@ -136610,7 +138781,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.53,
           "actual_ret": 0.68,
           "actual_return": 0.68,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 625.0
         },
         {
           "symbol": "SWIGGY",
@@ -136659,7 +138831,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "BLUESTARCO",
@@ -136708,7 +138881,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.43,
           "actual_ret": 2.58,
           "actual_return": 2.58,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 4497.5
         },
         {
           "symbol": "OFSS",
@@ -136757,7 +138931,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.04,
           "actual_ret": -0.19,
           "actual_return": -0.19,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -1310.0
         },
         {
           "symbol": "TATAELXSI",
@@ -136806,7 +138981,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.43,
           "actual_ret": 0.58,
           "actual_return": 0.58,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 8780.0
         },
         {
           "symbol": "HAL",
@@ -136855,7 +139031,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.73,
           "actual_ret": -0.88,
           "actual_return": -0.88,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -3000.0
         },
         {
           "symbol": "ETERNAL",
@@ -136904,7 +139081,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.01,
           "actual_ret": -4.16,
           "actual_return": -4.16,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -537.5
         },
         {
           "symbol": "SAIL",
@@ -136953,7 +139131,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.03,
           "actual_ret": -0.18,
           "actual_return": -0.18,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -35.0
         },
         {
           "symbol": "DIXON",
@@ -137002,7 +139181,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 26.55,
           "actual_ret": 25.7,
           "actual_return": 25.7,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 186897.5
         },
         {
           "symbol": "360ONE",
@@ -137051,7 +139231,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.92,
           "actual_ret": 0.07,
           "actual_return": 0.07,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 70.0
         },
         {
           "symbol": "PREMIERENE",
@@ -137100,7 +139281,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "HINDZINC",
@@ -137149,7 +139331,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.23,
           "actual_ret": 0.38,
           "actual_return": 0.38,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 262.5
         },
         {
           "symbol": "PIDILITIND",
@@ -137198,7 +139381,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.02,
           "actual_ret": -0.17,
           "actual_return": -0.17,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -542.5
         },
         {
           "symbol": "NYKAA",
@@ -137247,7 +139431,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.01,
           "actual_ret": -3.16,
           "actual_return": -3.16,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -1025.0
         },
         {
           "symbol": "GODREJPROP",
@@ -137296,7 +139481,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 14.53,
           "actual_ret": 13.68,
           "actual_return": 13.68,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 38302.5
         },
         {
           "symbol": "MCX",
@@ -137345,7 +139531,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.06,
           "actual_ret": -2.21,
           "actual_return": -2.21,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -1745.0
         },
         {
           "symbol": "VBL",
@@ -137394,7 +139581,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.88,
           "actual_ret": -1.03,
           "actual_return": -1.03,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -822.5
         },
         {
           "symbol": "DELHIVERY",
@@ -137443,7 +139631,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.97,
           "actual_ret": 1.12,
           "actual_return": 1.12,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 1075.0
         },
         {
           "symbol": "IRFC",
@@ -137492,7 +139681,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "GAIL",
@@ -137541,7 +139731,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.09,
           "actual_ret": 0.24,
           "actual_return": 0.24,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 57.5
         },
         {
           "symbol": "JINDALSTEL",
@@ -137590,7 +139781,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.53,
           "actual_ret": 2.68,
           "actual_return": 2.68,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 3475.0
         },
         {
           "symbol": "PIIND",
@@ -137639,7 +139831,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.05,
           "actual_ret": 2.2,
           "actual_return": 2.2,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 16455.0
         },
         {
           "symbol": "GLENMARK",
@@ -137688,7 +139881,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.46,
           "actual_ret": -0.61,
           "actual_return": -0.61,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -967.5
         },
         {
           "symbol": "ICICIGI",
@@ -137737,7 +139931,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.65,
           "actual_ret": 1.8,
           "actual_return": 1.8,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 5012.5
         },
         {
           "symbol": "POLYCAB",
@@ -137786,7 +139981,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.54,
           "actual_ret": -0.69,
           "actual_return": -0.69,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -5817.5
         },
         {
           "symbol": "PHOENIXLTD",
@@ -137835,7 +140031,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.95,
           "actual_ret": -1.1,
           "actual_return": -1.1,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -2030.0
         },
         {
           "symbol": "ASHOKLEY",
@@ -137884,7 +140081,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.91,
           "actual_ret": 6.06,
           "actual_return": 6.06,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 1050.0
         },
         {
           "symbol": "BSE",
@@ -137933,7 +140131,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.52,
           "actual_ret": 6.67,
           "actual_return": 6.67,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 3090.0
         },
         {
           "symbol": "TORNTPHARM",
@@ -137982,7 +140181,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.34,
           "actual_ret": -0.49,
           "actual_return": -0.49,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -1875.0
         },
         {
           "symbol": "CHOLAFIN",
@@ -138031,7 +140231,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 15.94,
           "actual_ret": 15.09,
           "actual_return": 15.09,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 33290.0
         },
         {
           "symbol": "VMM",
@@ -138080,7 +140281,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.46,
           "actual_ret": -3.61,
           "actual_return": -3.61,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -9025.0
         },
         {
           "symbol": "BOSCHLTD",
@@ -138129,7 +140331,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.46,
           "actual_ret": 0.61,
           "actual_return": 0.61,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 27732.5
         },
         {
           "symbol": "WAAREEENER",
@@ -138178,7 +140381,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "RECLTD",
@@ -138227,7 +140431,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.49,
           "actual_ret": -4.64,
           "actual_return": -4.64,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -1627.5
         },
         {
           "symbol": "CAMS",
@@ -138276,7 +140481,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.92,
           "actual_ret": -4.07,
           "actual_return": -4.07,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -4220.0
         },
         {
           "symbol": "FORTIS",
@@ -138325,7 +140531,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.48,
           "actual_ret": -5.63,
           "actual_return": -5.63,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -3537.5
         },
         {
           "symbol": "KALYANKJIL",
@@ -138374,7 +140581,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.13,
           "actual_ret": 0.28,
           "actual_return": 0.28,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 75.0
         },
         {
           "symbol": "ATHERENERG",
@@ -138423,7 +140631,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "INDIANB",
@@ -138472,7 +140681,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.56,
           "actual_ret": 3.71,
           "actual_return": 3.71,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 2490.0
         },
         {
           "symbol": "RADICO",
@@ -138521,7 +140731,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.25,
           "actual_ret": -7.4,
           "actual_return": -7.4,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -21405.0
         },
         {
           "symbol": "LODHA",
@@ -138570,7 +140781,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.05,
           "actual_ret": 2.2,
           "actual_return": 2.2,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 2727.5
         },
         {
           "symbol": "MARICO",
@@ -138619,7 +140831,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.27,
           "actual_ret": 2.42,
           "actual_return": 2.42,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 3152.5
         },
         {
           "symbol": "KOTAKBANK",
@@ -138668,7 +140881,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.1,
           "actual_ret": 2.25,
           "actual_return": 2.25,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 3388.0
         },
         {
           "symbol": "HYUNDAI",
@@ -138717,7 +140931,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.84,
           "actual_ret": 11.99,
           "actual_return": 11.99,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 29975.0
         },
         {
           "symbol": "ABCAPITAL",
@@ -138766,7 +140981,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.56,
           "actual_ret": -8.71,
           "actual_return": -8.71,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -3875.0
         },
         {
           "symbol": "SUPREMEIND",
@@ -138815,7 +141031,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.62,
           "actual_ret": 3.77,
           "actual_return": 3.77,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 27497.5
         },
         {
           "symbol": "DLF",
@@ -138864,7 +141081,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.79,
           "actual_ret": 2.94,
           "actual_return": 2.94,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 3482.5
         },
         {
           "symbol": "ADANIPOWER",
@@ -138913,7 +141131,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.84,
           "actual_ret": -0.99,
           "actual_return": -0.99,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -117.5
         },
         {
           "symbol": "BANKINDIA",
@@ -138962,7 +141181,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.1,
           "actual_ret": 1.25,
           "actual_return": 1.25,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 222.5
         },
         {
           "symbol": "SONACOMS",
@@ -139011,7 +141231,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.43,
           "actual_ret": 0.58,
           "actual_return": 0.58,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 722.5
         },
         {
           "symbol": "UNIONBANK",
@@ -139060,7 +141281,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.36,
           "actual_ret": -1.51,
           "actual_return": -1.51,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -232.5
         },
         {
           "symbol": "LUPIN",
@@ -139109,7 +141331,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.67,
           "actual_ret": 4.82,
           "actual_return": 4.82,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 9660.0
         },
         {
           "symbol": "BHARATFORG",
@@ -139158,7 +141381,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.72,
           "actual_ret": -0.87,
           "actual_return": -0.87,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -1647.5
         },
         {
           "symbol": "IEX",
@@ -139207,7 +141431,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.6,
           "actual_ret": 5.75,
           "actual_return": 5.75,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 1657.5
         },
         {
           "symbol": "LICI",
@@ -139256,7 +141481,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.09,
           "actual_ret": -0.24,
           "actual_return": -0.24,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -160.0
         },
         {
           "symbol": "SBICARD",
@@ -139305,7 +141531,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.87,
           "actual_ret": 13.02,
           "actual_return": 13.02,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 25612.5
         },
         {
           "symbol": "SIEMENS",
@@ -139354,7 +141581,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.1,
           "actual_ret": -0.25,
           "actual_return": -0.25,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -1202.5
         },
         {
           "symbol": "ICICIPRULI",
@@ -139403,7 +141631,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.05,
           "actual_ret": -2.2,
           "actual_return": -2.2,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -2717.5
         },
         {
           "symbol": "MANKIND",
@@ -139452,7 +141681,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "INDHOTEL",
@@ -139501,7 +141731,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.03,
           "actual_ret": -2.18,
           "actual_return": -2.18,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -1727.5
         },
         {
           "symbol": "PAGEIND",
@@ -139550,7 +141781,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.73,
           "actual_ret": 2.88,
           "actual_return": 2.88,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 275962.5
         },
         {
           "symbol": "CIPLA",
@@ -139599,7 +141831,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.13,
           "actual_ret": 5.28,
           "actual_return": 5.28,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 17108.0
         },
         {
           "symbol": "UNITDSPR",
@@ -139648,7 +141881,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.1,
           "actual_ret": -1.25,
           "actual_return": -1.25,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -2672.5
         },
         {
           "symbol": "GVT&D",
@@ -139697,7 +141931,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 15.53,
           "actual_ret": -14.68,
           "actual_return": -14.68,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -6592.5
         },
         {
           "symbol": "NBCC",
@@ -139746,7 +141981,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.73,
           "actual_ret": -5.88,
           "actual_return": -5.88,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -390.0
         },
         {
           "symbol": "ADANIGREEN",
@@ -139795,7 +142031,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.3,
           "actual_ret": 1.45,
           "actual_return": 1.45,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 3487.5
         },
         {
           "symbol": "MAHABANK",
@@ -139844,7 +142081,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.99,
           "actual_ret": -3.14,
           "actual_return": -3.14,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -210.0
         },
         {
           "symbol": "ALKEM",
@@ -139893,7 +142131,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.29,
           "actual_ret": -1.44,
           "actual_return": -1.44,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -11917.5
         },
         {
           "symbol": "INOXWIND",
@@ -139942,7 +142181,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.51,
           "actual_ret": 8.66,
           "actual_return": 8.66,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 525.0
         },
         {
           "symbol": "LTM",
@@ -139991,7 +142231,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.43,
           "actual_ret": -4.58,
           "actual_return": -4.58,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -49002.5
         },
         {
           "symbol": "COFORGE",
@@ -140040,7 +142281,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.89,
           "actual_ret": -0.04,
           "actual_return": -0.04,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -90.0
         },
         {
           "symbol": "TATAPOWER",
@@ -140089,7 +142331,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.63,
           "actual_ret": 1.78,
           "actual_return": 1.78,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 972.5
         },
         {
           "symbol": "AUROPHARMA",
@@ -140138,7 +142381,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.14,
           "actual_ret": 10.29,
           "actual_return": 10.29,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 15050.0
         },
         {
           "symbol": "INDUSTOWER",
@@ -140187,7 +142431,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.24,
           "actual_ret": 1.39,
           "actual_return": 1.39,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 537.5
         },
         {
           "symbol": "PERSISTENT",
@@ -140236,7 +142481,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.98,
           "actual_ret": 3.13,
           "actual_return": 3.13,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 17312.5
         },
         {
           "symbol": "TMPV",
@@ -140285,7 +142531,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.32,
           "actual_ret": 0.47,
           "actual_return": 0.47,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 1935.0
         },
         {
           "symbol": "NHPC",
@@ -140334,7 +142581,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.53,
           "actual_ret": 0.68,
           "actual_return": 0.68,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 70.0
         },
         {
           "symbol": "NAM-INDIA",
@@ -140383,7 +142631,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.16,
           "actual_ret": 2.31,
           "actual_return": 2.31,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 1272.5
         },
         {
           "symbol": "MOTILALOFS",
@@ -140432,7 +142681,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.51,
           "actual_ret": 10.66,
           "actual_return": 10.66,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 16595.0
         },
         {
           "symbol": "M&M",
@@ -140481,7 +142731,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.1,
           "actual_ret": -4.25,
           "actual_return": -4.25,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -16572.5
         },
         {
           "symbol": "ADANIENSOL",
@@ -140530,7 +142781,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.62,
           "actual_ret": 6.77,
           "actual_return": 6.77,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 16125.0
         },
         {
           "symbol": "INDUSINDBK",
@@ -140579,7 +142831,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.25,
           "actual_ret": -4.4,
           "actual_return": -4.4,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -11490.0
         },
         {
           "symbol": "GRASIM",
@@ -140628,7 +142881,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.9,
           "actual_ret": 3.05,
           "actual_return": 3.05,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 13152.5
         },
         {
           "symbol": "PAYTM",
@@ -140677,7 +142931,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.14,
           "actual_ret": -10.29,
           "actual_return": -10.29,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -20900.0
         },
         {
           "symbol": "GODREJCP",
@@ -140726,7 +142981,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.03,
           "actual_ret": -3.18,
           "actual_return": -3.18,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -8130.0
         },
         {
           "symbol": "HCLTECH",
@@ -140775,7 +143031,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.84,
           "actual_ret": 4.99,
           "actual_return": 4.99,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 17251.5
         },
         {
           "symbol": "SUNPHARMA",
@@ -140824,7 +143081,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.31,
           "actual_ret": 2.46,
           "actual_return": 2.46,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 8008.0
         },
         {
           "symbol": "RBLBANK",
@@ -140873,7 +143131,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.53,
           "actual_ret": -5.68,
           "actual_return": -5.68,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -2102.5
         },
         {
           "symbol": "LICHSGFIN",
@@ -140922,7 +143181,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.23,
           "actual_ret": -4.38,
           "actual_return": -4.38,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -3920.0
         },
         {
           "symbol": "SBILIFE",
@@ -140971,7 +143231,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.59,
           "actual_ret": 4.74,
           "actual_return": 4.74,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 21941.25
         },
         {
           "symbol": "GMRAIRPORT",
@@ -141020,7 +143281,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.96,
           "actual_ret": 0.11,
           "actual_return": 0.11,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 12.5
         },
         {
           "symbol": "AMBER",
@@ -141069,7 +143331,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.28,
           "actual_ret": 1.43,
           "actual_return": 1.43,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 6737.5
         },
         {
           "symbol": "POWERINDIA",
@@ -141118,7 +143381,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "ABB",
@@ -141167,7 +143431,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.7,
           "actual_ret": -0.85,
           "actual_return": -0.85,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -8037.5
         },
         {
           "symbol": "AUBANK",
@@ -141216,7 +143481,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 22.56,
           "actual_ret": 21.71,
           "actual_return": 21.71,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 30772.5
         },
         {
           "symbol": "RELIANCE",
@@ -141265,7 +143531,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.02,
           "actual_ret": -0.17,
           "actual_return": -0.17,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -452.5
         },
         {
           "symbol": "DMART",
@@ -141314,7 +143581,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.74,
           "actual_ret": -0.89,
           "actual_return": -0.89,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -7812.5
         },
         {
           "symbol": "LAURUSLABS",
@@ -141363,7 +143631,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.18,
           "actual_ret": -2.33,
           "actual_return": -2.33,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -1850.0
         },
         {
           "symbol": "NESTLEIND",
@@ -141412,7 +143681,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.69,
           "actual_ret": -4.84,
           "actual_return": -4.84,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -18336.0
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -141461,7 +143731,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.24,
           "actual_ret": 0.39,
           "actual_return": 0.39,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 312.0
         },
         {
           "symbol": "SAGILITY",
@@ -141510,7 +143781,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.36,
           "actual_ret": 4.51,
           "actual_return": 4.51,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 11275.0
         },
         {
           "symbol": "DABUR",
@@ -141559,7 +143831,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.35,
           "actual_ret": -3.5,
           "actual_return": -3.5,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -4495.0
         },
         {
           "symbol": "BDL",
@@ -141608,7 +143881,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.35,
           "actual_ret": 0.5,
           "actual_return": 0.5,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 622.5
         },
         {
           "symbol": "UPL",
@@ -141657,7 +143931,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.66,
           "actual_ret": 5.81,
           "actual_return": 5.81,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 10007.5
         },
         {
           "symbol": "ANGELONE",
@@ -141706,7 +143981,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 19.65,
           "actual_ret": -18.8,
           "actual_return": -18.8,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -5840.0
         },
         {
           "symbol": "COLPAL",
@@ -141755,7 +144031,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.78,
           "actual_ret": -0.93,
           "actual_return": -0.93,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -3305.0
         },
         {
           "symbol": "BIOCON",
@@ -141804,7 +144081,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.04,
           "actual_ret": 6.19,
           "actual_return": 6.19,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 3305.0
         },
         {
           "symbol": "MOTHERSON",
@@ -141853,7 +144131,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.92,
           "actual_ret": -4.07,
           "actual_return": -4.07,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -520.0
         },
         {
           "symbol": "ICICIBANK",
@@ -141902,7 +144181,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.83,
           "actual_ret": -1.98,
           "actual_return": -1.98,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -11956.0
         },
         {
           "symbol": "ADANIPORTS",
@@ -141951,7 +144231,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.84,
           "actual_ret": 0.99,
           "actual_return": 0.99,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 2588.0
         },
         {
           "symbol": "PNBHOUSING",
@@ -142000,7 +144281,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.27,
           "actual_ret": -3.42,
           "actual_return": -3.42,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -4850.0
         },
         {
           "symbol": "NMDC",
@@ -142049,7 +144331,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.58,
           "actual_ret": -0.73,
           "actual_return": -0.73,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -57.5
         },
         {
           "symbol": "ASTRAL",
@@ -142098,7 +144381,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.56,
           "actual_ret": -6.71,
           "actual_return": -6.71,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -25800.0
         },
         {
           "symbol": "KEI",
@@ -142147,7 +144431,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.44,
           "actual_ret": -1.59,
           "actual_return": -1.59,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -6940.0
         },
         {
           "symbol": "AMBUJACEM",
@@ -142196,7 +144481,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.85,
           "actual_ret": -3.0,
           "actual_return": -3.0,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -3022.5
         },
         {
           "symbol": "HAVELLS",
@@ -142245,7 +144531,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.51,
           "actual_ret": 1.66,
           "actual_return": 1.66,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 5227.5
         },
         {
           "symbol": "PFC",
@@ -142294,7 +144581,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.7,
           "actual_ret": -9.85,
           "actual_return": -9.85,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -3475.0
         },
         {
           "symbol": "ASIANPAINT",
@@ -142343,7 +144631,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.08,
           "actual_ret": -1.23,
           "actual_return": -1.23,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -6656.0
         },
         {
           "symbol": "CGPOWER",
@@ -142392,7 +144681,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.47,
           "actual_ret": -1.62,
           "actual_return": -1.62,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -1215.0
         },
         {
           "symbol": "JSWENERGY",
@@ -142441,7 +144731,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.41,
           "actual_ret": -2.56,
           "actual_return": -2.56,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -1645.0
         },
         {
           "symbol": "RVNL",
@@ -142490,7 +144781,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.59,
           "actual_ret": -5.74,
           "actual_return": -5.74,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -1725.0
         },
         {
           "symbol": "YESBANK",
@@ -142539,7 +144831,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.76,
           "actual_ret": 0.91,
           "actual_return": 0.91,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 37.5
         },
         {
           "symbol": "LTF",
@@ -142588,7 +144881,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.48,
           "actual_ret": 1.63,
           "actual_return": 1.63,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 342.5
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -142637,7 +144931,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.14,
           "actual_ret": -2.29,
           "actual_return": -2.29,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -2747.5
         },
         {
           "symbol": "OBEROIRLTY",
@@ -142686,7 +144981,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.06,
           "actual_ret": -0.21,
           "actual_return": -0.21,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -505.0
         },
         {
           "symbol": "MAXHEALTH",
@@ -142735,7 +145031,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.41,
           "actual_ret": -4.56,
           "actual_return": -4.56,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -10680.0
         },
         {
           "symbol": "SRF",
@@ -142784,7 +145081,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.51,
           "actual_ret": -2.66,
           "actual_return": -2.66,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -15605.0
         },
         {
           "symbol": "SOLARINDS",
@@ -142833,7 +145131,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.49,
           "actual_ret": 2.64,
           "actual_return": 2.64,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 25310.0
         },
         {
           "symbol": "INFY",
@@ -142882,7 +145181,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.65,
           "actual_ret": 0.8,
           "actual_return": 0.8,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 3784.0
         },
         {
           "symbol": "BANDHANBNK",
@@ -142931,7 +145231,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.65,
           "actual_ret": 0.8,
           "actual_return": 0.8,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 472.5
         },
         {
           "symbol": "TATAMOTORS",
@@ -142980,7 +145281,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.87,
           "actual_ret": 4.02,
           "actual_return": 4.02,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 11275.0
         },
         {
           "symbol": "HINDPETRO",
@@ -143029,7 +145331,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.03,
           "actual_ret": 0.18,
           "actual_return": 0.18,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 75.0
         },
         {
           "symbol": "VOLTAS",
@@ -143078,7 +145381,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.77,
           "actual_ret": -0.92,
           "actual_return": -0.92,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -1815.0
         },
         {
           "symbol": "HINDUNILVR",
@@ -143127,7 +145431,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.46,
           "actual_ret": 1.61,
           "actual_return": 1.61,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 11541.0
         },
         {
           "symbol": "FORCEMOT",
@@ -143176,7 +145481,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 22.38,
           "actual_ret": -21.53,
           "actual_return": -21.53,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -118122.5
         },
         {
           "symbol": "ADANIENT",
@@ -143225,7 +145531,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 30.0,
           "actual_ret": 29.15,
           "actual_return": 29.15,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 171513.0
         },
         {
           "symbol": "PETRONET",
@@ -143274,7 +145581,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.42,
           "actual_ret": 0.57,
           "actual_return": 0.57,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 285.0
         },
         {
           "symbol": "TVSMOTOR",
@@ -143323,7 +145631,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.39,
           "actual_ret": -1.54,
           "actual_return": -1.54,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -5152.5
         },
         {
           "symbol": "DIVISLAB",
@@ -143372,7 +145681,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.49,
           "actual_ret": 9.64,
           "actual_return": 9.64,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 68825.0
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -143421,7 +145731,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.82,
           "actual_ret": 3.97,
           "actual_return": 3.97,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 635.0
         },
         {
           "symbol": "BAJFINANCE",
@@ -143470,7 +145781,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.16,
           "actual_ret": -4.31,
           "actual_return": -4.31,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -3015.0
         },
         {
           "symbol": "OIL",
@@ -143519,7 +145831,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.11,
           "actual_ret": 1.26,
           "actual_return": 1.26,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 497.5
         },
         {
           "symbol": "IOC",
@@ -143568,7 +145881,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.92,
           "actual_ret": -2.07,
           "actual_return": -2.07,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -362.5
         },
         {
           "symbol": "PATANJALI",
@@ -143617,7 +145931,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.05,
           "actual_ret": 3.2,
           "actual_return": 3.2,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 2407.5
         },
         {
           "symbol": "COCHINSHIP",
@@ -143666,7 +145981,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.42,
           "actual_ret": 2.57,
           "actual_return": 2.57,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 1667.5
         },
         {
           "symbol": "MANAPPURAM",
@@ -143715,7 +146031,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.08,
           "actual_ret": 3.23,
           "actual_return": 3.23,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 965.0
         },
         {
           "symbol": "TECHM",
@@ -143764,7 +146081,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.94,
           "actual_ret": -4.09,
           "actual_return": -4.09,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -24474.0
         },
         {
           "symbol": "TRENT",
@@ -143813,7 +146131,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.05,
           "actual_ret": 4.2,
           "actual_return": 4.2,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 5994.0
         },
         {
           "symbol": "VEDL",
@@ -143862,7 +146181,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.27,
           "actual_ret": -6.42,
           "actual_return": -6.42,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -3210.0
         },
         {
           "symbol": "MFSL",
@@ -143911,7 +146231,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.39,
           "actual_ret": 0.54,
           "actual_return": 0.54,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 862.5
         },
         {
           "symbol": "CDSL",
@@ -143960,7 +146281,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.14,
           "actual_ret": 1.29,
           "actual_return": 1.29,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 1597.5
         },
         {
           "symbol": "KFINTECH",
@@ -144009,7 +146331,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.27,
           "actual_ret": 2.42,
           "actual_return": 2.42,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 1925.0
         },
         {
           "symbol": "GODFRYPHLP",
@@ -144058,7 +146381,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.96,
           "actual_ret": -0.11,
           "actual_return": -0.11,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -142.5
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -144107,7 +146431,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.53,
           "actual_ret": 0.68,
           "actual_return": 0.68,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 1737.5
         },
         {
           "symbol": "TITAN",
@@ -144156,7 +146481,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.25,
           "actual_ret": 0.4,
           "actual_return": 0.4,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 1909.25
         },
         {
           "symbol": "PNB",
@@ -144205,7 +146531,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.96,
           "actual_ret": -0.11,
           "actual_return": -0.11,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -12.5
         },
         {
           "symbol": "BRITANNIA",
@@ -144254,7 +146581,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.73,
           "actual_ret": -0.88,
           "actual_return": -0.88,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -9890.0
         },
         {
           "symbol": "TCS",
@@ -144303,7 +146631,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.74,
           "actual_ret": 0.89,
           "actual_return": 0.89,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 4613.0
         },
         {
           "symbol": "BHARTIARTL",
@@ -144352,7 +146681,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.65,
           "actual_ret": -0.8,
           "actual_return": -0.8,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -2959.25
         },
         {
           "symbol": "CANBK",
@@ -144401,7 +146731,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.67,
           "actual_ret": 1.82,
           "actual_return": 1.82,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 242.5
         },
         {
           "symbol": "PGEL",
@@ -144450,7 +146781,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.86,
           "actual_ret": -2.01,
           "actual_return": -2.01,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -720.0
         },
         {
           "symbol": "CONCOR",
@@ -144499,7 +146831,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.41,
           "actual_ret": 4.56,
           "actual_return": 4.56,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 6992.5
         },
         {
           "symbol": "IDEA",
@@ -144548,7 +146881,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.51,
           "actual_ret": 0.66,
           "actual_return": 0.66,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 10.0
         },
         {
           "symbol": "KPITTECH",
@@ -144597,7 +146931,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.65,
           "actual_ret": 5.8,
           "actual_return": 5.8,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 12422.5
         },
         {
           "symbol": "JUBLFOOD",
@@ -144646,7 +146981,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.88,
           "actual_ret": 3.03,
           "actual_return": 3.03,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 3270.0
         },
         {
           "symbol": "FEDERALBNK",
@@ -144695,7 +147031,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.1,
           "actual_ret": -1.25,
           "actual_return": -1.25,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -392.5
         },
         {
           "symbol": "KAYNES",
@@ -144744,7 +147081,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.68,
           "actual_ret": 4.83,
           "actual_return": 4.83,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 19300.0
         },
         {
           "symbol": "HDFCAMC",
@@ -144793,7 +147131,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.34,
           "actual_ret": 3.49,
           "actual_return": 3.49,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 7017.5
         },
         {
           "symbol": "NAUKRI",
@@ -144842,7 +147181,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.83,
           "actual_ret": -1.98,
           "actual_return": -1.98,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -3800.0
         },
         {
           "symbol": "CUMMINSIND",
@@ -144891,7 +147231,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.99,
           "actual_ret": -1.14,
           "actual_return": -1.14,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -4220.0
         },
         {
           "symbol": "BAJAJ-AUTO",
@@ -144940,7 +147281,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.9,
           "actual_ret": -1.05,
           "actual_return": -1.05,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -5166.25
         },
         {
           "symbol": "IREDA",
@@ -144989,7 +147331,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "POLICYBZR",
@@ -145038,7 +147381,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.78,
           "actual_ret": -1.93,
           "actual_return": -1.93,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -2875.0
         },
         {
           "symbol": "APOLLOHOSP",
@@ -145087,7 +147431,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.34,
           "actual_ret": -3.49,
           "actual_return": -3.49,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -19897.5
         },
         {
           "symbol": "MPHASIS",
@@ -145136,7 +147481,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.7,
           "actual_ret": 2.85,
           "actual_return": 2.85,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 11765.0
         },
         {
           "symbol": "BANKBARODA",
@@ -145185,7 +147531,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.9,
           "actual_ret": -1.05,
           "actual_return": -1.05,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -430.0
         },
         {
           "symbol": "DRREDDY",
@@ -145234,7 +147581,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.9,
           "actual_ret": 9.05,
           "actual_return": 9.05,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 10943.75
         },
         {
           "symbol": "ULTRACEMCO",
@@ -145283,7 +147631,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.23,
           "actual_ret": -1.38,
           "actual_return": -1.38,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -10477.0
         },
         {
           "symbol": "INDIGO",
@@ -145332,7 +147681,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.35,
           "actual_ret": 11.5,
           "actual_return": 11.5,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 40566.0
         },
         {
           "symbol": "LT",
@@ -145381,7 +147731,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.24,
           "actual_ret": -5.39,
           "actual_return": -5.39,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -17398.5
         },
         {
           "symbol": "EICHERMOT",
@@ -145430,7 +147781,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.77,
           "actual_ret": -0.92,
           "actual_return": -0.92,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -4759.5
         },
         {
           "symbol": "MARUTI",
@@ -145479,7 +147831,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.41,
           "actual_ret": 0.56,
           "actual_return": 0.56,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 2585.0
         }
       ]
     },
@@ -145537,7 +147890,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.73,
           "actual_ret": 5.88,
           "actual_return": 5.88,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 16995.0
         },
         {
           "symbol": "ITC",
@@ -145586,7 +147940,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.79,
           "actual_ret": -1.94,
           "actual_return": -1.94,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -9920.0
         },
         {
           "symbol": "POWERGRID",
@@ -145635,7 +147990,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.38,
           "actual_ret": -4.53,
           "actual_return": -4.53,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -12024.0
         },
         {
           "symbol": "COALINDIA",
@@ -145684,7 +148040,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.58,
           "actual_ret": -1.73,
           "actual_return": -1.73,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -3139.5
         },
         {
           "symbol": "BPCL",
@@ -145733,7 +148090,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.05,
           "actual_ret": 0.2,
           "actual_return": 0.2,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 72.5
         },
         {
           "symbol": "JIOFIN",
@@ -145782,7 +148140,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.37,
           "actual_ret": 2.52,
           "actual_return": 2.52,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 14544.0
         },
         {
           "symbol": "BEL",
@@ -145831,7 +148190,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.21,
           "actual_ret": -2.36,
           "actual_return": -2.36,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -3255.0
         },
         {
           "symbol": "WIPRO",
@@ -145880,7 +148240,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.96,
           "actual_ret": -0.11,
           "actual_return": -0.11,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -315.0
         },
         {
           "symbol": "HDFCLIFE",
@@ -145929,7 +148290,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.76,
           "actual_ret": -3.91,
           "actual_return": -3.91,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -20031.0
         },
         {
           "symbol": "SBIN",
@@ -145978,7 +148340,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.35,
           "actual_ret": 0.5,
           "actual_return": 0.5,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 2055.0
         },
         {
           "symbol": "ONGC",
@@ -146027,7 +148390,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.4,
           "actual_ret": 1.55,
           "actual_return": 1.55,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 4061.75
         },
         {
           "symbol": "TECHM",
@@ -146076,7 +148440,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.87,
           "actual_ret": 0.02,
           "actual_return": 0.02,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 132.0
         },
         {
           "symbol": "TATAMOTORS",
@@ -146125,7 +148490,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.77,
           "actual_ret": 0.92,
           "actual_return": 0.92,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 2200.0
         },
         {
           "symbol": "HINDALCO",
@@ -146174,7 +148540,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.92,
           "actual_ret": -8.07,
           "actual_return": -8.07,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -23933.0
         },
         {
           "symbol": "JSWSTEEL",
@@ -146223,7 +148590,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.43,
           "actual_ret": -0.58,
           "actual_return": -0.58,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -2578.5
         },
         {
           "symbol": "NYKAA",
@@ -146272,7 +148640,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.9,
           "actual_ret": 1.05,
           "actual_return": 1.05,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 362.5
         },
         {
           "symbol": "AXISBANK",
@@ -146321,7 +148690,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.34,
           "actual_ret": 3.49,
           "actual_return": 3.49,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 18843.75
         },
         {
           "symbol": "AUBANK",
@@ -146370,7 +148740,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.88,
           "actual_ret": 2.03,
           "actual_return": 2.03,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 3175.0
         },
         {
           "symbol": "COFORGE",
@@ -146419,7 +148790,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.93,
           "actual_ret": 3.08,
           "actual_return": 3.08,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 5520.0
         },
         {
           "symbol": "SAIL",
@@ -146468,7 +148840,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.74,
           "actual_ret": 0.89,
           "actual_return": 0.89,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 190.0
         },
         {
           "symbol": "MOTHERSON",
@@ -146517,7 +148890,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.66,
           "actual_ret": -2.81,
           "actual_return": -2.81,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -367.5
         },
         {
           "symbol": "HEROMOTOCO",
@@ -146566,7 +148940,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.83,
           "actual_ret": -2.98,
           "actual_return": -2.98,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -17725.0
         },
         {
           "symbol": "PERSISTENT",
@@ -146615,7 +148990,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.19,
           "actual_ret": 1.34,
           "actual_return": 1.34,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 6527.5
         },
         {
           "symbol": "ICICIPRULI",
@@ -146664,7 +149040,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.47,
           "actual_ret": 3.62,
           "actual_return": 3.62,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 3662.5
         },
         {
           "symbol": "CIPLA",
@@ -146713,7 +149090,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.46,
           "actual_ret": -0.61,
           "actual_return": -0.61,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -1806.0
         },
         {
           "symbol": "CHOLAFIN",
@@ -146762,7 +149140,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.53,
           "actual_ret": 3.68,
           "actual_return": 3.68,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 6860.0
         },
         {
           "symbol": "PIIND",
@@ -146811,7 +149190,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.33,
           "actual_ret": -8.48,
           "actual_return": -8.48,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -68080.0
         },
         {
           "symbol": "ABCAPITAL",
@@ -146860,7 +149240,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.74,
           "actual_ret": -2.89,
           "actual_return": -2.89,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -1075.0
         },
         {
           "symbol": "DLF",
@@ -146909,7 +149290,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.68,
           "actual_ret": -0.83,
           "actual_return": -0.83,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -725.0
         },
         {
           "symbol": "LUPIN",
@@ -146958,7 +149340,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.26,
           "actual_ret": 0.41,
           "actual_return": 0.41,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 650.0
         },
         {
           "symbol": "LTM",
@@ -147007,7 +149390,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.9,
           "actual_ret": -3.05,
           "actual_return": -3.05,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -34142.5
         },
         {
           "symbol": "BANKINDIA",
@@ -147056,7 +149440,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.32,
           "actual_ret": 10.47,
           "actual_return": 10.47,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 2277.5
         },
         {
           "symbol": "HAVELLS",
@@ -147105,7 +149490,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.37,
           "actual_ret": -2.52,
           "actual_return": -2.52,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -7362.5
         },
         {
           "symbol": "INDUSINDBK",
@@ -147154,7 +149540,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.99,
           "actual_ret": 1.14,
           "actual_return": 1.14,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 3405.0
         },
         {
           "symbol": "TATAELXSI",
@@ -147203,7 +149590,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.12,
           "actual_ret": -6.27,
           "actual_return": -6.27,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -93675.0
         },
         {
           "symbol": "SBICARD",
@@ -147252,7 +149640,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.74,
           "actual_ret": -0.89,
           "actual_return": -0.89,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -1675.0
         },
         {
           "symbol": "ICICIGI",
@@ -147301,7 +149690,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.19,
           "actual_ret": 3.34,
           "actual_return": 3.34,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 9512.5
         },
         {
           "symbol": "GODFRYPHLP",
@@ -147350,7 +149740,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.41,
           "actual_ret": 3.56,
           "actual_return": 3.56,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 5132.5
         },
         {
           "symbol": "LICHSGFIN",
@@ -147399,7 +149790,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.62,
           "actual_ret": 7.77,
           "actual_return": 7.77,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 6377.5
         },
         {
           "symbol": "ICICIBANK",
@@ -147448,7 +149840,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.3,
           "actual_ret": -0.45,
           "actual_return": -0.45,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -2667.0
         },
         {
           "symbol": "IEX",
@@ -147497,7 +149890,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.49,
           "actual_ret": 0.64,
           "actual_return": 0.64,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 222.5
         },
         {
           "symbol": "HYUNDAI",
@@ -147546,7 +149940,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.84,
           "actual_ret": 11.99,
           "actual_return": 11.99,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 29975.0
         },
         {
           "symbol": "COCHINSHIP",
@@ -147595,7 +149990,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.72,
           "actual_ret": -1.87,
           "actual_return": -1.87,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -1105.0
         },
         {
           "symbol": "DIXON",
@@ -147644,7 +150040,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.08,
           "actual_ret": -2.23,
           "actual_return": -2.23,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -15067.5
         },
         {
           "symbol": "MANKIND",
@@ -147693,7 +150090,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "IREDA",
@@ -147742,7 +150140,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "NTPC",
@@ -147791,7 +150190,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.98,
           "actual_ret": -1.13,
           "actual_return": -1.13,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -2565.0
         },
         {
           "symbol": "BLUESTARCO",
@@ -147840,7 +150240,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.46,
           "actual_ret": 0.61,
           "actual_return": 0.61,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 1065.0
         },
         {
           "symbol": "TATACONSUM",
@@ -147889,7 +150290,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.0,
           "actual_ret": 2.15,
           "actual_return": 2.15,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 6637.5
         },
         {
           "symbol": "360ONE",
@@ -147938,7 +150340,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.09,
           "actual_ret": -0.24,
           "actual_return": -0.24,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -250.0
         },
         {
           "symbol": "BANDHANBNK",
@@ -147987,7 +150390,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.5,
           "actual_ret": 2.65,
           "actual_return": 2.65,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 1512.5
         },
         {
           "symbol": "CDSL",
@@ -148036,7 +150440,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.59,
           "actual_ret": -4.74,
           "actual_return": -4.74,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -5690.0
         },
         {
           "symbol": "HINDPETRO",
@@ -148085,7 +150490,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.0,
           "actual_ret": -9.15,
           "actual_return": -9.15,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -3150.0
         },
         {
           "symbol": "LICI",
@@ -148134,7 +150540,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.15,
           "actual_ret": 2.3,
           "actual_return": 2.3,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 1955.0
         },
         {
           "symbol": "PETRONET",
@@ -148183,7 +150590,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.25,
           "actual_ret": 1.4,
           "actual_return": 1.4,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 695.0
         },
         {
           "symbol": "YESBANK",
@@ -148232,7 +150640,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.12,
           "actual_ret": 7.27,
           "actual_return": 7.27,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 300.0
         },
         {
           "symbol": "TORNTPHARM",
@@ -148281,7 +150690,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.0,
           "actual_ret": 0.15,
           "actual_return": 0.15,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 550.0
         },
         {
           "symbol": "CAMS",
@@ -148330,7 +150740,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.98,
           "actual_ret": 3.13,
           "actual_return": 3.13,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 3285.0
         },
         {
           "symbol": "HDFCAMC",
@@ -148379,7 +150790,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.64,
           "actual_ret": -1.79,
           "actual_return": -1.79,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -4525.0
         },
         {
           "symbol": "MFSL",
@@ -148428,7 +150840,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.56,
           "actual_ret": 11.71,
           "actual_return": 11.71,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 21700.0
         },
         {
           "symbol": "TIINDIA",
@@ -148477,7 +150890,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.97,
           "actual_ret": -3.12,
           "actual_return": -3.12,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -20575.0
         },
         {
           "symbol": "VOLTAS",
@@ -148526,7 +150940,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.69,
           "actual_ret": 2.84,
           "actual_return": 2.84,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 6337.5
         },
         {
           "symbol": "GVT&D",
@@ -148575,7 +150990,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.88,
           "actual_ret": -12.03,
           "actual_return": -12.03,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -3165.0
         },
         {
           "symbol": "LODHA",
@@ -148624,7 +151040,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 15.88,
           "actual_ret": -15.03,
           "actual_return": -15.03,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -18647.5
         },
         {
           "symbol": "SRF",
@@ -148673,7 +151090,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.79,
           "actual_ret": 2.94,
           "actual_return": 2.94,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 16430.0
         },
         {
           "symbol": "CANBK",
@@ -148722,7 +151140,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.65,
           "actual_ret": 5.8,
           "actual_return": 5.8,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 737.5
         },
         {
           "symbol": "DELHIVERY",
@@ -148771,7 +151190,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.57,
           "actual_ret": -3.72,
           "actual_return": -3.72,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -3062.5
         },
         {
           "symbol": "MANAPPURAM",
@@ -148820,7 +151240,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.46,
           "actual_ret": 8.61,
           "actual_return": 8.61,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 2297.5
         },
         {
           "symbol": "TMPV",
@@ -148869,7 +151290,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.88,
           "actual_ret": 0.03,
           "actual_return": 0.03,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 105.0
         },
         {
           "symbol": "NMDC",
@@ -148918,7 +151340,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.14,
           "actual_ret": -1.29,
           "actual_return": -1.29,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -107.5
         },
         {
           "symbol": "OFSS",
@@ -148967,7 +151390,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.31,
           "actual_ret": -2.46,
           "actual_return": -2.46,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -15710.0
         },
         {
           "symbol": "BHARTIARTL",
@@ -149016,7 +151440,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.17,
           "actual_ret": 2.32,
           "actual_return": 2.32,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 8393.25
         },
         {
           "symbol": "BIOCON",
@@ -149065,7 +151490,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.14,
           "actual_ret": -3.29,
           "actual_return": -3.29,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -2092.5
         },
         {
           "symbol": "INFY",
@@ -149114,7 +151540,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.61,
           "actual_ret": 5.76,
           "actual_return": 5.76,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 31152.0
         },
         {
           "symbol": "MAHABANK",
@@ -149163,7 +151590,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.89,
           "actual_ret": 9.04,
           "actual_return": 9.04,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 562.5
         },
         {
           "symbol": "TATAPOWER",
@@ -149212,7 +151640,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.25,
           "actual_ret": 1.4,
           "actual_return": 1.4,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 692.5
         },
         {
           "symbol": "KPITTECH",
@@ -149261,7 +151690,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.65,
           "actual_ret": -0.8,
           "actual_return": -0.8,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -1390.0
         },
         {
           "symbol": "SUZLON",
@@ -149310,7 +151740,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.24,
           "actual_ret": 4.39,
           "actual_return": 4.39,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 112.5
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -149359,7 +151790,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 10930.0
         },
         {
           "symbol": "PHOENIXLTD",
@@ -149408,7 +151840,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.11,
           "actual_ret": -7.26,
           "actual_return": -7.26,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -11712.5
         },
         {
           "symbol": "UNIONBANK",
@@ -149457,7 +151890,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.33,
           "actual_ret": 4.48,
           "actual_return": 4.48,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 697.5
         },
         {
           "symbol": "BANKBARODA",
@@ -149506,7 +151940,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.65,
           "actual_ret": 5.8,
           "actual_return": 5.8,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 2232.5
         },
         {
           "symbol": "NATIONALUM",
@@ -149555,7 +151990,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.29,
           "actual_ret": -1.44,
           "actual_return": -1.44,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -255.0
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -149604,7 +152040,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.37,
           "actual_ret": -4.52,
           "actual_return": -4.52,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -4637.5
         },
         {
           "symbol": "ATHERENERG",
@@ -149653,7 +152090,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 17.67,
           "actual_ret": -16.82,
           "actual_return": -16.82,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -42050.0
         },
         {
           "symbol": "MPHASIS",
@@ -149702,7 +152140,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.56,
           "actual_ret": -1.71,
           "actual_return": -1.71,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -7907.5
         },
         {
           "symbol": "MCX",
@@ -149751,7 +152190,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.45,
           "actual_ret": 0.6,
           "actual_return": 0.6,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 440.0
         },
         {
           "symbol": "PRESTIGE",
@@ -149800,7 +152240,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.44,
           "actual_ret": -4.59,
           "actual_return": -4.59,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -4502.5
         },
         {
           "symbol": "AMBER",
@@ -149849,7 +152290,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.27,
           "actual_ret": 2.42,
           "actual_return": 2.42,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 11537.5
         },
         {
           "symbol": "NAUKRI",
@@ -149898,7 +152340,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.87,
           "actual_ret": -2.02,
           "actual_return": -2.02,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -3552.5
         },
         {
           "symbol": "IRFC",
@@ -149947,7 +152390,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "PIDILITIND",
@@ -149996,7 +152440,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.9,
           "actual_ret": -0.05,
           "actual_return": -0.05,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -135.0
         },
         {
           "symbol": "PNBHOUSING",
@@ -150045,7 +152490,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.44,
           "actual_ret": 4.59,
           "actual_return": 4.59,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 4810.0
         },
         {
           "symbol": "PATANJALI",
@@ -150094,7 +152540,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.42,
           "actual_ret": -2.57,
           "actual_return": -2.57,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -1965.0
         },
         {
           "symbol": "SIEMENS",
@@ -150143,7 +152590,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.44,
           "actual_ret": 2.59,
           "actual_return": 2.59,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 11125.0
         },
         {
           "symbol": "RECLTD",
@@ -150192,7 +152640,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.68,
           "actual_ret": -3.83,
           "actual_return": -3.83,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -972.5
         },
         {
           "symbol": "GODREJPROP",
@@ -150241,7 +152690,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.85,
           "actual_ret": 4.0,
           "actual_return": 4.0,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 11930.0
         },
         {
           "symbol": "MAXHEALTH",
@@ -150290,7 +152740,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.63,
           "actual_ret": -1.78,
           "actual_return": -1.78,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -4000.0
         },
         {
           "symbol": "BOSCHLTD",
@@ -150339,7 +152790,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.95,
           "actual_ret": -0.1,
           "actual_return": -0.1,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -4262.5
         },
         {
           "symbol": "CROMPTON",
@@ -150388,7 +152840,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.38,
           "actual_ret": -7.53,
           "actual_return": -7.53,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -5725.0
         },
         {
           "symbol": "NESTLEIND",
@@ -150437,7 +152890,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.4,
           "actual_ret": 2.55,
           "actual_return": 2.55,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 9740.0
         },
         {
           "symbol": "COLPAL",
@@ -150486,7 +152940,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.13,
           "actual_ret": -0.28,
           "actual_return": -0.28,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -960.0
         },
         {
           "symbol": "PREMIERENE",
@@ -150535,7 +152990,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "PAYTM",
@@ -150584,7 +153040,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.08,
           "actual_ret": -5.23,
           "actual_return": -5.23,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -7750.0
         },
         {
           "symbol": "PFC",
@@ -150633,7 +153090,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.44,
           "actual_ret": -0.59,
           "actual_return": -0.59,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -157.5
         },
         {
           "symbol": "FEDERALBNK",
@@ -150682,7 +153140,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.59,
           "actual_ret": -2.74,
           "actual_return": -2.74,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -882.5
         },
         {
           "symbol": "JSWENERGY",
@@ -150731,7 +153190,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.25,
           "actual_ret": -5.4,
           "actual_return": -5.4,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -3117.5
         },
         {
           "symbol": "INOXWIND",
@@ -150780,7 +153240,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.94,
           "actual_ret": -7.09,
           "actual_return": -7.09,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -482.5
         },
         {
           "symbol": "INDUSTOWER",
@@ -150829,7 +153290,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.63,
           "actual_ret": 3.78,
           "actual_return": 3.78,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 1550.0
         },
         {
           "symbol": "ALKEM",
@@ -150878,7 +153340,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.12,
           "actual_ret": 2.27,
           "actual_return": 2.27,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 17002.5
         },
         {
           "symbol": "UNITDSPR",
@@ -150927,7 +153390,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.68,
           "actual_ret": -2.83,
           "actual_return": -2.83,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -5125.0
         },
         {
           "symbol": "DABUR",
@@ -150976,7 +153440,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.08,
           "actual_ret": 0.23,
           "actual_return": 0.23,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 287.5
         },
         {
           "symbol": "HAL",
@@ -151025,7 +153490,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.22,
           "actual_ret": -2.37,
           "actual_return": -2.37,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -7007.5
         },
         {
           "symbol": "KFINTECH",
@@ -151074,7 +153540,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.05,
           "actual_ret": -7.2,
           "actual_return": -7.2,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -5567.5
         },
         {
           "symbol": "SWIGGY",
@@ -151123,7 +153590,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "HINDUNILVR",
@@ -151172,7 +153640,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.91,
           "actual_ret": 0.06,
           "actual_return": 0.06,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 465.0
         },
         {
           "symbol": "RBLBANK",
@@ -151221,7 +153690,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.87,
           "actual_ret": -3.02,
           "actual_return": -3.02,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -1215.0
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -151270,7 +153740,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.05,
           "actual_ret": -4.2,
           "actual_return": -4.2,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -625.0
         },
         {
           "symbol": "VMM",
@@ -151319,7 +153790,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.46,
           "actual_ret": -3.61,
           "actual_return": -3.61,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -9025.0
         },
         {
           "symbol": "VEDL",
@@ -151368,7 +153840,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.18,
           "actual_ret": -0.33,
           "actual_return": -0.33,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -177.5
         },
         {
           "symbol": "CGPOWER",
@@ -151417,7 +153890,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.9,
           "actual_ret": -0.05,
           "actual_return": -0.05,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -37.5
         },
         {
           "symbol": "APLAPOLLO",
@@ -151466,7 +153940,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.55,
           "actual_ret": 1.7,
           "actual_return": 1.7,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 4775.0
         },
         {
           "symbol": "RADICO",
@@ -151515,7 +153990,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.08,
           "actual_ret": 2.23,
           "actual_return": 2.23,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 5790.0
         },
         {
           "symbol": "IOC",
@@ -151564,7 +154040,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.79,
           "actual_ret": -0.94,
           "actual_return": -0.94,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -155.0
         },
         {
           "symbol": "BRITANNIA",
@@ -151613,7 +154090,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.61,
           "actual_ret": -0.76,
           "actual_return": -0.76,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -8345.0
         },
         {
           "symbol": "FORCEMOT",
@@ -151662,7 +154140,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.05,
           "actual_ret": 6.2,
           "actual_return": 6.2,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 18787.5
         },
         {
           "symbol": "M&M",
@@ -151711,7 +154190,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.29,
           "actual_ret": -7.44,
           "actual_return": -7.44,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -31038.0
         },
         {
           "symbol": "JINDALSTEL",
@@ -151760,7 +154240,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.85,
           "actual_ret": -6.0,
           "actual_return": -6.0,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -8775.0
         },
         {
           "symbol": "UNOMINDA",
@@ -151809,7 +154290,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.17,
           "actual_ret": 4.32,
           "actual_return": 4.32,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 5645.0
         },
         {
           "symbol": "ASTRAL",
@@ -151858,7 +154340,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.15,
           "actual_ret": 1.3,
           "actual_return": 1.3,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 4600.0
         },
         {
           "symbol": "GLENMARK",
@@ -151907,7 +154390,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.61,
           "actual_ret": -1.76,
           "actual_return": -1.76,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -1862.5
         },
         {
           "symbol": "ADANIGREEN",
@@ -151956,7 +154440,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 20.41,
           "actual_ret": 19.56,
           "actual_return": 19.56,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 31800.0
         },
         {
           "symbol": "SOLARINDS",
@@ -152005,7 +154490,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.34,
           "actual_ret": -3.49,
           "actual_return": -3.49,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -33850.0
         },
         {
           "symbol": "BHARATFORG",
@@ -152054,7 +154540,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.43,
           "actual_ret": -2.58,
           "actual_return": -2.58,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -5567.5
         },
         {
           "symbol": "OBEROIRLTY",
@@ -152103,7 +154590,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.53,
           "actual_ret": 2.68,
           "actual_return": 2.68,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 5772.5
         },
         {
           "symbol": "ADANIPORTS",
@@ -152152,7 +154640,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.07,
           "actual_ret": -2.22,
           "actual_return": -2.22,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -6844.0
         },
         {
           "symbol": "ETERNAL",
@@ -152201,7 +154690,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.35,
           "actual_ret": 5.5,
           "actual_return": 5.5,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 775.0
         },
         {
           "symbol": "HDFCBANK",
@@ -152250,7 +154740,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.86,
           "actual_ret": 4.01,
           "actual_return": 4.01,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 17457.0
         },
         {
           "symbol": "CONCOR",
@@ -152299,7 +154790,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.57,
           "actual_ret": -3.72,
           "actual_return": -3.72,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -5470.0
         },
         {
           "symbol": "FORTIS",
@@ -152348,7 +154840,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.91,
           "actual_ret": 1.06,
           "actual_return": 1.06,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 757.5
         },
         {
           "symbol": "DMART",
@@ -152397,7 +154890,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.06,
           "actual_ret": -12.21,
           "actual_return": -12.21,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -119450.0
         },
         {
           "symbol": "ADANIENSOL",
@@ -152446,7 +154940,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.98,
           "actual_ret": 6.13,
           "actual_return": 6.13,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 39150.0
         },
         {
           "symbol": "RVNL",
@@ -152495,7 +154990,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 19.12,
           "actual_ret": -18.27,
           "actual_return": -18.27,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -3090.0
         },
         {
           "symbol": "BHEL",
@@ -152544,7 +155040,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.51,
           "actual_ret": 5.66,
           "actual_return": 5.66,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 1040.0
         },
         {
           "symbol": "SUPREMEIND",
@@ -152593,7 +155090,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.47,
           "actual_ret": 0.62,
           "actual_return": 0.62,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 3750.0
         },
         {
           "symbol": "PGEL",
@@ -152642,7 +155140,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.89,
           "actual_ret": -1.04,
           "actual_return": -1.04,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -300.0
         },
         {
           "symbol": "POLYCAB",
@@ -152691,7 +155190,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.79,
           "actual_ret": 2.94,
           "actual_return": 2.94,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 21505.0
         },
         {
           "symbol": "OIL",
@@ -152740,7 +155240,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.02,
           "actual_ret": -1.17,
           "actual_return": -1.17,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -435.0
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -152789,7 +155290,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.44,
           "actual_ret": 1.59,
           "actual_return": 1.59,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 1143.0
         },
         {
           "symbol": "BAJAJHLDNG",
@@ -152838,7 +155340,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.41,
           "actual_ret": 0.56,
           "actual_return": 0.56,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 8067.5
         },
         {
           "symbol": "IDEA",
@@ -152887,7 +155390,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.93,
           "actual_ret": 2.08,
           "actual_return": 2.08,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 37.5
         },
         {
           "symbol": "INDIANB",
@@ -152936,7 +155440,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.05,
           "actual_ret": 5.2,
           "actual_return": 5.2,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 3382.5
         },
         {
           "symbol": "KAYNES",
@@ -152985,7 +155490,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.15,
           "actual_ret": 0.3,
           "actual_return": 0.3,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 725.0
         },
         {
           "symbol": "RELIANCE",
@@ -153034,7 +155540,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.12,
           "actual_ret": 3.27,
           "actual_return": 3.27,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 9510.0
         },
         {
           "symbol": "PNB",
@@ -153083,7 +155590,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.82,
           "actual_ret": -0.97,
           "actual_return": -0.97,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -115.0
         },
         {
           "symbol": "TVSMOTOR",
@@ -153132,7 +155640,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.05,
           "actual_ret": -1.2,
           "actual_return": -1.2,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -3100.0
         },
         {
           "symbol": "SAGILITY",
@@ -153181,7 +155690,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "ASHOKLEY",
@@ -153230,7 +155740,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.61,
           "actual_ret": -0.76,
           "actual_return": -0.76,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -120.0
         },
         {
           "symbol": "KALYANKJIL",
@@ -153279,7 +155790,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.96,
           "actual_ret": 8.11,
           "actual_return": 8.11,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 2207.5
         },
         {
           "symbol": "AMBUJACEM",
@@ -153328,7 +155840,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.16,
           "actual_ret": 4.31,
           "actual_return": 4.31,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 3820.0
         },
         {
           "symbol": "AUROPHARMA",
@@ -153377,7 +155890,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.31,
           "actual_ret": -0.46,
           "actual_return": -0.46,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -535.0
         },
         {
           "symbol": "EICHERMOT",
@@ -153426,7 +155940,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.18,
           "actual_ret": -2.33,
           "actual_return": -2.33,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -10191.0
         },
         {
           "symbol": "HINDZINC",
@@ -153475,7 +155990,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.13,
           "actual_ret": 4.28,
           "actual_return": 4.28,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 2925.0
         },
         {
           "symbol": "INDIGO",
@@ -153524,7 +156040,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.7,
           "actual_ret": 2.85,
           "actual_return": 2.85,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 7921.5
         },
         {
           "symbol": "CUMMINSIND",
@@ -153573,7 +156090,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.47,
           "actual_ret": 4.62,
           "actual_return": 4.62,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 15852.5
         },
         {
           "symbol": "PAGEIND",
@@ -153622,7 +156140,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.29,
           "actual_ret": 1.44,
           "actual_return": 1.44,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 143762.5
         },
         {
           "symbol": "GAIL",
@@ -153671,7 +156190,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.95,
           "actual_ret": -8.1,
           "actual_return": -8.1,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -1682.5
         },
         {
           "symbol": "ANGELONE",
@@ -153720,7 +156240,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.25,
           "actual_ret": -9.4,
           "actual_return": -9.4,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -2212.5
         },
         {
           "symbol": "TITAN",
@@ -153769,7 +156290,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.36,
           "actual_ret": -1.51,
           "actual_return": -1.51,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -6426.0
         },
         {
           "symbol": "BAJAJFINSV",
@@ -153818,7 +156340,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.14,
           "actual_ret": -5.29,
           "actual_return": -5.29,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -35410.0
         },
         {
           "symbol": "GRASIM",
@@ -153867,7 +156390,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.53,
           "actual_ret": 3.68,
           "actual_return": 3.68,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 14772.5
         },
         {
           "symbol": "NBCC",
@@ -153916,7 +156440,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.5,
           "actual_ret": -11.65,
           "actual_return": -11.65,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -665.0
         },
         {
           "symbol": "GODREJCP",
@@ -153965,7 +156490,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.79,
           "actual_ret": 4.94,
           "actual_return": 4.94,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 10710.0
         },
         {
           "symbol": "SUNPHARMA",
@@ -154014,7 +156540,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.24,
           "actual_ret": 3.39,
           "actual_return": 3.39,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 11574.5
         },
         {
           "symbol": "KEI",
@@ -154063,7 +156590,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.18,
           "actual_ret": -0.33,
           "actual_return": -0.33,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -1207.5
         },
         {
           "symbol": "ULTRACEMCO",
@@ -154112,7 +156640,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.09,
           "actual_ret": -4.24,
           "actual_return": -4.24,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -29855.0
         },
         {
           "symbol": "BDL",
@@ -154161,7 +156690,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 11.94,
           "actual_ret": -11.09,
           "actual_return": -11.09,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -12297.5
         },
         {
           "symbol": "MARICO",
@@ -154210,7 +156740,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.84,
           "actual_ret": -1.99,
           "actual_return": -1.99,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -2325.0
         },
         {
           "symbol": "LT",
@@ -154259,7 +156790,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.98,
           "actual_ret": -0.13,
           "actual_return": -0.13,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -405.0
         },
         {
           "symbol": "NHPC",
@@ -154308,7 +156840,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.24,
           "actual_ret": -0.39,
           "actual_return": -0.39,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -35.0
         },
         {
           "symbol": "ADANIPOWER",
@@ -154357,7 +156890,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 15.32,
           "actual_ret": -14.47,
           "actual_return": -14.47,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -1250.0
         },
         {
           "symbol": "TCS",
@@ -154406,7 +156940,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.73,
           "actual_ret": -3.88,
           "actual_return": -3.88,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -21770.0
         },
         {
           "symbol": "INDHOTEL",
@@ -154455,7 +156990,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.6,
           "actual_ret": 3.75,
           "actual_return": 3.75,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 2937.5
         },
         {
           "symbol": "VBL",
@@ -154504,7 +157040,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.69,
           "actual_ret": 0.84,
           "actual_return": 0.84,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 560.0
         },
         {
           "symbol": "TRENT",
@@ -154553,7 +157090,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.28,
           "actual_ret": -1.43,
           "actual_return": -1.43,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -1919.0
         },
         {
           "symbol": "MAZDOCK",
@@ -154602,7 +157140,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.51,
           "actual_ret": -5.66,
           "actual_return": -5.66,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -4952.5
         },
         {
           "symbol": "JUBLFOOD",
@@ -154651,7 +157190,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.47,
           "actual_ret": 1.62,
           "actual_return": 1.62,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 2005.0
         },
         {
           "symbol": "DRREDDY",
@@ -154700,7 +157240,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.35,
           "actual_ret": -0.5,
           "actual_return": -0.5,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -548.75
         },
         {
           "symbol": "ADANIENT",
@@ -154749,7 +157290,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 19.71,
           "actual_ret": -18.86,
           "actual_return": -18.86,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -91575.0
         },
         {
           "symbol": "APOLLOHOSP",
@@ -154798,7 +157340,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.39,
           "actual_ret": 8.54,
           "actual_return": 8.54,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 44951.25
         },
         {
           "symbol": "LTF",
@@ -154847,7 +157390,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.71,
           "actual_ret": 2.86,
           "actual_return": 2.86,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 615.0
         },
         {
           "symbol": "SBILIFE",
@@ -154896,7 +157440,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.41,
           "actual_ret": 1.56,
           "actual_return": 1.56,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 6236.25
         },
         {
           "symbol": "LAURUSLABS",
@@ -154945,7 +157490,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.31,
           "actual_ret": -3.46,
           "actual_return": -3.46,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -2897.5
         },
         {
           "symbol": "HCLTECH",
@@ -154994,7 +157540,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.83,
           "actual_ret": -2.98,
           "actual_return": -2.98,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -9891.0
         },
         {
           "symbol": "BAJFINANCE",
@@ -155043,7 +157590,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.66,
           "actual_ret": -1.81,
           "actual_return": -1.81,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -1306.25
         },
         {
           "symbol": "UPL",
@@ -155092,7 +157640,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.63,
           "actual_ret": -7.78,
           "actual_return": -7.78,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -13407.5
         },
         {
           "symbol": "SHREECEM",
@@ -155141,7 +157690,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 10.41,
           "actual_ret": 9.56,
           "actual_return": 9.56,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 563335.0
         },
         {
           "symbol": "GMRAIRPORT",
@@ -155190,7 +157740,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.96,
           "actual_ret": 1.11,
           "actual_return": 1.11,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 112.5
         },
         {
           "symbol": "POLICYBZR",
@@ -155239,7 +157790,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.37,
           "actual_ret": -4.52,
           "actual_return": -4.52,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -5262.5
         },
         {
           "symbol": "BSE",
@@ -155288,7 +157840,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.01,
           "actual_ret": -7.16,
           "actual_return": -7.16,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -2552.5
         },
         {
           "symbol": "POWERINDIA",
@@ -155337,7 +157890,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "WAAREEENER",
@@ -155386,7 +157940,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.14,
           "actual_ret": -12.29,
           "actual_return": -12.29,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -30725.0
         },
         {
           "symbol": "ASIANPAINT",
@@ -155435,7 +157990,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.16,
           "actual_ret": 4.31,
           "actual_return": 4.31,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 25254.0
         },
         {
           "symbol": "NAM-INDIA",
@@ -155484,7 +158040,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.23,
           "actual_ret": -4.38,
           "actual_return": -4.38,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -2127.5
         },
         {
           "symbol": "SONACOMS",
@@ -155533,7 +158090,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.95,
           "actual_ret": 4.1,
           "actual_return": 4.1,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 4335.0
         },
         {
           "symbol": "KOTAKBANK",
@@ -155582,7 +158140,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.37,
           "actual_ret": 2.52,
           "actual_return": 2.52,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 3524.0
         },
         {
           "symbol": "ABB",
@@ -155631,7 +158190,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.73,
           "actual_ret": 0.88,
           "actual_return": 0.88,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 6850.0
         },
         {
           "symbol": "MOTILALOFS",
@@ -155680,7 +158240,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.3,
           "actual_ret": -4.45,
           "actual_return": -4.45,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -6535.0
         },
         {
           "symbol": "DIVISLAB",
@@ -155729,7 +158290,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.38,
           "actual_ret": -4.53,
           "actual_return": -4.53,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -38780.0
         },
         {
           "symbol": "BAJAJ-AUTO",
@@ -155778,7 +158340,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.96,
           "actual_ret": -3.11,
           "actual_return": -3.11,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -12971.25
         },
         {
           "symbol": "MARUTI",
@@ -155827,7 +158390,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.07,
           "actual_ret": -1.22,
           "actual_return": -1.22,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -5073.0
         }
       ]
     },
@@ -155885,7 +158449,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.88,
           "actual_ret": -3.03,
           "actual_return": -3.03,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -9020.0
         },
         {
           "symbol": "JIOFIN",
@@ -155934,7 +158499,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.37,
           "actual_ret": 2.52,
           "actual_return": 2.52,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 14544.0
         },
         {
           "symbol": "NTPC",
@@ -155983,7 +158549,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.98,
           "actual_ret": 1.13,
           "actual_return": 1.13,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 2550.0
         },
         {
           "symbol": "BEL",
@@ -156032,7 +158599,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.15,
           "actual_ret": -1.3,
           "actual_return": -1.3,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -1875.0
         },
         {
           "symbol": "BPCL",
@@ -156081,7 +158649,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.58,
           "actual_ret": 0.73,
           "actual_return": 0.73,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 257.5
         },
         {
           "symbol": "ONGC",
@@ -156130,7 +158699,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.64,
           "actual_ret": 2.79,
           "actual_return": 2.79,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 6776.0
         },
         {
           "symbol": "HINDALCO",
@@ -156179,7 +158749,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.23,
           "actual_ret": -4.38,
           "actual_return": -4.38,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -14581.0
         },
         {
           "symbol": "TATACONSUM",
@@ -156228,7 +158799,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.49,
           "actual_ret": -0.64,
           "actual_return": -0.64,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -2110.5
         },
         {
           "symbol": "ITC",
@@ -156277,7 +158849,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.51,
           "actual_ret": -0.66,
           "actual_return": -0.66,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -2912.0
         },
         {
           "symbol": "SBIN",
@@ -156326,7 +158899,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.99,
           "actual_ret": 1.14,
           "actual_return": 1.14,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 4882.5
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -156375,7 +158949,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.95,
           "actual_ret": 3.1,
           "actual_return": 3.1,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 2394.0
         },
         {
           "symbol": "NATIONALUM",
@@ -156424,7 +158999,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.72,
           "actual_ret": -2.87,
           "actual_return": -2.87,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -507.5
         },
         {
           "symbol": "SBICARD",
@@ -156473,7 +159049,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.44,
           "actual_ret": -1.59,
           "actual_return": -1.59,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -3162.5
         },
         {
           "symbol": "AXISBANK",
@@ -156522,7 +159099,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.03,
           "actual_ret": 0.18,
           "actual_return": 0.18,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 1062.5
         },
         {
           "symbol": "VBL",
@@ -156571,7 +159149,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.83,
           "actual_ret": -1.98,
           "actual_return": -1.98,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -1310.0
         },
         {
           "symbol": "OBEROIRLTY",
@@ -156620,7 +159199,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.47,
           "actual_ret": -0.62,
           "actual_return": -0.62,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -1335.0
         },
         {
           "symbol": "VMM",
@@ -156669,7 +159249,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.46,
           "actual_ret": -3.61,
           "actual_return": -3.61,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -9025.0
         },
         {
           "symbol": "COALINDIA",
@@ -156718,7 +159299,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.13,
           "actual_ret": -0.28,
           "actual_return": -0.28,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -535.5
         },
         {
           "symbol": "COLPAL",
@@ -156767,7 +159349,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.17,
           "actual_ret": -0.32,
           "actual_return": -0.32,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -1110.0
         },
         {
           "symbol": "DELHIVERY",
@@ -156816,7 +159399,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.79,
           "actual_ret": -1.94,
           "actual_return": -1.94,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -1612.5
         },
         {
           "symbol": "MAZDOCK",
@@ -156865,7 +159449,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.48,
           "actual_ret": -2.63,
           "actual_return": -2.63,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -2522.5
         },
         {
           "symbol": "POWERINDIA",
@@ -156914,7 +159499,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "GODREJCP",
@@ -156963,7 +159549,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.42,
           "actual_ret": 2.57,
           "actual_return": 2.57,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 5492.5
         },
         {
           "symbol": "PNB",
@@ -157012,7 +159599,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.93,
           "actual_ret": -0.08,
           "actual_return": -0.08,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -10.0
         },
         {
           "symbol": "BIOCON",
@@ -157061,7 +159649,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.35,
           "actual_ret": -2.5,
           "actual_return": -2.5,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -1632.5
         },
         {
           "symbol": "TIINDIA",
@@ -157110,7 +159699,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.82,
           "actual_ret": -1.97,
           "actual_return": -1.97,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -13692.5
         },
         {
           "symbol": "CANBK",
@@ -157159,7 +159749,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.52,
           "actual_ret": 4.67,
           "actual_return": 4.67,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 687.5
         },
         {
           "symbol": "NYKAA",
@@ -157208,7 +159799,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.91,
           "actual_ret": -1.06,
           "actual_return": -1.06,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -412.5
         },
         {
           "symbol": "PRESTIGE",
@@ -157257,7 +159849,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.89,
           "actual_ret": 0.04,
           "actual_return": 0.04,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 50.0
         },
         {
           "symbol": "DMART",
@@ -157306,7 +159899,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.59,
           "actual_ret": -4.74,
           "actual_return": -4.74,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -48300.0
         },
         {
           "symbol": "PERSISTENT",
@@ -157355,7 +159949,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.67,
           "actual_ret": 0.82,
           "actual_return": 0.82,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 4015.0
         },
         {
           "symbol": "BHEL",
@@ -157404,7 +159999,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.48,
           "actual_ret": -1.63,
           "actual_return": -1.63,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -322.5
         },
         {
           "symbol": "POLICYBZR",
@@ -157453,7 +160049,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.67,
           "actual_ret": 2.82,
           "actual_return": 2.82,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 3187.5
         },
         {
           "symbol": "PNBHOUSING",
@@ -157502,7 +160099,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.69,
           "actual_ret": 1.84,
           "actual_return": 1.84,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 2172.5
         },
         {
           "symbol": "BDL",
@@ -157551,7 +160149,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.45,
           "actual_ret": -0.6,
           "actual_return": -0.6,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -697.5
         },
         {
           "symbol": "UNIONBANK",
@@ -157600,7 +160199,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.84,
           "actual_ret": 0.99,
           "actual_return": 0.99,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 177.5
         },
         {
           "symbol": "CHOLAFIN",
@@ -157649,7 +160249,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.31,
           "actual_ret": -0.46,
           "actual_return": -0.46,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -832.5
         },
         {
           "symbol": "ICICIGI",
@@ -157698,7 +160299,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.46,
           "actual_ret": -1.61,
           "actual_return": -1.61,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -5012.5
         },
         {
           "symbol": "TORNTPHARM",
@@ -157747,7 +160349,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.0,
           "actual_ret": 0.15,
           "actual_return": 0.15,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 550.0
         },
         {
           "symbol": "HAVELLS",
@@ -157796,7 +160399,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 8.65,
           "actual_ret": -7.8,
           "actual_return": -7.8,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -20915.0
         },
         {
           "symbol": "LTF",
@@ -157845,7 +160449,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.64,
           "actual_ret": 1.79,
           "actual_return": 1.79,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 380.0
         },
         {
           "symbol": "LAURUSLABS",
@@ -157894,7 +160499,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.35,
           "actual_ret": 1.5,
           "actual_return": 1.5,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 1385.0
         },
         {
           "symbol": "FORCEMOT",
@@ -157943,7 +160549,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.77,
           "actual_ret": -0.92,
           "actual_return": -0.92,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -3340.0
         },
         {
           "symbol": "LICHSGFIN",
@@ -157992,7 +160599,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.05,
           "actual_ret": 5.2,
           "actual_return": 5.2,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 5240.0
         },
         {
           "symbol": "SRF",
@@ -158041,7 +160649,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.2,
           "actual_ret": 2.35,
           "actual_return": 2.35,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 13282.5
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -158090,7 +160699,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.55,
           "actual_ret": -5.7,
           "actual_return": -5.7,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -5845.0
         },
         {
           "symbol": "M&M",
@@ -158139,7 +160749,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.01,
           "actual_ret": -0.16,
           "actual_return": -0.16,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -693.0
         },
         {
           "symbol": "MANAPPURAM",
@@ -158188,7 +160799,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.73,
           "actual_ret": 1.88,
           "actual_return": 1.88,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 527.5
         },
         {
           "symbol": "APLAPOLLO",
@@ -158237,7 +160849,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.44,
           "actual_ret": 0.59,
           "actual_return": 0.59,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 1620.0
         },
         {
           "symbol": "COFORGE",
@@ -158286,7 +160899,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.9,
           "actual_ret": 0.05,
           "actual_return": 0.05,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 95.0
         },
         {
           "symbol": "BHARTIARTL",
@@ -158335,7 +160949,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.58,
           "actual_ret": -0.73,
           "actual_return": -0.73,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -2750.25
         },
         {
           "symbol": "JSWSTEEL",
@@ -158384,7 +160999,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.8,
           "actual_ret": -0.95,
           "actual_return": -0.95,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -4893.75
         },
         {
           "symbol": "TECHM",
@@ -158433,7 +161049,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.42,
           "actual_ret": 0.57,
           "actual_return": 0.57,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 3066.0
         },
         {
           "symbol": "BANKINDIA",
@@ -158482,7 +161099,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.75,
           "actual_ret": -2.9,
           "actual_return": -2.9,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -590.0
         },
         {
           "symbol": "PGEL",
@@ -158531,7 +161149,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.26,
           "actual_ret": 3.41,
           "actual_return": 3.41,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 950.0
         },
         {
           "symbol": "CROMPTON",
@@ -158580,7 +161199,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.26,
           "actual_ret": -0.41,
           "actual_return": -0.41,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -337.5
         },
         {
           "symbol": "TATAELXSI",
@@ -158629,7 +161249,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.95,
           "actual_ret": -1.1,
           "actual_return": -1.1,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -16502.5
         },
         {
           "symbol": "WAAREEENER",
@@ -158678,7 +161299,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.14,
           "actual_ret": -12.29,
           "actual_return": -12.29,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -30725.0
         },
         {
           "symbol": "HDFCLIFE",
@@ -158727,7 +161349,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.54,
           "actual_ret": -6.69,
           "actual_return": -6.69,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -41426.0
         },
         {
           "symbol": "NAUKRI",
@@ -158776,7 +161399,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.01,
           "actual_ret": -2.16,
           "actual_return": -2.16,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -4152.5
         },
         {
           "symbol": "NBCC",
@@ -158825,7 +161449,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.42,
           "actual_ret": -3.57,
           "actual_return": -3.57,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -235.0
         },
         {
           "symbol": "360ONE",
@@ -158874,7 +161499,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.3,
           "actual_ret": 0.45,
           "actual_return": 0.45,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 472.5
         },
         {
           "symbol": "KOTAKBANK",
@@ -158923,7 +161549,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.57,
           "actual_ret": 0.72,
           "actual_return": 0.72,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 1048.0
         },
         {
           "symbol": "BSE",
@@ -158972,7 +161599,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.43,
           "actual_ret": -1.58,
           "actual_return": -1.58,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -715.0
         },
         {
           "symbol": "MAXHEALTH",
@@ -159021,7 +161649,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.4,
           "actual_ret": -0.55,
           "actual_return": -0.55,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -1215.0
         },
         {
           "symbol": "VOLTAS",
@@ -159070,7 +161699,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.25,
           "actual_ret": -0.4,
           "actual_return": -0.4,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -785.0
         },
         {
           "symbol": "CUMMINSIND",
@@ -159119,7 +161749,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.75,
           "actual_ret": -4.9,
           "actual_return": -4.9,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -16055.0
         },
         {
           "symbol": "PREMIERENE",
@@ -159168,7 +161799,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "JSWENERGY",
@@ -159217,7 +161849,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.08,
           "actual_ret": -1.23,
           "actual_return": -1.23,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -882.5
         },
         {
           "symbol": "UNITDSPR",
@@ -159266,7 +161899,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.37,
           "actual_ret": 1.52,
           "actual_return": 1.52,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 3205.0
         },
         {
           "symbol": "KPITTECH",
@@ -159315,7 +161949,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.55,
           "actual_ret": 2.7,
           "actual_return": 2.7,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 4632.5
         },
         {
           "symbol": "ADANIENSOL",
@@ -159364,7 +161999,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.91,
           "actual_ret": 1.06,
           "actual_return": 1.06,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 6762.5
         },
         {
           "symbol": "FORTIS",
@@ -159413,7 +162049,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.44,
           "actual_ret": -0.59,
           "actual_return": -0.59,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -410.0
         },
         {
           "symbol": "DLF",
@@ -159462,7 +162099,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.03,
           "actual_ret": -2.18,
           "actual_return": -2.18,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -2007.5
         },
         {
           "symbol": "HEROMOTOCO",
@@ -159511,7 +162149,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.74,
           "actual_ret": -1.89,
           "actual_return": -1.89,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -11307.5
         },
         {
           "symbol": "LTM",
@@ -159560,7 +162199,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.28,
           "actual_ret": 1.43,
           "actual_return": 1.43,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 14650.0
         },
         {
           "symbol": "IRFC",
@@ -159609,7 +162249,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "MOTILALOFS",
@@ -159658,7 +162299,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.57,
           "actual_ret": 2.72,
           "actual_return": 2.72,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 4597.5
         },
         {
           "symbol": "INDUSTOWER",
@@ -159707,7 +162349,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.27,
           "actual_ret": -2.42,
           "actual_return": -2.42,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -1150.0
         },
         {
           "symbol": "ANGELONE",
@@ -159756,7 +162399,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.26,
           "actual_ret": 2.41,
           "actual_return": 2.41,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 740.0
         },
         {
           "symbol": "IEX",
@@ -159805,7 +162449,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.03,
           "actual_ret": -2.18,
           "actual_return": -2.18,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -722.5
         },
         {
           "symbol": "GMRAIRPORT",
@@ -159854,7 +162499,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.94,
           "actual_ret": 2.09,
           "actual_return": 2.09,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 212.5
         },
         {
           "symbol": "MARICO",
@@ -159903,7 +162549,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.71,
           "actual_ret": -0.86,
           "actual_return": -0.86,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -1037.5
         },
         {
           "symbol": "HDFCAMC",
@@ -159952,7 +162599,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.35,
           "actual_ret": -2.5,
           "actual_return": -2.5,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -6292.5
         },
         {
           "symbol": "SUZLON",
@@ -160001,7 +162649,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.32,
           "actual_ret": -0.47,
           "actual_return": -0.47,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -12.5
         },
         {
           "symbol": "GLENMARK",
@@ -160050,7 +162699,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.49,
           "actual_ret": -1.64,
           "actual_return": -1.64,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -1737.5
         },
         {
           "symbol": "ADANIPORTS",
@@ -160099,7 +162749,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.35,
           "actual_ret": -1.5,
           "actual_return": -1.5,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -4820.0
         },
         {
           "symbol": "IDEA",
@@ -160148,7 +162799,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.35,
           "actual_ret": 2.5,
           "actual_return": 2.5,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 50.0
         },
         {
           "symbol": "IOC",
@@ -160197,7 +162849,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.54,
           "actual_ret": -2.69,
           "actual_return": -2.69,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -435.0
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -160246,7 +162899,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.16,
           "actual_ret": -1.31,
           "actual_return": -1.31,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -200.0
         },
         {
           "symbol": "HYUNDAI",
@@ -160295,7 +162949,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.84,
           "actual_ret": 11.99,
           "actual_return": 11.99,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 29975.0
         },
         {
           "symbol": "RBLBANK",
@@ -160344,7 +162999,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.62,
           "actual_ret": -0.77,
           "actual_return": -0.77,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -345.0
         },
         {
           "symbol": "SWIGGY",
@@ -160393,7 +163049,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "IREDA",
@@ -160442,7 +163099,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "ETERNAL",
@@ -160491,7 +163149,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.22,
           "actual_ret": 8.37,
           "actual_return": 8.37,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 1262.5
         },
         {
           "symbol": "LUPIN",
@@ -160540,7 +163199,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.21,
           "actual_ret": 1.36,
           "actual_return": 1.36,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 2445.0
         },
         {
           "symbol": "BOSCHLTD",
@@ -160589,7 +163249,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.46,
           "actual_ret": 0.61,
           "actual_return": 0.61,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 24692.5
         },
         {
           "symbol": "INDHOTEL",
@@ -160638,7 +163299,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.69,
           "actual_ret": 0.84,
           "actual_return": 0.84,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 655.0
         },
         {
           "symbol": "ADANIGREEN",
@@ -160687,7 +163349,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.08,
           "actual_ret": 0.23,
           "actual_return": 0.23,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 1062.5
         },
         {
           "symbol": "POWERGRID",
@@ -160736,7 +163399,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.76,
           "actual_ret": 2.91,
           "actual_return": 2.91,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 7308.0
         },
         {
           "symbol": "FEDERALBNK",
@@ -160785,7 +163449,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.58,
           "actual_ret": -0.73,
           "actual_return": -0.73,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -245.0
         },
         {
           "symbol": "GODREJPROP",
@@ -160834,7 +163499,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.8,
           "actual_ret": -2.95,
           "actual_return": -2.95,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -9080.0
         },
         {
           "symbol": "PAYTM",
@@ -160883,7 +163549,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.47,
           "actual_ret": -3.62,
           "actual_return": -3.62,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -4812.5
         },
         {
           "symbol": "TATAMOTORS",
@@ -160932,7 +163599,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.18,
           "actual_ret": -2.33,
           "actual_return": -2.33,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -5060.0
         },
         {
           "symbol": "AUBANK",
@@ -160981,7 +163649,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.03,
           "actual_ret": -3.18,
           "actual_return": -3.18,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -5202.5
         },
         {
           "symbol": "CONCOR",
@@ -161030,7 +163699,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.36,
           "actual_ret": -0.51,
           "actual_return": -0.51,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -907.5
         },
         {
           "symbol": "TVSMOTOR",
@@ -161079,7 +163749,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.69,
           "actual_ret": -4.84,
           "actual_return": -4.84,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -12775.0
         },
         {
           "symbol": "AUROPHARMA",
@@ -161128,7 +163799,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.94,
           "actual_ret": 2.09,
           "actual_return": 2.09,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 2242.5
         },
         {
           "symbol": "MFSL",
@@ -161177,7 +163849,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.34,
           "actual_ret": 8.49,
           "actual_return": 8.49,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 14500.0
         },
         {
           "symbol": "NHPC",
@@ -161226,7 +163899,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.72,
           "actual_ret": 1.87,
           "actual_return": 1.87,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 167.5
         },
         {
           "symbol": "JUBLFOOD",
@@ -161275,7 +163949,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.31,
           "actual_ret": -0.46,
           "actual_return": -0.46,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -570.0
         },
         {
           "symbol": "VEDL",
@@ -161324,7 +163999,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.94,
           "actual_ret": -1.09,
           "actual_return": -1.09,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -587.5
         },
         {
           "symbol": "HCLTECH",
@@ -161373,7 +164049,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.12,
           "actual_ret": -0.27,
           "actual_return": -0.27,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -864.5
         },
         {
           "symbol": "HDFCBANK",
@@ -161422,7 +164099,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.0,
           "actual_ret": 1.15,
           "actual_return": 1.15,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 4856.5
         },
         {
           "symbol": "MPHASIS",
@@ -161471,7 +164149,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.38,
           "actual_ret": -1.53,
           "actual_return": -1.53,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -6850.0
         },
         {
           "symbol": "GVT&D",
@@ -161520,7 +164199,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.7,
           "actual_ret": -0.85,
           "actual_return": -0.85,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -247.5
         },
         {
           "symbol": "RECLTD",
@@ -161569,7 +164249,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.35,
           "actual_ret": 1.5,
           "actual_return": 1.5,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 375.0
         },
         {
           "symbol": "DABUR",
@@ -161618,7 +164299,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.99,
           "actual_ret": -2.14,
           "actual_return": -2.14,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -2860.0
         },
         {
           "symbol": "SUPREMEIND",
@@ -161667,7 +164349,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.77,
           "actual_ret": -0.92,
           "actual_return": -0.92,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -5400.0
         },
         {
           "symbol": "WIPRO",
@@ -161716,7 +164399,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.42,
           "actual_ret": 1.57,
           "actual_return": 1.57,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 4305.0
         },
         {
           "symbol": "NMDC",
@@ -161765,7 +164449,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.22,
           "actual_ret": -3.37,
           "actual_return": -3.37,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -300.0
         },
         {
           "symbol": "UPL",
@@ -161814,7 +164499,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.73,
           "actual_ret": 0.88,
           "actual_return": 0.88,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 1532.5
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -161863,7 +164549,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.21,
           "actual_ret": 1.36,
           "actual_return": 1.36,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 3507.5
         },
         {
           "symbol": "PIDILITIND",
@@ -161912,7 +164599,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.15,
           "actual_ret": -0.3,
           "actual_return": -0.3,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -940.0
         },
         {
           "symbol": "COCHINSHIP",
@@ -161961,7 +164649,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.44,
           "actual_ret": -1.59,
           "actual_return": -1.59,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -1012.5
         },
         {
           "symbol": "POLYCAB",
@@ -162010,7 +164699,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.41,
           "actual_ret": 1.56,
           "actual_return": 1.56,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 9882.5
         },
         {
           "symbol": "OFSS",
@@ -162059,7 +164749,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.66,
           "actual_ret": 0.81,
           "actual_return": 0.81,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 5162.5
         },
         {
           "symbol": "BRITANNIA",
@@ -162108,7 +164799,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.53,
           "actual_ret": 1.68,
           "actual_return": 1.68,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 17280.0
         },
         {
           "symbol": "PETRONET",
@@ -162157,7 +164849,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.1,
           "actual_ret": -1.25,
           "actual_return": -1.25,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -595.0
         },
         {
           "symbol": "KEI",
@@ -162206,7 +164899,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.44,
           "actual_ret": -2.59,
           "actual_return": -2.59,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -9527.5
         },
         {
           "symbol": "CGPOWER",
@@ -162255,7 +164949,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.22,
           "actual_ret": -1.37,
           "actual_return": -1.37,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -915.0
         },
         {
           "symbol": "KALYANKJIL",
@@ -162304,7 +164999,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.28,
           "actual_ret": -3.43,
           "actual_return": -3.43,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -1065.0
         },
         {
           "symbol": "ASHOKLEY",
@@ -162353,7 +165049,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.76,
           "actual_ret": -1.91,
           "actual_return": -1.91,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -322.5
         },
         {
           "symbol": "GAIL",
@@ -162402,7 +165099,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.05,
           "actual_ret": -0.2,
           "actual_return": -0.2,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -42.5
         },
         {
           "symbol": "LODHA",
@@ -162451,7 +165149,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.75,
           "actual_ret": -3.9,
           "actual_return": -3.9,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -5335.0
         },
         {
           "symbol": "ASTRAL",
@@ -162500,7 +165199,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.5,
           "actual_ret": -2.65,
           "actual_return": -2.65,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -9685.0
         },
         {
           "symbol": "SUNPHARMA",
@@ -162549,7 +165249,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.78,
           "actual_ret": -1.93,
           "actual_return": -1.93,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -6468.0
         },
         {
           "symbol": "ABB",
@@ -162598,7 +165299,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.55,
           "actual_ret": -4.7,
           "actual_return": -4.7,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -30892.5
         },
         {
           "symbol": "HAL",
@@ -162647,7 +165349,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.61,
           "actual_ret": 1.76,
           "actual_return": 1.76,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 5357.5
         },
         {
           "symbol": "HINDPETRO",
@@ -162696,7 +165399,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.25,
           "actual_ret": -5.4,
           "actual_return": -5.4,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -1945.0
         },
         {
           "symbol": "PHOENIXLTD",
@@ -162745,7 +165449,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.51,
           "actual_ret": 1.66,
           "actual_return": 1.66,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 2940.0
         },
         {
           "symbol": "PATANJALI",
@@ -162794,7 +165499,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.35,
           "actual_ret": -0.5,
           "actual_return": -0.5,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -490.0
         },
         {
           "symbol": "CDSL",
@@ -162843,7 +165549,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.27,
           "actual_ret": -2.42,
           "actual_return": -2.42,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -3362.5
         },
         {
           "symbol": "TMPV",
@@ -162892,7 +165599,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.18,
           "actual_ret": 2.33,
           "actual_return": 2.33,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 6727.5
         },
         {
           "symbol": "GODFRYPHLP",
@@ -162941,7 +165649,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.99,
           "actual_ret": 4.14,
           "actual_return": 4.14,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 6607.5
         },
         {
           "symbol": "AMBUJACEM",
@@ -162990,7 +165699,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.18,
           "actual_ret": 0.33,
           "actual_return": 0.33,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 430.0
         },
         {
           "symbol": "SIEMENS",
@@ -163039,7 +165749,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.51,
           "actual_ret": 2.66,
           "actual_return": 2.66,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 10850.0
         },
         {
           "symbol": "EICHERMOT",
@@ -163088,7 +165799,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.74,
           "actual_ret": 0.89,
           "actual_return": 0.89,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 4179.0
         },
         {
           "symbol": "MCX",
@@ -163137,7 +165849,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.14,
           "actual_ret": 0.29,
           "actual_return": 0.29,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 210.0
         },
         {
           "symbol": "CIPLA",
@@ -163186,7 +165899,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.31,
           "actual_ret": 0.46,
           "actual_return": 0.46,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 1669.5
         },
         {
           "symbol": "SAIL",
@@ -163235,7 +165949,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.19,
           "actual_ret": 1.34,
           "actual_return": 1.34,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 285.0
         },
         {
           "symbol": "PAGEIND",
@@ -163284,7 +165999,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.37,
           "actual_ret": 0.52,
           "actual_return": 0.52,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 54500.0
         },
         {
           "symbol": "DIVISLAB",
@@ -163333,7 +166049,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.71,
           "actual_ret": 1.86,
           "actual_return": 1.86,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 15370.0
         },
         {
           "symbol": "RVNL",
@@ -163382,7 +166099,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.53,
           "actual_ret": 5.68,
           "actual_return": 5.68,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 937.5
         },
         {
           "symbol": "TATAPOWER",
@@ -163431,7 +166149,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.86,
           "actual_ret": 2.01,
           "actual_return": 2.01,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 1037.5
         },
         {
           "symbol": "BLUESTARCO",
@@ -163480,7 +166199,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.71,
           "actual_ret": -0.86,
           "actual_return": -0.86,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -1250.0
         },
         {
           "symbol": "ADANIPOWER",
@@ -163529,7 +166249,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.72,
           "actual_ret": -3.87,
           "actual_return": -3.87,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -577.5
         },
         {
           "symbol": "NESTLEIND",
@@ -163578,7 +166299,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.95,
           "actual_ret": -1.1,
           "actual_return": -1.1,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -4128.0
         },
         {
           "symbol": "ICICIPRULI",
@@ -163627,7 +166349,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.46,
           "actual_ret": -3.61,
           "actual_return": -3.61,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -4060.0
         },
         {
           "symbol": "INFY",
@@ -163676,7 +166399,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.8,
           "actual_ret": 4.95,
           "actual_return": 4.95,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 27112.0
         },
         {
           "symbol": "TCS",
@@ -163725,7 +166449,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.64,
           "actual_ret": 1.79,
           "actual_return": 1.79,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 9082.5
         },
         {
           "symbol": "SHREECEM",
@@ -163774,7 +166499,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.55,
           "actual_ret": 1.7,
           "actual_return": 1.7,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 97915.0
         },
         {
           "symbol": "LICI",
@@ -163823,7 +166549,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.88,
           "actual_ret": -3.03,
           "actual_return": -3.03,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -2557.5
         },
         {
           "symbol": "BHARATFORG",
@@ -163872,7 +166599,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.03,
           "actual_ret": -0.18,
           "actual_return": -0.18,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -390.0
         },
         {
           "symbol": "ALKEM",
@@ -163921,7 +166649,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.25,
           "actual_ret": 1.4,
           "actual_return": 1.4,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 10070.0
         },
         {
           "symbol": "SOLARINDS",
@@ -163970,7 +166699,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.47,
           "actual_ret": 0.62,
           "actual_return": 0.62,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 6897.5
         },
         {
           "symbol": "OIL",
@@ -164019,7 +166749,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.47,
           "actual_ret": -1.62,
           "actual_return": -1.62,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -505.0
         },
         {
           "symbol": "HINDUNILVR",
@@ -164068,7 +166799,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.84,
           "actual_ret": -0.99,
           "actual_return": -0.99,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -7113.0
         },
         {
           "symbol": "KFINTECH",
@@ -164117,7 +166849,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.93,
           "actual_ret": -2.08,
           "actual_return": -2.08,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -1790.0
         },
         {
           "symbol": "ICICIBANK",
@@ -164166,7 +166899,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.97,
           "actual_ret": 0.12,
           "actual_return": 0.12,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 756.0
         },
         {
           "symbol": "CAMS",
@@ -164215,7 +166949,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.13,
           "actual_ret": 1.28,
           "actual_return": 1.28,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 1322.5
         },
         {
           "symbol": "DIXON",
@@ -164264,7 +166999,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.9,
           "actual_ret": -2.05,
           "actual_return": -2.05,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -19935.0
         },
         {
           "symbol": "BANKBARODA",
@@ -164313,7 +167049,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.76,
           "actual_ret": 1.91,
           "actual_return": 1.91,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 785.0
         },
         {
           "symbol": "PFC",
@@ -164362,7 +167099,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.25,
           "actual_ret": -6.4,
           "actual_return": -6.4,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -1642.5
         },
         {
           "symbol": "MAHABANK",
@@ -164411,7 +167149,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.63,
           "actual_ret": -1.78,
           "actual_return": -1.78,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -120.0
         },
         {
           "symbol": "RADICO",
@@ -164460,7 +167199,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.63,
           "actual_ret": 1.78,
           "actual_return": 1.78,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 4515.0
         },
         {
           "symbol": "APOLLOHOSP",
@@ -164509,7 +167249,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.9,
           "actual_ret": -1.05,
           "actual_return": -1.05,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -5775.0
         },
         {
           "symbol": "INDUSINDBK",
@@ -164558,7 +167299,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.48,
           "actual_ret": 0.63,
           "actual_return": 0.63,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 1880.0
         },
         {
           "symbol": "KAYNES",
@@ -164607,7 +167349,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.41,
           "actual_ret": -1.56,
           "actual_return": -1.56,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -2900.0
         },
         {
           "symbol": "INDIANB",
@@ -164656,7 +167399,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.19,
           "actual_ret": -0.34,
           "actual_return": -0.34,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -227.5
         },
         {
           "symbol": "SONACOMS",
@@ -164705,7 +167449,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.85,
           "actual_ret": 1.0,
           "actual_return": 1.0,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 1025.0
         },
         {
           "symbol": "JINDALSTEL",
@@ -164754,7 +167499,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.03,
           "actual_ret": -0.18,
           "actual_return": -0.18,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -272.5
         },
         {
           "symbol": "AMBER",
@@ -164803,7 +167549,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.19,
           "actual_ret": -1.34,
           "actual_return": -1.34,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -6287.5
         },
         {
           "symbol": "TRENT",
@@ -164852,7 +167599,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.44,
           "actual_ret": -2.59,
           "actual_return": -2.59,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -3463.0
         },
         {
           "symbol": "PIIND",
@@ -164901,7 +167649,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.92,
           "actual_ret": -2.07,
           "actual_return": -2.07,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -17420.0
         },
         {
           "symbol": "MOTHERSON",
@@ -164950,7 +167699,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.49,
           "actual_ret": -1.64,
           "actual_return": -1.64,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -202.5
         },
         {
           "symbol": "UNOMINDA",
@@ -164999,7 +167749,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.18,
           "actual_ret": -4.33,
           "actual_return": -4.33,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -5607.5
         },
         {
           "symbol": "BAJAJFINSV",
@@ -165048,7 +167799,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.15,
           "actual_ret": 0.3,
           "actual_return": 0.3,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 2320.0
         },
         {
           "symbol": "BAJAJHLDNG",
@@ -165097,7 +167849,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.8,
           "actual_ret": -0.95,
           "actual_return": -0.95,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -12752.5
         },
         {
           "symbol": "NAM-INDIA",
@@ -165146,7 +167899,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.17,
           "actual_ret": 0.32,
           "actual_return": 0.32,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 180.0
         },
         {
           "symbol": "LT",
@@ -165195,7 +167949,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.75,
           "actual_ret": 0.9,
           "actual_return": 0.9,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 2728.5
         },
         {
           "symbol": "SAGILITY",
@@ -165244,7 +167999,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "INOXWIND",
@@ -165293,7 +168049,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.45,
           "actual_ret": -2.6,
           "actual_return": -2.6,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -177.5
         },
         {
           "symbol": "YESBANK",
@@ -165342,7 +168099,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.39,
           "actual_ret": 2.54,
           "actual_return": 2.54,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 137.5
         },
         {
           "symbol": "INDIGO",
@@ -165391,7 +168149,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.76,
           "actual_ret": -0.91,
           "actual_return": -0.91,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -2776.5
         },
         {
           "symbol": "SBILIFE",
@@ -165440,7 +168199,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.2,
           "actual_ret": 5.35,
           "actual_return": 5.35,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 24678.75
         },
         {
           "symbol": "MANKIND",
@@ -165489,7 +168249,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "ASIANPAINT",
@@ -165538,7 +168299,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.11,
           "actual_ret": 2.26,
           "actual_return": 2.26,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 13242.0
         },
         {
           "symbol": "ATHERENERG",
@@ -165587,7 +168349,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "ABCAPITAL",
@@ -165636,7 +168399,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.45,
           "actual_ret": 4.6,
           "actual_return": 4.6,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 1787.5
         },
         {
           "symbol": "ADANIENT",
@@ -165685,7 +168449,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.12,
           "actual_ret": -0.27,
           "actual_return": -0.27,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -3069.0
         },
         {
           "symbol": "HINDZINC",
@@ -165734,7 +168499,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.99,
           "actual_ret": -2.14,
           "actual_return": -2.14,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -1350.0
         },
         {
           "symbol": "BANDHANBNK",
@@ -165783,7 +168549,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.02,
           "actual_ret": -0.17,
           "actual_return": -0.17,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -97.5
         },
         {
           "symbol": "RELIANCE",
@@ -165832,7 +168599,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.25,
           "actual_ret": 2.4,
           "actual_return": 2.4,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 7027.5
         },
         {
           "symbol": "BAJFINANCE",
@@ -165881,7 +168649,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.65,
           "actual_ret": -0.8,
           "actual_return": -0.8,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -642.5
         },
         {
           "symbol": "ULTRACEMCO",
@@ -165930,7 +168699,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.01,
           "actual_ret": -0.16,
           "actual_return": -0.16,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -1077.0
         },
         {
           "symbol": "GRASIM",
@@ -165979,7 +168749,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.18,
           "actual_ret": 3.33,
           "actual_return": 3.33,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 14182.5
         },
         {
           "symbol": "DRREDDY",
@@ -166028,7 +168799,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.33,
           "actual_ret": -1.48,
           "actual_return": -1.48,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -1521.25
         },
         {
           "symbol": "TITAN",
@@ -166077,7 +168849,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.01,
           "actual_ret": 3.16,
           "actual_return": 3.16,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 14012.25
         },
         {
           "symbol": "MARUTI",
@@ -166126,7 +168899,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.09,
           "actual_ret": -0.24,
           "actual_return": -0.24,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -998.0
         },
         {
           "symbol": "BAJAJ-AUTO",
@@ -166175,7 +168949,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.17,
           "actual_ret": -1.32,
           "actual_return": -1.32,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -5461.25
         }
       ]
     },
@@ -166233,7 +169008,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.28,
           "actual_ret": -1.43,
           "actual_return": -1.43,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -4262.5
         },
         {
           "symbol": "BPCL",
@@ -166282,7 +169058,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.71,
           "actual_ret": 3.86,
           "actual_return": 3.86,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 1357.5
         },
         {
           "symbol": "HINDALCO",
@@ -166331,7 +169108,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.86,
           "actual_ret": -5.01,
           "actual_return": -5.01,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": -16660.0
         },
         {
           "symbol": "HDFCLIFE",
@@ -166380,7 +169158,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.72,
           "actual_ret": -6.87,
           "actual_return": -6.87,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -42515.0
         },
         {
           "symbol": "COALINDIA",
@@ -166429,7 +169208,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.23,
           "actual_ret": -3.38,
           "actual_return": -3.38,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -6363.0
         },
         {
           "symbol": "WIPRO",
@@ -166478,7 +169258,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.66,
           "actual_ret": 2.81,
           "actual_return": 2.81,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 7740.0
         },
         {
           "symbol": "JIOFIN",
@@ -166527,7 +169308,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 25968.0
         },
         {
           "symbol": "LTM",
@@ -166576,7 +169358,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.28,
           "actual_ret": 1.43,
           "actual_return": 1.43,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 14650.0
         },
         {
           "symbol": "BAJAJFINSV",
@@ -166625,7 +169408,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.53,
           "actual_ret": -0.68,
           "actual_return": -0.68,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -5235.0
         },
         {
           "symbol": "POWERGRID",
@@ -166674,7 +169458,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.71,
           "actual_ret": 1.86,
           "actual_return": 1.86,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 4680.0
         },
         {
           "symbol": "MARICO",
@@ -166723,7 +169508,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.71,
           "actual_ret": -0.86,
           "actual_return": -0.86,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -1037.5
         },
         {
           "symbol": "BANDHANBNK",
@@ -166772,7 +169558,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.87,
           "actual_ret": 0.02,
           "actual_return": 0.02,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 12.5
         },
         {
           "symbol": "ONGC",
@@ -166821,7 +169608,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.64,
           "actual_ret": 2.79,
           "actual_return": 2.79,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 6776.0
         },
         {
           "symbol": "MFSL",
@@ -166870,7 +169658,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.12,
           "actual_ret": 8.27,
           "actual_return": 8.27,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 14125.0
         },
         {
           "symbol": "TATAELXSI",
@@ -166919,7 +169708,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.95,
           "actual_ret": -1.1,
           "actual_return": -1.1,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -16502.5
         },
         {
           "symbol": "BHARTIARTL",
@@ -166968,7 +169758,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.58,
           "actual_ret": -0.73,
           "actual_return": -0.73,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -2750.25
         },
         {
           "symbol": "GODREJPROP",
@@ -167017,7 +169808,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.43,
           "actual_ret": -1.58,
           "actual_return": -1.58,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -4850.0
         },
         {
           "symbol": "MOTILALOFS",
@@ -167066,7 +169858,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.57,
           "actual_ret": 2.72,
           "actual_return": 2.72,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 4597.5
         },
         {
           "symbol": "RADICO",
@@ -167115,7 +169908,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.12,
           "actual_ret": 2.27,
           "actual_return": 2.27,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 5767.5
         },
         {
           "symbol": "HEROMOTOCO",
@@ -167164,7 +169958,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.74,
           "actual_ret": -1.89,
           "actual_return": -1.89,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -11307.5
         },
         {
           "symbol": "BEL",
@@ -167213,7 +170008,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.1,
           "actual_ret": -0.25,
           "actual_return": -0.25,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -360.0
         },
         {
           "symbol": "SWIGGY",
@@ -167262,7 +170058,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "NMDC",
@@ -167311,7 +170108,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.16,
           "actual_ret": -3.31,
           "actual_return": -3.31,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -295.0
         },
         {
           "symbol": "RVNL",
@@ -167360,7 +170158,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.09,
           "actual_ret": 5.24,
           "actual_return": 5.24,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 865.0
         },
         {
           "symbol": "LODHA",
@@ -167409,7 +170208,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.54,
           "actual_ret": -2.69,
           "actual_return": -2.69,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -3682.5
         },
         {
           "symbol": "UNITDSPR",
@@ -167458,7 +170258,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.09,
           "actual_ret": 2.24,
           "actual_return": 2.24,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 4737.5
         },
         {
           "symbol": "COFORGE",
@@ -167507,7 +170308,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.4,
           "actual_ret": 0.55,
           "actual_return": 0.55,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 1045.0
         },
         {
           "symbol": "ITC",
@@ -167556,7 +170358,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.03,
           "actual_ret": -0.18,
           "actual_return": -0.18,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -800.0
         },
         {
           "symbol": "ANGELONE",
@@ -167605,7 +170408,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.26,
           "actual_ret": 2.41,
           "actual_return": 2.41,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 740.0
         },
         {
           "symbol": "CIPLA",
@@ -167654,7 +170458,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.31,
           "actual_ret": 0.46,
           "actual_return": 0.46,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 1669.5
         },
         {
           "symbol": "PRESTIGE",
@@ -167703,7 +170508,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.89,
           "actual_ret": 0.04,
           "actual_return": 0.04,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 50.0
         },
         {
           "symbol": "GAIL",
@@ -167752,7 +170558,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.05,
           "actual_ret": -0.2,
           "actual_return": -0.2,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -42.5
         },
         {
           "symbol": "NTPC",
@@ -167801,7 +170608,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.68,
           "actual_ret": -0.83,
           "actual_return": -0.83,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -1890.0
         },
         {
           "symbol": "RECLTD",
@@ -167850,7 +170658,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.71,
           "actual_ret": 2.86,
           "actual_return": 2.86,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 717.5
         },
         {
           "symbol": "SBICARD",
@@ -167899,7 +170708,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.44,
           "actual_ret": -1.59,
           "actual_return": -1.59,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -3162.5
         },
         {
           "symbol": "ATHERENERG",
@@ -167948,7 +170758,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "NAUKRI",
@@ -167997,7 +170808,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.99,
           "actual_ret": -6.14,
           "actual_return": -6.14,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -11810.0
         },
         {
           "symbol": "DABUR",
@@ -168046,7 +170858,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.99,
           "actual_ret": -2.14,
           "actual_return": -2.14,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -2860.0
         },
         {
           "symbol": "360ONE",
@@ -168095,7 +170908,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.22,
           "actual_ret": -0.37,
           "actual_return": -0.37,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -385.0
         },
         {
           "symbol": "MOTHERSON",
@@ -168144,7 +170958,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.49,
           "actual_ret": -1.64,
           "actual_return": -1.64,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -202.5
         },
         {
           "symbol": "CGPOWER",
@@ -168193,7 +171008,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.18,
           "actual_ret": -1.33,
           "actual_return": -1.33,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -890.0
         },
         {
           "symbol": "OFSS",
@@ -168242,7 +171058,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.66,
           "actual_ret": 0.81,
           "actual_return": 0.81,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 5162.5
         },
         {
           "symbol": "GVT&D",
@@ -168291,7 +171108,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.7,
           "actual_ret": -0.85,
           "actual_return": -0.85,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -247.5
         },
         {
           "symbol": "KALYANKJIL",
@@ -168340,7 +171158,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.28,
           "actual_ret": -3.43,
           "actual_return": -3.43,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -1065.0
         },
         {
           "symbol": "COLPAL",
@@ -168389,7 +171208,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.08,
           "actual_ret": 0.23,
           "actual_return": 0.23,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 797.5
         },
         {
           "symbol": "CHOLAFIN",
@@ -168438,7 +171258,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.31,
           "actual_ret": -0.46,
           "actual_return": -0.46,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -832.5
         },
         {
           "symbol": "BHEL",
@@ -168487,7 +171308,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.48,
           "actual_ret": -1.63,
           "actual_return": -1.63,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -322.5
         },
         {
           "symbol": "ADANIGREEN",
@@ -168536,7 +171358,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.34,
           "actual_ret": -1.49,
           "actual_return": -1.49,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -7050.0
         },
         {
           "symbol": "ABB",
@@ -168585,7 +171408,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.79,
           "actual_ret": -0.94,
           "actual_return": -0.94,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -6190.0
         },
         {
           "symbol": "INOXWIND",
@@ -168634,7 +171458,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.61,
           "actual_ret": -4.76,
           "actual_return": -4.76,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -325.0
         },
         {
           "symbol": "CANBK",
@@ -168683,7 +171508,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.42,
           "actual_ret": 2.57,
           "actual_return": 2.57,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 377.5
         },
         {
           "symbol": "AMBER",
@@ -168732,7 +171558,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.28,
           "actual_ret": -0.43,
           "actual_return": -0.43,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -2037.5
         },
         {
           "symbol": "PNBHOUSING",
@@ -168781,7 +171608,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.69,
           "actual_ret": 1.84,
           "actual_return": 1.84,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 2172.5
         },
         {
           "symbol": "UNIONBANK",
@@ -168830,7 +171658,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.59,
           "actual_ret": 0.74,
           "actual_return": 0.74,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 132.5
         },
         {
           "symbol": "ADANIENSOL",
@@ -168879,7 +171708,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.91,
           "actual_ret": 1.06,
           "actual_return": 1.06,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 6762.5
         },
         {
           "symbol": "VOLTAS",
@@ -168928,7 +171758,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.25,
           "actual_ret": -0.4,
           "actual_return": -0.4,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -785.0
         },
         {
           "symbol": "CDSL",
@@ -168977,7 +171808,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.68,
           "actual_ret": -1.83,
           "actual_return": -1.83,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -2540.0
         },
         {
           "symbol": "HCLTECH",
@@ -169026,7 +171858,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.49,
           "actual_ret": -0.64,
           "actual_return": -0.64,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -2016.0
         },
         {
           "symbol": "ASTRAL",
@@ -169075,7 +171908,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.45,
           "actual_ret": -6.6,
           "actual_return": -6.6,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -24145.0
         },
         {
           "symbol": "PETRONET",
@@ -169124,7 +171958,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.1,
           "actual_ret": -1.25,
           "actual_return": -1.25,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -595.0
         },
         {
           "symbol": "MAZDOCK",
@@ -169173,7 +172008,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.18,
           "actual_ret": -3.33,
           "actual_return": -3.33,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -3192.5
         },
         {
           "symbol": "BOSCHLTD",
@@ -169222,7 +172058,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.67,
           "actual_ret": 1.82,
           "actual_return": 1.82,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 74167.5
         },
         {
           "symbol": "LUPIN",
@@ -169271,7 +172108,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.57,
           "actual_ret": 0.72,
           "actual_return": 0.72,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 1282.5
         },
         {
           "symbol": "GMRAIRPORT",
@@ -169320,7 +172158,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.94,
           "actual_ret": 2.09,
           "actual_return": 2.09,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 212.5
         },
         {
           "symbol": "AMBUJACEM",
@@ -169369,7 +172208,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.18,
           "actual_ret": 0.33,
           "actual_return": 0.33,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 430.0
         },
         {
           "symbol": "INDHOTEL",
@@ -169418,7 +172258,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.69,
           "actual_ret": 0.84,
           "actual_return": 0.84,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 655.0
         },
         {
           "symbol": "KPITTECH",
@@ -169467,7 +172308,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.55,
           "actual_ret": 2.7,
           "actual_return": 2.7,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 4632.5
         },
         {
           "symbol": "WAAREEENER",
@@ -169516,7 +172358,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 13.14,
           "actual_ret": -12.29,
           "actual_return": -12.29,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -30725.0
         },
         {
           "symbol": "SAGILITY",
@@ -169565,7 +172408,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "NYKAA",
@@ -169614,7 +172458,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.91,
           "actual_ret": -1.06,
           "actual_return": -1.06,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -412.5
         },
         {
           "symbol": "ICICIPRULI",
@@ -169663,7 +172508,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.46,
           "actual_ret": -3.61,
           "actual_return": -3.61,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -4060.0
         },
         {
           "symbol": "SONACOMS",
@@ -169712,7 +172558,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.26,
           "actual_ret": 0.41,
           "actual_return": 0.41,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 415.0
         },
         {
           "symbol": "KFINTECH",
@@ -169761,7 +172608,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.47,
           "actual_ret": -3.62,
           "actual_return": -3.62,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -3107.5
         },
         {
           "symbol": "ADANIPORTS",
@@ -169810,7 +172658,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.35,
           "actual_ret": -1.5,
           "actual_return": -1.5,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -4820.0
         },
         {
           "symbol": "AUROPHARMA",
@@ -169859,7 +172708,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.52,
           "actual_ret": 1.67,
           "actual_return": 1.67,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 1785.0
         },
         {
           "symbol": "INDUSTOWER",
@@ -169908,7 +172758,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.22,
           "actual_ret": -1.37,
           "actual_return": -1.37,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -650.0
         },
         {
           "symbol": "BLUESTARCO",
@@ -169957,7 +172808,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.58,
           "actual_ret": 0.73,
           "actual_return": 0.73,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 1062.5
         },
         {
           "symbol": "COCHINSHIP",
@@ -170006,7 +172858,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.44,
           "actual_ret": -1.59,
           "actual_return": -1.59,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -1012.5
         },
         {
           "symbol": "NHPC",
@@ -170055,7 +172908,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.85,
           "actual_ret": 1.0,
           "actual_return": 1.0,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 90.0
         },
         {
           "symbol": "JSWENERGY",
@@ -170104,7 +172958,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.08,
           "actual_ret": -1.23,
           "actual_return": -1.23,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -882.5
         },
         {
           "symbol": "PREMIERENE",
@@ -170153,7 +173008,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "BAJAJHLDNG",
@@ -170202,7 +173058,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.8,
           "actual_ret": -0.95,
           "actual_return": -0.95,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -12752.5
         },
         {
           "symbol": "MAXHEALTH",
@@ -170251,7 +173108,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.4,
           "actual_ret": -0.55,
           "actual_return": -0.55,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -1215.0
         },
         {
           "symbol": "ICICIBANK",
@@ -170300,7 +173158,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.97,
           "actual_ret": 0.12,
           "actual_return": 0.12,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": 756.0
         },
         {
           "symbol": "AUBANK",
@@ -170349,7 +173208,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.03,
           "actual_ret": -3.18,
           "actual_return": -3.18,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -5202.5
         },
         {
           "symbol": "LAURUSLABS",
@@ -170398,7 +173258,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.35,
           "actual_ret": 1.5,
           "actual_return": 1.5,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 1385.0
         },
         {
           "symbol": "GODREJCP",
@@ -170447,7 +173308,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.53,
           "actual_ret": 2.68,
           "actual_return": 2.68,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 5717.5
         },
         {
           "symbol": "BSE",
@@ -170496,7 +173358,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.43,
           "actual_ret": -1.58,
           "actual_return": -1.58,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -715.0
         },
         {
           "symbol": "BANKBARODA",
@@ -170545,7 +173408,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.76,
           "actual_ret": 1.91,
           "actual_return": 1.91,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": 785.0
         },
         {
           "symbol": "DELHIVERY",
@@ -170594,7 +173458,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.33,
           "actual_ret": -1.48,
           "actual_return": -1.48,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -1225.0
         },
         {
           "symbol": "TECHM",
@@ -170643,7 +173508,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.42,
           "actual_ret": 0.57,
           "actual_return": 0.57,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 3066.0
         },
         {
           "symbol": "UNOMINDA",
@@ -170692,7 +173558,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.77,
           "actual_ret": -2.92,
           "actual_return": -2.92,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -3787.5
         },
         {
           "symbol": "MANAPPURAM",
@@ -170741,7 +173608,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.15,
           "actual_ret": 2.3,
           "actual_return": 2.3,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 645.0
         },
         {
           "symbol": "SBILIFE",
@@ -170790,7 +173658,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.38,
           "actual_ret": 1.53,
           "actual_return": 1.53,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 7072.5
         },
         {
           "symbol": "SBIN",
@@ -170839,7 +173708,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.74,
           "actual_ret": 1.89,
           "actual_return": 1.89,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 8047.5
         },
         {
           "symbol": "APLAPOLLO",
@@ -170888,7 +173758,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.44,
           "actual_ret": 0.59,
           "actual_return": 0.59,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 1620.0
         },
         {
           "symbol": "BIOCON",
@@ -170937,7 +173808,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.82,
           "actual_ret": -0.97,
           "actual_return": -0.97,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -630.0
         },
         {
           "symbol": "POLICYBZR",
@@ -170986,7 +173858,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.72,
           "actual_ret": 1.87,
           "actual_return": 1.87,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 2112.5
         },
         {
           "symbol": "INDIANB",
@@ -171035,7 +173908,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.19,
           "actual_ret": -0.34,
           "actual_return": -0.34,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -227.5
         },
         {
           "symbol": "HAVELLS",
@@ -171084,7 +173958,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.22,
           "actual_ret": -4.37,
           "actual_return": -4.37,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -11730.0
         },
         {
           "symbol": "HDFCBANK",
@@ -171133,7 +174008,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.77,
           "actual_ret": 1.92,
           "actual_return": 1.92,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 8123.5
         },
         {
           "symbol": "YESBANK",
@@ -171182,7 +174058,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.7,
           "actual_ret": 1.85,
           "actual_return": 1.85,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 100.0
         },
         {
           "symbol": "DIXON",
@@ -171231,7 +174108,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.7,
           "actual_ret": -0.85,
           "actual_return": -0.85,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -8302.5
         },
         {
           "symbol": "BANKINDIA",
@@ -171280,7 +174158,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.81,
           "actual_ret": -2.96,
           "actual_return": -2.96,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -602.5
         },
         {
           "symbol": "ICICIGI",
@@ -171329,7 +174208,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.09,
           "actual_ret": -0.24,
           "actual_return": -0.24,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -737.5
         },
         {
           "symbol": "NBCC",
@@ -171378,7 +174258,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.67,
           "actual_ret": -1.82,
           "actual_return": -1.82,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -120.0
         },
         {
           "symbol": "ALKEM",
@@ -171427,7 +174308,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.86,
           "actual_ret": 1.01,
           "actual_return": 1.01,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 7257.5
         },
         {
           "symbol": "IOC",
@@ -171476,7 +174358,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.25,
           "actual_ret": -1.4,
           "actual_return": -1.4,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -227.5
         },
         {
           "symbol": "PIIND",
@@ -171525,7 +174408,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.58,
           "actual_ret": -2.73,
           "actual_return": -2.73,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -23010.0
         },
         {
           "symbol": "ETERNAL",
@@ -171574,7 +174458,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.65,
           "actual_ret": 6.8,
           "actual_return": 6.8,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 1025.0
         },
         {
           "symbol": "PAGEIND",
@@ -171623,7 +174508,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.38,
           "actual_ret": 0.53,
           "actual_return": 0.53,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 55700.0
         },
         {
           "symbol": "PHOENIXLTD",
@@ -171672,7 +174558,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.49,
           "actual_ret": 0.64,
           "actual_return": 0.64,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 1137.5
         },
         {
           "symbol": "LICI",
@@ -171721,7 +174608,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.16,
           "actual_ret": 0.31,
           "actual_return": 0.31,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 260.0
         },
         {
           "symbol": "SUZLON",
@@ -171770,7 +174658,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.32,
           "actual_ret": -0.47,
           "actual_return": -0.47,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -12.5
         },
         {
           "symbol": "FEDERALBNK",
@@ -171819,7 +174708,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.8,
           "actual_ret": -0.95,
           "actual_return": -0.95,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -320.0
         },
         {
           "symbol": "VBL",
@@ -171868,7 +174758,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.83,
           "actual_ret": -1.98,
           "actual_return": -1.98,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -1310.0
         },
         {
           "symbol": "PATANJALI",
@@ -171917,7 +174808,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.48,
           "actual_ret": -1.63,
           "actual_return": -1.63,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -1587.5
         },
         {
           "symbol": "PIDILITIND",
@@ -171966,7 +174858,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.6,
           "actual_ret": -0.75,
           "actual_return": -0.75,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -2327.5
         },
         {
           "symbol": "TMPV",
@@ -172015,7 +174908,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.09,
           "actual_ret": 3.24,
           "actual_return": 3.24,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 9352.5
         },
         {
           "symbol": "JUBLFOOD",
@@ -172064,7 +174958,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.99,
           "actual_ret": 1.14,
           "actual_return": 1.14,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 1425.0
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -172113,7 +175008,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.0,
           "actual_ret": 0.15,
           "actual_return": 0.15,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 387.5
         },
         {
           "symbol": "TORNTPHARM",
@@ -172162,7 +175058,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.9,
           "actual_ret": 0.05,
           "actual_return": 0.05,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 192.5
         },
         {
           "symbol": "CONCOR",
@@ -172211,7 +175108,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.79,
           "actual_ret": 0.94,
           "actual_return": 0.94,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": 1657.5
         },
         {
           "symbol": "DLF",
@@ -172260,7 +175158,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.48,
           "actual_ret": -1.63,
           "actual_return": -1.63,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -1500.0
         },
         {
           "symbol": "TIINDIA",
@@ -172309,7 +175208,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.82,
           "actual_ret": -1.97,
           "actual_return": -1.97,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -13692.5
         },
         {
           "symbol": "SUPREMEIND",
@@ -172358,7 +175258,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.8,
           "actual_ret": -0.95,
           "actual_return": -0.95,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -5545.0
         },
         {
           "symbol": "OBEROIRLTY",
@@ -172407,7 +175308,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.47,
           "actual_ret": -0.62,
           "actual_return": -0.62,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -1335.0
         },
         {
           "symbol": "NATIONALUM",
@@ -172456,7 +175358,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.21,
           "actual_ret": -3.36,
           "actual_return": -3.36,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -592.5
         },
         {
           "symbol": "IDEA",
@@ -172505,7 +175408,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.1,
           "actual_ret": 1.25,
           "actual_return": 1.25,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 25.0
         },
         {
           "symbol": "KAYNES",
@@ -172554,7 +175458,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.51,
           "actual_ret": -0.66,
           "actual_return": -0.66,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -1225.0
         },
         {
           "symbol": "HINDZINC",
@@ -172603,7 +175508,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.87,
           "actual_ret": -2.02,
           "actual_return": -2.02,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -1272.5
         },
         {
           "symbol": "M&M",
@@ -172652,7 +175558,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.66,
           "actual_ret": 0.81,
           "actual_return": 0.81,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 3444.0
         },
         {
           "symbol": "TATAPOWER",
@@ -172701,7 +175608,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.9,
           "actual_ret": 3.05,
           "actual_return": 3.05,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 1572.5
         },
         {
           "symbol": "SHREECEM",
@@ -172750,7 +175658,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.21,
           "actual_ret": 2.36,
           "actual_return": 2.36,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 135892.5
         },
         {
           "symbol": "GRASIM",
@@ -172799,7 +175708,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.18,
           "actual_ret": 3.33,
           "actual_return": 3.33,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 14182.5
         },
         {
           "symbol": "NESTLEIND",
@@ -172848,7 +175758,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.95,
           "actual_ret": -1.1,
           "actual_return": -1.1,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -4128.0
         },
         {
           "symbol": "ABCAPITAL",
@@ -172897,7 +175808,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.53,
           "actual_ret": 0.68,
           "actual_return": 0.68,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 262.5
         },
         {
           "symbol": "POLYCAB",
@@ -172946,7 +175858,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.5,
           "actual_ret": 2.65,
           "actual_return": 2.65,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 16765.0
         },
         {
           "symbol": "LICHSGFIN",
@@ -172995,7 +175908,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.59,
           "actual_ret": 0.74,
           "actual_return": 0.74,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 747.5
         },
         {
           "symbol": "CUMMINSIND",
@@ -173044,7 +175958,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.75,
           "actual_ret": -4.9,
           "actual_return": -4.9,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": -16055.0
         },
         {
           "symbol": "HAL",
@@ -173093,7 +176008,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.61,
           "actual_ret": 1.76,
           "actual_return": 1.76,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": 5357.5
         },
         {
           "symbol": "DMART",
@@ -173142,7 +176058,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.13,
           "actual_ret": -5.28,
           "actual_return": -5.28,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -53737.5
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -173191,7 +176108,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.54,
           "actual_ret": -2.69,
           "actual_return": -2.69,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -410.0
         },
         {
           "symbol": "BHARATFORG",
@@ -173240,7 +176158,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.03,
           "actual_ret": -0.18,
           "actual_return": -0.18,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -390.0
         },
         {
           "symbol": "LTF",
@@ -173289,7 +176208,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.24,
           "actual_ret": -1.39,
           "actual_return": -1.39,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -295.0
         },
         {
           "symbol": "BRITANNIA",
@@ -173338,7 +176258,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.34,
           "actual_ret": 0.49,
           "actual_return": 0.49,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 5042.5
         },
         {
           "symbol": "HINDPETRO",
@@ -173387,7 +176308,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.59,
           "actual_ret": -3.74,
           "actual_return": -3.74,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -1345.0
         },
         {
           "symbol": "ADANIPOWER",
@@ -173436,7 +176358,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.0,
           "actual_ret": -3.15,
           "actual_return": -3.15,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -470.0
         },
         {
           "symbol": "AXISBANK",
@@ -173485,7 +176408,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.69,
           "actual_ret": -0.84,
           "actual_return": -0.84,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": -4950.0
         },
         {
           "symbol": "PGEL",
@@ -173534,7 +176458,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.45,
           "actual_ret": -2.6,
           "actual_return": -2.6,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -725.0
         },
         {
           "symbol": "SIEMENS",
@@ -173583,7 +176508,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.21,
           "actual_ret": 2.36,
           "actual_return": 2.36,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": 9632.5
         },
         {
           "symbol": "CROMPTON",
@@ -173632,7 +176558,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.26,
           "actual_ret": -0.41,
           "actual_return": -0.41,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -337.5
         },
         {
           "symbol": "PNB",
@@ -173681,7 +176608,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.55,
           "actual_ret": -0.7,
           "actual_return": -0.7,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -92.5
         },
         {
           "symbol": "CAMS",
@@ -173730,7 +176658,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.13,
           "actual_ret": 1.28,
           "actual_return": 1.28,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 1322.5
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -173779,7 +176708,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.55,
           "actual_ret": -5.7,
           "actual_return": -5.7,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": -5845.0
         },
         {
           "symbol": "JSWSTEEL",
@@ -173828,7 +176758,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.8,
           "actual_ret": -0.95,
           "actual_return": -0.95,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -4893.75
         },
         {
           "symbol": "TATACONSUM",
@@ -173877,7 +176808,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 0.86,
           "actual_ret": 0.01,
           "actual_return": 0.01,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 22.5
         },
         {
           "symbol": "MAHABANK",
@@ -173926,7 +176858,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.78,
           "actual_ret": -2.93,
           "actual_return": -2.93,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -197.5
         },
         {
           "symbol": "MANKIND",
@@ -173975,7 +176908,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "IEX",
@@ -174024,7 +176958,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.44,
           "actual_ret": -0.59,
           "actual_return": -0.59,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -197.5
         },
         {
           "symbol": "KEI",
@@ -174073,7 +177008,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.47,
           "actual_ret": -0.62,
           "actual_return": -0.62,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -2275.0
         },
         {
           "symbol": "JINDALSTEL",
@@ -174122,7 +177058,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.38,
           "actual_ret": -1.53,
           "actual_return": -1.53,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -2260.0
         },
         {
           "symbol": "PERSISTENT",
@@ -174171,7 +177108,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.67,
           "actual_ret": 0.82,
           "actual_return": 0.82,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 4015.0
         },
         {
           "symbol": "FORTIS",
@@ -174220,7 +177158,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.44,
           "actual_ret": -0.59,
           "actual_return": -0.59,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": -410.0
         },
         {
           "symbol": "RELIANCE",
@@ -174269,7 +177208,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.36,
           "actual_ret": 1.51,
           "actual_return": 1.51,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": 4430.0
         },
         {
           "symbol": "SUNPHARMA",
@@ -174318,7 +177258,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.56,
           "actual_ret": -0.71,
           "actual_return": -0.71,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": -2390.5
         },
         {
           "symbol": "TVSMOTOR",
@@ -174367,7 +177308,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.84,
           "actual_ret": -3.99,
           "actual_return": -3.99,
-          "pos_window": "T-3 to T+3"
+          "pos_window": "T-3 to T+3",
+          "exp_pnl_1lot": -10535.0
         },
         {
           "symbol": "KOTAKBANK",
@@ -174416,7 +177358,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.57,
           "actual_ret": 0.72,
           "actual_return": 0.72,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 1048.0
         },
         {
           "symbol": "LT",
@@ -174465,7 +177408,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.39,
           "actual_ret": -1.54,
           "actual_return": -1.54,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -4657.5
         },
         {
           "symbol": "INDUSINDBK",
@@ -174514,7 +177458,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.11,
           "actual_ret": 0.26,
           "actual_return": 0.26,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": 792.5
         },
         {
           "symbol": "HYUNDAI",
@@ -174563,7 +177508,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 12.84,
           "actual_ret": 11.99,
           "actual_return": 11.99,
-          "pos_window": "T-4 to T+1"
+          "pos_window": "T-4 to T+1",
+          "exp_pnl_1lot": 29975.0
         },
         {
           "symbol": "HDFCAMC",
@@ -174612,7 +177558,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.26,
           "actual_ret": -0.41,
           "actual_return": -0.41,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": -1040.0
         },
         {
           "symbol": "EICHERMOT",
@@ -174661,7 +177608,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.52,
           "actual_ret": 0.67,
           "actual_return": 0.67,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 3151.5
         },
         {
           "symbol": "MPHASIS",
@@ -174710,7 +177658,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.38,
           "actual_ret": -1.53,
           "actual_return": -1.53,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -6850.0
         },
         {
           "symbol": "RBLBANK",
@@ -174759,7 +177708,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.62,
           "actual_ret": -0.77,
           "actual_return": -0.77,
-          "pos_window": "T-4 to T+2"
+          "pos_window": "T-4 to T+2",
+          "exp_pnl_1lot": -345.0
         },
         {
           "symbol": "POWERINDIA",
@@ -174808,7 +177758,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "SRF",
@@ -174857,7 +177808,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.96,
           "actual_ret": 1.11,
           "actual_return": 1.11,
-          "pos_window": "T-6 to T+3"
+          "pos_window": "T-6 to T+3",
+          "exp_pnl_1lot": 6307.5
         },
         {
           "symbol": "ASHOKLEY",
@@ -174906,7 +177858,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.46,
           "actual_ret": -0.61,
           "actual_return": -0.61,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -102.5
         },
         {
           "symbol": "PAYTM",
@@ -174955,7 +177908,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 6.83,
           "actual_ret": -5.98,
           "actual_return": -5.98,
-          "pos_window": "T-7 to T+5"
+          "pos_window": "T-7 to T+5",
+          "exp_pnl_1lot": -7950.0
         },
         {
           "symbol": "SOLARINDS",
@@ -175004,7 +177958,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.47,
           "actual_ret": 0.62,
           "actual_return": 0.62,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 6897.5
         },
         {
           "symbol": "TATAMOTORS",
@@ -175053,7 +178008,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.88,
           "actual_ret": -2.03,
           "actual_return": -2.03,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": -4400.0
         },
         {
           "symbol": "HINDUNILVR",
@@ -175102,7 +178058,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.72,
           "actual_ret": 0.87,
           "actual_return": 0.87,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 6267.0
         },
         {
           "symbol": "VMM",
@@ -175151,7 +178108,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.46,
           "actual_ret": -3.61,
           "actual_return": -3.61,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -9025.0
         },
         {
           "symbol": "INDIGO",
@@ -175200,7 +178158,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.76,
           "actual_ret": -0.91,
           "actual_return": -0.91,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -2776.5
         },
         {
           "symbol": "NAM-INDIA",
@@ -175249,7 +178208,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.33,
           "actual_ret": -0.48,
           "actual_return": -0.48,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": -270.0
         },
         {
           "symbol": "MCX",
@@ -175298,7 +178258,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.79,
           "actual_ret": -0.94,
           "actual_return": -0.94,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -675.0
         },
         {
           "symbol": "ADANIENT",
@@ -175347,7 +178308,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.12,
           "actual_ret": -0.27,
           "actual_return": -0.27,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -3069.0
         },
         {
           "symbol": "SAIL",
@@ -175396,7 +178358,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.19,
           "actual_ret": 1.34,
           "actual_return": 1.34,
-          "pos_window": "T-5 to T+5"
+          "pos_window": "T-5 to T+5",
+          "exp_pnl_1lot": 285.0
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -175445,7 +178408,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.66,
           "actual_ret": 3.81,
           "actual_return": 3.81,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": 2946.0
         },
         {
           "symbol": "IRFC",
@@ -175494,7 +178458,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-5 to T+4"
+          "pos_window": "T-5 to T+4",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "VEDL",
@@ -175543,7 +178508,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.94,
           "actual_ret": -1.09,
           "actual_return": -1.09,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -587.5
         },
         {
           "symbol": "TCS",
@@ -175592,7 +178558,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.64,
           "actual_ret": 1.79,
           "actual_return": 1.79,
-          "pos_window": "T-4 to T+5"
+          "pos_window": "T-4 to T+5",
+          "exp_pnl_1lot": 9082.5
         },
         {
           "symbol": "UPL",
@@ -175641,7 +178608,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.22,
           "actual_ret": 0.37,
           "actual_return": 0.37,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": 640.0
         },
         {
           "symbol": "TITAN",
@@ -175690,7 +178658,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.09,
           "actual_ret": -1.24,
           "actual_return": -1.24,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -5495.0
         },
         {
           "symbol": "INFY",
@@ -175739,7 +178708,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.77,
           "actual_ret": 1.92,
           "actual_return": 1.92,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 10488.0
         },
         {
           "symbol": "FORCEMOT",
@@ -175788,7 +178758,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.99,
           "actual_ret": -2.14,
           "actual_return": -2.14,
-          "pos_window": "T-3 to T+1"
+          "pos_window": "T-3 to T+1",
+          "exp_pnl_1lot": -7795.0
         },
         {
           "symbol": "BDL",
@@ -175837,7 +178808,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.68,
           "actual_ret": -0.83,
           "actual_return": -0.83,
-          "pos_window": "T-6 to T+4"
+          "pos_window": "T-6 to T+4",
+          "exp_pnl_1lot": -952.5
         },
         {
           "symbol": "GODFRYPHLP",
@@ -175886,7 +178858,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 3.42,
           "actual_ret": 2.57,
           "actual_return": 2.57,
-          "pos_window": "T-5 to T+3"
+          "pos_window": "T-5 to T+3",
+          "exp_pnl_1lot": 4095.0
         },
         {
           "symbol": "ASIANPAINT",
@@ -175935,7 +178908,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.85,
           "actual_ret": 1.0,
           "actual_return": 1.0,
-          "pos_window": "T-5 to T+2"
+          "pos_window": "T-5 to T+2",
+          "exp_pnl_1lot": 5848.0
         },
         {
           "symbol": "OIL",
@@ -175984,7 +178958,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 4.06,
           "actual_ret": -3.21,
           "actual_return": -3.21,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -997.5
         },
         {
           "symbol": "PFC",
@@ -176033,7 +179008,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 7.25,
           "actual_ret": -6.4,
           "actual_return": -6.4,
-          "pos_window": "T-3 to T+5"
+          "pos_window": "T-3 to T+5",
+          "exp_pnl_1lot": -1642.5
         },
         {
           "symbol": "GLENMARK",
@@ -176082,7 +179058,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.02,
           "actual_ret": -0.17,
           "actual_return": -0.17,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": -185.0
         },
         {
           "symbol": "IREDA",
@@ -176131,7 +179108,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 5.35,
           "actual_ret": 4.5,
           "actual_return": 4.5,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": 11250.0
         },
         {
           "symbol": "DRREDDY",
@@ -176180,7 +179158,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.33,
           "actual_ret": -1.48,
           "actual_return": -1.48,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -1521.25
         },
         {
           "symbol": "DIVISLAB",
@@ -176229,7 +179208,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 2.7,
           "actual_ret": 1.85,
           "actual_return": 1.85,
-          "pos_window": "T-2 to T+4"
+          "pos_window": "T-2 to T+4",
+          "exp_pnl_1lot": 15212.5
         },
         {
           "symbol": "TRENT",
@@ -176278,7 +179258,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 9.97,
           "actual_ret": -9.12,
           "actual_return": -9.12,
-          "pos_window": "T-2 to T+5"
+          "pos_window": "T-2 to T+5",
+          "exp_pnl_1lot": -12197.0
         },
         {
           "symbol": "BAJFINANCE",
@@ -176327,7 +179308,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.65,
           "actual_ret": -0.8,
           "actual_return": -0.8,
-          "pos_window": "T-2 to T+1"
+          "pos_window": "T-2 to T+1",
+          "exp_pnl_1lot": -642.5
         },
         {
           "symbol": "APOLLOHOSP",
@@ -176376,7 +179358,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.32,
           "actual_ret": -0.47,
           "actual_return": -0.47,
-          "pos_window": "T-6 to T+2"
+          "pos_window": "T-6 to T+2",
+          "exp_pnl_1lot": -2606.25
         },
         {
           "symbol": "MARUTI",
@@ -176425,7 +179408,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.08,
           "actual_ret": 0.23,
           "actual_return": 0.23,
-          "pos_window": "T-3 to T+2"
+          "pos_window": "T-3 to T+2",
+          "exp_pnl_1lot": 946.5
         },
         {
           "symbol": "BAJAJ-AUTO",
@@ -176474,7 +179458,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.44,
           "actual_ret": 0.59,
           "actual_return": 0.59,
-          "pos_window": "T-7 to T+2"
+          "pos_window": "T-7 to T+2",
+          "exp_pnl_1lot": 2441.25
         },
         {
           "symbol": "ULTRACEMCO",
@@ -176523,7 +179508,8 @@ window.EVENT_DASHBOARD_DATA = {
           "expected_return": 1.01,
           "actual_ret": -0.16,
           "actual_return": -0.16,
-          "pos_window": "T-4 to T+3"
+          "pos_window": "T-4 to T+3",
+          "exp_pnl_1lot": -1077.0
         }
       ]
     }
