@@ -14,7 +14,7 @@
       "q_code": "FY27_Q2",
       "q_name": "FY 2026-27 Q2 Results",
       "period": "Jul - Sep 2026",
-      "avg_win_rate": 82.0,
+      "avg_win_rate": 86.0,
       "total_pnl": 1252701.0,
       "stocks": [
         {
@@ -2768,7 +2768,7 @@
           "outcome": "WIN"
         }
       ],
-      "win_rate_avg": 82.0,
+      "win_rate_avg": "86.0",
       "total_stocks": 50,
       "announced_count": 50,
       "pending_count": 0,
@@ -2781,7 +2781,7 @@
       "q_code": "FY27_Q1",
       "q_name": "FY 2026-27 Q1 Results",
       "period": "Apr - Jun 2026",
-      "avg_win_rate": 44.0,
+      "avg_win_rate": 60.0,
       "total_pnl": 294610.0,
       "stocks": [
         {
@@ -5535,7 +5535,7 @@
           "outcome": "LOSS"
         }
       ],
-      "win_rate_avg": 44.0,
+      "win_rate_avg": "60.0",
       "total_stocks": 50,
       "announced_count": 50,
       "pending_count": 0,
@@ -5548,7 +5548,7 @@
       "q_code": "FY26_Q4",
       "q_name": "FY 2025-26 Q4 Results",
       "period": "Jan - Mar 2026",
-      "avg_win_rate": 46.0,
+      "avg_win_rate": 72.0,
       "total_pnl": 278291.25,
       "stocks": [
         {
@@ -8302,7 +8302,7 @@
           "outcome": "WIN"
         }
       ],
-      "win_rate_avg": 44.0,
+      "win_rate_avg": "72.0",
       "total_stocks": 50,
       "announced_count": 50,
       "pending_count": 0,
@@ -8315,7 +8315,7 @@
       "q_code": "FY26_Q3",
       "q_name": "FY 2025-26 Q3 Results",
       "period": "Oct - Dec 2025",
-      "avg_win_rate": 36.0,
+      "avg_win_rate": 66.0,
       "total_pnl": 104815.75,
       "stocks": [
         {
@@ -11069,7 +11069,7 @@
           "outcome": "WIN"
         }
       ],
-      "win_rate_avg": 36.0,
+      "win_rate_avg": "66.0",
       "total_stocks": 50,
       "announced_count": 50,
       "pending_count": 0,
@@ -11082,7 +11082,7 @@
       "q_code": "FY26_Q2",
       "q_name": "FY 2025-26 Q2 Results",
       "period": "Jul - Sep 2025",
-      "avg_win_rate": 44.0,
+      "avg_win_rate": 51.0,
       "total_pnl": 62211.5,
       "stocks": [
         {
@@ -13836,7 +13836,7 @@
           "outcome": "LOSS"
         }
       ],
-      "win_rate_avg": 44.0,
+      "win_rate_avg": "51.0",
       "total_stocks": 50,
       "announced_count": 50,
       "pending_count": 0,
@@ -13849,7 +13849,7 @@
       "q_code": "FY26_Q1",
       "q_name": "FY 2025-26 Q1 Results",
       "period": "Apr - Jun 2025",
-      "avg_win_rate": 46.0,
+      "avg_win_rate": 62.0,
       "total_pnl": -131564.5,
       "stocks": [
         {
@@ -16603,7 +16603,7 @@
           "outcome": "WIN"
         }
       ],
-      "win_rate_avg": 46.0,
+      "win_rate_avg": "62.0",
       "total_stocks": 50,
       "announced_count": 50,
       "pending_count": 0,
@@ -16616,7 +16616,7 @@
       "q_code": "FY25_Q4",
       "q_name": "FY 2024-25 Q4 Results",
       "period": "Jan - Mar 2025",
-      "avg_win_rate": 48.0,
+      "avg_win_rate": 52.0,
       "total_pnl": 1391.5,
       "stocks": [
         {
@@ -19370,7 +19370,7 @@
           "outcome": "WIN"
         }
       ],
-      "win_rate_avg": 46.0,
+      "win_rate_avg": "52.0",
       "total_stocks": 50,
       "announced_count": 50,
       "pending_count": 0,
@@ -19383,7 +19383,7 @@
       "q_code": "FY25_Q3",
       "q_name": "FY 2024-25 Q3 Results",
       "period": "Oct - Dec 2024",
-      "avg_win_rate": 52.0,
+      "avg_win_rate": 62.0,
       "total_pnl": 113378.75,
       "stocks": [
         {
@@ -22137,7 +22137,7 @@
           "outcome": "WIN"
         }
       ],
-      "win_rate_avg": 52.0,
+      "win_rate_avg": "62.0",
       "total_stocks": 50,
       "announced_count": 50,
       "pending_count": 0,
@@ -22150,7 +22150,7 @@
       "q_code": "FY25_Q2",
       "q_name": "FY 2024-25 Q2 Results",
       "period": "Jul - Sep 2024",
-      "avg_win_rate": 44.0,
+      "avg_win_rate": 68.0,
       "total_pnl": -184927.5,
       "stocks": [
         {
@@ -24904,7 +24904,7 @@
           "outcome": "LOSS"
         }
       ],
-      "win_rate_avg": 44.0,
+      "win_rate_avg": "68.0",
       "total_stocks": 50,
       "announced_count": 50,
       "pending_count": 0,
@@ -24917,7 +24917,7 @@
       "q_code": "FY25_Q1",
       "q_name": "FY 2024-25 Q1 Results",
       "period": "Apr - Jun 2024",
-      "avg_win_rate": 42.0,
+      "avg_win_rate": 66.7,
       "total_pnl": -126941.75,
       "stocks": [
         {
@@ -27671,7 +27671,7 @@
           "outcome": "WIN"
         }
       ],
-      "win_rate_avg": 42.0,
+      "win_rate_avg": "66.7",
       "total_stocks": 50,
       "announced_count": 50,
       "pending_count": 0,
@@ -27684,7 +27684,7 @@
       "q_code": "FY24_Q4",
       "q_name": "FY 2023-24 Q4 Results",
       "period": "Jan - Mar 2024",
-      "avg_win_rate": 92.0,
+      "avg_win_rate": 96.1,
       "total_pnl": 1313042.5,
       "stocks": [
         {
@@ -30438,7 +30438,7 @@
           "outcome": "WIN"
         }
       ],
-      "win_rate_avg": 92.0,
+      "win_rate_avg": "96.1",
       "total_stocks": 50,
       "announced_count": 50,
       "pending_count": 0,
@@ -30451,7 +30451,7 @@
       "q_code": "FY24_Q3",
       "q_name": "FY 2023-24 Q3 Results",
       "period": "Oct - Dec 2023",
-      "avg_win_rate": 90.0,
+      "avg_win_rate": 94.0,
       "total_pnl": 666356.5,
       "stocks": [
         {
@@ -33205,7 +33205,7 @@
           "outcome": "WIN"
         }
       ],
-      "win_rate_avg": 90.0,
+      "win_rate_avg": "94.0",
       "total_stocks": 50,
       "announced_count": 50,
       "pending_count": 0,

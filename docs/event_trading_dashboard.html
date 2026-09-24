@@ -1841,8 +1841,8 @@
 
     async function loadData() {
       // 1. Ingest Event Dashboard Data from window bundle or fetch
-      if (window.EVENT_DASHBOARD_DATA) {
-        dashboardData = window.EVENT_DASHBOARD_DATA;
+      if (window.EVENT_DASHBOARD_DATA || window.DASHBOARD_DATA) {
+        dashboardData = window.EVENT_DASHBOARD_DATA || window.DASHBOARD_DATA;
       } else {
         try {
           const res = await fetch('dashboard_data/event_dashboard_data.json');
@@ -1850,6 +1850,10 @@
         } catch (err) {
           console.warn('Direct fetch failed, waiting for bundle', err);
         }
+      }
+      if (dashboardData) {
+        window.EVENT_DASHBOARD_DATA = dashboardData;
+        window.DASHBOARD_DATA = dashboardData;
       }
 
       // 2. Ingest Nifty Futures Holiday Data from window bundle or fetch
