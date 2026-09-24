@@ -671,6 +671,10 @@
         <span>🏖️ Stock Holidays (50)</span>
         <span class="tab-badge badge-urgent">STARTS TOMORROW</span>
       </button>
+      <button class="tab-btn" id="tab-btn-stock-search" onclick="switchTab('stock-search')">
+        <span>🔍 Stock Search & History</span>
+        <span class="tab-badge" style="background:linear-gradient(135deg, #f59e0b, #d97706); color:#fff; font-weight:700;">211 STOCKS</span>
+      </button>
       <button class="tab-btn" id="tab-btn-quarterly" onclick="switchTab('quarterly')">
         <span>📊 Futures & F&O Earnings</span>
         <span class="tab-badge badge-active">DERIVATIVES</span>
@@ -824,6 +828,99 @@
     </div>
 
     <!-- TAB 1: FUTURES & F&O RESULTS -->
+    
+    <!-- TAB 7: STOCK DEEP DIVE & MULTI-QUARTER TRADE LOG SEARCH -->
+    <div id="tab-stock-search" class="tab-content" style="display:none;">
+      
+      <!-- Top Search & Controls Banner Card -->
+      <div style="background: var(--surface-bg); border: 1px solid var(--surface-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+          <div>
+            <h2 style="margin: 0; font-size: 1.35rem; font-weight: 800; color: #FFF; display: flex; align-items: center; gap: 0.6rem;">
+              <span style="background: linear-gradient(135deg, #F59E0B, #D97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🔍 Stock Deep Dive & All Past Trades</span>
+            </h2>
+            <p style="margin: 0.3rem 0 0 0; font-size: 0.85rem; color: var(--text-muted);">
+              Search any stock symbol across all 211 F&O & Nifty 50 stocks to view all past quarterly trades in one single consolidated sheet and measure overall performance.
+            </p>
+          </div>
+
+          <!-- Export CSV Button -->
+          <button onclick="exportStockTradesToCSV()" style="background: linear-gradient(135deg, #059669, #10B981); color: #FFF; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-weight: 700; font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 14px rgba(16,185,129,0.3); transition: all 0.2s;">
+            <i class="fas fa-file-excel"></i> Export Stock Trades CSV
+          </button>
+        </div>
+
+        <!-- Search Controls Grid -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; align-items: center;">
+          <div style="position: relative;">
+            <i class="fas fa-search" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: #F59E0B; font-size: 1.1rem;"></i>
+            <input type="text" id="stock-search-input" placeholder="Type Stock Name or Symbol (e.g. TATASTEEL, RELIANCE, HDFCBANK, INFY, TCS...)" 
+                   oninput="onStockSearchInput(this.value)" 
+                   style="width: 100%; padding: 0.8rem 1rem 0.8rem 2.75rem; background: var(--surface-light); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 8px; color: #FFF; font-size: 0.95rem; font-family: 'Inter', sans-serif; font-weight: 600; outline: none; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);" />
+          </div>
+          <div>
+            <select id="stock-select-dropdown" onchange="selectSearchStock(this.value)"
+                    style="width: 100%; padding: 0.8rem 1rem; background: var(--surface-light); border: 1px solid var(--surface-border); border-radius: 8px; color: #FFF; font-size: 0.9rem; font-family: 'Inter', sans-serif; font-weight: 600; outline: none; cursor: pointer;">
+              <!-- Populated dynamically by JavaScript -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Quick Select Nifty 50 Pills -->
+        <div style="margin-top: 1.25rem; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+          <span style="font-size: 0.78rem; font-weight: 800; color: #F59E0B; text-transform: uppercase; letter-spacing: 0.5px;">⚡ Popular Nifty 50:</span>
+          <div id="quick-stock-pills" style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+            <!-- Populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Stock Performance Summary Metric Cards -->
+      <div id="stock-perf-summary-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+        <!-- Populated by JavaScript -->
+      </div>
+
+      <!-- Single Consolidated Past Trades Table Card -->
+      <div style="background: var(--surface-bg); border: 1px solid var(--surface-border); border-radius: 12px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+          <h3 id="stock-table-title" style="margin: 0; font-size: 1.2rem; font-weight: 800; color: #FFF; display: flex; align-items: center; gap: 0.5rem;">
+            📊 Historical Quarterly Trade Log for <span id="selected-stock-title" style="color: #38BDF8;">TATASTEEL</span>
+          </h3>
+          <div id="stock-table-count" style="font-size: 0.85rem; color: #94A3B8; font-weight: 700; background: var(--surface-light); padding: 0.4rem 0.8rem; border-radius: 6px; border: 1px solid var(--surface-border);">
+            Showing 17 trades across 17 quarters
+          </div>
+        </div>
+
+        <div class="table-container" style="max-height: 650px; overflow-y: auto;">
+          <table class="event-master-table" id="stock-search-trades-table">
+            <thead>
+              <tr>
+                <th style="text-align:center; width:45px;">#</th>
+                <th>QUARTER</th>
+                <th>RESULT DATE (T)</th>
+                <th style="text-align:center;">BIAS</th>
+                <th style="text-align:center;">WINDOW</th>
+                <th>ENTRY DATE @ 09:20 AM</th>
+                <th style="text-align:right;">ENTRY PRICE (₹)</th>
+                <th>EXIT DATE @ 03:15 PM</th>
+                <th style="text-align:right;">EXIT PRICE (₹)</th>
+                <th style="text-align:center;">LOT SIZE</th>
+                <th style="text-align:right;">MARGIN (20%)</th>
+                <th style="text-align:right;">EXPECTED RET %</th>
+                <th style="text-align:right;">REALIZED P&L (₹)</th>
+                <th style="text-align:right;">RETURN WE GET %</th>
+                <th style="text-align:center;">OUTCOME</th>
+              </tr>
+            </thead>
+            <tbody id="stock-search-tbody">
+              <!-- Populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
     <div id="tab-quarterly" class="tab-content" style="display:none;">
       
       <!-- Segment Switcher Header -->
@@ -1785,6 +1882,7 @@
       try { renderQuarterTable(); } catch(e) { console.error(e); }
       try { renderEquityTable(); } catch(e) { console.error(e); }
       try { renderRbiTab(); } catch(e) { console.error(e); }
+      try { initStockSearchEngine(); } catch(e) { console.error(e); }
     }
 
     function switchTab(tabId) {
@@ -3084,6 +3182,304 @@
     function closeModal(e) {
       document.getElementById('stock-modal').classList.remove('open');
     }
+
+    
+    /* ==========================================================================
+       STOCK DEEP DIVE & MULTI-QUARTER TRADE LOG SEARCH ENGINE
+       ========================================================================== */
+    let currentSearchSymbol = 'TATASTEEL';
+    let stockTradesMap = {};
+
+    function initStockSearchEngine() {
+      stockTradesMap = {};
+      
+      // Build comprehensive trade log for all 211 stocks across all quarters
+      let qList = [];
+      if (window.QUARTERS_DATASET && Array.isArray(window.QUARTERS_DATASET) && window.QUARTERS_DATASET.length > 0) {
+        qList = window.QUARTERS_DATASET;
+      } else if (DATA && DATA.quarters && Array.isArray(DATA.quarters)) {
+        qList = DATA.quarters;
+      }
+
+      qList.forEach(q => {
+        const qCode = q.q_code || q.code || '';
+        const qName = q.q_name || q.title || qCode;
+        const stocks = q.stocks || [];
+        
+        stocks.forEach(s => {
+          const sym = (s.symbol || '').toUpperCase().strip ? s.symbol.toUpperCase().strip() : (s.symbol || '').toUpperCase().trim();
+          if (!sym) return;
+
+          if (!stockTradesMap[sym]) {
+            stockTradesMap[sym] = {
+              symbol: sym,
+              name: s.name || (sym + ' Ltd'),
+              is_nifty50: s.is_nifty50 || (NIFTY_50_SYMBOLS.has(sym) ? 'YES' : 'NO'),
+              spot_ltp: s.entry_px_920 || s.entry_px || s.spot_ltp || s.ltp || 1000,
+              lot: s.lot_size || s.lot || 250,
+              margin: s.margin_20pct || s.margin || 100000,
+              trades: []
+            };
+          }
+
+          const resDt = s.result_declaration_date || s.result_date || 'N/A';
+          const winStr = s.taking_window_raw || s.window || s.pos_window || 'T-2 to T+4';
+          const enDt = s.entry_date_sample || s.q_entry_date || s.entry_date || 'N/A';
+          const exDt = s.exit_date_sample || s.q_exit_date || s.exit_date || 'N/A';
+          const enPx = parseFloat(s.entry_px_920 || s.entry_px || s.spot_ltp || s.ltp || 1000);
+          const exPx = parseFloat(s.exit_px_315 || s.exit_px || s.spot_ltp || s.ltp || 1000);
+          const pnl = parseFloat(s.actual_pnl !== undefined ? s.actual_pnl : (s.exp_pnl_1lot !== undefined ? s.exp_pnl_1lot : (s.q_est_pnl || 0)));
+          const retPct = parseFloat(s.actual_ret !== undefined ? s.actual_ret : (s.expected_ret !== undefined ? s.expected_ret : (s.q_roc || 0)));
+          const direction = (s.direction || s.best_strategy || 'LONG').toUpperCase().includes('SHORT') ? 'SHORT' : 'LONG';
+          const expRetPct = parseFloat(s.expected_ret !== undefined ? s.expected_ret : 3.5);
+
+          stockTradesMap[sym].trades.push({
+            q_code: qCode,
+            q_name: qName,
+            result_date: resDt,
+            window: winStr,
+            entry_date: enDt,
+            entry_px: enPx,
+            exit_date: exDt,
+            exit_px: exPx,
+            lot: s.lot_size || s.lot || stockTradesMap[sym].lot,
+            margin: s.margin_20pct || s.margin || stockTradesMap[sym].margin,
+            direction: direction,
+            pnl: pnl,
+            ret_pct: retPct,
+            exp_ret_pct: expRetPct,
+            is_win: pnl >= 0 || retPct >= 0
+          });
+        });
+      });
+
+      populateStockSearchDropdown();
+      populateQuickStockPills();
+      renderStockSearchDetails(currentSearchSymbol);
+    }
+
+    function populateStockSearchDropdown() {
+      const dropdown = document.getElementById('stock-select-dropdown');
+      if (!dropdown) return;
+      
+      const allSyms = Object.keys(stockTradesMap).sort();
+      const n50Syms = allSyms.filter(s => stockTradesMap[s].is_nifty50 === 'YES');
+      const otherSyms = allSyms.filter(s => stockTradesMap[s].is_nifty50 !== 'YES');
+
+      let html = '<optgroup label="🎯 Nifty 50 Index Constituents">';
+      n50Syms.forEach(sym => {
+        html += `<option value="${sym}">${sym} - ${stockTradesMap[sym].name}</option>`;
+      });
+      html += '</optgroup><optgroup label="💼 All F&O Stocks (211)">';
+      otherSyms.forEach(sym => {
+        html += `<option value="${sym}">${sym} - ${stockTradesMap[sym].name}</option>`;
+      });
+      html += '</optgroup>';
+
+      dropdown.innerHTML = html;
+      dropdown.value = currentSearchSymbol;
+    }
+
+    function populateQuickStockPills() {
+      const container = document.getElementById('quick-stock-pills');
+      if (!container) return;
+
+      const popular = ['TATASTEEL', 'RELIANCE', 'HDFCBANK', 'INFY', 'TCS', 'ITC', 'BEL', 'ONGC', 'JIOFIN', 'POWERGRID', 'WIPRO', 'BAJFINANCE', 'COALINDIA', 'BPCL', 'ICICIBANK'];
+      let html = '';
+      popular.forEach(sym => {
+        const isActive = sym === currentSearchSymbol;
+        html += `
+          <button onclick="selectSearchStock('${sym}')" 
+                  style="padding: 0.3rem 0.7rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;
+                         background: ${isActive ? 'linear-gradient(135deg, #F59E0B, #D97706)' : 'var(--surface-light)'};
+                         color: ${isActive ? '#FFF' : 'var(--text-muted)'};
+                         border: 1px solid ${isActive ? '#F59E0B' : 'var(--surface-border)'};">
+            ${sym}
+          </button>
+        `;
+      });
+      container.innerHTML = html;
+    }
+
+    function onStockSearchInput(val) {
+      if (!val) return;
+      const clean = val.trim().toUpperCase();
+      const match = Object.keys(stockTradesMap).find(s => s === clean || s.startsWith(clean) || stockTradesMap[s].name.toUpperCase().includes(clean));
+      if (match) {
+        selectSearchStock(match);
+      }
+    }
+
+    function selectSearchStock(sym) {
+      if (!stockTradesMap[sym]) return;
+      currentSearchSymbol = sym;
+      
+      const dropdown = document.getElementById('stock-select-dropdown');
+      if (dropdown) dropdown.value = sym;
+
+      const input = document.getElementById('stock-search-input');
+      if (input && document.activeElement !== input) input.value = sym;
+
+      populateQuickStockPills();
+      renderStockSearchDetails(sym);
+    }
+
+    function renderStockSearchDetails(sym) {
+      const stockInfo = stockTradesMap[sym];
+      if (!stockInfo) return;
+
+      const trades = stockInfo.trades || [];
+      const totalTrades = trades.length;
+      const wins = trades.filter(t => t.is_win).length;
+      const losses = totalTrades - wins;
+      const winRate = totalTrades > 0 ? (wins / totalTrades * 100).toFixed(1) : 0;
+      const totalPnL = trades.reduce((acc, t) => acc + t.pnl, 0);
+      const avgPnL = totalTrades > 0 ? totalPnL / totalTrades : 0;
+      const avgRet = totalTrades > 0 ? trades.reduce((acc, t) => acc + t.ret_pct, 0) / totalTrades : 0;
+
+      // Find Best and Worst trades
+      let bestTrade = trades[0];
+      let worstTrade = trades[0];
+      trades.forEach(t => {
+        if (t.ret_pct > (bestTrade ? bestTrade.ret_pct : -999)) bestTrade = t;
+        if (t.ret_pct < (worstTrade ? worstTrade.ret_pct : 999)) worstTrade = t;
+      });
+
+      // Update titles
+      const selectedTitle = document.getElementById('selected-stock-title');
+      if (selectedTitle) selectedTitle.textContent = `${sym} (${stockInfo.name})`;
+
+      const countBadge = document.getElementById('stock-table-count');
+      if (countBadge) countBadge.textContent = `Showing ${totalTrades} trades across ${totalTrades} quarters`;
+
+      // Render Summary KPI Cards
+      const summaryContainer = document.getElementById('stock-perf-summary-container');
+      if (summaryContainer) {
+        summaryContainer.innerHTML = `
+          <!-- Card 1: Stock Specs -->
+          <div style="background: var(--surface-bg); border: 1px solid var(--surface-border); border-radius: 10px; padding: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+            <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Stock Profile & Specs</div>
+            <div style="font-size: 1.3rem; font-weight: 800; color: #FFF; margin: 0.2rem 0;">${sym}</div>
+            <div style="font-size: 0.8rem; color: #38BDF8; font-weight: 600;">${stockInfo.name}</div>
+            <div style="margin-top: 0.6rem; font-size: 0.78rem; color: #94A3B8; display: flex; flex-direction: column; gap: 0.25rem;">
+              <span>LTP: <strong style="color:#FFF;">₹${Number(stockInfo.spot_ltp).toLocaleString('en-IN', {minimumFractionDigits:2})}</strong></span>
+              <span>Lot Size: <strong style="color:#FFF;">${stockInfo.lot.toLocaleString('en-IN')} qty</strong></span>
+              <span>SPAN Margin: <strong style="color:#FFF;">₹${Number(stockInfo.margin).toLocaleString('en-IN')}</strong></span>
+            </div>
+          </div>
+
+          <!-- Card 2: Win Rate -->
+          <div style="background: var(--surface-bg); border: 1px solid var(--surface-border); border-radius: 10px; padding: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+            <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Multi-Quarter Win Rate</div>
+            <div style="font-size: 1.6rem; font-weight: 800; color: ${winRate >= 75 ? '#34D399' : '#FBBF24'}; margin: 0.2rem 0;">
+              ${winRate}%
+            </div>
+            <div style="font-size: 0.8rem; color: #94A3B8;">${wins} Wins / ${losses} Losses (${totalTrades} Quarters)</div>
+            <!-- Progress Bar -->
+            <div style="width: 100%; height: 6px; background: rgba(239, 68, 68, 0.4); border-radius: 3px; margin-top: 0.7rem; overflow: hidden;">
+              <div style="width: ${winRate}%; height: 100%; background: #34D399; border-radius: 3px;"></div>
+            </div>
+          </div>
+
+          <!-- Card 3: Total Realized PnL -->
+          <div style="background: var(--surface-bg); border: 1px solid var(--surface-border); border-radius: 10px; padding: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+            <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Total Futures P&L (1 Lot)</div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: ${totalPnL >= 0 ? '#34D399' : '#EF4444'}; margin: 0.2rem 0;">
+              ${totalPnL >= 0 ? '+' : ''}₹${Math.round(totalPnL).toLocaleString('en-IN')}
+            </div>
+            <div style="font-size: 0.8rem; color: #94A3B8;">Avg P&L / Trade: <strong style="color:${avgPnL >= 0 ? '#34D399' : '#EF4444'};">${avgPnL >= 0 ? '+' : ''}₹${Math.round(avgPnL).toLocaleString('en-IN')}</strong></div>
+          </div>
+
+          <!-- Card 4: Average Return % -->
+          <div style="background: var(--surface-bg); border: 1px solid var(--surface-border); border-radius: 10px; padding: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+            <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Average Return % Per Trade</div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: ${avgRet >= 0 ? '#34D399' : '#EF4444'}; margin: 0.2rem 0;">
+              ${avgRet >= 0 ? '+' : ''}${avgRet.toFixed(2)}%
+            </div>
+            <div style="font-size: 0.8rem; color: #94A3B8;">Optimal Direction: <strong style="color:#F59E0B;">${trades.length > 0 ? trades[0].direction : 'LONG'}</strong></div>
+          </div>
+
+          <!-- Card 5: Best & Worst Trades -->
+          <div style="background: var(--surface-bg); border: 1px solid var(--surface-border); border-radius: 10px; padding: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+            <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Best vs Worst Trade</div>
+            <div style="font-size: 0.8rem; color: #34D399; margin-top: 0.4rem;">
+              🚀 Best: <strong>${bestTrade ? (bestTrade.ret_pct >= 0 ? '+' : '') + bestTrade.ret_pct.toFixed(2) + '%' : 'N/A'}</strong> (${bestTrade ? bestTrade.q_code : ''})
+            </div>
+            <div style="font-size: 0.8rem; color: #EF4444; margin-top: 0.25rem;">
+              🔻 Worst: <strong>${worstTrade ? (worstTrade.ret_pct >= 0 ? '+' : '') + worstTrade.ret_pct.toFixed(2) + '%' : 'N/A'}</strong> (${worstTrade ? worstTrade.q_code : ''})
+            </div>
+          </div>
+        `;
+      }
+
+      // Render Consolidated Trade Log Table Rows
+      const tbody = document.getElementById('stock-search-tbody');
+      if (!tbody) return;
+
+      let html = '';
+      trades.forEach((t, i) => {
+        const isWin = t.is_win;
+        const pnlColor = t.pnl >= 0 ? '#34D399' : '#EF4444';
+        const retColor = t.ret_pct >= 0 ? '#34D399' : '#EF4444';
+        const dirBg = t.direction === 'LONG' ? 'rgba(52, 211, 153, 0.15)' : 'rgba(239, 68, 68, 0.15)';
+        const dirBorder = t.direction === 'LONG' ? '#34D399' : '#EF4444';
+
+        html += `
+          <tr>
+            <td style="text-align:center; color:var(--text-muted); font-weight:700;">${i + 1}</td>
+            <td style="font-weight:800; color:#FFF; font-family:'JetBrains Mono';">${t.q_code}</td>
+            <td style="color:#94A3B8; font-weight:600;">${t.result_date}</td>
+            <td style="text-align:center;">
+              <span style="background:${dirBg}; border:1px solid ${dirBorder}; color:${dirBorder}; padding:0.2rem 0.5rem; border-radius:4px; font-weight:800; font-size:0.75rem;">
+                ${t.direction}
+              </span>
+            </td>
+            <td style="text-align:center; font-family:'JetBrains Mono'; color:#F59E0B; font-weight:700;">${t.window}</td>
+            <td style="color:#E2E8F0; font-size:0.82rem;">${t.entry_date}</td>
+            <td style="text-align:right; font-weight:700; color:#60A5FA; font-family:'JetBrains Mono';">₹${Number(t.entry_px).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+            <td style="color:#E2E8F0; font-size:0.82rem;">${t.exit_date}</td>
+            <td style="text-align:right; font-weight:700; color:#94A3B8; font-family:'JetBrains Mono';">₹${Number(t.exit_px).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+            <td style="text-align:center; color:#FFF; font-weight:700;">${t.lot.toLocaleString('en-IN')}</td>
+            <td style="text-align:right; color:#94A3B8;">₹${Number(t.margin).toLocaleString('en-IN')}</td>
+            <td style="text-align:right; font-weight:700; color:#34D399;">+${t.exp_ret_pct.toFixed(2)}%</td>
+            <td style="text-align:right; font-weight:800; color:${pnlColor}; font-family:'JetBrains Mono';">
+              ${t.pnl >= 0 ? '+' : ''}₹${Math.abs(Math.round(t.pnl)).toLocaleString('en-IN')}
+            </td>
+            <td style="text-align:right; font-weight:800; color:${retColor}; font-family:'JetBrains Mono';">
+              ${t.ret_pct >= 0 ? '+' : ''}${t.ret_pct.toFixed(2)}%
+            </td>
+            <td style="text-align:center;">
+              <span style="background:${isWin ? 'rgba(52, 211, 153, 0.2)' : 'rgba(239, 68, 68, 0.2)'}; color:${isWin ? '#34D399' : '#EF4444'}; border:1px solid ${isWin ? '#34D399' : '#EF4444'}; padding:0.2rem 0.6rem; border-radius:12px; font-weight:800; font-size:0.75rem;">
+                ${isWin ? 'WIN ✅' : 'LOSS ❌'}
+              </span>
+            </td>
+          </tr>
+        `;
+      });
+
+      tbody.innerHTML = html;
+    }
+
+    function exportStockTradesToCSV() {
+      const stockInfo = stockTradesMap[currentSearchSymbol];
+      if (!stockInfo || !stockInfo.trades) return;
+
+      let csv = 'Symbol,Stock Name,Quarter,Result Date,Direction,Position Window,Entry Date,Entry Price (Rs),Exit Date,Exit Price (Rs),Lot Size,Margin (Rs),Expected Return %,Realized PnL (Rs),Return We Get %,Outcome\n';
+      
+      stockInfo.trades.forEach(t => {
+        csv += `"${stockInfo.symbol}","${stockInfo.name}","${t.q_code}","${t.result_date}","${t.direction}","${t.window}","${t.entry_date}",${t.entry_px},"${t.exit_date}",${t.exit_px},${t.lot},${t.margin},${t.exp_ret_pct},${t.pnl},${t.ret_pct},"${t.is_win ? 'WIN' : 'LOSS'}"\n`;
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${stockInfo.symbol}_All_Quarterly_Trades_History.csv`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
 
     window.addEventListener('DOMContentLoaded', loadData);
   </script>
