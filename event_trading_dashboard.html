@@ -1899,13 +1899,17 @@
           ? `<span class="action-tag action-buy-cnc">BUY DELIVERY (CNC)</span>`
           : `<span class="action-tag action-exit-cash">BOOK PROFIT / DEFENSIVE</span>`;
 
-        const enDateStr = s.announced 
-          ? `<span class="date-badge date-confirmed">${s.entry_date}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>` 
-          : `<span class="date-badge date-pending">T - ${s.lead} trading days<br><small style="font-size:0.7rem;">09:20 AM</small></span>`;
-        const resDateStr = s.announced ? `<span class="date-badge date-confirmed">${s.result_date}</span>` : `<span class="date-badge date-pending">Awaiting NSE</span>`;
-        const exDateStr = s.announced 
-          ? `<span class="date-badge date-confirmed">${s.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem; font-weight:700;">⏰ 03:15 PM</small></span>` 
-          : `<span class="date-badge date-pending">T + ${s.hold} trading days<br><small style="font-size:0.7rem;">03:15 PM</small></span>`;
+        const winPill = s.window || s.taking_window_raw || s.taking_window_full || `T-${s.lead || s.entry_lead_days || 3} to T+${s.hold || s.exit_hold_days || 3}`;
+        const entryDateVal = s.entry_date || s.q_entry_date || s.entry_date_sample;
+        const enDateStr = entryDateVal 
+          ? `<span class="date-badge date-confirmed">${entryDateVal}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>` 
+          : `<span class="date-badge date-pending">T - ${s.lead || s.entry_lead_days || 3} trading days<br><small style="font-size:0.7rem;">09:20 AM</small></span>`;
+        const resDateVal = s.result_date || s.result_declaration_date;
+        const resDateStr = resDateVal ? `<span class="date-badge date-confirmed">${resDateVal}</span>` : `<span class="date-badge date-pending">Awaiting NSE</span>`;
+        const exitDateVal = s.exit_date || s.q_exit_date || s.exit_date_sample;
+        const exDateStr = exitDateVal 
+          ? `<span class="date-badge date-confirmed">${exitDateVal}<br><small style="color:#94A3B8; font-size:0.7rem; font-weight:700;">⏰ 03:15 PM</small></span>` 
+          : `<span class="date-badge date-pending">T + ${s.hold || s.exit_hold_days || 3} trading days<br><small style="font-size:0.7rem;">03:15 PM</small></span>`;
 
         const ltpVal = s.ltp || 1500;
         const ltpStr = `₹${Number(ltpVal).toLocaleString('en-IN')}`;
@@ -1935,7 +1939,7 @@
           <td><strong>${s.symbol}</strong></td>
           <td style="color:#CBD5E1">${s.name}</td>
           <td>${signalBadge}</td>
-          <td><span class="window-pill">${s.window}</span></td>
+          <td><span class="window-pill">${winPill}</span></td>
           <td>${enDateStr}</td>
           <td style="color:#60A5FA; font-weight:700; font-family:'JetBrains Mono';">₹${Number(s.entry_px || s.spot_ltp || 1000).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
           <td>${resDateStr}</td>
@@ -2095,13 +2099,17 @@
           ? `<span class="badge-long">▲ LONG</span>`
           : `<span class="badge-short">▼ SHORT</span>`;
 
-        const enDateStr = s.announced 
-          ? `<span class="date-badge date-confirmed">${s.entry_date}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>` 
-          : `<span class="date-badge date-pending">T - ${s.lead} trading days<br><small style="font-size:0.7rem;">09:20 AM</small></span>`;
-        const resDateStr = s.announced ? `<span class="date-badge date-confirmed">${s.result_date}</span>` : `<span class="date-badge date-pending">Awaiting NSE</span>`;
-        const exDateStr = s.announced 
-          ? `<span class="date-badge date-confirmed">${s.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem; font-weight:700;">⏰ 03:15 PM</small></span>` 
-          : `<span class="date-badge date-pending">T + ${s.hold} trading days<br><small style="font-size:0.7rem;">03:15 PM</small></span>`;
+        const winPill = s.window || s.taking_window_raw || s.taking_window_full || `T-${s.lead || s.entry_lead_days || 3} to T+${s.hold || s.exit_hold_days || 3}`;
+        const entryDateVal = s.entry_date || s.q_entry_date || s.entry_date_sample;
+        const enDateStr = entryDateVal 
+          ? `<span class="date-badge date-confirmed">${entryDateVal}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>` 
+          : `<span class="date-badge date-pending">T - ${s.lead || s.entry_lead_days || 3} trading days<br><small style="font-size:0.7rem;">09:20 AM</small></span>`;
+        const resDateVal = s.result_date || s.result_declaration_date;
+        const resDateStr = resDateVal ? `<span class="date-badge date-confirmed">${resDateVal}</span>` : `<span class="date-badge date-pending">Awaiting NSE</span>`;
+        const exitDateVal = s.exit_date || s.q_exit_date || s.exit_date_sample;
+        const exDateStr = exitDateVal 
+          ? `<span class="date-badge date-confirmed">${exitDateVal}<br><small style="color:#94A3B8; font-size:0.7rem; font-weight:700;">⏰ 03:15 PM</small></span>` 
+          : `<span class="date-badge date-pending">T + ${s.hold || s.exit_hold_days || 3} trading days<br><small style="font-size:0.7rem;">03:15 PM</small></span>`;
 
         const actionTag = s.direction === 'LONG'
           ? `<span class="action-tag action-buy-call">BUY CALL / LONG FUT</span>`
@@ -2144,7 +2152,7 @@
           <td><strong>${s.symbol}</strong></td>
           <td style="color:#CBD5E1">${s.name}</td>
           <td>${dirBadge}</td>
-          <td><span class="window-pill">${s.window}</span></td>
+          <td><span class="window-pill">${winPill}</span></td>
           <td>${enDateStr}</td>
           <td style="color:#60A5FA; font-weight:700; font-family:'JetBrains Mono';">₹${Number(s.entry_px || s.spot_ltp || 1000).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
           <td>${resDateStr}</td>
@@ -2219,7 +2227,7 @@
           <td><strong>${s.symbol}</strong></td>
           <td style="color:#CBD5E1">${s.name}</td>
           <td>${dirBadge}</td>
-          <td><span class="window-pill">${s.window}</span></td>
+          <td><span class="window-pill">${winPill}</span></td>
           <td>${enDateBadge}</td>
           <td>${exDateBadge}</td>
           <td><strong style="color:${wrVal >= 80 ? '#FBBF24' : '#E2E8F0'}">${wrVal.toFixed(1)}%</strong></td>
