@@ -2002,20 +2002,28 @@
           : `<span class="action-tag action-exit-cash">BOOK PROFIT / DEFENSIVE</span>`;
 
         const winPill = s.window || s.taking_window_raw || s.taking_window_full || `T-${s.lead || s.entry_lead_days || 3} to T+${s.hold || s.exit_hold_days || 3}`;
-        const entryDateVal = s.entry_date || s.q_entry_date || s.entry_date_sample;
-        const enDateStr = entryDateVal 
-          ? `<span class="date-badge date-confirmed">${entryDateVal}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>` 
-          : `<span class="date-badge date-pending">T - ${s.lead || s.entry_lead_days || 3} trading days<br><small style="font-size:0.7rem;">09:20 AM</small></span>`;
-        const resDateVal = s.result_date || s.result_declaration_date;
-        const resDateStr = resDateVal ? `<span class="date-badge date-confirmed">${resDateVal}</span>` : `<span class="date-badge date-pending">Awaiting NSE</span>`;
-        const exitDateVal = s.exit_date || s.q_exit_date || s.exit_date_sample;
-        const exDateStr = exitDateVal 
-          ? `<span class="date-badge date-confirmed">${exitDateVal}<br><small style="color:#94A3B8; font-size:0.7rem; font-weight:700;">⏰ 03:15 PM</small></span>` 
-          : `<span class="date-badge date-pending">T + ${s.hold || s.exit_hold_days || 3} trading days<br><small style="font-size:0.7rem;">03:15 PM</small></span>`;
+        const isAnnounced = s.announced === true && s.result_date && s.result_date !== 'Yet to come';
+        let enDateStr = '';
+        let resDateStr = '';
+        let exDateStr = '';
+
+        if (isAnnounced) {
+          enDateStr = `<span class="date-badge date-confirmed">${s.entry_date}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>`;
+          resDateStr = `<span class="date-badge date-confirmed" style="background:rgba(16,185,129,0.15); border-color:#10B981; color:#34D399; font-weight:700;">📅 ${s.result_date}<br><small style="color:#60A5FA; font-weight:700;">✓ Announced</small></span>`;
+          exDateStr = `<span class="date-badge date-confirmed">${s.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem; font-weight:700;">⏰ 03:15 PM</small></span>`;
+        } else {
+          enDateStr = `<span class="date-badge date-pending" style="color:#FBBF24; border-color:rgba(245,158,11,0.3);">Yet to come<br><small style="color:#94A3B8;">T - ${s.lead || 2} trading days</small></span>`;
+          resDateStr = `<span class="date-badge date-pending" style="color:#FBBF24; border-color:rgba(245,158,11,0.4); font-weight:700; background:rgba(245,158,11,0.1);">⏳ Yet to come<br><small style="color:#94A3B8;">Awaiting NSE</small></span>`;
+          exDateStr = `<span class="date-badge date-pending" style="color:#FBBF24; border-color:rgba(245,158,11,0.3);">Yet to come<br><small style="color:#94A3B8;">T + ${s.hold || 4} trading days</small></span>`;
+        }
 
         const ltpVal = s.ltp || 1500;
         const ltpStr = `₹${Number(ltpVal).toLocaleString('en-IN')}`;
         const sharesStr = `${s.eq_qty_1l || Math.max(1, Math.floor(100000 / ltpVal))} shares`;
+
+        const exPxStr = (s.exit_px !== null && s.exit_px !== undefined && s.exit_px !== '')
+          ? `₹${Number(s.exit_px).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`
+          : `<span style="color:#94A3B8; font-size:0.8rem; font-weight:600;">— (Pending)</span>`;
 
         // Format Expected Return %
         const expVal = (s.expected_ret !== null && s.expected_ret !== undefined) ? Number(s.expected_ret) : 0;
@@ -2046,7 +2054,7 @@
           <td style="color:#60A5FA; font-weight:700; font-family:'JetBrains Mono';">₹${Number(s.entry_px || s.spot_ltp || 1000).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
           <td>${resDateStr}</td>
           <td>${exDateStr}</td>
-          <td style="color:#34D399; font-weight:700; font-family:'JetBrains Mono';">₹${Number(s.exit_px || s.entry_px || 1000).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+          <td style="color:#34D399; font-weight:700; font-family:'JetBrains Mono';">${exPxStr}</td>
           <td>${eqWrStr}</td>
           <td style="color:#FFF; font-weight:600;">${ltpStr}</td>
           <td style="color:#60A5FA; font-weight:600;">${sharesStr}</td>
@@ -2206,16 +2214,24 @@
           : `<span class="badge-short">▼ SHORT</span>`;
 
         const winPill = s.window || s.taking_window_raw || s.taking_window_full || `T-${s.lead || s.entry_lead_days || 3} to T+${s.hold || s.exit_hold_days || 3}`;
-        const entryDateVal = s.entry_date || s.q_entry_date || s.entry_date_sample;
-        const enDateStr = entryDateVal 
-          ? `<span class="date-badge date-confirmed">${entryDateVal}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>` 
-          : `<span class="date-badge date-pending">T - ${s.lead || s.entry_lead_days || 3} trading days<br><small style="font-size:0.7rem;">09:20 AM</small></span>`;
-        const resDateVal = s.result_date || s.result_declaration_date;
-        const resDateStr = resDateVal ? `<span class="date-badge date-confirmed">${resDateVal}</span>` : `<span class="date-badge date-pending">Awaiting NSE</span>`;
-        const exitDateVal = s.exit_date || s.q_exit_date || s.exit_date_sample;
-        const exDateStr = exitDateVal 
-          ? `<span class="date-badge date-confirmed">${exitDateVal}<br><small style="color:#94A3B8; font-size:0.7rem; font-weight:700;">⏰ 03:15 PM</small></span>` 
-          : `<span class="date-badge date-pending">T + ${s.hold || s.exit_hold_days || 3} trading days<br><small style="font-size:0.7rem;">03:15 PM</small></span>`;
+        const isAnnounced = s.announced === true && s.result_date && s.result_date !== 'Yet to come';
+        let enDateStr = '';
+        let resDateStr = '';
+        let exDateStr = '';
+
+        if (isAnnounced) {
+          enDateStr = `<span class="date-badge date-confirmed">${s.entry_date}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>`;
+          resDateStr = `<span class="date-badge date-confirmed" style="background:rgba(16,185,129,0.15); border-color:#10B981; color:#34D399; font-weight:700;">📅 ${s.result_date}<br><small style="color:#60A5FA; font-weight:700;">✓ Announced</small></span>`;
+          exDateStr = `<span class="date-badge date-confirmed">${s.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem; font-weight:700;">⏰ 03:15 PM</small></span>`;
+        } else {
+          enDateStr = `<span class="date-badge date-pending" style="color:#FBBF24; border-color:rgba(245,158,11,0.3);">Yet to come<br><small style="color:#94A3B8;">T - ${s.lead || 2} trading days</small></span>`;
+          resDateStr = `<span class="date-badge date-pending" style="color:#FBBF24; border-color:rgba(245,158,11,0.4); font-weight:700; background:rgba(245,158,11,0.1);">⏳ Yet to come<br><small style="color:#94A3B8;">Awaiting NSE</small></span>`;
+          exDateStr = `<span class="date-badge date-pending" style="color:#FBBF24; border-color:rgba(245,158,11,0.3);">Yet to come<br><small style="color:#94A3B8;">T + ${s.hold || 4} trading days</small></span>`;
+        }
+
+        const exPxStr = (s.exit_px !== null && s.exit_px !== undefined && s.exit_px !== '')
+          ? `₹${Number(s.exit_px).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`
+          : `<span style="color:#94A3B8; font-size:0.8rem; font-weight:600;">— (Pending)</span>`;
 
         const actionTag = s.direction === 'LONG'
           ? `<span class="action-tag action-buy-call">BUY CALL / LONG FUT</span>`
@@ -2263,7 +2279,7 @@
           <td style="color:#60A5FA; font-weight:700; font-family:'JetBrains Mono';">₹${Number(s.entry_px || s.spot_ltp || 1000).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
           <td>${resDateStr}</td>
           <td>${exDateStr}</td>
-          <td style="color:#34D399; font-weight:700; font-family:'JetBrains Mono';">₹${Number(s.exit_px || s.entry_px || 1000).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+          <td style="color:#34D399; font-weight:700; font-family:'JetBrains Mono';">${exPxStr}</td>
           <td>${futWrStr}</td>
           <td style="color:#60A5FA; font-weight:600;">${Number(s.lot).toLocaleString()}</td>
           <td>${expStr}</td>
