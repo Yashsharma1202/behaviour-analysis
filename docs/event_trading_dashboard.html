@@ -985,11 +985,11 @@
           </div>
           
           <div class="filter-bar">
-            <input type="text" id="q-search" class="search-input" placeholder="Search Futures Symbol (e.g. INFY, HCLTECH)..." oninput="filterQuarterTable()">
-            <button class="filter-pill active" onclick="setQuarterFilter('all', this)">All (50)</button>
-            <button class="filter-pill" onclick="setQuarterFilter('confirmed', this)">📢 Confirmed Dates (4)</button>
-            <button class="filter-pill" onclick="setQuarterFilter('LONG', this)">🟢 LONG Only (22)</button>
-            <button class="filter-pill" onclick="setQuarterFilter('SHORT', this)">🔴 SHORT Only (28)</button>
+            <input type="text" id="q-search" class="search-input" placeholder="Search Futures Symbol (e.g. INFY, TCS, RELIANCE)..." oninput="renderQuarterTable()">
+            <button class="filter-pill active" id="qpill-nifty50" onclick="setQuarterFilter('nifty50', this)">🎯 Nifty 50 Only (50)</button>
+            <button class="filter-pill" id="qpill-all" onclick="setQuarterFilter('all_fo', this)">📊 All F&O Stocks (211)</button>
+            <button class="filter-pill" id="qpill-long" onclick="setQuarterFilter('LONG', this)">🟢 LONG Only</button>
+            <button class="filter-pill" id="qpill-short" onclick="setQuarterFilter('SHORT', this)">🔴 SHORT Only</button>
           </div>
         </div>
 
@@ -1970,9 +1970,7 @@
       document.querySelectorAll('#tab-quarterly .event-master-row').forEach(r => {
         r.classList.remove('selected');
         const btn = r.querySelector('.btn-select-event');
-        if (btn) {
-          btn.innerText = 'View Quarter';
-        }
+        if (btn) btn.innerText = 'View Playbook';
       });
 
       const selectedRow = rowElement || document.getElementById('qrow-' + qCode);
@@ -1986,7 +1984,9 @@
       if (heading && dashboardData && dashboardData.quarters) {
         const qObj = dashboardData.quarters.find(x => x.q_code === qCode);
         if (qObj) {
-          heading.innerHTML = `${qObj.title} &mdash; 50-Stock Position Taking Windows`;
+          const qTitle = qObj.q_name || qObj.title || qCode;
+          const qPeriod = qObj.period ? ` (${qObj.period})` : '';
+          heading.innerHTML = `${qTitle}${qPeriod} Position Taking Windows &mdash; Futures (F&O)`;
         }
       }
 
@@ -2085,11 +2085,15 @@
 
       const query = (document.getElementById('q-search')?.value || '').toUpperCase();
 
-      q.stocks.forEach((s, idx) => {
+      let renderedIdx = 0;
+      q.stocks.forEach((s) => {
+        if ((currentQuarterFilter === 'nifty50' || currentQuarterFilter === 'all') && s.is_nifty50 !== 'YES') return;
         if (currentQuarterFilter === 'confirmed' && !s.announced) return;
         if (currentQuarterFilter === 'LONG' && s.direction !== 'LONG') return;
         if (currentQuarterFilter === 'SHORT' && s.direction !== 'SHORT') return;
         if (query && !s.symbol.includes(query) && !s.name.toUpperCase().includes(query)) return;
+
+        renderedIdx++;
 
         const tr = document.createElement('tr');
         tr.style.cursor = 'pointer';
@@ -2133,7 +2137,7 @@
         // Format Realised P&L (1 Lot)
         let pnlStr = '';
         if (s.actual_ret !== null && s.actual_ret !== undefined) {
-          const ltpVal = Number(s.ltp || 1500);
+          const ltpVal = Number(s.ltp || s.entry_px || 1500);
           const lotVal = Number(s.lot || 100);
           const actRet = Number(s.actual_ret);
           const pnlVal = s.actual_pnl !== undefined ? Number(s.actual_pnl) : (actRet * ltpVal * lotVal / 100);
@@ -2148,7 +2152,7 @@
         let futWrStr = `<strong style="color:#FBBF24;">${futWrVal.toFixed(1)}%</strong>`;
 
         tr.innerHTML = `
-          <td>${idx + 1}</td>
+          <td>${renderedIdx}</td>
           <td><strong>${s.symbol}</strong></td>
           <td style="color:#CBD5E1">${s.name}</td>
           <td>${dirBadge}</td>
