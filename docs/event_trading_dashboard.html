@@ -690,7 +690,7 @@
       </button>
       <button class="tab-btn" id="tab-btn-holidays" onclick="switchTab('holidays')">
         <span>🏖️ Stock Holidays (50)</span>
-        <span class="tab-badge badge-urgent">STARTS TOMORROW</span>
+        <span class="tab-badge" id="tab-badge-holidays" style="background:#10B981; color:#FFF; font-weight:800;">🟢 IN PROGRESS (DAY 4)</span>
       </button>
       <button class="tab-btn" id="tab-btn-rbi" onclick="switchTab('rbi')" style="background:rgba(14,165,233,0.08); border-top:2px solid #0ea5e9;">
         <span>🏛️ RBI Monetary Policy</span>
@@ -1442,8 +1442,21 @@
           </div>
           <div class="filter-bar">
             <input type="text" id="h-search" class="search-input" placeholder="Search Holiday Symbol..." oninput="filterHolidayTable()">
+            <select id="h-sector-filter" class="search-input" style="padding:0.4rem 0.8rem; background:var(--surface-bg); color:var(--text-primary); border:1px solid var(--surface-border); border-radius:6px; cursor:pointer;" onchange="filterHolidayTable()">
+              <option value="ALL">All Sectors</option>
+              <option value="Banking & Financial Services">Banking &amp; Financials</option>
+              <option value="Information Technology">Information Technology</option>
+              <option value="Automobile & Ancillary">Automobile</option>
+              <option value="Oil, Gas & Energy">Energy &amp; Power</option>
+              <option value="Metals & Mining">Metals &amp; Mining</option>
+              <option value="Consumer Goods & FMCG">FMCG &amp; Consumption</option>
+              <option value="Pharmaceuticals & Healthcare">Pharma &amp; Healthcare</option>
+              <option value="Construction & Infrastructure">Infra &amp; Cement</option>
+              <option value="Telecommunications">Telecommunications</option>
+              <option value="Other / Diversified">Diversified / Others</option>
+            </select>
             <button id="hpill-all" class="filter-pill active" onclick="setHolidayFilter('all', this)">All (50)</button>
-            <button id="hpill-urgent" class="filter-pill" onclick="setHolidayFilter('tomorrow', this)">🚨 Triggers Tomorrow (4)</button>
+            <button id="hpill-urgent" class="filter-pill" onclick="setHolidayFilter('tomorrow', this)">🟢 Active Setups (50)</button>
             <button id="hpill-long" class="filter-pill" onclick="setHolidayFilter('LONG', this)">🟢 LONG (30)</button>
             <button id="hpill-short" class="filter-pill" onclick="setHolidayFilter('SHORT', this)">🔴 SHORT (20)</button>
           </div>
@@ -1743,7 +1756,7 @@
           <div style="font-size:0.75rem; text-transform:uppercase; color:#94A3B8; font-weight:700; letter-spacing:0.5px;">🏖️ Stock Holidays Drift (50)</div>
           <div style="font-size:1.8rem; font-weight:800; color:#34D399; margin: 4px 0;">84.2% <span style="font-size:0.85rem; font-weight:600; color:#94A3B8;">(Last 4Y Avg)</span></div>
           <div style="font-size:0.75rem; color:#CBD5E1;">17 Market Holidays • 50 Nifty Stocks</div>
-          <div style="font-size:0.72rem; color:#F59E0B; margin-top:6px; font-weight:600;">Triggers Tomorrow (2-Oct Gandhi Jayanti)</div>
+          <div id="kpi-holiday-status" style="font-size:0.72rem; color:#34D399; margin-top:6px; font-weight:600;">In Progress (2-Oct Gandhi Jayanti)</div>
         </div>
         <!-- KPI 3: RBI Policy -->
         <div class="kpi-card" style="border-top: 3px solid #0EA5E9;">
@@ -1794,7 +1807,7 @@
                 <td>3 – 8 Trading Days</td>
                 <td>₹50,000 – ₹300,000</td>
                 <td>Pre-Holiday Entry (T-8) to Post-Holiday Exit (T+8)</td>
-                <td><span class="badge badge-urgent" style="font-size:0.75rem;">STARTS TOMORROW</span></td>
+                <td><span id="comparison-holiday-badge" class="badge" style="background:rgba(16,185,129,0.2); color:#34D399; border:1px solid #10B981; font-weight:700; font-size:0.75rem;">🟢 IN PROGRESS</span></td>
               </tr>
               <tr style="background: rgba(14, 165, 233, 0.05);">
                 <td><strong style="color:#38BDF8;">🏛️ RBI Monetary Policy Engine</strong></td>
@@ -2148,6 +2161,7 @@
 
       // 5. Trigger tab-specific renders safely
       try {
+        updateDynamicDashboardDates();
         if (tabId === 'nifty-index') {
           renderNiftyFuturesMasterTable();
           renderNiftySelectedHolidayPlaybook();
@@ -2341,17 +2355,32 @@
         const now = new Date();
         const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
         let activeCount = 0;
+        let todayCount = 0;
+        let tomorrowCount = 0;
         h.stocks.forEach(s => {
           const sDt = parseEventDate(s.entry_date);
           const sExDt = parseEventDate(s.exit_date);
           if (sDt) {
             const diffDays = Math.round((sDt - today) / (1000 * 60 * 60 * 24));
             const diffExit = sExDt ? Math.round((sExDt - today) / (1000 * 60 * 60 * 24)) : 1;
-            if (diffDays >= -3 && diffExit >= 0) activeCount++;
+            if (diffDays === 0) todayCount++;
+            if (diffDays === 1) tomorrowCount++;
+            if (diffDays <= 1 && diffExit >= 0) activeCount++;
           }
         });
-        pUrgent.innerText = `🚨 Active / Immediate Triggers (${activeCount})`;
-        pUrgent.style.display = activeCount > 0 ? '' : 'none';
+        if (todayCount > 0) {
+          pUrgent.innerHTML = `🔥 Triggers Today (${todayCount})`;
+          pUrgent.style.display = '';
+        } else if (tomorrowCount > 0) {
+          pUrgent.innerHTML = `🚨 Triggers Tomorrow (${tomorrowCount})`;
+          pUrgent.style.display = '';
+        } else if (activeCount > 0) {
+          pUrgent.innerHTML = `🟢 Active In-Window (${activeCount})`;
+          pUrgent.style.display = '';
+        } else {
+          pUrgent.innerHTML = `⏳ Immediate Triggers (0)`;
+          pUrgent.style.display = 'none';
+        }
       }
 
       const pLong = document.getElementById('hpill-long');
@@ -2534,7 +2563,7 @@
         const diffDays = sDt ? Math.round((sDt - today) / (1000 * 60 * 60 * 24)) : 999;
         const diffExit = sExitDt ? Math.round((sExitDt - today) / (1000 * 60 * 60 * 24)) : 999;
 
-        if (currentHolidayFilter === 'tomorrow') {
+        if (currentHolidayFilter === 'tomorrow' || currentHolidayFilter === 'urgent') {
           if (diffDays > 1 || diffExit < 0) return;
         }
         if (currentHolidayFilter === 'LONG' && s.direction !== 'LONG') return;
@@ -2550,6 +2579,8 @@
         const dirBadge = s.direction === 'LONG' 
           ? `<span class="badge-long">▲ LONG</span>`
           : `<span class="badge-short">▼ SHORT</span>`;
+
+        const winPill = s.window || `T-${s.lead || 2} to T+${s.hold || 3}`;
 
         let enDateBadge = '';
         if (diffDays === 0) {
@@ -2585,6 +2616,7 @@
         `;
         tbody.appendChild(tr);
       });
+      updateHolidayFilterPills(h);
     }
 
     let currentRbiCatFilter = 'ALL';
@@ -2972,13 +3004,14 @@
         { id: 'christmas_2026', closureDate: '25-Dec-2026', entryDate: '15-Dec-2026', name: 'Christmas & Year-End' }
       ];
 
-      let activeOrUpcoming = null;
+      let todayEvent = null;
+      let tomorrowEvent = null;
+      let inProgressEvent = null;
+      let nextUpcomingEvent = null;
 
       holidayRows.forEach(h => {
         const rowEl = document.getElementById(`hrow-${h.id}`);
-        if (!rowEl) return;
-        const cells = rowEl.querySelectorAll('td');
-        if (cells.length < 5) return;
+        const cells = rowEl ? rowEl.querySelectorAll('td') : [];
 
         const eDt = parseEventDate(h.entryDate);
         const cDt = parseEventDate(h.closureDate);
@@ -2990,26 +3023,74 @@
         let statusHtml = '';
         if (diffEntry === 0) {
           statusHtml = `<span class="badge-urgent" style="padding:0.25rem 0.6rem; border-radius:4px; background:#F59E0B; color:#000; font-weight:800;">🔥 TRIGGERS TODAY</span>`;
-          if (!activeOrUpcoming) activeOrUpcoming = { ...h, state: 'TODAY' };
+          if (!todayEvent) todayEvent = { ...h, state: 'TODAY' };
         } else if (diffEntry === 1) {
           statusHtml = `<span class="badge-urgent" style="padding:0.25rem 0.6rem; border-radius:4px; background:#EF4444; color:#FFF; font-weight:800;">🚨 STARTS TOMORROW</span>`;
-          if (!activeOrUpcoming) activeOrUpcoming = { ...h, state: 'TOMORROW' };
+          if (!tomorrowEvent) tomorrowEvent = { ...h, state: 'TOMORROW' };
         } else if (diffEntry < 0 && diffExit >= 0) {
           const daysAgo = Math.abs(diffEntry);
           statusHtml = `<span style="background:rgba(16,185,129,0.15); color:#34D399; padding:0.25rem 0.6rem; border-radius:4px; font-weight:700; font-size:0.75rem; border:1px solid rgba(16,185,129,0.3)">🟢 IN PROGRESS (Day ${daysAgo+1})</span>`;
-          if (!activeOrUpcoming) activeOrUpcoming = { ...h, state: 'IN_PROGRESS', daysAgo };
+          if (!inProgressEvent) inProgressEvent = { ...h, state: 'IN_PROGRESS', daysAgo };
         } else if (diffExit < 0) {
           statusHtml = `<span style="color:#64748B; font-size:0.75rem; font-weight:600">✅ COMPLETED</span>`;
         } else {
           const mName = cDt.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
           statusHtml = `<span style="color:#94A3B8; font-size:0.75rem; font-weight:600">UPCOMING IN ${mName}</span>`;
-          if (!activeOrUpcoming) activeOrUpcoming = { ...h, state: 'UPCOMING', daysAway: diffEntry };
+          if (!nextUpcomingEvent || diffEntry < nextUpcomingEvent.daysAway) {
+            nextUpcomingEvent = { ...h, state: 'UPCOMING', daysAway: diffEntry };
+          }
         }
 
-        cells[3].innerHTML = statusHtml;
+        if (cells.length >= 5) {
+          cells[3].innerHTML = statusHtml;
+        }
       });
 
-      // 3. Update Top Alert Banner & Ticker Banner Dynamically
+      // Priority: Today > Tomorrow > In Progress > Next Upcoming
+      const activeOrUpcoming = todayEvent || tomorrowEvent || inProgressEvent || nextUpcomingEvent;
+
+      // 3. Update Master Navigation Tab Badge for Stock Holidays
+      const tabBadgeHolidays = document.getElementById('tab-badge-holidays');
+      if (tabBadgeHolidays) {
+        if (activeOrUpcoming) {
+          const st = activeOrUpcoming.state;
+          if (st === 'TODAY') {
+            tabBadgeHolidays.textContent = '🔥 TRIGGERS TODAY';
+            tabBadgeHolidays.className = 'tab-badge';
+            tabBadgeHolidays.style.background = '#F59E0B';
+            tabBadgeHolidays.style.color = '#000';
+            tabBadgeHolidays.style.fontWeight = '800';
+          } else if (st === 'TOMORROW') {
+            tabBadgeHolidays.textContent = '🚨 STARTS TOMORROW';
+            tabBadgeHolidays.className = 'tab-badge badge-urgent';
+            tabBadgeHolidays.style.background = '#EF4444';
+            tabBadgeHolidays.style.color = '#FFF';
+            tabBadgeHolidays.style.fontWeight = '800';
+          } else if (st === 'IN_PROGRESS') {
+            const dayNum = (activeOrUpcoming.daysAgo || 0) + 1;
+            tabBadgeHolidays.textContent = `🟢 IN PROGRESS (DAY ${dayNum})`;
+            tabBadgeHolidays.className = 'tab-badge';
+            tabBadgeHolidays.style.background = '#10B981';
+            tabBadgeHolidays.style.color = '#FFF';
+            tabBadgeHolidays.style.fontWeight = '800';
+          } else {
+            const daysAway = activeOrUpcoming.daysAway !== undefined ? activeOrUpcoming.daysAway : 1;
+            tabBadgeHolidays.textContent = `⏳ IN ${daysAway} DAYS`;
+            tabBadgeHolidays.className = 'tab-badge';
+            tabBadgeHolidays.style.background = '#2563EB';
+            tabBadgeHolidays.style.color = '#FFF';
+            tabBadgeHolidays.style.fontWeight = '700';
+          }
+        } else {
+          tabBadgeHolidays.textContent = '17 HOLIDAYS';
+          tabBadgeHolidays.className = 'tab-badge';
+          tabBadgeHolidays.style.background = '#475569';
+          tabBadgeHolidays.style.color = '#FFF';
+          tabBadgeHolidays.style.fontWeight = '600';
+        }
+      }
+
+      // 4. Update Top Alert Banner & Ticker Banner Dynamically
       const alertHeader = document.getElementById('alert-banner-header');
       const alertText = document.getElementById('alert-banner-text');
       const tickerTrigger = document.getElementById('ticker-next-trigger');
@@ -3027,13 +3108,66 @@
           if (alertText) alertText.innerHTML = `First entry wave opens tomorrow (${activeOrUpcoming.entryDate}). Position entry opens at 09:20 AM.`;
           if (tickerTrigger) tickerTrigger.innerHTML = `<strong>${hName} Playbook</strong>: Entry triggers <strong>TOMORROW (${activeOrUpcoming.entryDate})</strong>`;
         } else if (st === 'IN_PROGRESS') {
+          const dayNum = (activeOrUpcoming.daysAgo || 0) + 1;
           if (alertHeader) alertHeader.innerHTML = `🟢 Position Alert: ${hName} Position Window IN PROGRESS (Started ${activeOrUpcoming.entryDate})`;
-          if (alertText) alertText.innerHTML = `The 19-year backtest model window is currently active (Day ${activeOrUpcoming.daysAgo+1} of window). Monitor open positions and exit targets.`;
-          if (tickerTrigger) tickerTrigger.innerHTML = `<strong>${hName} Playbook</strong>: Position window <strong>IN PROGRESS</strong> (Started ${activeOrUpcoming.entryDate})`;
+          if (alertText) alertText.innerHTML = `The 19-year backtest model window is currently active (Day ${dayNum} of window). Monitor open positions and exit targets.`;
+          if (tickerTrigger) tickerTrigger.innerHTML = `<strong>${hName} Playbook</strong>: Position window <strong>IN PROGRESS (Day ${dayNum})</strong> &bull; Started ${activeOrUpcoming.entryDate}`;
         } else {
           if (alertHeader) alertHeader.innerHTML = `⏳ Upcoming Alert: ${hName} Window Triggers in ${activeOrUpcoming.daysAway} Days (${activeOrUpcoming.entryDate})`;
           if (alertText) alertText.innerHTML = `Next major event playbook starts on ${activeOrUpcoming.entryDate}. Pre-event positioning setups loaded.`;
           if (tickerTrigger) tickerTrigger.innerHTML = `<strong>${hName} Playbook</strong>: Triggers on <strong>${activeOrUpcoming.entryDate}</strong>`;
+        }
+      }
+
+      // 5. Update Comparison Tab KPI Card & Matrix Badge
+      const kpiHolidayStatus = document.getElementById('kpi-holiday-status');
+      if (kpiHolidayStatus && activeOrUpcoming) {
+        const st = activeOrUpcoming.state;
+        if (st === 'TODAY') {
+          kpiHolidayStatus.innerHTML = `🔥 Triggers Today (${activeOrUpcoming.name})`;
+          kpiHolidayStatus.style.color = '#F59E0B';
+        } else if (st === 'TOMORROW') {
+          kpiHolidayStatus.innerHTML = `🚨 Starts Tomorrow (${activeOrUpcoming.name})`;
+          kpiHolidayStatus.style.color = '#EF4444';
+        } else if (st === 'IN_PROGRESS') {
+          const dayNum = (activeOrUpcoming.daysAgo || 0) + 1;
+          kpiHolidayStatus.innerHTML = `🟢 In Progress: Day ${dayNum} (${activeOrUpcoming.name})`;
+          kpiHolidayStatus.style.color = '#34D399';
+        } else {
+          kpiHolidayStatus.innerHTML = `⏳ In ${activeOrUpcoming.daysAway} Days (${activeOrUpcoming.name})`;
+          kpiHolidayStatus.style.color = '#38BDF8';
+        }
+      }
+
+      const compHolidayBadge = document.getElementById('comparison-holiday-badge');
+      if (compHolidayBadge && activeOrUpcoming) {
+        const st = activeOrUpcoming.state;
+        if (st === 'TODAY') {
+          compHolidayBadge.textContent = '🔥 TRIGGERS TODAY';
+          compHolidayBadge.className = 'badge';
+          compHolidayBadge.style.background = '#F59E0B';
+          compHolidayBadge.style.color = '#000';
+          compHolidayBadge.style.fontWeight = '800';
+        } else if (st === 'TOMORROW') {
+          compHolidayBadge.textContent = '🚨 STARTS TOMORROW';
+          compHolidayBadge.className = 'badge badge-urgent';
+          compHolidayBadge.style.background = '#EF4444';
+          compHolidayBadge.style.color = '#FFF';
+          compHolidayBadge.style.fontWeight = '800';
+        } else if (st === 'IN_PROGRESS') {
+          const dayNum = (activeOrUpcoming.daysAgo || 0) + 1;
+          compHolidayBadge.textContent = `🟢 IN PROGRESS (DAY ${dayNum})`;
+          compHolidayBadge.className = 'badge';
+          compHolidayBadge.style.background = 'rgba(16,185,129,0.2)';
+          compHolidayBadge.style.color = '#34D399';
+          compHolidayBadge.style.border = '1px solid #10B981';
+          compHolidayBadge.style.fontWeight = '700';
+        } else {
+          compHolidayBadge.textContent = `⏳ UPCOMING IN ${activeOrUpcoming.daysAway}D`;
+          compHolidayBadge.className = 'badge';
+          compHolidayBadge.style.background = '#2563EB';
+          compHolidayBadge.style.color = '#FFF';
+          compHolidayBadge.style.fontWeight = '700';
         }
       }
     }
@@ -3855,8 +3989,14 @@
 
       renderLiveFeedTab();
 
+      // Recalculate dynamic dates and refresh tables as per current refresh date
+      try { updateDynamicDashboardDates(); } catch(e) { console.error(e); }
+      try { renderHolidayTable(); } catch(e) { console.error(e); }
+      try { renderQuarterTable(); } catch(e) { console.error(e); }
+      try { renderEquityTable(); } catch(e) { console.error(e); }
+
       if (isManual) {
-        showToast('✓ Live Corporate Feed Updated from action_cop (' + (d ? d.total_upcoming_board_meetings : 0) + ' upcoming events synced)');
+        showToast('✓ Live Corporate Feed & Event Intelligence Updated (' + (d ? d.total_upcoming_board_meetings : 0) + ' upcoming events synced)');
       }
     }
 
