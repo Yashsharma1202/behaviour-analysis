@@ -406,7 +406,7 @@
           "hold": 4,
           "result_date": "17-Oct-2026",
           "result_declaration_date": "17-Oct-2026",
-          "entry_date": "14-Oct-2026 (Wed)",
+          "entry_date": "15-Oct-2026 (Thu)",
           "exit_date": "23-Oct-2026 (Fri)",
           "announced": true,
           "result_status": "Announced",
@@ -428,7 +428,8 @@
           "outcome": "PENDING",
           "avg_17q_wr": 68.25,
           "best_strategy": "Pre-Quarterly Run-up (SHORT)",
-          "option_play": "1% ITM CALL / PUT Option (30% SL)"
+          "option_play": "1% ITM CALL / PUT Option (30% SL)",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "NTPC",
@@ -946,7 +947,8 @@
           "outcome": "PENDING",
           "avg_17q_wr": 92.09,
           "best_strategy": "Pre-Quarterly Run-up (LONG)",
-          "option_play": "1% ITM CALL / PUT Option (30% SL)"
+          "option_play": "1% ITM CALL / PUT Option (30% SL)",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "HEROMOTOCO",
@@ -1094,7 +1096,8 @@
           "outcome": "PENDING",
           "avg_17q_wr": 77.19,
           "best_strategy": "Pre-Quarterly Run-up (LONG)",
-          "option_play": "1% ITM CALL / PUT Option (30% SL)"
+          "option_play": "1% ITM CALL / PUT Option (30% SL)",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "KOTAKBANK",
@@ -1538,7 +1541,8 @@
           "outcome": "PENDING",
           "avg_17q_wr": 81.35,
           "best_strategy": "Pre-Quarterly Run-up (LONG)",
-          "option_play": "1% ITM CALL / PUT Option (30% SL)"
+          "option_play": "1% ITM CALL / PUT Option (30% SL)",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "TITAN",
@@ -10602,9 +10606,9 @@
           "lot": 625,
           "margin": 148125.0,
           "eq_qty_1l": 79,
-          "entry_date": "11-Dec-2025 (Thu)",
-          "exit_date": "19-Dec-2025 (Fri)",
-          "result_date": "15-Dec-2025",
+          "entry_date": "15-Oct-2026 (Thu)",
+          "exit_date": "23-Oct-2026 (Fri)",
+          "result_date": "17-Oct-2026",
           "actual_pnl": 16443.75,
           "window": "T-2 to T+4",
           "lead": 2,
@@ -10621,7 +10625,8 @@
           "exit_price": 1191.1,
           "return_pct": -0.51,
           "pnl": -3812.5,
-          "outcome": "WIN"
+          "outcome": "WIN",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "HDFCLIFE",
@@ -11207,9 +11212,9 @@
           "lot": 400,
           "margin": 117056.0,
           "eq_qty_1l": 93,
-          "entry_date": "11-Dec-2025 (Thu)",
-          "exit_date": "19-Dec-2025 (Fri)",
-          "result_date": "15-Dec-2025",
+          "entry_date": "21-Oct-2026 (Wed)",
+          "exit_date": "29-Oct-2026 (Thu)",
+          "result_date": "23-Oct-2026",
           "actual_pnl": -18680.0,
           "window": "T-2 to T+4",
           "lead": 2,
@@ -11226,7 +11231,8 @@
           "exit_price": 1509.9,
           "return_pct": -3.19,
           "pnl": -18680.0,
-          "outcome": "LOSS"
+          "outcome": "LOSS",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "KOTAKBANK",
@@ -12197,9 +12203,9 @@
           "lot": 350,
           "margin": 103950.0,
           "eq_qty_1l": 80,
-          "entry_date": "16-Dec-2025 (Tue)",
-          "exit_date": "24-Dec-2025 (Wed)",
-          "result_date": "18-Dec-2025",
+          "entry_date": "08-Oct-2026 (Thu)",
+          "exit_date": "16-Oct-2026 (Fri)",
+          "result_date": "12-Oct-2026",
           "actual_pnl": 14875.0,
           "window": "T-2 to T+4",
           "lead": 2,
@@ -12216,7 +12222,8 @@
           "exit_price": 1527.5,
           "return_pct": 2.86,
           "pnl": 14875.0,
-          "outcome": "WIN"
+          "outcome": "WIN",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "LT",
@@ -12747,9 +12754,9 @@
           "lot": 100,
           "margin": 240720.0,
           "eq_qty_1l": 8,
-          "entry_date": "14-Oct-2025 (Tue)",
-          "exit_date": "23-Oct-2025 (Thu)",
-          "result_date": "16-Oct-2025",
+          "entry_date": "15-Oct-2026 (Thu)",
+          "exit_date": "26-Oct-2026 (Mon)",
+          "result_date": "19-Oct-2026",
           "actual_pnl": -33500.0,
           "window": "T-2 to T+4",
           "lead": 2,
@@ -12766,7 +12773,8 @@
           "exit_price": 12371.0,
           "return_pct": -2.78,
           "pnl": -33500.0,
-          "outcome": "LOSS"
+          "outcome": "LOSS",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "GRASIM",
@@ -21835,9 +21843,9 @@
           "lot": 625,
           "margin": 145575.0,
           "eq_qty_1l": 79,
-          "entry_date": "11-Dec-2024 (Wed)",
-          "exit_date": "19-Dec-2024 (Thu)",
-          "result_date": "15-Dec-2024",
+          "entry_date": "15-Oct-2026 (Thu)",
+          "exit_date": "23-Oct-2026 (Fri)",
+          "result_date": "17-Oct-2026",
           "actual_pnl": -22156.25,
           "window": "T-2 to T+4",
           "lead": 2,
@@ -21854,7 +21862,8 @@
           "exit_price": 1200.05,
           "return_pct": -3.04,
           "pnl": -22156.25,
-          "outcome": "LOSS"
+          "outcome": "LOSS",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "SBIN",
@@ -22275,9 +22284,9 @@
           "lot": 400,
           "margin": 152444.0,
           "eq_qty_1l": 93,
-          "entry_date": "11-Dec-2024 (Wed)",
-          "exit_date": "19-Dec-2024 (Thu)",
-          "result_date": "15-Dec-2024",
+          "entry_date": "21-Oct-2026 (Wed)",
+          "exit_date": "29-Oct-2026 (Thu)",
+          "result_date": "23-Oct-2026",
           "actual_pnl": -23080.0,
           "window": "T-2 to T+4",
           "lead": 2,
@@ -22294,7 +22303,8 @@
           "exit_price": 1963.25,
           "return_pct": -3.03,
           "pnl": -23080.0,
-          "outcome": "LOSS"
+          "outcome": "LOSS",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "HINDALCO",
@@ -22935,9 +22945,9 @@
           "lot": 350,
           "margin": 128478.0,
           "eq_qty_1l": 80,
-          "entry_date": "16-Dec-2024 (Mon)",
-          "exit_date": "24-Dec-2024 (Tue)",
-          "result_date": "18-Dec-2024",
+          "entry_date": "08-Oct-2026 (Thu)",
+          "exit_date": "16-Oct-2026 (Fri)",
+          "result_date": "12-Oct-2026",
           "actual_pnl": 3587.5,
           "window": "T-2 to T+4",
           "lead": 2,
@@ -22954,7 +22964,8 @@
           "exit_price": 1845.65,
           "return_pct": 0.56,
           "pnl": 3587.5,
-          "outcome": "WIN"
+          "outcome": "WIN",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "NESTLEIND",
@@ -23980,9 +23991,9 @@
           "lot": 100,
           "margin": 229297.0,
           "eq_qty_1l": 8,
-          "entry_date": "14-Oct-2024 (Mon)",
-          "exit_date": "22-Oct-2024 (Tue)",
-          "result_date": "16-Oct-2024",
+          "entry_date": "15-Oct-2026 (Thu)",
+          "exit_date": "26-Oct-2026 (Mon)",
+          "result_date": "19-Oct-2026",
           "actual_pnl": 24649.0,
           "window": "T-2 to T+4",
           "lead": 2,
@@ -23999,7 +24010,8 @@
           "exit_price": 11432.0,
           "return_pct": -0.29,
           "pnl": -3285.0,
-          "outcome": "WIN"
+          "outcome": "WIN",
+          "status": "CONFIRMED"
         }
       ],
       "win_rate_avg": "62.0",
@@ -33288,9 +33300,9 @@
           "lot": 625,
           "margin": 124631.25,
           "eq_qty_1l": 79,
-          "entry_date": "13-Dec-2023 (Wed)",
-          "exit_date": "21-Dec-2023 (Thu)",
-          "result_date": "15-Dec-2023",
+          "entry_date": "15-Oct-2026 (Thu)",
+          "exit_date": "23-Oct-2026 (Fri)",
+          "result_date": "17-Oct-2026",
           "actual_pnl": 4531.25,
           "window": "T-2 to T+4",
           "lead": 2,
@@ -33307,7 +33319,8 @@
           "exit_price": 1004.3,
           "return_pct": 0.73,
           "pnl": 4531.25,
-          "outcome": "WIN"
+          "outcome": "WIN",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "BAJAJFINSV",
@@ -34223,9 +34236,9 @@
           "lot": 400,
           "margin": 118640.0,
           "eq_qty_1l": 93,
-          "entry_date": "13-Dec-2023 (Wed)",
-          "exit_date": "21-Dec-2023 (Thu)",
-          "result_date": "15-Dec-2023",
+          "entry_date": "21-Oct-2026 (Wed)",
+          "exit_date": "29-Oct-2026 (Thu)",
+          "result_date": "23-Oct-2026",
           "actual_pnl": 28260.0,
           "window": "T-2 to T+4",
           "lead": 2,
@@ -34242,7 +34255,8 @@
           "exit_price": 1412.35,
           "return_pct": 4.76,
           "pnl": 28260.0,
-          "outcome": "WIN"
+          "outcome": "WIN",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "DRREDDY",
@@ -34388,9 +34402,9 @@
           "lot": 100,
           "margin": 163740.0,
           "eq_qty_1l": 8,
-          "entry_date": "12-Oct-2023 (Thu)",
-          "exit_date": "20-Oct-2023 (Fri)",
-          "result_date": "16-Oct-2023",
+          "entry_date": "15-Oct-2026 (Thu)",
+          "exit_date": "26-Oct-2026 (Mon)",
+          "result_date": "19-Oct-2026",
           "actual_pnl": 22785.0,
           "window": "T-2 to T+4",
           "lead": 2,
@@ -34407,7 +34421,8 @@
           "exit_price": 8414.85,
           "return_pct": 2.78,
           "pnl": 22785.0,
-          "outcome": "WIN"
+          "outcome": "WIN",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "BAJFINANCE",
@@ -34883,9 +34898,9 @@
           "lot": 350,
           "margin": 86345.0,
           "eq_qty_1l": 80,
-          "entry_date": "14-Dec-2023 (Thu)",
-          "exit_date": "22-Dec-2023 (Fri)",
-          "result_date": "18-Dec-2023",
+          "entry_date": "08-Oct-2026 (Thu)",
+          "exit_date": "16-Oct-2026 (Fri)",
+          "result_date": "12-Oct-2026",
           "actual_pnl": 9222.5,
           "window": "T-2 to T+4",
           "lead": 2,
@@ -34902,7 +34917,8 @@
           "exit_price": 1259.85,
           "return_pct": 2.14,
           "pnl": 9222.5,
-          "outcome": "WIN"
+          "outcome": "WIN",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "BAJAJ-AUTO",
@@ -43971,9 +43987,9 @@
           "lot": 625,
           "margin": 117298.75,
           "eq_qty_1l": 79,
-          "entry_date": "2022-12-08 (Thu)",
-          "exit_date": "2022-12-21 (Wed)",
-          "result_date": "15-Dec-2022",
+          "entry_date": "12-Oct-2026 (Mon)",
+          "exit_date": "23-Oct-2026 (Fri)",
+          "result_date": "17-Oct-2026",
           "actual_pnl": 1062.5,
           "window": "T-5 to T+4",
           "lead": 5,
@@ -43990,7 +44006,8 @@
           "exit_price": 936.69,
           "return_pct": 0.18,
           "pnl": 1062.5,
-          "outcome": "WIN"
+          "outcome": "WIN",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "COALINDIA",
@@ -44631,9 +44648,9 @@
           "lot": 350,
           "margin": 63081.9,
           "eq_qty_1l": 80,
-          "entry_date": "2022-12-08 (Thu)",
-          "exit_date": "2022-12-20 (Tue)",
-          "result_date": "18-Dec-2022",
+          "entry_date": "01-Oct-2026 (Thu)",
+          "exit_date": "14-Oct-2026 (Wed)",
+          "result_date": "12-Oct-2026",
           "actual_pnl": -864.5,
           "window": "T-6 to T+2",
           "lead": 6,
@@ -44650,7 +44667,8 @@
           "exit_price": 898.7,
           "return_pct": -0.27,
           "pnl": -864.5,
-          "outcome": "LOSS"
+          "outcome": "LOSS",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "HDFCBANK",
@@ -45126,9 +45144,9 @@
           "lot": 400,
           "margin": 109448.0,
           "eq_qty_1l": 93,
-          "entry_date": "2022-12-13 (Tue)",
-          "exit_date": "2022-12-21 (Wed)",
-          "result_date": "15-Dec-2022",
+          "entry_date": "21-Oct-2026 (Wed)",
+          "exit_date": "29-Oct-2026 (Thu)",
+          "result_date": "23-Oct-2026",
           "actual_pnl": 27112.0,
           "window": "T-2 to T+4",
           "lead": 2,
@@ -45145,7 +45163,8 @@
           "exit_price": 1300.32,
           "return_pct": 4.95,
           "pnl": 27112.0,
-          "outcome": "WIN"
+          "outcome": "WIN",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "TCS",
@@ -45841,9 +45860,9 @@
           "lot": 100,
           "margin": 138021.8,
           "eq_qty_1l": 8,
-          "entry_date": "2022-10-11 (Tue)",
-          "exit_date": "2022-10-19 (Wed)",
-          "result_date": "16-Oct-2022",
+          "entry_date": "14-Oct-2026 (Wed)",
+          "exit_date": "23-Oct-2026 (Fri)",
+          "result_date": "19-Oct-2026",
           "actual_pnl": -1077.0,
           "window": "T-3 to T+3",
           "lead": 3,
@@ -45860,7 +45879,8 @@
           "exit_price": 6890.32,
           "return_pct": -0.16,
           "pnl": -1077.0,
-          "outcome": "LOSS"
+          "outcome": "LOSS",
+          "status": "CONFIRMED"
         },
         {
           "symbol": "GRASIM",

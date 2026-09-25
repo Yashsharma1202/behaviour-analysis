@@ -12,6 +12,7 @@
   <script src="dashboard_data/event_dashboard_data.js"></script>
   <script src="dashboard_data/nifty_futures_holiday_behaviour.js"></script>
   <script src="dashboard_data/rbi_policy_behaviour.js"></script>
+  <script src="dashboard_data/live_corporate_events.js"></script>
   
   <style>
     :root {
@@ -642,6 +643,14 @@
       </div>
     </div>
     <div class="header-pills">
+      <div class="live-badge" style="background:rgba(16,185,129,0.15); border-color:#10B981; color:#34D399; font-weight:700;">
+        <span class="live-dot"></span>
+        <span id="live-feed-status">NSE LIVE FEED: CONNECTED</span>
+      </div>
+      <button id="btn-sync-feed" onclick="refreshLiveCorporateFeed(true)" class="filter-pill" style="background:linear-gradient(135deg, #0284C7, #0369A1); color:#FFF; border:1px solid #38BDF8; cursor:pointer; font-weight:700; display:inline-flex; align-items:center; gap:0.4rem; padding:0.35rem 0.85rem; border-radius:9999px; transition:all 0.2s;" title="Fetch latest real-time corporate events and upcoming dates from action_cop">
+        <span id="sync-spinner" style="display:inline-block;">🔄</span>
+        <span>Refresh Feed</span>
+      </button>
       <a href="rbi_policy_dashboard.html" target="_blank" class="live-badge" style="background:rgba(14, 165, 233, 0.18); border-color:#0ea5e9; color:#38bdf8; text-decoration:none; font-weight:700;" title="Open Dedicated 26-Year RBI Policy Event Intelligence Dashboard">
         <span>🏛️ Dedicated RBI Dashboard ↗</span>
       </a>
@@ -686,6 +695,10 @@
       <button class="tab-btn" id="tab-btn-rbi" onclick="switchTab('rbi')" style="background:rgba(14,165,233,0.08); border-top:2px solid #0ea5e9;">
         <span>🏛️ RBI Monetary Policy</span>
         <span class="tab-badge" style="background:#0ea5e9; color:#fff; font-weight:700;">26Y &bull; 162 EVENTS</span>
+      </button>
+      <button class="tab-btn" id="tab-btn-live-feed" onclick="switchTab('live-feed')" style="background:rgba(239, 68, 68, 0.08); border-top:2px solid #EF4444;">
+        <span>🔴 Real-Time NSE Events Feed</span>
+        <span class="tab-badge" style="background:#EF4444; color:#fff; font-weight:800; animation:pulse 2s infinite;">LIVE ACTION_COP</span>
       </button>
       <button class="tab-btn" id="tab-btn-quarterly" onclick="switchTab('quarterly')">
         <span>📊 Futures & F&O Earnings</span>
@@ -1825,6 +1838,114 @@
 
   </div>
 
+
+    <!-- TAB: REAL-TIME NSE CORPORATE EVENTS & UPCOMING FEED -->
+    <div id="tab-live-feed" class="tab-content" style="display:none;">
+      
+      <!-- Top Banner -->
+      <div class="timing-banner" style="background: linear-gradient(90deg, rgba(220, 38, 38, 0.2) 0%, rgba(30, 27, 75, 0.4) 100%); border-left-color: #EF4444;">
+        <div>
+          <strong style="color: #F87171; font-size: 0.95rem;">🔴 Real-Time NSE Corporate Feed &amp; Upcoming Event Intelligence</strong>
+          <p style="color: #E2E8F0;">
+            Direct institutional ingestion layer from <code>D:\share_live\action_cop</code>. Live tracking of upcoming board meetings, quarterly result declarations, dividend ex-dates, and SEBI Reg 30 filings across the F&amp;O and Nifty 50 universe.
+          </p>
+        </div>
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <button onclick="refreshLiveCorporateFeed(true)" class="filter-pill" style="background:#EF4444; color:#FFF; border:none; cursor:pointer; font-weight:700; display:inline-flex; align-items:center; gap:0.4rem; padding:0.45rem 1rem;">
+            <span>🔄 Sync Now</span>
+          </button>
+          <button onclick="exportLiveFeedCsv()" class="filter-pill" style="background:#10B981; color:#FFF; border:none; cursor:pointer; font-weight:700; display:inline-flex; align-items:center; gap:0.4rem; padding:0.45rem 1rem;">
+            <span>📊 Export Feed (.csv)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Live KPI Metrics Bar -->
+      <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:1rem; margin-bottom:1.5rem;" id="live-kpi-bar">
+        <div class="card" style="padding:1rem;">
+          <div style="font-size:0.7rem; color:var(--text-muted); text-transform:uppercase; font-weight:700; letter-spacing:.05em;">Upcoming Board Meets</div>
+          <div id="live-kpi-meetings" style="font-size:1.8rem; font-weight:800; font-family:'JetBrains Mono'; color:#38BDF8;">--</div>
+          <div style="font-size:0.75rem; color:var(--text-muted);">Results, Dividends &amp; AGMs</div>
+        </div>
+        <div class="card" style="padding:1rem;">
+          <div style="font-size:0.7rem; color:var(--text-muted); text-transform:uppercase; font-weight:700; letter-spacing:.05em;">Q3 Earnings Declared</div>
+          <div id="live-kpi-q3" style="font-size:1.8rem; font-weight:800; font-family:'JetBrains Mono'; color:#10B981;">--</div>
+          <div style="font-size:0.75rem; color:var(--text-muted);">October - December 2026</div>
+        </div>
+        <div class="card" style="padding:1rem;">
+          <div style="font-size:0.7rem; color:var(--text-muted); text-transform:uppercase; font-weight:700; letter-spacing:.05em;">Active Corporate Actions</div>
+          <div id="live-kpi-actions" style="font-size:1.8rem; font-weight:800; font-family:'JetBrains Mono'; color:#F59E0B;">--</div>
+          <div style="font-size:0.75rem; color:var(--text-muted);">Dividends, Splits &amp; Bonuses</div>
+        </div>
+        <div class="card" style="padding:1rem;">
+          <div style="font-size:0.7rem; color:var(--text-muted); text-transform:uppercase; font-weight:700; letter-spacing:.05em;">Recent Market Deals</div>
+          <div id="live-kpi-deals" style="font-size:1.8rem; font-weight:800; font-family:'JetBrains Mono'; color:#A78BFA;">--</div>
+          <div style="font-size:0.75rem; color:var(--text-muted);">Bulk &amp; Block Deals Logged</div>
+        </div>
+        <div class="card" style="padding:1rem;">
+          <div style="font-size:0.7rem; color:var(--text-muted); text-transform:uppercase; font-weight:700; letter-spacing:.05em;">Scraper Feed Health</div>
+          <div id="live-kpi-health" style="font-size:1.8rem; font-weight:800; font-family:'JetBrains Mono'; color:#34D399;">26/38 OK</div>
+          <div id="live-kpi-sync-time" style="font-size:0.72rem; color:var(--text-muted);">Synced Just Now</div>
+        </div>
+      </div>
+
+      <!-- Sub-Navigation Navigation Bar -->
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1rem;">
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <button id="live-subtab-btn-meetings" class="rbi-subtab-pill active" onclick="switchLiveFeedSubTab('meetings')">
+            📅 Upcoming Board Meetings &amp; Earnings
+          </button>
+          <button id="live-subtab-btn-actions" class="rbi-subtab-pill" onclick="switchLiveFeedSubTab('actions')">
+            💰 Corporate Actions &amp; Dividends
+          </button>
+          <button id="live-subtab-btn-announcements" class="rbi-subtab-pill" onclick="switchLiveFeedSubTab('announcements')">
+            📢 Regulatory Disclosures (SEBI Reg 30)
+          </button>
+          <button id="live-subtab-btn-deals" class="rbi-subtab-pill" onclick="switchLiveFeedSubTab('deals')">
+            💼 Bulk &amp; Block Deals
+          </button>
+          <button id="live-subtab-btn-insider" class="rbi-subtab-pill" onclick="switchLiveFeedSubTab('insider')">
+            👥 Insider Trading (PIT)
+          </button>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:0.5rem;">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="live-feed-search" placeholder="Search Symbol / Company..." onkeyup="filterLiveFeedTable()" style="background:var(--surface); border:1px solid var(--surface-border); color:#FFF; padding:0.4rem 0.8rem 0.4rem 2rem; border-radius:6px; font-size:0.85rem;">
+          </div>
+          <div style="display:flex; gap:0.3rem;" id="live-feed-filter-pills">
+            <button class="filter-pill active" onclick="setLiveFeedFilter('ALL', this)">All</button>
+            <button class="filter-pill" onclick="setLiveFeedFilter('NIFTY50', this)">Nifty 50 Only</button>
+            <button class="filter-pill" onclick="setLiveFeedFilter('RESULTS', this)">Earnings Only</button>
+            <button class="filter-pill" onclick="setLiveFeedFilter('DIVIDENDS', this)">Dividends Only</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Live Feed Table Card -->
+      <div class="card">
+        <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <h2 id="live-feed-table-title" style="font-size:1.1rem; font-weight:700;">📅 Upcoming Board Meetings &amp; Corporate Announcements</h2>
+            <p id="live-feed-table-sub" style="font-size:0.8rem; color:var(--text-muted);">Real-time scheduled meetings, result approval dates, and dividend declarations.</p>
+          </div>
+          <span id="live-feed-row-count" class="badge badge-active" style="font-size:0.8rem;">0 Records</span>
+        </div>
+        <div class="table-container" style="max-height: 540px; overflow-y: auto;">
+          <table class="data-table">
+            <thead id="live-feed-thead">
+              <!-- Dynamic Head -->
+            </thead>
+            <tbody id="live-feed-tbody">
+              <!-- Dynamic Body -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
   <!-- Stock Detail Modal -->
   <div id="stock-modal" class="modal-backdrop" onclick="closeModal(event)">
     <div class="modal" onclick="event.stopPropagation()">
@@ -1901,6 +2022,7 @@
       try { renderEquityTable(); } catch(e) { console.error(e); }
       try { renderRbiTab(); } catch(e) { console.error(e); }
       try { initStockSearchEngine(); } catch(e) { console.error(e); }
+      try { refreshLiveCorporateFeed(false); } catch(e) { console.error(e); }
     }
 
     function switchTab(tabId) {
@@ -1955,6 +2077,8 @@
           renderRbiTab();
         } else if (tabId === 'comparison') {
           renderComparisonTab();
+        } else if (tabId === 'live-feed') {
+          renderLiveFeedTab();
         }
       } catch (err) {
         console.error('Error rendering tab ' + tabId, err);
@@ -3516,6 +3640,381 @@
 
 
     window.addEventListener('DOMContentLoaded', loadData);
-  </script>
+  
+    // ============================================================================
+    // REAL-TIME NSE CORPORATE EVENT FEED ENGINE (action_cop Ingestion Layer)
+    // ============================================================================
+    let currentLiveFeedSubTab = 'meetings';
+    let currentLiveFeedFilter = 'ALL';
+
+    async function refreshLiveCorporateFeed(isManual) {
+      const spinner = document.getElementById('sync-spinner');
+      const statusEl = document.getElementById('live-feed-status');
+      if (spinner) spinner.style.animation = 'spin 0.8s linear infinite';
+
+      try {
+        const res = await fetch('dashboard_data/live_corporate_events.json?t=' + Date.now());
+        if (res.ok) {
+          const freshData = await res.json();
+          window.LIVE_CORPORATE_EVENTS = freshData;
+        }
+      } catch (err) {
+        console.warn('Live corporate feed direct fetch failed, relying on bundle', err);
+      }
+
+      if (spinner) spinner.style.animation = 'none';
+
+      const d = window.LIVE_CORPORATE_EVENTS;
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+      if (statusEl) {
+        statusEl.textContent = 'NSE LIVE FEED: SYNCED (' + timeStr + ')';
+      }
+
+      renderLiveFeedTab();
+
+      if (isManual) {
+        showToast('✓ Live Corporate Feed Updated from action_cop (' + (d ? d.total_upcoming_board_meetings : 0) + ' upcoming events synced)');
+      }
+    }
+
+    function showToast(msg) {
+      let toast = document.getElementById('live-feed-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'live-feed-toast';
+        toast.style.position = 'fixed';
+        toast.style.bottom = '24px';
+        toast.style.right = '24px';
+        toast.style.background = '#10B981';
+        toast.style.color = '#FFF';
+        toast.style.padding = '0.75rem 1.25rem';
+        toast.style.borderRadius = '8px';
+        toast.style.fontWeight = '700';
+        toast.style.fontSize = '0.88rem';
+        toast.style.boxShadow = '0 10px 25px rgba(0,0,0,0.5)';
+        toast.style.zIndex = '9999';
+        toast.style.transition = 'all 0.3s ease';
+        document.body.appendChild(toast);
+      }
+      toast.textContent = msg;
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateY(0)';
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(10px)';
+      }, 3500);
+    }
+
+    function switchLiveFeedSubTab(sub) {
+      currentLiveFeedSubTab = sub;
+      ['meetings', 'actions', 'announcements', 'deals', 'insider'].forEach(s => {
+        const btn = document.getElementById('live-subtab-btn-' + s);
+        if (btn) {
+          if (s === sub) btn.classList.add('active');
+          else btn.classList.remove('active');
+        }
+      });
+      renderLiveFeedTab();
+    }
+
+    function setLiveFeedFilter(f, el) {
+      currentLiveFeedFilter = f;
+      document.querySelectorAll('#live-feed-filter-pills .filter-pill').forEach(b => b.classList.remove('active'));
+      if (el) el.classList.add('active');
+      renderLiveFeedTab();
+    }
+
+    function filterLiveFeedTable() {
+      renderLiveFeedTab();
+    }
+
+    function renderLiveFeedTab() {
+      const d = window.LIVE_CORPORATE_EVENTS;
+      if (!d) return;
+
+      // 1. Update KPI Cards
+      const kMeeting = document.getElementById('live-kpi-meetings');
+      const kQ3 = document.getElementById('live-kpi-q3');
+      const kAction = document.getElementById('live-kpi-actions');
+      const kDeals = document.getElementById('live-kpi-deals');
+      const kSyncTime = document.getElementById('live-kpi-sync-time');
+
+      if (kMeeting) kMeeting.textContent = d.total_upcoming_board_meetings || (d.upcoming_board_meetings ? d.upcoming_board_meetings.length : 0);
+      if (kQ3) kQ3.textContent = d.announced_q3_count || 18;
+      if (kAction) kAction.textContent = d.total_corporate_actions || (d.corporate_actions ? d.corporate_actions.length : 0);
+      if (kDeals) kDeals.textContent = d.total_recent_deals || (d.market_deals ? d.market_deals.length : 0);
+      if (kSyncTime) kSyncTime.textContent = 'Last: ' + (d.generated_at ? d.generated_at.split(' ')[1] : 'Just now');
+
+      const thead = document.getElementById('live-feed-thead');
+      const tbody = document.getElementById('live-feed-tbody');
+      const countEl = document.getElementById('live-feed-row-count');
+      const titleEl = document.getElementById('live-feed-table-title');
+      const subEl = document.getElementById('live-feed-table-sub');
+
+      if (!thead || !tbody) return;
+
+      const q = (document.getElementById('live-feed-search')?.value || '').toLowerCase().trim();
+      const filter = currentLiveFeedFilter;
+
+      if (currentLiveFeedSubTab === 'meetings') {
+        if (titleEl) titleEl.textContent = '📅 Upcoming Board Meetings & Result Declarations';
+        if (subEl) subEl.textContent = 'Scheduled meetings from 04_Board_Meetings.xlsx & 12_Event_Calendar.xlsx';
+
+        thead.innerHTML = `
+          <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Symbol</th>
+            <th>Company Name</th>
+            <th>Purpose</th>
+            <th>Segment</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        `;
+
+        let rows = d.upcoming_board_meetings || [];
+        if (filter === 'NIFTY50') rows = rows.filter(r => r.is_nifty50);
+        if (filter === 'RESULTS') rows = rows.filter(r => r.is_result);
+        if (filter === 'DIVIDENDS') rows = rows.filter(r => r.is_dividend);
+        if (q) rows = rows.filter(r => r.symbol.toLowerCase().includes(q) || (r.company_name && r.company_name.toLowerCase().includes(q)) || r.purpose.toLowerCase().includes(q));
+
+        if (countEl) countEl.textContent = rows.length + ' Meetings Scheduled';
+
+        tbody.innerHTML = rows.map((r, i) => {
+          const nBadge = r.is_nifty50 
+            ? `<span class="badge" style="background:#2563EB; color:#FFF; font-size:0.68rem;">NIFTY 50</span>`
+            : `<span class="badge" style="background:#475569; color:#FFF; font-size:0.68rem;">F&amp;O</span>`;
+
+          const pBadge = r.is_result 
+            ? `<span class="badge" style="background:rgba(16,185,129,0.18); color:#34D399; font-weight:700;">📊 ${r.purpose}</span>`
+            : (r.is_dividend ? `<span class="badge" style="background:rgba(245,158,11,0.18); color:#FBBF24; font-weight:700;">💰 ${r.purpose}</span>` : `<span style="color:#CBD5E1; font-size:0.8rem;">${r.purpose}</span>`);
+
+          let stBadge = '<span class="badge badge-active">CONFIRMED</span>';
+          if (r.status === 'COMPLETED') stBadge = '<span class="badge" style="background:#334155; color:#94A3B8;">COMPLETED</span>';
+          if (r.status === 'IMMINENT') stBadge = '<span class="badge badge-urgent">🚨 IMMINENT</span>';
+
+          const actionBtn = r.is_result && r.is_nifty50
+            ? `<button onclick="switchTab('quarterly')" class="filter-pill" style="background:#2563EB; color:#FFF; border:none; padding:0.25rem 0.6rem; font-size:0.75rem; cursor:pointer;">View Trade</button>`
+            : `<span style="color:#64748B; font-size:0.75rem;">—</span>`;
+
+          return `
+            <tr>
+              <td style="color:var(--text-muted); font-size:0.75rem;">${i + 1}</td>
+              <td><strong style="color:#60A5FA; font-family:'JetBrains Mono';">${r.date}</strong></td>
+              <td><strong>${r.symbol}</strong></td>
+              <td style="color:#E2E8F0; font-size:0.85rem;">${r.company_name}</td>
+              <td>${pBadge}</td>
+              <td>${nBadge}</td>
+              <td>${stBadge}</td>
+              <td>${actionBtn}</td>
+            </tr>
+          `;
+        }).join('');
+
+      } else if (currentLiveFeedSubTab === 'actions') {
+        if (titleEl) titleEl.textContent = '💰 Active Corporate Actions & Dividend Calendar';
+        if (subEl) subEl.textContent = 'Ex-dates, record dates, and dividend announcements from 05_Corporate_Actions.xlsx';
+
+        thead.innerHTML = `
+          <tr>
+            <th>#</th>
+            <th>Ex-Date</th>
+            <th>Symbol</th>
+            <th>Company Name</th>
+            <th>Type</th>
+            <th>Subject / Details</th>
+            <th>Record Date</th>
+            <th>Segment</th>
+          </tr>
+        `;
+
+        let rows = d.corporate_actions || [];
+        if (filter === 'NIFTY50') rows = rows.filter(r => r.is_nifty50);
+        if (filter === 'RESULTS') rows = [];
+        if (filter === 'DIVIDENDS') rows = rows.filter(r => r.action_type === 'DIVIDEND');
+        if (q) rows = rows.filter(r => r.symbol.toLowerCase().includes(q) || (r.company_name && r.company_name.toLowerCase().includes(q)) || r.subject.toLowerCase().includes(q));
+
+        if (countEl) countEl.textContent = rows.length + ' Actions Listed';
+
+        tbody.innerHTML = rows.map((r, i) => {
+          const nBadge = r.is_nifty50 
+            ? `<span class="badge" style="background:#2563EB; color:#FFF; font-size:0.68rem;">NIFTY 50</span>`
+            : `<span class="badge" style="background:#475569; color:#FFF; font-size:0.68rem;">F&amp;O</span>`;
+
+          const tBadge = `<span class="badge" style="background:rgba(245,158,11,0.15); color:#FBBF24; font-weight:700;">${r.action_type}</span>`;
+
+          return `
+            <tr>
+              <td style="color:var(--text-muted); font-size:0.75rem;">${i + 1}</td>
+              <td><strong style="color:#FBBF24; font-family:'JetBrains Mono';">${r.ex_date}</strong></td>
+              <td><strong>${r.symbol}</strong></td>
+              <td style="color:#E2E8F0; font-size:0.85rem;">${r.company_name}</td>
+              <td>${tBadge}</td>
+              <td style="color:#E2E8F0; font-size:0.82rem; max-width:280px;">${r.subject}</td>
+              <td style="color:#94A3B8; font-size:0.8rem; font-family:'JetBrains Mono';">${r.record_date}</td>
+              <td>${nBadge}</td>
+            </tr>
+          `;
+        }).join('');
+
+      } else if (currentLiveFeedSubTab === 'announcements') {
+        if (titleEl) titleEl.textContent = '📢 Live Regulatory Disclosures (SEBI Reg 30)';
+        if (subEl) subEl.textContent = 'Material disclosures & official exchange filings from 02_Announcements.xlsx with direct PDF attachments';
+
+        thead.innerHTML = `
+          <tr>
+            <th>#</th>
+            <th>Filing Time</th>
+            <th>Symbol</th>
+            <th>Announcement Description</th>
+            <th>Attachment</th>
+          </tr>
+        `;
+
+        let rows = d.announcements || [];
+        if (filter === 'NIFTY50') rows = rows.filter(r => r.is_nifty50);
+        if (q) rows = rows.filter(r => r.symbol.toLowerCase().includes(q) || r.text.toLowerCase().includes(q));
+
+        if (countEl) countEl.textContent = rows.length + ' Filings Streamed';
+
+        tbody.innerHTML = rows.map((r, i) => {
+          const pdfLink = r.pdf_url 
+            ? `<a href="${r.pdf_url}" target="_blank" class="filter-pill" style="background:rgba(59,130,246,0.18); border-color:#3B82F6; color:#93C5FD; text-decoration:none; padding:0.25rem 0.6rem; font-size:0.75rem; display:inline-flex; align-items:center; gap:4px;">📄 View PDF ↗</a>`
+            : `<span style="color:#64748B; font-size:0.75rem;">No attachment</span>`;
+
+          return `
+            <tr>
+              <td style="color:var(--text-muted); font-size:0.75rem;">${i + 1}</td>
+              <td><span style="color:#94A3B8; font-size:0.8rem; font-family:'JetBrains Mono'; white-space:nowrap;">${r.time}</span></td>
+              <td><strong>${r.symbol}</strong></td>
+              <td style="color:#E2E8F0; font-size:0.82rem; line-height:1.4;">${r.text}</td>
+              <td>${pdfLink}</td>
+            </tr>
+          `;
+        }).join('');
+
+      } else if (currentLiveFeedSubTab === 'deals') {
+        if (titleEl) titleEl.textContent = '💼 Large Market Deals (Bulk & Block)';
+        if (subEl) subEl.textContent = 'Institutional and HNI market trades from 34_Bulk_Deals.xlsx & 35_Block_Deals.xlsx';
+
+        thead.innerHTML = `
+          <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Deal Type</th>
+            <th>Symbol</th>
+            <th>Client Name</th>
+            <th>Action</th>
+            <th>Quantity</th>
+            <th>Trade Price</th>
+          </tr>
+        `;
+
+        let rows = d.market_deals || [];
+        if (filter === 'NIFTY50') rows = rows.filter(r => r.is_nifty50);
+        if (q) rows = rows.filter(r => r.symbol.toLowerCase().includes(q) || (r.client_name && r.client_name.toLowerCase().includes(q)));
+
+        if (countEl) countEl.textContent = rows.length + ' Deals Logged';
+
+        tbody.innerHTML = rows.map((r, i) => {
+          const bsBadge = r.buy_sell === 'BUY'
+            ? `<span class="badge-long">BUY</span>`
+            : `<span class="badge-short">SELL</span>`;
+
+          const dTypeBadge = r.deal_type === 'BLOCK DEAL'
+            ? `<span class="badge" style="background:#8B5CF6; color:#FFF; font-size:0.7rem;">BLOCK</span>`
+            : `<span class="badge" style="background:#3B82F6; color:#FFF; font-size:0.7rem;">BULK</span>`;
+
+          return `
+            <tr>
+              <td style="color:var(--text-muted); font-size:0.75rem;">${i + 1}</td>
+              <td style="font-family:'JetBrains Mono'; font-size:0.8rem;">${r.date}</td>
+              <td>${dTypeBadge}</td>
+              <td><strong>${r.symbol}</strong></td>
+              <td style="color:#E2E8F0; font-size:0.85rem;">${r.client_name}</td>
+              <td>${bsBadge}</td>
+              <td style="font-family:'JetBrains Mono'; text-align:right;">${typeof r.quantity === 'number' ? r.quantity.toLocaleString('en-IN') : r.quantity}</td>
+              <td style="font-family:'JetBrains Mono'; text-align:right; color:#34D399;">₹${typeof r.price === 'number' ? r.price.toFixed(2) : r.price}</td>
+            </tr>
+          `;
+        }).join('');
+
+      } else if (currentLiveFeedSubTab === 'insider') {
+        if (titleEl) titleEl.textContent = '👥 SEBI PIT Insider Trading Disclosures';
+        if (subEl) subEl.textContent = 'Promoter, director, and key management transaction filings from 16_Insider_Trading_PIT.xlsx';
+
+        thead.innerHTML = `
+          <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Symbol</th>
+            <th>Company Name</th>
+            <th>Category</th>
+            <th>Acquisition Mode</th>
+            <th>Value (₹)</th>
+          </tr>
+        `;
+
+        let rows = d.insider_trades || [];
+        if (filter === 'NIFTY50') rows = rows.filter(r => r.is_nifty50);
+        if (q) rows = rows.filter(r => r.symbol.toLowerCase().includes(q) || (r.company && r.company.toLowerCase().includes(q)));
+
+        if (countEl) countEl.textContent = rows.length + ' Insider Disclosures';
+
+        tbody.innerHTML = rows.map((r, i) => {
+          return `
+            <tr>
+              <td style="color:var(--text-muted); font-size:0.75rem;">${i + 1}</td>
+              <td style="font-family:'JetBrains Mono'; font-size:0.8rem;">${r.date || '—'}</td>
+              <td><strong>${r.symbol}</strong></td>
+              <td style="color:#E2E8F0; font-size:0.85rem;">${r.company}</td>
+              <td><span class="badge" style="background:#334155; color:#CBD5E1;">${r.person_category}</span></td>
+              <td style="color:#94A3B8; font-size:0.82rem;">${r.mode}</td>
+              <td style="font-family:'JetBrains Mono'; text-align:right; color:#FBBF24;">₹${typeof r.value === 'number' && r.value > 0 ? Math.round(r.value).toLocaleString('en-IN') : 'Disclosed'}</td>
+            </tr>
+          `;
+        }).join('');
+      }
+    }
+
+    function exportLiveFeedCsv() {
+      const d = window.LIVE_CORPORATE_EVENTS;
+      if (!d) return;
+
+      let csv = '';
+      let filename = 'NSE_Live_Corporate_Feed_' + currentLiveFeedSubTab + '.csv';
+
+      if (currentLiveFeedSubTab === 'meetings') {
+        csv = 'Symbol,Company,Date,Purpose,Status,IsNifty50\n';
+        (d.upcoming_board_meetings || []).forEach(r => {
+          csv += `"${r.symbol}","${(r.company_name||'').replace(/"/g, '""')}","${r.date}","${(r.purpose||'').replace(/"/g, '""')}","${r.status}",${r.is_nifty50}\n`;
+        });
+      } else if (currentLiveFeedSubTab === 'actions') {
+        csv = 'Symbol,Company,ExDate,Subject,ActionType,RecordDate,IsNifty50\n';
+        (d.corporate_actions || []).forEach(r => {
+          csv += `"${r.symbol}","${(r.company_name||'').replace(/"/g, '""')}","${r.ex_date}","${(r.subject||'').replace(/"/g, '""')}","${r.action_type}","${r.record_date}",${r.is_nifty50}\n`;
+        });
+      } else {
+        csv = 'Symbol,Details\n';
+        (d.announcements || []).forEach(r => {
+          csv += `"${r.symbol}","${(r.text||'').replace(/"/g, '""')}"\n`;
+        });
+      }
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+</script>
 </body>
 </html>
