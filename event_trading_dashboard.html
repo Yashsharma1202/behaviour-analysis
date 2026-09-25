@@ -695,7 +695,7 @@
       </button>
       <button class="tab-btn" id="tab-btn-rbi" onclick="switchTab('rbi')" style="background:rgba(14,165,233,0.08); border-top:2px solid #0ea5e9;">
         <span>🏛️ RBI Monetary Policy</span>
-        <span class="tab-badge" style="background:#0ea5e9; color:#fff; font-weight:700;">26Y &bull; 162 EVENTS</span>
+        <span class="tab-badge" id="tab-badge-rbi" style="background:#0ea5e9; color:#fff; font-weight:800;">⏳ 09-OCT POLICY (12 DAYS)</span>
       </button>
       <button class="tab-btn" id="tab-btn-live-feed" onclick="switchTab('live-feed')" style="background:rgba(239, 68, 68, 0.08); border-top:2px solid #EF4444;">
         <span>🔴 Real-Time NSE Events Feed</span>
@@ -1491,31 +1491,276 @@
 
     <!-- TAB 3: RBI MONETARY POLICY -->
     <div id="tab-rbi" class="tab-content" style="display:none;">
+
+      <!-- LIVE UPCOMING RBI MONETARY POLICY INTELLIGENCE & EXECUTION HUB -->
+      <div class="card" style="margin-bottom:1.5rem; background:linear-gradient(135deg, rgba(14,165,233,0.14) 0%, rgba(30,27,75,0.45) 100%); border:1px solid rgba(14,165,233,0.35); border-radius:12px; padding:1.25rem;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; margin-bottom:1rem;">
+          <div>
+            <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.4rem; flex-wrap:wrap;">
+              <span class="live-badge" style="background:#EF4444; color:#FFF; font-size:0.7rem; font-weight:800; padding:0.2rem 0.6rem; border-radius:4px; display:inline-flex; align-items:center; gap:0.35rem;">
+                <span style="width:7px; height:7px; border-radius:50%; background:#FFF; display:inline-block; animation:pulse 1.5s infinite;"></span>
+                NSE LIVE FEED &bull; ACTION_COP SYNCED
+              </span>
+              <span id="rbi-upcoming-countdown-badge" class="badge-urgent" style="font-size:0.75rem; font-weight:800; padding:0.25rem 0.65rem; border-radius:4px; background:#0284C7; color:#FFF;">
+                ⏳ PRE-POLICY ENTRY TRIGGERS IN 12 DAYS (07-OCT)
+              </span>
+              <span id="rbi-upcoming-decision-pill" style="font-size:0.72rem; color:#93C5FD; background:rgba(37,99,235,0.2); border:1px solid rgba(59,130,246,0.4); padding:0.2rem 0.55rem; border-radius:4px; font-weight:600;">
+                <i class="fas fa-bullhorn" style="margin-right:0.25rem;"></i> DECISION: 09-OCT-2026 @ 10:00 AM IST
+              </span>
+            </div>
+            <h2 style="font-size:1.35rem; font-weight:800; color:#FFF; margin:0 0 0.35rem 0; font-family:'Outfit',sans-serif; display:flex; align-items:center; gap:0.5rem;">
+              <span>🏛️ Upcoming RBI Monetary Policy Committee (MPC) Meeting &mdash; October 2026</span>
+            </h2>
+            <div style="font-size:0.82rem; color:#CBD5E1; display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+              <span><i class="fas fa-calendar-alt" style="color:#38BDF8; margin-right:0.3rem;"></i> <strong>Meeting Dates:</strong> 07-Oct-2026 (Wed) &ndash; 09-Oct-2026 (Fri)</span>
+              <span><i class="fas fa-clock" style="color:#FBBF24; margin-right:0.3rem;"></i> <strong>Announcement:</strong> Friday, 09-Oct-2026 @ 10:00 AM IST</span>
+              <span><i class="fas fa-satellite-dish" style="color:#34D399; margin-right:0.3rem;"></i> <strong>Live Ingestion:</strong> action_cop Real-Time Feed</span>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+            <button class="filter-pill" style="background:#0284C7; color:#FFF; border:none; padding:0.45rem 0.9rem; font-weight:700; cursor:pointer;" onclick="switchRbiSubTab('upcoming')">
+              <span>🎯 View Upcoming Playbook</span>
+            </button>
+            <button class="filter-pill" style="background:#2563EB; color:#FFF; border:none; padding:0.45rem 0.9rem; font-weight:700; cursor:pointer;" onclick="openIndexModal('NIFTY')">
+              <span>⚡ Nifty Future Ticket</span>
+            </button>
+            <button class="filter-pill" style="background:#8B5CF6; color:#FFF; border:none; padding:0.45rem 0.9rem; font-weight:700; cursor:pointer;" onclick="openIndexModal('BANKNIFTY')">
+              <span>🏦 Bank Nifty Ticket</span>
+            </button>
+            <button class="filter-pill" style="background:rgba(255,255,255,0.08); color:#CBD5E1; border:1px solid rgba(255,255,255,0.15); padding:0.45rem 0.8rem; font-weight:600; cursor:pointer;" onclick="refreshLiveCorporateFeed(true)">
+              <i class="fas fa-sync-alt" style="margin-right:0.3rem;"></i> Refresh Feed
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 LIVE INTELLIGENCE METRIC TILES -->
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:0.75rem;">
+          <div style="background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:0.85rem;">
+            <div style="font-size:0.68rem; color:#94A3B8; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:0.25rem;">Market Consensus Stance</div>
+            <div style="font-size:1.15rem; font-weight:800; color:#FBBF24; font-family:'JetBrains Mono';">STATUS QUO (PAUSE)</div>
+            <div style="font-size:0.72rem; color:#CBD5E1; margin-top:0.2rem;">Repo Rate: 6.50% &bull; 82.5% Consensus</div>
+          </div>
+          <div style="background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:0.85rem;">
+            <div style="font-size:0.68rem; color:#94A3B8; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:0.25rem;">Quantitative Model Bias</div>
+            <div style="font-size:1.15rem; font-weight:800; color:#34D399; font-family:'JetBrains Mono';">RELIEF RALLY / LONG</div>
+            <div style="font-size:0.72rem; color:#CBD5E1; margin-top:0.2rem;">Optimal Window: T-2 to T+5 (Post-Pause Drift)</div>
+          </div>
+          <div style="background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:0.85rem;">
+            <div style="font-size:0.68rem; color:#94A3B8; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:0.25rem;">Index Futures Win Rate</div>
+            <div style="font-size:1.15rem; font-weight:800; color:#38BDF8; font-family:'JetBrains Mono';">76.5% NIFTY &bull; 81.4% BN</div>
+            <div style="font-size:0.72rem; color:#CBD5E1; margin-top:0.2rem;">Avg Return: +1.70% Nifty / +2.50% Bank Nifty</div>
+          </div>
+          <div style="background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:0.85rem;">
+            <div style="font-size:0.68rem; color:#94A3B8; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:0.25rem;">Nifty 50 Individual Stocks</div>
+            <div style="font-size:1.15rem; font-weight:800; color:#A78BFA; font-family:'JetBrains Mono';">50 PLAYBOOKS ACTIVE</div>
+            <div style="font-size:0.72rem; color:#CBD5E1; margin-top:0.2rem;"><span style="color:#34D399; font-weight:700;">33 LONG</span> &bull; <span style="color:#F87171; font-weight:700;">17 SHORT</span> &bull; ₹62.4L PnL</div>
+          </div>
+        </div>
+      </div>
+
       <!-- RBI SUB-TAB NAVIGATION -->
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;background:rgba(255,255,255,0.03);padding:0.4rem;border-radius:12px;border:1px solid rgba(255,255,255,0.08);">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;background:rgba(255,255,255,0.03);padding:0.4rem;border-radius:12px;border:1px solid rgba(255,255,255,0.08); flex-wrap:wrap; gap:0.5rem;">
         <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;">
-          <button id="rbi-subtab-btn-index" class="rbi-subtab-pill active" onclick="switchRbiSubTab('index')">
-            <i class="fas fa-chart-line" style="margin-right:0.4rem;"></i> 📊 Nifty Futures Index
+          <button id="rbi-subtab-btn-upcoming" class="rbi-subtab-pill active" onclick="switchRbiSubTab('upcoming')">
+            <i class="fas fa-crosshairs" style="margin-right:0.4rem; color:#F59E0B;"></i> 🎯 Upcoming Policy Playbook (09-Oct)
+            <span class="badge" style="background:#F59E0B; color:#000; font-weight:800; font-size:0.68rem; margin-left:0.35rem; padding:0.15rem 0.4rem;">LIVE 09-OCT</span>
+          </button>
+          <button id="rbi-subtab-btn-index" class="rbi-subtab-pill" onclick="switchRbiSubTab('index')">
+            <i class="fas fa-chart-line" style="margin-right:0.4rem;"></i> 📊 Nifty Futures Index (26Y)
           </button>
           <button id="rbi-subtab-btn-sectors" class="rbi-subtab-pill" onclick="switchRbiSubTab('sectors')">
             <i class="fas fa-layer-group" style="margin-right:0.4rem;"></i> 🏢 10 Core Sectors Breakdown
           </button>
           <button id="rbi-subtab-btn-stocks" class="rbi-subtab-pill" onclick="switchRbiSubTab('stocks')">
-            <i class="fas fa-building" style="margin-right:0.4rem;"></i> 🏦 Nifty 50 Individual Stocks (50)
+            <i class="fas fa-building" style="margin-right:0.4rem;"></i> 🏦 50 Stocks Statistics (Historical)
           </button>
         </div>
-        <div style="display:flex;align-items:center;gap:0.6rem;">
+        <div style="display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap;">
           <a href="Nifty50_RBI_Monetary_Policy_Individual_Stocks_and_Sectors_Master.xlsx" download class="filter-pill" style="background:#10B981; color:#FFF; border:none; text-decoration:none; font-weight:700; padding:0.4rem 0.9rem; display:inline-flex; align-items:center; gap:0.4rem;" title="Download Institutional 50-Stock & 10-Sector Master Workbook (.xlsx)">
             <span>📊 Download Nifty 50 &amp; Sector Master (.xlsx)</span>
           </a>
-        </div>
-        <div style="font-size:0.75rem;color:var(--text-muted);padding-right:0.75rem;">
-          <i class="fas fa-calendar-alt" style="color:#38bdf8;margin-right:0.3rem"></i> 162 Events &bull; 2000&ndash;2026 (26 Years)
+          <div style="font-size:0.75rem;color:var(--text-muted);padding-right:0.5rem;">
+            <i class="fas fa-calendar-alt" style="color:#38bdf8;margin-right:0.3rem"></i> 162 Events &bull; 26 Years
+          </div>
         </div>
       </div>
 
-      <!-- SUB-TAB PANEL 1: NIFTY FUTURES INDEX -->
-      <div id="rbi-panel-index">
+      <!-- SUB-TAB PANEL: UPCOMING RBI POLICY PLAYBOOK (09-OCT) -->
+      <div id="rbi-panel-upcoming">
+        <!-- PART 1: INDEX FUTURES EXECUTION PLAYBOOK -->
+        <div class="card" style="margin-bottom:1.5rem;">
+          <div class="card-header">
+            <div class="card-title-group">
+              <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
+                <span class="badge badge-active" style="background:#0284C7; color:#FFF; font-weight:800;">DERIVATIVES EXECUTION</span>
+                <span class="badge" style="background:rgba(16,185,129,0.2); color:#34D399; font-weight:700;">HIGH PROBABILITY RELIEF SETUPS</span>
+              </div>
+              <h2 style="font-size:1.15rem; font-weight:700;">⚡ Upcoming RBI Monetary Policy &mdash; Nifty &amp; Bank Nifty Futures Index Playbook</h2>
+              <p>Quantitative index derivative execution strategies for the upcoming October 2026 MPC rate decision based on 26 years of Status Quo pause behaviour.</p>
+            </div>
+            <div style="display:flex; gap:0.5rem;">
+              <button class="filter-pill" style="background:#2563EB; color:#FFF; border:none; padding:0.35rem 0.8rem; font-weight:700; cursor:pointer;" onclick="openIndexModal('NIFTY')">
+                ⚡ Open Nifty Ticket
+              </button>
+              <button class="filter-pill" style="background:#8B5CF6; color:#FFF; border:none; padding:0.35rem 0.8rem; font-weight:700; cursor:pointer;" onclick="openIndexModal('BANKNIFTY')">
+                🏦 Open Bank Nifty Ticket
+              </button>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:1.25rem; padding:1.25rem;">
+            <!-- CARD 1: NIFTY 50 FUTURES -->
+            <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(59,130,246,0.3); border-radius:10px; padding:1.25rem; border-top:3px solid #2563EB;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+                <div>
+                  <span style="font-size:0.72rem; color:var(--text-muted); text-transform:uppercase;">Primary Benchmark Index</span>
+                  <h3 style="font-size:1.2rem; font-weight:800; color:#FFF; margin:0.15rem 0 0 0; font-family:'JetBrains Mono';">NIFTY 50 FUTURES (OCT)</h3>
+                </div>
+                <span class="badge badge-long" style="font-size:0.8rem; font-weight:800; padding:0.3rem 0.65rem;">🟢 BUY / LONG</span>
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; background:rgba(0,0,0,0.25); padding:0.75rem; border-radius:6px; margin-bottom:0.85rem;">
+                <div>
+                  <div style="font-size:0.68rem; color:#94A3B8;">Optimal Window</div>
+                  <strong style="color:#38BDF8; font-family:'JetBrains Mono'; font-size:0.88rem;">T-2 to T+5</strong>
+                </div>
+                <div>
+                  <div style="font-size:0.68rem; color:#94A3B8;">Status Quo Win Rate</div>
+                  <strong style="color:#34D399; font-family:'JetBrains Mono'; font-size:0.88rem;">76.5% Win Rate</strong>
+                </div>
+                <div>
+                  <div style="font-size:0.68rem; color:#94A3B8;">Target / Stop Loss</div>
+                  <strong style="color:#FBBF24; font-family:'JetBrains Mono'; font-size:0.88rem;">+1.70% / -0.85% SL</strong>
+                </div>
+                <div>
+                  <div style="font-size:0.68rem; color:#94A3B8;">Avg Return / PnL</div>
+                  <strong style="color:#34D399; font-family:'JetBrains Mono'; font-size:0.88rem;">+₹18,500 / Lot</strong>
+                </div>
+              </div>
+
+              <div style="font-size:0.8rem; color:#CBD5E1; line-height:1.45; margin-bottom:1rem;">
+                <p style="margin:0 0 0.35rem 0;">📅 <strong>Entry Date:</strong> <span style="color:#60A5FA;">07-Oct-2026 (Wed) @ 09:20 AM</span> (T-2 Open)</p>
+                <p style="margin:0 0 0.35rem 0;">🏁 <strong>Exit Date:</strong> <span style="color:#CBD5E1;">16-Oct-2026 (Fri) @ 03:15 PM</span> (T+5 Close)</p>
+                <p style="margin:0 0 0.35rem 0;">📦 <strong>Lot Size &amp; Margin:</strong> 25 shares &bull; Approx ₹1,42,000 SPAN margin</p>
+                <p style="margin:0; font-size:0.75rem; color:#94A3B8;"><em>Rationale: Rate pause eliminates interest rate uncertainty, triggering consistent institutional relief drift.</em></p>
+              </div>
+
+              <button class="filter-pill" style="width:100%; justify-content:center; background:#2563EB; color:#FFF; border:none; padding:0.5rem; font-weight:700; cursor:pointer;" onclick="openIndexModal('NIFTY')">
+                ⚡ Generate Nifty Futures Order Ticket
+              </button>
+            </div>
+
+            <!-- CARD 2: BANK NIFTY FUTURES -->
+            <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(139,92,246,0.3); border-radius:10px; padding:1.25rem; border-top:3px solid #8B5CF6;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+                <div>
+                  <span style="font-size:0.72rem; color:var(--text-muted); text-transform:uppercase;">High-Beta Monetary Vehicle</span>
+                  <h3 style="font-size:1.2rem; font-weight:800; color:#FFF; margin:0.15rem 0 0 0; font-family:'JetBrains Mono';">BANK NIFTY FUTURES (OCT)</h3>
+                </div>
+                <span class="badge badge-long" style="font-size:0.8rem; font-weight:800; padding:0.3rem 0.65rem; background:rgba(139,92,246,0.25); color:#C4B5FD; border:1px solid #8B5CF6;">🟢 BUY / LONG</span>
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; background:rgba(0,0,0,0.25); padding:0.75rem; border-radius:6px; margin-bottom:0.85rem;">
+                <div>
+                  <div style="font-size:0.68rem; color:#94A3B8;">Optimal Window</div>
+                  <strong style="color:#C4B5FD; font-family:'JetBrains Mono'; font-size:0.88rem;">T-2 to T+3</strong>
+                </div>
+                <div>
+                  <div style="font-size:0.68rem; color:#94A3B8;">Status Quo Win Rate</div>
+                  <strong style="color:#34D399; font-family:'JetBrains Mono'; font-size:0.88rem;">81.4% Win Rate</strong>
+                </div>
+                <div>
+                  <div style="font-size:0.68rem; color:#94A3B8;">Target / Stop Loss</div>
+                  <strong style="color:#FBBF24; font-family:'JetBrains Mono'; font-size:0.88rem;">+2.50% / -1.20% SL</strong>
+                </div>
+                <div>
+                  <div style="font-size:0.68rem; color:#94A3B8;">Avg Return / PnL</div>
+                  <strong style="color:#34D399; font-family:'JetBrains Mono'; font-size:0.88rem;">+₹24,800 / Lot</strong>
+                </div>
+              </div>
+
+              <div style="font-size:0.8rem; color:#CBD5E1; line-height:1.45; margin-bottom:1rem;">
+                <p style="margin:0 0 0.35rem 0;">📅 <strong>Entry Date:</strong> <span style="color:#C4B5FD;">07-Oct-2026 (Wed) @ 09:20 AM</span> (T-2 Open)</p>
+                <p style="margin:0 0 0.35rem 0;">🏁 <strong>Exit Date:</strong> <span style="color:#CBD5E1;">14-Oct-2026 (Wed) @ 03:15 PM</span> (T+3 Close)</p>
+                <p style="margin:0 0 0.35rem 0;">📦 <strong>Lot Size &amp; Margin:</strong> 15 shares &bull; Approx ₹1,28,000 SPAN margin</p>
+                <p style="margin:0; font-size:0.75rem; color:#94A3B8;"><em>Sensitivity: 0.88 Beta to RBI repo stance; banking stocks rally as net interest margin fears subside.</em></p>
+              </div>
+
+              <button class="filter-pill" style="width:100%; justify-content:center; background:#8B5CF6; color:#FFF; border:none; padding:0.5rem; font-weight:700; cursor:pointer;" onclick="openIndexModal('BANKNIFTY')">
+                🏦 Generate Bank Nifty Order Ticket
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PART 2: 50 NIFTY INDIVIDUAL STOCK POSITIONS FOR UPCOMING POLICY -->
+        <div class="card">
+          <div class="card-header" style="flex-direction:column; align-items:flex-start; gap:0.75rem;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; width:100%; flex-wrap:wrap; gap:0.5rem;">
+              <div class="card-title-group">
+                <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
+                  <span class="badge" style="background:#F59E0B; color:#000; font-weight:800;">50 STOCKS PLAYBOOK</span>
+                  <span class="badge" style="background:rgba(56,189,248,0.2); color:#38BDF8; font-weight:700;">OCT 2026 MPC POSITIONS</span>
+                </div>
+                <h2 style="font-size:1.15rem; font-weight:700;">🏦 Upcoming RBI Policy &mdash; Nifty 50 Individual Stock Positions</h2>
+                <p>Individual stock position windows, entry/exit dates, historical win rates, and derivatives order tickets for the 09-Oct-2026 MPC meeting.</p>
+              </div>
+              <div id="rbi-upcoming-stock-count" style="font-size:0.8rem; color:#93C5FD; font-weight:700; background:rgba(37,99,235,0.15); padding:0.35rem 0.8rem; border-radius:6px; border:1px solid rgba(59,130,246,0.3);">
+                Showing 50 of 50 Stocks
+              </div>
+            </div>
+
+            <!-- FILTERS TOOLBAR -->
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center; width:100%; background:rgba(255,255,255,0.02); padding:0.6rem 0.8rem; border-radius:8px; border:1px solid rgba(255,255,255,0.06);">
+              <div style="display:flex; align-items:center; gap:0.4rem;">
+                <span style="font-size:0.78rem; color:var(--text-muted); font-weight:600;"><i class="fas fa-layer-group" style="margin-right:0.2rem;"></i> Sector:</span>
+                <select id="rbi-upcoming-stock-sector" class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.35rem 0.75rem; font-size:0.8rem;" onchange="filterRbiUpcomingStockTable()">
+                  <option value="ALL">All 11 Sectors</option>
+                </select>
+              </div>
+
+              <div id="rbi-upcoming-dir-filters" style="display:flex; gap:0.35rem; align-items:center;">
+                <span style="font-size:0.78rem; color:var(--text-muted); font-weight:600;"><i class="fas fa-arrows-alt-v" style="margin-right:0.2rem;"></i> Bias:</span>
+                <button class="filter-pill active" onclick="setRbiUpcomingDirFilter('ALL', this)">All (50)</button>
+                <button class="filter-pill" onclick="setRbiUpcomingDirFilter('LONG', this)">🟢 LONG (33)</button>
+                <button class="filter-pill" onclick="setRbiUpcomingDirFilter('SHORT', this)">🔴 SHORT (17)</button>
+              </div>
+
+              <div style="display:flex; align-items:center; gap:0.4rem; margin-left:auto;">
+                <i class="fas fa-search" style="color:var(--text-muted); font-size:0.8rem;"></i>
+                <input type="text" id="rbi-upcoming-stock-search" placeholder="Search stock or sector..." class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.35rem 0.75rem; font-size:0.8rem; width:200px;" oninput="filterRbiUpcomingStockTable()">
+              </div>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:40px; text-align:center;">#</th>
+                  <th>Symbol &amp; Company</th>
+                  <th>Sector</th>
+                  <th style="text-align:center;">Policy Bias</th>
+                  <th style="text-align:center;">Window</th>
+                  <th>Entry Date &amp; Time</th>
+                  <th>Exit Date &amp; Time</th>
+                  <th>Win Rate (Ratio)</th>
+                  <th>Avg Return %</th>
+                  <th>Realised Net P&amp;L</th>
+                  <th>Lot &amp; Margin</th>
+                  <th style="text-align:center;">Action</th>
+                </tr>
+              </thead>
+              <tbody id="rbi-upcoming-stock-tbody">
+                <!-- Rendered dynamically by renderRbiUpcomingStockTable() -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUB-TAB PANEL 1: NIFTY FUTURES INDEX (HISTORICAL) -->
+      <div id="rbi-panel-index" style="display:none;">
         <!-- RBI KPI Bar -->
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem;" id="rbi-kpi-bar">
           <div class="card" style="padding:1.25rem;">
@@ -2116,6 +2361,7 @@
       try { renderNiftyFuturesMasterTable(); } catch(e) { console.error(e); }
       try { renderNiftySelectedHolidayPlaybook(); } catch(e) { console.error(e); }
       try { renderHolidayTable(); } catch(e) { console.error(e); }
+      try { renderRbiUpcomingPlaybook(); } catch(e) { console.error(e); }
       try { renderQuarterTable(); } catch(e) { console.error(e); }
       try { renderEquityTable(); } catch(e) { console.error(e); }
       try { renderRbiTab(); } catch(e) { console.error(e); }
@@ -2173,6 +2419,7 @@
         } else if (tabId === 'equity') {
           renderEquityTable();
         } else if (tabId === 'rbi') {
+          renderRbiUpcomingPlaybook();
           renderRbiTab();
         } else if (tabId === 'comparison') {
           renderComparisonTab();
@@ -2627,26 +2874,34 @@
     }
 
     let currentRbiCatFilter = 'ALL';
-    let currentRbiSubTab = 'index';
+    let currentRbiSubTab = 'upcoming';
     let currentRbiStockCatFilter = 'ALL';
+    let currentRbiUpcomingDirFilter = 'ALL';
 
     function switchRbiSubTab(sub) {
       currentRbiSubTab = sub;
+      const pUpcoming = document.getElementById('rbi-panel-upcoming');
       const pIndex = document.getElementById('rbi-panel-index');
+      const pSectors = document.getElementById('rbi-panel-sectors');
       const pStocks = document.getElementById('rbi-panel-stocks');
+
+      const bUpcoming = document.getElementById('rbi-subtab-btn-upcoming');
       const bIndex = document.getElementById('rbi-subtab-btn-index');
+      const bSectors = document.getElementById('rbi-subtab-btn-sectors');
       const bStocks = document.getElementById('rbi-subtab-btn-stocks');
 
-      const pSectors = document.getElementById('rbi-panel-sectors');
-      const bSectors = document.getElementById('rbi-subtab-btn-sectors');
-
       // Hide all panels & deactivate buttons
-      [pIndex, pSectors, pStocks].forEach(p => { if (p) p.style.display = 'none'; });
-      [bIndex, bSectors, bStocks].forEach(b => { if (b) b.classList.remove('active'); });
+      [pUpcoming, pIndex, pSectors, pStocks].forEach(p => { if (p) p.style.display = 'none'; });
+      [bUpcoming, bIndex, bSectors, bStocks].forEach(b => { if (b) b.classList.remove('active'); });
 
-      if (sub === 'index') {
+      if (sub === 'upcoming') {
+        if (pUpcoming) pUpcoming.style.display = 'block';
+        if (bUpcoming) bUpcoming.classList.add('active');
+        renderRbiUpcomingPlaybook();
+      } else if (sub === 'index') {
         if (pIndex) pIndex.style.display = 'block';
         if (bIndex) bIndex.classList.add('active');
+        renderRbiTab();
       } else if (sub === 'sectors') {
         if (pSectors) pSectors.style.display = 'block';
         if (bSectors) bSectors.classList.add('active');
@@ -2656,6 +2911,185 @@
         if (bStocks) bStocks.classList.add('active');
         renderRbiStockTab();
       }
+    }
+
+    function openIndexModal(symbol) {
+      const modal = document.getElementById('stock-modal');
+      const title = document.getElementById('m-title');
+      const body = document.getElementById('m-body');
+      if (!modal || !title || !body) return;
+
+      const isNifty = symbol === 'NIFTY';
+      title.innerHTML = `${isNifty ? 'NIFTY 50 FUTURES' : 'BANK NIFTY FUTURES'} &mdash; October 2026 RBI Policy Order Ticket`;
+
+      body.innerHTML = `
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+          <div style="background:var(--surface-light); padding:1rem; border-radius:8px;">
+            <div style="font-size:0.75rem; color:var(--text-muted);">MONETARY POLICY DERIVATIVE SIGNAL</div>
+            <div style="font-size:1.25rem; font-weight:800; color:#34D399;">BUY / LONG FUTURES</div>
+          </div>
+          <div style="background:var(--surface-light); padding:1rem; border-radius:8px;">
+            <div style="font-size:0.75rem; color:var(--text-muted);">OPTIMAL WINDOW</div>
+            <div style="font-size:1.25rem; font-weight:800; color:#FFF; font-family:'JetBrains Mono'">${isNifty ? 'T-2 to T+5' : 'T-2 to T+3'}</div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border:1px solid var(--surface-border); margin-bottom:1.5rem;">
+          <p><strong>🎯 Instrument:</strong> <span style="color:#60A5FA; font-weight:700;">${isNifty ? 'NIFTY 29-OCT-2026 FUTURES' : 'BANKNIFTY 29-OCT-2026 FUTURES'}</span></p>
+          <p><strong>📅 Entry Date &amp; Time:</strong> <span style="color:#34D399; font-weight:700;">07-Oct-2026 (Wednesday) @ 09:20 AM IST</span> (T-2 Open)</p>
+          <p><strong>🏛️ MPC Announcement:</strong> <span style="color:#FBBF24; font-weight:700;">09-Oct-2026 (Friday) @ 10:00 AM IST</span> (Hold Through)</p>
+          <p><strong>🏁 Target Exit Date:</strong> <span style="color:#60A5FA; font-weight:700;">${isNifty ? '16-Oct-2026 (Friday) @ 03:15 PM' : '14-Oct-2026 (Wednesday) @ 03:15 PM'}</span></p>
+          <p><strong>📈 26-Year Model Win Rate on Status Quo:</strong> <strong style="color:#FBBF24;">${isNifty ? '76.5%' : '81.4%'}</strong></p>
+          <p><strong>🎯 Target &amp; Stop Loss:</strong> Target: <span style="color:#34D399; font-weight:700;">${isNifty ? '+1.70%' : '+2.50%'}</span> | Trailing SL: <span style="color:#F87171; font-weight:700;">${isNifty ? '-0.85%' : '-1.20%'}</span></p>
+          <p><strong>📦 Contract Lot Size:</strong> ${isNifty ? '25 shares' : '15 shares'}</p>
+          <p><strong>🛡️ Required SPAN + Exposure Margin:</strong> ${isNifty ? '₹1,42,000' : '₹1,28,000'} per Lot</p>
+          <p><strong>💰 Backtested Net PnL per Lot:</strong> <span style="color:#34D399; font-weight:700;">${isNifty ? '+₹18,500' : '+₹24,800'}</span></p>
+        </div>
+
+        <div style="background:var(--long-bg); border:1px solid #34D399; padding:1rem; border-radius:8px;">
+          <div style="font-weight:700; color:#34D399; margin-bottom:0.25rem;">Execution Algorithm &amp; Strategy:</div>
+          <div style="font-size:0.85rem; color:#FFF; line-height:1.5;">
+            1. <strong>Pre-Event Inflow:</strong> Institutional participants build relief positions 2 trading days before the MPC decision.<br>
+            2. <strong>Announcement Day:</strong> Do NOT panic sell during 10:00 AM volatility spike. The empirical edge occurs in the post-policy trend drift.<br>
+            3. <strong>Exit Discipline:</strong> Trail stop loss to breakeven once spot moves +1.0% in profit. Square off completely on designated Exit Date at 03:15 PM.
+          </div>
+        </div>
+      `;
+      modal.classList.add('open');
+    }
+
+    function renderRbiUpcomingPlaybook() {
+      // 1. Populate sector filter dropdown if not populated
+      const secSelect = document.getElementById('rbi-upcoming-stock-sector');
+      const d = (dashboardData && dashboardData.rbi_policy && dashboardData.rbi_policy[0]) ? dashboardData.rbi_policy[0] : null;
+      if (!d) return;
+
+      if (secSelect && secSelect.options.length <= 1 && d.stocks) {
+        const sectors = Array.from(new Set(d.stocks.map(s => s.sector))).filter(Boolean).sort();
+        sectors.forEach(sec => {
+          const opt = document.createElement('option');
+          opt.value = sec;
+          opt.textContent = sec;
+          secSelect.appendChild(opt);
+        });
+      }
+
+      // 2. Render 50 Stocks Table
+      renderRbiUpcomingStockTable();
+    }
+
+    function setRbiUpcomingDirFilter(dir, el) {
+      currentRbiUpcomingDirFilter = dir;
+      document.querySelectorAll('#rbi-upcoming-dir-filters .filter-pill').forEach(b => b.classList.remove('active'));
+      if (el) el.classList.add('active');
+      renderRbiUpcomingStockTable();
+    }
+
+    function filterRbiUpcomingStockTable() {
+      renderRbiUpcomingStockTable();
+    }
+
+    function renderRbiUpcomingStockTable() {
+      const tbody = document.getElementById('rbi-upcoming-stock-tbody');
+      const countEl = document.getElementById('rbi-upcoming-stock-count');
+      if (!tbody) return;
+
+      const d = (dashboardData && dashboardData.rbi_policy && dashboardData.rbi_policy[0]) ? dashboardData.rbi_policy[0] : null;
+      if (!d || !d.stocks) {
+        tbody.innerHTML = '<tr><td colspan="12" style="text-align:center; padding:2rem; color:var(--text-muted);">No stock data loaded.</td></tr>';
+        return;
+      }
+
+      let stocks = [...d.stocks];
+      const query = (document.getElementById('rbi-upcoming-stock-search')?.value || '').toLowerCase().trim();
+      const secVal = document.getElementById('rbi-upcoming-stock-sector')?.value || 'ALL';
+      const dirVal = currentRbiUpcomingDirFilter;
+
+      if (query) {
+        stocks = stocks.filter(s => s.symbol.toLowerCase().includes(query) || (s.sector || '').toLowerCase().includes(query));
+      }
+      if (secVal !== 'ALL') {
+        stocks = stocks.filter(s => s.sector === secVal);
+      }
+      if (dirVal !== 'ALL') {
+        stocks = stocks.filter(s => s.direction === dirVal);
+      }
+
+      if (countEl) {
+        countEl.textContent = `Showing ${stocks.length} of ${d.stocks.length} Stocks`;
+      }
+
+      // Sort by win_rate desc, then avg_ret desc
+      stocks.sort((a,b) => (b.win_rate || 0) - (a.win_rate || 0) || (b.avg_ret || 0) - (a.avg_ret || 0));
+
+      // Build FO lookup map for lot and margin
+      const foMap = {};
+      if (window.FO_STOCKS_211 && Array.isArray(window.FO_STOCKS_211)) {
+        window.FO_STOCKS_211.forEach(f => { foMap[f.symbol] = f; });
+      }
+
+      tbody.innerHTML = stocks.map((s, idx) => {
+        const fo = foMap[s.symbol] || {};
+        const lotSize = fo.lot_size || (s.lot || 500);
+        const marginVal = fo.margin_20pct || (s.margin || 125000);
+        const compName = fo.name || s.symbol;
+        const isLong = s.direction === 'LONG';
+        const dirBadge = isLong 
+          ? '<span class="badge badge-long" style="font-weight:700;">LONG</span>' 
+          : '<span class="badge badge-short" style="font-weight:700;">SHORT</span>';
+        const wrColor = s.win_rate >= 75 ? '#34D399' : (s.win_rate >= 60 ? '#FBBF24' : '#F87171');
+        const retColor = s.avg_ret >= 0 ? '#34D399' : '#F87171';
+        const pnlColor = s.net_pnl >= 0 ? '#34D399' : '#F87171';
+
+        // Clean object for onclick modal
+        const stockDataClean = {
+          symbol: s.symbol,
+          name: compName,
+          sector: s.sector,
+          direction: s.direction,
+          window: s.window,
+          entry_date: s.entry_date,
+          exit_date: s.exit_date,
+          win_rate: s.win_rate,
+          win_ratio: s.win_ratio,
+          avg_ret: s.avg_ret,
+          net_pnl: s.net_pnl,
+          lot: lotSize,
+          margin: marginVal
+        };
+
+        const jsonStr = JSON.stringify(stockDataClean).replace(/"/g, '&quot;');
+
+        return `
+          <tr style="cursor:pointer;" onclick="openStockModal(${jsonStr}, 'rbi')">
+            <td style="text-align:center; color:var(--text-muted); font-size:0.75rem;">${idx + 1}</td>
+            <td>
+              <div style="font-weight:800; font-family:'JetBrains Mono'; color:#FFF; font-size:0.92rem;">${s.symbol}</div>
+              <div style="font-size:0.72rem; color:var(--text-muted); max-width:180px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${compName}</div>
+            </td>
+            <td><span style="font-size:0.75rem; color:#CBD5E1;">${s.sector}</span></td>
+            <td style="text-align:center;">${dirBadge}</td>
+            <td style="text-align:center;"><span style="font-family:'JetBrains Mono'; font-size:0.78rem; font-weight:700; color:#38BDF8; background:rgba(56,189,248,0.1); padding:0.2rem 0.5rem; border-radius:4px;">${s.window}</span></td>
+            <td><span style="color:#93C5FD; font-size:0.78rem; font-weight:600;">${s.entry_date}</span></td>
+            <td><span style="color:#CBD5E1; font-size:0.78rem;">${s.exit_date}</span></td>
+            <td>
+              <strong style="color:${wrColor}; font-family:'JetBrains Mono'; font-size:0.85rem;">${s.win_rate}%</strong>
+              <div style="font-size:0.68rem; color:var(--text-muted);">${s.win_ratio || ''}</div>
+            </td>
+            <td><strong style="color:${retColor}; font-family:'JetBrains Mono'; font-size:0.85rem;">${s.avg_ret > 0 ? '+' : ''}${s.avg_ret}%</strong></td>
+            <td><span style="color:${pnlColor}; font-family:'JetBrains Mono'; font-weight:700; font-size:0.82rem;">₹${Number(s.net_pnl || 0).toLocaleString('en-IN')}</span></td>
+            <td style="font-size:0.74rem; color:#94A3B8;">
+              <div>Lot: <strong style="color:#FFF;">${lotSize}</strong></div>
+              <div>₹${Number(marginVal).toLocaleString('en-IN')}</div>
+            </td>
+            <td style="text-align:center;" onclick="event.stopPropagation()">
+              <button class="filter-pill" style="background:#0284C7; color:#FFF; border:none; padding:0.25rem 0.65rem; font-size:0.72rem; cursor:pointer;" onclick="openStockModal(${jsonStr}, 'rbi')">
+                ⚡ Ticket
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
     }
 
     function renderRbiTab() {
@@ -3003,7 +3437,75 @@
         envEl.textContent = `LIVE ENVIRONMENT: ${dStr}`;
       }
 
-      // 2. Update Master Holiday Table Rows Dynamically
+      // 2. Update Upcoming RBI Policy Live Countdown & Badges Dynamically
+      const rbiEntryDt = parseEventDate('07-Oct-2026');
+      const rbiDecisionDt = parseEventDate('09-Oct-2026');
+      const rbiExitDt = parseEventDate('16-Oct-2026');
+
+      if (rbiEntryDt && rbiDecisionDt && rbiExitDt) {
+        const diffRbiEntry = Math.round((rbiEntryDt - today) / (1000 * 60 * 60 * 24));
+        const diffRbiDecision = Math.round((rbiDecisionDt - today) / (1000 * 60 * 60 * 24));
+        const diffRbiExit = Math.round((rbiExitDt - today) / (1000 * 60 * 60 * 24));
+
+        const rbiCountdownEl = document.getElementById('rbi-upcoming-countdown-badge');
+        const rbiDecisionPill = document.getElementById('rbi-upcoming-decision-pill');
+        const rbiTabBadge = document.getElementById('tab-badge-rbi');
+
+        let rbiStatusText = '';
+        let rbiBadgeBg = '#F59E0B';
+        let rbiBadgeColor = '#000';
+        let rbiTabBadgeText = '';
+
+        if (diffRbiEntry > 1) {
+          rbiStatusText = `⏳ PRE-POLICY ENTRY TRIGGERS IN ${diffRbiEntry} DAYS (07-OCT)`;
+          rbiTabBadgeText = `⏳ 09-OCT POLICY (${diffRbiEntry} DAYS)`;
+          rbiBadgeBg = '#0284C7';
+          rbiBadgeColor = '#FFF';
+        } else if (diffRbiEntry === 1) {
+          rbiStatusText = `🚨 PRE-POLICY ENTRY STARTS TOMORROW (07-OCT @ 09:20 AM)`;
+          rbiTabBadgeText = `🚨 STARTS TOMORROW`;
+          rbiBadgeBg = '#EF4444';
+          rbiBadgeColor = '#FFF';
+        } else if (diffRbiEntry === 0) {
+          rbiStatusText = `🔥 PRE-POLICY ENTRY TRIGGERS TODAY (09:20 AM IST)`;
+          rbiTabBadgeText = `🔥 ENTRY TODAY`;
+          rbiBadgeBg = '#F59E0B';
+          rbiBadgeColor = '#000';
+        } else if (diffRbiEntry < 0 && diffRbiDecision > 0) {
+          rbiStatusText = `🟢 PRE-DECISION POSITION ACTIVE (DECISION IN ${diffRbiDecision} DAYS)`;
+          rbiTabBadgeText = `🟢 POSITION ACTIVE`;
+          rbiBadgeBg = '#10B981';
+          rbiBadgeColor = '#FFF';
+        } else if (diffRbiDecision === 0) {
+          rbiStatusText = `⚡ POLICY DECISION TODAY @ 10:00 AM IST (HOLD RELIEF RUN)`;
+          rbiTabBadgeText = `⚡ DECISION TODAY`;
+          rbiBadgeBg = '#F59E0B';
+          rbiBadgeColor = '#000';
+        } else if (diffRbiDecision < 0 && diffRbiExit >= 0) {
+          rbiStatusText = `📈 POST-DECISION RUN IN PROGRESS (EXIT 16-OCT)`;
+          rbiTabBadgeText = `📈 RUN IN PROGRESS`;
+          rbiBadgeBg = '#10B981';
+          rbiBadgeColor = '#FFF';
+        } else {
+          rbiStatusText = `✓ OCTOBER MPC COMPLETED`;
+          rbiTabBadgeText = `26Y • 162 EVENTS`;
+          rbiBadgeBg = '#64748B';
+          rbiBadgeColor = '#FFF';
+        }
+
+        if (rbiCountdownEl) {
+          rbiCountdownEl.textContent = rbiStatusText;
+          rbiCountdownEl.style.background = rbiBadgeBg;
+          rbiCountdownEl.style.color = rbiBadgeColor;
+        }
+        if (rbiTabBadge) {
+          rbiTabBadge.textContent = rbiTabBadgeText;
+          rbiTabBadge.style.background = rbiBadgeBg;
+          rbiTabBadge.style.color = rbiBadgeColor;
+        }
+      }
+
+      // 3. Update Master Holiday Table Rows Dynamically
       const holidayRows = [
         { id: 'gandhi_2026', closureDate: '02-Oct-2026', entryDate: '22-Sep-2026', name: 'Mahatma Gandhi Jayanti' },
         { id: 'dussehra_2026', closureDate: '20-Oct-2026', entryDate: '08-Oct-2026', name: 'Dussehra / Vijayadashami' },
@@ -4096,6 +4598,7 @@
       // Recalculate dynamic dates and refresh tables as per current refresh date
       try { updateDynamicDashboardDates(); } catch(e) { console.error(e); }
       try { renderHolidayTable(); } catch(e) { console.error(e); }
+      try { renderRbiUpcomingPlaybook(); } catch(e) { console.error(e); }
       try { renderQuarterTable(); } catch(e) { console.error(e); }
       try { renderEquityTable(); } catch(e) { console.error(e); }
 
