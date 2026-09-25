@@ -350,6 +350,7 @@
       .hero-stats { gap: 1.25rem; }
     }
   </style>
+  <script src="dashboard_data/rbi_policy_behaviour.js"></script>
 </head>
 <body>
 
@@ -549,6 +550,11 @@
   // Load JSON
   async function loadData() {
     try {
+      if (window.RBI_POLICY_DATA) {
+        DATA = window.RBI_POLICY_DATA;
+        initDashboard();
+        return;
+      }
       const res = await fetch('dashboard_data/rbi_policy_behaviour.json');
       if (!res.ok) throw new Error('HTTP ' + res.status);
       DATA = await res.json();

@@ -11,6 +11,7 @@
   <!-- Standalone Data Bundles (Guarantees 100% offline & file:// protocol execution) -->
   <script src="dashboard_data/event_dashboard_data.js"></script>
   <script src="dashboard_data/nifty_futures_holiday_behaviour.js"></script>
+  <script src="dashboard_data/rbi_policy_behaviour.js"></script>
   
   <style>
     :root {
@@ -190,15 +191,19 @@
     /* Master Tabs Navigation */
     .tabs-nav {
       display: flex;
+      flex-wrap: wrap;
       gap: 0.5rem;
       border-bottom: 1px solid var(--surface-border);
       margin-bottom: 1.25rem;
-      padding-bottom: 0.25rem;
+      padding-bottom: 0.5rem;
       overflow-x: auto;
-      scrollbar-width: none;
     }
     .tabs-nav::-webkit-scrollbar {
-      display: none;
+      height: 4px;
+    }
+    .tabs-nav::-webkit-scrollbar-thumb {
+      background: rgba(59, 130, 246, 0.4);
+      border-radius: 4px;
     }
     .tab-btn {
       background: transparent;
@@ -637,6 +642,9 @@
       </div>
     </div>
     <div class="header-pills">
+      <a href="rbi_policy_dashboard.html" target="_blank" class="live-badge" style="background:rgba(14, 165, 233, 0.18); border-color:#0ea5e9; color:#38bdf8; text-decoration:none; font-weight:700;" title="Open Dedicated 26-Year RBI Policy Event Intelligence Dashboard">
+        <span>🏛️ Dedicated RBI Dashboard ↗</span>
+      </a>
       <div class="live-badge" style="background:rgba(59, 130, 246, 0.15); border-color:#3B82F6; color:#93C5FD;">
         <span>⏰ EXECUTION: 09:20 AM ENTRY | 03:15 PM EXIT</span>
       </div>
@@ -657,6 +665,10 @@
       <span class="ticker-tag" style="background:#059669">Q3 Earnings</span>
       <span id="ticker-q3-trigger">First Quarterly Trade: <strong>HCLTECH (LONG)</strong> on <strong>06-Oct-2026</strong></span>
     </div>
+    <div class="ticker-item" style="cursor:pointer;" onclick="switchTab('rbi')">
+      <span class="ticker-tag" style="background:#0284C7">RBI Policy</span>
+      <span>162 Meetings Analyzed &bull; <strong>65.9% Hike Win Rate</strong> &bull; <u style="color:#38bdf8;">View Tab</u></span>
+    </div>
   </div>
 
   <div class="container">
@@ -671,9 +683,9 @@
         <span>🏖️ Stock Holidays (50)</span>
         <span class="tab-badge badge-urgent">STARTS TOMORROW</span>
       </button>
-      <button class="tab-btn" id="tab-btn-stock-search" onclick="switchTab('stock-search')">
-        <span>🔍 Stock Search & History</span>
-        <span class="tab-badge" style="background:linear-gradient(135deg, #f59e0b, #d97706); color:#fff; font-weight:700;">211 STOCKS</span>
+      <button class="tab-btn" id="tab-btn-rbi" onclick="switchTab('rbi')" style="background:rgba(14,165,233,0.08); border-top:2px solid #0ea5e9;">
+        <span>🏛️ RBI Monetary Policy</span>
+        <span class="tab-badge" style="background:#0ea5e9; color:#fff; font-weight:700;">26Y &bull; 162 EVENTS</span>
       </button>
       <button class="tab-btn" id="tab-btn-quarterly" onclick="switchTab('quarterly')">
         <span>📊 Futures & F&O Earnings</span>
@@ -683,13 +695,13 @@
         <span>📈 Cash Equity Earnings</span>
         <span class="tab-badge badge-count">SPOT / CNC</span>
       </button>
-      <button class="tab-btn" id="tab-btn-rbi" onclick="switchTab('rbi')">
-        <span>&#127963; RBI Monetary Policy</span>
-        <span class="tab-badge" style="background:#0ea5e9;color:#fff;">26Y &bull; 162 EVENTS</span>
+      <button class="tab-btn" id="tab-btn-stock-search" onclick="switchTab('stock-search')">
+        <span>🔍 Stock Search & History</span>
+        <span class="tab-badge" style="background:linear-gradient(135deg, #f59e0b, #d97706); color:#fff; font-weight:700;">211 STOCKS</span>
       </button>
-            <button class="tab-btn" id="tab-btn-comparison" onclick="switchTab('comparison')">
+      <button class="tab-btn" id="tab-btn-comparison" onclick="switchTab('comparison')">
         <span>⚖️ Performance Comparison</span>
-        <span class="tab-badge" style="background:#8b5cf6;color:#fff;">MULTI-SYSTEM</span>
+        <span class="tab-badge" style="background:#8b5cf6; color:#fff;">MULTI-SYSTEM</span>
       </button>
       <button class="tab-btn" id="tab-btn-custom" onclick="switchTab('custom')">
         <span>➕ Custom Events Hub</span>
@@ -1868,13 +1880,15 @@
         }
       }
 
-      // 3. Load RBI Policy behaviour data
-      let rbiPolicyData = null;
-      try {
-        const rbiRes = await fetch('dashboard_data/rbi_policy_behaviour.json');
-        if (rbiRes.ok) rbiPolicyData = await rbiRes.json();
-      } catch (err) {
-        console.warn('RBI policy data fetch failed', err);
+      // 3. Load RBI Policy behaviour data (prefer standalone bundle for 100% offline & file:// execution)
+      let rbiPolicyData = window.RBI_POLICY_DATA || null;
+      if (!rbiPolicyData) {
+        try {
+          const rbiRes = await fetch('dashboard_data/rbi_policy_behaviour.json');
+          if (rbiRes.ok) rbiPolicyData = await rbiRes.json();
+        } catch (err) {
+          console.warn('RBI policy data fetch failed', err);
+        }
       }
       window.RBI_POLICY_DATA = rbiPolicyData;
 
