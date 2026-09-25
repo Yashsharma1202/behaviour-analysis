@@ -1479,13 +1479,21 @@
     <div id="tab-rbi" class="tab-content" style="display:none;">
       <!-- RBI SUB-TAB NAVIGATION -->
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;background:rgba(255,255,255,0.03);padding:0.4rem;border-radius:12px;border:1px solid rgba(255,255,255,0.08);">
-        <div style="display:flex;gap:0.5rem;">
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;">
           <button id="rbi-subtab-btn-index" class="rbi-subtab-pill active" onclick="switchRbiSubTab('index')">
             <i class="fas fa-chart-line" style="margin-right:0.4rem;"></i> 📊 Nifty Futures Index
+          </button>
+          <button id="rbi-subtab-btn-sectors" class="rbi-subtab-pill" onclick="switchRbiSubTab('sectors')">
+            <i class="fas fa-layer-group" style="margin-right:0.4rem;"></i> 🏢 10 Core Sectors Breakdown
           </button>
           <button id="rbi-subtab-btn-stocks" class="rbi-subtab-pill" onclick="switchRbiSubTab('stocks')">
             <i class="fas fa-building" style="margin-right:0.4rem;"></i> 🏦 Nifty 50 Individual Stocks (50)
           </button>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <a href="Nifty50_RBI_Monetary_Policy_Individual_Stocks_and_Sectors_Master.xlsx" download class="filter-pill" style="background:#10B981; color:#FFF; border:none; text-decoration:none; font-weight:700; padding:0.4rem 0.9rem; display:inline-flex; align-items:center; gap:0.4rem;" title="Download Institutional 50-Stock & 10-Sector Master Workbook (.xlsx)">
+            <span>📊 Download Nifty 50 &amp; Sector Master (.xlsx)</span>
+          </a>
         </div>
         <div style="font-size:0.75rem;color:var(--text-muted);padding-right:0.75rem;">
           <i class="fas fa-calendar-alt" style="color:#38bdf8;margin-right:0.3rem"></i> 162 Events &bull; 2000&ndash;2026 (26 Years)
@@ -1575,6 +1583,59 @@
         </div>
       </div>
 
+
+      <!-- SUB-TAB PANEL 2: SECTOR-WISE BREAKDOWN -->
+      <div id="rbi-panel-sectors" style="display:none;">
+        
+        <!-- Sector Overview Banner -->
+        <div class="timing-banner" style="background: linear-gradient(90deg, rgba(56, 189, 248, 0.15) 0%, rgba(30, 27, 75, 0.4) 100%); border-left-color: #38bdf8; margin-bottom: 1.5rem;">
+          <div>
+            <strong style="color: #38bdf8; font-size: 0.95rem;">🏢 Sector-Wise Quantitative Policy Impact &amp; Sensitivity Engine</strong>
+            <p style="color: #E2E8F0;">
+              Comparative empirical performance across all 10 core institutional sectors (50 Nifty constituents) across 162 RBI Monetary Policy meetings (2000–2026). Identifies high-beta rate-sensitive sectors vs defensive beneficiaries under Rate Cut, Rate Hike, and Status Quo regimes.
+            </p>
+          </div>
+        </div>
+
+        <!-- 10 Sector Metric Cards Grid -->
+        <div id="rbi-sector-cards-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; margin-bottom:1.5rem;">
+          <!-- Dynamically populated by JS -->
+        </div>
+
+        <!-- Sector Performance Master Table Card -->
+        <div class="card">
+          <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+            <div class="card-title-group">
+              <h2>🏆 10 Core Sectors RBI Monetary Policy Performance Matrix</h2>
+              <p>Aggregated win rates, median returns, optimal policy regimes, and interest-rate sensitivity classifications.</p>
+            </div>
+            <span class="badge badge-active">10 Core Sectors (50 Stocks)</span>
+          </div>
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th style="text-align:center">#</th>
+                  <th>Core Sector</th>
+                  <th style="text-align:center">Stock Count</th>
+                  <th>Rate Cut WR %</th>
+                  <th>Rate Hike WR %</th>
+                  <th>Status Quo WR %</th>
+                  <th>All Events WR %</th>
+                  <th>Optimal Regime</th>
+                  <th>Sensitivity</th>
+                  <th>Constituents</th>
+                </tr>
+              </thead>
+              <tbody id="rbi-sector-tbody">
+                <!-- Dynamically populated by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
       <!-- SUB-TAB PANEL 2: NIFTY 50 INDIVIDUAL STOCKS -->
       <div id="rbi-panel-stocks" style="display:none;">
         <!-- Stock KPI Highlights Row -->
@@ -1612,6 +1673,16 @@
               <input type="text" id="rbi-stock-search" class="search-input" placeholder="Search symbol or sector..." oninput="filterRbiStockTable()">
               <select id="rbi-stock-sector" class="search-input" style="padding:0.4rem 0.6rem;font-size:0.75rem;cursor:pointer;" onchange="filterRbiStockTable()">
                 <option value="ALL">All Sectors</option>
+                <option value="Banking & Financials">🏦 Banking & Financials (11)</option>
+                <option value="Automobile & Auto Components">🚗 Automobile (6)</option>
+                <option value="Information Technology">💻 Information Technology (6)</option>
+                <option value="FMCG & Consumption">🛒 FMCG & Consumption (5)</option>
+                <option value="Metals & Mining">⛏️ Metals & Mining (5)</option>
+                <option value="Healthcare & Pharma">💊 Healthcare & Pharma (5)</option>
+                <option value="Oil, Gas & Energy">⚡ Oil, Gas & Energy (5)</option>
+                <option value="Cement & Construction">🏗️ Cement & Construction (3)</option>
+                <option value="Consumer Durables & Retail">🛍️ Consumer Durables (2)</option>
+                <option value="Telecom & Logistics">📡 Telecom & Logistics (2)</option>
               </select>
               <button class="filter-pill active" id="rspill-ALL" onclick="setRbiStockCatFilter('ALL', this)">All Category</button>
               <button class="filter-pill" id="rspill-CUT" onclick="setRbiStockCatFilter('CUT', this)">&#8595; Rate Cut</button>
@@ -1912,7 +1983,20 @@
         <div style="display:flex; align-items:center; gap:0.5rem;">
           <div class="search-box">
             <span class="search-icon">🔍</span>
-            <input type="text" id="live-feed-search" placeholder="Search Symbol / Company..." onkeyup="filterLiveFeedTable()" style="background:var(--surface); border:1px solid var(--surface-border); color:#FFF; padding:0.4rem 0.8rem 0.4rem 2rem; border-radius:6px; font-size:0.85rem;">
+            <select id="live-sector-filter" style="background:var(--surface); border:1px solid var(--surface-border); color:#FFF; padding:0.4rem 0.6rem; border-radius:6px; font-size:0.8rem; cursor:pointer;" onchange="filterLiveFeedTable()">
+                <option value="ALL">All Sectors</option>
+                <option value="Banking & Financials">🏦 Banking & Financials (11)</option>
+                <option value="Automobile & Auto Components">🚗 Automobile (6)</option>
+                <option value="Information Technology">💻 Information Technology (6)</option>
+                <option value="FMCG & Consumption">🛒 FMCG & Consumption (5)</option>
+                <option value="Metals & Mining">⛏️ Metals & Mining (5)</option>
+                <option value="Healthcare & Pharma">💊 Healthcare & Pharma (5)</option>
+                <option value="Oil, Gas & Energy">⚡ Oil, Gas & Energy (5)</option>
+                <option value="Cement & Construction">🏗️ Cement & Construction (3)</option>
+                <option value="Consumer Durables & Retail">🛍️ Consumer Durables (2)</option>
+                <option value="Telecom & Logistics">📡 Telecom & Logistics (2)</option>
+          </select>
+          <input type="text" id="live-feed-search" placeholder="Search Symbol / Company..." onkeyup="filterLiveFeedTable()"  style="background:var(--surface); border:1px solid var(--surface-border); color:#FFF; padding:0.4rem 0.8rem 0.4rem 2rem; border-radius:6px; font-size:0.85rem;">
           </div>
           <div style="display:flex; gap:0.3rem;" id="live-feed-filter-pills">
             <button class="filter-pill active" onclick="setLiveFeedFilter('ALL', this)">All</button>
@@ -2125,6 +2209,8 @@
         if (currentEquityFilter === 'BUY' && !isBuy) return;
         if (currentEquityFilter === 'EXIT' && isBuy) return;
         if (currentEquityFilter === 'confirmed' && !s.announced) return;
+        const selectedSec = document.getElementById('eq-sector-filter')?.value || 'ALL';
+        if (selectedSec !== 'ALL' && s.sector !== selectedSec) return;
         if (query && !s.symbol.includes(query) && !s.name.toUpperCase().includes(query)) return;
 
         const tr = document.createElement('tr');
@@ -2453,6 +2539,8 @@
         }
         if (currentHolidayFilter === 'LONG' && s.direction !== 'LONG') return;
         if (currentHolidayFilter === 'SHORT' && s.direction !== 'SHORT') return;
+        const selectedSec = document.getElementById('h-sector-filter')?.value || 'ALL';
+        if (selectedSec !== 'ALL' && s.sector !== selectedSec) return;
         if (query && !s.symbol.includes(query) && !s.name.toUpperCase().includes(query)) return;
 
         const tr = document.createElement('tr');
@@ -2510,15 +2598,22 @@
       const bIndex = document.getElementById('rbi-subtab-btn-index');
       const bStocks = document.getElementById('rbi-subtab-btn-stocks');
 
+      const pSectors = document.getElementById('rbi-panel-sectors');
+      const bSectors = document.getElementById('rbi-subtab-btn-sectors');
+
+      // Hide all panels & deactivate buttons
+      [pIndex, pSectors, pStocks].forEach(p => { if (p) p.style.display = 'none'; });
+      [bIndex, bSectors, bStocks].forEach(b => { if (b) b.classList.remove('active'); });
+
       if (sub === 'index') {
         if (pIndex) pIndex.style.display = 'block';
-        if (pStocks) pStocks.style.display = 'none';
         if (bIndex) bIndex.classList.add('active');
-        if (bStocks) bStocks.classList.remove('active');
+      } else if (sub === 'sectors') {
+        if (pSectors) pSectors.style.display = 'block';
+        if (bSectors) bSectors.classList.add('active');
+        renderRbiSectorTab();
       } else {
-        if (pIndex) pIndex.style.display = 'none';
         if (pStocks) pStocks.style.display = 'block';
-        if (bIndex) bIndex.classList.remove('active');
         if (bStocks) bStocks.classList.add('active');
         renderRbiStockTab();
       }
@@ -2644,6 +2739,92 @@
     }
 
     function filterRbiEventTable() { renderRbiEventTable(); }
+
+    // Render Sector-Wise RBI Monetary Policy Analysis
+    function renderRbiSectorTab() {
+      const d = window.RBI_POLICY_DATA;
+      if (!d || !d.sector_analysis) return;
+      const sectors = d.sector_analysis;
+
+      // 1. Render Sector Metric Cards Grid
+      const cardsGrid = document.getElementById('rbi-sector-cards-grid');
+      if (cardsGrid) {
+        cardsGrid.innerHTML = sectors.map(sec => {
+          const sensBadge = sec.sensitivity_label === 'HIGH'
+            ? '<span class="badge badge-urgent">HIGH SENSITIVITY</span>'
+            : (sec.sensitivity_label === 'MODERATE' ? '<span class="badge badge-active">MODERATE</span>' : '<span class="badge" style="background:#475569; color:#CBD5E1;">DEFENSIVE</span>');
+
+          const regimeCol = sec.best_scenario === 'RATE CUT' ? '#34D399' : (sec.best_scenario === 'RATE HIKE' ? '#F87171' : '#FBBF24');
+
+          return `
+            <div class="card" style="padding:1.1rem; border-top:3px solid ${regimeCol}; cursor:pointer;" onclick="selectRbiSector('${sec.sector}')" title="Click to view stocks in ${sec.sector}">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+                <strong style="color:#FFF; font-size:0.95rem;">${sec.sector}</strong>
+                ${sensBadge}
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+                <span style="font-size:0.75rem; color:var(--text-muted);">${sec.stock_count} Stocks</span>
+                <span style="font-size:0.78rem; font-weight:700; color:${regimeCol};">Best: ${sec.best_scenario} (${sec.best_win_rate}%)</span>
+              </div>
+              <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.4rem; background:rgba(0,0,0,0.25); padding:0.5rem; border-radius:6px; margin-bottom:0.6rem; text-align:center;">
+                <div>
+                  <div style="font-size:0.65rem; color:#94A3B8;">Cut WR</div>
+                  <strong style="color:#34D399; font-size:0.85rem;">${sec.cut_win_rate}%</strong>
+                </div>
+                <div>
+                  <div style="font-size:0.65rem; color:#94A3B8;">Hike WR</div>
+                  <strong style="color:#F87171; font-size:0.85rem;">${sec.hike_win_rate}%</strong>
+                </div>
+                <div>
+                  <div style="font-size:0.65rem; color:#94A3B8;">Status Quo</div>
+                  <strong style="color:#FBBF24; font-size:0.85rem;">${sec.squo_win_rate}%</strong>
+                </div>
+              </div>
+              <div style="font-size:0.72rem; color:#94A3B8; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+                <span style="color:#60A5FA;">Stocks:</span> ${sec.symbols}
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // 2. Render Sector Master Table
+      const tbody = document.getElementById('rbi-sector-tbody');
+      if (tbody) {
+        tbody.innerHTML = sectors.map((sec, i) => {
+          const sensBadge = sec.sensitivity_label === 'HIGH'
+            ? '<span class="badge badge-urgent">HIGH</span>'
+            : (sec.sensitivity_label === 'MODERATE' ? '<span class="badge badge-active">MODERATE</span>' : '<span class="badge" style="background:#475569; color:#CBD5E1;">DEFENSIVE</span>');
+
+          const regimeBadge = `<span class="badge" style="background:${sec.best_scenario==='RATE CUT'?'rgba(16,185,129,0.18)':(sec.best_scenario==='RATE HIKE'?'rgba(239,68,68,0.18)':'rgba(245,158,11,0.18)')}; color:${sec.best_scenario==='RATE CUT'?'#34D399':(sec.best_scenario==='RATE HIKE'?'#F87171':'#FBBF24')}; font-weight:700;">${sec.best_scenario} (${sec.best_win_rate}%)</span>`;
+
+          return `
+            <tr style="cursor:pointer;" onclick="selectRbiSector('${sec.sector}')">
+              <td style="text-align:center; color:var(--text-muted); font-size:0.75rem;">${i + 1}</td>
+              <td><strong style="color:#FFF;">${sec.sector}</strong></td>
+              <td style="text-align:center;"><span class="badge" style="background:#2563EB; color:#FFF;">${sec.stock_count}</span></td>
+              <td><strong style="color:#34D399; font-family:'JetBrains Mono';">${sec.cut_win_rate}%</strong></td>
+              <td><strong style="color:#F87171; font-family:'JetBrains Mono';">${sec.hike_win_rate}%</strong></td>
+              <td><strong style="color:#FBBF24; font-family:'JetBrains Mono';">${sec.squo_win_rate}%</strong></td>
+              <td><strong style="color:#38BDF8; font-family:'JetBrains Mono';">${sec.all_win_rate}%</strong></td>
+              <td>${regimeBadge}</td>
+              <td style="text-align:center;">${sensBadge}</td>
+              <td style="font-size:0.75rem; color:#CBD5E1; max-width:260px;">${sec.symbols}</td>
+            </tr>
+          `;
+        }).join('');
+      }
+    }
+
+    function selectRbiSector(secName) {
+      switchRbiSubTab('stocks');
+      const selectEl = document.getElementById('rbi-stock-sector');
+      if (selectEl) {
+        selectEl.value = secName;
+        filterRbiStockTable();
+      }
+    }
+
 
     function renderRbiStockTab() {
       const d = window.RBI_POLICY_DATA;
@@ -3757,6 +3938,7 @@
 
       const q = (document.getElementById('live-feed-search')?.value || '').toLowerCase().trim();
       const filter = currentLiveFeedFilter;
+      const selectedLiveSec = document.getElementById('live-sector-filter')?.value || 'ALL';
 
       if (currentLiveFeedSubTab === 'meetings') {
         if (titleEl) titleEl.textContent = '📅 Upcoming Board Meetings & Result Declarations';
@@ -3779,6 +3961,9 @@
         if (filter === 'NIFTY50') rows = rows.filter(r => r.is_nifty50);
         if (filter === 'RESULTS') rows = rows.filter(r => r.is_result);
         if (filter === 'DIVIDENDS') rows = rows.filter(r => r.is_dividend);
+        if (selectedLiveSec !== 'ALL') {
+          rows = rows.filter(r => window.STOCK_SECTORS && window.STOCK_SECTORS[r.symbol] === selectedLiveSec);
+        }
         if (q) rows = rows.filter(r => r.symbol.toLowerCase().includes(q) || (r.company_name && r.company_name.toLowerCase().includes(q)) || r.purpose.toLowerCase().includes(q));
 
         if (countEl) countEl.textContent = rows.length + ' Meetings Scheduled';

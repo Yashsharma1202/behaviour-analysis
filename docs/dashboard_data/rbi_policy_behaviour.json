@@ -3871,7 +3871,9 @@
         "median_return": 0.77,
         "count": 75,
         "score": 16.37
-      }
+      },
+      "core_sector": "Metals & Mining",
+      "sub_sector": "Mining & Trading"
     },
     {
       "symbol": "ADANIPORTS",
@@ -3908,7 +3910,9 @@
         "median_return": 1.95,
         "count": 75,
         "score": 9.53
-      }
+      },
+      "core_sector": "Telecom & Logistics",
+      "sub_sector": "Ports & Logistics"
     },
     {
       "symbol": "APOLLOHOSP",
@@ -3945,7 +3949,9 @@
         "median_return": 0.92,
         "count": 75,
         "score": 11.52
-      }
+      },
+      "core_sector": "Healthcare & Pharma",
+      "sub_sector": "Hospitals & Healthcare"
     },
     {
       "symbol": "ASIANPAINT",
@@ -3982,7 +3988,9 @@
         "median_return": 0.75,
         "count": 75,
         "score": 4.05
-      }
+      },
+      "core_sector": "Consumer Durables & Retail",
+      "sub_sector": "Paints & Home Decor"
     },
     {
       "symbol": "AXISBANK",
@@ -4019,7 +4027,9 @@
         "median_return": 1.02,
         "count": 75,
         "score": 7.46
-      }
+      },
+      "core_sector": "Banking & Financials",
+      "sub_sector": "Private Banking"
     },
     {
       "symbol": "BAJAJ-AUTO",
@@ -4056,7 +4066,9 @@
         "median_return": 0.79,
         "count": 68,
         "score": 3.54
-      }
+      },
+      "core_sector": "Automobile & Auto Components",
+      "sub_sector": "2-Wheelers / 3-Wheelers"
     },
     {
       "symbol": "BAJAJFINSV",
@@ -4093,7 +4105,9 @@
         "median_return": 1.04,
         "count": 75,
         "score": 22.86
-      }
+      },
+      "core_sector": "Banking & Financials",
+      "sub_sector": "Financial Holding"
     },
     {
       "symbol": "BAJFINANCE",
@@ -4130,7 +4144,9 @@
         "median_return": 1.43,
         "count": 75,
         "score": 9.79
-      }
+      },
+      "core_sector": "Banking & Financials",
+      "sub_sector": "NBFC / Retail"
     },
     {
       "symbol": "BHARTIARTL",
@@ -4167,7 +4183,9 @@
         "median_return": 0.29,
         "count": 75,
         "score": 1.71
-      }
+      },
+      "core_sector": "Telecom & Logistics",
+      "sub_sector": "Telecommunications"
     },
     {
       "symbol": "BPCL",
@@ -4204,7 +4222,9 @@
         "median_return": 0.82,
         "count": 75,
         "score": 6.52
-      }
+      },
+      "core_sector": "Oil, Gas & Energy",
+      "sub_sector": "Oil Refining & Marketing"
     },
     {
       "symbol": "BRITANNIA",
@@ -4241,7 +4261,9 @@
         "median_return": 0.31,
         "count": 75,
         "score": 7645.83
-      }
+      },
+      "core_sector": "FMCG & Consumption",
+      "sub_sector": "Foods & Bakery"
     },
     {
       "symbol": "CIPLA",
@@ -4278,7 +4300,9 @@
         "median_return": 0.34,
         "count": 75,
         "score": 2.11
-      }
+      },
+      "core_sector": "Healthcare & Pharma",
+      "sub_sector": "Formulations & Generics"
     },
     {
       "symbol": "COALINDIA",
@@ -4315,7 +4339,9 @@
         "median_return": -0.17,
         "count": 64,
         "score": 0.05
-      }
+      },
+      "core_sector": "Metals & Mining",
+      "sub_sector": "Coal Mining"
     },
     {
       "symbol": "DIVISLAB",
@@ -4352,7 +4378,9 @@
         "median_return": 1.05,
         "count": 75,
         "score": 3.6
-      }
+      },
+      "core_sector": "Healthcare & Pharma",
+      "sub_sector": "API & CRAMS"
     },
     {
       "symbol": "DRREDDY",
@@ -4389,7 +4417,9 @@
         "median_return": 0.58,
         "count": 75,
         "score": 13555.14
-      }
+      },
+      "core_sector": "Healthcare & Pharma",
+      "sub_sector": "Generics & Biosimilars"
     },
     {
       "symbol": "EICHERMOT",
@@ -4426,7 +4456,9 @@
         "median_return": 1.48,
         "count": 75,
         "score": 18.56
-      }
+      },
+      "core_sector": "Automobile & Auto Components",
+      "sub_sector": "2-Wheelers / Commercial"
     },
     {
       "symbol": "GRASIM",
@@ -4463,7 +4495,9 @@
         "median_return": 0.4,
         "count": 75,
         "score": 3.12
-      }
+      },
+      "core_sector": "Cement & Construction",
+      "sub_sector": "Cement & VSF"
     },
     {
       "symbol": "HCLTECH",
@@ -4500,7 +4534,9 @@
         "median_return": 0.96,
         "count": 75,
         "score": -2.46
-      }
+      },
+      "core_sector": "Information Technology",
+      "sub_sector": "IT Services & Software"
     },
     {
       "symbol": "HDFCBANK",
@@ -4537,7 +4573,9 @@
         "median_return": 0.43,
         "count": 75,
         "score": 2.74
-      }
+      },
+      "core_sector": "Banking & Financials",
+      "sub_sector": "Private Banking"
     },
     {
       "symbol": "HDFCLIFE",
@@ -4574,7 +4612,9 @@
         "median_return": 8.43,
         "count": 75,
         "score": 35.4
-      }
+      },
+      "core_sector": "Banking & Financials",
+      "sub_sector": "Life Insurance"
     },
     {
       "symbol": "HEROMOTOCO",
@@ -4611,7 +4651,9 @@
         "median_return": 1.08,
         "count": 75,
         "score": 5.16
-      }
+      },
+      "core_sector": "Automobile & Auto Components",
+      "sub_sector": "2-Wheelers"
     },
     {
       "symbol": "HINDALCO",
@@ -4648,7 +4690,9 @@
         "median_return": 1.61,
         "count": 75,
         "score": 13.55
-      }
+      },
+      "core_sector": "Metals & Mining",
+      "sub_sector": "Aluminium & Copper"
     },
     {
       "symbol": "HINDUNILVR",
@@ -4685,7 +4729,9 @@
         "median_return": 0.72,
         "count": 75,
         "score": 3.6
-      }
+      },
+      "core_sector": "FMCG & Consumption",
+      "sub_sector": "Personal Care & Home"
     },
     {
       "symbol": "ICICIBANK",
@@ -4722,7 +4768,9 @@
         "median_return": 0.55,
         "count": 75,
         "score": 6.75
-      }
+      },
+      "core_sector": "Banking & Financials",
+      "sub_sector": "Private Banking"
     },
     {
       "symbol": "INDUSINDBK",
@@ -4759,7 +4807,9 @@
         "median_return": 0.64,
         "count": 75,
         "score": 9.72
-      }
+      },
+      "core_sector": "Banking & Financials",
+      "sub_sector": "Private Banking"
     },
     {
       "symbol": "INFY",
@@ -4796,7 +4846,9 @@
         "median_return": 1.28,
         "count": 75,
         "score": 0.34
-      }
+      },
+      "core_sector": "Information Technology",
+      "sub_sector": "IT Services & Software"
     },
     {
       "symbol": "ITC",
@@ -4833,7 +4885,9 @@
         "median_return": 0.3,
         "count": 75,
         "score": 1.95
-      }
+      },
+      "core_sector": "FMCG & Consumption",
+      "sub_sector": "Cigarettes / FMCG / Hotels"
     },
     {
       "symbol": "JSWSTEEL",
@@ -4870,7 +4924,9 @@
         "median_return": 0.87,
         "count": 72,
         "score": 11979.2
-      }
+      },
+      "core_sector": "Metals & Mining",
+      "sub_sector": "Ferrous Steel"
     },
     {
       "symbol": "KOTAKBANK",
@@ -4907,7 +4963,9 @@
         "median_return": 1.7,
         "count": 75,
         "score": 11.67
-      }
+      },
+      "core_sector": "Banking & Financials",
+      "sub_sector": "Private Banking"
     },
     {
       "symbol": "LT",
@@ -4944,7 +5002,9 @@
         "median_return": 0.5,
         "count": 75,
         "score": 7.02
-      }
+      },
+      "core_sector": "Cement & Construction",
+      "sub_sector": "EPC & Infrastructure"
     },
     {
       "symbol": "LTIM",
@@ -4981,7 +5041,9 @@
         "median_return": 0.34,
         "count": 75,
         "score": 3.6
-      }
+      },
+      "core_sector": "Information Technology",
+      "sub_sector": "IT Services & Consulting"
     },
     {
       "symbol": "M&M",
@@ -5018,7 +5080,9 @@
         "median_return": 2.18,
         "count": 75,
         "score": 15.98
-      }
+      },
+      "core_sector": "Automobile & Auto Components",
+      "sub_sector": "UV / Tractors"
     },
     {
       "symbol": "MARUTI",
@@ -5055,7 +5119,9 @@
         "median_return": 0.45,
         "count": 75,
         "score": 2.79
-      }
+      },
+      "core_sector": "Automobile & Auto Components",
+      "sub_sector": "Passenger Cars"
     },
     {
       "symbol": "NESTLEIND",
@@ -5092,7 +5158,9 @@
         "median_return": 0.76,
         "count": 75,
         "score": 6.29
-      }
+      },
+      "core_sector": "FMCG & Consumption",
+      "sub_sector": "Packaged Foods"
     },
     {
       "symbol": "NTPC",
@@ -5129,7 +5197,9 @@
         "median_return": 0.61,
         "count": 75,
         "score": 4374.84
-      }
+      },
+      "core_sector": "Oil, Gas & Energy",
+      "sub_sector": "Power Generation"
     },
     {
       "symbol": "ONGC",
@@ -5166,7 +5236,9 @@
         "median_return": 0.57,
         "count": 75,
         "score": 4.01
-      }
+      },
+      "core_sector": "Oil, Gas & Energy",
+      "sub_sector": "Upstream Oil & Gas"
     },
     {
       "symbol": "POWERGRID",
@@ -5203,7 +5275,9 @@
         "median_return": 0.36,
         "count": 75,
         "score": 3.84
-      }
+      },
+      "core_sector": "Oil, Gas & Energy",
+      "sub_sector": "Power Transmission"
     },
     {
       "symbol": "RELIANCE",
@@ -5240,7 +5314,9 @@
         "median_return": 1.08,
         "count": 75,
         "score": 9.6
-      }
+      },
+      "core_sector": "Oil, Gas & Energy",
+      "sub_sector": "Energy / Retail / Telecom"
     },
     {
       "symbol": "SBILIFE",
@@ -5277,7 +5353,9 @@
         "median_return": 1.05,
         "count": 35,
         "score": 4.72
-      }
+      },
+      "core_sector": "Banking & Financials",
+      "sub_sector": "Life Insurance"
     },
     {
       "symbol": "SBIN",
@@ -5314,7 +5392,9 @@
         "median_return": 1.72,
         "count": 75,
         "score": 1448.75
-      }
+      },
+      "core_sector": "Banking & Financials",
+      "sub_sector": "PSU Banking"
     },
     {
       "symbol": "SHRIRAMFIN",
@@ -5351,7 +5431,9 @@
         "median_return": 1.73,
         "count": 75,
         "score": 70.14
-      }
+      },
+      "core_sector": "Banking & Financials",
+      "sub_sector": "NBFC / Auto Finance"
     },
     {
       "symbol": "SUNPHARMA",
@@ -5388,7 +5470,9 @@
         "median_return": 0.35,
         "count": 75,
         "score": -1.35
-      }
+      },
+      "core_sector": "Healthcare & Pharma",
+      "sub_sector": "Specialty & Generics"
     },
     {
       "symbol": "TATACONSUM",
@@ -5425,7 +5509,9 @@
         "median_return": 0.89,
         "count": 75,
         "score": 7.77
-      }
+      },
+      "core_sector": "FMCG & Consumption",
+      "sub_sector": "Beverages & Foods"
     },
     {
       "symbol": "TATAMOTORS",
@@ -5462,7 +5548,9 @@
         "median_return": 0.96,
         "count": 75,
         "score": 28.99
-      }
+      },
+      "core_sector": "Automobile & Auto Components",
+      "sub_sector": "Commercial / EV / PV"
     },
     {
       "symbol": "TATASTEEL",
@@ -5499,7 +5587,9 @@
         "median_return": 1.68,
         "count": 75,
         "score": 174.98
-      }
+      },
+      "core_sector": "Metals & Mining",
+      "sub_sector": "Ferrous Steel"
     },
     {
       "symbol": "TCS",
@@ -5536,7 +5626,9 @@
         "median_return": 0.66,
         "count": 72,
         "score": 1.39
-      }
+      },
+      "core_sector": "Information Technology",
+      "sub_sector": "IT Services & Software"
     },
     {
       "symbol": "TECHM",
@@ -5573,7 +5665,9 @@
         "median_return": 2.05,
         "count": 70,
         "score": 7.91
-      }
+      },
+      "core_sector": "Information Technology",
+      "sub_sector": "IT Services & Telecom"
     },
     {
       "symbol": "TITAN",
@@ -5610,7 +5704,9 @@
         "median_return": 2.11,
         "count": 75,
         "score": 172.41
-      }
+      },
+      "core_sector": "Consumer Durables & Retail",
+      "sub_sector": "Jewellery & Watches"
     },
     {
       "symbol": "ULTRACEMCO",
@@ -5647,7 +5743,9 @@
         "median_return": 1.08,
         "count": 75,
         "score": 4.45
-      }
+      },
+      "core_sector": "Cement & Construction",
+      "sub_sector": "Grey & White Cement"
     },
     {
       "symbol": "WIPRO",
@@ -5684,7 +5782,181 @@
         "median_return": 1.15,
         "count": 75,
         "score": 4.24
-      }
+      },
+      "core_sector": "Information Technology",
+      "sub_sector": "IT Services & Software"
+    }
+  ],
+  "sector_analysis": [
+    {
+      "sector": "Cement & Construction",
+      "stock_count": 3,
+      "symbols": "GRASIM, LT, ULTRACEMCO",
+      "all_win_rate": 63.77,
+      "all_median_return": 0.85,
+      "cut_win_rate": 74.23,
+      "cut_median_return": 1.49,
+      "hike_win_rate": 64.73,
+      "hike_median_return": 0.93,
+      "squo_win_rate": 60.9,
+      "squo_median_return": 0.66,
+      "best_scenario": "RATE CUT",
+      "best_win_rate": 74.23,
+      "sensitivity": 10.9,
+      "sensitivity_label": "HIGH"
+    },
+    {
+      "sector": "Metals & Mining",
+      "stock_count": 5,
+      "symbols": "ADANIENT, COALINDIA, HINDALCO, JSWSTEEL, TATASTEEL",
+      "all_win_rate": 60.74,
+      "all_median_return": 1.1,
+      "cut_win_rate": 70.66,
+      "cut_median_return": 2.0,
+      "hike_win_rate": 63.42,
+      "hike_median_return": 0.89,
+      "squo_win_rate": 61.94,
+      "squo_median_return": 0.95,
+      "best_scenario": "RATE CUT",
+      "best_win_rate": 70.66,
+      "sensitivity": 10.01,
+      "sensitivity_label": "HIGH"
+    },
+    {
+      "sector": "Banking & Financials",
+      "stock_count": 11,
+      "symbols": "AXISBANK, BAJAJFINSV, BAJFINANCE, HDFCBANK, HDFCLIFE, ICICIBANK, INDUSINDBK, KOTAKBANK, SBILIFE, SBIN, SHRIRAMFIN",
+      "all_win_rate": 62.9,
+      "all_median_return": 1.18,
+      "cut_win_rate": 70.25,
+      "cut_median_return": 1.88,
+      "hike_win_rate": 67.1,
+      "hike_median_return": 1.79,
+      "squo_win_rate": 64.38,
+      "squo_median_return": 1.79,
+      "best_scenario": "RATE CUT",
+      "best_win_rate": 70.25,
+      "sensitivity": 3.38,
+      "sensitivity_label": "DEFENSIVE"
+    },
+    {
+      "sector": "Healthcare & Pharma",
+      "stock_count": 5,
+      "symbols": "APOLLOHOSP, CIPLA, DIVISLAB, DRREDDY, SUNPHARMA",
+      "all_win_rate": 60.86,
+      "all_median_return": 0.53,
+      "cut_win_rate": 70.0,
+      "cut_median_return": 0.9,
+      "hike_win_rate": 64.2,
+      "hike_median_return": 0.79,
+      "squo_win_rate": 61.34,
+      "squo_median_return": 0.65,
+      "best_scenario": "RATE CUT",
+      "best_win_rate": 70.0,
+      "sensitivity": 6.07,
+      "sensitivity_label": "MODERATE"
+    },
+    {
+      "sector": "Automobile & Auto Components",
+      "stock_count": 6,
+      "symbols": "BAJAJ-AUTO, EICHERMOT, HEROMOTOCO, M&M, MARUTI, TATAMOTORS",
+      "all_win_rate": 61.22,
+      "all_median_return": 0.83,
+      "cut_win_rate": 69.28,
+      "cut_median_return": 1.42,
+      "hike_win_rate": 60.17,
+      "hike_median_return": 0.63,
+      "squo_win_rate": 64.75,
+      "squo_median_return": 1.16,
+      "best_scenario": "RATE CUT",
+      "best_win_rate": 69.28,
+      "sensitivity": 11.08,
+      "sensitivity_label": "HIGH"
+    },
+    {
+      "sector": "Telecom & Logistics",
+      "stock_count": 2,
+      "symbols": "ADANIPORTS, BHARTIARTL",
+      "all_win_rate": 62.5,
+      "all_median_return": 1.36,
+      "cut_win_rate": 68.2,
+      "cut_median_return": 2.52,
+      "hike_win_rate": 64.2,
+      "hike_median_return": 2.21,
+      "squo_win_rate": 59.3,
+      "squo_median_return": 1.12,
+      "best_scenario": "RATE CUT",
+      "best_win_rate": 68.2,
+      "sensitivity": 4.78,
+      "sensitivity_label": "DEFENSIVE"
+    },
+    {
+      "sector": "FMCG & Consumption",
+      "stock_count": 5,
+      "symbols": "BRITANNIA, HINDUNILVR, ITC, NESTLEIND, TATACONSUM",
+      "all_win_rate": 60.86,
+      "all_median_return": 0.5,
+      "cut_win_rate": 65.9,
+      "cut_median_return": 0.75,
+      "hike_win_rate": 62.46,
+      "hike_median_return": 0.41,
+      "squo_win_rate": 62.92,
+      "squo_median_return": 0.6,
+      "best_scenario": "RATE CUT",
+      "best_win_rate": 65.9,
+      "sensitivity": 4.29,
+      "sensitivity_label": "DEFENSIVE"
+    },
+    {
+      "sector": "Information Technology",
+      "stock_count": 6,
+      "symbols": "HCLTECH, INFY, LTIM, TCS, TECHM, WIPRO",
+      "all_win_rate": 62.03,
+      "all_median_return": 0.54,
+      "cut_win_rate": 65.52,
+      "cut_median_return": 0.42,
+      "hike_win_rate": 62.0,
+      "hike_median_return": 0.44,
+      "squo_win_rate": 65.53,
+      "squo_median_return": 1.07,
+      "best_scenario": "STATUS QUO",
+      "best_win_rate": 65.53,
+      "sensitivity": 3.57,
+      "sensitivity_label": "DEFENSIVE"
+    },
+    {
+      "sector": "Consumer Durables & Retail",
+      "stock_count": 2,
+      "symbols": "ASIANPAINT, TITAN",
+      "all_win_rate": 63.85,
+      "all_median_return": 1.23,
+      "cut_win_rate": 63.65,
+      "cut_median_return": 1.52,
+      "hike_win_rate": 68.3,
+      "hike_median_return": 0.84,
+      "squo_win_rate": 70.0,
+      "squo_median_return": 1.43,
+      "best_scenario": "STATUS QUO",
+      "best_win_rate": 70.0,
+      "sensitivity": 6.35,
+      "sensitivity_label": "MODERATE"
+    },
+    {
+      "sector": "Oil, Gas & Energy",
+      "stock_count": 5,
+      "symbols": "BPCL, NTPC, ONGC, POWERGRID, RELIANCE",
+      "all_win_rate": 59.26,
+      "all_median_return": 0.59,
+      "cut_win_rate": 62.58,
+      "cut_median_return": 0.95,
+      "hike_win_rate": 60.66,
+      "hike_median_return": 0.7,
+      "squo_win_rate": 61.86,
+      "squo_median_return": 0.69,
+      "best_scenario": "RATE CUT",
+      "best_win_rate": 62.58,
+      "sensitivity": 2.55,
+      "sensitivity_label": "DEFENSIVE"
     }
   ]
 }
