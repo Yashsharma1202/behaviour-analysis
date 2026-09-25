@@ -1323,6 +1323,19 @@
           
           <div class="filter-bar">
             <input type="text" id="eq-search" class="search-input" placeholder="Search Equity Stock (e.g. RELIANCE, TCS)..." oninput="filterEquityTable()">
+            <select id="eq-sector-filter" onchange="filterEquityTable()" style="background:var(--surface); border:1px solid var(--surface-border); color:#FFF; padding:0.4rem 0.6rem; border-radius:6px; font-size:0.8rem; cursor:pointer;">
+                <option value="ALL">All Sectors</option>
+                <option value="Banking & Financials">🏦 Banking & Financials (11)</option>
+                <option value="Automobile & Auto Components">🚗 Automobile (6)</option>
+                <option value="Information Technology">💻 Information Technology (6)</option>
+                <option value="FMCG & Consumption">🛒 FMCG & Consumption (5)</option>
+                <option value="Metals & Mining">⛏️ Metals & Mining (5)</option>
+                <option value="Healthcare & Pharma">💊 Healthcare & Pharma (5)</option>
+                <option value="Oil, Gas & Energy">⚡ Oil, Gas & Energy (5)</option>
+                <option value="Cement & Construction">🏗️ Cement & Construction (3)</option>
+                <option value="Consumer Durables & Retail">🛍️ Consumer Durables (2)</option>
+                <option value="Telecom & Logistics">📡 Telecom & Logistics (2)</option>
+            </select>
             <button class="filter-pill active" onclick="setEquityFilter('all', this)">All (50)</button>
             <button class="filter-pill" onclick="setEquityFilter('BUY', this)">🟢 Delivery BUYS (22)</button>
             <button class="filter-pill" onclick="setEquityFilter('EXIT', this)">🔴 Cash EXITS (28)</button>
@@ -2333,8 +2346,8 @@
       }
 
       // 2. Ingest Nifty Futures Holiday Data from window bundle or fetch
-      if (window.NIFTY_FUTURES_HOLIDAY_DATA) {
-        niftyFuturesHolidayData = window.NIFTY_FUTURES_HOLIDAY_DATA;
+      if (window.NIFTY_FUTURES_HOLIDAY_DATA || window.NIFTY_HOLIDAY_BEHAVIOUR_DATA) {
+        niftyFuturesHolidayData = window.NIFTY_FUTURES_HOLIDAY_DATA || window.NIFTY_HOLIDAY_BEHAVIOUR_DATA;
       } else {
         try {
           const res = await fetch('dashboard_data/nifty_futures_holiday_behaviour.json');
@@ -2355,6 +2368,20 @@
         }
       }
       window.RBI_POLICY_DATA = rbiPolicyData;
+
+      // 3b. Build symbol -> sector lookup for cross-tab sector filters.
+      // Source: RBI sector_analysis (its sector names match the live-sector-filter dropdown values exactly).
+      if (!window.STOCK_SECTORS && rbiPolicyData && Array.isArray(rbiPolicyData.sector_analysis)) {
+        const secMap = {};
+        rbiPolicyData.sector_analysis.forEach(s => {
+          const sector = s.sector || s.name || '';
+          (s.symbols || '').split(',').forEach(sym => {
+            const key = sym.trim().toUpperCase();
+            if (key) secMap[key] = sector;
+          });
+        });
+        window.STOCK_SECTORS = secMap;
+      }
 
       // 4. Render all active views safely
       try { updateDynamicDashboardDates(); } catch(e) { console.error(e); }
@@ -3796,8 +3823,8 @@
     function filterHolidayTable() { renderHolidayTable(); }
 
     async function loadNiftyFuturesHolidayData() {
-      if (window.NIFTY_FUTURES_HOLIDAY_DATA) {
-        niftyFuturesHolidayData = window.NIFTY_FUTURES_HOLIDAY_DATA;
+      if (window.NIFTY_FUTURES_HOLIDAY_DATA || window.NIFTY_HOLIDAY_BEHAVIOUR_DATA) {
+        niftyFuturesHolidayData = window.NIFTY_FUTURES_HOLIDAY_DATA || window.NIFTY_HOLIDAY_BEHAVIOUR_DATA;
       } else {
         try {
           const res = await fetch('dashboard_data/nifty_futures_holiday_behaviour.json');
