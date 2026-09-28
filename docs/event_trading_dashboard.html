@@ -192,57 +192,46 @@
 
     /* Master Tabs Navigation */
     .tabs-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      border-bottom: 1px solid var(--surface-border);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+      gap: 0.6rem;
       margin-bottom: 1.25rem;
-      padding-bottom: 0.5rem;
-      overflow-x: auto;
-    }
-    .tabs-nav::-webkit-scrollbar {
-      height: 4px;
-    }
-    .tabs-nav::-webkit-scrollbar-thumb {
-      background: rgba(59, 130, 246, 0.4);
-      border-radius: 4px;
+      padding-bottom: 0;
     }
     .tab-btn {
-      background: transparent;
-      border: none;
+      background: var(--surface-light, rgba(148,163,184,0.06));
+      border: 1px solid var(--surface-border);
       outline: none;
       cursor: pointer;
-      padding: 0.65rem 1.15rem;
+      padding: 0.7rem 0.9rem;
       color: var(--text-muted);
       font-family: 'Outfit', sans-serif;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
-      border-radius: 8px 8px 0 0;
-      display: inline-flex;
+      border-radius: 10px;
+      display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 0.5rem;
-      transition: all 0.2s ease;
+      transition: all 0.15s ease;
       position: relative;
-      white-space: nowrap;
+      white-space: normal;
+      text-align: left;
+      min-height: 48px;
     }
     .tab-btn:hover {
       color: var(--text-main);
-      background: var(--surface-light);
+      background: var(--surface);
+      border-color: rgba(59,130,246,0.5);
+      transform: translateY(-1px);
     }
     .tab-btn.active {
       color: #FFF;
       background: var(--surface);
+      border-color: #3B82F6;
+      box-shadow: inset 0 0 0 1px #3B82F6, 0 4px 16px rgba(59,130,246,0.22);
     }
-    .tab-btn.active::after {
-      content: '';
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #3B82F6, #6366F1);
-      border-radius: 3px 3px 0 0;
-    }
+    .tab-btn.active::after { display: none; }
     .tab-badge {
       font-size: 0.65rem;
       padding: 0.15rem 0.45rem;
@@ -1454,6 +1443,10 @@
             <h2 id="holiday-table-heading">Mahatma Gandhi Jayanti (2-Oct-2026) 19-Year Position Taking Playbook</h2>
             <p id="holiday-table-subheading">19 Years of Historical Daily Bars (2007–2025) across empirical stock-specific position taking windows.</p>
           </div>
+          <div class="filter-bar" style="margin-bottom:0.6rem;">
+            <button id="hsub-nifty" class="filter-pill active" onclick="setHolidaySubtab('nifty50', this)">🎯 Nifty 50 (50)</button>
+            <button id="hsub-fo" class="filter-pill" onclick="setHolidaySubtab('fo', this)">📊 F&amp;O — All (211)</button>
+          </div>
           <div class="filter-bar">
             <input type="text" id="h-search" class="search-input" placeholder="Search Holiday Symbol..." oninput="filterHolidayTable()">
             <select id="h-sector-filter" class="search-input" style="padding:0.4rem 0.8rem; background:var(--surface-bg); color:var(--text-primary); border:1px solid var(--surface-border); border-radius:6px; cursor:pointer;" onchange="filterHolidayTable()">
@@ -1476,13 +1469,14 @@
           </div>
         </div>
 
-        <div class="table-container">
+        <div id="nifty50-holiday-view" class="table-container">
           <table id="holiday-table">
             <thead>
               <tr>
                 <th>Rank</th>
                 <th>Symbol</th>
                 <th>Company</th>
+                <th>Nifty 50</th>
                 <th>Direction</th>
                 <th>Window</th>
                 <th>Entry Date (09:20 AM)</th>
@@ -1497,6 +1491,37 @@
               <!-- Dynamically populated via JS -->
             </tbody>
           </table>
+        </div>
+
+        <!-- F&O ALL (211) VIEW -->
+        <div id="fo-holiday-view" style="display:none;">
+          <div class="filter-bar" style="margin-bottom:0.6rem;">
+            <input type="text" id="fo-h-search" class="search-input" placeholder="Search any F&amp;O symbol (211 stocks)..." oninput="renderFoHolidayTable()">
+            <button id="fopill-all" class="filter-pill active" onclick="setFoHolidayFilter('all', this)">All (211)</button>
+            <button id="fopill-nifty" class="filter-pill" onclick="setFoHolidayFilter('nifty50', this)">🎯 Nifty 50 (50)</button>
+            <button id="fopill-nonnifty" class="filter-pill" onclick="setFoHolidayFilter('nonnifty', this)">Non-Nifty F&amp;O (161)</button>
+            <button id="fopill-long" class="filter-pill" onclick="setFoHolidayFilter('LONG', this)">🟢 LONG</button>
+            <button id="fopill-short" class="filter-pill" onclick="setFoHolidayFilter('SHORT', this)">🔴 SHORT</button>
+          </div>
+          <div class="table-container">
+            <table id="fo-holiday-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Symbol</th>
+                  <th>Company</th>
+                  <th>Nifty 50</th>
+                  <th>Direction</th>
+                  <th>Window</th>
+                  <th>4-Yr Win Rate</th>
+                  <th>Total 4-Yr PnL (₹)</th>
+                  <th>Lot Size</th>
+                  <th>Recommended Action</th>
+                </tr>
+              </thead>
+              <tbody id="fo-holiday-tbody"></tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -2718,6 +2743,7 @@
       }
 
       renderHolidayTable();
+      if (currentHolidaySubtab === 'fo') { loadHolidaysDataset().then(renderFoHolidayTable); }
     }
 
     function renderQuarterTable() {
@@ -2826,6 +2852,117 @@
       });
     }
 
+    // ---- Nifty 50 membership helpers + F&O-all (211) holiday view ----
+    let NIFTY50_SET = null;
+    function getNifty50Set() {
+      if (NIFTY50_SET) return NIFTY50_SET;
+      NIFTY50_SET = new Set();
+      try {
+        (window.FO_STOCKS_211 || []).forEach(s => {
+          const v = String(s.is_nifty50 || '').toUpperCase();
+          if (v === 'YES' || v === 'TRUE' || v === '1') NIFTY50_SET.add(String(s.symbol || '').toUpperCase());
+        });
+      } catch (e) {}
+      return NIFTY50_SET;
+    }
+    function isNifty50(sym) { return getNifty50Set().has(String(sym || '').toUpperCase()); }
+    function niftyBadge(sym) {
+      return isNifty50(sym)
+        ? `<span class="badge" style="background:#134E2A; color:#34D399; font-weight:700; font-size:0.68rem;">✓ NIFTY 50</span>`
+        : `<span class="badge" style="background:#334155; color:#94A3B8; font-weight:700; font-size:0.68rem;">F&amp;O</span>`;
+    }
+
+    let currentHolidaySubtab = 'nifty50';
+    let HOLIDAYS_DATASET = null;
+    let currentFoHolidayFilter = 'all';
+
+    function setHolidaySubtab(tab, el) {
+      currentHolidaySubtab = tab;
+      document.querySelectorAll('#hsub-nifty, #hsub-fo').forEach(b => b.classList.remove('active'));
+      if (el) el.classList.add('active');
+      const nv = document.getElementById('nifty50-holiday-view');
+      const fv = document.getElementById('fo-holiday-view');
+      if (tab === 'fo') {
+        if (nv) nv.style.display = 'none';
+        if (fv) fv.style.display = 'block';
+        loadHolidaysDataset().then(renderFoHolidayTable);
+      } else {
+        if (fv) fv.style.display = 'none';
+        if (nv) nv.style.display = 'block';
+      }
+    }
+
+    async function loadHolidaysDataset() {
+      if (HOLIDAYS_DATASET) return HOLIDAYS_DATASET;
+      try {
+        const res = await fetch('dashboard_data/holidays_dataset.json');
+        if (res.ok) HOLIDAYS_DATASET = await res.json();
+      } catch (e) { console.warn('holidays_dataset load failed', e); }
+      return HOLIDAYS_DATASET;
+    }
+
+    function setFoHolidayFilter(f, el) {
+      currentFoHolidayFilter = f;
+      document.querySelectorAll('#fopill-all,#fopill-nifty,#fopill-nonnifty,#fopill-long,#fopill-short').forEach(b => b.classList.remove('active'));
+      if (el) el.classList.add('active');
+      renderFoHolidayTable();
+    }
+
+    function foDatasetIdFor(holidayId) {
+      // map event_dashboard id (e.g. gandhi_2026) -> holidays_dataset id (gandhi)
+      return String(holidayId || '').replace(/_20\d\d$/, '');
+    }
+
+    function renderFoHolidayTable() {
+      const tbody = document.getElementById('fo-holiday-tbody');
+      if (!tbody) return;
+      if (!HOLIDAYS_DATASET) {
+        tbody.innerHTML = '<tr><td colspan="10" style="text-align:center; color:#94A3B8; padding:1rem;">Loading 211 F&amp;O stocks…</td></tr>';
+        return;
+      }
+      const wantId = foDatasetIdFor(currentHolidayId);
+      const h = HOLIDAYS_DATASET.find(x => x.id === wantId);
+      const list = (h && h.top_stocks) ? h.top_stocks.slice() : [];
+      const q = (document.getElementById('fo-h-search')?.value || '').toUpperCase();
+      let rows = list.filter(s => {
+        const n50 = String(s.is_nifty50 || '').toUpperCase() === 'YES';
+        const dir = String(s.direction || '').toUpperCase();
+        if (currentFoHolidayFilter === 'nifty50' && !n50) return false;
+        if (currentFoHolidayFilter === 'nonnifty' && n50) return false;
+        if (currentFoHolidayFilter === 'LONG' && !dir.includes('LONG')) return false;
+        if (currentFoHolidayFilter === 'SHORT' && !dir.includes('SHORT')) return false;
+        if (q && !String(s.symbol).toUpperCase().includes(q) && !String(s.name || '').toUpperCase().includes(q)) return false;
+        return true;
+      });
+      rows.sort((a, b) => (a.rank || 9999) - (b.rank || 9999));
+      if (!rows.length) {
+        tbody.innerHTML = '<tr><td colspan="10" style="text-align:center; color:#94A3B8; padding:1rem;">No F&amp;O stocks match this filter.</td></tr>';
+        return;
+      }
+      tbody.innerHTML = rows.map(s => {
+        const dir = String(s.direction || '').toUpperCase();
+        const dirBadge = dir.includes('LONG') ? `<span class="badge-long">▲ LONG</span>` : `<span class="badge-short">▼ SHORT</span>`;
+        const action = dir.includes('LONG')
+          ? `<span class="action-tag action-buy-call">BUY CALL (Risk Capped)</span>`
+          : `<span class="action-tag action-buy-put">BUY PUT (Risk Capped)</span>`;
+        const wr = Number(s.win_rate || 0);
+        const pnl = Number(s.total_4y_pnl || 0);
+        const win = s.window || ('T-' + (s.entry_lead_days || 2) + ' to T+' + (s.exit_hold_days || 3));
+        return `<tr>
+          <td><strong>Rank ${s.rank || ''}</strong></td>
+          <td><strong>${s.symbol}</strong></td>
+          <td style="color:#CBD5E1">${s.name || ''}</td>
+          <td>${niftyBadge(s.symbol)}</td>
+          <td>${dirBadge}</td>
+          <td><span class="window-pill">${win}</span></td>
+          <td><strong style="color:${wr >= 80 ? '#FBBF24' : '#E2E8F0'}">${wr.toFixed(1)}%</strong></td>
+          <td style="color:${pnl >= 0 ? '#34D399' : '#F87171'}">${pnl >= 0 ? '+' : ''}₹${Math.round(pnl).toLocaleString('en-IN')}</td>
+          <td style="color:#94A3B8">${Number(s.lot_size || 0).toLocaleString('en-IN')}</td>
+          <td>${action}</td>
+        </tr>`;
+      }).join('');
+    }
+
     function renderHolidayTable() {
       if (!dashboardData || !dashboardData.holidays) return;
       const h = dashboardData.holidays.find(x => x.id === currentHolidayId) || dashboardData.holidays[0];
@@ -2886,6 +3023,7 @@
           <td><strong>Rank ${idx + 1}</strong></td>
           <td><strong>${s.symbol}</strong></td>
           <td style="color:#CBD5E1">${s.name}</td>
+          <td>${niftyBadge(s.symbol)}</td>
           <td>${dirBadge}</td>
           <td><span class="window-pill">${winPill}</span></td>
           <td>${enDateBadge}</td>
@@ -3016,6 +3154,55 @@
       renderRbiUpcomingStockTable();
     }
 
+    // ---- RBI position-taking: correct T-N/T+M date computation + live status alert ----
+    const NSE_2026_HOLIDAYS = new Set([
+      '2026-01-26','2026-03-03','2026-03-04','2026-03-26','2026-03-31','2026-04-03',
+      '2026-04-14','2026-05-01','2026-05-28','2026-06-26','2026-09-14','2026-10-02',
+      '2026-10-20','2026-11-24','2026-12-25'
+    ]);
+    const _MONS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const _DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    function rbiIsoLocal(dt) {
+      return dt.getFullYear() + '-' + String(dt.getMonth() + 1).padStart(2, '0') + '-' + String(dt.getDate()).padStart(2, '0');
+    }
+    function rbiIsTradingDay(dt) {
+      const dow = dt.getDay();
+      if (dow === 0 || dow === 6) return false;
+      return !NSE_2026_HOLIDAYS.has(rbiIsoLocal(dt));
+    }
+    function rbiShiftTradingDays(anchor, n) {
+      const dt = new Date(anchor.getFullYear(), anchor.getMonth(), anchor.getDate());
+      const step = n >= 0 ? 1 : -1;
+      let cnt = Math.abs(n);
+      while (cnt > 0) { dt.setDate(dt.getDate() + step); if (rbiIsTradingDay(dt)) cnt--; }
+      return dt;
+    }
+    function rbiParseDMY(s) {
+      const m = String(s).match(/(\d{1,2})-([A-Za-z]{3})-(\d{4})/);
+      if (!m) return null;
+      const mo = _MONS.indexOf(m[2]);
+      return mo < 0 ? null : new Date(+m[3], mo, +m[1]);
+    }
+    function rbiFmtDMY(dt) {
+      return String(dt.getDate()).padStart(2, '0') + '-' + _MONS[dt.getMonth()] + '-' + dt.getFullYear() + ' (' + _DAYS[dt.getDay()] + ')';
+    }
+    function rbiParseWindow(w) {
+      const m = String(w).match(/T-?(\d+)\s*to\s*T\+?(\d+)/i);
+      return m ? { lead: +m[1], hold: +m[2] } : { lead: 2, hold: 3 };
+    }
+    function rbiStatusBadge(entryDt, exitDt) {
+      const now = new Date();
+      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      const DAY = 86400000;
+      const dE = Math.round((entryDt - today) / DAY);
+      const dX = Math.round((exitDt - today) / DAY);
+      if (dE === 0) return { tag: '🔥 ENTER TODAY', color: '#F59E0B', border: '#F59E0B' };
+      if (dE === 1) return { tag: '🚨 ENTRY TOMORROW', color: '#F87171', border: '#EF4444' };
+      if (dE < 0 && dX >= 0) return { tag: '🟢 IN PROGRESS', color: '#34D399', border: '#34D399' };
+      if (dX < 0) return { tag: '✅ COMPLETED', color: '#94A3B8', border: '#475569' };
+      return { tag: '⏳ UPCOMING', color: '#60A5FA', border: '#334155' };
+    }
+
     function renderRbiUpcomingStockTable() {
       const tbody = document.getElementById('rbi-upcoming-stock-tbody');
       const countEl = document.getElementById('rbi-upcoming-stock-count');
@@ -3026,6 +3213,8 @@
         tbody.innerHTML = '<tr><td colspan="12" style="text-align:center; padding:2rem; color:var(--text-muted);">No stock data loaded.</td></tr>';
         return;
       }
+
+      const rbiAnchor = rbiParseDMY(d.decision_day) || rbiParseDMY(d.date) || new Date(2026, 9, 9);
 
       let stocks = [...d.stocks];
       const query = (document.getElementById('rbi-upcoming-stock-search')?.value || '').toLowerCase().trim();
@@ -3068,6 +3257,15 @@
         const retColor = s.avg_ret >= 0 ? '#34D399' : '#F87171';
         const pnlColor = s.net_pnl >= 0 ? '#34D399' : '#F87171';
 
+        // Recompute entry/exit from the window + MPC decision day (source dates were off by one
+        // trading day) and derive the live position-taking status.
+        const rbiWin = rbiParseWindow(s.window);
+        const rbiEnDt = rbiShiftTradingDays(rbiAnchor, -rbiWin.lead);
+        const rbiExDt = rbiShiftTradingDays(rbiAnchor, rbiWin.hold);
+        const rbiEntryStr = rbiFmtDMY(rbiEnDt);
+        const rbiExitStr = rbiFmtDMY(rbiExDt);
+        const rbiSt = rbiStatusBadge(rbiEnDt, rbiExDt);
+
         // Clean object for onclick modal
         const stockDataClean = {
           symbol: s.symbol,
@@ -3075,8 +3273,8 @@
           sector: s.sector,
           direction: s.direction,
           window: s.window,
-          entry_date: s.entry_date,
-          exit_date: s.exit_date,
+          entry_date: rbiEntryStr,
+          exit_date: rbiExitStr,
           win_rate: s.win_rate,
           win_ratio: s.win_ratio,
           avg_ret: s.avg_ret,
@@ -3097,8 +3295,11 @@
             <td><span style="font-size:0.75rem; color:#CBD5E1;">${s.sector}</span></td>
             <td style="text-align:center;">${dirBadge}</td>
             <td style="text-align:center;"><span style="font-family:'JetBrains Mono'; font-size:0.78rem; font-weight:700; color:#38BDF8; background:rgba(56,189,248,0.1); padding:0.2rem 0.5rem; border-radius:4px;">${s.window}</span></td>
-            <td><span style="color:#93C5FD; font-size:0.78rem; font-weight:600;">${s.entry_date}</span></td>
-            <td><span style="color:#CBD5E1; font-size:0.78rem;">${s.exit_date}</span></td>
+            <td>
+              <span style="color:#93C5FD; font-size:0.78rem; font-weight:600;">${rbiEntryStr}</span>
+              <div style="margin-top:3px;"><span style="color:${rbiSt.color}; font-size:0.66rem; font-weight:800; border:1px solid ${rbiSt.border}; border-radius:4px; padding:1px 5px; display:inline-block;">${rbiSt.tag}</span></div>
+            </td>
+            <td><span style="color:#CBD5E1; font-size:0.78rem;">${rbiExitStr}</span></td>
             <td>
               <strong style="color:${wrColor}; font-family:'JetBrains Mono'; font-size:0.85rem;">${s.win_rate}%</strong>
               <div style="font-size:0.68rem; color:var(--text-muted);">${s.win_ratio || ''}</div>
@@ -3817,6 +4018,7 @@
       document.querySelectorAll('#tab-holidays .filter-pill').forEach(b => b.classList.remove('active'));
       if (el) el.classList.add('active');
       renderHolidayTable();
+      if (currentHolidaySubtab === 'fo') { loadHolidaysDataset().then(renderFoHolidayTable); }
     }
 
     function filterQuarterTable() { renderQuarterTable(); }
@@ -4975,5 +5177,75 @@
     }
 
 </script>
+<!-- ============ LIVE P&L WIDGET (polls live_pnl_server.py) ============ -->
+<div id="livepnl-fab" onclick="toggleLivePnl()" title="Live mark-to-market P&L"
+     style="position:fixed; right:20px; bottom:20px; z-index:9998; cursor:pointer; user-select:none;
+            background:linear-gradient(135deg,#0EA5E9,#2563EB); color:#fff; font-weight:800; font-size:0.85rem;
+            padding:0.6rem 1rem; border-radius:30px; box-shadow:0 6px 20px rgba(0,0,0,0.4);">💹 Live P&amp;L</div>
+<div id="livepnl-panel" style="display:none; position:fixed; right:20px; bottom:74px; z-index:9999; width:400px;
+     max-width:92vw; max-height:74vh; overflow:hidden; background:#0B1220; border:1px solid #1E293B;
+     border-radius:12px; box-shadow:0 12px 40px rgba(0,0,0,0.55); flex-direction:column;">
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:0.7rem 0.9rem;
+       background:#111C2E; border-bottom:1px solid #1E293B;">
+    <div style="font-weight:800; color:#E2E8F0; font-size:0.9rem;">💹 Live P&amp;L — MTM <span id="livepnl-mode"
+         style="font-size:0.65rem; font-weight:700; color:#0B1220; background:#F59E0B; padding:1px 6px; border-radius:4px; margin-left:4px;"></span></div>
+    <div>
+      <span id="livepnl-clock" style="font-size:0.66rem; color:#64748B; margin-right:8px;"></span>
+      <span onclick="toggleLivePnl()" style="cursor:pointer; color:#94A3B8; font-weight:800;">✕</span>
+    </div>
+  </div>
+  <div id="livepnl-total" style="padding:0.7rem 0.9rem; border-bottom:1px solid #1E293B;"></div>
+  <div id="livepnl-body" style="overflow-y:auto; padding:0.4rem 0.6rem;"></div>
+</div>
+<script>
+  (function(){
+    const LIVEPNL_BASE = (function(){ try { return localStorage.getItem('livepnl_url'); } catch(e){ return null; } })() || 'http://localhost:8787';
+    let timer=null, open=false;
+    window.toggleLivePnl = function(){
+      open=!open;
+      document.getElementById('livepnl-panel').style.display = open ? 'flex' : 'none';
+      if(open){ pollLivePnl(); timer=setInterval(pollLivePnl, 3000); }
+      else { clearInterval(timer); }
+    };
+    function money(n){ return (n<0?'-':'+')+'₹'+Math.abs(Math.round(n)).toLocaleString('en-IN'); }
+    async function pollLivePnl(){
+      const totalEl=document.getElementById('livepnl-total');
+      const bodyEl=document.getElementById('livepnl-body');
+      const modeEl=document.getElementById('livepnl-mode');
+      const clockEl=document.getElementById('livepnl-clock');
+      try{
+        const res=await fetch(LIVEPNL_BASE+'/api/pnl',{cache:'no-store'});
+        if(!res.ok) throw new Error('bad');
+        const d=await res.json();
+        modeEl.textContent=(d.mode||'').toUpperCase();
+        modeEl.style.background = d.mode==='live' ? '#34D399' : '#F59E0B';
+        clockEl.textContent='⟳ '+(d.generated_at||'').slice(11,19);
+        const t=d.totals||{};
+        const col=(t.net_pnl>=0)?'#34D399':'#F87171';
+        totalEl.innerHTML='<div style="display:flex; justify-content:space-between; align-items:baseline;">'
+          +'<span style="color:#94A3B8; font-size:0.72rem;">NET MTM P&amp;L ('+(t.positions_entered||0)+' live / '+(t.positions_total||0)+')</span>'
+          +'<span style="font-weight:800; font-size:1.25rem; color:'+col+'; font-family:JetBrains Mono,monospace;">'+money(t.net_pnl||0)+'</span></div>';
+        const rows=(d.positions||[]).filter(p=>p.pnl!==null);
+        const wait=(d.positions||[]).filter(p=>p.pnl===null).length;
+        bodyEl.innerHTML=(rows.length? rows.map(p=>{
+          const c=(p.pnl>=0)?'#34D399':'#F87171';
+          const dir=(p.direction==='LONG')?'▲':'▼'; const dc=(p.direction==='LONG')?'#34D399':'#F87171';
+          return '<div style="display:flex; align-items:center; justify-content:space-between; padding:5px 6px; border-bottom:1px solid #131E30;">'
+            +'<div style="min-width:0;"><span style="font-weight:700; color:#E2E8F0; font-size:0.8rem;">'+p.symbol+'</span> '
+            +'<span style="color:'+dc+'; font-size:0.7rem;">'+dir+'</span>'
+            +'<div style="color:#64748B; font-size:0.64rem;">'+p.entry_price+' → '+p.ltp+' · '+String(p.status).replace(/_/g,' ')+'</div></div>'
+            +'<div style="text-align:right;"><div style="color:'+c+'; font-weight:800; font-size:0.82rem; font-family:JetBrains Mono,monospace;">'+money(p.pnl)+'</div>'
+            +'<div style="color:'+c+'; font-size:0.64rem;">'+(p.pnl_pct>=0?'+':'')+p.pnl_pct+'%</div></div></div>';
+        }).join('') : '<div style="color:#64748B; padding:0.8rem; text-align:center; font-size:0.78rem;">No positions entered yet — waiting for entry days.</div>')
+          +(wait? '<div style="color:#64748B; padding:0.5rem; text-align:center; font-size:0.68rem;">+ '+wait+' upcoming (not yet entered)</div>':'');
+      }catch(e){
+        modeEl.textContent='OFFLINE'; modeEl.style.background='#64748B';
+        totalEl.innerHTML='<span style="color:#94A3B8; font-size:0.72rem;">NET MTM P&amp;L</span>';
+        bodyEl.innerHTML='<div style="color:#F59E0B; padding:0.8rem; font-size:0.76rem; line-height:1.5;">Live P&amp;L backend not reachable.<br>Start it on this machine:<br><code style="color:#93C5FD;">python live_pnl_server.py</code><br><span style="color:#64748B;">(then reopen this panel)</span></div>';
+      }
+    }
+  })();
+</script>
+
 </body>
 </html>

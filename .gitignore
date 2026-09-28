@@ -13,6 +13,10 @@ all_user_requests.md
 news.db
 forward.db
 
+# Live P&L server: broker secrets & runtime state (never commit)
+smartapi_config.json
+live_pnl_state.json
+
 # Heavy Parquet & Raw Tick data cache
 OI_DATA/
 options_parquet/
