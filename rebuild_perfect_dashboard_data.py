@@ -10,7 +10,10 @@ JSON_FILE = ROOT / 'dashboard_data/event_dashboard_data.json'
 CONSOLIDATED_FILE = ROOT / '12_Quarters_Consolidated_Master.xlsx'
 RESULT_DATES_FILE = ROOT / 'Nifty50Stocks_QtyResultDates.xlsx'
 AUDITED_17Q_FILE = ROOT / 'Nifty50_All_17_Quarters_RealTime_Execution_Master_Audited.xlsx'
-SPOT_CSV = ROOT / 'MW-NIFTY-50-21-Jul-2026.csv'
+# Current official NSE Nifty 50 snapshot (29-Sep-2026) — same 50 symbols as
+# download_feeds.NIFTY50_FALLBACK (ETERNAL/INDIGO/JIOFIN/MAXHEALTH/TMPV/TRENT in;
+# BPCL/BRITANNIA/DIVISLAB/HEROMOTOCO/INDUSINDBK/TATAMOTORS out).
+SPOT_CSV = ROOT / 'MW-NIFTY-50-29-Sep-2026.csv'
 
 # 1. Load 17Q Audited Master Metadata
 df_17q = pd.read_excel(AUDITED_17Q_FILE, skiprows=3)
@@ -52,7 +55,7 @@ for _, r in df_17q.iterrows():
 print(f"Loaded 17Q Audited Metadata for {len(meta_17q)} stocks.")
 
 # 2. Load Spot LTPs
-df_spot = pd.read_csv(SPOT_CSV)
+df_spot = pd.read_csv(SPOT_CSV, encoding='utf-8-sig')  # NSE export starts with a BOM
 ltp_map = {}
 for _, r in df_spot.iterrows():
     sym = str(r['SYMBOL']).strip().upper()
@@ -74,7 +77,14 @@ LOT_SIZES = {
     "HDFCLIFE": 1100, "SBILIFE": 375, "DRREDDY": 125, "BRITANNIA": 200,
     "APOLLOHOSP": 125, "TATACONSUM": 450, "HINDALCO": 1400, "BPCL": 1800,
     "INDUSINDBK": 500, "DIVISLAB": 200, "BAJAJFINSV": 500, "NESTLEIND": 200,
-    "WIPRO": 1500, "ONGC": 3750, "TECHM": 600, "ASHOKLEY": 5000, "ADANIGREEN": 500
+    "WIPRO": 1500, "ONGC": 3750, "TECHM": 600, "ASHOKLEY": 5000, "ADANIGREEN": 500,
+    # New Nifty 50 constituents (Sep-2026 reconstitution).
+    # INDIGO / JIOFIN: same values the project already uses (fo_stocks_211.json).
+    # ETERNAL / MAXHEALTH / TMPV / TRENT: last-known NSE F&O lot sizes -- PLACEHOLDERS,
+    # verify against the current NSE F&O lot-size circular before live use
+    # (TRENT 150 assumes the 100-share lot was scaled for the 1:2 bonus, ex 04-Jun-2026).
+    "ETERNAL": 2425, "INDIGO": 150, "JIOFIN": 2400, "MAXHEALTH": 525,
+    "TMPV": 800, "TRENT": 150
 }
 
 # 3. Load Result Dates for each quarter

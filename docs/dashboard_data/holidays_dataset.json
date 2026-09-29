@@ -535,7 +535,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -1975,7 +1975,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -2775,7 +2775,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -2875,7 +2875,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,
@@ -2955,7 +2955,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -3195,7 +3195,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -4215,7 +4215,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -24404,7 +24404,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -24884,7 +24884,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -24964,7 +24964,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -25284,7 +25284,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -25324,7 +25324,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -25724,7 +25724,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -26744,7 +26744,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,
@@ -47873,7 +47873,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -48453,7 +48453,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -49133,7 +49133,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -49193,7 +49193,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -49213,7 +49213,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -49593,7 +49593,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -50893,7 +50893,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,
@@ -71662,7 +71662,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -71942,7 +71942,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -72122,7 +72122,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -72362,7 +72362,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -73062,7 +73062,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -74662,7 +74662,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,
@@ -74742,7 +74742,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -95611,7 +95611,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -96071,7 +96071,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -96171,7 +96171,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -96771,7 +96771,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -96911,7 +96911,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -97091,7 +97091,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -97671,7 +97671,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,
@@ -119100,7 +119100,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -119980,7 +119980,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -120360,7 +120360,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -120560,7 +120560,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -121000,7 +121000,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -121100,7 +121100,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -121220,7 +121220,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,
@@ -142709,7 +142709,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -143089,7 +143089,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -143969,7 +143969,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -144489,7 +144489,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,
@@ -144589,7 +144589,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -144849,7 +144849,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -145849,7 +145849,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -165938,7 +165938,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -166598,7 +166598,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -167418,7 +167418,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -167818,7 +167818,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -168618,7 +168618,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,
@@ -168658,7 +168658,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -168938,7 +168938,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -190127,7 +190127,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -190307,7 +190307,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -191247,7 +191247,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -191487,7 +191487,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -191507,7 +191507,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -192307,7 +192307,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,
@@ -192867,7 +192867,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -213976,7 +213976,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -214056,7 +214056,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -214076,7 +214076,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -215116,7 +215116,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -215496,7 +215496,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -215516,7 +215516,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,
@@ -216376,7 +216376,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -237605,7 +237605,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -237825,7 +237825,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -238385,7 +238385,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -238445,7 +238445,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -238625,7 +238625,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -239525,7 +239525,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -239845,7 +239845,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,
@@ -260594,7 +260594,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -260714,7 +260714,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -261374,7 +261374,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -261454,7 +261454,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -261734,7 +261734,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -262394,7 +262394,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -264094,7 +264094,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,
@@ -308192,7 +308192,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -308552,7 +308552,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -309292,7 +309292,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -310112,7 +310112,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -310352,7 +310352,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -310732,7 +310732,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,
@@ -310832,7 +310832,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -332081,7 +332081,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -332441,7 +332441,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -332661,7 +332661,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -333241,7 +333241,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -333781,7 +333781,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -334201,7 +334201,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,
@@ -335181,7 +335181,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -355490,7 +355490,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -356270,7 +356270,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -356650,7 +356650,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -357490,7 +357490,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -357750,7 +357750,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,
@@ -357930,7 +357930,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -358010,7 +358010,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -379419,7 +379419,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
@@ -379839,7 +379839,7 @@
       {
         "symbol": "TMPV",
         "name": "TMPV Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 327.4,
         "lot_size": 500,
         "margin_20pct": 32740.0,
@@ -379879,7 +379879,7 @@
       {
         "symbol": "BPCL",
         "name": "Bharat Petroleum Corp Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 306.3,
         "lot_size": 1800,
         "margin_20pct": 110268.0,
@@ -380079,7 +380079,7 @@
       {
         "symbol": "BRITANNIA",
         "name": "Britannia Industries Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 5335.0,
         "lot_size": 200,
         "margin_20pct": 213400.0,
@@ -380439,7 +380439,7 @@
       {
         "symbol": "TATAMOTORS",
         "name": "Tata Motors Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 405.6,
         "lot_size": 550,
         "margin_20pct": 44616.0,
@@ -380539,7 +380539,7 @@
       {
         "symbol": "MAXHEALTH",
         "name": "MAXHEALTH Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 1084.3,
         "lot_size": 500,
         "margin_20pct": 108430.0,
@@ -381059,7 +381059,7 @@
       {
         "symbol": "ETERNAL",
         "name": "ETERNAL Ltd",
-        "is_nifty50": "NO",
+        "is_nifty50": "YES",
         "spot_ltp": 294.15,
         "lot_size": 500,
         "margin_20pct": 29415.0,

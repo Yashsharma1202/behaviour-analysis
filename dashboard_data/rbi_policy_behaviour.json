@@ -4188,84 +4188,6 @@
       "sub_sector": "Telecommunications"
     },
     {
-      "symbol": "BPCL",
-      "sector": "Oil & Gas",
-      "total_events": 162,
-      "optimal_all": {
-        "window": "T+0 to T+5",
-        "win_rate": 59.9,
-        "avg_return": 0.51,
-        "median_return": 0.82,
-        "count": 162,
-        "score": 3.05
-      },
-      "optimal_cut": {
-        "window": "T+0 to T+5",
-        "win_rate": 63.6,
-        "avg_return": 0.32,
-        "median_return": 0.86,
-        "count": 44,
-        "score": 2.04
-      },
-      "optimal_hike": {
-        "window": "T+1 to T+5",
-        "win_rate": 58.5,
-        "avg_return": 0.57,
-        "median_return": 1.12,
-        "count": 41,
-        "score": 3.33
-      },
-      "optimal_status_quo": {
-        "window": "T+0 to T+5",
-        "win_rate": 62.7,
-        "avg_return": 1.04,
-        "median_return": 0.82,
-        "count": 75,
-        "score": 6.52
-      },
-      "core_sector": "Oil, Gas & Energy",
-      "sub_sector": "Oil Refining & Marketing"
-    },
-    {
-      "symbol": "BRITANNIA",
-      "sector": "FMCG",
-      "total_events": 162,
-      "optimal_all": {
-        "window": "T+0 to T+1",
-        "win_rate": 57.4,
-        "avg_return": 784.32,
-        "median_return": 0.19,
-        "count": 162,
-        "score": 4502.0
-      },
-      "optimal_cut": {
-        "window": "T-3 to T+5",
-        "win_rate": 54.5,
-        "avg_return": 4.76,
-        "median_return": 0.28,
-        "count": 44,
-        "score": 25.94
-      },
-      "optimal_hike": {
-        "window": "T-3 to T+3",
-        "win_rate": 65.9,
-        "avg_return": 681.68,
-        "median_return": 0.76,
-        "count": 41,
-        "score": 4492.27
-      },
-      "optimal_status_quo": {
-        "window": "T+0 to T+1",
-        "win_rate": 61.3,
-        "avg_return": 1247.28,
-        "median_return": 0.31,
-        "count": 75,
-        "score": 7645.83
-      },
-      "core_sector": "FMCG & Consumption",
-      "sub_sector": "Foods & Bakery"
-    },
-    {
       "symbol": "CIPLA",
       "sector": "Pharmaceuticals",
       "total_events": 162,
@@ -4344,45 +4266,6 @@
       "sub_sector": "Coal Mining"
     },
     {
-      "symbol": "DIVISLAB",
-      "sector": "Pharmaceuticals",
-      "total_events": 162,
-      "optimal_all": {
-        "window": "T+0 to T+3",
-        "win_rate": 68.5,
-        "avg_return": -0.08,
-        "median_return": 0.82,
-        "count": 162,
-        "score": -0.55
-      },
-      "optimal_cut": {
-        "window": "T+0 to T+3",
-        "win_rate": 84.1,
-        "avg_return": 0.65,
-        "median_return": 0.94,
-        "count": 44,
-        "score": 5.47
-      },
-      "optimal_hike": {
-        "window": "T-1 to T+1",
-        "win_rate": 57.5,
-        "avg_return": 0.65,
-        "median_return": 0.41,
-        "count": 40,
-        "score": 3.74
-      },
-      "optimal_status_quo": {
-        "window": "T+0 to T+3",
-        "win_rate": 68.0,
-        "avg_return": 0.53,
-        "median_return": 1.05,
-        "count": 75,
-        "score": 3.6
-      },
-      "core_sector": "Healthcare & Pharma",
-      "sub_sector": "API & CRAMS"
-    },
-    {
       "symbol": "DRREDDY",
       "sector": "Pharmaceuticals",
       "total_events": 162,
@@ -4459,6 +4342,45 @@
       },
       "core_sector": "Automobile & Auto Components",
       "sub_sector": "2-Wheelers / Commercial"
+    },
+    {
+      "symbol": "ETERNAL",
+      "sector": "Consumer Services / Food Delivery",
+      "total_events": 32,
+      "optimal_all": {
+        "window": "T-2 to T+5",
+        "win_rate": 65.6,
+        "avg_return": 1.4,
+        "median_return": 1.69,
+        "count": 32,
+        "score": 9.18
+      },
+      "optimal_cut": {
+        "window": "T+1 to T+5",
+        "win_rate": 75.0,
+        "avg_return": 2.31,
+        "median_return": 1.87,
+        "count": 4,
+        "score": 17.32
+      },
+      "optimal_hike": {
+        "window": "T+0 to T+3",
+        "win_rate": 66.7,
+        "avg_return": 1.15,
+        "median_return": 1.57,
+        "count": 6,
+        "score": 7.67
+      },
+      "optimal_status_quo": {
+        "window": "T-2 to T+5",
+        "win_rate": 68.2,
+        "avg_return": 1.87,
+        "median_return": 2.0,
+        "count": 22,
+        "score": 12.75
+      },
+      "core_sector": "Consumer Durables & Retail",
+      "sub_sector": "Food Delivery / Quick Commerce"
     },
     {
       "symbol": "GRASIM",
@@ -4617,45 +4539,6 @@
       "sub_sector": "Life Insurance"
     },
     {
-      "symbol": "HEROMOTOCO",
-      "sector": "Automobile",
-      "total_events": 162,
-      "optimal_all": {
-        "window": "T-2 to T+1",
-        "win_rate": 57.4,
-        "avg_return": 0.44,
-        "median_return": 0.39,
-        "count": 162,
-        "score": 2.53
-      },
-      "optimal_cut": {
-        "window": "T-1 to T+3",
-        "win_rate": 69.8,
-        "avg_return": -1.22,
-        "median_return": 0.78,
-        "count": 43,
-        "score": -8.52
-      },
-      "optimal_hike": {
-        "window": "T-1 to T+1",
-        "win_rate": 51.2,
-        "avg_return": 0.08,
-        "median_return": 0.03,
-        "count": 41,
-        "score": 0.41
-      },
-      "optimal_status_quo": {
-        "window": "T-3 to T+1",
-        "win_rate": 57.3,
-        "avg_return": 0.9,
-        "median_return": 1.08,
-        "count": 75,
-        "score": 5.16
-      },
-      "core_sector": "Automobile & Auto Components",
-      "sub_sector": "2-Wheelers"
-    },
-    {
       "symbol": "HINDALCO",
       "sector": "Metals & Mining",
       "total_events": 162,
@@ -4773,43 +4656,43 @@
       "sub_sector": "Private Banking"
     },
     {
-      "symbol": "INDUSINDBK",
-      "sector": "Banking & Financials",
-      "total_events": 162,
+      "symbol": "INDIGO",
+      "sector": "Aviation / Transport",
+      "total_events": 73,
       "optimal_all": {
-        "window": "T+0 to T+5",
-        "win_rate": 59.3,
-        "avg_return": 0.72,
-        "median_return": 0.72,
-        "count": 162,
-        "score": 4.27
+        "window": "T-2 to T+1",
+        "win_rate": 68.2,
+        "avg_return": 1.09,
+        "median_return": 1.06,
+        "count": 66,
+        "score": 7.43
       },
       "optimal_cut": {
-        "window": "T+0 to T+1",
-        "win_rate": 59.1,
-        "avg_return": 0.16,
-        "median_return": 0.36,
-        "count": 44,
-        "score": 0.95
+        "window": "T+1 to T+2",
+        "win_rate": 72.2,
+        "avg_return": 2.22,
+        "median_return": 1.43,
+        "count": 18,
+        "score": 16.03
       },
       "optimal_hike": {
-        "window": "T-3 to T+5",
-        "win_rate": 63.4,
-        "avg_return": 0.11,
-        "median_return": 0.81,
-        "count": 41,
-        "score": 0.7
+        "window": "T-2 to T+1",
+        "win_rate": 75.0,
+        "avg_return": 1.31,
+        "median_return": 1.17,
+        "count": 8,
+        "score": 9.82
       },
       "optimal_status_quo": {
-        "window": "T+1 to T+5",
-        "win_rate": 68.0,
-        "avg_return": 1.43,
-        "median_return": 0.64,
-        "count": 75,
-        "score": 9.72
+        "window": "T-2 to T+5",
+        "win_rate": 68.2,
+        "avg_return": 1.91,
+        "median_return": 1.81,
+        "count": 44,
+        "score": 13.03
       },
-      "core_sector": "Banking & Financials",
-      "sub_sector": "Private Banking"
+      "core_sector": "Telecom & Logistics",
+      "sub_sector": "Aviation"
     },
     {
       "symbol": "INFY",
@@ -4888,6 +4771,44 @@
       },
       "core_sector": "FMCG & Consumption",
       "sub_sector": "Cigarettes / FMCG / Hotels"
+    },
+    {
+      "symbol": "JIOFIN",
+      "sector": "Financial Services / NBFC",
+      "total_events": 18,
+      "optimal_all": {
+        "window": "T+1 to T+5",
+        "win_rate": 61.1,
+        "avg_return": 0.19,
+        "median_return": 0.49,
+        "count": 18,
+        "score": 1.16
+      },
+      "optimal_cut": {
+        "window": "T-3 to T+1",
+        "win_rate": 50.0,
+        "avg_return": 3.98,
+        "median_return": 1.39,
+        "count": 4,
+        "score": 19.9
+      },
+      "optimal_hike": {
+        "window": "N/A",
+        "win_rate": 0.0,
+        "avg_return": 0.0,
+        "count": 0,
+        "score": 0.0
+      },
+      "optimal_status_quo": {
+        "window": "T+1 to T+5",
+        "win_rate": 64.3,
+        "avg_return": 0.34,
+        "median_return": 0.49,
+        "count": 14,
+        "score": 2.19
+      },
+      "core_sector": "Banking & Financials",
+      "sub_sector": "NBFC / Fintech"
     },
     {
       "symbol": "JSWSTEEL",
@@ -5122,6 +5043,45 @@
       },
       "core_sector": "Automobile & Auto Components",
       "sub_sector": "Passenger Cars"
+    },
+    {
+      "symbol": "MAXHEALTH",
+      "sector": "Healthcare / Hospitals",
+      "total_events": 37,
+      "optimal_all": {
+        "window": "T-2 to T+5",
+        "win_rate": 67.6,
+        "avg_return": 2.66,
+        "median_return": 2.39,
+        "count": 37,
+        "score": 17.98
+      },
+      "optimal_cut": {
+        "window": "T+1 to T+5",
+        "win_rate": 75.0,
+        "avg_return": 2.75,
+        "median_return": 3.04,
+        "count": 4,
+        "score": 20.62
+      },
+      "optimal_hike": {
+        "window": "T+1 to T+5",
+        "win_rate": 50.0,
+        "avg_return": -0.07,
+        "median_return": -0.25,
+        "count": 6,
+        "score": -0.35
+      },
+      "optimal_status_quo": {
+        "window": "T-2 to T+3",
+        "win_rate": 77.8,
+        "avg_return": 4.37,
+        "median_return": 5.01,
+        "count": 27,
+        "score": 34.0
+      },
+      "core_sector": "Healthcare & Pharma",
+      "sub_sector": "Hospitals & Healthcare"
     },
     {
       "symbol": "NESTLEIND",
@@ -5514,45 +5474,6 @@
       "sub_sector": "Beverages & Foods"
     },
     {
-      "symbol": "TATAMOTORS",
-      "sector": "Automobile",
-      "total_events": 162,
-      "optimal_all": {
-        "window": "T-2 to T+3",
-        "win_rate": 58.0,
-        "avg_return": 5.18,
-        "median_return": 0.32,
-        "count": 162,
-        "score": 30.04
-      },
-      "optimal_cut": {
-        "window": "T-2 to T+3",
-        "win_rate": 65.9,
-        "avg_return": 13.43,
-        "median_return": 1.51,
-        "count": 44,
-        "score": 88.5
-      },
-      "optimal_hike": {
-        "window": "T+0 to T+1",
-        "win_rate": 56.1,
-        "avg_return": -0.02,
-        "median_return": 0.34,
-        "count": 41,
-        "score": -0.11
-      },
-      "optimal_status_quo": {
-        "window": "T-2 to T+3",
-        "win_rate": 64.0,
-        "avg_return": 4.53,
-        "median_return": 0.96,
-        "count": 75,
-        "score": 28.99
-      },
-      "core_sector": "Automobile & Auto Components",
-      "sub_sector": "Commercial / EV / PV"
-    },
-    {
       "symbol": "TATASTEEL",
       "sector": "Metals & Mining",
       "total_events": 162,
@@ -5709,6 +5630,84 @@
       "sub_sector": "Jewellery & Watches"
     },
     {
+      "symbol": "TMPV",
+      "sector": "Automobile",
+      "total_events": 162,
+      "optimal_all": {
+        "window": "T-2 to T+3",
+        "win_rate": 59.3,
+        "avg_return": 0.19,
+        "median_return": 0.45,
+        "count": 162,
+        "score": 1.13
+      },
+      "optimal_cut": {
+        "window": "T-3 to T+1",
+        "win_rate": 68.2,
+        "avg_return": 1.56,
+        "median_return": 1.91,
+        "count": 44,
+        "score": 10.64
+      },
+      "optimal_hike": {
+        "window": "T+0 to T+1",
+        "win_rate": 56.1,
+        "avg_return": -0.04,
+        "median_return": 0.34,
+        "count": 41,
+        "score": -0.22
+      },
+      "optimal_status_quo": {
+        "window": "T-3 to T+2",
+        "win_rate": 65.3,
+        "avg_return": 1.41,
+        "median_return": 1.2,
+        "count": 75,
+        "score": 9.21
+      },
+      "core_sector": "Automobile & Auto Components",
+      "sub_sector": "Passenger Vehicles / EV"
+    },
+    {
+      "symbol": "TRENT",
+      "sector": "Consumer Durables / Retail",
+      "total_events": 162,
+      "optimal_all": {
+        "window": "T-3 to T+5",
+        "win_rate": 58.6,
+        "avg_return": 1.18,
+        "median_return": 1.19,
+        "count": 162,
+        "score": 6.91
+      },
+      "optimal_cut": {
+        "window": "T-3 to T+5",
+        "win_rate": 61.4,
+        "avg_return": 0.95,
+        "median_return": 1.19,
+        "count": 44,
+        "score": 5.83
+      },
+      "optimal_hike": {
+        "window": "T+0 to T+2",
+        "win_rate": 61.0,
+        "avg_return": 0.17,
+        "median_return": 0.22,
+        "count": 41,
+        "score": 1.04
+      },
+      "optimal_status_quo": {
+        "window": "T-2 to T+5",
+        "win_rate": 68.0,
+        "avg_return": 2.64,
+        "median_return": 1.9,
+        "count": 75,
+        "score": 17.95
+      },
+      "core_sector": "Consumer Durables & Retail",
+      "sub_sector": "Fashion & Lifestyle Retail"
+    },
+    {
       "symbol": "ULTRACEMCO",
       "sector": "Materials / Cement",
       "total_events": 162,
@@ -5823,88 +5822,105 @@
       "sensitivity_label": "HIGH"
     },
     {
+      "sector": "Automobile & Auto Components",
+      "stock_count": 5,
+      "symbols": "BAJAJ-AUTO, EICHERMOT, M&M, MARUTI, TMPV",
+      "all_win_rate": 62.24,
+      "all_median_return": 0.95,
+      "cut_win_rate": 69.64,
+      "cut_median_return": 1.63,
+      "hike_win_rate": 61.96,
+      "hike_median_return": 0.75,
+      "squo_win_rate": 66.5,
+      "squo_median_return": 1.22,
+      "best_scenario": "RATE CUT",
+      "best_win_rate": 69.64,
+      "sensitivity": 9.88,
+      "sensitivity_label": "MODERATE"
+    },
+    {
+      "sector": "Telecom & Logistics",
+      "stock_count": 3,
+      "symbols": "ADANIPORTS, BHARTIARTL, INDIGO",
+      "all_win_rate": 64.4,
+      "all_median_return": 1.26,
+      "cut_win_rate": 69.53,
+      "cut_median_return": 2.15,
+      "hike_win_rate": 67.8,
+      "hike_median_return": 1.86,
+      "squo_win_rate": 62.27,
+      "squo_median_return": 1.35,
+      "best_scenario": "RATE CUT",
+      "best_win_rate": 69.53,
+      "sensitivity": 2.46,
+      "sensitivity_label": "DEFENSIVE"
+    },
+    {
       "sector": "Banking & Financials",
       "stock_count": 11,
-      "symbols": "AXISBANK, BAJAJFINSV, BAJFINANCE, HDFCBANK, HDFCLIFE, ICICIBANK, INDUSINDBK, KOTAKBANK, SBILIFE, SBIN, SHRIRAMFIN",
-      "all_win_rate": 62.9,
-      "all_median_return": 1.18,
-      "cut_win_rate": 70.25,
-      "cut_median_return": 1.88,
-      "hike_win_rate": 67.1,
-      "hike_median_return": 1.79,
-      "squo_win_rate": 64.38,
-      "squo_median_return": 1.79,
+      "symbols": "AXISBANK, BAJAJFINSV, BAJFINANCE, HDFCBANK, HDFCLIFE, ICICIBANK, JIOFIN, KOTAKBANK, SBILIFE, SBIN, SHRIRAMFIN",
+      "all_win_rate": 63.06,
+      "all_median_return": 1.16,
+      "cut_win_rate": 69.43,
+      "cut_median_return": 1.98,
+      "hike_win_rate": 61.34,
+      "hike_median_return": 1.89,
+      "squo_win_rate": 64.05,
+      "squo_median_return": 1.78,
       "best_scenario": "RATE CUT",
-      "best_win_rate": 70.25,
-      "sensitivity": 3.38,
-      "sensitivity_label": "DEFENSIVE"
+      "best_win_rate": 69.43,
+      "sensitivity": 8.32,
+      "sensitivity_label": "MODERATE"
+    },
+    {
+      "sector": "FMCG & Consumption",
+      "stock_count": 4,
+      "symbols": "HINDUNILVR, ITC, NESTLEIND, TATACONSUM",
+      "all_win_rate": 61.73,
+      "all_median_return": 0.58,
+      "cut_win_rate": 68.75,
+      "cut_median_return": 0.87,
+      "hike_win_rate": 61.6,
+      "hike_median_return": 0.32,
+      "squo_win_rate": 63.33,
+      "squo_median_return": 0.67,
+      "best_scenario": "RATE CUT",
+      "best_win_rate": 68.75,
+      "sensitivity": 8.52,
+      "sensitivity_label": "MODERATE"
     },
     {
       "sector": "Healthcare & Pharma",
       "stock_count": 5,
-      "symbols": "APOLLOHOSP, CIPLA, DIVISLAB, DRREDDY, SUNPHARMA",
-      "all_win_rate": 60.86,
-      "all_median_return": 0.53,
-      "cut_win_rate": 70.0,
-      "cut_median_return": 0.9,
-      "hike_win_rate": 64.2,
-      "hike_median_return": 0.79,
-      "squo_win_rate": 61.34,
-      "squo_median_return": 0.65,
+      "symbols": "APOLLOHOSP, CIPLA, DRREDDY, MAXHEALTH, SUNPHARMA",
+      "all_win_rate": 60.68,
+      "all_median_return": 0.85,
+      "cut_win_rate": 68.18,
+      "cut_median_return": 1.32,
+      "hike_win_rate": 62.7,
+      "hike_median_return": 0.66,
+      "squo_win_rate": 63.3,
+      "squo_median_return": 1.44,
       "best_scenario": "RATE CUT",
-      "best_win_rate": 70.0,
-      "sensitivity": 6.07,
+      "best_win_rate": 68.18,
+      "sensitivity": 7.13,
       "sensitivity_label": "MODERATE"
     },
     {
-      "sector": "Automobile & Auto Components",
-      "stock_count": 6,
-      "symbols": "BAJAJ-AUTO, EICHERMOT, HEROMOTOCO, M&M, MARUTI, TATAMOTORS",
-      "all_win_rate": 61.22,
-      "all_median_return": 0.83,
-      "cut_win_rate": 69.28,
-      "cut_median_return": 1.42,
-      "hike_win_rate": 60.17,
-      "hike_median_return": 0.63,
-      "squo_win_rate": 64.75,
-      "squo_median_return": 1.16,
-      "best_scenario": "RATE CUT",
-      "best_win_rate": 69.28,
-      "sensitivity": 11.08,
-      "sensitivity_label": "HIGH"
-    },
-    {
-      "sector": "Telecom & Logistics",
-      "stock_count": 2,
-      "symbols": "ADANIPORTS, BHARTIARTL",
-      "all_win_rate": 62.5,
-      "all_median_return": 1.36,
-      "cut_win_rate": 68.2,
-      "cut_median_return": 2.52,
-      "hike_win_rate": 64.2,
-      "hike_median_return": 2.21,
-      "squo_win_rate": 59.3,
-      "squo_median_return": 1.12,
-      "best_scenario": "RATE CUT",
-      "best_win_rate": 68.2,
-      "sensitivity": 4.78,
-      "sensitivity_label": "DEFENSIVE"
-    },
-    {
-      "sector": "FMCG & Consumption",
-      "stock_count": 5,
-      "symbols": "BRITANNIA, HINDUNILVR, ITC, NESTLEIND, TATACONSUM",
-      "all_win_rate": 60.86,
-      "all_median_return": 0.5,
-      "cut_win_rate": 65.9,
-      "cut_median_return": 0.75,
-      "hike_win_rate": 62.46,
-      "hike_median_return": 0.41,
-      "squo_win_rate": 62.92,
-      "squo_median_return": 0.6,
-      "best_scenario": "RATE CUT",
-      "best_win_rate": 65.9,
-      "sensitivity": 4.29,
+      "sector": "Consumer Durables & Retail",
+      "stock_count": 4,
+      "symbols": "ASIANPAINT, ETERNAL, TITAN, TRENT",
+      "all_win_rate": 62.98,
+      "all_median_return": 1.34,
+      "cut_win_rate": 65.92,
+      "cut_median_return": 1.53,
+      "hike_win_rate": 66.08,
+      "hike_median_return": 0.87,
+      "squo_win_rate": 69.05,
+      "squo_median_return": 1.69,
+      "best_scenario": "STATUS QUO",
+      "best_win_rate": 69.05,
+      "sensitivity": 1.81,
       "sensitivity_label": "DEFENSIVE"
     },
     {
@@ -5925,37 +5941,20 @@
       "sensitivity_label": "DEFENSIVE"
     },
     {
-      "sector": "Consumer Durables & Retail",
-      "stock_count": 2,
-      "symbols": "ASIANPAINT, TITAN",
-      "all_win_rate": 63.85,
-      "all_median_return": 1.23,
-      "cut_win_rate": 63.65,
-      "cut_median_return": 1.52,
-      "hike_win_rate": 68.3,
-      "hike_median_return": 0.84,
-      "squo_win_rate": 70.0,
-      "squo_median_return": 1.43,
-      "best_scenario": "STATUS QUO",
-      "best_win_rate": 70.0,
-      "sensitivity": 6.35,
-      "sensitivity_label": "MODERATE"
-    },
-    {
       "sector": "Oil, Gas & Energy",
-      "stock_count": 5,
-      "symbols": "BPCL, NTPC, ONGC, POWERGRID, RELIANCE",
-      "all_win_rate": 59.26,
-      "all_median_return": 0.59,
-      "cut_win_rate": 62.58,
-      "cut_median_return": 0.95,
-      "hike_win_rate": 60.66,
-      "hike_median_return": 0.7,
-      "squo_win_rate": 61.86,
-      "squo_median_return": 0.69,
+      "stock_count": 4,
+      "symbols": "NTPC, ONGC, POWERGRID, RELIANCE",
+      "all_win_rate": 59.1,
+      "all_median_return": 0.54,
+      "cut_win_rate": 62.33,
+      "cut_median_return": 0.97,
+      "hike_win_rate": 61.2,
+      "hike_median_return": 0.59,
+      "squo_win_rate": 61.65,
+      "squo_median_return": 0.66,
       "best_scenario": "RATE CUT",
-      "best_win_rate": 62.58,
-      "sensitivity": 2.55,
+      "best_win_rate": 62.33,
+      "sensitivity": 2.08,
       "sensitivity_label": "DEFENSIVE"
     }
   ]
