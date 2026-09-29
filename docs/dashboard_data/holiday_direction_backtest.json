@@ -1,0 +1,462 @@
+{
+  "generated_at": "2026-09-29",
+  "basis": "Full Nifty futures index; each holiday\u2019s empirically-optimal window; split-free (index level).",
+  "holidays": {
+    "dussehra_2026": {
+      "name": "Dussehra / Vijayadashami",
+      "window": "T-6 to T+2",
+      "verdict": "SHORT",
+      "span": "2000-2025",
+      "LONG": {
+        "all": {
+          "n": 26,
+          "win_rate": 30.8,
+          "avg": -0.68,
+          "total": -17.6
+        },
+        "last15": {
+          "n": 15,
+          "win_rate": 33.3,
+          "avg": -0.23,
+          "total": -3.5
+        },
+        "oos": {
+          "n": 13,
+          "win_rate": 30.8,
+          "avg": -0.29,
+          "total": -3.8
+        }
+      },
+      "SHORT": {
+        "all": {
+          "n": 26,
+          "win_rate": 69.2,
+          "avg": 0.68,
+          "total": 17.6
+        },
+        "last15": {
+          "n": 15,
+          "win_rate": 66.7,
+          "avg": 0.23,
+          "total": 3.5
+        },
+        "oos": {
+          "n": 13,
+          "win_rate": 69.2,
+          "avg": 0.29,
+          "total": 3.8
+        }
+      },
+      "year_returns_long": [
+        {
+          "year": 2000,
+          "ret": -6.53
+        },
+        {
+          "year": 2001,
+          "ret": -2.09
+        },
+        {
+          "year": 2002,
+          "ret": 2.46
+        },
+        {
+          "year": 2003,
+          "ret": 7.53
+        },
+        {
+          "year": 2004,
+          "ret": -0.16
+        },
+        {
+          "year": 2005,
+          "ret": -5.36
+        },
+        {
+          "year": 2006,
+          "ret": -1.06
+        },
+        {
+          "year": 2007,
+          "ret": -1.01
+        },
+        {
+          "year": 2008,
+          "ret": -8.43
+        },
+        {
+          "year": 2009,
+          "ret": 2.25
+        },
+        {
+          "year": 2010,
+          "ret": -1.67
+        },
+        {
+          "year": 2011,
+          "ret": 0.31
+        },
+        {
+          "year": 2012,
+          "ret": -0.06
+        },
+        {
+          "year": 2013,
+          "ret": 4.84
+        },
+        {
+          "year": 2014,
+          "ret": -1.7
+        },
+        {
+          "year": 2015,
+          "ret": 1.53
+        },
+        {
+          "year": 2016,
+          "ret": -0.41
+        },
+        {
+          "year": 2017,
+          "ret": -2.06
+        },
+        {
+          "year": 2018,
+          "ret": -3.04
+        },
+        {
+          "year": 2019,
+          "ret": -2.73
+        },
+        {
+          "year": 2020,
+          "ret": -0.37
+        },
+        {
+          "year": 2021,
+          "ret": 4.57
+        },
+        {
+          "year": 2022,
+          "ret": 1.76
+        },
+        {
+          "year": 2023,
+          "ret": -4.48
+        },
+        {
+          "year": 2024,
+          "ret": -1.4
+        },
+        {
+          "year": 2025,
+          "ret": -0.28
+        }
+      ]
+    },
+    "diwali_2026": {
+      "name": "Diwali",
+      "window": "T-4 to T+3",
+      "verdict": "LONG",
+      "span": "2000-2025",
+      "LONG": {
+        "all": {
+          "n": 26,
+          "win_rate": 88.5,
+          "avg": 2.07,
+          "total": 53.8
+        },
+        "last15": {
+          "n": 15,
+          "win_rate": 80.0,
+          "avg": 1.18,
+          "total": 17.7
+        },
+        "oos": {
+          "n": 13,
+          "win_rate": 84.6,
+          "avg": 1.35,
+          "total": 17.5
+        }
+      },
+      "SHORT": {
+        "all": {
+          "n": 26,
+          "win_rate": 11.5,
+          "avg": -2.07,
+          "total": -53.8
+        },
+        "last15": {
+          "n": 15,
+          "win_rate": 20.0,
+          "avg": -1.18,
+          "total": -17.7
+        },
+        "oos": {
+          "n": 13,
+          "win_rate": 15.4,
+          "avg": -1.35,
+          "total": -17.5
+        }
+      },
+      "year_returns_long": [
+        {
+          "year": 2000,
+          "ret": 5.48
+        },
+        {
+          "year": 2001,
+          "ret": 6.44
+        },
+        {
+          "year": 2002,
+          "ret": 1.83
+        },
+        {
+          "year": 2003,
+          "ret": 0.45
+        },
+        {
+          "year": 2004,
+          "ret": 1.76
+        },
+        {
+          "year": 2005,
+          "ret": 5.07
+        },
+        {
+          "year": 2006,
+          "ret": 1.51
+        },
+        {
+          "year": 2007,
+          "ret": 1.96
+        },
+        {
+          "year": 2008,
+          "ret": 7.74
+        },
+        {
+          "year": 2009,
+          "ret": 1.27
+        },
+        {
+          "year": 2010,
+          "ret": 2.54
+        },
+        {
+          "year": 2011,
+          "ret": 3.69
+        },
+        {
+          "year": 2012,
+          "ret": -3.51
+        },
+        {
+          "year": 2013,
+          "ret": 2.0
+        },
+        {
+          "year": 2014,
+          "ret": 3.48
+        },
+        {
+          "year": 2015,
+          "ret": -1.71
+        },
+        {
+          "year": 2016,
+          "ret": -2.32
+        },
+        {
+          "year": 2017,
+          "ret": 0.96
+        },
+        {
+          "year": 2018,
+          "ret": 1.94
+        },
+        {
+          "year": 2019,
+          "ret": 1.79
+        },
+        {
+          "year": 2020,
+          "ret": 2.62
+        },
+        {
+          "year": 2021,
+          "ret": 1.74
+        },
+        {
+          "year": 2022,
+          "ret": 1.88
+        },
+        {
+          "year": 2023,
+          "ret": 1.76
+        },
+        {
+          "year": 2024,
+          "ret": 0.98
+        },
+        {
+          "year": 2025,
+          "ret": 2.42
+        }
+      ]
+    },
+    "christmas_2026": {
+      "name": "Christmas",
+      "window": "T-1 to T+7",
+      "verdict": "LONG",
+      "span": "2000-2025",
+      "LONG": {
+        "all": {
+          "n": 26,
+          "win_rate": 84.6,
+          "avg": 2.26,
+          "total": 58.7
+        },
+        "last15": {
+          "n": 15,
+          "win_rate": 73.3,
+          "avg": 1.26,
+          "total": 18.9
+        },
+        "oos": {
+          "n": 13,
+          "win_rate": 69.2,
+          "avg": 1.15,
+          "total": 15.0
+        }
+      },
+      "SHORT": {
+        "all": {
+          "n": 26,
+          "win_rate": 15.4,
+          "avg": -2.26,
+          "total": -58.7
+        },
+        "last15": {
+          "n": 15,
+          "win_rate": 26.7,
+          "avg": -1.26,
+          "total": -18.9
+        },
+        "oos": {
+          "n": 13,
+          "win_rate": 30.8,
+          "avg": -1.15,
+          "total": -15.0
+        }
+      },
+      "year_returns_long": [
+        {
+          "year": 2000,
+          "ret": 1.25
+        },
+        {
+          "year": 2001,
+          "ret": 2.22
+        },
+        {
+          "year": 2002,
+          "ret": 0.59
+        },
+        {
+          "year": 2003,
+          "ret": 9.93
+        },
+        {
+          "year": 2004,
+          "ret": 3.42
+        },
+        {
+          "year": 2005,
+          "ret": 1.35
+        },
+        {
+          "year": 2006,
+          "ret": 4.47
+        },
+        {
+          "year": 2007,
+          "ret": 6.71
+        },
+        {
+          "year": 2008,
+          "ret": 5.03
+        },
+        {
+          "year": 2009,
+          "ret": 2.12
+        },
+        {
+          "year": 2010,
+          "ret": 2.73
+        },
+        {
+          "year": 2011,
+          "ret": 0.72
+        },
+        {
+          "year": 2012,
+          "ret": 3.18
+        },
+        {
+          "year": 2013,
+          "ret": -0.8
+        },
+        {
+          "year": 2014,
+          "ret": 1.83
+        },
+        {
+          "year": 2015,
+          "ret": -0.78
+        },
+        {
+          "year": 2016,
+          "ret": 2.5
+        },
+        {
+          "year": 2017,
+          "ret": 0.07
+        },
+        {
+          "year": 2018,
+          "ret": -0.46
+        },
+        {
+          "year": 2019,
+          "ret": -0.16
+        },
+        {
+          "year": 2020,
+          "ret": 4.45
+        },
+        {
+          "year": 2021,
+          "ret": 4.5
+        },
+        {
+          "year": 2022,
+          "ret": 0.81
+        },
+        {
+          "year": 2023,
+          "ret": 1.17
+        },
+        {
+          "year": 2024,
+          "ret": 1.36
+        },
+        {
+          "year": 2025,
+          "ret": 0.47
+        }
+      ]
+    }
+  }
+}
