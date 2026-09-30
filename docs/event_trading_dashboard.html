@@ -3291,7 +3291,9 @@
       const now = new Date();
       const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
-      h.stocks.forEach((s, idx) => {
+      let renderedIdx = 0;
+      h.stocks.forEach((s) => {
+        if (!isNifty50(s.symbol)) return;
         const sDt = parseEventDate(s.entry_date);
         const sExitDt = parseEventDate(s.exit_date);
         const diffDays = sDt ? Math.round((sDt - today) / (1000 * 60 * 60 * 24)) : 999;
@@ -3306,6 +3308,7 @@
         if (selectedSec !== 'ALL' && s.sector !== selectedSec) return;
         if (query && !s.symbol.includes(query) && !s.name.toUpperCase().includes(query)) return;
 
+        renderedIdx++;
         const tr = document.createElement('tr');
         tr.style.cursor = 'pointer';
         tr.onclick = () => openStockModal(s, 'holiday');
@@ -3336,7 +3339,7 @@
         const retVal = (s.full_19y_avg_ret !== undefined && s.full_19y_avg_ret !== null) ? Number(s.full_19y_avg_ret) : 2.5;
 
         tr.innerHTML = `
-          <td><strong>Rank ${idx + 1}</strong></td>
+          <td><strong>Rank ${renderedIdx}</strong></td>
           <td><strong>${s.symbol}</strong></td>
           <td style="color:#CBD5E1">${s.name}</td>
           <td>${niftyBadge(s.symbol)}</td>

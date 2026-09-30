@@ -284223,7 +284223,7 @@
       {
         "symbol": "DIVISLAB",
         "name": "Divis Laboratories Ltd",
-        "is_nifty50": "YES",
+        "is_nifty50": "NO",
         "spot_ltp": 7835.0,
         "lot_size": 200,
         "margin_20pct": 313400.0,
