@@ -3293,7 +3293,10 @@
 
       let renderedIdx = 0;
       h.stocks.forEach((s) => {
-        if (!isNifty50(s.symbol)) return;
+        // NOTE: no isNifty50() filter here — each holiday's own stocks[] array is
+        // already the curated playbook for that event (including any already-executed
+        // legacy names kept for the record even after a later index reconstitution).
+        // The NIFTY 50 column badge (niftyBadge) still shows current membership per row.
         const sDt = parseEventDate(s.entry_date);
         const sExitDt = parseEventDate(s.exit_date);
         const diffDays = sDt ? Math.round((sDt - today) / (1000 * 60 * 60 * 24)) : 999;
