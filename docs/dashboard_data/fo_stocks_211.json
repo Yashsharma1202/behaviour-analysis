@@ -3290,7 +3290,7 @@
     "rank": 174,
     "symbol": "SBILIFE",
     "name": "SBILIFE Ltd",
-    "is_nifty50": "NO",
+    "is_nifty50": "YES",
     "spot_ltp": 1000.0,
     "lot_size": 500,
     "margin_20pct": 100000.0,
