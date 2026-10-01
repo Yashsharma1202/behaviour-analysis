@@ -1,0 +1,154 @@
+"""
+POSITION-TAKING MODEL \u2014 METHODOLOGY & LOGIC (PDF).
+A reference document explaining, end to end, how this project decides WHAT
+stock/index to trade, WHICH direction, WHAT window (entry/exit), and WHAT
+confidence to place in each recommendation \u2014 across holidays, quarterly
+earnings, RBI policy, and the Nifty trend regime filter.
+
+ADDITIVE: documentation only, reads nothing, writes new report files.
+"""
+import os, subprocess
+
+BASE = r'D:\behaviour analysis'
+OUT_HTML = BASE + r'\Position_Taking_Model_Methodology.html'
+OUT_PDF = BASE + r'\Position_Taking_Model_Methodology.pdf'
+
+def esc(s): return s
+
+html = r"""<!doctype html><html><head><meta charset="utf-8">
+<title>Position-Taking Model Methodology</title>
+<style>
+ *{box-sizing:border-box} body{font-family:'Segoe UI',Arial,sans-serif;margin:0;color:#0f172a;background:#fff}
+ .wrap{max-width:1000px;margin:0 auto;padding:30px 40px}
+ h1{font-size:25px;margin:0 0 4px;color:#1A202C} .sub{color:#64748b;font-size:12.5px;margin-bottom:22px}
+ h2{font-size:16px;margin:26px 0 10px;border-left:4px solid #2563eb;padding-left:10px;color:#1A202C;page-break-after:avoid}
+ h3{font-size:13px;margin:14px 0 6px;color:#1e3a8a}
+ p{font-size:12px;line-height:1.65;margin:6px 0;color:#1e293b}
+ table{width:100%;border-collapse:collapse;font-size:11px;margin:8px 0 14px}
+ th,td{padding:6px 8px;text-align:left;border-bottom:1px solid #eef2f7;vertical-align:top}
+ th{background:#f1f5f9;font-size:9.5px;text-transform:uppercase;color:#475569}
+ .formula{font-style:italic;color:#1e3a8a;font-family:'Consolas',monospace;font-size:10.5px}
+ .note{background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:12px 15px;font-size:11px;color:#7c2d12;margin:10px 0;line-height:1.55}
+ .goodnote{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:12px 15px;font-size:11px;color:#14532d;margin:10px 0;line-height:1.55}
+ .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0}
+ .mc{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px}
+ .mcl{font-size:9px;text-transform:uppercase;color:#64748b;font-weight:700} .mcv{font-size:16px;font-weight:800;color:#1A202C}
+ .step{display:flex;gap:10px;margin:8px 0} .stepnum{background:#1A202C;color:#fff;font-weight:800;font-size:11px;min-width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+ .pagebreak{page-break-before:always}
+ @page{size:A4;margin:14mm}
+ .toc{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 18px;margin:16px 0}
+ .toc a{color:#1e3a8a;font-size:12px;text-decoration:none} .toc li{margin:3px 0}
+</style></head><body><div class="wrap">
+
+<h1>Position-Taking Model &mdash; Methodology &amp; Logic</h1>
+<div class="sub">How this project decides WHICH stock/index to trade, WHAT direction, WHAT entry/exit window, and WHAT confidence to place in each recommendation. Covers holidays, quarterly earnings, RBI policy, and the Nifty trend filter.</div>
+
+<div class="toc">
+<b style="font-size:12px;">Contents</b>
+<ol style="margin:8px 0 0 18px; padding:0;">
+<li>What the model actually is</li>
+<li>Step 1 &mdash; The position-taking window (T-n to T+m)</li>
+<li>Step 2 &mdash; Direction selection (LONG vs SHORT)</li>
+<li>Step 3 &mdash; Split-robust return calculation</li>
+<li>Step 4 &mdash; Data sources &amp; confidence tiers</li>
+<li>Step 5 &mdash; Entry/exit date computation</li>
+<li>Step 6 &mdash; Position sizing (lot, margin)</li>
+<li>Step 7 &mdash; The 8x8 grid search (Nifty index options model)</li>
+<li>Step 8 &mdash; Handling index reconstitution</li>
+<li>Known limitations &mdash; read before acting on any signal</li>
+</ol>
+</div>
+
+<h2>1. What the model actually is</h2>
+<p>This is an <b>event-drift trading model</b>: the observation that specific calendar-anchored events (a festival holiday, a quarterly earnings announcement, an RBI policy decision) are followed by a statistically repeatable price drift in a stock or index, over a short window of trading days before and after the event. The model does not predict the event itself (the holiday date, the RBI decision) &mdash; those are known in advance. It backtests what price behaviour has <i>historically followed</i> that known date, for each stock, and recommends a position only where that historical pattern is strong and has enough repeat occurrences to trust.</p>
+<p>Every recommendation in the dashboard reduces to four questions, answered in order:</p>
+<table><tr><th style="width:18%">Question</th><th>Answered in</th></tr>
+<tr><td>Which trading-day window around the event?</td><td>Step 1</td></tr>
+<tr><td>LONG or SHORT?</td><td>Step 2</td></tr>
+<tr><td>How is "win rate" actually computed?</td><td>Step 3</td></tr>
+<tr><td>How much should I trust this number?</td><td>Step 4</td></tr>
+</table>
+
+<h2>2. Step 1 &mdash; The position-taking window (T-n to T+m)</h2>
+<p>Every stock has its OWN window, expressed as <b>T-n to T+m</b>: enter n trading days before the event (T = the event's own trading-day anchor), exit m trading days after. This is not a fixed rule applied to every stock &mdash; it is chosen per stock, per event, as the window that historically produced the strongest, most consistent drift for that specific name. A tech stock that typically runs up 5 days before results is traded T-5; a bank that reacts mostly in the 2 days after is traded T+2 with a tight T-0/T-1 entry.</p>
+<div class="note"><b>Where this window number comes from matters.</b> For the 50 Nifty-50 stocks and the 4 major holidays, these windows were derived from dedicated historical optimisation runs (now part of the repo's data files). For the broader 211-stock F&amp;O universe, the window comes from the same per-holiday backtest dataset (<span class="formula">holidays_dataset.json</span>). Windows are NOT re-optimised live on every run &mdash; they are a historical finding, re-used going forward. This is itself a modelling choice with a tradeoff explained in Step 2.</div>
+
+<h2>3. Step 2 &mdash; Direction selection (LONG vs SHORT)</h2>
+<p>For a chosen window, both directions are backtested on the exact same historical price moves:</p>
+<table><tr><th style="width:30%">Direction</th><th>Rule</th></tr>
+<tr><td>LONG wins</td><td class="formula">when the raw price move over the window is positive</td></tr>
+<tr><td>SHORT wins</td><td class="formula">when the raw price move over the window is negative (exact mirror of LONG)</td></tr>
+</table>
+<p>The direction shown is whichever had the <b>higher win rate</b> across all historical occurrences of that event for that stock. This is a <b>best-of-both-directions, per-stock choice</b> &mdash; not a single rule applied uniformly across the whole index.</p>
+<div class="note"><b>This is the single biggest modelling tradeoff in the whole system, and it is disclosed on every report that uses it:</b> picking the best-performing direction per stock fits the historical sample very closely (high in-sample win rates), but this project's own repeated out-of-sample testing has shown that a single uniform index-backed direction (e.g. always SHORT for Dussehra, regardless of per-stock history) has <b>repeatedly outperformed</b> the per-stock best-direction approach going forward. The per-stock approach is shown because it answers "what does this stock's own history say", not because it is a proven forward edge. Treat every LONG/SHORT direction in this system as the best <i>historical fit</i>, not a guarantee. (A more rigorous, walk-forward version of this same best-direction idea is used for the Nifty index options model &mdash; see Step 7.)</div>
+
+<h2>4. Step 3 &mdash; Split-robust return calculation</h2>
+<p>Within the T-n to T+m window, the return is NOT a simple (exit price &minus; entry price) / entry price calculation. It is built day-by-day:</p>
+<div class="step"><div class="stepnum">1</div><p>For each day inside the window, compute that single day's % price change.</p></div>
+<div class="step"><div class="stepnum">2</div><p>If that single day's move is <b>more than 20% in either direction</b>, treat it as a stock split, bonus issue, or demerger artefact &mdash; not a real market move &mdash; and SKIP it (don't compound it into the return).</p></div>
+<div class="step"><div class="stepnum">3</div><p>Compound all the remaining daily % changes together to get the window's total return.</p></div>
+<p class="formula">year_return = ( &prod; (1 + daily_%%), excluding any day where |daily_%%| &gt; 20% ) &minus; 1, &times; 100</p>
+<div class="goodnote">This fix was not theoretical &mdash; it was found necessary mid-project. DRREDDY's 5:1 stock split and RELIANCE's stock split both showed up as fake &minus;80%-class single-day "crashes" in raw close-price data before this rule was added. Over 135 such corporate-action days were found project-wide. Every backtest number in this system has this correction applied.</div>
+
+<h2>5. Step 4 &mdash; Data sources &amp; confidence tiers</h2>
+<p>Not every stock has the same depth of history. The system always discloses which tier a number comes from, rather than presenting a 1-year result with the same visual weight as a 26-year one.</p>
+<table><tr><th>Tier</th><th>Source</th><th>Depth</th><th>Coverage</th></tr>
+<tr><td><b>1 &mdash; Deepest</b></td><td>Cash-equity daily close</td><td>Up to 26 years (2000-2025)</td><td>~55 stocks, mostly original Nifty-50 names</td></tr>
+<tr><td><b>2 &mdash; Standard</b></td><td>Near-month F&amp;O futures, continuous series</td><td>Up to 7 years (2019-2025)</td><td>~140 F&amp;O-only stocks</td></tr>
+<tr><td><b>3 &mdash; Fallback</b></td><td>F&amp;O-211 4-year backtest dataset</td><td>4 years (2022-2025)</td><td>Recently reconstituted / thin Tier-1/2 names (e.g. JIOFIN, BEL, BSE)</td></tr>
+<tr><td><b>4 &mdash; Insufficient</b></td><td>&mdash;</td><td>&lt;1 year or zero</td><td>Very recent IPOs/listings &mdash; explicitly excluded, never estimated</td></tr>
+</table>
+<p><b>Confidence flag:</b> any stock with fewer than 3 years (n&lt;3) of usable historical occurrences is marked <span style="color:#b45309;font-weight:700;">LOW confidence</span> and visually flagged (amber) everywhere it appears. A "100% win rate" built on 1-2 historical trades is one or two data points, not a statistic &mdash; it is shown, never hidden, but always labelled.</p>
+
+<h2>6. Step 5 &mdash; Entry/exit date computation</h2>
+<p>Once the window (T-n/T+m) and the event's anchor date are known, the actual calendar dates are computed by stepping across real calendar days and counting only <b>NSE trading days</b> (weekends and the 15 published 2026 NSE holidays excluded):</p>
+<p class="formula">entry_date = shift_trading_days(anchor_date, &minus;n)<br>exit_date = shift_trading_days(anchor_date, +m)</p>
+<p>Where <span class="formula">shift_trading_days</span> walks one calendar day at a time from the anchor, decrementing a counter only on real trading days, until it reaches the requested count. This correctly skips weekends AND holidays that fall inside the window (e.g. a window spanning the Dussehra holiday itself correctly does not count that day).</p>
+<p>For quarterly earnings specifically, the "anchor" is the company's own NSE-announced board-meeting/result date &mdash; pulled live from NSE's corporate-announcements feed, not estimated. Until a company files that announcement, its row shows "Yet to come" rather than a guessed date.</p>
+
+<h2>7. Step 6 &mdash; Position sizing (lot, margin)</h2>
+<p>Each recommendation includes the F&amp;O lot size (exchange-fixed, per stock) and an estimated margin requirement, computed as a standard <b>20% of (lot size &times; current spot price)</b> &mdash; a simplified SPAN-margin proxy, not the exact exchange margin (which varies with volatility and changes daily). It is shown to give a realistic capital-commitment estimate per position, not as an exact broker margin figure.</p>
+
+<div class="pagebreak"></div>
+<h2>8. Step 7 &mdash; The 8x8 grid search (Nifty index options model)</h2>
+<p>The Nifty-index options backtests (the 1% ITM quarterly options master, the 12-rolling-quarters model) use a <b>more rigorous, different</b> method to pick direction and window than the per-stock method in Step 1-2 above &mdash; worth keeping distinct rather than conflating the two.</p>
+<div class="step"><div class="stepnum">1</div><p>For a given quarterly event, test every <b>entry offset 1-8 trading days before</b> the anchor &times; every <b>exit offset 1-8 trading days after</b> &mdash; <span class="formula">8 &times; 8 = 64 window combinations</span>, for LONG and SHORT separately (128 evaluations total).</p></div>
+<div class="step"><div class="stepnum">2</div><p>Each combination is scored by <span class="formula">(win_rate, avg_return)</span>, net of a <b>0.15% round-trip cost</b> on the option premium (not a raw, cost-free price move).</p></div>
+<div class="step"><div class="stepnum">3</div><p>The single best-scoring (window, direction) combination is selected &mdash; direction and window are chosen <i>together</i> in one search, not window-fixed-then-direction-picked.</p></div>
+<div class="step"><div class="stepnum">4</div><p>A combination needs at least 3 valid prior observations to be considered at all; with zero prior history the model defaults to LONG, T-2/T+5 rather than leaving the choice undefined.</p></div>
+<p class="formula">best(bo, so, side) = argmax over bo,so&isin;[1,8], side&isin;{LONG,SHORT} of (win_rate, avg_return net of cost), using only PRIOR quarters</p>
+<div class="goodnote"><b>The critical difference from Step 1-2: this is walk-forward, not in-sample.</b> For quarter #12, the optimisation only ever sees quarters #1 through #11 &mdash; it re-runs fresh for every new quarter, using only what was knowable at that point in time, then is applied forward to the quarter it has never seen. This is genuine point-in-time validation. The per-stock holiday/Dussehra method in Step 2, by contrast, picks its best direction using ALL available years at once, with no held-out future data &mdash; which is exactly why the overfitting caveat in this document applies more strongly there than it does here.</div>
+
+<h2>9. Step 8 &mdash; Handling index reconstitution</h2>
+<p>When Nifty-50's membership changes (a stock added or removed), the model follows one additive rule: <b>nothing is ever deleted.</b></p>
+<div class="step"><div class="stepnum">1</div><p>The canonical membership flag (<span class="formula">is_nifty50</span>) is updated for the new and outgoing stock.</p></div>
+<div class="step"><div class="stepnum">2</div><p>Historical records (past quarters, past executed positions) are left exactly as they were &mdash; a stock that WAS Nifty-50 at the time keeps its historical backtest untouched.</p></div>
+<div class="step"><div class="stepnum">3</div><p>The outgoing stock is marked <i>legacy</i> in current/upcoming views (visually distinguished, excluded from "Nifty-50 only" filtered views) but its row stays, for F&amp;O-universe visibility.</p></div>
+<div class="step"><div class="stepnum">4</div><p>The incoming stock is added with its own real backtested stats (never a placeholder number) to every current/upcoming table it should appear in.</p></div>
+
+<h2>Known limitations &mdash; read before acting on any signal</h2>
+<table>
+<tr><th style="width:28%">Limitation</th><th>What it means in practice</th></tr>
+<tr><td><b>Per-stock direction overfitting</b></td><td>Best-of-LONG/SHORT per stock has underperformed a single uniform index direction out-of-sample in this project's own testing. See Step 2.</td></tr>
+<tr><td><b>Fixed windows, not re-optimised live</b></td><td>T-n/T+m values come from a historical backtest and are reused, not recalculated fresh every run &mdash; a genuine regime change in a stock's behaviour would not show up until the next full re-backtest.</td></tr>
+<tr><td><b>Thin samples on newer stocks</b></td><td>Anything flagged LOW confidence (n&lt;3) is a real historical result, but statistically weak &mdash; treat with proportionally less conviction and size.</td></tr>
+<tr><td><b>Win rate &ne; profitability</b></td><td>These are price-direction win rates, before transaction costs, slippage, and (for options) time decay. A 70% win rate does not by itself guarantee a profitable strategy after real trading frictions.</td></tr>
+<tr><td><b>Margin figures are estimates</b></td><td>The 20% SPAN proxy is a planning estimate, not the broker's exact margin requirement on the day.</td></tr>
+<tr><td><b>EMA regime is descriptive, not predictive</b></td><td>It tells you the current trend label, not where price goes next.</td></tr>
+</table>
+
+<div class="foot" style="color:#94a3b8;font-size:9.5px;margin-top:20px;">SMC Global &middot; Nifty 50 Event Intelligence &middot; Position-Taking Model Methodology &middot; generated from the live project data pipeline.</div>
+</div></body></html>"""
+
+open(OUT_HTML, 'w', encoding='utf-8').write(html)
+print('Saved HTML:', OUT_HTML)
+
+for exe in [r'C:\Program Files\Google\Chrome\Application\chrome.exe', r'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe']:
+    if os.path.exists(exe):
+        try:
+            subprocess.run([exe, '--headless=new', '--disable-gpu', '--no-pdf-header-footer',
+                            '--print-to-pdf=' + OUT_PDF, 'file:///' + OUT_HTML.replace('\\', '/')], timeout=60, capture_output=True)
+            print('Saved PDF:', OUT_PDF, 'exists:', os.path.exists(OUT_PDF))
+        except Exception as e:
+            print('PDF render failed:', e)
+        break
