@@ -31,10 +31,15 @@ import pandas as pd
 BASE = r'D:\behaviour analysis'
 t0 = time.time()
 
-cash = pd.read_parquet(BASE + r'\scraped_parquet\nifty50_all_stocks_daily_2000_2026.parquet', columns=['DATE', 'SYMBOL', 'CLOSE'])
-cash['DATE'] = pd.to_datetime(cash['DATE']).dt.date
-cash_closes = {s: g.sort_values('DATE')[['DATE', 'CLOSE']].values.tolist() for s, g in cash.groupby('SYMBOL')}
-
+# DATA QUALITY FIX: the cash-equity file (nifty50_all_stocks_daily_2000_2026.parquet)
+# is missing 98.3% of all Fridays across its entire 26yr history (1,371 of
+# 1,395 Fridays, 2000-2026) -- not a handful of gaps, the file is effectively
+# a 4-day trading week for its whole life. Every "T-n trading days" countback
+# and every return compounded on it has silently skipped real Friday price
+# action project-wide. The futures file has no such defect (only ~6.5% of
+# Fridays missing, consistent with genuine NSE holidays landing on a Friday).
+# Switching ALL stocks to the futures source -- shorter history (2019-2026,
+# ~7yr vs up to 26yr) but a complete, trustworthy trading calendar.
 fut = pd.read_parquet(BASE + r'\scraped_parquet\fo_futures_near_month_continuous.parquet', columns=['Date', 'Instrument', 'Close'])
 fut['Date'] = pd.to_datetime(fut['Date']).dt.date
 fut_closes = {s: g.sort_values('Date')[['Date', 'Close']].values.tolist() for s, g in fut.groupby('Instrument')}
@@ -51,8 +56,6 @@ SO_RANGE = range(1, 9)
 
 
 def closes_for(sym):
-    if sym in cash_closes:
-        return cash_closes[sym], 'cash-26yr', dussehra_dates
     if sym in fut_closes:
         return fut_closes[sym], 'futures-7yr', [d for d in dussehra_dates if d.year >= 2019]
     return None, None, []
