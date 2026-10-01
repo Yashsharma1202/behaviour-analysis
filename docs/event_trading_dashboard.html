@@ -5134,6 +5134,23 @@
         console.warn('Live corporate feed direct fetch failed, relying on bundle', err);
       }
 
+      // Also re-fetch event_dashboard_data.json — this is where sync_live_corporate_feeds.py
+      // writes newly-announced Q3 result dates + recomputed entry/exit position-taking windows.
+      // Without this, the quarter/equity tables kept showing stale "Yet to come" dates on refresh
+      // even after the backend had real NSE-announced dates, because dashboardData is only loaded
+      // once at page init.
+      try {
+        const dRes = await fetch('dashboard_data/event_dashboard_data.json?t=' + Date.now());
+        if (dRes.ok) {
+          const freshDash = await dRes.json();
+          dashboardData = freshDash;
+          window.EVENT_DASHBOARD_DATA = freshDash;
+          window.DASHBOARD_DATA = freshDash;
+        }
+      } catch (err) {
+        console.warn('Event dashboard data refresh fetch failed, keeping previous data', err);
+      }
+
       if (spinner) spinner.style.animation = 'none';
 
       const d = window.LIVE_CORPORATE_EVENTS;
