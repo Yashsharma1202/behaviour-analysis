@@ -2575,7 +2575,12 @@
 
         const longN = q.stocks.filter(s => s.direction === 'LONG').length;
         const shortN = q.stocks.filter(s => s.direction === 'SHORT').length;
-        cells[4].innerHTML = `<span class="badge-short">${shortN} SHORT</span> / <span class="badge-long">${longN} LONG</span>`;
+        const n50Count = q.stocks.filter(s => s.is_nifty50 === 'YES').length;
+        const extras = q.stocks.filter(s => s.is_nifty50 !== 'YES').map(s => s.symbol);
+        const scopeNote = (extras.length > 0)
+          ? ` <span style="font-size:0.62rem; color:#94A3B8;">(Nifty 50 + ${extras.length}: ${extras.join(', ')})</span>`
+          : '';
+        cells[4].innerHTML = `<span class="badge-short">${shortN} SHORT</span> / <span class="badge-long">${longN} LONG</span>${scopeNote}`;
 
         const wr = Number(q.win_rate_avg !== undefined && q.win_rate_avg !== null ? q.win_rate_avg : q.avg_win_rate);
         if (!isNaN(wr)) {
