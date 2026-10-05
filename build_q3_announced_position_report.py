@@ -93,7 +93,8 @@ notes = [
     ('Margin', f'Total \u20b9{total_margin:,.0f} to deploy across all {len(announced)} positions (1 lot each), 20% SPAN proxy per stock.'),
     ('Average historical win rate', f'{avg_wr}% across these {len(announced)} stocks\u2019 own prior-quarter track record \u2014 this is NOT this quarter\u2019s outcome (still pending), it\u2019s what picked the direction.'),
     ('Source', 'Result dates pulled live from NSE\u2019s corporate board-meeting feed (verified against NSE\u2019s own API). Refresh the dashboard or re-run this report as more results get announced through the quarter.'),
-    ('Last_12Q_Trade_Log / Last_12Q_Performance sheets', 'Every one of these 15 stocks\u2019 own last 12 completed quarterly-earnings trades (FY24_Q3 \u2192 FY27_Q2, real settled results, not a projection) \u2014 the full history behind the Hist. Win Rate % column above, plus CAGR/Max DD/Sharpe per stock.'),
+    ('One sheet per quarter (FY24_Q3 \u2026 FY27_Q2)', 'Each of the 12 tabs shows all 15 stocks\u2019 real, already-settled trade for that single quarter \u2014 Entry/Exit Date+Price, Return %, "DD Booked This Qtr" (that quarter\u2019s own loss, if any), and "Running DD to Date" (the cumulative drawdown from the running equity-curve peak at that point, walking chronologically from FY24_Q3).'),
+    ('Last_12Q_Performance sheet', 'One row per stock, aggregating all 12 quarters: Win Rate, Avg Return, CAGR, Max Profit % (best single quarter), Max Loss % (worst single quarter), Max DD % (worst peak-to-trough on the running equity curve), Sharpe-like, Total PnL.'),
 ]
 r0 = 3
 for lbl, txt in notes:
@@ -104,39 +105,11 @@ ov.column_dimensions['A'].width = 22; ov.column_dimensions['B'].width = 105
 
 # ============ Sheet 3: Last 12 Quarters Trade Log ============
 import statistics as st
-tl12 = wb.create_sheet('Last_12Q_Trade_Log')
-tl12.merge_cells('A1:K1')
-tl12.cell(1, 1, 'LAST 12 QUARTERS — REAL TRADE LOG, EACH ANNOUNCED STOCK (FY24_Q3 → FY27_Q2)').font = TITLE
-tl12.merge_cells('A2:K2')
-tl12.cell(2, 1, 'Every real, already-settled quarterly-earnings trade for the 15 stocks announced this quarter — same walk-forward method, independent Yahoo Finance price source (not the corrupted cash-equity file).').font = SUB
-hdr = ['Symbol', 'Quarter', 'Direction', 'Entry Date', 'Entry Price (₹)', 'Exit Date', 'Exit Price (₹)', 'Lot', 'Margin (₹)', 'Return %', 'Outcome']
-for j, h in enumerate(hdr, 1):
-    c = tl12.cell(4, j, h); c.fill = NAVY; c.font = WHITE; c.border = THIN; c.alignment = CEN
-row = 5
-for t in sorted(trades_12q, key=lambda x: (x['symbol'], LAST12_QCODES.index(x['qcode']))):
-    vals = [t['symbol'], t['qname'], t['direction'], t['entry_date'], round(t['entry_px'], 2), t['exit_date'],
-            round(t['exit_px'], 2), t['lot'], round(t['margin'], 2), t['ret_pct'], t['outcome']]
-    fill = GF if t['outcome'] == 'WIN' else RF
-    for j, v in enumerate(vals, 1):
-        c = tl12.cell(row, j, v); c.border = THIN; c.fill = fill
-        if j in (1, 3, 11): c.alignment = CEN
-        if j in (5, 7, 9, 10): c.alignment = RIGHT
-        if j == 10: c.font = GOOD if v >= 0 else BAD
-    row += 1
-for j, w in enumerate([12, 30, 10, 20, 13, 20, 13, 7, 13, 10, 9], 1):
-    tl12.column_dimensions[get_column_letter(j)].width = w
-tl12.freeze_panes = 'A5'
 
-# ============ Sheet 4: Last 12 Quarters Performance Measures ============
-pm12 = wb.create_sheet('Last_12Q_Performance')
-pm12.merge_cells('A1:I1')
-pm12.cell(1, 1, 'LAST 12 QUARTERS — PERFORMANCE MEASURES PER STOCK').font = TITLE
-pm12.merge_cells('A2:I2')
-pm12.cell(2, 1, 'CAGR and Max DD computed on each stock’s own quarterly-trade equity curve (one trade/quarter, starting at 100).').font = SUB
-hdr = ['Symbol', 'Quarters', 'Win Rate %', 'Avg Return %', 'CAGR %', 'Max DD %', 'Sharpe-like', 'Total PnL (₹)', 'This Qtr Direction']
-for j, h in enumerate(hdr, 1):
-    c = pm12.cell(4, j, h); c.fill = NAVY; c.font = WHITE; c.border = THIN; c.alignment = CEN
-row = 5
+# ---- Precompute each stock's chronological equity curve + running DD, so
+# every per-quarter sheet can show "DD booked this quarter" AND "running DD
+# to date" without recomputing per sheet. ----
+equity_by_sym = {}   # sym -> {qcode: dict(ret, dd_this_qtr, running_dd_after, eq_after)}
 perf_rows = []
 for s in announced:
     sym = s['symbol']
@@ -148,32 +121,86 @@ for s in announced:
     wins = sum(1 for v in rets if v > 0)
     wr = round(100 * wins / n, 1)
     avg = round(sum(rets) / n, 2)
+    max_profit = round(max(rets), 2)
+    max_loss = round(min(rets), 2)
     cum = 1.0
     for v in rets: cum *= (1 + v / 100)
     cagr = round((cum ** (4 / n) - 1) * 100, 2) if cum > 0 else None  # 4 quarters/year
     eq = [100.0]
-    for v in rets: eq.append(eq[-1] * (1 + v / 100))
-    peak = eq[0]; maxdd = 0.0
-    for v in eq[1:]:
-        peak = max(peak, v)
-        maxdd = min(maxdd, (v - peak) / peak * 100)
+    peak = 100.0
+    qmap = {}
+    for t, v in zip(trs, rets):
+        new_eq = eq[-1] * (1 + v / 100)
+        peak = max(peak, new_eq)
+        running_dd = (new_eq - peak) / peak * 100
+        qmap[t['qcode']] = dict(ret=v, running_dd=round(running_dd, 2))
+        eq.append(new_eq)
+    equity_by_sym[sym] = qmap
+    maxdd = min(q['running_dd'] for q in qmap.values())
     sharpe = round(st.mean(rets) / st.pstdev(rets), 2) if n > 1 and st.pstdev(rets) > 0 else None
     total_pnl = round(sum(t['pnl'] for t in trs), 2)
-    perf_rows.append((sym, n, wr, avg, cagr, round(maxdd, 2), sharpe, total_pnl, s['direction']))
+    perf_rows.append((sym, n, wr, avg, cagr, max_profit, max_loss, round(maxdd, 2), sharpe, total_pnl, s['direction']))
 
+# ============ Sheet 3..14: one sheet PER QUARTER (all 15 stocks) ============
+for qc in LAST12_QCODES:
+    safe_name = qc.replace('FY', 'FY')  # sheet name, Excel-safe (<=31 chars, already is)
+    qs = wb.create_sheet(safe_name)
+    qs.merge_cells('A1:L1')
+    qs.cell(1, 1, f'{qname_by_code[qc]} — REAL TRADE RESULT, EACH ANNOUNCED-THIS-QUARTER STOCK').font = TITLE
+    qs.merge_cells('A2:L2')
+    qs.cell(2, 1, 'Already-settled quarterly-earnings trade. "DD Booked This Qtr" = this quarter’s own return if negative. "Running DD to Date" = cumulative drawdown from the running equity-curve peak after this quarter, walking chronologically from FY24_Q3.').font = SUB
+    hdr = ['Symbol', 'Direction', 'Entry Date', 'Entry Price (₹)', 'Exit Date', 'Exit Price (₹)', 'Lot', 'Margin (₹)',
+           'Return %', 'DD Booked This Qtr %', 'Running DD to Date %', 'Outcome']
+    for j, h in enumerate(hdr, 1):
+        c = qs.cell(4, j, h); c.fill = NAVY; c.font = WHITE; c.border = THIN; c.alignment = CEN
+    row = 5
+    q_trades = sorted([t for t in trades_12q if t['qcode'] == qc], key=lambda x: x['symbol'])
+    for t in q_trades:
+        sym = t['symbol']
+        dd_info = equity_by_sym.get(sym, {}).get(qc, {})
+        dd_this_qtr = round(min(0.0, t['ret_pct']), 2)
+        running_dd = dd_info.get('running_dd', '—')
+        vals = [sym, t['direction'], t['entry_date'], round(t['entry_px'], 2), t['exit_date'], round(t['exit_px'], 2),
+                t['lot'], round(t['margin'], 2), t['ret_pct'], dd_this_qtr, running_dd, t['outcome']]
+        fill = GF if t['outcome'] == 'WIN' else RF
+        for j, v in enumerate(vals, 1):
+            c = qs.cell(row, j, v); c.border = THIN; c.fill = fill
+            if j in (1, 2, 12): c.alignment = CEN
+            if j in (4, 6, 8, 9, 10, 11): c.alignment = RIGHT
+            if j == 9: c.font = GOOD if t['ret_pct'] >= 0 else BAD
+            if j in (10, 11) and isinstance(v, (int, float)) and v < 0: c.font = BAD
+        row += 1
+    for j, w in enumerate([12, 10, 20, 13, 20, 13, 7, 13, 10, 16, 17, 9], 1):
+        qs.column_dimensions[get_column_letter(j)].width = w
+    qs.freeze_panes = 'A5'
+
+# ============ Sheet: Last 12 Quarters Performance Measures (summary, all quarters combined) ============
+pm12 = wb.create_sheet('Last_12Q_Performance')
+pm12.merge_cells('A1:K1')
+pm12.cell(1, 1, 'LAST 12 QUARTERS — PERFORMANCE MEASURES PER STOCK (across all 12, see the per-quarter sheets for the trade-by-trade detail)').font = TITLE
+pm12.merge_cells('A2:K2')
+pm12.cell(2, 1, 'CAGR and Max DD computed on each stock’s own quarterly-trade equity curve (one trade/quarter, starting at 100, walked chronologically oldest to newest).').font = SUB
+hdr = ['Symbol', 'Quarters', 'Win Rate %', 'Avg Return %', 'CAGR %', 'Max Profit % (best qtr)', 'Max Loss % (worst qtr)',
+       'Max DD %', 'Sharpe-like', 'Total PnL (₹)', 'This Qtr Direction']
+for j, h in enumerate(hdr, 1):
+    c = pm12.cell(4, j, h); c.fill = NAVY; c.font = WHITE; c.border = THIN; c.alignment = CEN
+row = 5
 for r in perf_rows:
-    sym, n, wr, avg, cagr, maxdd, sharpe, total_pnl, this_dir = r
-    vals = [sym, n, wr, avg, (cagr if cagr is not None else '—'), maxdd, (sharpe if sharpe is not None else '—'), total_pnl, this_dir]
+    sym, n, wr, avg, cagr, max_profit, max_loss, maxdd, sharpe, total_pnl, this_dir = r
+    vals = [sym, n, wr, avg, (cagr if cagr is not None else '—'), max_profit, max_loss, maxdd,
+            (sharpe if sharpe is not None else '—'), total_pnl, this_dir]
     fill = GF if total_pnl >= 0 else RF
     for j, v in enumerate(vals, 1):
         c = pm12.cell(row, j, v); c.border = THIN; c.fill = fill
-        if j in (2, 9): c.alignment = CEN
-        if j in (3, 4, 5, 6, 7, 8): c.alignment = RIGHT
+        if j in (2, 11): c.alignment = CEN
+        if j in (3, 4, 5, 6, 7, 8, 9, 10): c.alignment = RIGHT
         if j == 4: c.font = GOOD if avg >= 0 else BAD
-        if j == 6: c.font = BAD if maxdd < 0 else GOOD
-        if j == 8: c.font = GOOD if total_pnl >= 0 else BAD
+        if j == 6: c.font = GOOD
+        if j == 7: c.font = BAD
+        if j == 8: c.font = BAD if maxdd < 0 else GOOD
+        if j == 10: c.font = GOOD if total_pnl >= 0 else BAD
     row += 1
-for j, w in enumerate([12, 10, 11, 13, 10, 10, 11, 14, 16], 1):
+for j, w in enumerate([12, 10, 11, 13, 10, 15, 15, 10, 11, 14, 16], 1):
     pm12.column_dimensions[get_column_letter(j)].width = w
 pm12.freeze_panes = 'A5'
 

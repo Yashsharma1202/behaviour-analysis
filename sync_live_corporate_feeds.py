@@ -441,7 +441,16 @@ def sync_q3_earnings(announced_results_map):
 
         updated_count = 0
         for q in d.get("quarters", []):
-            if "Q3" in q.get("q_code", ""):
+            # BUG FIX: this used to be `if "Q3" in q.get("q_code", "")`, a
+            # substring match that also matched FY24_Q3/FY25_Q3/FY26_Q3 (and
+            # FY23_Q3 for some stocks) -- every sync run overwrote those
+            # REAL historical quarters' entry/exit/result dates with the
+            # CURRENT quarter's data for any stock that had just been
+            # announced, destroying their real historical record. Exact
+            # match only. NOTE: this hardcodes the current quarter -- update
+            # this string when the live quarter rolls over (e.g. to
+            # "FY27_Q4").
+            if q.get("q_code") == "FY27_Q3":
                 for s in q.get("stocks", []):
                     sym = s.get("symbol")
                     if sym in announced_results_map:
