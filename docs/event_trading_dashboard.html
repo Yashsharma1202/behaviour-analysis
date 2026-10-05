@@ -1106,6 +1106,10 @@
             <button class="filter-pill" id="qpill-all" onclick="setQuarterFilter('all_fo', this)">📊 All F&O Stocks (211)</button>
             <button class="filter-pill" id="qpill-long" onclick="setQuarterFilter('LONG', this)">🟢 LONG Only</button>
             <button class="filter-pill" id="qpill-short" onclick="setQuarterFilter('SHORT', this)">🔴 SHORT Only</button>
+            <span style="display:flex; align-items:center; gap:0.35rem; font-size:0.75rem; color:#94A3B8;">
+              📅 From <input type="date" id="q-date-from" class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.3rem 0.5rem;" oninput="renderQuarterTable()">
+              To <input type="date" id="q-date-to" class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.3rem 0.5rem;" oninput="renderQuarterTable()">
+            </span>
           </div>
         </div>
 
@@ -1334,6 +1338,10 @@
             <button class="filter-pill" onclick="setEquityFilter('BUY', this)">🟢 Delivery BUYS (22)</button>
             <button class="filter-pill" onclick="setEquityFilter('EXIT', this)">🔴 Cash EXITS (28)</button>
             <button class="filter-pill" onclick="setEquityFilter('confirmed', this)">📢 Confirmed Dates (4)</button>
+            <span style="display:flex; align-items:center; gap:0.35rem; font-size:0.75rem; color:#94A3B8;">
+              📅 From <input type="date" id="eq-date-from" class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.3rem 0.5rem;" oninput="filterEquityTable()">
+              To <input type="date" id="eq-date-to" class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.3rem 0.5rem;" oninput="filterEquityTable()">
+            </span>
           </div>
         </div>
 
@@ -1489,6 +1497,10 @@
             <button id="hpill-urgent" class="filter-pill" onclick="setHolidayFilter('tomorrow', this)">🟢 Active Setups (50)</button>
             <button id="hpill-long" class="filter-pill" onclick="setHolidayFilter('LONG', this)">🟢 LONG (30)</button>
             <button id="hpill-short" class="filter-pill" onclick="setHolidayFilter('SHORT', this)">🔴 SHORT (20)</button>
+            <span style="display:flex; align-items:center; gap:0.35rem; font-size:0.75rem; color:#94A3B8;">
+              📅 From <input type="date" id="h-date-from" class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.3rem 0.5rem;" oninput="filterHolidayTable()">
+              To <input type="date" id="h-date-to" class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.3rem 0.5rem;" oninput="filterHolidayTable()">
+            </span>
           </div>
         </div>
 
@@ -1785,6 +1797,11 @@
                 <button class="filter-pill active" onclick="setRbiUpcomingDirFilter('ALL', this)">All (50)</button>
                 <button class="filter-pill" onclick="setRbiUpcomingDirFilter('LONG', this)">🟢 LONG (33)</button>
                 <button class="filter-pill" onclick="setRbiUpcomingDirFilter('SHORT', this)">🔴 SHORT (17)</button>
+              </div>
+
+              <div style="display:flex; align-items:center; gap:0.35rem; font-size:0.78rem; color:var(--text-muted);">
+                📅 From <input type="date" id="rbi-date-from" class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.35rem 0.5rem;" oninput="filterRbiUpcomingStockTable()">
+                To <input type="date" id="rbi-date-to" class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.35rem 0.5rem;" oninput="filterRbiUpcomingStockTable()">
               </div>
 
               <div style="display:flex; align-items:center; gap:0.4rem; margin-left:auto;">
@@ -2495,6 +2512,7 @@
       try { renderHolidayMasterSummaryRows(); } catch(e) { console.error(e); }
       try { renderRbiUpcomingPlaybook(); } catch(e) { console.error(e); }
       try { renderQuarterTable(); } catch(e) { console.error(e); }
+      try { renderQuarterMasterSummaryRows(); } catch(e) { console.error(e); }
       try { renderEquityTable(); } catch(e) { console.error(e); }
       try { renderRbiTab(); } catch(e) { console.error(e); }
       try { initStockSearchEngine(); } catch(e) { console.error(e); }
@@ -2539,6 +2557,32 @@
         }
         cells[5].innerHTML = `<span class="badge-long">${longN} LONG</span> / <span class="badge-short">${shortN} SHORT</span> `
           + `<span style="font-size:0.62rem; color:#94A3B8;">(real per-stock, walk-forward validated)</span>`;
+      });
+    }
+
+    // Keeps the static "Quarterly Results Overview" table's Bias + Win Rate cells
+    // in sync with dashboardData.quarters -- those two columns are recomputed by
+    // backend fix/rebuild scripts over time and the hardcoded HTML otherwise drifts
+    // out of sync with the real per-stock data (same pattern as renderHolidayMasterSummaryRows).
+    function renderQuarterMasterSummaryRows() {
+      if (!dashboardData || !dashboardData.quarters) return;
+      document.querySelectorAll('tr[id^="qrow-"]').forEach(row => {
+        const qcode = row.id.replace('qrow-', '');
+        const q = dashboardData.quarters.find(x => x.q_code === qcode);
+        if (!q || !Array.isArray(q.stocks) || !q.stocks.length) return;
+        const cells = row.querySelectorAll('td');
+        if (cells.length < 6) return;
+
+        const longN = q.stocks.filter(s => s.direction === 'LONG').length;
+        const shortN = q.stocks.filter(s => s.direction === 'SHORT').length;
+        cells[4].innerHTML = `<span class="badge-short">${shortN} SHORT</span> / <span class="badge-long">${longN} LONG</span>`;
+
+        const wr = Number(q.win_rate_avg !== undefined && q.win_rate_avg !== null ? q.win_rate_avg : q.avg_win_rate);
+        if (!isNaN(wr)) {
+          cells[5].innerHTML = `<strong style="color:#FBBF24;">${wr.toFixed(1)}%</strong>`;
+        } else {
+          cells[5].innerHTML = `<span style="color:#94A3B8; font-weight:600; font-size:0.8rem;">— (Win Rate to Come)</span>`;
+        }
       });
     }
 
@@ -2812,6 +2856,8 @@
       tbody.innerHTML = '';
 
       const query = (document.getElementById('eq-search')?.value || '').toUpperCase();
+      const eqDateFrom = document.getElementById('eq-date-from')?.value || '';
+      const eqDateTo = document.getElementById('eq-date-to')?.value || '';
 
       q.stocks.forEach((s, idx) => {
         const isBuy = s.direction === 'LONG';
@@ -2821,6 +2867,7 @@
         const selectedSec = document.getElementById('eq-sector-filter')?.value || 'ALL';
         if (selectedSec !== 'ALL' && s.sector !== selectedSec) return;
         if (query && !s.symbol.includes(query) && !s.name.toUpperCase().includes(query)) return;
+        if (!inDateFilterRange(parseEventDate(s.entry_date), parseEventDate(s.exit_date), eqDateFrom, eqDateTo)) return;
 
         const tr = document.createElement('tr');
         tr.style.cursor = 'pointer';
@@ -2843,7 +2890,7 @@
         if (isAnnounced) {
           enDateStr = `<span class="date-badge date-confirmed">${s.entry_date}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>`;
           resDateStr = `<span class="date-badge date-confirmed" style="background:rgba(16,185,129,0.15); border-color:#10B981; color:#34D399; font-weight:700;">📅 ${s.result_date}<br><small style="color:#60A5FA; font-weight:700;">✓ Announced</small></span>`;
-          exDateStr = `<span class="date-badge date-confirmed">${s.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem; font-weight:700;">⏰ 03:15 PM</small></span>`;
+          exDateStr = `<span class="date-badge date-confirmed">${s.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem; font-weight:700;">⏰ 03:15 PM</small></span>${exitAlertBadge(parseEventDate(s.exit_date))}`;
         } else {
           enDateStr = `<span class="date-badge date-pending" style="color:#FBBF24; border-color:rgba(245,158,11,0.3);">Yet to come<br><small style="color:#94A3B8;">T - ${s.lead || 2} trading days</small></span>`;
           resDateStr = `<span class="date-badge date-pending" style="color:#FBBF24; border-color:rgba(245,158,11,0.4); font-weight:700; background:rgba(245,158,11,0.1);">⏳ Yet to come<br><small style="color:#94A3B8;">Awaiting NSE</small></span>`;
@@ -3043,6 +3090,8 @@
       tbody.innerHTML = '';
 
       const query = (document.getElementById('q-search')?.value || '').toUpperCase();
+      const dateFrom = document.getElementById('q-date-from')?.value || '';
+      const dateTo = document.getElementById('q-date-to')?.value || '';
 
       let renderedIdx = 0;
       q.stocks.forEach((s) => {
@@ -3051,6 +3100,7 @@
         if (currentQuarterFilter === 'LONG' && s.direction !== 'LONG') return;
         if (currentQuarterFilter === 'SHORT' && s.direction !== 'SHORT') return;
         if (query && !s.symbol.includes(query) && !s.name.toUpperCase().includes(query)) return;
+        if (!inDateFilterRange(parseEventDate(s.entry_date), parseEventDate(s.exit_date), dateFrom, dateTo)) return;
 
         renderedIdx++;
 
@@ -3071,7 +3121,7 @@
         if (isAnnounced) {
           enDateStr = `<span class="date-badge date-confirmed">${s.entry_date}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>`;
           resDateStr = `<span class="date-badge date-confirmed" style="background:rgba(16,185,129,0.15); border-color:#10B981; color:#34D399; font-weight:700;">📅 ${s.result_date}<br><small style="color:#60A5FA; font-weight:700;">✓ Announced</small></span>`;
-          exDateStr = `<span class="date-badge date-confirmed">${s.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem; font-weight:700;">⏰ 03:15 PM</small></span>`;
+          exDateStr = `<span class="date-badge date-confirmed">${s.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem; font-weight:700;">⏰ 03:15 PM</small></span>${exitAlertBadge(parseEventDate(s.exit_date))}`;
         } else {
           enDateStr = `<span class="date-badge date-pending" style="color:#FBBF24; border-color:rgba(245,158,11,0.3);">Yet to come<br><small style="color:#94A3B8;">T - ${s.lead || 2} trading days</small></span>`;
           resDateStr = `<span class="date-badge date-pending" style="color:#FBBF24; border-color:rgba(245,158,11,0.4); font-weight:700; background:rgba(245,158,11,0.1);">⏳ Yet to come<br><small style="color:#94A3B8;">Awaiting NSE</small></span>`;
@@ -3329,6 +3379,8 @@
       tbody.innerHTML = '';
 
       const query = (document.getElementById('h-search')?.value || '').toUpperCase();
+      const hDateFrom = document.getElementById('h-date-from')?.value || '';
+      const hDateTo = document.getElementById('h-date-to')?.value || '';
 
       const now = new Date();
       const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
@@ -3352,6 +3404,7 @@
         const selectedSec = document.getElementById('h-sector-filter')?.value || 'ALL';
         if (selectedSec !== 'ALL' && s.sector !== selectedSec) return;
         if (query && !s.symbol.includes(query) && !s.name.toUpperCase().includes(query)) return;
+        if (!inDateFilterRange(sDt, sExitDt, hDateFrom, hDateTo)) return;
 
         renderedIdx++;
         const tr = document.createElement('tr');
@@ -3374,7 +3427,7 @@
         } else {
           enDateBadge = `<span class="date-badge date-confirmed">${s.entry_date}<br><small style="color:#60A5FA; font-size:0.7rem; font-weight:700;">⏰ 09:20 AM</small></span>`;
         }
-        const exDateBadge = `<span class="date-badge">${s.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem;">⏰ 03:15 PM</small></span>`;
+        const exDateBadge = `<span class="date-badge">${s.exit_date}<br><small style="color:#94A3B8; font-size:0.7rem;">⏰ 03:15 PM</small></span>${exitAlertBadge(sExitDt)}`;
 
         const actionTag = s.direction === 'LONG'
           ? `<span class="action-tag action-buy-call">BUY CALL (Risk Capped)</span>`
@@ -3584,6 +3637,8 @@
       const query = (document.getElementById('rbi-upcoming-stock-search')?.value || '').toLowerCase().trim();
       const secVal = document.getElementById('rbi-upcoming-stock-sector')?.value || 'ALL';
       const dirVal = currentRbiUpcomingDirFilter;
+      const rbiDateFrom = document.getElementById('rbi-date-from')?.value || '';
+      const rbiDateTo = document.getElementById('rbi-date-to')?.value || '';
 
       if (query) {
         stocks = stocks.filter(s => s.symbol.toLowerCase().includes(query) || (s.sector || '').toLowerCase().includes(query));
@@ -3593,6 +3648,14 @@
       }
       if (dirVal !== 'ALL') {
         stocks = stocks.filter(s => s.direction === dirVal);
+      }
+      if (rbiDateFrom || rbiDateTo) {
+        stocks = stocks.filter(s => {
+          const w = rbiParseWindow(s.window);
+          const enDt = rbiShiftTradingDays(rbiAnchor, -w.lead);
+          const exDt = rbiShiftTradingDays(rbiAnchor, w.hold);
+          return inDateFilterRange(enDt, exDt, rbiDateFrom, rbiDateTo);
+        });
       }
 
       if (countEl) {
@@ -3663,7 +3726,10 @@
               <span style="color:#93C5FD; font-size:0.78rem; font-weight:600;">${rbiEntryStr}</span>
               <div style="margin-top:3px;"><span style="color:${rbiSt.color}; font-size:0.66rem; font-weight:800; border:1px solid ${rbiSt.border}; border-radius:4px; padding:1px 5px; display:inline-block;">${rbiSt.tag}</span></div>
             </td>
-            <td><span style="color:#CBD5E1; font-size:0.78rem;">${rbiExitStr}</span></td>
+            <td>
+              <span style="color:#CBD5E1; font-size:0.78rem;">${rbiExitStr}</span>
+              ${exitAlertBadge(rbiExDt)}
+            </td>
             <td>
               <strong style="color:${wrColor}; font-family:'JetBrains Mono'; font-size:0.85rem;">${s.win_rate}%</strong>
               <div style="font-size:0.68rem; color:var(--text-muted);">${s.win_ratio || ''}</div>
@@ -4016,6 +4082,26 @@
         }
       }
       return null;
+    }
+
+    // ---- Shared: exit alert badge + entry/exit date-range filter (Quarterly, Holiday, RBI tabs) ----
+    function exitAlertBadge(exitDt) {
+      if (!exitDt) return '';
+      const now = new Date();
+      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      const diff = Math.round((exitDt - today) / 86400000);
+      if (diff === 0) return '<div style="margin-top:3px;"><span style="color:#F59E0B; font-size:0.66rem; font-weight:800; border:1px solid #F59E0B; border-radius:4px; padding:1px 5px; display:inline-block;">🔔 EXIT TODAY</span></div>';
+      if (diff === 1) return '<div style="margin-top:3px;"><span style="color:#F87171; font-size:0.66rem; font-weight:800; border:1px solid #EF4444; border-radius:4px; padding:1px 5px; display:inline-block;">⚠️ EXIT TOMORROW</span></div>';
+      if (diff < 0) return '<div style="margin-top:3px;"><span style="color:#94A3B8; font-size:0.66rem; font-weight:700; border:1px solid #475569; border-radius:4px; padding:1px 5px; display:inline-block;">✅ EXITED</span></div>';
+      return '';
+    }
+
+    function inDateFilterRange(entryDt, exitDt, fromStr, toStr) {
+      if (!fromStr && !toStr) return true;
+      const from = fromStr ? new Date(fromStr + 'T00:00:00') : null;
+      const to = toStr ? new Date(toStr + 'T23:59:59') : null;
+      const hit = (dt) => dt && (!from || dt >= from) && (!to || dt <= to);
+      return hit(entryDt) || hit(exitDt);
     }
 
     function updateDynamicDashboardDates() {
@@ -5211,6 +5297,7 @@
       try { renderHolidayMasterSummaryRows(); } catch(e) { console.error(e); }
       try { renderRbiUpcomingPlaybook(); } catch(e) { console.error(e); }
       try { renderQuarterTable(); } catch(e) { console.error(e); }
+      try { renderQuarterMasterSummaryRows(); } catch(e) { console.error(e); }
       try { renderEquityTable(); } catch(e) { console.error(e); }
 
       if (isManual) {

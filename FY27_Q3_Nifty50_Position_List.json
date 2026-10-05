@@ -1,0 +1,410 @@
+{
+  "q_code": "FY27_Q3",
+  "label": "Q3 FY 2026-27 (Oct - Dec 2026 Results)",
+  "generated": "2026-10-05",
+  "scope": "Nifty 50 only",
+  "total_stocks": 50,
+  "bias_summary": "25 SHORT / 25 LONG",
+  "stocks": [
+    {
+      "rank": 1,
+      "symbol": "ADANIENT",
+      "name": "Adani Enterprises Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 2,
+      "symbol": "ADANIPORTS",
+      "name": "Adani Ports & SEZ Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 3,
+      "symbol": "APOLLOHOSP",
+      "name": "Apollo Hospitals Enterprise Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 4,
+      "symbol": "ASIANPAINT",
+      "name": "Asian Paints Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 5,
+      "symbol": "AXISBANK",
+      "name": "Axis Bank Ltd",
+      "direction": "SHORT",
+      "announced": true,
+      "result_date": "17-Oct-2026"
+    },
+    {
+      "rank": 6,
+      "symbol": "BAJAJ-AUTO",
+      "name": "Bajaj Auto Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 7,
+      "symbol": "BAJAJFINSV",
+      "name": "Bajaj Finserv Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 8,
+      "symbol": "BAJFINANCE",
+      "name": "Bajaj Finance Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 9,
+      "symbol": "BEL",
+      "name": "Bharat Electronics Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 10,
+      "symbol": "BHARTIARTL",
+      "name": "Bharti Airtel Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 11,
+      "symbol": "BSE",
+      "name": "BSE Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 12,
+      "symbol": "CIPLA",
+      "name": "Cipla Ltd",
+      "direction": "SHORT",
+      "announced": true,
+      "result_date": "27-Oct-2026"
+    },
+    {
+      "rank": 13,
+      "symbol": "COALINDIA",
+      "name": "Coal India Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 14,
+      "symbol": "DRREDDY",
+      "name": "Dr Reddys Laboratories Ltd",
+      "direction": "SHORT",
+      "announced": true,
+      "result_date": "23-Oct-2026"
+    },
+    {
+      "rank": 15,
+      "symbol": "EICHERMOT",
+      "name": "Eicher Motors Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 16,
+      "symbol": "ETERNAL",
+      "name": "Eternal Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 17,
+      "symbol": "GRASIM",
+      "name": "Grasim Industries Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 18,
+      "symbol": "HCLTECH",
+      "name": "HCL Technologies Ltd",
+      "direction": "LONG",
+      "announced": true,
+      "result_date": "12-Oct-2026"
+    },
+    {
+      "rank": 19,
+      "symbol": "HDFCBANK",
+      "name": "HDFC Bank Ltd",
+      "direction": "SHORT",
+      "announced": true,
+      "result_date": "17-Oct-2026"
+    },
+    {
+      "rank": 20,
+      "symbol": "HDFCLIFE",
+      "name": "HDFC Life Insurance Co Ltd",
+      "direction": "SHORT",
+      "announced": true,
+      "result_date": "15-Oct-2026"
+    },
+    {
+      "rank": 21,
+      "symbol": "HINDALCO",
+      "name": "Hindalco Industries Ltd",
+      "direction": "SHORT",
+      "announced": true,
+      "result_date": "06-Nov-2026"
+    },
+    {
+      "rank": 22,
+      "symbol": "HINDUNILVR",
+      "name": "Hindustan Unilever Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 23,
+      "symbol": "ICICIBANK",
+      "name": "ICICI Bank Ltd",
+      "direction": "SHORT",
+      "announced": true,
+      "result_date": "17-Oct-2026"
+    },
+    {
+      "rank": 24,
+      "symbol": "INDIGO",
+      "name": "InterGlobe Aviation Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 25,
+      "symbol": "INFY",
+      "name": "Infosys Ltd",
+      "direction": "LONG",
+      "announced": true,
+      "result_date": "23-Oct-2026"
+    },
+    {
+      "rank": 26,
+      "symbol": "ITC",
+      "name": "ITC Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 27,
+      "symbol": "JIOFIN",
+      "name": "Jio Financial Services Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 28,
+      "symbol": "JSWSTEEL",
+      "name": "JSW Steel Ltd",
+      "direction": "LONG",
+      "announced": true,
+      "result_date": "23-Oct-2026"
+    },
+    {
+      "rank": 29,
+      "symbol": "KOTAKBANK",
+      "name": "Kotak Mahindra Bank Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 30,
+      "symbol": "LT",
+      "name": "Larsen & Toubro Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 31,
+      "symbol": "M&M",
+      "name": "Mahindra & Mahindra Ltd",
+      "direction": "LONG",
+      "announced": true,
+      "result_date": "05-Nov-2026"
+    },
+    {
+      "rank": 32,
+      "symbol": "MARUTI",
+      "name": "Maruti Suzuki India Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 33,
+      "symbol": "MAXHEALTH",
+      "name": "Max Healthcare Institute Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 34,
+      "symbol": "NESTLEIND",
+      "name": "Nestle India Ltd",
+      "direction": "LONG",
+      "announced": true,
+      "result_date": "15-Oct-2026"
+    },
+    {
+      "rank": 35,
+      "symbol": "NTPC",
+      "name": "NTPC Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 36,
+      "symbol": "ONGC",
+      "name": "Oil & Natural Gas Corp Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 37,
+      "symbol": "POWERGRID",
+      "name": "Power Grid Corporation of India Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 38,
+      "symbol": "RELIANCE",
+      "name": "Reliance Industries Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 39,
+      "symbol": "SBILIFE",
+      "name": "SBILIFE Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 40,
+      "symbol": "SBIN",
+      "name": "State Bank of India",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 41,
+      "symbol": "SHRIRAMFIN",
+      "name": "Shriram Finance Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 42,
+      "symbol": "SUNPHARMA",
+      "name": "Sun Pharmaceutical Industries Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 43,
+      "symbol": "TATACONSUM",
+      "name": "Tata Consumer Products Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 44,
+      "symbol": "TATASTEEL",
+      "name": "Tata Steel Ltd",
+      "direction": "SHORT",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 45,
+      "symbol": "TCS",
+      "name": "Tata Consultancy Services Ltd",
+      "direction": "LONG",
+      "announced": true,
+      "result_date": "08-Oct-2026"
+    },
+    {
+      "rank": 46,
+      "symbol": "TECHM",
+      "name": "Tech Mahindra Ltd",
+      "direction": "LONG",
+      "announced": true,
+      "result_date": "15-Oct-2026"
+    },
+    {
+      "rank": 47,
+      "symbol": "TITAN",
+      "name": "Titan Company Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 48,
+      "symbol": "TMPV",
+      "name": "Tata Motors Passenger Vehicles Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 49,
+      "symbol": "TRENT",
+      "name": "Trent Ltd",
+      "direction": "LONG",
+      "announced": false,
+      "result_date": null
+    },
+    {
+      "rank": 50,
+      "symbol": "ULTRACEMCO",
+      "name": "UltraTech Cement Ltd",
+      "direction": "LONG",
+      "announced": true,
+      "result_date": "19-Oct-2026"
+    }
+  ]
+}
