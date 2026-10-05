@@ -61,6 +61,15 @@ def closes_for(sym):
     return None, None, []
 
 
+MAX_GAP_DAYS = 15  # a handful of F&O contracts have multi-YEAR gaps in their
+                    # futures history (e.g. GODFRYPHLP: 27-Jun-2019 -> 1-Apr-2026,
+                    # ADANIPOWER, NAM-INDIA). Finding "nearest date <= target" with
+                    # no gap check silently walks into the pre-gap data and builds
+                    # a nonsense multi-year "trade" spanning the gap. Any found
+                    # date more than 15 calendar days from the target is treated
+                    # as no data for that date, not a real match.
+
+
 def build_matrix(a, dates_to_use):
     """ret_mat[date_idx][(bo,so)] = split-robust signed %% raw (LONG-convention) return."""
     # index of nearest trading day <= hd, found via a single forward pointer sweep (dates sorted)
@@ -69,7 +78,10 @@ def build_matrix(a, dates_to_use):
     for hd in dates_to_use:
         while ptr + 1 < len(a) and a[ptr + 1][0] <= hd:
             ptr += 1
-        ib_list.append(ptr)
+        if ptr >= 0 and (hd - a[ptr][0]).days > MAX_GAP_DAYS:
+            ib_list.append(-1)  # nearest available date is too stale -- a data gap, not a real match
+        else:
+            ib_list.append(ptr)
 
     mat = []
     for ib in ib_list:
