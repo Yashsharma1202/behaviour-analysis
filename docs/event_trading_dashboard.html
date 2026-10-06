@@ -1537,6 +1537,8 @@
             <button id="fopill-nonnifty" class="filter-pill" onclick="setFoHolidayFilter('nonnifty', this)">Non-Nifty F&amp;O (161)</button>
             <button id="fopill-long" class="filter-pill" onclick="setFoHolidayFilter('LONG', this)">🟢 LONG</button>
             <button id="fopill-short" class="filter-pill" onclick="setFoHolidayFilter('SHORT', this)">🔴 SHORT</button>
+            <button id="fosort-rank" class="filter-pill active" onclick="setFoHolidaySort('rank', this)">↕ Rank (model)</button>
+            <button id="fosort-wr" class="filter-pill" onclick="setFoHolidaySort('winrate', this)">🏆 Rank by Win Rate</button>
           </div>
           <div class="table-container">
             <table id="fo-holiday-table">
@@ -3282,6 +3284,14 @@
       renderFoHolidayTable();
     }
 
+    let currentFoHolidaySort = 'rank';
+    function setFoHolidaySort(mode, el) {
+      currentFoHolidaySort = mode;
+      document.querySelectorAll('#fosort-rank,#fosort-wr').forEach(b => b.classList.remove('active'));
+      if (el) el.classList.add('active');
+      renderFoHolidayTable();
+    }
+
     function foDatasetIdFor(holidayId) {
       return String(holidayId || '').replace(/_20\d\d$/, '');
     }
@@ -3307,14 +3317,19 @@
         if (q && !String(s.symbol).toUpperCase().includes(q) && !String(s.name || '').toUpperCase().includes(q)) return false;
         return true;
       });
-      rows.sort((a, b) => (a.rank || 9999) - (b.rank || 9999));
+      if (currentFoHolidaySort === 'winrate') {
+        rows.sort((a, b) => (Number(b.win_rate || 0) - Number(a.win_rate || 0)) || (Number(b.total_4y_pnl || 0) - Number(a.total_4y_pnl || 0)));
+      } else {
+        rows.sort((a, b) => (a.rank || 9999) - (b.rank || 9999));
+      }
       if (!rows.length) {
         tbody.innerHTML = '<tr><td colspan="10" style="text-align:center; color:#94A3B8; padding:1rem;">No F&amp;O stocks match this filter.</td></tr>';
         return;
       }
-      tbody.innerHTML = rows.map(s => {
+      tbody.innerHTML = rows.map((s, idx) => {
         const dir = String(s.direction || '').toUpperCase();
         const dirBadge = dir.includes('LONG') ? `<span class="badge-long">▲ LONG</span>` : `<span class="badge-short">▼ SHORT</span>`;
+        const rankLabel = currentFoHolidaySort === 'winrate' ? idx + 1 : (s.rank || '');
         const action = dir.includes('LONG')
           ? `<span class="action-tag action-buy-call">BUY CALL (Risk Capped)</span>`
           : `<span class="action-tag action-buy-put">BUY PUT (Risk Capped)</span>`;
@@ -3322,7 +3337,7 @@
         const pnl = Number(s.total_4y_pnl || 0);
         const win = s.window || ('T-' + (s.entry_lead_days || 2) + ' to T+' + (s.exit_hold_days || 3));
         return `<tr>
-          <td><strong>Rank ${s.rank || ''}</strong></td>
+          <td><strong>Rank ${rankLabel}</strong></td>
           <td><strong>${s.symbol}</strong></td>
           <td style="color:#CBD5E1">${s.name || ''}</td>
           <td>${niftyBadge(s.symbol)}</td>
