@@ -1,0 +1,262 @@
+{
+  "run": "2026-10-01 10:50:17",
+  "ok": 26,
+  "empty": 7,
+  "fail": 5,
+  "feeds": {
+    "01_Dashboard_Summary": {
+      "status": "FAIL",
+      "fetched": 293439,
+      "archive_rows": 578053,
+      "note": "GAIL (India) Limited has informed the Exchange regarding 'This is with reference to Ministry of Petroleum & Natural Gas letter No. CA\u000231022/1/2022-PNG (41186) dated 18.01.2022, Shri M.V. Iyer, Director (BD), GAIL has been entrusted with an additional charge of the post of Director (Marketing), GAIL for a period of three months from 18.01.2022 or till appointment of a regular incumbent to the post, or until further orders, whichever is the earliest (MoPNG letter attached). This is in compliance of Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015. The above is for your information and records please. '. cannot be used in worksheets."
+    },
+    "02_Announcements": {
+      "status": "FAIL",
+      "fetched": 285935,
+      "archive_rows": 250505,
+      "note": "GAIL (India) Limited has informed the Exchange regarding 'This is with reference to Ministry of Petroleum & Natural Gas letter No. CA\u000231022/1/2022-PNG (41186) dated 18.01.2022, Shri M.V. Iyer, Director (BD), GAIL has been entrusted with an additional charge of the post of Director (Marketing), GAIL for a period of three months from 18.01.2022 or till appointment of a regular incumbent to the post, or until further orders, whichever is the earliest (MoPNG letter attached). This is in compliance of Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015. The above is for your information and records please. '. cannot be used in worksheets."
+    },
+    "03_Announcements_XBRL": {
+      "status": "OK",
+      "fetched": 33416,
+      "archive_rows": 33416,
+      "new": 680,
+      "note": "33416 of 285935 announcements carry XBRL"
+    },
+    "04_Board_Meetings": {
+      "status": "OK",
+      "fetched": 4130,
+      "archive_rows": 4141,
+      "new": 54,
+      "note": "4130 rows from 208/208 symbols"
+    },
+    "05_Corporate_Actions": {
+      "status": "OK",
+      "fetched": 3466,
+      "archive_rows": 3493,
+      "new": 2,
+      "note": "3466 rows from 208/208 symbols"
+    },
+    "06_Annual_Reports": {
+      "status": "OK",
+      "fetched": 2871,
+      "archive_rows": 2857,
+      "new": 1,
+      "note": "2871 rows from 208/208 symbols"
+    },
+    "07_BRSR_Reports": {
+      "status": "EMPTY",
+      "fetched": 0,
+      "archive_rows": 0,
+      "note": "0 BRSR of 2871 annual reports (matched on 'fileName')"
+    },
+    "08_Company_Directory": {
+      "status": "OK",
+      "fetched": 208,
+      "archive_rows": 208,
+      "new": 0,
+      "note": "NSE directory empty \u2014 rebuilt from local universe CSV (208 symbols)"
+    },
+    "09_Corporate_Governance": {
+      "status": "FAIL",
+      "fetched": 0,
+      "archive_rows": 0,
+      "note": "all 208 symbol requests failed"
+    },
+    "10_Corporate_Information": {
+      "status": "OK",
+      "fetched": 0,
+      "archive_rows": 49,
+      "new": 0,
+      "note": "0 rows from 208/208 symbols"
+    },
+    "11_Daily_Buy_Back": {
+      "status": "EMPTY",
+      "fetched": 0,
+      "archive_rows": 0,
+      "note": "0/12 rows after F&O universe filter"
+    },
+    "12_Event_Calendar": {
+      "status": "OK",
+      "fetched": 34,
+      "archive_rows": 109,
+      "new": 25,
+      "note": "34/107 rows after F&O universe filter"
+    },
+    "13_Financial_Results": {
+      "status": "OK",
+      "fetched": 25388,
+      "archive_rows": 25726,
+      "new": 0,
+      "note": "25388 rows from 202/208 symbols"
+    },
+    "14_Financial_Results_Comparison": {
+      "status": "FAIL",
+      "fetched": 0,
+      "archive_rows": 0,
+      "note": "HTTP 200 but body was not JSON (49 bytes)"
+    },
+    "15_Further_Issues_XBRL_Filings": {
+      "status": "OK",
+      "fetched": 100,
+      "archive_rows": 113,
+      "new": 3,
+      "note": "100 rows"
+    },
+    "16_Insider_Trading_PIT": {
+      "status": "OK",
+      "fetched": 7813,
+      "archive_rows": 10631,
+      "new": 10,
+      "note": "7813 rows"
+    },
+    "17_Insider_Trading_Plan": {
+      "status": "EMPTY",
+      "fetched": 0,
+      "archive_rows": 0,
+      "note": "no rows (payload=dict ['data', 'msg'])"
+    },
+    "18_Investor_Complaints": {
+      "status": "OK",
+      "fetched": 20,
+      "archive_rows": 20,
+      "new": 0,
+      "note": "20 rows"
+    },
+    "19_Issue_Offer_Documents": {
+      "status": "FAIL",
+      "fetched": 0,
+      "archive_rows": 0,
+      "note": "HTTP 200 but body was not JSON (26 bytes)"
+    },
+    "20_Promoter_Encumbrance_Details": {
+      "status": "OK",
+      "fetched": 0,
+      "archive_rows": 9,
+      "new": 0,
+      "note": "0/20 rows after F&O universe filter"
+    },
+    "21_Related_Party_Transactions": {
+      "status": "OK",
+      "fetched": 20,
+      "archive_rows": 21,
+      "new": 0,
+      "note": "20 rows"
+    },
+    "22_SAST_Regulations": {
+      "status": "OK",
+      "fetched": 2561,
+      "archive_rows": 2601,
+      "new": 19,
+      "note": "2561 rows from 208/208 symbols"
+    },
+    "23_Secretarial_Compliance": {
+      "status": "EMPTY",
+      "fetched": 0,
+      "archive_rows": 0,
+      "note": "no rows (payload=list )"
+    },
+    "24_Share_Transfers": {
+      "status": "EMPTY",
+      "fetched": 0,
+      "archive_rows": 0,
+      "note": "no rows (payload=dict [])"
+    },
+    "25_Shareholders_Meetings": {
+      "status": "OK",
+      "fetched": 0,
+      "archive_rows": 101,
+      "new": 0,
+      "note": "0/20 rows after F&O universe filter"
+    },
+    "26_Shareholding_Pattern": {
+      "status": "OK",
+      "fetched": 0,
+      "archive_rows": 207,
+      "new": 0,
+      "note": "no rows (payload=list )"
+    },
+    "27_Shareholding_Pattern_SDD": {
+      "status": "OK",
+      "fetched": 0,
+      "archive_rows": 6,
+      "new": 0,
+      "note": "0/20 rows after F&O universe filter"
+    },
+    "28_Statement_of_Deviation": {
+      "status": "OK",
+      "fetched": 0,
+      "archive_rows": 294,
+      "new": 0,
+      "note": "no rows (payload=dict ['data'])"
+    },
+    "29_Audit_Qualification_Impact": {
+      "status": "EMPTY",
+      "fetched": 0,
+      "archive_rows": 0,
+      "note": "no rows (payload=list )"
+    },
+    "30_System_Driven_Disclosures_PIT": {
+      "status": "EMPTY",
+      "fetched": 0,
+      "archive_rows": 0,
+      "note": "0/20 rows after F&O universe filter"
+    },
+    "31_System_Driven_Disclosures_SAST": {
+      "status": "OK",
+      "fetched": 0,
+      "archive_rows": 6,
+      "new": 0,
+      "note": "0/25 rows after F&O universe filter"
+    },
+    "32_Voting_Results": {
+      "status": "OK",
+      "fetched": 960,
+      "archive_rows": 1518,
+      "new": 50,
+      "note": "960 rows from 208/208 symbols"
+    },
+    "33_FII_DII_Trading_Activity": {
+      "status": "OK",
+      "fetched": 2,
+      "archive_rows": 88,
+      "new": 2,
+      "note": "2 rows"
+    },
+    "34_Bulk_Deals": {
+      "status": "OK",
+      "fetched": 179,
+      "archive_rows": 7192,
+      "new": 179,
+      "note": "179 rows from CSV"
+    },
+    "35_Block_Deals": {
+      "status": "OK",
+      "fetched": 14,
+      "archive_rows": 526,
+      "new": 14,
+      "note": "14 rows from CSV"
+    },
+    "36_Concall_Transcripts_Presentations": {
+      "status": "OK",
+      "fetched": 13039,
+      "archive_rows": 13006,
+      "new": 25,
+      "note": "13039 hits across all 208 symbols"
+    },
+    "37_Credit_Rating_Reports": {
+      "status": "OK",
+      "fetched": 25293,
+      "archive_rows": 4066,
+      "new": 108,
+      "note": "25293/53869 rows after F&O universe filter"
+    },
+    "38_Super_Investor_Institutional_Holdings": {
+      "status": "OK",
+      "fetched": 0,
+      "archive_rows": 207,
+      "new": 0,
+      "note": "25293/53869 rows after F&O universe filter"
+    }
+  }
+}

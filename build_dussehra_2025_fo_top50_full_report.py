@@ -33,7 +33,24 @@ dussehra_dates = sorted(date.fromisoformat(t['holiday_date']) for t in dh['trade
 anchor_2025 = next(dt for dt in dussehra_dates if dt.year == 2025)
 
 
+# POINT-IN-TIME lot-size overrides for stocks confirmed (via NSE circular
+# FAOP70554, effective 29-Oct-2025) to have had a DIFFERENT lot size during
+# this Sep-Oct 2025 trade window than fo_stocks_211.json's CURRENT value --
+# that file holds today's lot size for the live dashboard and must not be
+# overwritten with historical values, so the override lives here instead.
+# TVSMOTOR/LAURUSLABS were revised DOWN effective Nov-2025 (so the Sep-Oct
+# 2025 trade used the larger PRE-revision lot); SIEMENS/RECLTD were revised
+# UP effective Jan-2026 (so the Sep-Oct 2025 trade used the smaller
+# PRE-revision lot). Confirmed unchanged at this same Oct-2025 revision:
+# MCX, DLF, GLENMARK, CUMMINSIND, HAL, LUPIN, PAGEIND, SHREECEM.
+POINT_IN_TIME_LOT_OVERRIDE_SEP_OCT_2025 = {
+    'TVSMOTOR': 350, 'LAURUSLABS': 1700, 'SIEMENS': 125, 'RECLTD': 1275,
+}
+
+
 def lot_for(sym):
+    if sym in POINT_IN_TIME_LOT_OVERRIDE_SEP_OCT_2025:
+        return POINT_IN_TIME_LOT_OVERRIDE_SEP_OCT_2025[sym]
     return meta.get(sym, {}).get('lot_size') or 500
 
 
@@ -263,6 +280,86 @@ nt = ev.cell(note_row, 1, 'Data source: futures prices (2019-2026) \u2014 NOT th
 nt.font = Font(italic=True, size=9, color='7C2D12'); nt.alignment = WRAP
 ev.row_dimensions[note_row].height = 50
 
+# ============ Sheet 4: Fund Utilization (capital recycling) ============
+# "Total margin deployed" above is a NAIVE SUM -- it assumes every one of the
+# 50 stocks' margin is held simultaneously for the whole event, as if each
+# got its own separate pool of capital. In reality only stocks with an OPEN
+# position on a given day actually tie up capital; as each trade exits, its
+# margin + booked PnL become free to redeploy into other open/new positions.
+# This sheet tracks the REAL day-by-day fund requirement (peak concurrent
+# margin, not the sum of all 50) and how that fund's value grows as PnL gets
+# booked and recycled.
+daily_margin_usage = []
+for dt in all_dates:
+    open_syms = [sym for sym, p in top50.items() if p['entry_date'] <= dt <= p['exit_date']]
+    open_margin = sum(top50[s]['margin'] for s in open_syms)
+    daily_margin_usage.append((dt, len(open_syms), round(open_margin, 2)))
+
+peak_fund = max(v for _, _, v in daily_margin_usage)
+avg_fund = round(sum(v for _, _, v in daily_margin_usage) / len(daily_margin_usage), 2)
+peak_day = next(dt for dt, _, v in daily_margin_usage if v == peak_fund)
+return_on_peak_fund = round(final_pnl / peak_fund * 100, 2) if peak_fund else 0
+fund_value_curve = [(dt, round(peak_fund + pnl, 2)) for dt, pnl in portfolio_mtm]
+final_fund_value = fund_value_curve[-1][1]
+
+fu = wb.create_sheet('Fund_Utilization')
+fu.merge_cells('A1:E1')
+fu.cell(1, 1, 'TOP 50 F&O — DUSSEHRA 2025 — FUND UTILIZATION (CAPITAL RECYCLING)').font = TITLE
+fu.merge_cells('A2:E2')
+fu.cell(2, 1, 'Real day-by-day capital requirement if one shared fund is used across all 50 trades (positions close and free up margin for reuse), instead of assuming every stock holds its own separate margin for the whole event.').font = SUB
+fu_metrics = [
+    ('Naive sum of all 50 margins (₹)', f"{total_margin:,.0f}"),
+    ('Peak fund actually utilised (₹, worst concurrent day)', f"{peak_fund:,.0f}"),
+    ('Peak utilisation date', peak_day.strftime('%d-%b-%Y')),
+    ('Capital saved via recycling (₹)', f"{total_margin - peak_fund:,.0f} ({(1 - peak_fund/total_margin)*100:.1f}% less capital needed)" if total_margin else '—'),
+    ('Average fund utilised across the event (₹)', f"{avg_fund:,.0f}"),
+    ('Final PnL booked (₹)', f"{final_pnl:,.0f}"),
+    ('Starting fund (₹, = peak utilised)', f"{peak_fund:,.0f}"),
+    ('Final fund value (₹, starting fund + PnL booked)', f"{final_fund_value:,.0f}"),
+    ('Return on PEAK fund utilised', f"{return_on_peak_fund:+.2f}%"),
+    ('Return on naive sum-of-margins (for comparison)', f"{(final_pnl/total_margin*100 if total_margin else 0):+.2f}%"),
+]
+r0 = 4
+for lbl, val in fu_metrics:
+    a = fu.cell(r0, 1, lbl); a.font = BOLD; a.fill = LBL; a.border = THIN; a.alignment = WRAP
+    fu.merge_cells(f'A{r0}:B{r0}')
+    c = fu.cell(r0, 3, val); c.border = THIN; c.alignment = RIGHT; c.font = BOLD
+    r0 += 1
+fu.column_dimensions['A'].width = 26; fu.column_dimensions['B'].width = 26; fu.column_dimensions['C'].width = 30
+
+r0 += 1
+fu.merge_cells(f'A{r0}:E{r0}')
+fu.cell(r0, 1, 'DAILY FUND UTILIZATION (open positions → margin tied up → fund value with booked PnL)').font = Font(bold=True, size=12)
+r0 += 1
+hdr3 = ['Date', 'Open Positions', 'Margin Tied Up (₹)', 'Cumulative PnL Booked (₹)', 'Fund Value (₹)']
+for j, h in enumerate(hdr3, 1):
+    c = fu.cell(r0, j, h); c.fill = NAVY; c.font = WHITE; c.border = THIN; c.alignment = CEN
+r0 += 1
+pnl_by_date = dict(portfolio_mtm)
+for dt, n_open, margin_used in daily_margin_usage:
+    cum_pnl_today = pnl_by_date.get(dt, 0)
+    fund_val = round(peak_fund + cum_pnl_today, 2)
+    is_peak = (margin_used == peak_fund)
+    vals = [dt.strftime('%d-%b-%Y'), n_open, margin_used, cum_pnl_today, fund_val]
+    for j, v in enumerate(vals, 1):
+        c = fu.cell(r0, j, v); c.border = THIN
+        if j == 1: c.alignment = CEN
+        else: c.alignment = RIGHT
+        if j == 3 and is_peak: c.fill = AM; c.font = Font(bold=True, color='92400E')
+        if j == 4: c.font = GOOD if cum_pnl_today >= 0 else BAD
+        if j == 5: c.font = BOLD
+    r0 += 1
+fu.column_dimensions['D'].width = 15; fu.column_dimensions['E'].width = 16
+for col in ('A', 'B', 'C'):
+    fu.column_dimensions[col].width = max(fu.column_dimensions[col].width or 0, 15)
+fu.freeze_panes = 'A' + str(r0 - len(daily_margin_usage) + 1)
+
+note_row2 = r0 + 1
+fu.merge_cells(f'A{note_row2}:E{note_row2}')
+nt2 = fu.cell(note_row2, 1, 'Margin Tied Up = sum of margin for every stock whose own [entry_date, exit_date] window covers that day. Highlighted (amber) row = the single worst day, i.e. the real capital requirement for running all 50 trades off one shared fund. Fund Value = that peak requirement + PnL booked to date (approximation: assumes each trade’s PnL is only realised/available at exit, but margin is released and PnL credited together on the day shown).')
+nt2.font = Font(italic=True, size=9, color='7C2D12'); nt2.alignment = WRAP
+fu.row_dimensions[note_row2].height = 48
+
 # ============ Sheet 0: Overview ============
 ov = wb.create_sheet('Overview', 0)
 ov.merge_cells('A1:B1')
@@ -271,7 +368,7 @@ notes = [
     ('Universe & ranking', f'Full 211 F&O universe; {len(stock_paths)} stocks had usable 2025 Dussehra data. Top 50 shown, ranked by that single occurrence\u2019s actual PnL (1 lot).'),
     ('Method', 'Point-in-time walk-forward (window + direction for 2025 chosen using ONLY years strictly before it, same discipline as the live dashboard) \u2014 no hindsight.'),
     ('Data source', 'Futures prices (2019-2026). The cash-equity file was found missing 98.3% of all Fridays across its 26yr history and is not used anywhere in this report.'),
-    ('Sheets', 'Top50_Trade_Log = one row per stock, final result. Daily_MTM_Grid = date-wise running P&L from entry to exit for every stock. Event_Performance_Summary = whole-portfolio (top 50 combined) view, including a date-wise combined MTM curve.'),
+    ('Sheets', 'Top50_Trade_Log = one row per stock, final result. Daily_MTM_Grid = date-wise running P&L from entry to exit for every stock. Event_Performance_Summary = whole-portfolio (top 50 combined) view, including a date-wise combined MTM curve, Sharpe-like ratio, max drawdown and VaR 95%. Fund_Utilization = real day-by-day capital requirement if one shared, recycled fund is used across all 50 trades instead of a separate pool per stock.'),
     ('Result', f'{wins}/50 profitable ({win_rate}%). Total PnL \u20b9{final_pnl:,.0f} on \u20b9{total_margin:,.0f} margin (1 lot each) \u2014 return on margin {(final_pnl/total_margin*100 if total_margin else 0):+.2f}%. {n_long} LONG / {n_short} SHORT.'),
     ('Confidence', f'{n_low} of the top 50 are LOW confidence (fewer than 3 prior years to pick their window from) \u2014 amber highlighted throughout.'),
     ('CAVEAT', 'Ranking by a single year\u2019s PnL favours whichever stocks happened to move most in 2025 \u2014 not the same as a multi-year validated edge. See FO211_Dussehra_WalkForward_Ranked_Report.xlsx for the across-years ranking.'),

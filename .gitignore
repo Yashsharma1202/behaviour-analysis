@@ -17,10 +17,14 @@ forward.db
 smartapi_config.json
 live_pnl_state.json
 
+# quant_db (PostgreSQL) read-only connection secrets: never commit
+quant_db_config.json
+
 # Heavy Parquet & Raw Tick data cache
 OI_DATA/
 options_parquet/
 spot_parquet/
+futures_parquet/
 
 # Scratch files
 scratch/
@@ -28,3 +32,4 @@ scratch_*
 .tempmediaStorage/
 .user_uploaded/
 
+Stock_Data_213/all_stocks_daily_ohlc.csv

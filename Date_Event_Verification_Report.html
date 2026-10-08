@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Date & Event Verification Report</title>
+<style>
+  :root{
+    --bg:#0b0f17; --panel:#121826; --panel2:#0e1420; --border:#232d40;
+    --text:#e6ebf5; --muted:#8b98ac; --accent:#38bdf8; --green:#34d399;
+    --red:#f87171; --amber:#fbbf24; --purple:#c4b5fd;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+    font-size:14px; line-height:1.5; padding:0 0 60px 0;
+  }
+  header{
+    padding:28px 32px 20px; border-bottom:1px solid var(--border);
+    background:linear-gradient(180deg,#141c2e,#0b0f17);
+  }
+  header h1{margin:0 0 6px; font-size:1.6rem; font-weight:800;}
+  header p{margin:2px 0; color:var(--muted); font-size:0.88rem;}
+  .meta-pill{
+    display:inline-flex; align-items:center; gap:6px; background:#1a2436;
+    border:1px solid var(--border); border-radius:20px; padding:4px 12px;
+    font-size:0.78rem; color:var(--muted); margin-top:10px; margin-right:8px;
+  }
+  nav{
+    display:flex; gap:6px; flex-wrap:wrap; padding:14px 32px;
+    border-bottom:1px solid var(--border); background:#0e1420; position:sticky; top:0; z-index:5;
+  }
+  nav a{
+    color:var(--muted); text-decoration:none; font-size:0.82rem; font-weight:600;
+    padding:7px 14px; border-radius:8px; border:1px solid transparent;
+  }
+  nav a:hover{background:#1a2436; color:var(--text); border-color:var(--border);}
+  main{padding:0 32px; max-width:1300px; margin:0 auto;}
+  section{margin-top:40px;}
+  section h2{
+    font-size:1.15rem; font-weight:800; margin:0 0 4px; display:flex; align-items:center; gap:10px;
+  }
+  section .sub{color:var(--muted); font-size:0.85rem; margin:0 0 16px; max-width:900px;}
+  .card{
+    background:var(--panel); border:1px solid var(--border); border-radius:12px;
+    padding:18px 20px; margin-bottom:16px;
+  }
+  table{width:100%; border-collapse:collapse; font-size:0.84rem;}
+  th{
+    text-align:left; padding:9px 10px; color:var(--muted); font-weight:700;
+    border-bottom:1px solid var(--border); white-space:nowrap; font-size:0.74rem;
+    text-transform:uppercase; letter-spacing:.03em;
+  }
+  td{padding:9px 10px; border-bottom:1px solid #1a2436; white-space:nowrap;}
+  tr:hover td{background:#141c2e;}
+  .mono{font-family:'Consolas','JetBrains Mono',monospace;}
+  .badge{
+    display:inline-block; padding:2px 9px; border-radius:11px; font-size:0.7rem;
+    font-weight:800; letter-spacing:.02em;
+  }
+  .b-confirmed{background:rgba(52,211,153,0.15); color:var(--green); border:1px solid rgba(52,211,153,0.35);}
+  .b-scheduled{background:rgba(251,191,36,0.15); color:var(--amber); border:1px solid rgba(251,191,36,0.35);}
+  .b-fixed{background:rgba(248,113,113,0.15); color:var(--red); border:1px solid rgba(248,113,113,0.35);}
+  .b-live{background:rgba(56,189,248,0.15); color:var(--accent); border:1px solid rgba(56,189,248,0.35);}
+  .wrong{color:var(--red); text-decoration:line-through; opacity:0.75;}
+  .right{color:var(--green); font-weight:700;}
+  .arrow{color:var(--muted); padding:0 6px;}
+  .src{color:var(--muted); font-size:0.78rem;}
+  .stat-row{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:18px;}
+  .stat{
+    background:var(--panel2); border:1px solid var(--border); border-radius:10px;
+    padding:12px 18px; min-width:140px;
+  }
+  .stat .n{font-size:1.5rem; font-weight:800; font-family:monospace;}
+  .stat .l{color:var(--muted); font-size:0.74rem; text-transform:uppercase; letter-spacing:.03em;}
+  .pending-chips{display:flex; flex-wrap:wrap; gap:6px;}
+  .chip{
+    background:#1a2436; border:1px solid var(--border); border-radius:6px;
+    padding:4px 9px; font-size:0.78rem; font-family:monospace; color:var(--muted);
+  }
+  .note{
+    background:rgba(56,189,248,0.07); border-left:3px solid var(--accent);
+    padding:10px 14px; border-radius:0 8px 8px 0; font-size:0.82rem; color:#b9c6da; margin:10px 0;
+  }
+  .warn{
+    background:rgba(248,113,113,0.07); border-left:3px solid var(--red);
+    padding:10px 14px; border-radius:0 8px 8px 0; font-size:0.82rem; color:#e5b4b4; margin:10px 0;
+  }
+  code{background:#1a2436; padding:1px 6px; border-radius:4px; font-size:0.85em;}
+  footer{padding:30px 32px; color:var(--muted); font-size:0.78rem; border-top:1px solid var(--border); margin-top:40px;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📅 Date &amp; Event Verification Report</h1>
+  <p>Every date this session fetched or corrected — with its source, so you can check it was pulled properly.</p>
+  <span class="meta-pill">🕐 Generated 2026-10-08</span>
+  <span class="meta-pill">🏛️ RBI: pressreleases_rss.xml (live)</span>
+  <span class="meta-pill">📈 NSE: holiday-master &amp; results-comparision APIs (live)</span>
+  <span class="meta-pill">🗄️ quant_db (futures, live)</span>
+  <span class="meta-pill">💹 Yahoo Finance (price_cache, live)</span>
+</header>
+
+<nav>
+  <a href="#rbi">RBI MPC Dates</a>
+  <a href="#quarterly">Quarterly Results</a>
+  <a href="#holidays">Holidays &amp; Festivals</a>
+  <a href="#corrections">What Was Wrong → Fixed</a>
+  <a href="#historical">Historical (2000–2025) Web-Check</a>
+  <a href="#quarterly-historical">Quarterly Dates — Full Audit</a>
+  <a href="#futures">Futures Data (quant_db)</a>
+  <a href="#prices">Price Cache Refresh</a>
+  <a href="#gaps">Known Gaps</a>
+</nav>
+
+<main>
+
+<section id="rbi">
+  <h2>🏛️ RBI Monetary Policy Committee — 21 meetings</h2>
+  <p class="sub">Confirmed dates come from RBI's own <code>pressreleases_rss.xml</code> feed (matching a "...Resolution of the Monetary Policy Committee..." release title to its publish date). Scheduled ones come from RBI's official annual schedule press release and will auto-promote to confirmed once RBI announces the actual decision.</p>
+  <div class="card">
+    <table>
+      <thead><tr><th>Decision Date</th><th>Label</th><th>Fiscal Period</th><th>Status</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">2023-10-06</td><td>RBI MPC Policy Oct 2023</td><td>FY 2023-24 Q3 Policy</td><td><span class="badge b-confirmed">CONFIRMED</span></td><td class="src">seed, verified</td></tr>
+        <tr><td class="mono">2023-12-08</td><td>RBI MPC Policy Dec 2023</td><td>FY 2023-24 Q3 Policy</td><td><span class="badge b-confirmed">CONFIRMED</span></td><td class="src">seed, verified</td></tr>
+        <tr><td class="mono">2024-02-08</td><td>RBI MPC Policy Feb 2024</td><td>FY 2023-24 Q4 Policy</td><td><span class="badge b-confirmed">CONFIRMED</span></td><td class="src">seed, verified</td></tr>
+        <tr><td class="mono">2024-04-05</td><td>RBI MPC Policy Apr 2024</td><td>FY 2024-25 Q1 Policy</td><td><span class="badge b-confirmed">CONFIRMED</span></td><td class="src">seed, verified</td></tr>
+        <tr><td class="mono">2024-06-07</td><td>RBI MPC Policy Jun 2024</td><td>FY 2024-25 Q1 Policy</td><td><span class="badge b-confirmed">CONFIRMED</span></td><td class="src">seed, verified</td></tr>
+        <tr><td class="mono">2024-08-08</td><td>RBI MPC Policy Aug 2024</td><td>FY 2024-25 Q2 Policy</td><td><span class="badge b-confirmed">CONFIRMED</span></td><td class="src">seed, verified</td></tr>
+        <tr><td class="mono">2024-10-09</td><td>RBI MPC Policy Oct 2024</td><td>FY 2024-25 Q3 Policy</td><td><span class="badge b-confirmed">CONFIRMED</span></td><td class="src">seed, verified</td></tr>
+        <tr><td class="mono">2024-12-06</td><td>RBI MPC Policy Dec 2024</td><td>FY 2024-25 Q3 Policy</td><td><span class="badge b-confirmed">CONFIRMED</span></td><td class="src">seed, verified</td></tr>
+        <tr><td class="mono">2025-02-07</td><td>RBI MPC Policy Feb 2025</td><td>FY 2024-25 Q4 Policy</td><td><span class="badge b-confirmed">CONFIRMED</span></td><td class="src">seed, verified</td></tr>
+        <tr><td class="mono">2025-04-09</td><td>RBI MPC Policy Apr 2025</td><td>FY 2025-26 Q1 Policy</td><td><span class="badge b-confirmed">CONFIRMED</span></td><td class="src">seed, verified</td></tr>
+        <tr><td class="mono">2025-06-06</td><td>RBI MPC Policy Jun 2025</td><td>FY 2025-26 Q1 Policy</td><td><span class="badge b-confirmed">CONFIRMED</span></td><td class="src">seed, verified (matches RBI resolution: "June 4 to 6, 2025")</td></tr>
+        <tr><td class="mono right">2025-08-06</td><td>RBI MPC Policy Aug 2025</td><td>FY 2025-26 Q2 Policy</td><td><span class="badge b-fixed">CORRECTED</span></td><td class="src">was hand-typed 2025-08-08 — see corrections ↓</td></tr>
+        <tr><td class="mono right">2025-10-01</td><td>RBI MPC Policy Oct 2025</td><td>FY 2025-26 Q3 Policy</td><td><span class="badge b-fixed">ADDED</span></td><td class="src">was missing entirely</td></tr>
+        <tr><td class="mono right">2025-12-05</td><td>RBI MPC Policy Dec 2025</td><td>FY 2025-26 Q3 Policy</td><td><span class="badge b-fixed">ADDED</span></td><td class="src">was missing entirely</td></tr>
+        <tr><td class="mono right">2026-02-06</td><td>RBI MPC Policy Feb 2026</td><td>FY 2025-26 Q4 Policy</td><td><span class="badge b-fixed">ADDED</span></td><td class="src">was missing entirely</td></tr>
+        <tr><td class="mono right">2026-04-08</td><td>RBI MPC Policy Apr 2026</td><td>FY 2026-27 Q1 Policy</td><td><span class="badge b-fixed">ADDED</span></td><td class="src">was missing entirely</td></tr>
+        <tr><td class="mono right">2026-06-05</td><td>RBI MPC Policy Jun 2026</td><td>FY 2026-27 Q1 Policy</td><td><span class="badge b-fixed">ADDED</span></td><td class="src">was missing entirely</td></tr>
+        <tr><td class="mono right">2026-08-05</td><td>RBI MPC Policy Aug 2026</td><td>FY 2026-27 Q2 Policy</td><td><span class="badge b-fixed">ADDED</span></td><td class="src">was missing entirely</td></tr>
+        <tr><td class="mono right">2026-10-07</td><td>RBI MPC Policy Oct 2026</td><td>FY 2026-27 Q3 Policy</td><td><span class="badge b-live">LIVE-CONFIRMED</span></td><td class="src">RBI RSS feed, matched the day of ✓</td></tr>
+        <tr><td class="mono">2026-12-04</td><td>RBI MPC Policy Dec 2026</td><td>FY 2026-27 Q3 Policy</td><td><span class="badge b-scheduled">SCHEDULED</span></td><td class="src">RBI's own FY27 schedule (release 2025-2026/2306); will self-correct if RBI shifts it, same way Aug-2025 did</td></tr>
+        <tr><td class="mono">2027-02-05</td><td>RBI MPC Policy Feb 2027</td><td>FY 2026-27 Q4 Policy</td><td><span class="badge b-scheduled">SCHEDULED</span></td><td class="src">RBI's own FY27 schedule</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">Live file: <code>processed/rbi_mpc_calendar.json</code> — refresh any time with <code>python rbi_mpc_calendar.py</code>.</div>
+</section>
+
+<section id="quarterly">
+  <h2>📊 Q2 FY27 Quarterly Results (dashboard calls this "FY27_Q3") — Nifty 50</h2>
+  <p class="sub">Pulled live from NSE's <code>results-comparision</code> / announcement feed via <code>fetch_nifty50_result_dates.py</code>. Entry/exit windows are each stock's own trading-day offset from its result date, computed with NSE's live holiday calendar.</p>
+  <div class="stat-row">
+    <div class="stat"><div class="n right">22</div><div class="l">Announced (confirmed by NSE)</div></div>
+    <div class="stat"><div class="n" style="color:var(--amber)">29</div><div class="l">Not yet announced</div></div>
+    <div class="stat"><div class="n">51</div><div class="l">Total tracked (incl. BSE, excl. legacy WIPRO flag)</div></div>
+  </div>
+  <div class="card">
+    <table>
+      <thead><tr><th>Symbol</th><th>Result Date</th><th>Entry</th><th>Exit</th></tr></thead>
+      <tbody>
+        <tr><td><b>TCS</b></td><td class="mono">08-Oct-2026</td><td class="mono">29-Sep-2026 (Tue)</td><td class="mono">09-Oct-2026 (Fri)</td></tr>
+        <tr><td><b>HCLTECH</b></td><td class="mono">12-Oct-2026</td><td class="mono">08-Oct-2026 (Thu)</td><td class="mono">16-Oct-2026 (Fri)</td></tr>
+        <tr><td><b>TECHM</b></td><td class="mono">15-Oct-2026</td><td class="mono">07-Oct-2026 (Wed)</td><td class="mono">28-Oct-2026 (Wed)</td></tr>
+        <tr><td><b>HDFCLIFE</b></td><td class="mono">15-Oct-2026</td><td class="mono">09-Oct-2026 (Fri)</td><td class="mono">21-Oct-2026 (Wed)</td></tr>
+        <tr><td><b>NESTLEIND</b></td><td class="mono">15-Oct-2026</td><td class="mono">12-Oct-2026 (Mon)</td><td class="mono">22-Oct-2026 (Thu)</td></tr>
+        <tr><td><b>WIPRO</b></td><td class="mono">15-Oct-2026</td><td class="mono">09-Oct-2026 (Fri)</td><td class="mono">27-Oct-2026 (Tue)</td></tr>
+        <tr><td><b>ICICIBANK</b></td><td class="mono">17-Oct-2026</td><td class="mono">09-Oct-2026 (Fri)</td><td class="mono">21-Oct-2026 (Wed)</td></tr>
+        <tr><td><b>HDFCBANK</b></td><td class="mono">17-Oct-2026</td><td class="mono">15-Oct-2026 (Thu)</td><td class="mono">22-Oct-2026 (Thu)</td></tr>
+        <tr><td><b>AXISBANK</b></td><td class="mono">17-Oct-2026</td><td class="mono">15-Oct-2026 (Thu)</td><td class="mono">23-Oct-2026 (Fri)</td></tr>
+        <tr><td><b>ULTRACEMCO</b></td><td class="mono">19-Oct-2026</td><td class="mono">09-Oct-2026 (Fri)</td><td class="mono">29-Oct-2026 (Thu)</td></tr>
+        <tr><td><b>BAJFINANCE</b></td><td class="mono">19-Oct-2026</td><td class="mono">13-Oct-2026 (Tue)</td><td class="mono">29-Oct-2026 (Thu)</td></tr>
+        <tr><td><b>INFY</b></td><td class="mono">23-Oct-2026</td><td class="mono">14-Oct-2026 (Wed)</td><td class="mono">26-Oct-2026 (Mon)</td></tr>
+        <tr><td><b>DRREDDY</b></td><td class="mono">23-Oct-2026</td><td class="mono">19-Oct-2026 (Mon)</td><td class="mono">29-Oct-2026 (Thu)</td></tr>
+        <tr><td><b>JSWSTEEL</b></td><td class="mono">23-Oct-2026</td><td class="mono">22-Oct-2026 (Thu)</td><td class="mono">04-Nov-2026 (Wed)</td></tr>
+        <tr><td><b>BAJAJ-AUTO</b></td><td class="mono">27-Oct-2026</td><td class="mono">19-Oct-2026 (Mon)</td><td class="mono">28-Oct-2026 (Wed)</td></tr>
+        <tr><td><b>CIPLA</b></td><td class="mono">27-Oct-2026</td><td class="mono">26-Oct-2026 (Mon)</td><td class="mono">06-Nov-2026 (Fri)</td></tr>
+        <tr><td><b>ADANIPORTS</b></td><td class="mono">28-Oct-2026</td><td class="mono">27-Oct-2026 (Tue)</td><td class="mono">29-Oct-2026 (Thu)</td></tr>
+        <tr><td><b>TRENT</b></td><td class="mono">29-Oct-2026</td><td class="mono">16-Oct-2026 (Fri)</td><td class="mono">11-Nov-2026 (Wed)</td></tr>
+        <tr><td><b>ASIANPAINT</b></td><td class="mono">29-Oct-2026</td><td class="mono">28-Oct-2026 (Wed)</td><td class="mono">02-Nov-2026 (Mon)</td></tr>
+        <tr><td><b>BAJAJFINSV</b></td><td class="mono">03-Nov-2026</td><td class="mono">30-Oct-2026 (Fri)</td><td class="mono">06-Nov-2026 (Fri)</td></tr>
+        <tr><td><b>M&amp;M</b></td><td class="mono">05-Nov-2026</td><td class="mono">26-Oct-2026 (Mon)</td><td class="mono">06-Nov-2026 (Fri)</td></tr>
+        <tr><td><b>HINDALCO</b></td><td class="mono">06-Nov-2026</td><td class="mono">28-Oct-2026 (Wed)</td><td class="mono">16-Nov-2026 (Mon)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <div style="margin-bottom:8px; color:var(--muted); font-size:0.82rem; font-weight:700;">⏳ NOT YET ANNOUNCED BY NSE (29) — any date shown for these elsewhere is an estimate, not a confirmed filing</div>
+    <div class="pending-chips">
+      <span class="chip">ADANIENT</span><span class="chip">APOLLOHOSP</span><span class="chip">BEL</span><span class="chip">BHARTIARTL</span>
+      <span class="chip">BSE</span><span class="chip">COALINDIA</span><span class="chip">EICHERMOT</span><span class="chip">ETERNAL</span>
+      <span class="chip">GRASIM</span><span class="chip">HINDUNILVR</span><span class="chip">INDIGO</span><span class="chip">ITC</span>
+      <span class="chip">JIOFIN</span><span class="chip">KOTAKBANK</span><span class="chip">LT</span><span class="chip">MARUTI</span>
+      <span class="chip">MAXHEALTH</span><span class="chip">NTPC</span><span class="chip">ONGC</span><span class="chip">POWERGRID</span>
+      <span class="chip">RELIANCE</span><span class="chip">SBILIFE</span><span class="chip">SBIN</span><span class="chip">SHRIRAMFIN</span>
+      <span class="chip">SUNPHARMA</span><span class="chip">TATACONSUM</span><span class="chip">TATASTEEL</span><span class="chip">TITAN</span>
+      <span class="chip">TMPV</span>
+    </div>
+  </div>
+</section>
+
+<section id="holidays">
+  <h2>🎉 NSE Trading Holidays — 2026 (live, authoritative)</h2>
+  <p class="sub">Pulled straight from NSE's own <code>/api/holiday-master?type=trading</code> endpoint — this is the exact calendar NSE itself publishes, not a hand-typed list.</p>
+  <div class="card">
+    <table>
+      <thead><tr><th>Date</th><th>Day</th><th>Holiday</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">2026-01-15</td><td>Thu</td><td>Municipal Corporation Election – Maharashtra</td></tr>
+        <tr><td class="mono">2026-01-26</td><td>Mon</td><td>Republic Day</td></tr>
+        <tr><td class="mono">2026-02-15</td><td>Sun</td><td>Mahashivratri</td></tr>
+        <tr><td class="mono">2026-03-03</td><td>Tue</td><td>Holi</td></tr>
+        <tr><td class="mono">2026-03-21</td><td>Sat</td><td>Id-Ul-Fitr (Ramadan Eid)</td></tr>
+        <tr><td class="mono">2026-03-26</td><td>Thu</td><td>Shri Ram Navami</td></tr>
+        <tr><td class="mono">2026-03-31</td><td>Tue</td><td>Shri Mahavir Jayanti</td></tr>
+        <tr><td class="mono">2026-04-03</td><td>Fri</td><td>Good Friday</td></tr>
+        <tr><td class="mono">2026-04-14</td><td>Tue</td><td>Dr. Baba Saheb Ambedkar Jayanti</td></tr>
+        <tr><td class="mono">2026-05-01</td><td>Fri</td><td>Maharashtra Day</td></tr>
+        <tr><td class="mono">2026-05-28</td><td>Thu</td><td>Bakri Id</td></tr>
+        <tr><td class="mono">2026-06-26</td><td>Fri</td><td>Muharram</td></tr>
+        <tr><td class="mono">2026-08-15</td><td>Sat</td><td>Independence Day</td></tr>
+        <tr><td class="mono">2026-09-14</td><td>Mon</td><td>Ganesh Chaturthi</td></tr>
+        <tr><td class="mono" style="color:var(--accent)">2026-10-02</td><td>Fri</td><td>Mahatma Gandhi Jayanti</td></tr>
+        <tr><td class="mono" style="color:var(--accent)">2026-10-20</td><td>Tue</td><td>Dussehra</td></tr>
+        <tr><td class="mono right">2026-11-08</td><td>Sun</td><td>Diwali Laxmi Pujan*</td></tr>
+        <tr><td class="mono right">2026-11-10</td><td>Tue</td><td>Diwali-Balipratipada</td></tr>
+        <tr><td class="mono">2026-11-24</td><td>Tue</td><td>Prakash Gurpurb Sri Guru Nanak Dev</td></tr>
+        <tr><td class="mono" style="color:var(--accent)">2026-12-25</td><td>Fri</td><td>Christmas</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">Live file: <code>processed/nse_trading_holidays.json</code> — refresh any time with <code>python nse_trading_calendar.py</code>. NSE hadn't published 2027 holidays yet as of this check, so that year isn't in the cache — expected, not a bug.</div>
+</section>
+
+<section id="corrections">
+  <h2>🔧 What Was Wrong, and What It's Fixed To</h2>
+  <p class="sub">Every date correction made this session, side by side. Struck-through = what was hardcoded before; green = the live-verified correct value.</p>
+  <div class="card">
+    <table>
+      <thead><tr><th>Event</th><th>Was (wrong)</th><th></th><th>Now (verified)</th><th>How verified</th></tr></thead>
+      <tbody>
+        <tr><td><b>RBI MPC Oct 2026 decision</b></td><td class="mono wrong">09-Oct-2026</td><td class="arrow">→</td><td class="mono right">07-Oct-2026</td><td class="src">RBI's own RSS feed, live, same-day match</td></tr>
+        <tr><td><b>RBI MPC Aug 2025 decision</b></td><td class="mono wrong">08-Aug-2025</td><td class="arrow">→</td><td class="mono right">06-Aug-2025</td><td class="src">RBI resolution press release (meeting rescheduled 5-7→4-6 Aug)</td></tr>
+        <tr><td><b>Mahashivratri 2026</b></td><td class="mono wrong">03-Mar-2026</td><td class="arrow">→</td><td class="mono right">15-Feb-2026</td><td class="src">NSE holiday-master API</td></tr>
+        <tr><td><b>Holi 2026</b></td><td class="mono wrong">14-Mar-2026</td><td class="arrow">→</td><td class="mono right">03-Mar-2026</td><td class="src">NSE holiday-master API</td></tr>
+        <tr><td><b>Diwali 2026</b></td><td class="mono wrong">21-Oct-2026</td><td class="arrow">→</td><td class="mono right">08-Nov-2026</td><td class="src">NSE holiday-master API</td></tr>
+        <tr><td><b>Ghost holiday in 13 scripts' skip-lists</b></td><td class="mono wrong">2026-03-04 (not real)</td><td class="arrow">→</td><td class="mono right">removed</td><td class="src">NSE holiday-master API has no such date</td></tr>
+        <tr><td><b>Diwali missing from 13 scripts' skip-lists</b></td><td class="mono wrong">(absent)</td><td class="arrow">→</td><td class="mono right">2026-11-08 + 2026-11-10 added</td><td class="src">NSE holiday-master API</td></tr>
+        <tr><td><b>Price cache (211 stocks)</b></td><td class="mono wrong">stuck ~10-Jul-2026</td><td class="arrow">→</td><td class="mono right">current to 07-Oct-2026</td><td class="src">Yahoo Finance, full re-fetch, 207/211 succeeded</td></tr>
+        <tr><td><b>Futures parquet cache</b></td><td class="mono wrong">stuck 06-Jul-2026</td><td class="arrow">→</td><td class="mono right">current to 06-Oct-2026</td><td class="src">quant_db (your PostgreSQL), 63 days backfilled</td></tr>
+        <tr><td><b>Dashboard Q3 announced count</b></td><td class="mono wrong">9/50 (6 days stale)</td><td class="arrow">→</td><td class="mono right">22/51 (live NSE)</td><td class="src">fetch_nifty50_result_dates.py, today</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="futures">
+  <h2>🗄️ Futures Data — quant_db</h2>
+  <p class="sub">Your PostgreSQL database, confirmed as the same upstream source the project's existing <code>spot_parquet</code>/<code>options_parquet</code> caches came from (identical schema).</p>
+  <div class="stat-row">
+    <div class="stat"><div class="n right">63</div><div class="l">Trading days backfilled</div></div>
+    <div class="stat"><div class="n">2026-07-07</div><div class="l">First backfilled date</div></div>
+    <div class="stat"><div class="n right">2026-10-06</div><div class="l">Latest date (DB's own "yesterday")</div></div>
+    <div class="stat"><div class="n">~5.2M</div><div class="l">Rows written, all 63 days</div></div>
+  </div>
+  <div class="note">New folder: <code>futures_parquet/&lt;date&gt;.parquet</code> — one file per trading day, unioning Index + all 5 Stock_Futures partitions. Refresh any time with <code>python fetch_futures_from_quant_db.py</code>.</div>
+</section>
+
+<section id="prices">
+  <h2>💹 Price Cache Refresh — Yahoo Finance</h2>
+  <p class="sub">211 F&amp;O stocks, full re-fetch (not a splice onto the old data, to avoid a split/dividend discontinuity at the join point).</p>
+  <div class="stat-row">
+    <div class="stat"><div class="n right">207</div><div class="l">Stocks updated to 07-Oct-2026</div></div>
+    <div class="stat"><div class="n" style="color:var(--red)">6</div><div class="l">Failed (see below)</div></div>
+    <div class="stat"><div class="n">502s</div><div class="l">Total run time</div></div>
+  </div>
+  <div class="card">
+    <table>
+      <thead><tr><th>Symbol</th><th>Result</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">NIFTY, BANKNIFTY, FINNIFTY, MIDCPNIFTY, SENSEX</td><td><span class="badge b-fixed">404</span></td><td>Indices — Yahoo's <code>.NS</code> equity suffix doesn't resolve for them. Pre-existing limitation, not new.</td></tr>
+        <tr><td class="mono">TATAMOTORS</td><td><span class="badge b-fixed">404</span></td><td>Cache left untouched, safe — last real data <b>2025-10-23</b> (a full year stale). Not in current Nifty 50 or F&amp;O lot list. Likely delisted after the Tata Motors commercial/passenger-vehicle demerger (successor <b>TMPV</b> updated fine).</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="historical">
+  <h2>🕰️ Historical Dates (2000–2025) — Independently Web-Verified</h2>
+  <p class="sub">A second, independent verification pass: every date above came from a live API; these were checked against outside sources (NSE circulars, news coverage, official filings) to catch an error the APIs themselves might share.</p>
+  <div class="stat-row">
+    <div class="stat"><div class="n right">9/9</div><div class="l">RBI 2023–2024 dates — all matched, 0 corrections</div></div>
+    <div class="stat"><div class="n right">15/22</div><div class="l">Quarterly results independently confirmed, 0 mismatches</div></div>
+    <div class="stat"><div class="n" style="color:var(--red)">15</div><div class="l">Festival-date years found wrong (13 Diwali + 2 Dussehra)</div></div>
+  </div>
+
+  <div class="card">
+    <div style="margin-bottom:10px; font-weight:700; color:var(--red);">🔴 Diwali — 13 years were actually "Balipratipada" (the day AFTER Laxmi Pujan), not Laxmi Pujan itself</div>
+    <table>
+      <thead><tr><th>Year</th><th>Was (wrong)</th><th></th><th>Now (correct)</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>2002</td><td class="mono wrong">11-06</td><td class="arrow">→</td><td class="mono right">11-04</td><td class="src">NSE press release (muhurat trading notice)</td></tr>
+        <tr><td>2004</td><td class="mono wrong">11-15</td><td class="arrow">→</td><td class="mono right">11-12</td><td class="src">NSE press release</td></tr>
+        <tr><td>2006</td><td class="mono wrong">10-24</td><td class="arrow">→</td><td class="mono right">10-21</td><td class="src">Multiple news sources</td></tr>
+        <tr><td>2008</td><td class="mono wrong">10-30</td><td class="arrow">→</td><td class="mono right">10-28</td><td class="src">NSE circular reference</td></tr>
+        <tr><td>2012</td><td class="mono wrong">11-14</td><td class="arrow">→</td><td class="mono right">11-13</td><td class="src">BusinessToday, Hindupad (Samvat 2069)</td></tr>
+        <tr><td>2014</td><td class="mono wrong">10-24</td><td class="arrow">→</td><td class="mono right">10-23</td><td class="src">Muhurat trading records</td></tr>
+        <tr><td>2015</td><td class="mono wrong">11-12</td><td class="arrow">→</td><td class="mono right">11-11</td><td class="src">Zerodha "Trading Holidays 2015"</td></tr>
+        <tr><td>2017</td><td class="mono wrong">10-20</td><td class="arrow">→</td><td class="mono right">10-19</td><td class="src">Business Standard (muhurat trading 6:30-7:30pm Oct 19)</td></tr>
+        <tr><td>2018</td><td class="mono wrong">11-08</td><td class="arrow">→</td><td class="mono right">11-07</td><td class="src">AngelOne 2018 holiday list</td></tr>
+        <tr><td>2019</td><td class="mono wrong">10-28</td><td class="arrow">→</td><td class="mono right">10-27</td><td class="src">NSE muhurat trading notice (6:15-7:15pm)</td></tr>
+        <tr><td>2020</td><td class="mono wrong">11-16</td><td class="arrow">→</td><td class="mono right">11-14</td><td class="src">NSE calendar</td></tr>
+        <tr><td>2021</td><td class="mono wrong">11-05</td><td class="arrow">→</td><td class="mono right">11-04</td><td class="src"><b>NSE official circular</b> Ref 113/2020 (explicitly lists both dates separately)</td></tr>
+        <tr><td>2025</td><td class="mono wrong">10-20</td><td class="arrow">→</td><td class="mono right">10-21</td><td class="src"><b>3 NSE circulars</b> (COM65590, CD65903, CMTR65587 — muhurat session 1:45-2:45pm Oct 21)</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Confirmed already correct: 2000, 2001, 2003, 2005, 2007, 2009, 2010, 2011, 2013, 2016, 2022, 2023, 2024, and 2026 (08-Nov, fixed earlier this session). Not independently found either way: 2000-2011 odd years beyond the above.</div>
+  </div>
+
+  <div class="card">
+    <div style="margin-bottom:10px; font-weight:700; color:var(--red);">🔴 Dussehra — 2 years used a regional (Bengal/Nepal) variant instead of NSE's pan-India date</div>
+    <table>
+      <thead><tr><th>Year</th><th>Was (wrong)</th><th></th><th>Now (correct)</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>2018</td><td class="mono wrong">10-19</td><td class="arrow">→</td><td class="mono right">10-18</td><td class="src">drikpanchang.com official Vijayadashami date</td></tr>
+        <tr><td>2020</td><td class="mono wrong">10-26</td><td class="arrow">→</td><td class="mono right">10-25</td><td class="src">Zerodha 2020 holiday list + others</td></tr>
+      </tbody>
+    </table>
+    <div class="note">All other checked years (2004, 2006, 2015–2025) confirmed correct as stored.</div>
+  </div>
+
+  <div class="card">
+    <div style="font-weight:700; color:var(--green);">✅ Mahashivratri &amp; Holi — every year checked (2008, 2010, 2014–2025) matched exactly. No corrections needed for either festival's historical record.</div>
+  </div>
+
+  <div class="note"><b>What this was fixed in:</b> the historical date dictionaries in <code>build_nifty_futures_holiday_behaviour_master.py</code> (Diwali + Dussehra, full 2000–2026 range) and <code>populate_complete_holidays.py</code> / <code>prepare_dashboard_json_data.py</code> (Diwali, 2025 only — their shorter range). The master builder was <b>rerun</b> to regenerate the full 26-year trade log with real prices on the corrected anchor dates (437 historical trades recomputed). <code>holidays_dataset.json</code>'s 211 individual 2025-Diwali stock trades were surgically recomputed from real price data on the corrected 21-Oct-2025 anchor rather than risking a full regenerate from an ambiguous duplicate pair of generator scripts. <code>backtest_economics.json</code> was rerun on top of the corrected data.</div>
+
+  <div class="card">
+    <div style="margin-bottom:10px; font-weight:700;">📊 Quarterly results — independent cross-check of the 22 NSE-sourced dates</div>
+    <p style="color:var(--muted); font-size:0.84rem; margin:4px 0 10px;"><b>15 confirmed exact matches</b> via independent news/filings (TCS, HCLTECH, TECHM, NESTLEIND, WIPRO, ICICIBANK, HDFCBANK, AXISBANK, ULTRACEMCO, INFY, DRREDDY, JSWSTEEL, ADANIPORTS, M&amp;M, HINDALCO) — <b>zero contradicted the NSE-sourced date.</b> 7 came back "no independent coverage found yet" (HDFCLIFE, BAJFINANCE, BAJAJ-AUTO, CIPLA, TRENT, ASIANPAINT, BAJAJFINSV) — not wrong, just not yet covered by outside news this far ahead of the date. Not extrapolated from last year's date, as instructed.</p>
+  </div>
+</section>
+
+<section id="quarterly-historical">
+  <h2>📊 Historical Quarterly Result Dates — Full Audit</h2>
+  <p class="sub">Method: cross-checked every stored historical result date against NSE's own <code>results-comparision</code> feed (each stock's <code>&lt;SYMBOL&gt;/financial_results.csv</code>, fetched live) — not web search, which isn't feasible at this scale (800+ individual stock-quarter facts). Then independently re-verified that every corrected <b>price</b> actually matches the real market price on the corrected date, not a stale leftover.</p>
+
+  <div class="stat-row">
+    <div class="stat"><div class="n right">18</div><div class="l">Genuinely wrong dates found &amp; fixed, real date + real price</div></div>
+    <div class="stat"><div class="n" style="color:var(--amber)">1</div><div class="l">False positive caught &amp; reverted (ULTRACEMCO — see below)</div></div>
+    <div class="stat"><div class="n right">421/422</div><div class="l">Price-date field checks passed on final re-verification</div></div>
+    <div class="stat"><div class="n" style="color:var(--amber)">136</div><div class="l">Still honestly unverified — NSE's feed doesn't reach back far enough</div></div>
+    <div class="stat"><div class="n" style="color:var(--muted)">596</div><div class="l">Older quarters with no live source to check against at all</div></div>
+  </div>
+
+  <div class="card">
+    <div style="margin-bottom:10px; font-weight:700; color:var(--red);">🔴 18 genuinely wrong historical result dates — pattern: a small set of stocks, repeatedly off by about a quarter</div>
+    <table>
+      <thead><tr><th>Quarter</th><th>Symbol</th><th>Was (wrong)</th><th></th><th>Now (NSE-confirmed)</th><th>Entry → Exit (recomputed)</th><th>Entry px → Exit px</th></tr></thead>
+      <tbody>
+        <tr><td>FY24_Q3</td><td><b>WIPRO</b></td><td class="mono wrong">11-Nov-2023</td><td class="arrow">→</td><td class="mono right">12-Jan-2024</td><td class="mono">08-Jan-2024 → 15-Jan-2024</td><td class="mono">208.25 → 228.71</td></tr>
+        <tr><td>FY24_Q3</td><td><b>BPCL</b></td><td class="mono wrong">22-Oct-2023</td><td class="arrow">→</td><td class="mono right">30-Jan-2024</td><td class="mono">19-Jan-2024 → 06-Feb-2024</td><td class="mono">214.47 → 271.70</td></tr>
+        <tr><td>FY24_Q3</td><td><b>BRITANNIA</b></td><td class="mono wrong">14-Nov-2023</td><td class="arrow">→</td><td class="mono right">07-Feb-2024</td><td class="mono">02-Feb-2024 → 14-Feb-2024</td><td class="mono">4934.76 → 4802.31</td></tr>
+        <tr><td>FY24_Q3</td><td><b>INDUSINDBK</b></td><td class="mono wrong">16-Oct-2023</td><td class="arrow">→</td><td class="mono right">18-Jan-2024</td><td class="mono">10-Jan-2024 → 25-Jan-2024</td><td class="mono">1619.52 → 1492.98</td></tr>
+        <tr><td>FY24_Q3</td><td><b>HEROMOTOCO</b></td><td class="mono wrong">16-Oct-2023</td><td class="arrow">→</td><td class="mono right">10-Feb-2024</td><td class="mono">01-Feb-2024 → 13-Feb-2024</td><td class="mono">4139.08 → 4281.75</td></tr>
+        <tr><td>FY24_Q3</td><td><b>DIVISLAB</b></td><td class="mono wrong">13-Oct-2023</td><td class="arrow">→</td><td class="mono right">10-Feb-2024</td><td class="mono">31-Jan-2024 → 16-Feb-2024</td><td class="mono">3616.76 → 3674.50</td></tr>
+        <tr><td>FY24_Q3</td><td><b>TATASTEEL</b></td><td class="mono wrong">24-Jan-2024</td><td class="arrow">→</td><td class="mono right">25-Jan-2024</td><td class="mono">17-Jan-2024 → 07-Feb-2024</td><td class="mono">123.56 → 135.53</td></tr>
+        <tr><td>FY24_Q4</td><td><b>WIPRO</b></td><td class="mono wrong">11-Feb-2024</td><td class="arrow">→</td><td class="mono right">19-Apr-2024</td><td class="mono">15-Apr-2024 → 22-Apr-2024</td><td class="mono">212.87 → 214.09</td></tr>
+        <tr><td>FY25_Q1</td><td><b>WIPRO</b></td><td class="mono wrong">11-May-2024</td><td class="arrow">→</td><td class="mono right">19-Jul-2024</td><td class="mono">09-Jul-2024 → 23-Jul-2024</td><td class="mono">250.70 → 231.96</td></tr>
+        <tr><td>FY25_Q1</td><td><b>SUNPHARMA</b></td><td class="mono wrong">02-Aug-2024</td><td class="arrow">→</td><td class="mono right">01-Aug-2024</td><td class="mono">23-Jul-2024 → 13-Aug-2024</td><td class="mono">1572.42 → 1708.40</td></tr>
+        <tr><td>FY25_Q2</td><td><b>WIPRO</b></td><td class="mono wrong">11-Aug-2024</td><td class="arrow">→</td><td class="mono right">17-Oct-2024</td><td class="mono">09-Oct-2024 → 22-Oct-2024</td><td class="mono">246.14 → 252.77</td></tr>
+        <tr><td>FY25_Q3</td><td><b>WIPRO</b></td><td class="mono wrong">11-Nov-2024</td><td class="arrow">→</td><td class="mono right">17-Jan-2025</td><td class="mono">10-Jan-2025 → 23-Jan-2025</td><td class="mono">278.55 → 294.45</td></tr>
+        <tr><td>FY25_Q3</td><td><b>BPCL</b></td><td class="mono wrong">22-Oct-2024</td><td class="arrow">→</td><td class="mono right">23-Jan-2025</td><td class="mono">16-Jan-2025 → 28-Jan-2025</td><td class="mono">245.66 → 237.51</td></tr>
+        <tr><td>FY25_Q3</td><td><b>KOTAKBANK</b></td><td class="mono wrong">18-Jan-2025</td><td class="arrow">→</td><td class="mono right">29-Jan-2025</td><td class="mono">21-Jan-2025 → 31-Jan-2025</td><td class="mono">377.57 → 379.17</td></tr>
+        <tr><td>FY25_Q3</td><td><b>INDUSINDBK</b></td><td class="mono wrong">16-Oct-2024</td><td class="arrow">→</td><td class="mono right">31-Jan-2025</td><td class="mono">29-Jan-2025 → 01-Feb-2025*</td><td class="mono">946.77 → 1007.77</td></tr>
+        <tr><td>FY25_Q3</td><td><b>HEROMOTOCO</b></td><td class="mono wrong">16-Oct-2024</td><td class="arrow">→</td><td class="mono right">06-Feb-2025</td><td class="mono">29-Jan-2025 → 13-Feb-2025</td><td class="mono">3783.12 → 3767.68</td></tr>
+        <tr><td>FY25_Q3</td><td><b>BRITANNIA</b></td><td class="mono wrong">14-Nov-2024</td><td class="arrow">→</td><td class="mono right">06-Feb-2025</td><td class="mono">30-Jan-2025 → 12-Feb-2025</td><td class="mono">4927.63 → 4775.15</td></tr>
+        <tr><td>FY25_Q3</td><td><b>DIVISLAB</b></td><td class="mono wrong">13-Oct-2024</td><td class="arrow">→</td><td class="mono right">03-Feb-2025</td><td class="mono">30-Jan-2025 → 05-Feb-2025</td><td class="mono">5686.45 → 6070.71</td></tr>
+      </tbody>
+    </table>
+    <div class="note">* INDUSINDBK's exit (01-Feb-2025) is a Saturday — real NSE trading day, not an error: 1-Feb-2025 was Union Budget day, when NSE/BSE ran a special Saturday session. Confirmed because <code>price_cache</code> has a real row for it.</div>
+  </div>
+
+  <div class="warn">
+    <b>Three mistakes I made in this audit, each caught only by independently re-verifying my own work instead of trusting my first pass:</b>
+    <ol style="margin:8px 0 0 18px; padding:0;">
+      <li>I initially reported "all 19 fixed," but only 11 had actually been written back (the other 8 — KOTAKBANK, INDUSINDBK ×2, HEROMOTOCO ×2, SUNPHARMA, ULTRACEMCO, TATASTEEL — were found but never saved). Caught by independently re-reading every record and comparing its stored price against the real price on its stored date — found 8 that didn't match, then fixed them for real.</li>
+      <li>The 211-stock Diwali-2025 price recomputation used a holiday calendar that only covers 2026, so it didn't know 22-Oct-2025 (Balipratipada) was a market holiday — 33 of 211 exit dates landed on a day with no real trading. Added the correct 2025 holiday dates and recomputed all 211 again; now 421/422 checks pass (the 1 exception is the already-documented TATAMOTORS delisting gap).</li>
+      <li><b>ULTRACEMCO's "fix" was itself wrong.</b> NSE's own feed has <i>two</i> broadcast entries for its Jan-Mar 2024 quarter — 29-Apr-2024 and 03-May-2024, both marked Audited (almost certainly the original results announcement followed days later by a formal re-filing of the same already-approved numbers). My matching code took whichever row appeared first in the file without checking for a second match, and "corrected" the already-correct 29-Apr-2024 to 03-May-2024 — a real NSE date, just the wrong one, since the market reacts to the <i>first</i> disclosure, not a later re-filing of the same numbers. Found by printing the raw NSE source rows for every one of the 19 fixes and reading them myself rather than trusting the script's single-row match; reverted to 29-Apr-2024 with prices recomputed accordingly. Then scanned <i>the entire dataset</i> for this same duplicate-filing pattern — confirmed ULTRACEMCO was the only instance.</li>
+    </ol>
+  </div>
+
+  <div class="note">136 records remain honestly flagged <code>synthetic_placeholder_unverified</code> in the data itself (that flag already existed before I started — the project's own pipeline knew these weren't verified) — NSE's live feed only keeps roughly the last 4-5 quarters per stock, so these have aged out of what I can check this way. Not guessed, not left silently wrong — left exactly as self-flagged. A further 596 stock-quarter combinations (back to mid-2022) have no live source to check against at all.</div>
+
+  <div class="card">
+    <div style="margin-bottom:10px; font-weight:700;">🏛️ RBI 2023–2024 — independent cross-check of all 9 dates</div>
+    <p style="color:var(--muted); font-size:0.84rem; margin:4px 0;">All 9 (Oct 2023 through Feb 2025) independently confirmed via 2+ contemporaneous news sources each (Business Standard, BusinessToday, ETV Bharat, Adda247, Upstox, NewsOnAir, Bigul, Outlook Business). <b>Zero corrections needed.</b></p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>⚠️ Known Gaps — flagged, not silently skipped</h2>
+  <div class="warn"><b>backtest_grid.py</b> — the pre-registered academic backtest. Its required <code>processed/preregistration_v2.json</code> doesn't exist and never has. Not fabricated by me — that would defeat the purpose of pre-registering a grid before seeing results.</div>
+  <div class="warn"><b>live_execution_dashboard.html / simple_execution_portal.html</b> — an older, unpublished prototype (not in <code>docs/</code>, not linked from the live site) with its own hand-typed ULTRACEMCO exit date that lands on a market holiday. Left alone since it isn't part of the live pipeline.</div>
+  <div class="warn"><b><code>dayfirst=True</code> date-parsing risk</b> across ~13 other files, flagged early this session — never fully audited one by one.</div>
+  <div class="warn"><b>Nifty futures continuous series</b> (used by <code>build_nifty_futures_holiday_behaviour_master.py</code>) is its own separate, stale data source — stuck at <b>2026-09-21</b>, about 2 weeks behind, not the same as <code>price_cache</code> or <code>futures_parquet</code> which are both current to Oct 6-7. Doesn't affect the historical (2000-2025) corrections above, but means its 2026 "upcoming window" math still runs on a 2-week-old tail.</div>
+  <div class="note">NSE's 2027 holiday calendar isn't published yet, so anything landing in Jan/Feb 2027 (e.g. the RBI Feb-2027 window) is computed with weekday-skipping only for that stretch — will self-correct once NSE publishes it and <code>nse_trading_calendar.py</code> is rerun.</div>
+</section>
+
+</main>
+
+<footer>
+  Generated from live data pulled 2026-10-07 / 2026-10-08. Sources: RBI (pressreleases_rss.xml), NSE (holiday-master, results-comparision, event-calendar APIs), quant_db (PostgreSQL), Yahoo Finance.
+  Underlying files: <code>processed/rbi_mpc_calendar.json</code>, <code>processed/nse_trading_holidays.json</code>, <code>dashboard_data/event_dashboard_data.json</code>, <code>futures_parquet/</code>, <code>processed/price_cache/</code>.
+  Nothing on this page was committed or pushed.
+</footer>
+
+</body>
+</html>

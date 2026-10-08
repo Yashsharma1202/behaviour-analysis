@@ -1,0 +1,653 @@
+import os
+import re
+import time
+import requests
+import pandas as pd
+from datetime import datetime
+
+# Headers to mimic modern browser request to NSE
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "*/*",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://www.nseindia.com/companies-listing/corporate-filings-announcements",
+}
+
+OUTPUT_DIR = r"d:\action_coop\output_excels"
+
+def get_session():
+    """Create a persistent requests Session initialized with NSE cookies."""
+    session = requests.Session()
+    try:
+        session.get("https://www.nseindia.com", headers=HEADERS, timeout=10)
+        time.sleep(1)
+        session.get("https://www.nseindia.com/companies-listing/corporate-filings-announcements", headers=HEADERS, timeout=10)
+        time.sleep(1)
+    except Exception as e:
+        print(f"[WARN] Session initialization warning: {e}")
+    return session
+
+def fetch_json(session, url, params=None, retries=3, delay=0.3):
+    """Safely fetch JSON from NSE API with retry and session warming."""
+    for attempt in range(retries):
+        try:
+            resp = session.get(url, headers=HEADERS, params=params, timeout=12)
+            if resp.status_code == 200:
+                try:
+                    return resp.json()
+                except Exception:
+                    return None
+            elif resp.status_code in [401, 403]:
+                # Session expired, re-warm
+                session = get_session()
+        except Exception:
+            pass
+        time.sleep(delay)
+    return None
+
+def fetch_symbol_wise(session, url_template, symbols, symbol_map, key_in_resp=None, delay=0.2):
+    """Utility to iterate through symbols and aggregate results."""
+    aggregated = []
+    for i, sym in enumerate(symbols):
+        url = url_template.format(symbol=sym)
+        data = fetch_json(session, url, delay=delay)
+        if data:
+            if key_in_resp and isinstance(data, dict) and key_in_resp in data:
+                items = data[key_in_resp]
+            elif isinstance(data, list):
+                items = data
+            elif isinstance(data, dict):
+                items = [data]
+            else:
+                items = []
+                
+            for item in items:
+                if isinstance(item, dict):
+                    if "symbol" not in item and "Symbol" not in item:
+                        item["symbol"] = sym
+                    if "company_name" not in item and "Company Name" not in item:
+                        item["company_name"] = symbol_map.get(sym, sym)
+                    aggregated.append(item)
+        
+        # Periodic re-warm session
+        if (i + 1) % 25 == 0:
+            session = get_session()
+        time.sleep(delay)
+    return pd.DataFrame(aggregated) if aggregated else pd.DataFrame()
+
+def clean_dataframe(df):
+    """Clean DataFrame by stripping whitespace and handling dictionary/list columns."""
+    if df is None or df.empty:
+        return df
+    
+    # Drop completely empty columns
+    df = df.dropna(how='all', axis=1)
+    
+    # Convert list/dict objects to string representation for Excel compatibility
+    for col in df.columns:
+        df[col] = df[col].apply(lambda x: str(x) if isinstance(x, (dict, list)) else x)
+    return df
+
+def save_to_excel(df, filename, category_name, dedupe_subset=None):
+    """Save/append a DataFrame to a styled Excel file with smart deduplication."""
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    filepath = os.path.join(OUTPUT_DIR, filename)
+    
+    df = clean_dataframe(df)
+
+    # Read existing Excel file if present to append historical data
+    if os.path.exists(filepath):
+        try:
+            existing_df = pd.read_excel(filepath)
+            existing_df = clean_dataframe(existing_df)
+            
+            # Filter out placeholder messages from existing file
+            if "Message" in existing_df.columns:
+                existing_df = existing_df[~existing_df["Message"].astype(str).str.contains("No records found", na=False)]
+            
+            if df is not None and not df.empty:
+                if "Message" in df.columns:
+                    df = df[~df["Message"].astype(str).str.contains("No records found", na=False)]
+                
+                if not df.empty and not existing_df.empty:
+                    combined_df = pd.concat([existing_df, df], ignore_index=True)
+                elif not existing_df.empty:
+                    combined_df = existing_df
+                else:
+                    combined_df = df
+            else:
+                combined_df = existing_df
+
+            if not combined_df.empty:
+                if dedupe_subset:
+                    valid_subset = [c for c in dedupe_subset if c in combined_df.columns]
+                    if valid_subset:
+                        combined_df = combined_df.drop_duplicates(subset=valid_subset, keep="last")
+                    else:
+                        combined_df = combined_df.drop_duplicates(keep="last")
+                else:
+                    combined_df = combined_df.drop_duplicates(keep="last")
+                df = combined_df
+        except Exception as e:
+            print(f"[WARN] Could not merge with existing {filename}: {e}")
+
+    if df is None or df.empty:
+        df = pd.DataFrame([{"Message": f"No records found on NSE for {category_name}."}])
+    else:
+        if len(df.columns) > 1 and "Message" in df.columns:
+            df = df.drop(columns=["Message"])
+
+    for attempt in range(3):
+        try:
+            with pd.ExcelWriter(filepath, engine="openpyxl") as writer:
+                df.to_excel(writer, sheet_name=category_name[:31], index=False)
+                worksheet = writer.sheets[category_name[:31]]
+                
+                # Auto-adjust column widths
+                for col in worksheet.columns:
+                    max_len = max(len(str(cell.value or '')) for cell in col)
+                    col_letter = col[0].column_letter
+                    worksheet.column_dimensions[col_letter].width = min(max(max_len + 3, 12), 60)
+            print(f"[SUCCESS] Saved {len(df)} total accumulated rows to {filepath}")
+            return filepath
+        except PermissionError:
+            time.sleep(1.0)
+            if attempt == 2:
+                print(f"[WARN] Could not save {filename} due to file lock. File may be open in Excel.")
+        except Exception as e:
+            print(f"[WARN] Could not save {filename}: {e}")
+            break
+    return None
+
+
+
+def load_nifty50_symbols(csv_path=r"d:\action_coop\ind_nifty50list.csv"):
+    """Load Nifty 50 constituents from local CSV."""
+    df = pd.read_csv(csv_path)
+    symbols = df["Symbol"].str.strip().tolist()
+    symbol_map = dict(zip(df["Symbol"].str.strip(), df["Company Name"].str.strip()))
+    isin_map = dict(zip(df["Symbol"].str.strip(), df["ISIN Code"].str.strip()))
+    return symbols, symbol_map, isin_map
+
+def run_scraper():
+    print("=== Starting Enhanced NSE Corporate Disclosures Scraper for Nifty 50 ===")
+    symbols, symbol_map, isin_map = load_nifty50_symbols()
+    print(f"Loaded {len(symbols)} Nifty 50 constituents.")
+    
+    session = get_session()
+    nifty_set = set(symbols)
+    
+    # ------------------------------------------------------------------------
+    # 1. Dashboard / Filings Summary
+    # ------------------------------------------------------------------------
+    print("\n--- [1/32] Fetching Dashboard / Corporate Filings Summary ---")
+    df_summary = fetch_symbol_wise(session, "https://www.nseindia.com/api/quick-links-corporate?symbol={symbol}", symbols, symbol_map)
+    save_to_excel(df_summary, "01_Dashboard_Summary.xlsx", "Dashboard Summary")
+
+    # ------------------------------------------------------------------------
+    # 2. Announcements
+    # ------------------------------------------------------------------------
+    print("\n--- [2/32] Fetching Corporate Announcements (Per Symbol) ---")
+    df_ann = fetch_symbol_wise(session, "https://www.nseindia.com/api/corporate-announcements?index=equities&symbol={symbol}", symbols, symbol_map)
+    save_to_excel(df_ann, "02_Announcements.xlsx", "Announcements")
+
+    # ------------------------------------------------------------------------
+    # 3. Announcements XBRL
+    # ------------------------------------------------------------------------
+    print("\n--- [3/32] Filtering Announcements XBRL ---")
+    if not df_ann.empty and "hasXbrl" in df_ann.columns:
+        df_ann_xbrl = df_ann[df_ann["hasXbrl"] == True]
+    else:
+        df_ann_xbrl = pd.DataFrame()
+    save_to_excel(df_ann_xbrl, "03_Announcements_XBRL.xlsx", "Announcements XBRL")
+
+    # ------------------------------------------------------------------------
+    # 4. Board Meetings
+    # ------------------------------------------------------------------------
+    print("\n--- [4/32] Fetching Board Meetings (Per Symbol) ---")
+    df_bm = fetch_symbol_wise(session, "https://www.nseindia.com/api/corporate-board-meetings?index=equities&symbol={symbol}", symbols, symbol_map)
+    save_to_excel(df_bm, "04_Board_Meetings.xlsx", "Board Meetings")
+
+    # ------------------------------------------------------------------------
+    # 5. Corporate Actions
+    # ------------------------------------------------------------------------
+    print("\n--- [5/32] Fetching Corporate Actions (Per Symbol) ---")
+    df_ca = fetch_symbol_wise(session, "https://www.nseindia.com/api/corporates-corporateActions?index=equities&symbol={symbol}", symbols, symbol_map)
+    save_to_excel(df_ca, "05_Corporate_Actions.xlsx", "Corporate Actions")
+
+    # ------------------------------------------------------------------------
+    # 6. Annual Reports
+    # ------------------------------------------------------------------------
+    print("\n--- [6/32] Fetching Annual Reports ---")
+    df_ar = fetch_symbol_wise(session, "https://www.nseindia.com/api/annual-reports?index=equities&symbol={symbol}", symbols, symbol_map, key_in_resp="data")
+    save_to_excel(df_ar, "06_Annual_Reports.xlsx", "Annual Reports")
+
+    # ------------------------------------------------------------------------
+    # 7. Business Responsibility and Sustainability Report (BRSR)
+    # ------------------------------------------------------------------------
+    print("\n--- [7/32] Fetching BRSR Reports ---")
+    if not df_ar.empty and "fileName" in df_ar.columns:
+        df_brsr = df_ar[df_ar["fileName"].astype(str).str.lower().str.contains("brsr|sustainability|business responsibility", na=False)]
+    else:
+        df_brsr = pd.DataFrame()
+    save_to_excel(df_brsr, "07_BRSR_Reports.xlsx", "BRSR Reports")
+
+    # ------------------------------------------------------------------------
+    # 8. Company Directory
+    # ------------------------------------------------------------------------
+    print("\n--- [8/32] Fetching Company Directory ---")
+    dir_raw = fetch_json(session, "https://www.nseindia.com/api/corporate-listing-directory?index=equity")
+    if isinstance(dir_raw, list):
+        df_dir = pd.DataFrame(dir_raw)
+        if "symbol" in df_dir.columns:
+            df_dir = df_dir[df_dir["symbol"].isin(nifty_set)]
+    else:
+        df_dir = pd.DataFrame([{"symbol": sym, "company_name": symbol_map[sym], "isin": isin_map[sym]} for sym in symbols])
+    save_to_excel(df_dir, "08_Company_Directory.xlsx", "Company Directory")
+
+    # ------------------------------------------------------------------------
+    # 9. Corporate Governance
+    # ------------------------------------------------------------------------
+    print("\n--- [9/32] Fetching Corporate Governance ---")
+    df_cg = fetch_symbol_wise(session, "https://www.nseindia.com/api/corporate-governance?index=equities&symbol={symbol}", symbols, symbol_map)
+    save_to_excel(df_cg, "09_Corporate_Governance.xlsx", "Corporate Governance")
+
+    # ------------------------------------------------------------------------
+    # 10. Corporate Information
+    # ------------------------------------------------------------------------
+    print("\n--- [10/32] Fetching Corporate Information ---")
+    df_meta = fetch_symbol_wise(session, "https://www.nseindia.com/api/equity-metainfo?symbol={symbol}", symbols, symbol_map)
+    save_to_excel(df_meta, "10_Corporate_Information.xlsx", "Corporate Information")
+
+    # ------------------------------------------------------------------------
+    # 11. Daily Buy Back
+    # ------------------------------------------------------------------------
+    print("\n--- [11/32] Fetching Daily Buy Back ---")
+    bb_raw = fetch_json(session, "https://www.nseindia.com/api/corporates-daily-buyback?index=equities")
+    if isinstance(bb_raw, list):
+        df_bb = pd.DataFrame(bb_raw)
+        if "symbol" in df_bb.columns:
+            df_bb = df_bb[df_bb["symbol"].isin(nifty_set)]
+    else:
+        df_bb = pd.DataFrame()
+    save_to_excel(df_bb, "11_Daily_Buy_Back.xlsx", "Daily Buy Back")
+
+    # ------------------------------------------------------------------------
+    # 12. Event Calendar
+    # ------------------------------------------------------------------------
+    print("\n--- [12/32] Fetching Event Calendar ---")
+    ec_raw = fetch_json(session, "https://www.nseindia.com/api/event-calendar")
+    if isinstance(ec_raw, list):
+        df_ec = pd.DataFrame(ec_raw)
+        if "symbol" in df_ec.columns:
+            df_ec = df_ec[df_ec["symbol"].isin(nifty_set)]
+    else:
+        df_ec = pd.DataFrame()
+    save_to_excel(df_ec, "12_Event_Calendar.xlsx", "Event Calendar")
+
+    # ------------------------------------------------------------------------
+    # 13. Financial Results
+    # ------------------------------------------------------------------------
+    print("\n--- [13/32] Fetching Financial Results (Per Symbol) ---")
+    df_fr = fetch_symbol_wise(session, "https://www.nseindia.com/api/corporates-financial-results?index=equities&symbol={symbol}", symbols, symbol_map)
+    save_to_excel(df_fr, "13_Financial_Results.xlsx", "Financial Results")
+
+    # ------------------------------------------------------------------------
+    # 14. Financial Results Comparison
+    # ------------------------------------------------------------------------
+    print("\n--- [14/32] Fetching Financial Results Comparison ---")
+    frc_raw = fetch_json(session, "https://www.nseindia.com/api/results-comparision")
+    if isinstance(frc_raw, list):
+        df_frc = pd.DataFrame(frc_raw)
+        if "symbol" in df_frc.columns:
+            df_frc = df_frc[df_frc["symbol"].isin(nifty_set)]
+    else:
+        df_frc = pd.DataFrame()
+    save_to_excel(df_frc, "14_Financial_Results_Comparison.xlsx", "Financial Results Comparison")
+
+    # ------------------------------------------------------------------------
+    # 15. Further Issues XBRL Filings
+    # ------------------------------------------------------------------------
+    print("\n--- [15/32] Fetching Further Issues XBRL Filings ---")
+    fi_raw = fetch_json(session, "https://www.nseindia.com/api/corporate-further-issues-qip?index=FIQIPIP")
+    if isinstance(fi_raw, list):
+        df_fi = pd.DataFrame(fi_raw)
+        if "symbol" in df_fi.columns:
+            df_fi = df_fi[df_fi["symbol"].isin(nifty_set)]
+    else:
+        df_fi = pd.DataFrame()
+    save_to_excel(df_fi, "15_Further_Issues_XBRL_Filings.xlsx", "Further Issues XBRL")
+
+    # ------------------------------------------------------------------------
+    # 16. Insider Trading (PIT)
+    # ------------------------------------------------------------------------
+    print("\n--- [16/32] Fetching Insider Trading (PIT) ---")
+    pit_raw = fetch_json(session, "https://www.nseindia.com/api/corporates-pit?index=equities")
+    if isinstance(pit_raw, dict) and "data" in pit_raw:
+        df_pit = pd.DataFrame(pit_raw["data"])
+        if "symbol" in df_pit.columns:
+            df_pit = df_pit[df_pit["symbol"].isin(nifty_set)]
+    else:
+        df_pit = pd.DataFrame()
+    save_to_excel(df_pit, "16_Insider_Trading_PIT.xlsx", "Insider Trading")
+
+    # ------------------------------------------------------------------------
+    # 17. Insider Trading-Plan
+    # ------------------------------------------------------------------------
+    print("\n--- [17/32] Fetching Insider Trading Plan ---")
+    itp_raw = fetch_json(session, "https://www.nseindia.com/api/corporate-shareholding-disclosure?type=reg5")
+    if isinstance(itp_raw, dict) and "data" in itp_raw:
+        df_itp = pd.DataFrame(itp_raw["data"])
+        if "symbol" in df_itp.columns:
+            df_itp = df_itp[df_itp["symbol"].isin(nifty_set)]
+    else:
+        df_itp = pd.DataFrame()
+    save_to_excel(df_itp, "17_Insider_Trading_Plan.xlsx", "Insider Trading Plan")
+
+    # ------------------------------------------------------------------------
+    # 18. Investor Complaints
+    # ------------------------------------------------------------------------
+    print("\n--- [18/32] Fetching Investor Complaints ---")
+    ic_raw = fetch_json(session, "https://www.nseindia.com/api/investor-complaints?index=equities")
+    if isinstance(ic_raw, dict) and "data" in ic_raw:
+        df_ic = pd.DataFrame(ic_raw["data"])
+        if "symbol" in df_ic.columns:
+            df_ic = df_ic[df_ic["symbol"].isin(nifty_set)]
+    else:
+        df_ic = pd.DataFrame()
+    save_to_excel(df_ic, "18_Investor_Complaints.xlsx", "Investor Complaints")
+
+    # ------------------------------------------------------------------------
+    # 19. Issue Offer Documents/ Issue Summary Documents
+    # ------------------------------------------------------------------------
+    print("\n--- [19/32] Fetching Issue Offer Documents ---")
+    od_raw = fetch_json(session, "https://www.nseindia.com/api/offer-documents")
+    if isinstance(od_raw, list):
+        df_od = pd.DataFrame(od_raw)
+    else:
+        df_od = pd.DataFrame()
+    save_to_excel(df_od, "19_Issue_Offer_Documents.xlsx", "Issue Offer Documents")
+
+    # ------------------------------------------------------------------------
+    # 20. Promoter Encumbrance Details
+    # ------------------------------------------------------------------------
+    print("\n--- [20/32] Fetching Promoter Encumbrance Details ---")
+    pe_raw = fetch_json(session, "https://www.nseindia.com/api/corporate-pledgedata-sast3132")
+    if isinstance(pe_raw, dict) and "data" in pe_raw:
+        df_pe = pd.DataFrame(pe_raw["data"])
+        if "symbol" in df_pe.columns:
+            df_pe = df_pe[df_pe["symbol"].isin(nifty_set)]
+    else:
+        df_pe = pd.DataFrame()
+    save_to_excel(df_pe, "20_Promoter_Encumbrance_Details.xlsx", "Promoter Encumbrance")
+
+    # ------------------------------------------------------------------------
+    # 21. Related Party Transactions
+    # ------------------------------------------------------------------------
+    print("\n--- [21/32] Fetching Related Party Transactions ---")
+    rpt_raw = fetch_json(session, "https://www.nseindia.com/api/related-party-transactions-master?index=equities")
+    if isinstance(rpt_raw, dict) and "data" in rpt_raw:
+        df_rpt = pd.DataFrame(rpt_raw["data"])
+        if "symbol" in df_rpt.columns:
+            df_rpt = df_rpt[df_rpt["symbol"].isin(nifty_set)]
+    else:
+        df_rpt = pd.DataFrame()
+    save_to_excel(df_rpt, "21_Related_Party_Transactions.xlsx", "Related Party Transactions")
+
+    # ------------------------------------------------------------------------
+    # 22. SAST Regulations
+    # ------------------------------------------------------------------------
+    print("\n--- [22/32] Fetching SAST Regulations (Per Symbol) ---")
+    df_sast = fetch_symbol_wise(session, "https://www.nseindia.com/api/corporate-sast-reg29?index=equities&symbol={symbol}", symbols, symbol_map, key_in_resp="data")
+    save_to_excel(df_sast, "22_SAST_Regulations.xlsx", "SAST Regulations")
+
+    # ------------------------------------------------------------------------
+    # 23. Secretarial Compliance
+    # ------------------------------------------------------------------------
+    print("\n--- [23/32] Fetching Secretarial Compliance ---")
+    sc_raw = fetch_json(session, "https://www.nseindia.com/api/secretarial-report?index=equities")
+    if isinstance(sc_raw, dict) and "data" in sc_raw:
+        df_sc = pd.DataFrame(sc_raw["data"])
+        if "symbol" in df_sc.columns:
+            df_sc = df_sc[df_sc["symbol"].isin(nifty_set)]
+    else:
+        df_sc = pd.DataFrame()
+    save_to_excel(df_sc, "23_Secretarial_Compliance.xlsx", "Secretarial Compliance")
+
+    # ------------------------------------------------------------------------
+    # 24. Share Transfers
+    # ------------------------------------------------------------------------
+    print("\n--- [24/32] Fetching Share Transfers ---")
+    st_raw = fetch_json(session, "https://www.nseindia.com/api/corporate-sharetransfer-equities-dates")
+    if isinstance(st_raw, list):
+        df_st = pd.DataFrame(st_raw)
+        if "symbol" in df_st.columns:
+            df_st = df_st[df_st["symbol"].isin(nifty_set)]
+    else:
+        df_st = pd.DataFrame()
+    save_to_excel(df_st, "24_Share_Transfers.xlsx", "Share Transfers")
+
+    # ------------------------------------------------------------------------
+    # 25. Shareholder's Meetings
+    # ------------------------------------------------------------------------
+    print("\n--- [25/32] Fetching Shareholder Meetings ---")
+    sm_raw = fetch_json(session, "https://www.nseindia.com/api/postal-ballot?index=equities")
+    if isinstance(sm_raw, dict) and "data" in sm_raw:
+        df_sm = pd.DataFrame(sm_raw["data"])
+        if "symbol" in df_sm.columns:
+            df_sm = df_sm[df_sm["symbol"].isin(nifty_set)]
+    else:
+        df_sm = pd.DataFrame()
+    save_to_excel(df_sm, "25_Shareholders_Meetings.xlsx", "Shareholder Meetings")
+
+    # ------------------------------------------------------------------------
+    # 26. Shareholding Pattern
+    # ------------------------------------------------------------------------
+    print("\n--- [26/32] Fetching Shareholding Pattern ---")
+    shp_raw = fetch_json(session, "https://www.nseindia.com/api/corporate-share-holdings-master?index=equities")
+    if isinstance(shp_raw, dict) and "data" in shp_raw:
+        df_shp = pd.DataFrame(shp_raw["data"])
+        if "symbol" in df_shp.columns:
+            df_shp = df_shp[df_shp["symbol"].isin(nifty_set)]
+    elif isinstance(shp_raw, list):
+        df_shp = pd.DataFrame(shp_raw)
+        if "symbol" in df_shp.columns:
+            df_shp = df_shp[df_shp["symbol"].isin(nifty_set)]
+    else:
+        df_shp = pd.DataFrame()
+    save_to_excel(df_shp, "26_Shareholding_Pattern.xlsx", "Shareholding Pattern")
+
+    # ------------------------------------------------------------------------
+    # 27. Shareholding Pattern SDD
+    # ------------------------------------------------------------------------
+    print("\n--- [27/32] Fetching Shareholding Pattern SDD ---")
+    sdd_raw = fetch_json(session, "https://www.nseindia.com/api/shareholding-patterns-sdd?index=equities")
+    if isinstance(sdd_raw, dict) and "data" in sdd_raw:
+        df_sdd = pd.DataFrame(sdd_raw["data"])
+        if "symbol" in df_sdd.columns:
+            df_sdd = df_sdd[df_sdd["symbol"].isin(nifty_set)]
+    else:
+        df_sdd = pd.DataFrame()
+    save_to_excel(df_sdd, "27_Shareholding_Pattern_SDD.xlsx", "Shareholding Pattern SDD")
+
+    # ------------------------------------------------------------------------
+    # 28. Statement of Deviation/Variation
+    # ------------------------------------------------------------------------
+    print("\n--- [28/32] Fetching Statement of Deviation/Variation ---")
+    sod_raw = fetch_json(session, "https://www.nseindia.com/api/statement-deviation-master?index=equities")
+    if isinstance(sod_raw, dict) and "data" in sod_raw:
+        df_sod = pd.DataFrame(sod_raw["data"])
+        if "symbol" in df_sod.columns:
+            df_sod = df_sod[df_sod["symbol"].isin(nifty_set)]
+    elif isinstance(sod_raw, list):
+        df_sod = pd.DataFrame(sod_raw)
+        if "symbol" in df_sod.columns:
+            df_sod = df_sod[df_sod["symbol"].isin(nifty_set)]
+    else:
+        df_sod = pd.DataFrame()
+    save_to_excel(df_sod, "28_Statement_of_Deviation.xlsx", "Statement of Deviation")
+
+    # ------------------------------------------------------------------------
+    # 29. Statement of Impact of Audit Qualification
+    # ------------------------------------------------------------------------
+    print("\n--- [29/32] Fetching Statement of Impact of Audit Qualification ---")
+    aq_raw = fetch_json(session, "https://www.nseindia.com/api/details-sod")
+    if isinstance(aq_raw, dict) and "data" in aq_raw:
+        df_aq = pd.DataFrame(aq_raw["data"])
+        if "symbol" in df_aq.columns:
+            df_aq = df_aq[df_aq["symbol"].isin(nifty_set)]
+    else:
+        df_aq = pd.DataFrame()
+    save_to_excel(df_aq, "29_Audit_Qualification_Impact.xlsx", "Audit Qualification Impact")
+
+    # ------------------------------------------------------------------------
+    # 30. System Driven Disclosures - PIT
+    # ------------------------------------------------------------------------
+    print("\n--- [30/32] Fetching System Driven Disclosures - PIT ---")
+    sdd_pit = fetch_json(session, "https://www.nseindia.com/api/corpreg7?index=equities")
+    if isinstance(sdd_pit, dict) and "data" in sdd_pit:
+        df_sd_pit = pd.DataFrame(sdd_pit["data"])
+        if "symbol" in df_sd_pit.columns:
+            df_sd_pit = df_sd_pit[df_sd_pit["symbol"].isin(nifty_set)]
+    else:
+        df_sd_pit = pd.DataFrame()
+    save_to_excel(df_sd_pit, "30_System_Driven_Disclosures_PIT.xlsx", "SDD PIT")
+
+    # ------------------------------------------------------------------------
+    # 31. System Driven Disclosures - SAST
+    # ------------------------------------------------------------------------
+    print("\n--- [31/32] Fetching System Driven Disclosures - SAST ---")
+    sdd_sast = fetch_json(session, "https://www.nseindia.com/api/corporate-shareholding-disclosure?type=reg29")
+    if isinstance(sdd_sast, dict) and "data" in sdd_sast:
+        df_sd_sast = pd.DataFrame(sdd_sast["data"])
+        if "symbol" in df_sd_sast.columns:
+            df_sd_sast = df_sd_sast[df_sd_sast["symbol"].isin(nifty_set)]
+    else:
+        df_sd_sast = pd.DataFrame()
+    save_to_excel(df_sd_sast, "31_System_Driven_Disclosures_SAST.xlsx", "SDD SAST")
+
+    # ------------------------------------------------------------------------
+    # 32. Voting Results
+    # ------------------------------------------------------------------------
+    print("\n--- [32/35] Fetching Voting Results (Per Symbol) ---")
+    df_vr = fetch_symbol_wise(session, "https://www.nseindia.com/api/corporate-voting-results?index=equities&symbol={symbol}", symbols, symbol_map)
+    save_to_excel(df_vr, "32_Voting_Results.xlsx", "Voting Results")
+
+    # ------------------------------------------------------------------------
+    # 33. FII / DII Daily Buy/Sell Activity
+    # ------------------------------------------------------------------------
+    print("\n--- [33/35] Fetching FII / DII Daily Buy/Sell Activity ---")
+    fiidii_raw = fetch_json(session, "https://www.nseindia.com/api/fiidiiTradeReact")
+    if isinstance(fiidii_raw, list):
+        df_fiidii = pd.DataFrame(fiidii_raw)
+    elif isinstance(fiidii_raw, dict) and "data" in fiidii_raw:
+        df_fiidii = pd.DataFrame(fiidii_raw["data"])
+    else:
+        df_fiidii = pd.DataFrame()
+    save_to_excel(df_fiidii, "33_FII_DII_Trading_Activity.xlsx", "FII DII Trading Activity")
+
+    # ------------------------------------------------------------------------
+    # 34. Bulk Deals
+    # ------------------------------------------------------------------------
+    print("\n--- [34/35] Fetching Bulk Deals ---")
+    try:
+        df_bulk = pd.read_csv("https://nsearchives.nseindia.com/content/equities/bulk.csv", storage_options={"User-Agent": HEADERS["User-Agent"]})
+    except Exception:
+        df_bulk = pd.DataFrame()
+    save_to_excel(df_bulk, "34_Bulk_Deals.xlsx", "Bulk Deals")
+
+    # ------------------------------------------------------------------------
+    # 35. Block Deals
+    # ------------------------------------------------------------------------
+    print("\n--- [35/38] Fetching Block Deals ---")
+    try:
+        df_block = pd.read_csv("https://nsearchives.nseindia.com/content/equities/block.csv", storage_options={"User-Agent": HEADERS["User-Agent"]})
+    except Exception:
+        df_block = pd.DataFrame()
+    save_to_excel(df_block, "35_Block_Deals.xlsx", "Block Deals")
+
+    # ------------------------------------------------------------------------
+    # 36. Concall Transcripts & Investor Presentations
+    # ------------------------------------------------------------------------
+    print("\n--- [36/38] Fetching Concall Transcripts & Investor Presentation Links ---")
+    concall_records = []
+    for sym in symbols[:15]:
+        url = f"https://www.nseindia.com/api/corporate-announcements?index=equities&symbol={sym}"
+        try:
+            r = session.get(url, headers=HEADERS, timeout=10)
+            if r.status_code == 200:
+                ann_list = r.json()
+                for a in ann_list:
+                    desc = str(a.get("desc", ""))
+                    att_text = str(a.get("attchmntText", ""))
+                    combined_text = (desc + " " + att_text).lower()
+                    if any(kw in combined_text for kw in ["transcript", "presentation", "concall", "earnings call", "analyst meet"]):
+                        file_name = a.get("attchmntFile", "")
+                        pdf_link = f"https://nsearchives.nseindia.com/corporate/{file_name}" if file_name and not file_name.startswith("http") else file_name
+                        concall_records.append({
+                            "Symbol": sym,
+                            "Company Name": symbol_map.get(sym, sym),
+                            "Date": a.get("an_dt"),
+                            "Category": "Presentation" if "presentation" in combined_text else "Transcript",
+                            "Description": desc,
+                            "Attachment Text": att_text,
+                            "PDF Download Link": pdf_link,
+                            "BroadCast Time": a.get("exchdisstime")
+                        })
+        except Exception:
+            pass
+        time.sleep(0.15)
+    df_concall = pd.DataFrame(concall_records) if concall_records else pd.DataFrame()
+    save_to_excel(df_concall, "36_Concall_Transcripts_Presentations.xlsx", "Concalls & Presentations", dedupe_subset=["Symbol", "Date", "Description"])
+
+    # ------------------------------------------------------------------------
+    # 37. Credit Rating Reports
+    # ------------------------------------------------------------------------
+    print("\n--- [37/38] Fetching Credit Rating Reports (CRISIL, ICRA, CARE, India Ratings) ---")
+    try:
+        r_cr = session.get("https://www.nseindia.com/api/credit-rating-sdd-reg30?index=equities", headers=HEADERS, timeout=12)
+        if r_cr.status_code == 200:
+            cr_data = r_cr.json()
+            if isinstance(cr_data, list):
+                df_cr = pd.DataFrame(cr_data)
+                if "symbol" in df_cr.columns:
+                    df_cr = df_cr[df_cr["symbol"].isin(nifty_set)]
+            else:
+                df_cr = pd.DataFrame()
+        else:
+            df_cr = pd.DataFrame()
+    except Exception:
+        df_cr = pd.DataFrame()
+    save_to_excel(df_cr, "37_Credit_Rating_Reports.xlsx", "Credit Rating Reports", dedupe_subset=["symbol", "dateOfCurrentCredit", "creditRating"])
+
+    # ------------------------------------------------------------------------
+    # 38. Super Investor & Institutional Shareholding
+    # ------------------------------------------------------------------------
+    print("\n--- [38/38] Fetching Shareholding Disclosures (Super Investors & Institutional Holdings) ---")
+    try:
+        r_shp = session.get("https://www.nseindia.com/api/corporate-share-holdings-master?index=equities", headers=HEADERS, timeout=12)
+        if r_shp.status_code == 200:
+            shp_data = r_shp.json()
+            if isinstance(shp_data, list):
+                df_shp = pd.DataFrame(shp_data)
+                if "symbol" in df_shp.columns:
+                    df_shp = df_shp[df_shp["symbol"].isin(nifty_set)]
+            elif isinstance(shp_data, dict) and "data" in shp_data:
+                df_shp = pd.DataFrame(shp_data["data"])
+                if "symbol" in df_shp.columns:
+                    df_shp = df_shp[df_shp["symbol"].isin(nifty_set)]
+            else:
+                df_shp = pd.DataFrame()
+        else:
+            df_shp = pd.DataFrame()
+    except Exception:
+        df_shp = pd.DataFrame()
+    save_to_excel(df_shp, "38_Super_Investor_Institutional_Holdings.xlsx", "Super Investor & Inst Holdings", dedupe_subset=["symbol", "asOnDate"])
+
+    print("\n=======================================================")
+    print(f"ENHANCED SCRAPING COMPLETE FOR ALL 38 CATEGORIES: {OUTPUT_DIR}")
+    print("=======================================================")
+
+if __name__ == "__main__":
+    run_scraper()

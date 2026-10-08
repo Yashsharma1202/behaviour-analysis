@@ -66,23 +66,34 @@ LOT_SIZES = {
     "WIPRO": 1500, "ONGC": 3750, "TECHM": 600, "ASHOKLEY": 5000, "ADANIGREEN": 500
 }
 
-# 12 Official RBI Monetary Policy Committee (MPC) Announcement Events
-RBI_POLICY_EVENTS = [
-    {"code": "RBI_Oct_2023", "label": "RBI MPC Policy Oct 2023", "date_str": "2023-10-06", "period": "FY 2023-24 Q3 Policy"},
-    {"code": "RBI_Dec_2023", "label": "RBI MPC Policy Dec 2023", "date_str": "2023-12-08", "period": "FY 2023-24 Q3 Policy"},
-    {"code": "RBI_Feb_2024", "label": "RBI MPC Policy Feb 2024", "date_str": "2024-02-08", "period": "FY 2023-24 Q4 Policy"},
-    {"code": "RBI_Apr_2024", "label": "RBI MPC Policy Apr 2024", "date_str": "2024-04-05", "period": "FY 2024-25 Q1 Policy"},
-    {"code": "RBI_Jun_2024", "label": "RBI MPC Policy Jun 2024", "date_str": "2024-06-07", "period": "FY 2024-25 Q1 Policy"},
-    {"code": "RBI_Aug_2024", "label": "RBI MPC Policy Aug 2024", "date_str": "2024-08-08", "period": "FY 2024-25 Q2 Policy"},
-    {"code": "RBI_Oct_2024", "label": "RBI MPC Policy Oct 2024", "date_str": "2024-10-09", "period": "FY 2024-25 Q3 Policy"},
-    {"code": "RBI_Dec_2024", "label": "RBI MPC Policy Dec 2024", "date_str": "2024-12-06", "period": "FY 2024-25 Q3 Policy"},
-    {"code": "RBI_Feb_2025", "label": "RBI MPC Policy Feb 2025", "date_str": "2025-02-07", "period": "FY 2024-25 Q4 Policy"},
-    {"code": "RBI_Apr_2025", "label": "RBI MPC Policy Apr 2025", "date_str": "2025-04-09", "period": "FY 2025-26 Q1 Policy"},
-    {"code": "RBI_Jun_2025", "label": "RBI MPC Policy Jun 2025", "date_str": "2025-06-06", "period": "FY 2025-26 Q1 Policy"},
-    {"code": "RBI_Aug_2025", "label": "RBI MPC Policy Aug 2025", "date_str": "2025-08-08", "period": "FY 2025-26 Q2 Policy"},
-]
+# RBI Monetary Policy Committee (MPC) Announcement Events -- loaded live from
+# rbi_mpc_calendar.py (RBI's own press-release feed + a verified backfill),
+# not hand-typed here. This list used to stop at Aug-2025 (missing 6 meetings
+# that have since happened) and had Aug-2025 itself wrong (08-Aug instead of
+# the real 06-Aug).
+try:
+    from rbi_mpc_calendar import refresh_from_rbi, load_calendar
+    refresh_from_rbi(verbose=False)
+    RBI_POLICY_EVENTS = load_calendar()
+except Exception as _e:
+    print(f"WARNING: rbi_mpc_calendar fetch failed ({_e}); falling back to the last-known-good list below.")
+    RBI_POLICY_EVENTS = [
+        {"code": "RBI_Oct_2023", "label": "RBI MPC Policy Oct 2023", "date_str": "2023-10-06", "period": "FY 2023-24 Q3 Policy"},
+        {"code": "RBI_Dec_2023", "label": "RBI MPC Policy Dec 2023", "date_str": "2023-12-08", "period": "FY 2023-24 Q3 Policy"},
+        {"code": "RBI_Feb_2024", "label": "RBI MPC Policy Feb 2024", "date_str": "2024-02-08", "period": "FY 2023-24 Q4 Policy"},
+        {"code": "RBI_Apr_2024", "label": "RBI MPC Policy Apr 2024", "date_str": "2024-04-05", "period": "FY 2024-25 Q1 Policy"},
+        {"code": "RBI_Jun_2024", "label": "RBI MPC Policy Jun 2024", "date_str": "2024-06-07", "period": "FY 2024-25 Q1 Policy"},
+        {"code": "RBI_Aug_2024", "label": "RBI MPC Policy Aug 2024", "date_str": "2024-08-08", "period": "FY 2024-25 Q2 Policy"},
+        {"code": "RBI_Oct_2024", "label": "RBI MPC Policy Oct 2024", "date_str": "2024-10-09", "period": "FY 2024-25 Q3 Policy"},
+        {"code": "RBI_Dec_2024", "label": "RBI MPC Policy Dec 2024", "date_str": "2024-12-06", "period": "FY 2024-25 Q3 Policy"},
+        {"code": "RBI_Feb_2025", "label": "RBI MPC Policy Feb 2025", "date_str": "2025-02-07", "period": "FY 2024-25 Q4 Policy"},
+        {"code": "RBI_Apr_2025", "label": "RBI MPC Policy Apr 2025", "date_str": "2025-04-09", "period": "FY 2025-26 Q1 Policy"},
+        {"code": "RBI_Jun_2025", "label": "RBI MPC Policy Jun 2025", "date_str": "2025-06-06", "period": "FY 2025-26 Q1 Policy"},
+        {"code": "RBI_Aug_2025", "label": "RBI MPC Policy Aug 2025", "date_str": "2025-08-06", "period": "FY 2025-26 Q2 Policy"},
+    ]
 
-print("Calculating Consolidated Stock Performance Across All 12 RBI Policy Events ...")
+print(f"Calculating Consolidated Stock Performance Across All {len(RBI_POLICY_EVENTS)} RBI Policy Events "
+      f"({RBI_POLICY_EVENTS[0]['date_str']} .. {RBI_POLICY_EVENTS[-1]['date_str']}) ...")
 
 stock_combined_stats = []
 
@@ -222,7 +233,8 @@ ws_comb["A1"].fill = fill_navy
 ws_comb["A1"].alignment = Alignment(horizontal="center", vertical="center")
 
 ws_comb.merge_cells("A2:N2")
-ws_comb["A2"] = "Consolidated Performance Audit of 211 Nifty Stocks Across All 12 RBI Policy Events (Oct 2023 – Aug 2025)"
+ws_comb["A2"] = (f"Consolidated Performance Audit of 211 Nifty Stocks Across All {len(RBI_POLICY_EVENTS)} RBI Policy Events "
+                  f"({RBI_POLICY_EVENTS[0]['date_str']} to {RBI_POLICY_EVENTS[-1]['date_str']})")
 ws_comb["A2"].font = f_subtitle
 ws_comb["A2"].fill = fill_navy
 ws_comb["A2"].alignment = Alignment(horizontal="center", vertical="center")
@@ -264,7 +276,7 @@ ws_comb.row_dimensions[4].height = 20
 ws_comb.row_dimensions[5].height = 28
 
 ws_comb.merge_cells("A7:N7")
-ws_comb["A7"] = "📊 ALL 211 STOCKS RANKED BY TOTAL REALISED NET P&L ACROSS ALL 12 RBI POLICY EVENTS"
+ws_comb["A7"] = f"📊 ALL 211 STOCKS RANKED BY TOTAL REALISED NET P&L ACROSS ALL {len(RBI_POLICY_EVENTS)} RBI POLICY EVENTS"
 ws_comb["A7"].font = f_sec_hdr
 ws_comb["A7"].fill = fill_subnavy
 ws_comb["A7"].alignment = Alignment(horizontal="left", vertical="center", indent=1)

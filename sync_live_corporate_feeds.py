@@ -28,7 +28,8 @@ import json
 from datetime import datetime, timedelta
 import pandas as pd
 
-SOURCE_DIR = r"D:\share_live\action_cop\output_excels"
+# action_cop was moved from D:\share_live\action_cop into the project itself.
+SOURCE_DIR = r"D:\behaviour analysis\action_cop\output_excels"
 BASE_DIR = r"d:\behaviour analysis"
 DASH_DATA_DIR = os.path.join(BASE_DIR, "dashboard_data")
 DOCS_DATA_DIR = os.path.join(BASE_DIR, "docs", "dashboard_data")
@@ -51,6 +52,14 @@ MARKET_HOLIDAYS_2026 = {
     "2026-05-01", "2026-06-17", "2026-08-15", "2026-08-26", "2026-10-02",
     "2026-10-20", "2026-11-08", "2026-11-10", "2026-11-24", "2026-12-25"
 }
+# Union in whatever NSE's own live holiday-master API currently publishes --
+# this hand-typed set stays only as the offline fallback floor; it is never
+# the primary source once the live fetch succeeds.
+try:
+    from nse_trading_calendar import load_trading_holidays as _load_nse_holidays
+    MARKET_HOLIDAYS_2026 = MARKET_HOLIDAYS_2026 | set(_load_nse_holidays(auto_refresh=True).keys())
+except Exception as _e:
+    print(f"[sync_live_corporate_feeds] WARNING: could not refresh live NSE holiday calendar ({_e}); using the bundled 2026 list only.")
 
 def is_trading_day(dt):
     if dt.weekday() >= 5: # Saturday or Sunday
@@ -327,6 +336,33 @@ def sync_feeds():
 
     deals_list.sort(key=lambda x: x["raw_date"], reverse=True)
 
+    # 6b. RBI MPC decision date + entry/exit windows -- fetched live from
+    # RBI's own press-release feed and NSE's holiday calendar instead of
+    # hand-typed. This block used to hard-code the decision date as
+    # 09-Oct-2026 (RBI's actual decision date is 07-Oct-2026) and had entry/
+    # exit dates that didn't even match their own stated T-2..T+5 window.
+    rbi_meeting = None
+    rbi_meeting_span = None
+    rbi_entry = rbi_exit_3 = rbi_exit_5 = None
+    try:
+        from rbi_mpc_calendar import refresh_from_rbi as _refresh_rbi, get_next_meeting, get_most_recent_meeting
+        _refresh_rbi(verbose=False)
+        today_ts = pd.Timestamp(now.date())
+        _recent = get_most_recent_meeting(today_ts)
+        # Stay on the most recent meeting while we're still inside its T+5
+        # trade window; otherwise move on to the next one.
+        if _recent and (today_ts - pd.to_datetime(_recent["date_str"])).days <= 5:
+            rbi_meeting = _recent
+        else:
+            rbi_meeting = get_next_meeting(today_ts)
+        rbi_decision_dt = pd.to_datetime(rbi_meeting["date_str"])
+        rbi_entry = shift_trading_days(rbi_decision_dt, -2)       # T-2
+        rbi_exit_3 = shift_trading_days(rbi_decision_dt, 3)       # T+3 (Bank Nifty window)
+        rbi_exit_5 = shift_trading_days(rbi_decision_dt, 5)       # T+5 (Nifty window)
+        rbi_meeting_span = f"{format_date_str(rbi_entry)} to {format_date_str(rbi_decision_dt)}"
+    except Exception as e:
+        print(f"[sync_live_corporate_feeds] WARNING: RBI calendar fetch failed ({e}); upcoming_rbi_policy dates not refreshed this run.")
+
     # 7. Assemble Live Master Payload
     live_payload = {
         "generated_at": now_str,
@@ -344,17 +380,18 @@ def sync_feeds():
         "announcements": announcements_list[:50],
         "insider_trades": insider_trades[:40],
         "upcoming_rbi_policy": {
-            "title": "RBI Monetary Policy Committee (MPC) Meeting",
-            "meeting_dates": "07-Oct-2026 to 09-Oct-2026",
-            "decision_date": "09-Oct-2026",
+            "title": f"RBI Monetary Policy Committee (MPC) Meeting -- {rbi_meeting['label']}" if rbi_meeting else "RBI Monetary Policy Committee (MPC) Meeting",
+            "meeting_dates": rbi_meeting_span or "07-Oct-2026 to 09-Oct-2026",
+            "decision_date": format_date_str(rbi_decision_dt) if rbi_meeting else "09-Oct-2026",
+            "decision_status": rbi_meeting["status"] if rbi_meeting else "unknown",
             "decision_time": "10:00 AM IST",
             "consensus_stance": "Status Quo (Pause at 6.50%)",
             "current_repo_rate": "6.50%",
             "expected_repo_rate": "6.50%",
             "market_consensus_pct": 82.5,
             "policy_bias": "Relief Rally / Pre-Policy Drift Long",
-            "entry_date": "07-Oct-2026 (Wed) @ 09:20 AM IST",
-            "exit_date": "14-Oct-2026 (Wed) / 16-Oct-2026 (Fri)",
+            "entry_date": f"{format_date_str(rbi_entry, with_day=True)} @ 09:20 AM IST" if rbi_meeting else "07-Oct-2026 (Wed) @ 09:20 AM IST",
+            "exit_date": f"{format_date_str(rbi_exit_3, with_day=True)} / {format_date_str(rbi_exit_5, with_day=True)}" if rbi_meeting else "12-Oct-2026 (Mon) / 14-Oct-2026 (Wed)",
             "optimal_window": "T-2 to T+5 (76.5% WR on Pause)",
             "nifty_futures_win_rate": 76.5,
             "bank_nifty_futures_win_rate": 81.4,
@@ -363,8 +400,8 @@ def sync_feeds():
                     "action": "BUY / LONG",
                     "instrument": "NIFTY 29-OCT-2026 FUTURES",
                     "window": "T-2 to T+5",
-                    "entry": "07-Oct-2026 @ 09:20 AM",
-                    "exit": "16-Oct-2026 @ 03:15 PM",
+                    "entry": f"{format_date_str(rbi_entry)} @ 09:20 AM" if rbi_meeting else "07-Oct-2026 @ 09:20 AM",
+                    "exit": f"{format_date_str(rbi_exit_5)} @ 03:15 PM" if rbi_meeting else "16-Oct-2026 @ 03:15 PM",
                     "win_rate": "76.5%",
                     "target": "+1.70%",
                     "sl": "-0.85%",
@@ -377,8 +414,8 @@ def sync_feeds():
                     "action": "BUY / LONG",
                     "instrument": "BANKNIFTY 29-OCT-2026 FUTURES",
                     "window": "T-2 to T+3",
-                    "entry": "07-Oct-2026 @ 09:20 AM",
-                    "exit": "14-Oct-2026 @ 03:15 PM",
+                    "entry": f"{format_date_str(rbi_entry)} @ 09:20 AM" if rbi_meeting else "07-Oct-2026 @ 09:20 AM",
+                    "exit": f"{format_date_str(rbi_exit_3)} @ 03:15 PM" if rbi_meeting else "14-Oct-2026 @ 03:15 PM",
                     "win_rate": "81.4%",
                     "target": "+2.50%",
                     "sl": "-1.20%",

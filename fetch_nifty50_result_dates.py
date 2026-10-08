@@ -101,16 +101,59 @@ print("Fetching NSE Event Calendar (https://www.nseindia.com/api/event-calendar)
 url_evt = 'https://www.nseindia.com/api/event-calendar'
 events = nse.get_json(url_evt, "RELIANCE") or []
 
+# A board meeting on the event calendar isn't necessarily about RESULTS -- it
+# can be a debenture issuance, fundraising, buyback, etc. Taking any calendar
+# entry at face value (as this used to) reported e.g. SUNPHARMA's NCD-issuance
+# board meeting as its "announced" quarterly result date. Only accept an entry
+# whose own purpose/description actually mentions results.
+_RESULT_KEYWORDS = ('financial result', 'unaudited', 'audited financial', 'quarterly result', "q2 fy")
+
+def _is_result_related(purpose, details):
+    text = f"{purpose} {details}".lower()
+    return any(k in text for k in _RESULT_KEYWORDS)
+
 nifty_upcoming_bms = {}
 for e in events:
     if not isinstance(e, dict): continue
     sym = (e.get('symbol') or '').upper().strip()
-    if sym in set(NIFTY50_SYMBOLS):
-        nifty_upcoming_bms[sym] = {
-            'upcoming_date': e.get('date', ''),
-            'purpose': e.get('purpose', ''),
-            'details': e.get('bm_desc', '')
-        }
+    if sym not in set(NIFTY50_SYMBOLS):
+        continue
+    purpose, details = e.get('purpose', ''), e.get('bm_desc', '')
+    if not _is_result_related(purpose, details):
+        continue
+    nifty_upcoming_bms[sym] = {
+        'upcoming_date': e.get('date', ''),
+        'purpose': purpose,
+        'details': details
+    }
+
+# The event-calendar only lists FUTURE board meetings -- once a meeting
+# happens (today or earlier), it drops off the list entirely, and a stock
+# whose result was JUST announced would otherwise incorrectly fall back to
+# "Pending Announcement" even though NSE already confirmed it. Cross-check
+# the live corporate-announcements feed (last 7 days) for an actual "Outcome
+# of Board Meeting" filing to catch exactly that case.
+print("Fetching live corporate announcements (last 7 days) to catch just-announced results...", flush=True)
+_today_str = pd.Timestamp.now().strftime('%d-%m-%Y')
+_week_ago_str = (pd.Timestamp.now() - pd.Timedelta(days=7)).strftime('%d-%m-%Y')
+_ann_url = f"https://www.nseindia.com/api/corporate-announcements?index=equities&from_date={_week_ago_str}&to_date={_today_str}"
+_bulk_ann = nse.get_json(_ann_url, "RELIANCE") or []
+
+nifty_confirmed_results = {}
+for item in _bulk_ann:
+    if not isinstance(item, dict):
+        continue
+    sym = (item.get('symbol') or '').upper().strip()
+    if sym not in set(NIFTY50_SYMBOLS):
+        continue
+    desc = item.get('desc', '') or ''
+    att = item.get('attchmntText', '') or ''
+    combo = f"{desc} {att}".lower()
+    if 'board meeting' in combo and ('financial result' in combo or 'unaudited' in combo or 'audited' in combo):
+        dt = item.get('an_dt', '') or item.get('sort_date', '')
+        prev = nifty_confirmed_results.get(sym)
+        if prev is None or pd.to_datetime(dt, errors='coerce', dayfirst=True) > pd.to_datetime(prev['dt'], errors='coerce', dayfirst=True):
+            nifty_confirmed_results[sym] = {'dt': dt, 'purpose': desc}
 
 # 3. Process each Nifty 50 Stock: Latest result date + Upcoming board meeting date + Q2 Oct/Nov historical window
 nifty50_results_summary = []
@@ -157,22 +200,33 @@ def process_nifty_stock(sym):
             latest_broadcast = str(latest_r['_dt'].date()) if pd.notna(latest_r['_dt']) else latest_r['broadCastDate']
             latest_period = latest_r['relatingTo']
 
-    # Upcoming board meeting from event calendar
+    # Upcoming board meeting from event calendar (future-dated, results-related only)
     evt_info = nifty_upcoming_bms.get(sym, {})
     upcoming_date = evt_info.get('upcoming_date', '')
     purpose = evt_info.get('purpose', '')
     details = evt_info.get('details', '')
-    
+
+    # Already-happened confirmation from the live announcements feed -- catches
+    # a result announced today/this week that has already dropped off the
+    # (future-only) event calendar.
+    confirmed = nifty_confirmed_results.get(sym)
+    already_confirmed_date = ''
+    if confirmed:
+        _cdt = pd.to_datetime(confirmed['dt'], errors='coerce', dayfirst=True)
+        if pd.notna(_cdt):
+            already_confirmed_date = _cdt.strftime('%d-%b-%Y')
+
     # If no upcoming board meeting on calendar yet, specify typical Q2 window
     typical_q2_window = ", ".join(sorted(set(q2_oct_nov_dates))) if q2_oct_nov_dates else "Mid Oct - Early Nov"
-    
-    status_str = f"CONFIRMED ({upcoming_date})" if upcoming_date else f"Expected ({typical_q2_window})"
-    
+
+    final_date = upcoming_date or already_confirmed_date
+    final_purpose = purpose or (confirmed['purpose'] if confirmed else '')
+
     return {
         'symbol': sym,
-        'upcoming_result_date': upcoming_date if upcoming_date else f"Expected: {typical_q2_window}",
-        'status': 'ANNOUNCED ON NSE ✅' if upcoming_date else 'Pending Announcement (Est: Oct-Nov)',
-        'announced_purpose': purpose if purpose else 'Q2 FY27 Financial Results (Period ended Sept 30)',
+        'upcoming_result_date': final_date if final_date else f"Expected: {typical_q2_window}",
+        'status': 'ANNOUNCED ON NSE ✅' if final_date else 'Pending Announcement (Est: Oct-Nov)',
+        'announced_purpose': final_purpose if final_purpose else 'Q2 FY27 Financial Results (Period ended Sept 30)',
         'announced_details': details if details else f"Historically announced around {typical_q2_window}",
         'latest_broadcast_date': latest_broadcast,
         'latest_financial_period': latest_period,

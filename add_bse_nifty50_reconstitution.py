@@ -32,9 +32,12 @@ MARGIN = round(SPOT * LOT * 0.20, 2)
 SECTOR = 'Capital Markets & Exchanges'
 
 NSE_2026_HOLIDAYS = {
-    '2026-01-26', '2026-03-03', '2026-03-04', '2026-03-26', '2026-03-31', '2026-04-03',
+    # '2026-03-04' removed (not a real NSE holiday -- leftover from Holi's date
+    # once being wrongly typed as 04-Mar; the real Holi holiday is 03-Mar, kept
+    # below). '2026-11-08'/'2026-11-10' (Diwali) added -- were missing entirely.
+    '2026-01-26', '2026-03-03', '2026-03-26', '2026-03-31', '2026-04-03',
     '2026-04-14', '2026-05-01', '2026-05-28', '2026-06-26', '2026-09-14', '2026-10-02',
-    '2026-10-20', '2026-11-24', '2026-12-25',
+    '2026-10-20', '2026-11-08', '2026-11-10', '2026-11-24', '2026-12-25',
 }
 def is_trading_day(d):
     return d.weekday() < 5 and d.isoformat() not in NSE_2026_HOLIDAYS
@@ -76,9 +79,17 @@ bse_q3 = {
     "option_play": "1% ITM CALL / PUT Option (30% SL)", "sector": SECTOR,
     "data_basis_note": "Win rate from n=7 real announced-result quarters (2025-02-06 to 2026-08-04, split-robust T-2/T+4 backtest on BSE's own F&O futures history since its 2024-11-29 listing) \u2014 not the full 17-quarter depth other stocks have; added for the 01-Oct-2026 Nifty-50 reconstitution (replaces WIPRO).",
 }
+
+# Replace an existing BSE record instead of blindly appending -- this script
+# used to append unconditionally (and increment pending_count unconditionally)
+# on every rerun, which had already quadrupled the BSE entry here before this
+# fix (4 identical records found).
+q3['stocks'] = [s for s in q3['stocks'] if s.get('symbol') != 'BSE']
 q3['stocks'].append(bse_q3)
-q3['pending_count'] = q3.get('pending_count', 0) + 1
-print(f"FY27_Q3: WIPRO marked legacy, BSE added. Total stocks now: {len(q3['stocks'])}")
+q3['announced_count'] = sum(1 for s in q3['stocks'] if s.get('announced'))
+q3['pending_count'] = len(q3['stocks']) - q3['announced_count']
+print(f"FY27_Q3: WIPRO marked legacy, BSE added. Total stocks now: {len(q3['stocks'])} "
+      f"(announced={q3['announced_count']}, pending={q3['pending_count']})")
 
 # ---------------- 2. Holiday playbooks ----------------
 hds = json.load(open(BASE + r'\dashboard_data\holidays_dataset.json', encoding='utf-8'))
@@ -87,7 +98,9 @@ hds_by_id = {h['id']: h for h in hds}
 HOLIDAY_MAP = {
     'gandhi_2026':    ('gandhi',    date(2026, 10, 2)),
     'dussehra_2026':  ('dussehra',  date(2026, 10, 20)),
-    'diwali_2026':    ('diwali',    date(2026, 10, 21)),
+    # was hand-typed as 21-Oct-2026 (2025's Diwali date, shifted); NSE's live
+    # holiday calendar confirms Diwali (Laxmi Pujan) 2026 is 08-Nov-2026.
+    'diwali_2026':    ('diwali',    date(2026, 11, 8)),
     'christmas_2026': ('christmas', date(2026, 12, 25)),
 }
 
@@ -117,6 +130,10 @@ for hol_id, (hds_key, anchor) in HOLIDAY_MAP.items():
     if entry_passed:
         stock_rec["position_status"] = "ENTRY WINDOW ALREADY PASSED (missed) \u2014 newly added stock, was not in the playbook when its own entry date occurred"
 
+    # Replace an existing BSE record instead of blindly appending -- this
+    # script used to append unconditionally, which duplicated BSE on every
+    # rerun (found: 2 identical BSE entries in each of the 4 holidays).
+    hol['stocks'] = [s for s in hol['stocks'] if s.get('symbol') != 'BSE']
     hol['stocks'].append(stock_rec)
     hol['stocks_count'] = len(hol['stocks'])
     print(f"{hol_id}: BSE added ({direction}, {wr}% WR, entry {en}, exit {ex}){' [PASSED]' if entry_passed else ''}. Total stocks now: {hol['stocks_count']}")

@@ -1,0 +1,191 @@
+{
+  "generated_at": "2026-09-29",
+  "eod_data_through": "2026-09-21",
+  "source": "nifty50_all_stocks_daily_2000_2026.parquet",
+  "events": {
+    "gandhi_2026": {
+      "JIOFIN": {
+        "status": "NO_SYMBOL_DATA",
+        "symbol": "JIOFIN"
+      },
+      "HDFCLIFE": {
+        "status": "AWAITING_DATA",
+        "symbol": "HDFCLIFE",
+        "note": "entry 2026-09-22 is after last EOD data 2026-09-21"
+      },
+      "TATAMOTORS": {
+        "status": "AWAITING_DATA",
+        "symbol": "TATAMOTORS",
+        "note": "entry 2026-09-29 is after last EOD data 2026-09-21"
+      },
+      "BHARTIARTL": {
+        "status": "AWAITING_DATA",
+        "symbol": "BHARTIARTL",
+        "note": "entry 2026-09-22 is after last EOD data 2026-09-21"
+      },
+      "COALINDIA": {
+        "status": "AWAITING_DATA",
+        "symbol": "COALINDIA",
+        "note": "entry 2026-09-22 is after last EOD data 2026-09-21"
+      },
+      "ITC": {
+        "status": "AWAITING_DATA",
+        "symbol": "ITC",
+        "note": "entry 2026-09-23 is after last EOD data 2026-09-21"
+      },
+      "M&M": {
+        "status": "AWAITING_DATA",
+        "symbol": "M&M",
+        "note": "entry 2026-09-25 is after last EOD data 2026-09-21"
+      },
+      "SUNPHARMA": {
+        "status": "AWAITING_DATA",
+        "symbol": "SUNPHARMA",
+        "note": "entry 2026-09-25 is after last EOD data 2026-09-21"
+      },
+      "HINDALCO": {
+        "status": "AWAITING_DATA",
+        "symbol": "HINDALCO",
+        "note": "entry 2026-09-25 is after last EOD data 2026-09-21"
+      },
+      "INFY": {
+        "status": "AWAITING_DATA",
+        "symbol": "INFY",
+        "note": "entry 2026-09-28 is after last EOD data 2026-09-21"
+      },
+      "APOLLOHOSP": {
+        "status": "AWAITING_DATA",
+        "symbol": "APOLLOHOSP",
+        "note": "entry 2026-09-25 is after last EOD data 2026-09-21"
+      },
+      "ICICIBANK": {
+        "status": "AWAITING_DATA",
+        "symbol": "ICICIBANK",
+        "note": "entry 2026-09-23 is after last EOD data 2026-09-21"
+      },
+      "BAJAJ-AUTO": {
+        "status": "AWAITING_DATA",
+        "symbol": "BAJAJ-AUTO",
+        "note": "entry 2026-09-29 is after last EOD data 2026-09-21"
+      },
+      "BAJFINANCE": {
+        "status": "AWAITING_DATA",
+        "symbol": "BAJFINANCE",
+        "note": "entry 2026-09-25 is after last EOD data 2026-09-21"
+      },
+      "WIPRO": {
+        "status": "AWAITING_DATA",
+        "symbol": "WIPRO",
+        "note": "entry 2026-09-23 is after last EOD data 2026-09-21"
+      },
+      "ASIANPAINT": {
+        "status": "AWAITING_DATA",
+        "symbol": "ASIANPAINT",
+        "note": "entry 2026-09-24 is after last EOD data 2026-09-21"
+      },
+      "HINDUNILVR": {
+        "status": "AWAITING_DATA",
+        "symbol": "HINDUNILVR",
+        "note": "entry 2026-09-25 is after last EOD data 2026-09-21"
+      },
+      "AXISBANK": {
+        "status": "AWAITING_DATA",
+        "symbol": "AXISBANK",
+        "note": "entry 2026-09-24 is after last EOD data 2026-09-21"
+      },
+      "SBIN": {
+        "status": "AWAITING_DATA",
+        "symbol": "SBIN",
+        "note": "entry 2026-09-29 is after last EOD data 2026-09-21"
+      },
+      "HCLTECH": {
+        "status": "AWAITING_DATA",
+        "symbol": "HCLTECH",
+        "note": "entry 2026-09-28 is after last EOD data 2026-09-21"
+      },
+      "TRENT": {
+        "status": "NO_SYMBOL_DATA",
+        "symbol": "TRENT"
+      },
+      "ADANIPORTS": {
+        "status": "AWAITING_DATA",
+        "symbol": "ADANIPORTS",
+        "note": "entry 2026-09-23 is after last EOD data 2026-09-21"
+      },
+      "POWERGRID": {
+        "status": "AWAITING_DATA",
+        "symbol": "POWERGRID",
+        "note": "entry 2026-09-22 is after last EOD data 2026-09-21"
+      },
+      "INDIGO": {
+        "status": "NO_SYMBOL_DATA",
+        "symbol": "INDIGO"
+      },
+      "SHRIRAMFIN": {
+        "status": "AWAITING_DATA",
+        "symbol": "SHRIRAMFIN",
+        "note": "entry 2026-09-22 is after last EOD data 2026-09-21"
+      },
+      "BAJAJFINSV": {
+        "status": "AWAITING_DATA",
+        "symbol": "BAJAJFINSV",
+        "note": "entry 2026-09-23 is after last EOD data 2026-09-21"
+      },
+      "DIVISLAB": {
+        "status": "AWAITING_DATA",
+        "symbol": "DIVISLAB",
+        "note": "entry 2026-09-24 is after last EOD data 2026-09-21"
+      },
+      "ULTRACEMCO": {
+        "status": "AWAITING_DATA",
+        "symbol": "ULTRACEMCO",
+        "note": "entry 2026-09-22 is after last EOD data 2026-09-21"
+      },
+      "MARUTI": {
+        "status": "AWAITING_DATA",
+        "symbol": "MARUTI",
+        "note": "entry 2026-09-24 is after last EOD data 2026-09-21"
+      },
+      "HDFCBANK": {
+        "status": "AWAITING_DATA",
+        "symbol": "HDFCBANK",
+        "note": "entry 2026-09-25 is after last EOD data 2026-09-21"
+      },
+      "TCS": {
+        "status": "AWAITING_DATA",
+        "symbol": "TCS",
+        "note": "entry 2026-09-28 is after last EOD data 2026-09-21"
+      },
+      "GRASIM": {
+        "status": "AWAITING_DATA",
+        "symbol": "GRASIM",
+        "note": "entry 2026-09-29 is after last EOD data 2026-09-21"
+      },
+      "TATACONSUM": {
+        "status": "AWAITING_DATA",
+        "symbol": "TATACONSUM",
+        "note": "entry 2026-09-24 is after last EOD data 2026-09-21"
+      },
+      "NTPC": {
+        "status": "AWAITING_DATA",
+        "symbol": "NTPC",
+        "note": "entry 2026-09-24 is after last EOD data 2026-09-21"
+      },
+      "DRREDDY": {
+        "status": "AWAITING_DATA",
+        "symbol": "DRREDDY",
+        "note": "entry 2026-09-28 is after last EOD data 2026-09-21"
+      },
+      "EICHERMOT": {
+        "status": "AWAITING_DATA",
+        "symbol": "EICHERMOT",
+        "note": "entry 2026-09-25 is after last EOD data 2026-09-21"
+      },
+      "NESTLEIND": {
+        "status": "AWAITING_DATA",
+        "symbol": "NESTLEIND",
+        "note": "entry 2026-09-23 is after last EOD data 2026-09-21"
+      }
+    }
+  }
+}

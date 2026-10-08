@@ -143,7 +143,7 @@ for sym in NIFTY50:
         'avgRet': f"+{round(best_avg_ret, 2)}%" if best_avg_ret >= 0 else f"{round(best_avg_ret, 2)}%",
         'entry': "16-Oct-2026 (Friday)" if sym == 'ULTRACEMCO' else "Pending NSE Filing",
         'result': "19-Oct-2026 (Monday)" if sym == 'ULTRACEMCO' else "Pending NSE Filing",
-        'exit': "20-Oct-2026 (Tuesday)" if sym == 'ULTRACEMCO' else "Pending NSE Filing",
+        'exit': "21-Oct-2026 (Wednesday)" if sym == 'ULTRACEMCO' else "Pending NSE Filing",  # was 20-Oct (Tuesday) -- that's Dussehra, a market holiday; T+1 correctly rolls to 21-Oct
         'trades': past_trades
     })
 

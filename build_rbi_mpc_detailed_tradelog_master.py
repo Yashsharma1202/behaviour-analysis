@@ -64,24 +64,35 @@ LOT_SIZES = {
     "WIPRO": 1500, "ONGC": 3750, "TECHM": 600, "ASHOKLEY": 5000, "ADANIGREEN": 500
 }
 
-# 12 Official RBI Monetary Policy Committee (MPC) Announcement Events
-RBI_POLICY_EVENTS = [
-    {"code": "RBI_Oct_2023", "label": "RBI MPC Policy Oct 2023", "date_str": "2023-10-06", "period": "FY 2023-24 Q3 Policy", "ann": "Repo Rate Decision & Stance"},
-    {"code": "RBI_Dec_2023", "label": "RBI MPC Policy Dec 2023", "date_str": "2023-12-08", "period": "FY 2023-24 Q3 Policy", "ann": "Repo Rate Decision & Stance"},
-    {"code": "RBI_Feb_2024", "label": "RBI MPC Policy Feb 2024", "date_str": "2024-02-08", "period": "FY 2023-24 Q4 Policy", "ann": "Repo Rate Decision & Stance"},
-    {"code": "RBI_Apr_2024", "label": "RBI MPC Policy Apr 2024", "date_str": "2024-04-05", "period": "FY 2024-25 Q1 Policy", "ann": "Repo Rate Decision & Stance"},
-    {"code": "RBI_Jun_2024", "label": "RBI MPC Policy Jun 2024", "date_str": "2024-06-07", "period": "FY 2024-25 Q1 Policy", "ann": "Repo Rate Decision & Stance"},
-    {"code": "RBI_Aug_2024", "label": "RBI MPC Policy Aug 2024", "date_str": "2024-08-08", "period": "FY 2024-25 Q2 Policy", "ann": "Repo Rate Decision & Stance"},
-    {"code": "RBI_Oct_2024", "label": "RBI MPC Policy Oct 2024", "date_str": "2024-10-09", "period": "FY 2024-25 Q3 Policy", "ann": "Repo Rate Decision & Stance"},
-    {"code": "RBI_Dec_2024", "label": "RBI MPC Policy Dec 2024", "date_str": "2024-12-06", "period": "FY 2024-25 Q3 Policy", "ann": "Repo Rate Decision & Stance"},
-    {"code": "RBI_Feb_2025", "label": "RBI MPC Policy Feb 2025", "date_str": "2025-02-07", "period": "FY 2024-25 Q4 Policy", "ann": "Repo Rate Cut Announcement"},
-    {"code": "RBI_Apr_2025", "label": "RBI MPC Policy Apr 2025", "date_str": "2025-04-09", "period": "FY 2025-26 Q1 Policy", "ann": "Repo Rate Decision & Stance"},
-    {"code": "RBI_Jun_2025", "label": "RBI MPC Policy Jun 2025", "date_str": "2025-06-06", "period": "FY 2025-26 Q1 Policy", "ann": "Repo Rate Decision & Stance"},
-    {"code": "RBI_Aug_2025", "label": "RBI MPC Policy Aug 2025", "date_str": "2025-08-08", "period": "FY 2025-26 Q2 Policy", "ann": "Repo Rate Decision & Stance"},
-]
+# RBI Monetary Policy Committee (MPC) Announcement Events -- loaded live from
+# rbi_mpc_calendar.py (RBI's own press-release feed + a verified backfill),
+# not hand-typed here. This list used to stop at Aug-2025 (missing 6 meetings
+# that have since happened) and had Aug-2025 itself wrong (08-Aug instead of
+# the real 06-Aug).
+try:
+    from rbi_mpc_calendar import refresh_from_rbi, load_calendar
+    refresh_from_rbi(verbose=False)
+    RBI_POLICY_EVENTS = load_calendar()
+except Exception as _e:
+    print(f"WARNING: rbi_mpc_calendar fetch failed ({_e}); falling back to the last-known-good list below.")
+    RBI_POLICY_EVENTS = [
+        {"code": "RBI_Oct_2023", "label": "RBI MPC Policy Oct 2023", "date_str": "2023-10-06", "period": "FY 2023-24 Q3 Policy", "ann": "Repo Rate Decision & Stance"},
+        {"code": "RBI_Dec_2023", "label": "RBI MPC Policy Dec 2023", "date_str": "2023-12-08", "period": "FY 2023-24 Q3 Policy", "ann": "Repo Rate Decision & Stance"},
+        {"code": "RBI_Feb_2024", "label": "RBI MPC Policy Feb 2024", "date_str": "2024-02-08", "period": "FY 2023-24 Q4 Policy", "ann": "Repo Rate Decision & Stance"},
+        {"code": "RBI_Apr_2024", "label": "RBI MPC Policy Apr 2024", "date_str": "2024-04-05", "period": "FY 2024-25 Q1 Policy", "ann": "Repo Rate Decision & Stance"},
+        {"code": "RBI_Jun_2024", "label": "RBI MPC Policy Jun 2024", "date_str": "2024-06-07", "period": "FY 2024-25 Q1 Policy", "ann": "Repo Rate Decision & Stance"},
+        {"code": "RBI_Aug_2024", "label": "RBI MPC Policy Aug 2024", "date_str": "2024-08-08", "period": "FY 2024-25 Q2 Policy", "ann": "Repo Rate Decision & Stance"},
+        {"code": "RBI_Oct_2024", "label": "RBI MPC Policy Oct 2024", "date_str": "2024-10-09", "period": "FY 2024-25 Q3 Policy", "ann": "Repo Rate Decision & Stance"},
+        {"code": "RBI_Dec_2024", "label": "RBI MPC Policy Dec 2024", "date_str": "2024-12-06", "period": "FY 2024-25 Q3 Policy", "ann": "Repo Rate Decision & Stance"},
+        {"code": "RBI_Feb_2025", "label": "RBI MPC Policy Feb 2025", "date_str": "2025-02-07", "period": "FY 2024-25 Q4 Policy", "ann": "Repo Rate Cut Announcement"},
+        {"code": "RBI_Apr_2025", "label": "RBI MPC Policy Apr 2025", "date_str": "2025-04-09", "period": "FY 2025-26 Q1 Policy", "ann": "Repo Rate Decision & Stance"},
+        {"code": "RBI_Jun_2025", "label": "RBI MPC Policy Jun 2025", "date_str": "2025-06-06", "period": "FY 2025-26 Q1 Policy", "ann": "Repo Rate Decision & Stance"},
+        {"code": "RBI_Aug_2025", "label": "RBI MPC Policy Aug 2025", "date_str": "2025-08-06", "period": "FY 2025-26 Q2 Policy", "ann": "Repo Rate Decision & Stance"},
+    ]
 
 print("Target Universe         : 211 Nifty F&O / Broad Market Stocks")
-print("Target Policy Events    : 12 RBI Monetary Policy Announcements (Oct 2023 – Aug 2025)")
+print(f"Target Policy Events    : {len(RBI_POLICY_EVENTS)} RBI Monetary Policy Announcements "
+      f"({RBI_POLICY_EVENTS[0]['date_str']} .. {RBI_POLICY_EVENTS[-1]['date_str']})")
 print("-" * 90)
 
 rbi_trades = {p['label']: [] for p in RBI_POLICY_EVENTS}
@@ -356,7 +367,7 @@ for qs in rbi_summary_stats:
 # Total Summary Row
 ws_sum.row_dimensions[row_idx].height = 24
 tot_vals = [
-    "TOTAL (12 RBI POLICIES)", "Oct 2023 - Aug 2025", "12 Rate Announcements", tot_all_stocks_slots,
+    f"TOTAL ({len(RBI_POLICY_EVENTS)} RBI POLICIES)", f"{RBI_POLICY_EVENTS[0]['date_str']} - {RBI_POLICY_EVENTS[-1]['date_str']}", f"{len(RBI_POLICY_EVENTS)} Rate Announcements", tot_all_stocks_slots,
     tot_exec_trades, tot_na_trades, round(qual_wr, 2),
     round(qual_net_pnl, 2), round(all_net_pnl, 2), "-", f"{tot_exec_trades} Executed Trades"
 ]
@@ -474,7 +485,7 @@ overall_qual_ret_fund = (tot_qual_pnl_all / tot_qual_margin_all * 100) if tot_qu
 overall_all_ret_fund = (tot_all_pnl_all / tot_margin_all * 100) if tot_margin_all > 0 else 0.0
 
 tot_fund_vals = [
-    "TOTAL (12 RBI POLICIES)", "Oct 2023 - Aug 2025", tot_all_stocks_slots, tot_exec_trades,
+    f"TOTAL ({len(RBI_POLICY_EVENTS)} RBI POLICIES)", f"{RBI_POLICY_EVENTS[0]['date_str']} - {RBI_POLICY_EVENTS[-1]['date_str']}", tot_all_stocks_slots, tot_exec_trades,
     round(qual_wr, 2), round(avg_quarter_margin, 2), round(tot_qual_pnl_all, 2),
     round(overall_qual_ret_fund, 2), round(tot_all_pnl_all, 2), round(overall_all_ret_fund, 2), "Fresh Fund Allocated Per RBI Policy"
 ]

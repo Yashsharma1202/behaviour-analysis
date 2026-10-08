@@ -1,0 +1,171 @@
+[
+  {
+    "code": "RBI_Oct_2023",
+    "label": "RBI MPC Policy Oct 2023",
+    "date_str": "2023-10-06",
+    "period": "FY 2023-24 Q3 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Dec_2023",
+    "label": "RBI MPC Policy Dec 2023",
+    "date_str": "2023-12-08",
+    "period": "FY 2023-24 Q3 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Feb_2024",
+    "label": "RBI MPC Policy Feb 2024",
+    "date_str": "2024-02-08",
+    "period": "FY 2023-24 Q4 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Apr_2024",
+    "label": "RBI MPC Policy Apr 2024",
+    "date_str": "2024-04-05",
+    "period": "FY 2024-25 Q1 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Jun_2024",
+    "label": "RBI MPC Policy Jun 2024",
+    "date_str": "2024-06-07",
+    "period": "FY 2024-25 Q1 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Aug_2024",
+    "label": "RBI MPC Policy Aug 2024",
+    "date_str": "2024-08-08",
+    "period": "FY 2024-25 Q2 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Oct_2024",
+    "label": "RBI MPC Policy Oct 2024",
+    "date_str": "2024-10-09",
+    "period": "FY 2024-25 Q3 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Dec_2024",
+    "label": "RBI MPC Policy Dec 2024",
+    "date_str": "2024-12-06",
+    "period": "FY 2024-25 Q3 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Feb_2025",
+    "label": "RBI MPC Policy Feb 2025",
+    "date_str": "2025-02-07",
+    "period": "FY 2024-25 Q4 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Cut Announcement"
+  },
+  {
+    "code": "RBI_Apr_2025",
+    "label": "RBI MPC Policy Apr 2025",
+    "date_str": "2025-04-09",
+    "period": "FY 2025-26 Q1 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Jun_2025",
+    "label": "RBI MPC Policy Jun 2025",
+    "date_str": "2025-06-06",
+    "period": "FY 2025-26 Q1 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Aug_2025",
+    "label": "RBI MPC Policy Aug 2025",
+    "date_str": "2025-08-06",
+    "period": "FY 2025-26 Q2 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Oct_2025",
+    "label": "RBI MPC Policy Oct 2025",
+    "date_str": "2025-10-01",
+    "period": "FY 2025-26 Q3 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Dec_2025",
+    "label": "RBI MPC Policy Dec 2025",
+    "date_str": "2025-12-05",
+    "period": "FY 2025-26 Q3 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Feb_2026",
+    "label": "RBI MPC Policy Feb 2026",
+    "date_str": "2026-02-06",
+    "period": "FY 2025-26 Q4 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Apr_2026",
+    "label": "RBI MPC Policy Apr 2026",
+    "date_str": "2026-04-08",
+    "period": "FY 2026-27 Q1 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Jun_2026",
+    "label": "RBI MPC Policy Jun 2026",
+    "date_str": "2026-06-05",
+    "period": "FY 2026-27 Q1 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Aug_2026",
+    "label": "RBI MPC Policy Aug 2026",
+    "date_str": "2026-08-05",
+    "period": "FY 2026-27 Q2 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Oct_2026",
+    "label": "RBI MPC Policy Oct 2026",
+    "date_str": "2026-10-07",
+    "period": "FY 2026-27 Q3 Policy",
+    "status": "confirmed",
+    "ann": "Repo Rate Decision & Stance",
+    "source": "RBI pressreleases_rss.xml (live)"
+  },
+  {
+    "code": "RBI_Dec_2026",
+    "label": "RBI MPC Policy Dec 2026",
+    "date_str": "2026-12-04",
+    "period": "FY 2026-27 Q3 Policy",
+    "status": "scheduled",
+    "ann": "Repo Rate Decision & Stance"
+  },
+  {
+    "code": "RBI_Feb_2027",
+    "label": "RBI MPC Policy Feb 2027",
+    "date_str": "2027-02-05",
+    "period": "FY 2026-27 Q4 Policy",
+    "status": "scheduled",
+    "ann": "Repo Rate Decision & Stance"
+  }
+]

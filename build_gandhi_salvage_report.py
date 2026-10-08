@@ -23,9 +23,12 @@ OUT_PDF = os.path.join(BASE, 'Gandhi_MissedPositions_NewEntry_Report.pdf')
 
 MONS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 DAYS = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+# '2026-03-04' removed (not a real NSE holiday -- leftover from Holi's date once
+# being wrongly typed as 04-Mar; real Holi holiday is 03-Mar, kept below).
+# '2026-11-08'/'2026-11-10' (Diwali) added -- were missing entirely.
 HOLS = {'2026-10-20','2026-10-02','2026-11-24','2026-12-25','2026-09-14','2026-01-26',
-        '2026-03-03','2026-03-04','2026-03-26','2026-03-31','2026-04-03','2026-04-14',
-        '2026-05-01','2026-05-28','2026-06-26'}
+        '2026-03-03','2026-03-26','2026-03-31','2026-04-03','2026-04-14',
+        '2026-05-01','2026-05-28','2026-06-26','2026-11-08','2026-11-10'}
 TODAY = date(2026, 9, 28)
 ANCHOR = date(2026, 10, 2)      # Gandhi Jayanti
 SALVAGE = TODAY                 # earliest catch-up session (Mon, trading day)

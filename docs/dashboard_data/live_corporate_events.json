@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01 11:41:23",
+  "generated_at": "2026-10-07 12:03:21",
   "source": "D:\\share_live\\action_cop",
   "scraper_run": "2026-10-01 10:50:17",
   "scraper_feeds_ok": 26,
@@ -331,7 +331,7 @@
       "is_nifty50": true,
       "is_result": true,
       "is_dividend": true,
-      "status": "CONFIRMED",
+      "status": "IMMINENT",
       "fetched_at": "2026-10-01 10:50:17"
     },
     {
@@ -344,7 +344,7 @@
       "is_nifty50": true,
       "is_result": true,
       "is_dividend": true,
-      "status": "CONFIRMED",
+      "status": "IMMINENT",
       "fetched_at": "2026-10-01 10:50:17"
     },
     {
@@ -3329,17 +3329,18 @@
     }
   ],
   "upcoming_rbi_policy": {
-    "title": "RBI Monetary Policy Committee (MPC) Meeting",
-    "meeting_dates": "07-Oct-2026 to 09-Oct-2026",
-    "decision_date": "09-Oct-2026",
+    "title": "RBI Monetary Policy Committee (MPC) Meeting -- RBI MPC Policy Oct 2026",
+    "meeting_dates": "05-Oct-2026 to 07-Oct-2026",
+    "decision_date": "07-Oct-2026",
+    "decision_status": "confirmed",
     "decision_time": "10:00 AM IST",
     "consensus_stance": "Status Quo (Pause at 6.50%)",
     "current_repo_rate": "6.50%",
     "expected_repo_rate": "6.50%",
     "market_consensus_pct": 82.5,
     "policy_bias": "Relief Rally / Pre-Policy Drift Long",
-    "entry_date": "07-Oct-2026 (Wed) @ 09:20 AM IST",
-    "exit_date": "14-Oct-2026 (Wed) / 16-Oct-2026 (Fri)",
+    "entry_date": "05-Oct-2026 (Mon) @ 09:20 AM IST",
+    "exit_date": "12-Oct-2026 (Mon) / 14-Oct-2026 (Wed)",
     "optimal_window": "T-2 to T+5 (76.5% WR on Pause)",
     "nifty_futures_win_rate": 76.5,
     "bank_nifty_futures_win_rate": 81.4,
@@ -3348,8 +3349,8 @@
         "action": "BUY / LONG",
         "instrument": "NIFTY 29-OCT-2026 FUTURES",
         "window": "T-2 to T+5",
-        "entry": "07-Oct-2026 @ 09:20 AM",
-        "exit": "16-Oct-2026 @ 03:15 PM",
+        "entry": "05-Oct-2026 @ 09:20 AM",
+        "exit": "14-Oct-2026 @ 03:15 PM",
         "win_rate": "76.5%",
         "target": "+1.70%",
         "sl": "-0.85%",
@@ -3362,8 +3363,8 @@
         "action": "BUY / LONG",
         "instrument": "BANKNIFTY 29-OCT-2026 FUTURES",
         "window": "T-2 to T+3",
-        "entry": "07-Oct-2026 @ 09:20 AM",
-        "exit": "14-Oct-2026 @ 03:15 PM",
+        "entry": "05-Oct-2026 @ 09:20 AM",
+        "exit": "12-Oct-2026 @ 03:15 PM",
         "win_rate": "81.4%",
         "target": "+2.50%",
         "sl": "-1.20%",
@@ -3375,6 +3376,6 @@
     },
     "source_feed": "NSE Live Corporate Announcements & RBI Monetary Policy Calendar",
     "feed_status": "ACTIVE / SYNCED",
-    "last_synced": "2026-10-01 11:41:23"
+    "last_synced": "2026-10-07 12:03:21"
   }
 }

@@ -160,7 +160,7 @@ for idx, sym in enumerate(NIFTY50, 1):
         
     entry_schedule = "16-Oct-2026 (Friday)" if sym == 'ULTRACEMCO' else "Pending NSE Filing"
     result_schedule = "19-Oct-2026 (Monday)" if sym == 'ULTRACEMCO' else "Pending NSE Filing"
-    exit_schedule = "20-Oct-2026 (Tuesday)" if sym == 'ULTRACEMCO' else "Pending NSE Filing"
+    exit_schedule = "21-Oct-2026 (Wednesday)" if sym == 'ULTRACEMCO' else "Pending NSE Filing"  # was 20-Oct (Tuesday) -- that's Dussehra, a market holiday; T+1 correctly rolls to 21-Oct
 
     q3_results.append({
         'sym': sym,

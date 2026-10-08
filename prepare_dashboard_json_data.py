@@ -80,8 +80,10 @@ print(f"Discovered {len(fo_211_symbols)} F&O Symbols from OI_DATA.")
 
 all_holidays = [
     {'id': 'republic', 'name': 'Republic Day', 'dates': {2022: '2022-01-26', 2023: '2023-01-26', 2024: '2024-01-26', 2025: '2025-01-26'}, 'date_str': '26-Jan-2026 (Mon)', 'desc': 'Pre-Union Budget & Republic Day national rally'},
-    {'id': 'mahashivratri', 'name': 'Mahashivratri', 'dates': {2022: '2022-03-01', 2023: '2023-02-18', 2024: '2024-03-08', 2025: '2025-02-26'}, 'date_str': '03-Mar-2026 (Tue)', 'desc': 'Festival accumulation momentum play'},
-    {'id': 'holi', 'name': 'Holi Festival', 'dates': {2022: '2022-03-18', 2023: '2023-03-07', 2024: '2024-03-25', 2025: '2025-03-14'}, 'date_str': '14-Mar-2026 (Sat)', 'desc': 'Pre-Holi FMCG & Consumer discretionary surge'},
+    # 2026 dates below are NSE live-holiday-calendar-confirmed (were hand-typed wrong:
+    # mahashivratri had Holi's date, holi had 2025's date copied forward).
+    {'id': 'mahashivratri', 'name': 'Mahashivratri', 'dates': {2022: '2022-03-01', 2023: '2023-02-18', 2024: '2024-03-08', 2025: '2025-02-26', 2026: '2026-02-15'}, 'date_str': '15-Feb-2026 (Sun)', 'desc': 'Festival accumulation momentum play'},
+    {'id': 'holi', 'name': 'Holi Festival', 'dates': {2022: '2022-03-18', 2023: '2023-03-07', 2024: '2024-03-25', 2025: '2025-03-14', 2026: '2026-03-03'}, 'date_str': '03-Mar-2026 (Tue)', 'desc': 'Pre-Holi FMCG & Consumer discretionary surge'},
     {'id': 'ramnavami', 'name': 'Shri Ram Navami', 'dates': {2022: '2022-04-10', 2023: '2023-03-30', 2024: '2024-04-17', 2025: '2025-04-06'}, 'date_str': '26-Mar-2026 (Thu)', 'desc': 'Ram Navami seasonal liquidity injection'},
     {'id': 'mahavir', 'name': 'Shri Mahavir Jayanti', 'dates': {2022: '2022-04-14', 2023: '2023-04-04', 2024: '2024-04-21', 2025: '2025-04-10'}, 'date_str': '31-Mar-2026 (Tue)', 'desc': 'FY Financial Year-End closing rally'},
     {'id': 'goodfriday', 'name': 'Good Friday', 'dates': {2022: '2022-04-15', 2023: '2023-04-07', 2024: '2024-03-29', 2025: '2025-04-18'}, 'date_str': '03-Apr-2026 (Fri)', 'desc': 'Easter long weekend profit booking'},
@@ -93,7 +95,7 @@ all_holidays = [
     {'id': 'ganesh', 'name': 'Ganesh Chaturthi', 'dates': {2022: '2022-08-31', 2023: '2023-09-19', 2024: '2024-09-07', 2025: '2025-08-27'}, 'date_str': '14-Sep-2026 (Mon)', 'desc': 'Ganesh Utsav festive shopping & auto sales boost'},
     {'id': 'gandhi', 'name': 'Mahatma Gandhi Jayanti', 'dates': {2022: '2022-10-02', 2023: '2023-10-02', 2024: '2024-10-02', 2025: '2025-10-02'}, 'date_str': '02-Oct-2026 (Fri)', 'desc': 'Q3 October festival season kickoff'},
     {'id': 'dussehra', 'name': 'Dussehra / Dasera', 'dates': {2022: '2022-10-05', 2023: '2023-10-24', 2024: '2024-10-12', 2025: '2025-10-02'}, 'date_str': '20-Oct-2026 (Tue)', 'desc': 'Navratri & Vijayadashami high-win accumulation'},
-    {'id': 'diwali', 'name': 'Diwali (Laxmi Pujan)', 'dates': {2022: '2022-10-24', 2023: '2023-11-12', 2024: '2024-11-01', 2025: '2025-10-20'}, 'date_str': '21-Oct-2026 (Wed)', 'desc': 'Samvat New Year Muhurat & festive buying surge'},
+    {'id': 'diwali', 'name': 'Diwali (Laxmi Pujan)', 'dates': {2022: '2022-10-24', 2023: '2023-11-12', 2024: '2024-11-01', 2025: '2025-10-21'}, 'date_str': '08-Nov-2026 (Sun)', 'desc': 'Samvat New Year Muhurat & festive buying surge'},  # was 2025-10-20 (Balipratipada, not Laxmi Pujan) and 2026 date_str was stale 21-Oct-2026 -- both web-verified and fixed
     {'id': 'gurunanak', 'name': 'Gurunanak Jayanti', 'dates': {2022: '2022-11-08', 2023: '2023-11-27', 2024: '2024-11-15', 2025: '2025-11-05'}, 'date_str': '24-Nov-2026 (Tue)', 'desc': 'Post-Diwali momentum continuation'},
     {'id': 'christmas', 'name': 'Christmas & Year-End', 'dates': {2022: '2022-12-25', 2023: '2023-12-25', 2024: '2024-12-25', 2025: '2025-12-25'}, 'date_str': '25-Dec-2026 (Fri)', 'desc': 'Global FII year-end book closing & tax loss harvesting'}
 ]

@@ -9,6 +9,8 @@ import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
+from nse_trading_calendar import load_trading_holidays, add_trading_days
+
 sys.stdout.reconfigure(encoding='utf-8')
 
 ROOT = pathlib.Path(r"D:\behaviour analysis")
@@ -35,6 +37,8 @@ low_list = df_fut['LOW'].astype(float).tolist()
 date_to_idx = {d: i for i, d in enumerate(dates_list)}
 
 print(f"Loaded {len(dates_list)} trading days from {dates_list[0]} to {dates_list[-1]}")
+
+NSE_2026_HOLIDAYS = load_trading_holidays()
 
 # 2. Comprehensive 26-Year Historical Calendar of NSE Market Holidays (2000–2026)
 # Maps each recurring occasion to its observed dates per year across the 26-year dataset.
@@ -67,8 +71,11 @@ holidays_def = [
             2004: '2004-10-22', 2005: '2005-10-12', 2006: '2006-10-02', 2007: '2007-10-20',
             2008: '2008-10-09', 2009: '2009-09-28', 2010: '2010-10-17', 2011: '2011-10-06',
             2012: '2012-10-24', 2013: '2013-10-13', 2014: '2014-10-03', 2015: '2015-10-22',
-            2016: '2016-10-11', 2017: '2017-09-30', 2018: '2018-10-19', 2019: '2019-10-08',
-            2020: '2020-10-26', 2021: '2021-10-15', 2022: '2022-10-05', 2023: '2023-10-24',
+            2016: '2016-10-11', 2017: '2017-09-30',
+            # 2018 and 2020 were hand-typed to the regional (Bengal-only) variant date;
+            # NSE's own closure date is one day earlier -- web-verified and fixed.
+            2018: '2018-10-18', 2019: '2019-10-08',
+            2020: '2020-10-25', 2021: '2021-10-15', 2022: '2022-10-05', 2023: '2023-10-24',
             2024: '2024-10-12', 2025: '2025-10-02'
         },
         'desc': 'Navratri into Vijayadashami festive momentum & seasonal liquidity injection'
@@ -79,14 +86,20 @@ holidays_def = [
         'category': 'Festival of Lights',
         '2026_date': '2026-11-08',
         '2026_date_str': '08-Nov-2026 (Sun)',
+        # Web-verified against NSE's own circulars/press releases. In most years NSE
+        # declares two consecutive Diwali holidays -- Laxmi Pujan (the actual Diwali
+        # day) and the next day's Balipratipada. 13 of these 26 years had the
+        # Balipratipada (or a regional-variant) date stored here instead of Laxmi
+        # Pujan -- fixed below (each a day or two off, not a labeling preference):
+        # 2002, 2004, 2006, 2008, 2012, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2025.
         'dates': {
-            2000: '2000-10-27', 2001: '2001-11-16', 2002: '2002-11-06', 2003: '2003-10-27',
-            2004: '2004-11-15', 2005: '2005-11-03', 2006: '2006-10-24', 2007: '2007-11-12',
-            2008: '2008-10-30', 2009: '2009-10-19', 2010: '2010-11-05', 2011: '2011-10-27',
-            2012: '2012-11-14', 2013: '2013-11-04', 2014: '2014-10-24', 2015: '2015-11-12',
-            2016: '2016-10-31', 2017: '2017-10-20', 2018: '2018-11-08', 2019: '2019-10-28',
-            2020: '2020-11-16', 2021: '2021-11-05', 2022: '2022-10-24', 2023: '2023-11-12',
-            2024: '2024-11-01', 2025: '2025-10-20'
+            2000: '2000-10-27', 2001: '2001-11-16', 2002: '2002-11-04', 2003: '2003-10-27',
+            2004: '2004-11-12', 2005: '2005-11-03', 2006: '2006-10-21', 2007: '2007-11-12',
+            2008: '2008-10-28', 2009: '2009-10-19', 2010: '2010-11-05', 2011: '2011-10-27',
+            2012: '2012-11-13', 2013: '2013-11-04', 2014: '2014-10-23', 2015: '2015-11-11',
+            2016: '2016-10-31', 2017: '2017-10-19', 2018: '2018-11-07', 2019: '2019-10-27',
+            2020: '2020-11-14', 2021: '2021-11-04', 2022: '2022-10-24', 2023: '2023-11-12',
+            2024: '2024-11-01', 2025: '2025-10-21'
         },
         'desc': 'Samvat New Year Muhurat trading, festive demand surge & pre-Diwali run-up'
     },
@@ -145,8 +158,10 @@ holidays_def = [
         'id': 'mahashivratri',
         'name': 'Mahashivratri',
         'category': 'Festival',
-        '2026_date': '2026-03-03',
-        '2026_date_str': '03-Mar-2026 (Tue)',
+        # 2026 was hand-typed as 03-Mar-2026 (actually Holi's date, see below) --
+        # NSE's live holiday-master API confirms Mahashivratri 2026 is 15-Feb-2026.
+        '2026_date': '2026-02-15',
+        '2026_date_str': '15-Feb-2026 (Sun)',
         'dates': {
             2001: '2001-02-21', 2002: '2002-03-12', 2003: '2003-03-01', 2004: '2004-02-18',
             2005: '2005-03-08', 2006: '2006-02-26', 2007: '2007-02-16', 2008: '2008-03-06',
@@ -154,7 +169,7 @@ holidays_def = [
             2013: '2013-03-10', 2014: '2014-02-27', 2015: '2015-02-17', 2016: '2016-03-07',
             2017: '2017-02-24', 2018: '2018-02-13', 2019: '2019-03-04', 2020: '2020-02-21',
             2021: '2021-03-11', 2022: '2022-03-01', 2023: '2023-02-18', 2024: '2024-03-08',
-            2025: '2025-02-26', 2026: '2026-03-03'
+            2025: '2025-02-26', 2026: '2026-02-15'
         },
         'desc': 'Late winter festival accumulation momentum play'
     },
@@ -162,8 +177,10 @@ holidays_def = [
         'id': 'holi',
         'name': 'Holi Festival',
         'category': 'Festival',
-        '2026_date': '2026-03-14',
-        '2026_date_str': '14-Mar-2026 (Sat)',
+        # 2026 was hand-typed as 14-Mar-2026 (a copy of 2025's date, 2025-03-14) --
+        # NSE's live holiday-master API confirms Holi 2026 is 03-Mar-2026.
+        '2026_date': '2026-03-03',
+        '2026_date_str': '03-Mar-2026 (Tue)',
         'dates': {
             2001: '2001-03-10', 2002: '2002-03-29', 2003: '2003-03-18', 2004: '2004-03-05',
             2005: '2005-03-25', 2006: '2006-03-15', 2007: '2007-03-27', 2008: '2008-03-22',
@@ -171,7 +188,7 @@ holidays_def = [
             2013: '2013-03-27', 2014: '2014-03-17', 2015: '2015-03-06', 2016: '2016-03-24',
             2017: '2017-03-13', 2018: '2018-03-02', 2019: '2019-03-21', 2020: '2020-03-10',
             2021: '2021-03-29', 2022: '2022-03-18', 2023: '2023-03-07', 2024: '2024-03-25',
-            2025: '2025-03-14'
+            2025: '2025-03-14', 2026: '2026-03-03'
         },
         'desc': 'Spring festival consumption surge and pre-Holi equity momentum'
     },
@@ -471,24 +488,20 @@ for h in holidays_def:
                 
     # Upcoming execution dates for 2026
     h_2026_dt = pd.to_datetime(h['2026_date']).date()
-    # Find index in continuous series
-    idx_2026 = -1
-    for i, d in enumerate(dates_list):
-        if d <= h_2026_dt:
-            idx_2026 = i
-        else:
-            break
-            
+
     n_opt = best['n']
     m_opt = best['m']
-    
-    # Calculate upcoming 2026 execution window
-    # If 2026 date is in future, calculate from last known date or calendar
-    entry_2026_idx = max(0, idx_2026 - n_opt)
-    exit_2026_idx = min(len(dates_list) - 1, idx_2026 + m_opt)
-    
-    entry_2026_str = dates_list[entry_2026_idx].strftime('%d-%b-%Y (%a)') if idx_2026 < len(dates_list) else 'TBD'
-    exit_2026_str = dates_list[exit_2026_idx].strftime('%d-%b-%Y (%a)') if idx_2026 < len(dates_list) else 'TBD'
+
+    # Computed from NSE's live 2026 holiday calendar directly on the real target
+    # date, not by scanning the loaded price series for "last row <= target" --
+    # that scan silently landed on the series' LAST row whenever the holiday's
+    # 2026 date is still in the future (price data for a future date doesn't
+    # exist yet), producing a nonsense "window" built from whatever few days
+    # happened to be most recently loaded instead of a real forward projection.
+    entry_2026_dt = add_trading_days(pd.Timestamp(h_2026_dt), -n_opt, NSE_2026_HOLIDAYS)
+    exit_2026_dt = add_trading_days(pd.Timestamp(h_2026_dt), m_opt, NSE_2026_HOLIDAYS)
+    entry_2026_str = entry_2026_dt.strftime('%d-%b-%Y (%a)')
+    exit_2026_str = exit_2026_dt.strftime('%d-%b-%Y (%a)')
     
     item = {
         'id': h['id'],

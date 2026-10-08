@@ -20,9 +20,12 @@ EV = json.load(open(os.path.join(DD, 'event_dashboard_data.json'), encoding='utf
 FO = {f['symbol']: f for f in json.load(open(os.path.join(DD, 'fo_stocks_211.json'), encoding='utf-8'))}
 
 # ---------- trading calendar (mirror dashboard) ----------
-NSE_2026 = {'2026-01-26','2026-03-03','2026-03-04','2026-03-26','2026-03-31','2026-04-03',
+# '2026-03-04' removed (not a real NSE holiday -- leftover from Holi's date once
+# being wrongly typed as 04-Mar; real Holi holiday is 03-Mar, kept below).
+# '2026-11-08'/'2026-11-10' (Diwali) added -- were missing entirely.
+NSE_2026 = {'2026-01-26','2026-03-03','2026-03-26','2026-03-31','2026-04-03',
             '2026-04-14','2026-05-01','2026-05-28','2026-06-26','2026-09-14','2026-10-02',
-            '2026-10-20','2026-11-24','2026-12-25'}
+            '2026-10-20','2026-11-08','2026-11-10','2026-11-24','2026-12-25'}
 _MONS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 def trading(d): return d.weekday() < 5 and d.isoformat() not in NSE_2026
 def shift(anchor, n):
