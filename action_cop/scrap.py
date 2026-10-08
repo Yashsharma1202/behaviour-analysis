@@ -77,6 +77,7 @@ from urllib.parse import quote
 
 import pandas as pd
 import requests
+from openpyxl.cell.cell import ILLEGAL_CHARACTERS_RE
 
 # ---------------------------------------------------------------------------
 # Config
@@ -324,6 +325,16 @@ def clean_dataframe(df):
     df = df.dropna(how="all", axis=1)
     for col in df.columns:
         df[col] = df[col].apply(lambda x: str(x) if isinstance(x, (dict, list)) else x)
+    # NSE announcement text occasionally carries raw control characters (e.g. a
+    # literal vertical-tab in a GAIL filing) that openpyxl refuses to write --
+    # it raises IllegalCharacterError and the whole feed fails save_feed()
+    # entirely, with 01_Dashboard_Summary and 02_Announcements hitting this
+    # repeatedly. Strip them the same way openpyxl's own writer would reject
+    # them, instead of losing the whole feed over one bad cell.
+    for col in df.select_dtypes(include="object").columns:
+        df[col] = df[col].apply(
+            lambda x: ILLEGAL_CHARACTERS_RE.sub("", x) if isinstance(x, str) else x
+        )
     return df
 
 
