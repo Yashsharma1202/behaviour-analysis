@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-07 12:03:21",
+  "generated_at": "2026-10-08 16:35:06",
   "source": "D:\\share_live\\action_cop",
   "scraper_run": "2026-10-01 10:50:17",
   "scraper_feeds_ok": 26,
-  "total_upcoming_board_meetings": 92,
+  "total_upcoming_board_meetings": 160,
   "total_corporate_actions": 67,
   "total_recent_deals": 50,
   "total_announcements": 60,
-  "announced_q3_count": 68,
+  "announced_q3_count": 129,
   "upcoming_board_meetings": [
     {
       "symbol": "PERSISTENT",
@@ -20,7 +20,7 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "PERSISTENT",
@@ -33,20 +33,7 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "CANBK",
-      "company_name": "Canara Bank",
-      "date": "03-Sep-2026",
-      "raw_date": "2026-09-03",
-      "purpose": "Fund Raising",
-      "description": "To consider Fund Raising",
-      "is_nifty50": false,
-      "is_result": false,
-      "is_dividend": false,
-      "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "CANBK",
@@ -59,7 +46,20 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "CANBK",
+      "company_name": "Canara Bank",
+      "date": "03-Sep-2026",
+      "raw_date": "2026-09-03",
+      "purpose": "Fund Raising",
+      "description": "To consider Fund Raising",
+      "is_nifty50": false,
+      "is_result": false,
+      "is_dividend": false,
+      "status": "COMPLETED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "PNBHOUSING",
@@ -72,7 +72,7 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "PNBHOUSING",
@@ -85,7 +85,20 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "RBLBANK",
+      "company_name": "RBL Bank Limited",
+      "date": "07-Sep-2026",
+      "raw_date": "2026-09-07",
+      "purpose": "Fund Raising",
+      "description": "To consider Fund Raising",
+      "is_nifty50": false,
+      "is_result": false,
+      "is_dividend": false,
+      "status": "COMPLETED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "RBLBANK",
@@ -98,20 +111,7 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "RBLBANK",
-      "company_name": "RBL Bank Limited",
-      "date": "07-Sep-2026",
-      "raw_date": "2026-09-07",
-      "purpose": "Fund Raising",
-      "description": "To consider Fund Raising",
-      "is_nifty50": false,
-      "is_result": false,
-      "is_dividend": false,
-      "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "UNOMINDA",
@@ -124,7 +124,7 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "UNOMINDA",
@@ -137,7 +137,7 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "BAJAJHLDNG",
@@ -150,7 +150,7 @@
       "is_result": false,
       "is_dividend": true,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "BAJAJHLDNG",
@@ -163,20 +163,7 @@
       "is_result": false,
       "is_dividend": true,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "FEDERALBNK",
-      "company_name": "The Federal Bank Limited",
-      "date": "17-Sep-2026",
-      "raw_date": "2026-09-17",
-      "purpose": "Board Meeting Intimation",
-      "description": "The Federal Bank  Limited has informed the Exchange about Board Meeting to be held on 17-Sep-2026 to consider Fund raising.",
-      "is_nifty50": false,
-      "is_result": false,
-      "is_dividend": false,
-      "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "FEDERALBNK",
@@ -189,33 +176,20 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "VEDL",
-      "company_name": "Vedanta Limited",
-      "date": "18-Sep-2026",
-      "raw_date": "2026-09-18",
-      "purpose": "Fund Raising",
-      "description": "Intimation of Meeting of Committee of Directors proposed to be held on Friday, September 18, 2026 to consider the proposal for issuance of Non-Convertible Debentures",
+      "symbol": "FEDERALBNK",
+      "company_name": "The Federal Bank Limited",
+      "date": "17-Sep-2026",
+      "raw_date": "2026-09-17",
+      "purpose": "Board Meeting Intimation",
+      "description": "The Federal Bank  Limited has informed the Exchange about Board Meeting to be held on 17-Sep-2026 to consider Fund raising.",
       "is_nifty50": false,
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "POWERGRID",
-      "company_name": "Power Grid Corporation of India Limited",
-      "date": "18-Sep-2026",
-      "raw_date": "2026-09-18",
-      "purpose": "Board Meeting Intimation",
-      "description": "Power Grid Corporation of India Limited has informed the Exchange about Board Meeting to be held on 18-Sep-2026 to consider Fund raising.",
-      "is_nifty50": true,
-      "is_result": false,
-      "is_dividend": false,
-      "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "POWERGRID",
@@ -228,7 +202,20 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "POWERGRID",
+      "company_name": "Power Grid Corporation of India Limited",
+      "date": "18-Sep-2026",
+      "raw_date": "2026-09-18",
+      "purpose": "Board Meeting Intimation",
+      "description": "Power Grid Corporation of India Limited has informed the Exchange about Board Meeting to be held on 18-Sep-2026 to consider Fund raising.",
+      "is_nifty50": true,
+      "is_result": false,
+      "is_dividend": false,
+      "status": "COMPLETED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "VEDL",
@@ -241,7 +228,20 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "VEDL",
+      "company_name": "Vedanta Limited",
+      "date": "18-Sep-2026",
+      "raw_date": "2026-09-18",
+      "purpose": "Fund Raising",
+      "description": "Intimation of Meeting of Committee of Directors proposed to be held on Friday, September 18, 2026 to consider the proposal for issuance of Non-Convertible Debentures",
+      "is_nifty50": false,
+      "is_result": false,
+      "is_dividend": false,
+      "status": "COMPLETED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "FORCEMOT",
@@ -254,7 +254,7 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "FORCEMOT",
@@ -267,7 +267,7 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "POWERGRID",
@@ -280,7 +280,7 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "POWERGRID",
@@ -293,20 +293,7 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "BAJFINANCE",
-      "company_name": "Bajaj Finance Limited",
-      "date": "01-Oct-2026",
-      "raw_date": "2026-10-01",
-      "purpose": "Fund Raising",
-      "description": "To consider, inter alia, proposal for raising of funds through any or all of various methods including by way of preferential issue, qualified institutions placement, subject to such regulatory/statutory approvals as may be required, including approval of the shareholders of the Company.",
-      "is_nifty50": true,
-      "is_result": false,
-      "is_dividend": false,
-      "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "BAJFINANCE",
@@ -319,7 +306,20 @@
       "is_result": false,
       "is_dividend": false,
       "status": "COMPLETED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "BAJFINANCE",
+      "company_name": "Bajaj Finance Limited",
+      "date": "01-Oct-2026",
+      "raw_date": "2026-10-01",
+      "purpose": "Fund Raising",
+      "description": "To consider, inter alia, proposal for raising of funds through any or all of various methods including by way of preferential issue, qualified institutions placement, subject to such regulatory/statutory approvals as may be required, including approval of the shareholders of the Company.",
+      "is_nifty50": true,
+      "is_result": false,
+      "is_dividend": false,
+      "status": "COMPLETED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "TCS",
@@ -331,8 +331,8 @@
       "is_nifty50": true,
       "is_result": true,
       "is_dividend": true,
-      "status": "IMMINENT",
-      "fetched_at": "2026-10-01 10:50:17"
+      "status": "COMPLETED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "TCS",
@@ -344,8 +344,99 @@
       "is_nifty50": true,
       "is_result": true,
       "is_dividend": true,
+      "status": "COMPLETED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "VEDL",
+      "company_name": "Vedanta Limited",
+      "date": "08-Oct-2026",
+      "raw_date": "2026-10-08",
+      "purpose": "Dividend",
+      "description": "To consider 1st Interim dividend, if any",
+      "is_nifty50": false,
+      "is_result": false,
+      "is_dividend": true,
+      "status": "COMPLETED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "VEDL",
+      "company_name": "Vedanta Limited",
+      "date": "08-Oct-2026",
+      "raw_date": "2026-10-08",
+      "purpose": "Board Meeting Intimation",
+      "description": "VEDANTA LIMITED has informed the Exchange about Board Meeting to be held on 08-Oct-2026 to consider Dividend.",
+      "is_nifty50": false,
+      "is_result": false,
+      "is_dividend": true,
+      "status": "COMPLETED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "DMART",
+      "company_name": "Avenue Supermarts Limited",
+      "date": "10-Oct-2026",
+      "raw_date": "2026-10-10",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
       "status": "IMMINENT",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "DMART",
+      "company_name": "Avenue Supermarts Limited",
+      "date": "10-Oct-2026",
+      "raw_date": "2026-10-10",
+      "purpose": "Board Meeting Intimation",
+      "description": "AVENUE SUPERMARTS LIMITED has informed the Exchange about Board Meeting to be held on 10-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "IMMINENT",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "RBLBANK",
+      "company_name": "RBL Bank Limited",
+      "date": "12-Oct-2026",
+      "raw_date": "2026-10-12",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "IMMINENT",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "company_name": "Sun Pharmaceutical Industries Limited",
+      "date": "12-Oct-2026",
+      "raw_date": "2026-10-12",
+      "purpose": "Other business matters",
+      "description": "Board meeting intimation for consideration and approval of the issuance of listed, rated, unsecured, redeemable, non-convertible debentures",
+      "is_nifty50": true,
+      "is_result": false,
+      "is_dividend": false,
+      "status": "IMMINENT",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "company_name": "Sun Pharmaceutical Industries Limited",
+      "date": "12-Oct-2026",
+      "raw_date": "2026-10-12",
+      "purpose": "Board Meeting Intimation",
+      "description": "Sun Pharamceutical Industries Limited has informed the Exchange about Board Meeting to be held on 12-Oct-2026 to consider Fund raising.",
+      "is_nifty50": true,
+      "is_result": false,
+      "is_dividend": false,
+      "status": "IMMINENT",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "HCLTECH",
@@ -357,8 +448,8 @@
       "is_nifty50": true,
       "is_result": true,
       "is_dividend": true,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "status": "IMMINENT",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "HCLTECH",
@@ -370,21 +461,21 @@
       "is_nifty50": true,
       "is_result": true,
       "is_dividend": true,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "status": "IMMINENT",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "ICICIPRULI",
-      "company_name": "ICICI Prudential Life Insurance Company Limited",
-      "date": "13-Oct-2026",
-      "raw_date": "2026-10-13",
-      "purpose": "Financial Results",
-      "description": "To consider and approve the unaudited standalone financial statements and financial results of the Company for the quarter and half year ended September 30, 2026.",
+      "symbol": "RBLBANK",
+      "company_name": "RBL Bank Limited",
+      "date": "12-Oct-2026",
+      "raw_date": "2026-10-12",
+      "purpose": "Board Meeting Intimation",
+      "description": "RBL Bank Limited has informed the Exchange about Board Meeting to be held on 12-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
       "is_nifty50": false,
       "is_result": true,
       "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "status": "IMMINENT",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "ICICIPRULI",
@@ -397,33 +488,46 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "ICICIGI",
-      "company_name": "ICICI Lombard General Insurance Company Limited",
-      "date": "14-Oct-2026",
-      "raw_date": "2026-10-14",
-      "purpose": "Financial Results/Dividend",
-      "description": "To consider and approve the financial results for the period ended September 30, 2026 and declaration of interim dividend, if any",
-      "is_nifty50": false,
-      "is_result": true,
-      "is_dividend": true,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "BHEL",
-      "company_name": "Bharat Heavy Electricals Limited",
-      "date": "14-Oct-2026",
-      "raw_date": "2026-10-14",
-      "purpose": "Board Meeting Intimation",
-      "description": "BHARAT HEAVY ELECTRICALS LIMITED has informed the Exchange about Board Meeting to be held on 14-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+      "symbol": "ICICIPRULI",
+      "company_name": "ICICI Prudential Life Insurance Company Limited",
+      "date": "13-Oct-2026",
+      "raw_date": "2026-10-13",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the unaudited standalone financial statements and financial results of the Company for the quarter and half year ended September 30, 2026.",
       "is_nifty50": false,
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "TATAELXSI",
+      "company_name": "Tata Elxsi Limited",
+      "date": "13-Oct-2026",
+      "raw_date": "2026-10-13",
+      "purpose": "Board Meeting Intimation",
+      "description": "TATA ELXSI LIMITED has informed the Exchange about Board Meeting to be held on 13-Oct-2026 to inter-alia consider and approve the Audited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "TATAELXSI",
+      "company_name": "Tata Elxsi Limited",
+      "date": "13-Oct-2026",
+      "raw_date": "2026-10-13",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "BHEL",
@@ -436,7 +540,33 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "BHEL",
+      "company_name": "Bharat Heavy Electricals Limited",
+      "date": "14-Oct-2026",
+      "raw_date": "2026-10-14",
+      "purpose": "Board Meeting Intimation",
+      "description": "BHARAT HEAVY ELECTRICALS LIMITED has informed the Exchange about Board Meeting to be held on 14-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "ICICIGI",
+      "company_name": "ICICI Lombard General Insurance Company Limited",
+      "date": "14-Oct-2026",
+      "raw_date": "2026-10-14",
+      "purpose": "Financial Results/Dividend",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026 and declaration of interim dividend, if any",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "ICICIGI",
@@ -449,20 +579,20 @@
       "is_result": true,
       "is_dividend": true,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "HDFCLIFE",
-      "company_name": "HDFC Life Insurance Company Limited",
+      "symbol": "IRFC",
+      "company_name": "Indian Railway Finance Corporation Limited",
       "date": "15-Oct-2026",
       "raw_date": "2026-10-15",
-      "purpose": "Financial Results/Fund Raising",
-      "description": "To consider and approve the financial results for the period ended September 30, 2026 and Fund Raising",
-      "is_nifty50": true,
+      "purpose": "Board Meeting Intimation",
+      "description": "INDIAN RAILWAY FINANCE CORPORATIOM LIMITED has informed the Exchange about Board Meeting to be held on 15-Oct-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Dividend/Other business.",
+      "is_nifty50": false,
       "is_result": true,
-      "is_dividend": false,
+      "is_dividend": true,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "HDFCLIFE",
@@ -475,85 +605,20 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "HDFCAMC",
-      "company_name": "HDFC Asset Management Company Limited",
+      "symbol": "HDFCLIFE",
+      "company_name": "HDFC Life Insurance Company Limited",
       "date": "15-Oct-2026",
       "raw_date": "2026-10-15",
-      "purpose": "Financial Results",
-      "description": "To consider and approve the financial results for the period ended September 30, 2026",
-      "is_nifty50": false,
-      "is_result": true,
-      "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "TECHM",
-      "company_name": "Tech Mahindra Limited",
-      "date": "15-Oct-2026",
-      "raw_date": "2026-10-15",
-      "purpose": "Financial Results/Dividend/Bonus/Other business matters",
-      "description": "To consider and approve the financial results for the period ended September 30, 2026, dividend, bonus and other business matters",
-      "is_nifty50": true,
-      "is_result": true,
-      "is_dividend": true,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "TECHM",
-      "company_name": "Tech Mahindra Limited",
-      "date": "15-Oct-2026",
-      "raw_date": "2026-10-15",
-      "purpose": "Board Meeting Intimation",
-      "description": "TECH MAHINDRA LIMITED has informed the Exchange about Board Meeting to be held on 15-Oct-2026 to consider and approve the Quarterly Audited Financial results of the Company for the period ended September 2026 and Dividend/Bonus/Other business.",
-      "is_nifty50": true,
-      "is_result": true,
-      "is_dividend": true,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "NESTLEIND",
-      "company_name": "Nestle India Limited",
-      "date": "15-Oct-2026",
-      "raw_date": "2026-10-15",
-      "purpose": "Financial Results",
-      "description": "To consider and approve the unaudited financial results (standalone and consolidated) for the second quarter and half year ending September 30, 2026",
+      "purpose": "Financial Results/Fund Raising",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026 and Fund Raising",
       "is_nifty50": true,
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "ANGELONE",
-      "company_name": "Angel One Limited",
-      "date": "15-Oct-2026",
-      "raw_date": "2026-10-15",
-      "purpose": "Board Meeting Intimation",
-      "description": "ANGEL ONE LIMITED has informed the Exchange about Board Meeting to be held on 15-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-      "is_nifty50": false,
-      "is_result": true,
-      "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "ANGELONE",
-      "company_name": "Angel One Limited",
-      "date": "15-Oct-2026",
-      "raw_date": "2026-10-15",
-      "purpose": "Financial Results",
-      "description": "To consider and approve the financial results for the period ended September 30, 2026",
-      "is_nifty50": false,
-      "is_result": true,
-      "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "HDFCAMC",
@@ -566,7 +631,33 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "LTF",
+      "company_name": "L&T Finance Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Board Meeting Intimation",
+      "description": "L&T Finance Limited has informed the Exchange about Board Meeting to be held on 15-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "LTF",
+      "company_name": "L&T Finance Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "NESTLEIND",
@@ -579,7 +670,280 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "IRFC",
+      "company_name": "Indian Railway Finance Corporation Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Financial Results/Dividend",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026 and dividend",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "HDFCAMC",
+      "company_name": "HDFC Asset Management Company Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "360ONE",
+      "company_name": "360 ONE WAM LIMITED",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Board Meeting Intimation",
+      "description": "360 ONE WAM LIMITED has informed the Exchange about Board Meeting to be held on 15-Oct-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Dividend.",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "PERSISTENT",
+      "company_name": "Persistent Systems Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Financial Results/Other business matters",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026 and other business matters",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "360ONE",
+      "company_name": "360 ONE WAM LIMITED",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Financial Results/Dividend",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026 and second interim dividend for FY 2026-27",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "WIPRO",
+      "company_name": "Wipro Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Financial Results",
+      "description": "Pursuant to Regulation 29(1) of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, it is hereby informed that the next meeting of the Board of Directors of Wipro Limited ( the Company ) will be held over October 14-15, 2026 to consider and approve, inter alia:a) the condensed audited standalone and consolidated financial results of the Company under lndAS for the quarter and half year ended September 30, 2026.b) the condensed audited consolidated financial results of the Company under IFRS for the quarter and half year ended September 30, 2026.",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "WIPRO",
+      "company_name": "Wipro Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Board Meeting Intimation",
+      "description": "WIPRO LIMITED has informed the Exchange about Board Meeting to be held on 15-Oct-2026 to inter-alia consider and approve the Audited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "ANGELONE",
+      "company_name": "Angel One Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Dividend",
+      "description": "Intimation of Board Meeting for Declaration of Interim Dividend and Record date pursuant to Regulation 29 and 42 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 (\"Listing Regulations\").",
+      "is_nifty50": false,
+      "is_result": false,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "ANGELONE",
+      "company_name": "Angel One Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Board Meeting Intimation",
+      "description": "ANGEL ONE LIMITED has informed the Exchange about Board Meeting to be held on 15-Oct-2026 to consider Dividend.",
+      "is_nifty50": false,
+      "is_result": false,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "ANGELONE",
+      "company_name": "Angel One Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Board Meeting Intimation",
+      "description": "ANGEL ONE LIMITED has informed the Exchange about Board Meeting to be held on 15-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "NESTLEIND",
+      "company_name": "Nestle India Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the unaudited financial results (standalone and consolidated) for the second quarter and half year ending September 30, 2026",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "ANGELONE",
+      "company_name": "Angel One Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "TECHM",
+      "company_name": "Tech Mahindra Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Financial Results/Dividend/Bonus/Other business matters",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026, dividend, bonus and other business matters",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "TECHM",
+      "company_name": "Tech Mahindra Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Board Meeting Intimation",
+      "description": "TECH MAHINDRA LIMITED has informed the Exchange about Board Meeting to be held on 15-Oct-2026 to consider and approve the Quarterly Audited Financial results of the Company for the period ended September 2026 and Dividend/Bonus/Other business.",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "POLYCAB",
+      "company_name": "Polycab India Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "POLYCAB",
+      "company_name": "Polycab India Limited",
+      "date": "15-Oct-2026",
+      "raw_date": "2026-10-15",
+      "purpose": "Board Meeting Intimation",
+      "description": "POLYCAB INDIA LIMITED has informed the Exchange about Board Meeting to be held on 15-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "FEDERALBNK",
+      "company_name": "The Federal Bank Limited",
+      "date": "16-Oct-2026",
+      "raw_date": "2026-10-16",
+      "purpose": "Board Meeting Intimation",
+      "description": "The Federal Bank  Limited has informed the Exchange about Board Meeting to be held on 16-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "CROMPTON",
+      "company_name": "Crompton Greaves Consumer Electricals Limited",
+      "date": "16-Oct-2026",
+      "raw_date": "2026-10-16",
+      "purpose": "Board Meeting Intimation",
+      "description": "CROMPTON GREAVES CONSUMER ELECTRICALS LIMITED has informed the Exchange about Board Meeting to be held on 16-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "CROMPTON",
+      "company_name": "Crompton Greaves Consumer Electricals Limited",
+      "date": "16-Oct-2026",
+      "raw_date": "2026-10-16",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "FEDERALBNK",
+      "company_name": "The Federal Bank Limited",
+      "date": "16-Oct-2026",
+      "raw_date": "2026-10-16",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "YESBANK",
+      "company_name": "Yes Bank Limited",
+      "date": "17-Oct-2026",
+      "raw_date": "2026-10-17",
+      "purpose": "Board Meeting Intimation",
+      "description": "YES Bank Limited has informed the Exchange about Board Meeting to be held on 17-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "ICICIBANK",
@@ -592,46 +956,20 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "HDFCBANK",
-      "company_name": "HDFC Bank Limited",
+      "symbol": "YESBANK",
+      "company_name": "Yes Bank Limited",
       "date": "17-Oct-2026",
       "raw_date": "2026-10-17",
       "purpose": "Financial Results",
-      "description": "To consider and approve the unaudited standalone and consolidated financial results of the Bank for the quarter/half-year ending September 30, 2026",
-      "is_nifty50": true,
+      "description": "Intimation of the date of the Board Meeting for considering Un-audited Financial Results for the Quarter (Q2) and Half Year ended September 30, 2026",
+      "is_nifty50": false,
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "HDFCBANK",
-      "company_name": "HDFC Bank Limited",
-      "date": "17-Oct-2026",
-      "raw_date": "2026-10-17",
-      "purpose": "Board Meeting Intimation",
-      "description": "HDFC BANK LIMITED has informed the Exchange about Board Meeting to be held on 17-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-      "is_nifty50": true,
-      "is_result": true,
-      "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "ICICIBANK",
-      "company_name": "ICICI Bank Limited",
-      "date": "17-Oct-2026",
-      "raw_date": "2026-10-17",
-      "purpose": "Board Meeting Intimation",
-      "description": "ICICI BANK LIMITED has informed the Exchange about Board Meeting to be held on 17-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-      "is_nifty50": true,
-      "is_result": true,
-      "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "AXISBANK",
@@ -644,7 +982,7 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "AXISBANK",
@@ -657,7 +995,85 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "HDFCBANK",
+      "company_name": "HDFC Bank Limited",
+      "date": "17-Oct-2026",
+      "raw_date": "2026-10-17",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the unaudited standalone and consolidated financial results of the Bank for the quarter/half-year ending September 30, 2026",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "HDFCBANK",
+      "company_name": "HDFC Bank Limited",
+      "date": "17-Oct-2026",
+      "raw_date": "2026-10-17",
+      "purpose": "Board Meeting Intimation",
+      "description": "HDFC BANK LIMITED has informed the Exchange about Board Meeting to be held on 17-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "ICICIBANK",
+      "company_name": "ICICI Bank Limited",
+      "date": "17-Oct-2026",
+      "raw_date": "2026-10-17",
+      "purpose": "Board Meeting Intimation",
+      "description": "ICICI BANK LIMITED has informed the Exchange about Board Meeting to be held on 17-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "BAJFINANCE",
+      "company_name": "Bajaj Finance Limited",
+      "date": "19-Oct-2026",
+      "raw_date": "2026-10-19",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the unaudited standalone and consolidated financial results for the quarter and half year ended September 30, 2026",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "ULTRACEMCO",
+      "company_name": "UltraTech Cement Limited",
+      "date": "19-Oct-2026",
+      "raw_date": "2026-10-19",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "BAJFINANCE",
+      "company_name": "Bajaj Finance Limited",
+      "date": "19-Oct-2026",
+      "raw_date": "2026-10-19",
+      "purpose": "Board Meeting Intimation",
+      "description": "Bajaj Finance Limited has informed the Exchange about Board Meeting to be held on 19-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "ULTRACEMCO",
@@ -670,85 +1086,176 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "ULTRACEMCO",
-      "company_name": "UltraTech Cement Limited",
-      "date": "19-Oct-2026",
-      "raw_date": "2026-10-19",
+      "symbol": "SWIGGY",
+      "company_name": "Swiggy Limited",
+      "date": "22-Oct-2026",
+      "raw_date": "2026-10-22",
+      "purpose": "Board Meeting Intimation",
+      "description": "SWIGGY LIMITED has informed the Exchange about Board Meeting to be held on 22-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "SWIGGY",
+      "company_name": "Swiggy Limited",
+      "date": "22-Oct-2026",
+      "raw_date": "2026-10-22",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "ADANIENSOL",
+      "company_name": "Adani Energy Solutions Limited",
+      "date": "22-Oct-2026",
+      "raw_date": "2026-10-22",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the Unaudited financial results for the period ended September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "ADANIENSOL",
+      "company_name": "Adani Energy Solutions Limited",
+      "date": "22-Oct-2026",
+      "raw_date": "2026-10-22",
+      "purpose": "Board Meeting Intimation",
+      "description": "ADANI ENERGY SOLUTIONS LIMITED has informed the Exchange about Board Meeting to be held on 22-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "SHREECEM",
+      "company_name": "SHREE CEMENT LIMITED",
+      "date": "23-Oct-2026",
+      "raw_date": "2026-10-23",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "TORNTPHARM",
+      "company_name": "Torrent Pharmaceuticals Limited",
+      "date": "23-Oct-2026",
+      "raw_date": "2026-10-23",
+      "purpose": "Board Meeting Intimation",
+      "description": "Torrent Pharmaceuticals Limited has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to consider and approve the Half Yearly Audited Financial results of the Company for the period ended September 2026 and Other business.",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "TORNTPHARM",
+      "company_name": "Torrent Pharmaceuticals Limited",
+      "date": "23-Oct-2026",
+      "raw_date": "2026-10-23",
+      "purpose": "Financial Results",
+      "description": "the Audited Financial Results on Standalone basis and Unaudited Financial Results (with limited review) on Consolidated basis of the Company for the quarter and half year ended on 30-Sep-26.",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "TORNTPHARM",
+      "company_name": "Torrent Pharmaceuticals Limited",
+      "date": "23-Oct-2026",
+      "raw_date": "2026-10-23",
+      "purpose": "Other business matters",
+      "description": "To consider other business matters",
+      "is_nifty50": false,
+      "is_result": false,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "DRREDDY",
+      "company_name": "Dr. Reddy's Laboratories Limited",
+      "date": "23-Oct-2026",
+      "raw_date": "2026-10-23",
       "purpose": "Financial Results",
       "description": "To consider and approve the financial results for the period ended September 30, 2026",
       "is_nifty50": true,
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "COFORGE",
-      "company_name": "Coforge Limited",
+      "symbol": "GODREJPROP",
+      "company_name": "Godrej Properties Limited",
       "date": "23-Oct-2026",
       "raw_date": "2026-10-23",
       "purpose": "Board Meeting Intimation",
-      "description": "COFORGE LIMITED has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "description": "GODREJ PROPERTIES LIMITED has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
       "is_nifty50": false,
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "COFORGE",
-      "company_name": "Coforge Limited",
-      "date": "23-Oct-2026",
-      "raw_date": "2026-10-23",
-      "purpose": "Financial Results",
-      "description": "To consider and approve the financial results for the period ended September 30, 2026",
-      "is_nifty50": false,
-      "is_result": true,
-      "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "SHREECEM",
-      "company_name": "SHREE CEMENT LIMITED",
-      "date": "23-Oct-2026",
-      "raw_date": "2026-10-23",
-      "purpose": "Board Meeting Intimation",
-      "description": "SHREE CEMENT LIMITED has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
-      "is_nifty50": false,
-      "is_result": true,
-      "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "SHREECEM",
-      "company_name": "SHREE CEMENT LIMITED",
-      "date": "23-Oct-2026",
-      "raw_date": "2026-10-23",
-      "purpose": "Financial Results",
-      "description": "To consider and approve the financial results for the period ended September 30, 2026",
-      "is_nifty50": false,
-      "is_result": true,
-      "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "ADANIPOWER",
       "company_name": "Adani Power Limited",
       "date": "23-Oct-2026",
       "raw_date": "2026-10-23",
-      "purpose": "Board Meeting Intimation",
-      "description": "ADANI POWER LIMITED has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
       "is_nifty50": false,
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "COFORGE",
+      "company_name": "Coforge Limited",
+      "date": "23-Oct-2026",
+      "raw_date": "2026-10-23",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "JSWSTEEL",
+      "company_name": "JSW Steel Limited",
+      "date": "23-Oct-2026",
+      "raw_date": "2026-10-23",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "DRREDDY",
@@ -761,11 +1268,11 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "ADANIPOWER",
-      "company_name": "Adani Power Limited",
+      "symbol": "JINDALSTEL",
+      "company_name": "JINDAL STEEL LIMITED",
       "date": "23-Oct-2026",
       "raw_date": "2026-10-23",
       "purpose": "Financial Results",
@@ -774,72 +1281,20 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "INDUSINDBK",
-      "company_name": "IndusInd Bank Limited",
-      "date": "23-Oct-2026",
-      "raw_date": "2026-10-23",
-      "purpose": "Financial Results",
-      "description": "To consider and approve the Unaudited Standalone and Consolidated Financial Results for the quarter and half-year ending September 30, 2026",
-      "is_nifty50": true,
-      "is_result": true,
-      "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "JSWSTEEL",
-      "company_name": "JSW Steel Limited",
-      "date": "23-Oct-2026",
-      "raw_date": "2026-10-23",
-      "purpose": "Financial Results",
-      "description": "To consider and approve the financial results for the period ended September 30, 2026",
-      "is_nifty50": true,
-      "is_result": true,
-      "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "DRREDDY",
-      "company_name": "Dr. Reddy's Laboratories Limited",
-      "date": "23-Oct-2026",
-      "raw_date": "2026-10-23",
-      "purpose": "Financial Results",
-      "description": "To consider and approve the financial results for the period ended September 30, 2026",
-      "is_nifty50": true,
-      "is_result": true,
-      "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "INDUSINDBK",
-      "company_name": "IndusInd Bank Limited",
+      "symbol": "JINDALSTEL",
+      "company_name": "JINDAL STEEL LIMITED",
       "date": "23-Oct-2026",
       "raw_date": "2026-10-23",
       "purpose": "Board Meeting Intimation",
-      "description": "INDUSIND BANK LIMITED has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-      "is_nifty50": true,
+      "description": "JINDAL STEEL LIMITED has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+      "is_nifty50": false,
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "JSWSTEEL",
-      "company_name": "JSW Steel Limited",
-      "date": "23-Oct-2026",
-      "raw_date": "2026-10-23",
-      "purpose": "Board Meeting Intimation",
-      "description": "JSW STEEL LIMITED has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
-      "is_nifty50": true,
-      "is_result": true,
-      "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "INFY",
@@ -852,7 +1307,7 @@
       "is_result": true,
       "is_dividend": true,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "INFY",
@@ -865,20 +1320,98 @@
       "is_result": true,
       "is_dividend": true,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "IDFCFIRSTB",
-      "company_name": "IDFC First Bank Limited",
-      "date": "24-Oct-2026",
-      "raw_date": "2026-10-24",
+      "symbol": "INDUSINDBK",
+      "company_name": "IndusInd Bank Limited",
+      "date": "23-Oct-2026",
+      "raw_date": "2026-10-23",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the Unaudited Standalone and Consolidated Financial Results for the quarter and half-year ending September 30, 2026",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "INDUSINDBK",
+      "company_name": "IndusInd Bank Limited",
+      "date": "23-Oct-2026",
+      "raw_date": "2026-10-23",
       "purpose": "Board Meeting Intimation",
-      "description": "IDFC FIRST BANK LIMITED has informed the Exchange about Board Meeting to be held on 24-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "description": "INDUSIND BANK LIMITED has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "ADANIPOWER",
+      "company_name": "Adani Power Limited",
+      "date": "23-Oct-2026",
+      "raw_date": "2026-10-23",
+      "purpose": "Board Meeting Intimation",
+      "description": "ADANI POWER LIMITED has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
       "is_nifty50": false,
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "GODREJPROP",
+      "company_name": "Godrej Properties Limited",
+      "date": "23-Oct-2026",
+      "raw_date": "2026-10-23",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the unaudited financial results for the quarter and half year ended September 30, 2026.",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "COFORGE",
+      "company_name": "Coforge Limited",
+      "date": "23-Oct-2026",
+      "raw_date": "2026-10-23",
+      "purpose": "Board Meeting Intimation",
+      "description": "COFORGE LIMITED has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "SHREECEM",
+      "company_name": "SHREE CEMENT LIMITED",
+      "date": "23-Oct-2026",
+      "raw_date": "2026-10-23",
+      "purpose": "Board Meeting Intimation",
+      "description": "SHREE CEMENT LIMITED has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "JSWSTEEL",
+      "company_name": "JSW Steel Limited",
+      "date": "23-Oct-2026",
+      "raw_date": "2026-10-23",
+      "purpose": "Board Meeting Intimation",
+      "description": "JSW STEEL LIMITED has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "IDFCFIRSTB",
@@ -891,7 +1424,46 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "IDFCFIRSTB",
+      "company_name": "IDFC First Bank Limited",
+      "date": "24-Oct-2026",
+      "raw_date": "2026-10-24",
+      "purpose": "Board Meeting Intimation",
+      "description": "IDFC FIRST BANK LIMITED has informed the Exchange about Board Meeting to be held on 24-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "SONACOMS",
+      "company_name": "Sona BLW Precision Forgings Limited",
+      "date": "26-Oct-2026",
+      "raw_date": "2026-10-26",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "SONACOMS",
+      "company_name": "Sona BLW Precision Forgings Limited",
+      "date": "26-Oct-2026",
+      "raw_date": "2026-10-26",
+      "purpose": "Board Meeting Intimation",
+      "description": "Sona BLW Precision Forgings Limited has informed the Exchange about Board Meeting to be held on 26-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "KFINTECH",
@@ -904,7 +1476,7 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "KFINTECH",
@@ -917,11 +1489,24 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "MFSL",
-      "company_name": "Max Financial Services Limited",
+      "symbol": "BAJAJ-AUTO",
+      "company_name": "Bajaj Auto Limited",
+      "date": "27-Oct-2026",
+      "raw_date": "2026-10-27",
+      "purpose": "Board Meeting Intimation",
+      "description": "BAJAJ AUTO LIMITED has informed the Exchange about Board Meeting to be held on 27-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "RADICO",
+      "company_name": "Radico Khaitan Limited",
       "date": "27-Oct-2026",
       "raw_date": "2026-10-27",
       "purpose": "Financial Results",
@@ -930,20 +1515,33 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "MFSL",
-      "company_name": "Max Financial Services Limited",
+      "symbol": "BAJAJ-AUTO",
+      "company_name": "Bajaj Auto Limited",
+      "date": "27-Oct-2026",
+      "raw_date": "2026-10-27",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "RADICO",
+      "company_name": "Radico Khaitan Limited",
       "date": "27-Oct-2026",
       "raw_date": "2026-10-27",
       "purpose": "Board Meeting Intimation",
-      "description": "Max Financial Services Limited has informed the Exchange about Board Meeting to be held on 27-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "description": "Radico Khaitan Limited has informed the Exchange about Board Meeting to be held on 27-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
       "is_nifty50": false,
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "CIPLA",
@@ -956,7 +1554,20 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "MFSL",
+      "company_name": "Max Financial Services Limited",
+      "date": "27-Oct-2026",
+      "raw_date": "2026-10-27",
+      "purpose": "Board Meeting Intimation",
+      "description": "Max Financial Services Limited has informed the Exchange about Board Meeting to be held on 27-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "CIPLA",
@@ -969,7 +1580,124 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "INDUSTOWER",
+      "company_name": "Indus Towers Limited",
+      "date": "27-Oct-2026",
+      "raw_date": "2026-10-27",
+      "purpose": "Board Meeting Intimation",
+      "description": "INDUS TOWERS LIMITED has informed the Exchange about Board Meeting to be held on 27-Oct-2026 to inter-alia consider and approve the Audited Financial results of the Company for the Quarterly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "INDUSTOWER",
+      "company_name": "Indus Towers Limited",
+      "date": "27-Oct-2026",
+      "raw_date": "2026-10-27",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the Audited Financial Results (Standalone & Consolidated) for the second quarter (Q2) and half year ended on September 30, 2026.",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "MARUTI",
+      "company_name": "Maruti Suzuki India Limited",
+      "date": "27-Oct-2026",
+      "raw_date": "2026-10-27",
+      "purpose": "Board Meeting Intimation",
+      "description": "MARUTI SUZUKI INDIA LIMITED has informed the Exchange about Board Meeting to be held on 27-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "MARUTI",
+      "company_name": "Maruti Suzuki India Limited",
+      "date": "27-Oct-2026",
+      "raw_date": "2026-10-27",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "MFSL",
+      "company_name": "Max Financial Services Limited",
+      "date": "27-Oct-2026",
+      "raw_date": "2026-10-27",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "company_name": "Hindustan Unilever Limited",
+      "date": "28-Oct-2026",
+      "raw_date": "2026-10-28",
+      "purpose": "Board Meeting Intimation",
+      "description": "Hindustan Unilever Limited has informed the Exchange about Board Meeting to be held on 28-Oct-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Dividend.",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "ADANIPORTS",
+      "company_name": "Adani Ports and Special Economic Zone Limited",
+      "date": "28-Oct-2026",
+      "raw_date": "2026-10-28",
+      "purpose": "Board Meeting Intimation",
+      "description": "ADANI PORTS AND SPECIAL ECONOMIC ZONE LIMITED has informed the Exchange about Board Meeting to be held on 28-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "ADANIPORTS",
+      "company_name": "Adani Ports and Special Economic Zone Limited",
+      "date": "28-Oct-2026",
+      "raw_date": "2026-10-28",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "company_name": "Hindustan Unilever Limited",
+      "date": "28-Oct-2026",
+      "raw_date": "2026-10-28",
+      "purpose": "Financial Results/Dividend",
+      "description": "Board Meeting Intimation for Consideration of Unaudited Standalone and Consolidated Financial Results for quarter and half year ended 30th September, 2026 and payment of Interim Dividend (if any)",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "BLUESTARCO",
@@ -982,33 +1710,20 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "CAMS",
-      "company_name": "Computer Age Management Services Limited",
-      "date": "29-Oct-2026",
-      "raw_date": "2026-10-29",
-      "purpose": "Financial Results/Dividend",
-      "description": "To consider and approve the unaudited financial results for the period ended September 30, 2026 and dividend",
-      "is_nifty50": false,
-      "is_result": true,
-      "is_dividend": true,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "CAMS",
-      "company_name": "Computer Age Management Services Limited",
+      "symbol": "GODREJCP",
+      "company_name": "Godrej Consumer Products Limited",
       "date": "29-Oct-2026",
       "raw_date": "2026-10-29",
       "purpose": "Board Meeting Intimation",
-      "description": "Computer Age Management Services Limited has informed the Exchange about Board Meeting to be held on 29-Oct-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Dividend.",
+      "description": "GODREJ CONSUMER PRODUCTS LIMITED has informed the Exchange about Board Meeting to be held on 29-Oct-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Dividend.",
       "is_nifty50": false,
       "is_result": true,
       "is_dividend": true,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "BLUESTARCO",
@@ -1021,46 +1736,150 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "DABUR",
-      "company_name": "Dabur India Limited",
-      "date": "04-Nov-2026",
-      "raw_date": "2026-11-04",
+      "symbol": "CAMS",
+      "company_name": "Computer Age Management Services Limited",
+      "date": "29-Oct-2026",
+      "raw_date": "2026-10-29",
       "purpose": "Board Meeting Intimation",
-      "description": "Dabur India Limited has informed the Exchange about Board Meeting to be held on 04-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Dividend.",
+      "description": "Computer Age Management Services Limited has informed the Exchange about Board Meeting to be held on 29-Oct-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Dividend.",
       "is_nifty50": false,
       "is_result": true,
       "is_dividend": true,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "CUMMINSIND",
-      "company_name": "Cummins India Limited",
-      "date": "04-Nov-2026",
-      "raw_date": "2026-11-04",
+      "symbol": "CAMS",
+      "company_name": "Computer Age Management Services Limited",
+      "date": "29-Oct-2026",
+      "raw_date": "2026-10-29",
+      "purpose": "Financial Results/Dividend",
+      "description": "To consider and approve the unaudited financial results for the period ended September 30, 2026 and dividend",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "GODREJCP",
+      "company_name": "Godrej Consumer Products Limited",
+      "date": "29-Oct-2026",
+      "raw_date": "2026-10-29",
+      "purpose": "Financial Results/Dividend",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026 and dividend",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "ASIANPAINT",
+      "company_name": "Asian Paints Limited",
+      "date": "29-Oct-2026",
+      "raw_date": "2026-10-29",
+      "purpose": "Financial Results/Dividend",
+      "description": "This is to inform you that a meeting of the Board of Directors of the Company will be held on Thursday, 29th October 2026, inter alia, to consider the following:1.Approval of audited standalone financial results of the Company for the quarter and half-year ended 30th September 2026; 2.Approval of unaudited consolidated financial results of the Company for the quarter and half-year ended 30th September 2026; and 3.Declaration of interim dividend, if any, for the financial year ending 31st March 2027. It is further informed that the record date for payment of interim dividend, if declared, will be Wednesday, 4th November 2026.",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "ASIANPAINT",
+      "company_name": "Asian Paints Limited",
+      "date": "29-Oct-2026",
+      "raw_date": "2026-10-29",
+      "purpose": "Board Meeting Intimation",
+      "description": "ASIAN PAINTS LIMITED has informed the Exchange about Board Meeting to be held on 29-Oct-2026 to consider and approve the Quarterly Audited Financial results of the Company for the period ended September 2026 and Dividend.",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "TRENT",
+      "company_name": "Trent Limited",
+      "date": "29-Oct-2026",
+      "raw_date": "2026-10-29",
       "purpose": "Financial Results",
-      "description": "To consider and approve the financial results for the quarter and half year ending September 30, 2026",
+      "description": "Notice of Board Meeting",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "TRENT",
+      "company_name": "Trent Limited",
+      "date": "29-Oct-2026",
+      "raw_date": "2026-10-29",
+      "purpose": "Board Meeting Intimation",
+      "description": "Trent Limited has informed the Exchange about Board Meeting to be held on 29-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "BAJAJFINSV",
+      "company_name": "Bajaj Finserv Limited",
+      "date": "03-Nov-2026",
+      "raw_date": "2026-11-03",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the unaudited standalone and consolidated financial results for the quarter and half year ended 30 September 2026.",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "BAJAJFINSV",
+      "company_name": "Bajaj Finserv Limited",
+      "date": "03-Nov-2026",
+      "raw_date": "2026-11-03",
+      "purpose": "Board Meeting Intimation",
+      "description": "BAJAJ FINSERV LIMITED has informed the Exchange about Board Meeting to be held on 03-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "BAJAJHLDNG",
+      "company_name": "Bajaj Holdings & Investment Limited",
+      "date": "03-Nov-2026",
+      "raw_date": "2026-11-03",
+      "purpose": "Board Meeting Intimation",
+      "description": "BAJAJ HOLDINGS & INVESTMENT LIMITED has informed the Exchange about Board Meeting to be held on 03-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
       "is_nifty50": false,
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "DABUR",
-      "company_name": "Dabur India Limited",
-      "date": "04-Nov-2026",
-      "raw_date": "2026-11-04",
-      "purpose": "Financial Results/Dividend",
-      "description": "To consider and approve the unaudited financial results for the quarter and half year ending on September 30, 2026 and Interim dividend for the Financial Year 2026-27",
+      "symbol": "BAJAJHLDNG",
+      "company_name": "Bajaj Holdings & Investment Limited",
+      "date": "03-Nov-2026",
+      "raw_date": "2026-11-03",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the unaudited standalone & consolidated financial results for the quarter and half year ended 30 September 2026",
       "is_nifty50": false,
       "is_result": true,
-      "is_dividend": true,
+      "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "CUMMINSIND",
@@ -1073,7 +1892,46 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "DABUR",
+      "company_name": "Dabur India Limited",
+      "date": "04-Nov-2026",
+      "raw_date": "2026-11-04",
+      "purpose": "Financial Results/Dividend",
+      "description": "To consider and approve the unaudited financial results for the quarter and half year ending on September 30, 2026 and Interim dividend for the Financial Year 2026-27",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "DABUR",
+      "company_name": "Dabur India Limited",
+      "date": "04-Nov-2026",
+      "raw_date": "2026-11-04",
+      "purpose": "Board Meeting Intimation",
+      "description": "Dabur India Limited has informed the Exchange about Board Meeting to be held on 04-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Dividend.",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": true,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "CUMMINSIND",
+      "company_name": "Cummins India Limited",
+      "date": "04-Nov-2026",
+      "raw_date": "2026-11-04",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the financial results for the quarter and half year ending September 30, 2026",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "MPHASIS",
@@ -1086,33 +1944,7 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "M&M",
-      "company_name": "Mahindra & Mahindra Limited",
-      "date": "05-Nov-2026",
-      "raw_date": "2026-11-05",
-      "purpose": "Financial Results/Other business matters",
-      "description": "To consider and approve the financial results for the period ended September 30, 2026 and other business matters",
-      "is_nifty50": true,
-      "is_result": true,
-      "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "M&M",
-      "company_name": "Mahindra & Mahindra Limited",
-      "date": "05-Nov-2026",
-      "raw_date": "2026-11-05",
-      "purpose": "Board Meeting Intimation",
-      "description": "MAHINDRA & MAHINDRA LIMITED has informed the Exchange about Board Meeting to be held on 05-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
-      "is_nifty50": true,
-      "is_result": true,
-      "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "MPHASIS",
@@ -1125,46 +1957,33 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "HINDALCO",
-      "company_name": "Hindalco Industries Limited",
-      "date": "06-Nov-2026",
-      "raw_date": "2026-11-06",
-      "purpose": "Financial Results",
-      "description": "To consider and approve the Unaudited Standalone and Consolidated financial results of the Company for the quarter ending September 30, 2026",
+      "symbol": "M&M",
+      "company_name": "Mahindra & Mahindra Limited",
+      "date": "05-Nov-2026",
+      "raw_date": "2026-11-05",
+      "purpose": "Board Meeting Intimation",
+      "description": "MAHINDRA & MAHINDRA LIMITED has informed the Exchange about Board Meeting to be held on 05-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
       "is_nifty50": true,
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
-      "symbol": "BOSCHLTD",
-      "company_name": "Bosch Limited",
-      "date": "06-Nov-2026",
-      "raw_date": "2026-11-06",
+      "symbol": "M&M",
+      "company_name": "Mahindra & Mahindra Limited",
+      "date": "05-Nov-2026",
+      "raw_date": "2026-11-05",
       "purpose": "Financial Results/Other business matters",
       "description": "To consider and approve the financial results for the period ended September 30, 2026 and other business matters",
-      "is_nifty50": false,
-      "is_result": true,
-      "is_dividend": false,
-      "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
-    },
-    {
-      "symbol": "HINDALCO",
-      "company_name": "Hindalco Industries Limited",
-      "date": "06-Nov-2026",
-      "raw_date": "2026-11-06",
-      "purpose": "Board Meeting Intimation",
-      "description": "HINDALCO INDUSTRIES LIMITED has informed the Exchange about Board Meeting to be held on 06-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
       "is_nifty50": true,
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "BOSCHLTD",
@@ -1177,7 +1996,72 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "HINDALCO",
+      "company_name": "Hindalco Industries Limited",
+      "date": "06-Nov-2026",
+      "raw_date": "2026-11-06",
+      "purpose": "Board Meeting Intimation",
+      "description": "HINDALCO INDUSTRIES LIMITED has informed the Exchange about Board Meeting to be held on 06-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "BOSCHLTD",
+      "company_name": "Bosch Limited",
+      "date": "06-Nov-2026",
+      "raw_date": "2026-11-06",
+      "purpose": "Financial Results/Other business matters",
+      "description": "To consider and approve the financial results for the period ended September 30, 2026 and other business matters",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "HINDALCO",
+      "company_name": "Hindalco Industries Limited",
+      "date": "06-Nov-2026",
+      "raw_date": "2026-11-06",
+      "purpose": "Financial Results",
+      "description": "To consider and approve the Unaudited Standalone and Consolidated financial results of the Company for the quarter ending September 30, 2026",
+      "is_nifty50": true,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "TATAPOWER",
+      "company_name": "Tata Power Company Limited",
+      "date": "11-Nov-2026",
+      "raw_date": "2026-11-11",
+      "purpose": "Financial Results/Other business matters",
+      "description": "To consider and approve the financial results for the quarter and half year ended September 30, 2026, and other business matters",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
+    },
+    {
+      "symbol": "TATAPOWER",
+      "company_name": "Tata Power Company Limited",
+      "date": "11-Nov-2026",
+      "raw_date": "2026-11-11",
+      "purpose": "Board Meeting Intimation",
+      "description": "Tata Power Company Limited has informed the Exchange about Board Meeting to be held on 11-Nov-2026 to inter-alia consider and approve the Audited Financial results of the Company for the Half Yearly ended September 2026 .",
+      "is_nifty50": false,
+      "is_result": true,
+      "is_dividend": false,
+      "status": "CONFIRMED",
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "ABB",
@@ -1190,7 +2074,7 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "ABB",
@@ -1203,7 +2087,7 @@
       "is_result": true,
       "is_dividend": false,
       "status": "CONFIRMED",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     }
   ],
   "corporate_actions": [
@@ -1217,7 +2101,7 @@
       "raw_date": "2026-10-05",
       "is_nifty50": false,
       "face_value": "1",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "SAIL",
@@ -1229,7 +2113,7 @@
       "raw_date": "2026-09-30",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "BAJAJHLDNG",
@@ -1241,7 +2125,7 @@
       "raw_date": "2026-09-21",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "BDL",
@@ -1253,7 +2137,7 @@
       "raw_date": "2026-09-21",
       "is_nifty50": false,
       "face_value": "5",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "DIXON",
@@ -1265,7 +2149,7 @@
       "raw_date": "2026-09-21",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "CONCOR",
@@ -1277,7 +2161,7 @@
       "raw_date": "2026-09-21",
       "is_nifty50": false,
       "face_value": "5",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "PGEL",
@@ -1289,7 +2173,7 @@
       "raw_date": "2026-09-18",
       "is_nifty50": false,
       "face_value": "1",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "COCHINSHIP",
@@ -1301,7 +2185,7 @@
       "raw_date": "2026-09-18",
       "is_nifty50": false,
       "face_value": "5",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "WAAREEENER",
@@ -1313,7 +2197,7 @@
       "raw_date": "2026-09-11",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "IREDA",
@@ -1325,7 +2209,7 @@
       "raw_date": "2026-09-11",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "PHOENIXLTD",
@@ -1337,7 +2221,7 @@
       "raw_date": "2026-09-11",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "KALYANKJIL",
@@ -1349,7 +2233,7 @@
       "raw_date": "2026-09-11",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "FORCEMOT",
@@ -1361,7 +2245,7 @@
       "raw_date": "2026-09-09",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "APLAPOLLO",
@@ -1373,7 +2257,7 @@
       "raw_date": "2026-09-08",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "OIL",
@@ -1385,7 +2269,7 @@
       "raw_date": "2026-09-04",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "COALINDIA",
@@ -1397,7 +2281,7 @@
       "raw_date": "2026-09-04",
       "is_nifty50": true,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "ONGC",
@@ -1409,7 +2293,7 @@
       "raw_date": "2026-09-04",
       "is_nifty50": true,
       "face_value": "5",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "GAIL",
@@ -1421,7 +2305,7 @@
       "raw_date": "2026-09-02",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "NTPC",
@@ -1433,7 +2317,7 @@
       "raw_date": "2026-09-02",
       "is_nifty50": true,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "GLENMARK",
@@ -1445,7 +2329,7 @@
       "raw_date": "2026-08-31",
       "is_nifty50": false,
       "face_value": "1",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "NBCC",
@@ -1457,7 +2341,7 @@
       "raw_date": "2026-08-28",
       "is_nifty50": false,
       "face_value": "1",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "MCX",
@@ -1469,7 +2353,7 @@
       "raw_date": "2026-08-28",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "PFC",
@@ -1481,7 +2365,7 @@
       "raw_date": "2026-08-27",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "NATIONALUM",
@@ -1493,7 +2377,7 @@
       "raw_date": "2026-08-24",
       "is_nifty50": false,
       "face_value": "5",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "PATANJALI",
@@ -1505,7 +2389,7 @@
       "raw_date": "2026-08-21",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "PATANJALI",
@@ -1517,7 +2401,7 @@
       "raw_date": "2026-08-21",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "LICHSGFIN",
@@ -1529,7 +2413,7 @@
       "raw_date": "2026-08-21",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "JINDALSTEL",
@@ -1541,7 +2425,7 @@
       "raw_date": "2026-08-21",
       "is_nifty50": false,
       "face_value": "1",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "GVT&D",
@@ -1553,7 +2437,7 @@
       "raw_date": "2026-08-21",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "POWERINDIA",
@@ -1565,7 +2449,7 @@
       "raw_date": "2026-08-21",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "MAZDOCK",
@@ -1577,7 +2461,7 @@
       "raw_date": "2026-08-20",
       "is_nifty50": false,
       "face_value": "5",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "PAGEIND",
@@ -1589,7 +2473,7 @@
       "raw_date": "2026-08-19",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "RVNL",
@@ -1601,7 +2485,7 @@
       "raw_date": "2026-08-18",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "MANAPPURAM",
@@ -1613,7 +2497,7 @@
       "raw_date": "2026-08-17",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "NBCC",
@@ -1625,7 +2509,7 @@
       "raw_date": "2026-08-17",
       "is_nifty50": false,
       "face_value": "1",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "BANDHANBNK",
@@ -1637,7 +2521,7 @@
       "raw_date": "2026-08-17",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "HINDPETRO",
@@ -1649,7 +2533,7 @@
       "raw_date": "2026-08-14",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "ASTRAL",
@@ -1661,7 +2545,7 @@
       "raw_date": "2026-08-14",
       "is_nifty50": false,
       "face_value": "1",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "IOC",
@@ -1673,7 +2557,7 @@
       "raw_date": "2026-08-14",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "RBLBANK",
@@ -1685,7 +2569,7 @@
       "raw_date": "2026-08-14",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "RECLTD",
@@ -1697,7 +2581,7 @@
       "raw_date": "2026-08-14",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "HAL",
@@ -1709,7 +2593,7 @@
       "raw_date": "2026-08-14",
       "is_nifty50": false,
       "face_value": "5",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "APOLLOHOSP",
@@ -1721,7 +2605,7 @@
       "raw_date": "2026-08-14",
       "is_nifty50": true,
       "face_value": "5",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "FEDERALBNK",
@@ -1733,7 +2617,7 @@
       "raw_date": "2026-08-14",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "GODREJCP",
@@ -1745,7 +2629,7 @@
       "raw_date": "2026-08-13",
       "is_nifty50": false,
       "face_value": "1",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "PRESTIGE",
@@ -1757,7 +2641,7 @@
       "raw_date": "2026-08-13",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "POWERGRID",
@@ -1769,7 +2653,7 @@
       "raw_date": "2026-08-13",
       "is_nifty50": true,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "BEL",
@@ -1781,7 +2665,7 @@
       "raw_date": "2026-08-13",
       "is_nifty50": true,
       "face_value": "1",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "NHPC",
@@ -1793,7 +2677,7 @@
       "raw_date": "2026-08-12",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "CAMS",
@@ -1805,7 +2689,7 @@
       "raw_date": "2026-08-12",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "KPITTECH",
@@ -1817,7 +2701,7 @@
       "raw_date": "2026-08-12",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "GODFRYPHLP",
@@ -1829,7 +2713,7 @@
       "raw_date": "2026-08-11",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "INDUSTOWER",
@@ -1841,7 +2725,7 @@
       "raw_date": "2026-08-10",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "JIOFIN",
@@ -1853,7 +2737,7 @@
       "raw_date": "2026-08-10",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "TIINDIA",
@@ -1865,7 +2749,7 @@
       "raw_date": "2026-08-07",
       "is_nifty50": false,
       "face_value": "1",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "ALKEM",
@@ -1877,7 +2761,7 @@
       "raw_date": "2026-08-07",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "ABB",
@@ -1889,7 +2773,7 @@
       "raw_date": "2026-08-07",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "PIIND",
@@ -1901,7 +2785,7 @@
       "raw_date": "2026-08-07",
       "is_nifty50": false,
       "face_value": "1",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "IDFCFIRSTB",
@@ -1913,7 +2797,7 @@
       "raw_date": "2026-08-07",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "GRASIM",
@@ -1925,7 +2809,7 @@
       "raw_date": "2026-08-07",
       "is_nifty50": true,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "MARUTI",
@@ -1937,7 +2821,7 @@
       "raw_date": "2026-08-07",
       "is_nifty50": true,
       "face_value": "5",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "LODHA",
@@ -1949,7 +2833,7 @@
       "raw_date": "2026-08-07",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "HYUNDAI",
@@ -1961,7 +2845,7 @@
       "raw_date": "2026-08-05",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "BOSCHLTD",
@@ -1973,7 +2857,7 @@
       "raw_date": "2026-08-04",
       "is_nifty50": false,
       "face_value": "10",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "CONCOR",
@@ -1985,7 +2869,7 @@
       "raw_date": "2026-08-04",
       "is_nifty50": false,
       "face_value": "5",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "COFORGE",
@@ -1997,7 +2881,7 @@
       "raw_date": "2026-08-03",
       "is_nifty50": false,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     },
     {
       "symbol": "ICICIBANK",
@@ -2009,7 +2893,7 @@
       "raw_date": "2026-08-03",
       "is_nifty50": true,
       "face_value": "2",
-      "fetched_at": "2026-10-01 10:50:17"
+      "fetched_at": "2026-10-08 16:16:03"
     }
   ],
   "market_deals": [
@@ -2617,6 +3501,27 @@
   "announcements": [
     {
       "symbol": "360",
+      "time": "07-Oct-2026 21:15:58",
+      "text": "360 ONE WAM LIMITED has informed the Exchange that the Company will host an earnings call at 05:30 p.m. (IST) on Thursday, October 15, 2026",
+      "pdf_url": "https://nsearchives.nseindia.com/corporate/IIFLWAM_07102026211235_IntimationofBMSigned.pdf",
+      "is_nifty50": false
+    },
+    {
+      "symbol": "360",
+      "time": "07-Oct-2026 17:35:40",
+      "text": "360 ONE WAM LIMITED has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018, received from MUFG Intime India Private Limited (formerly known as Link Intime India Pvt. Ltd.), RTA of the Company, for the quarter ended September 30, 2026.",
+      "pdf_url": "https://nsearchives.nseindia.com/corporate/IIFLWAM_07102026173528_20261007Reg74_5_CertificateSigned.pdf",
+      "is_nifty50": false
+    },
+    {
+      "symbol": "360",
+      "time": "06-Oct-2026 13:57:57",
+      "text": "360 ONE WAM LIMITED has informed the Exchange about ESG rating",
+      "pdf_url": "https://nsearchives.nseindia.com/corporate/IIFLWAM_06102026135549_ESGRatingIntimationSigned.pdf",
+      "is_nifty50": false
+    },
+    {
+      "symbol": "360",
       "time": "28-Sep-2026 15:39:59",
       "text": "360 ONE WAM LIMITED has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
       "pdf_url": "https://nsearchives.nseindia.com/corporate/IIFLWAM_28092026153815_TradingWindowClosureSigned.pdf",
@@ -2906,20 +3811,6 @@
       "symbol": "360",
       "time": "25-May-2026 16:13:48",
       "text": "360 ONE WAM LIMITED has informed the Exchange about Schedule of meet",
-      "pdf_url": "https://nsearchives.nseindia.com/corporate/IIFLWAM_25052026160007_20260525_IntimationofInvestorConference_signed.pdf",
-      "is_nifty50": false
-    },
-    {
-      "symbol": "360",
-      "time": "25-May-2026 16:13:48",
-      "text": "360 ONE WAM LIMITED has informed the Exchange about Schedule of meet",
-      "pdf_url": "https://nsearchives.nseindia.com/corporate/IIFLWAM_25052026155925_20260525_IntimationofInvestorConference_signed.pdf",
-      "is_nifty50": false
-    },
-    {
-      "symbol": "360",
-      "time": "25-May-2026 16:13:48",
-      "text": "360 ONE WAM LIMITED has informed the Exchange about Schedule of meet",
       "pdf_url": "https://nsearchives.nseindia.com/corporate/IIFLWAM_25052026160253_20260525_IntimationofInvestorConference_signed.pdf",
       "is_nifty50": false
     },
@@ -2946,23 +3837,16 @@
     },
     {
       "symbol": "360",
-      "time": "23-May-2026 12:14:16",
-      "text": "360 ONE WAM LIMITED has informed the Exchange regarding allotment of 191376 equity shares of face value of Re.1/- each, to the employee(s), upon exercise of stock options under Employee Stock Options Scheme(s) of the Company",
-      "pdf_url": "https://nsearchives.nseindia.com/corporate/IIFLWAM_23052026121206_2026052026AllotmentofESOPs_signed.pdf",
-      "is_nifty50": false
-    },
-    {
-      "symbol": "360",
-      "time": "22-May-2026 11:30:53",
-      "text": "360 ONE WAM LIMITED has informed the Exchange that 360 ONE Asset Management Limited (AMC), a wholly owned subsidiary of the Company, has received No Objection letter from SEBI on May 21, 2026, to undertake activities permitted under Regulation 21(b) of the SEBI (Mutual Funds) Regulations, 2026 through 360 ONE Global Asset Management (IFSC) Limited (GAM), a wholly owned subsidiary of AMC, in Gujarat International Finance Tec-City (GIFT City).",
-      "pdf_url": "https://nsearchives.nseindia.com/corporate/IIFLWAM_22052026112813_20260522_SEBINOCforGAM_signed.pdf",
-      "is_nifty50": false
-    },
-    {
-      "symbol": "360",
-      "time": "11-May-2026 18:41:43",
+      "time": "25-May-2026 16:13:48",
       "text": "360 ONE WAM LIMITED has informed the Exchange about Schedule of meet",
-      "pdf_url": "https://nsearchives.nseindia.com/corporate/IIFLWAM_11052026183547_Investor_Conference_Intimation_signed.pdf",
+      "pdf_url": "https://nsearchives.nseindia.com/corporate/IIFLWAM_25052026160007_20260525_IntimationofInvestorConference_signed.pdf",
+      "is_nifty50": false
+    },
+    {
+      "symbol": "360",
+      "time": "25-May-2026 16:13:48",
+      "text": "360 ONE WAM LIMITED has informed the Exchange about Schedule of meet",
+      "pdf_url": "https://nsearchives.nseindia.com/corporate/IIFLWAM_25052026155925_20260525_IntimationofInvestorConference_signed.pdf",
       "is_nifty50": false
     }
   ],
@@ -3376,6 +4260,6 @@
     },
     "source_feed": "NSE Live Corporate Announcements & RBI Monetary Policy Calendar",
     "feed_status": "ACTIVE / SYNCED",
-    "last_synced": "2026-10-07 12:03:21"
+    "last_synced": "2026-10-08 16:35:06"
   }
 }
