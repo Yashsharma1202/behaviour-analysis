@@ -3101,7 +3101,15 @@
       const dateTo = document.getElementById('q-date-to')?.value || '';
 
       let renderedIdx = 0;
-      q.stocks.forEach((s) => {
+      const sortedStocks = q.stocks.slice().sort((a, b) => {
+        const da = parseEventDate(a.entry_date);
+        const db = parseEventDate(b.entry_date);
+        if (!da && !db) return 0;
+        if (!da) return 1;
+        if (!db) return -1;
+        return da - db;
+      });
+      sortedStocks.forEach((s) => {
         if ((currentQuarterFilter === 'nifty50' || currentQuarterFilter === 'all') && s.is_nifty50 !== 'YES') return;
         if (currentQuarterFilter === 'confirmed' && !s.announced) return;
         if (currentQuarterFilter === 'LONG' && s.direction !== 'LONG') return;
