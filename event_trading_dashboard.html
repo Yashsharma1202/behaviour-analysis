@@ -698,6 +698,10 @@
         <span>📊 Futures & F&O Earnings</span>
         <span class="tab-badge badge-active">DERIVATIVES</span>
       </button>
+      <button class="tab-btn" id="tab-btn-alerts" onclick="switchTab('alerts')" style="background:rgba(245,158,11,0.08); border-top:2px solid #F59E0B;">
+        <span>🔔 Entry/Exit Alerts</span>
+        <span class="tab-badge" id="tab-badge-alerts" style="background:#F59E0B; color:#1a1a1a; font-weight:800;">SORTED BY ENTRY DATE</span>
+      </button>
       <button class="tab-btn" id="tab-btn-equity" onclick="switchTab('equity')">
         <span>📈 Cash Equity Earnings</span>
         <span class="tab-badge badge-count">SPOT / CNC</span>
@@ -940,8 +944,33 @@
     </div>
 
 
+    <div id="tab-alerts" class="tab-content" style="display:none;">
+      <div class="card" style="padding: 1rem 1.15rem; margin-bottom: 1.25rem;">
+        <div class="card-title-group" style="margin-bottom: 0.85rem;">
+          <h2>🔔 Entry / Exit Alerts &mdash; FY27_Q3</h2>
+          <p>All announced stocks for the active quarter, sorted by entry date (soonest first). Unannounced ("Yet to come") stocks are listed last.</p>
+        </div>
+        <div class="table-container">
+          <table class="event-master-table">
+            <thead>
+              <tr>
+                <th>Symbol</th>
+                <th>Direction</th>
+                <th>Window</th>
+                <th>Result Date</th>
+                <th>Entry Date</th>
+                <th>Exit Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="alerts-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
     <div id="tab-quarterly" class="tab-content" style="display:none;">
-      
+
       <!-- Segment Switcher Header -->
       <div class="seg-switch-bar">
         <span style="font-size:0.75rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; margin-right:0.3rem;">Active Segment:</span>
@@ -2806,6 +2835,8 @@
           renderHolidayBacktest();
         } else if (tabId === 'quarterly') {
           renderQuarterTable();
+        } else if (tabId === 'alerts') {
+          renderAlertsTab();
         } else if (tabId === 'equity') {
           renderEquityTable();
         } else if (tabId === 'rbi') {
@@ -3087,6 +3118,58 @@
 
       renderHolidayTable();
       if (currentHolidaySubtab === 'fo') { loadHolidaysDataset().then(renderFoHolidayTable); }
+    }
+
+    function renderAlertsTab() {
+      if (!dashboardData || !dashboardData.quarters) return;
+      const q = dashboardData.quarters.find(x => x.q_code === 'FY27_Q3') || dashboardData.quarters[0];
+      const tbody = document.getElementById('alerts-tbody');
+      if (!tbody || !q.stocks) return;
+      tbody.innerHTML = '';
+
+      const sorted = q.stocks.slice().sort((a, b) => {
+        const da = parseEventDate(a.entry_date);
+        const db = parseEventDate(b.entry_date);
+        if (!da && !db) return 0;
+        if (!da) return 1;
+        if (!db) return -1;
+        return da - db;
+      });
+
+      sorted.forEach(s => {
+        const tr = document.createElement('tr');
+        tr.style.cursor = 'pointer';
+        tr.onclick = () => openStockModal(s, 'quarter');
+
+        const dirBadge = s.direction === 'LONG'
+          ? `<span class="badge-long">▲ LONG</span>`
+          : `<span class="badge-short">▼ SHORT</span>`;
+        const winPill = s.window || `T-${s.lead || 2} to T+${s.hold || 4}`;
+        const entryDt = parseEventDate(s.entry_date);
+        const exitDt = parseEventDate(s.exit_date);
+
+        let statusBadge = '<span style="color:#94A3B8; font-size:0.72rem; font-weight:700;">⏳ Yet to come</span>';
+        if (entryDt) {
+          const now = new Date();
+          const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+          const diff = Math.round((entryDt - today) / 86400000);
+          if (diff === 0) statusBadge = '<span style="color:#F59E0B; font-size:0.72rem; font-weight:800; border:1px solid #F59E0B; border-radius:4px; padding:1px 6px;">🔥 ENTRY TODAY</span>';
+          else if (diff === 1) statusBadge = '<span style="color:#F87171; font-size:0.72rem; font-weight:800; border:1px solid #EF4444; border-radius:4px; padding:1px 6px;">⚠️ ENTRY TOMORROW</span>';
+          else if (diff < 0) statusBadge = '<span style="color:#34D399; font-size:0.72rem; font-weight:700; border:1px solid #34D399; border-radius:4px; padding:1px 6px;">🟢 ACTIVE / PAST ENTRY</span>' + exitAlertBadge(exitDt);
+          else statusBadge = `<span style="color:#60A5FA; font-size:0.72rem; font-weight:700;">📅 in ${diff} day${diff === 1 ? '' : 's'}</span>`;
+        }
+
+        tr.innerHTML = `
+          <td><strong style="color:#FFF;">${s.symbol}</strong><br><small style="color:#94A3B8;">${s.name || ''}</small></td>
+          <td>${dirBadge}</td>
+          <td><span class="window-pill">${winPill}</span></td>
+          <td>${s.result_date || 'Yet to come'}</td>
+          <td>${s.entry_date || 'Yet to come'}</td>
+          <td>${s.exit_date || 'Yet to come'}</td>
+          <td>${statusBadge}</td>
+        `;
+        tbody.appendChild(tr);
+      });
     }
 
     function renderQuarterTable() {
