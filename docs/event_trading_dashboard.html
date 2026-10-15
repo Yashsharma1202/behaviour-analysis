@@ -3337,8 +3337,43 @@
       const dateFrom = document.getElementById('q-date-from')?.value || '';
       const dateTo = document.getElementById('q-date-to')?.value || '';
 
+      // "All F&O Stocks (211)" merges in the non-Nifty-50 universe (real
+      // computed backtest data where available) alongside the 51 live-tracked
+      // Nifty-50 + BSE quarterly stocks -- mapped to the field names this
+      // table expects.
+      let baseStocks = q.stocks;
+      if (currentQuarterFilter === 'all_fo') {
+        const already = new Set(q.stocks.map(s => s.symbol));
+        const extra = (window.FO_STOCKS_211 || [])
+          .filter(f => f.is_nifty50 !== 'YES' && !already.has(f.symbol))
+          .map(f => ({
+            symbol: f.symbol,
+            name: f.name,
+            is_nifty50: 'NO',
+            direction: f.direction || null,
+            window: f.taking_window_raw || null,
+            lead: f.entry_lead_days,
+            hold: f.exit_hold_days,
+            entry_px: f.spot_ltp,
+            spot_ltp: f.spot_ltp,
+            entry_date: null,
+            exit_date: null,
+            result_date: null,
+            announced: false,
+            avg_17q_wr: f.q_win_rate,
+            lot: f.lot_size,
+            margin: f.margin_20pct,
+            expected_ret: f.expected_ret,
+            best_strategy: f.best_strategy,
+            low_confidence: f.low_confidence,
+            n_hist_quarters: f.n_hist_quarters,
+            data_source: f.data_source,
+          }));
+        baseStocks = q.stocks.concat(extra);
+      }
+
       let renderedIdx = 0;
-      const sortedStocks = q.stocks.slice().sort((a, b) => {
+      const sortedStocks = baseStocks.slice().sort((a, b) => {
         const da = parseEventDate(a.entry_date);
         const db = parseEventDate(b.entry_date);
         if (!da && !db) return 0;
@@ -3347,7 +3382,7 @@
         return da - db;
       });
       sortedStocks.forEach((s) => {
-        if ((currentQuarterFilter === 'nifty50' || currentQuarterFilter === 'all') && s.is_nifty50 !== 'YES') return;
+        if (currentQuarterFilter === 'nifty50' && s.is_nifty50 !== 'YES') return;
         if (currentQuarterFilter === 'confirmed' && !s.announced) return;
         if (currentQuarterFilter === 'LONG' && s.direction !== 'LONG') return;
         if (currentQuarterFilter === 'SHORT' && s.direction !== 'SHORT') return;
@@ -3360,11 +3395,14 @@
         tr.style.cursor = 'pointer';
         tr.onclick = () => openStockModal(s, 'quarter');
 
-        const dirBadge = s.direction === 'LONG' 
+        const dirBadge = s.direction === 'LONG'
           ? `<span class="badge-long">▲ LONG</span>`
-          : `<span class="badge-short">▼ SHORT</span>`;
+          : s.direction === 'SHORT'
+          ? `<span class="badge-short">▼ SHORT</span>`
+          : `<span style="color:#94A3B8; font-size:0.72rem; font-weight:700; border:1px solid #475569; border-radius:4px; padding:1px 6px;">⚠️ Data Insufficient</span>`;
 
-        const winPill = s.window || s.taking_window_raw || s.taking_window_full || `T-${s.lead || s.entry_lead_days || 3} to T+${s.hold || s.exit_hold_days || 3}`;
+        const winPill = s.window || s.taking_window_raw || s.taking_window_full
+          || (s.direction ? `T-${s.lead || s.entry_lead_days || 3} to T+${s.hold || s.exit_hold_days || 3}` : 'N/A');
         const isAnnounced = s.announced === true && s.result_date && s.result_date !== 'Yet to come';
         let enDateStr = '';
         let resDateStr = '';
