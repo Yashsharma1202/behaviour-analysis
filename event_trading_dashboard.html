@@ -1055,6 +1055,19 @@
         <button class="seg-pill" onclick="switchTab('equity')">📈 Cash Equity (100% Delivery CNC)</button>
       </div>
 
+      <!-- F&O sub-tabs: Position Windows / Data Insufficient -->
+      <div class="tabs-nav" style="grid-template-columns: repeat(auto-fit, minmax(190px, 240px)); margin-bottom: 1rem;">
+        <button class="tab-btn active" id="fo-subtab-btn-windows" onclick="switchFoSubtab('windows')">
+          <span>📊 Position Windows</span>
+        </button>
+        <button class="tab-btn" id="fo-subtab-btn-insufficient" onclick="switchFoSubtab('insufficient')" style="background:rgba(148,163,184,0.08); border-top:2px solid #94A3B8;">
+          <span>⚠️ Data Insufficient</span>
+          <span class="tab-badge" id="fo-insufficient-count" style="background:#64748B; color:#fff; font-weight:800;">...</span>
+        </button>
+      </div>
+
+      <div id="fo-subtab-windows">
+
       <!-- Event Selectors in TABULAR FORM -->
       <div class="card" style="padding: 1rem 1.15rem; margin-bottom: 1.25rem;">
         <div class="card-title-group" style="margin-bottom: 0.85rem;">
@@ -1249,6 +1262,33 @@
           </table>
         </div>
       </div>
+
+      </div>
+      <!-- /fo-subtab-windows -->
+
+      <div id="fo-subtab-insufficient" style="display:none;">
+        <div class="card" style="padding: 1rem 1.15rem; margin-bottom: 1.25rem;">
+          <div class="card-title-group" style="margin-bottom: 0.85rem;">
+            <h2>⚠️ F&amp;O Stocks With Insufficient Backtest Data</h2>
+            <p>Non-Nifty-50 F&amp;O stocks where no reliable per-stock window/direction could be computed, with the exact data-duration reason for each (futures price history range and per-date gap diagnostics against cached NSE result dates). Real current price shown where available; no direction or window is fabricated for these.</p>
+          </div>
+          <div class="table-container">
+            <table class="event-master-table">
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Company</th>
+                  <th>Current Price (₹)</th>
+                  <th>Lot Size</th>
+                  <th>Data Duration / Reason</th>
+                </tr>
+              </thead>
+              <tbody id="fo-insufficient-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
     </div>
 
 
@@ -2913,6 +2953,8 @@
           renderHolidayBacktest();
         } else if (tabId === 'quarterly') {
           renderQuarterTable();
+          const foCountBadge = document.getElementById('fo-insufficient-count');
+          if (foCountBadge) foCountBadge.textContent = (window.FO_STOCKS_211 || []).filter(f => f.is_nifty50 !== 'YES' && !f.direction).length;
         } else if (tabId === 'alerts') {
           renderAlertsTab();
           renderHolidayAlertsTab('holiday-alerts-tbody-main');
@@ -3197,6 +3239,50 @@
 
       renderHolidayTable();
       if (currentHolidaySubtab === 'fo') { loadHolidaysDataset().then(renderFoHolidayTable); }
+    }
+
+    function switchFoSubtab(which) {
+      const windows = document.getElementById('fo-subtab-windows');
+      const insufficient = document.getElementById('fo-subtab-insufficient');
+      const btnWindows = document.getElementById('fo-subtab-btn-windows');
+      const btnInsufficient = document.getElementById('fo-subtab-btn-insufficient');
+      if (which === 'insufficient') {
+        if (windows) windows.style.display = 'none';
+        if (insufficient) insufficient.style.display = 'block';
+        if (btnWindows) btnWindows.classList.remove('active');
+        if (btnInsufficient) btnInsufficient.classList.add('active');
+        renderFoInsufficientTab();
+      } else {
+        if (windows) windows.style.display = 'block';
+        if (insufficient) insufficient.style.display = 'none';
+        if (btnWindows) btnWindows.classList.add('active');
+        if (btnInsufficient) btnInsufficient.classList.remove('active');
+      }
+    }
+
+    function renderFoInsufficientTab() {
+      const tbody = document.getElementById('fo-insufficient-tbody');
+      const countBadge = document.getElementById('fo-insufficient-count');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      const rows = (window.FO_STOCKS_211 || []).filter(f => f.is_nifty50 !== 'YES' && !f.direction);
+      if (countBadge) countBadge.textContent = rows.length;
+
+      rows.forEach(s => {
+        const tr = document.createElement('tr');
+        const priceStr = (s.spot_ltp !== undefined && s.spot_ltp !== null)
+          ? `₹${Number(s.spot_ltp).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`
+          : '<span style="color:#94A3B8;">N/A</span>';
+        tr.innerHTML = `
+          <td><strong style="color:#FFF;">${s.symbol}</strong></td>
+          <td style="color:#CBD5E1;">${s.name || ''}</td>
+          <td style="color:#60A5FA; font-weight:700;">${priceStr}</td>
+          <td style="color:#94A3B8;">${s.lot_size || 'N/A'}</td>
+          <td style="color:#94A3B8; font-size:0.78rem; max-width:480px;">${s.data_duration || 'No diagnostic available'}</td>
+        `;
+        tbody.appendChild(tr);
+      });
     }
 
     function switchAlertsSubtab(which) {

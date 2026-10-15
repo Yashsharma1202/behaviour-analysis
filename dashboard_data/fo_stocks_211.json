@@ -23,7 +23,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "27-Jun-2025 to 28-Sep-2026",
+    "futures_data_years": 1.3,
+    "result_history_count": 3,
+    "data_duration": "Futures price history: 27-Jun-2025 to 28-Sep-2026 (309 trading days on record, 1.3 yr span). 3 cached NSE result date(s): 23-Jan-2020 (no price data before this date), 20-Jan-2023 (no price data before this date), 28-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 2,
@@ -49,7 +53,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 3/5 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "28-Jan-2022 to 28-Sep-2026",
+    "futures_data_years": 4.7,
+    "result_history_count": 5
   },
   {
     "rank": 3,
@@ -75,7 +82,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 8/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "31-Dec-2021 to 28-Sep-2026",
+    "futures_data_years": 4.7,
+    "result_history_count": 5
   },
   {
     "rank": 4,
@@ -101,7 +111,11 @@
     "n_hist_quarters": 2,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 2 usable historical quarters -- futures price history for this stock starts too recently to cover older results): 7/4 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 2 usable historical quarters -- futures price history for this stock starts too recently to cover older results): 7/4 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (451 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 01-May-2024 (no price data before this date), 29-Jul-2024 (no price data before this date), 23-Oct-2024 (no price data before this date), 24-Jan-2025 (0d gap (usable)), 04-Feb-2025 (0d gap (usable))"
   },
   {
     "rank": 5,
@@ -147,7 +161,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 7/1 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 7/1 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (451 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 29-Jan-2024 (no price data before this date), 03-May-2024 (no price data before this date), 25-Jul-2024 (no price data before this date), 22-Oct-2024 (no price data before this date), 23-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 7,
@@ -193,7 +211,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (485 trading days on record, 7.7 yr span). 5 cached NSE result date(s): 25-Jan-2024 (1309d gap), 02-May-2024 (1407d gap), 31-Jul-2024 (1497d gap), 28-Oct-2024 (1586d gap), 29-Jan-2025 (1679d gap)"
   },
   {
     "rank": 9,
@@ -219,7 +241,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "26-Feb-2021 to 28-Sep-2026",
+    "futures_data_years": 5.6,
+    "result_history_count": 5
   },
   {
     "rank": 10,
@@ -245,7 +270,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "27-Jun-2025 to 28-Sep-2026",
+    "futures_data_years": 1.3,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 27-Jun-2025 to 28-Sep-2026 (309 trading days on record, 1.3 yr span). 5 cached NSE result date(s): 10-Feb-2024 (no price data before this date), 18-May-2024 (no price data before this date), 26-Jul-2024 (no price data before this date), 23-Oct-2024 (no price data before this date), 24-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 11,
@@ -271,7 +300,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 2/3 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 12,
@@ -297,7 +329,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 148,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (451 trading days on record, 1.8 yr span). 0 cached NSE result date(s): "
   },
   {
     "rank": 13,
@@ -323,7 +359,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 4/3 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 4/3 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (451 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 27-Jan-2024 (no price data before this date), 12-May-2024 (no price data before this date), 10-Aug-2024 (no price data before this date), 30-Oct-2024 (no price data before this date), 20-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 14,
@@ -369,7 +409,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 6/6 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 16,
@@ -415,7 +458,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/7 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "30-Jul-2021 to 28-Sep-2026",
+    "futures_data_years": 5.2,
+    "result_history_count": 5
   },
   {
     "rank": 18,
@@ -441,7 +487,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "26-Aug-2026 to 28-Sep-2026",
+    "futures_data_years": 0.1,
+    "result_history_count": 11,
+    "data_duration": "Futures price history: 26-Aug-2026 to 28-Sep-2026 (23 trading days on record, 0.1 yr span). 0 cached NSE result date(s): "
   },
   {
     "rank": 19,
@@ -467,7 +517,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 2/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "26-Feb-2021 to 28-Sep-2026",
+    "futures_data_years": 5.6,
+    "result_history_count": 5
   },
   {
     "rank": 20,
@@ -493,7 +546,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/3 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 21,
@@ -579,7 +635,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "31-Dec-2025 to 28-Sep-2026",
+    "futures_data_years": 0.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 31-Dec-2025 to 28-Sep-2026 (182 trading days on record, 0.7 yr span). 5 cached NSE result date(s): 03-Aug-2018 (no price data before this date), 25-Oct-2018 (no price data before this date), 28-Jan-2019 (no price data before this date), 01-Feb-2019 (no price data before this date), 30-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 25,
@@ -625,7 +685,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 5/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "28-Feb-2020 to 28-Sep-2026",
+    "futures_data_years": 6.6,
+    "result_history_count": 5
   },
   {
     "rank": 27,
@@ -651,7 +714,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 2/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 28,
@@ -677,7 +743,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 8/5 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 8/5 T-n/T+m grid search",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (673 trading days on record, 7.7 yr span). 5 cached NSE result date(s): 02-Feb-2024 (1527d gap), 10-May-2024 (1625d gap), 03-Aug-2024 (1710d gap), 11-Nov-2024 (1810d gap), 24-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 29,
@@ -703,7 +773,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "30-May-2025 to 28-Sep-2026",
+    "futures_data_years": 1.3,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 30-May-2025 to 28-Sep-2026 (329 trading days on record, 1.3 yr span). 5 cached NSE result date(s): 30-May-2024 (no price data before this date), 10-Aug-2024 (no price data before this date), 15-Nov-2024 (no price data before this date), 07-Feb-2025 (no price data before this date), 07-Mar-2025 (no price data before this date)"
   },
   {
     "rank": 30,
@@ -749,7 +823,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 6/3 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 32,
@@ -795,7 +872,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 5/4 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 34,
@@ -821,7 +901,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 5/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 35,
@@ -847,7 +930,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "30-May-2025 to 28-Sep-2026",
+    "futures_data_years": 1.3,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 30-May-2025 to 28-Sep-2026 (329 trading days on record, 1.3 yr span). 5 cached NSE result date(s): 30-Jan-2024 (no price data before this date), 02-May-2024 (no price data before this date), 06-Aug-2024 (no price data before this date), 06-Nov-2024 (no price data before this date), 29-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 36,
@@ -873,7 +960,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 3/7 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 37,
@@ -899,7 +989,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 4/2 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 38,
@@ -925,7 +1018,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 7/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 39,
@@ -971,7 +1067,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 8/3 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 8/3 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (451 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 06-Feb-2024 (no price data before this date), 09-May-2024 (no price data before this date), 02-Aug-2024 (no price data before this date), 28-Oct-2024 (no price data before this date), 29-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 41,
@@ -997,7 +1097,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 6/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 42,
@@ -1023,7 +1126,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 5/6 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 5/6 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (451 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 03-Feb-2024 (no price data before this date), 04-May-2024 (no price data before this date), 03-Aug-2024 (no price data before this date), 26-Oct-2024 (no price data before this date), 25-Jan-2025 (1d gap (usable))"
   },
   {
     "rank": 43,
@@ -1049,7 +1156,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 6/3 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 6/3 T-n/T+m grid search",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (572 trading days on record, 7.7 yr span). 5 cached NSE result date(s): 23-Jan-2024 (1671d gap), 06-May-2024 (1775d gap), 24-Jul-2024 (1854d gap), 21-Oct-2024 (1943d gap), 29-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 44,
@@ -1075,7 +1186,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 4/6 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 45,
@@ -1141,7 +1255,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "01-Apr-2026 to 28-Sep-2026",
+    "futures_data_years": 0.5,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Apr-2026 to 28-Sep-2026 (121 trading days on record, 0.5 yr span). 5 cached NSE result date(s): 31-Jan-2024 (no price data before this date), 24-May-2024 (no price data before this date), 09-Aug-2024 (no price data before this date), 08-Nov-2024 (no price data before this date), 07-Feb-2025 (no price data before this date)"
   },
   {
     "rank": 48,
@@ -1167,7 +1285,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 7/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "20-Aug-2020 to 28-Sep-2026",
+    "futures_data_years": 6.1,
+    "result_history_count": 5
   },
   {
     "rank": 49,
@@ -1193,7 +1314,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 3/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 50,
@@ -1219,7 +1343,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 3/4 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 51,
@@ -1245,7 +1372,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/7 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Oct-2021 to 28-Sep-2026",
+    "futures_data_years": 5.0,
+    "result_history_count": 5
   },
   {
     "rank": 52,
@@ -1271,7 +1401,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 8/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 53,
@@ -1297,7 +1430,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 4/2 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 54,
@@ -1323,7 +1459,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 2/7 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 2/7 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (451 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 02-Feb-2024 (no price data before this date), 18-May-2024 (no price data before this date), 03-Aug-2024 (no price data before this date), 14-Nov-2024 (no price data before this date), 07-Feb-2025 (0d gap (usable))"
   },
   {
     "rank": 55,
@@ -1349,7 +1489,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 8/3 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 56,
@@ -1375,7 +1518,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 8/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "27-Aug-2021 to 28-Sep-2026",
+    "futures_data_years": 5.1,
+    "result_history_count": 5
   },
   {
     "rank": 57,
@@ -1401,7 +1547,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 6/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 58,
@@ -1427,7 +1576,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 4/2 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 4/2 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (451 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 13-Jan-2024 (no price data before this date), 04-May-2024 (no price data before this date), 13-Jul-2024 (no price data before this date), 12-Oct-2024 (no price data before this date), 11-Jan-2025 (1d gap (usable))"
   },
   {
     "rank": 59,
@@ -1513,7 +1666,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 2/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 63,
@@ -1539,7 +1695,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "01-Apr-2026 to 28-Sep-2026",
+    "futures_data_years": 0.5,
+    "result_history_count": 15,
+    "data_duration": "Futures price history: 01-Apr-2026 to 28-Sep-2026 (121 trading days on record, 0.5 yr span). 0 cached NSE result date(s): "
   },
   {
     "rank": 64,
@@ -1565,7 +1725,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "30-May-2025 to 28-Sep-2026",
+    "futures_data_years": 1.3,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 30-May-2025 to 28-Sep-2026 (329 trading days on record, 1.3 yr span). 5 cached NSE result date(s): 07-Feb-2024 (no price data before this date), 23-May-2024 (no price data before this date), 06-Aug-2024 (no price data before this date), 08-Nov-2024 (no price data before this date), 07-Feb-2025 (no price data before this date)"
   },
   {
     "rank": 65,
@@ -1591,7 +1755,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 8/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 66,
@@ -1617,7 +1784,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 67,
@@ -1643,7 +1813,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 1/5 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 1/5 T-n/T+m grid search",
+    "futures_data_range": "11-Dec-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 11-Dec-2024 to 28-Sep-2026 (443 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 01-Feb-2024 (no price data before this date), 30-May-2024 (no price data before this date), 14-Aug-2024 (no price data before this date), 25-Oct-2024 (no price data before this date), 29-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 68,
@@ -1669,7 +1843,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (242 trading days on record, 7.7 yr span). 5 cached NSE result date(s): 29-Jan-2024 (1677d gap), 30-May-2024 (1799d gap), 07-Aug-2024 (1868d gap), 11-Nov-2024 (1964d gap), 13-Feb-2025 (2058d gap)"
   },
   {
     "rank": 69,
@@ -1695,7 +1873,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 5/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 70,
@@ -1721,7 +1902,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 2/6 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "27-Mar-2020 to 28-Sep-2026",
+    "futures_data_years": 6.5,
+    "result_history_count": 5
   },
   {
     "rank": 71,
@@ -1767,7 +1951,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "27-May-2026 to 28-Sep-2026",
+    "futures_data_years": 0.3,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 27-May-2026 to 28-Sep-2026 (84 trading days on record, 0.3 yr span). 5 cached NSE result date(s): 05-Feb-2024 (no price data before this date), 22-May-2024 (no price data before this date), 31-Jul-2024 (no price data before this date), 08-Nov-2024 (no price data before this date), 05-Feb-2025 (no price data before this date)"
   },
   {
     "rank": 73,
@@ -1793,7 +1981,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 5/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "27-Aug-2021 to 28-Sep-2026",
+    "futures_data_years": 5.1,
+    "result_history_count": 5
   },
   {
     "rank": 74,
@@ -1819,7 +2010,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 4/7 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 75,
@@ -1865,7 +2059,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 2/2 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2021 to 28-Sep-2026",
+    "futures_data_years": 5.7,
+    "result_history_count": 5
   },
   {
     "rank": 77,
@@ -1931,7 +2128,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 6/6 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 80,
@@ -1977,7 +2177,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 4/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 82,
@@ -2023,7 +2226,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (551 trading days on record, 7.7 yr span). 5 cached NSE result date(s): 19-Jan-2024 (1576d gap), 19-Apr-2024 (1667d gap), 02-Aug-2024 (1772d gap), 18-Oct-2024 (1849d gap), 28-Jan-2025 (1951d gap)"
   },
   {
     "rank": 84,
@@ -2049,7 +2256,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "01-Apr-2026 to 28-Sep-2026",
+    "futures_data_years": 0.5,
+    "result_history_count": 2,
+    "data_duration": "Futures price history: 01-Apr-2026 to 28-Sep-2026 (121 trading days on record, 0.5 yr span). 2 cached NSE result date(s): 13-Nov-2024 (no price data before this date), 28-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 85,
@@ -2095,7 +2306,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "30-Oct-2020 to 28-Sep-2026",
+    "futures_data_years": 5.9,
+    "result_history_count": 73,
+    "data_duration": "Futures price history: 30-Oct-2020 to 28-Sep-2026 (1455 trading days on record, 5.9 yr span). 0 cached NSE result date(s): "
   },
   {
     "rank": 87,
@@ -2121,7 +2336,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 78,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (1908 trading days on record, 7.7 yr span). 0 cached NSE result date(s): "
   },
   {
     "rank": 88,
@@ -2147,7 +2366,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 89,
@@ -2173,7 +2395,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 3/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "16-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 90,
@@ -2199,7 +2424,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/7 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "27-Aug-2021 to 28-Sep-2026",
+    "futures_data_years": 5.1,
+    "result_history_count": 5
   },
   {
     "rank": 91,
@@ -2225,7 +2453,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 3/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "25-Jun-2021 to 28-Sep-2026",
+    "futures_data_years": 5.3,
+    "result_history_count": 5
   },
   {
     "rank": 92,
@@ -2251,7 +2482,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 1/2 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 1/2 T-n/T+m grid search",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (572 trading days on record, 7.7 yr span). 5 cached NSE result date(s): 24-Jan-2024 (1672d gap), 06-May-2024 (1775d gap), 29-Jul-2024 (1859d gap), 28-Oct-2024 (1950d gap), 29-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 93,
@@ -2297,7 +2532,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 7/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 95,
@@ -2323,7 +2561,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 2/6 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "18-Dec-2020 to 28-Sep-2026",
+    "futures_data_years": 5.8,
+    "result_history_count": 5
   },
   {
     "rank": 96,
@@ -2369,7 +2610,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "28-Mar-2025 to 28-Sep-2026",
+    "futures_data_years": 1.5,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 28-Mar-2025 to 28-Sep-2026 (369 trading days on record, 1.5 yr span). 5 cached NSE result date(s): 04-May-2024 (no price data before this date), 09-Aug-2024 (no price data before this date), 25-Oct-2024 (no price data before this date), 31-Jan-2025 (no price data before this date), 10-Mar-2025 (no price data before this date)"
   },
   {
     "rank": 98,
@@ -2395,7 +2640,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/4 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 99,
@@ -2421,7 +2669,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "28-Feb-2025 to 28-Sep-2026",
+    "futures_data_years": 1.6,
+    "result_history_count": 4,
+    "data_duration": "Futures price history: 28-Feb-2025 to 28-Sep-2026 (388 trading days on record, 1.6 yr span). 4 cached NSE result date(s): 20-Jan-2024 (no price data before this date), 19-Apr-2024 (no price data before this date), 15-Jul-2024 (no price data before this date), 09-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 100,
@@ -2447,7 +2699,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 4/8 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 4/8 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (451 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 09-Feb-2024 (no price data before this date), 20-May-2024 (no price data before this date), 12-Aug-2024 (no price data before this date), 04-Nov-2024 (no price data before this date), 20-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 101,
@@ -2493,7 +2749,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 3/5 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 103,
@@ -2539,7 +2798,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 5/4 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 5/4 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (451 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 23-Jan-2024 (no price data before this date), 07-May-2024 (no price data before this date), 19-Jul-2024 (no price data before this date), 24-Oct-2024 (no price data before this date), 28-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 105,
@@ -2585,7 +2848,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 8/7 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 107,
@@ -2611,7 +2877,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 2/3 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 2/3 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (451 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 31-Jan-2024 (no price data before this date), 10-May-2024 (no price data before this date), 02-Aug-2024 (no price data before this date), 14-Nov-2024 (no price data before this date), 31-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 108,
@@ -2637,7 +2907,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "30-May-2025 to 28-Sep-2026",
+    "futures_data_years": 1.3,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 30-May-2025 to 28-Sep-2026 (329 trading days on record, 1.3 yr span). 5 cached NSE result date(s): 30-Jan-2024 (no price data before this date), 16-May-2024 (no price data before this date), 26-Jul-2024 (no price data before this date), 29-Oct-2024 (no price data before this date), 28-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 109,
@@ -2663,7 +2937,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 5/2 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 5/2 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (451 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 23-Jan-2024 (no price data before this date), 03-May-2024 (no price data before this date), 29-Jul-2024 (no price data before this date), 16-Oct-2024 (no price data before this date), 21-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 110,
@@ -2689,7 +2967,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "27-Jun-2025 to 28-Sep-2026",
+    "futures_data_years": 1.3,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 27-Jun-2025 to 28-Sep-2026 (309 trading days on record, 1.3 yr span). 5 cached NSE result date(s): 25-Jan-2024 (no price data before this date), 29-Apr-2024 (no price data before this date), 26-Jul-2024 (no price data before this date), 28-Oct-2024 (no price data before this date), 23-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 111,
@@ -2735,7 +3017,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 1/7 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 1/7 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (451 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 30-Jan-2024 (no price data before this date), 29-Apr-2024 (no price data before this date), 24-Jul-2024 (no price data before this date), 23-Oct-2024 (no price data before this date), 29-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 113,
@@ -2761,7 +3047,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 8/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "29-Oct-2021 to 28-Sep-2026",
+    "futures_data_years": 4.9,
+    "result_history_count": 5
   },
   {
     "rank": 114,
@@ -2787,7 +3076,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 6/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 115,
@@ -2813,7 +3105,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 30,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (451 trading days on record, 1.8 yr span). 0 cached NSE result date(s): "
   },
   {
     "rank": 116,
@@ -2839,7 +3135,11 @@
     "n_hist_quarters": 2,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 2 usable historical quarters -- futures price history for this stock starts too recently to cover older results): 1/8 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 2 usable historical quarters -- futures price history for this stock starts too recently to cover older results): 1/8 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (451 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 24-Apr-2024 (no price data before this date), 30-Jul-2024 (no price data before this date), 25-Oct-2024 (no price data before this date), 25-Jan-2025 (1d gap (usable)), 11-Mar-2025 (0d gap (usable))"
   },
   {
     "rank": 117,
@@ -2885,7 +3185,10 @@
     "n_hist_quarters": 3,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 7/2 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "23-Apr-2024 to 28-Sep-2026",
+    "futures_data_years": 2.4,
+    "result_history_count": 5
   },
   {
     "rank": 119,
@@ -2911,7 +3214,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "27-Feb-2026 to 28-Sep-2026",
+    "futures_data_years": 0.6,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 27-Feb-2026 to 28-Sep-2026 (141 trading days on record, 0.6 yr span). 5 cached NSE result date(s): 17-Jan-2024 (no price data before this date), 24-Apr-2024 (no price data before this date), 17-Jul-2024 (no price data before this date), 17-Oct-2024 (no price data before this date), 16-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 120,
@@ -2937,7 +3244,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 6/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 121,
@@ -2983,7 +3293,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "26-Aug-2026 to 28-Sep-2026",
+    "futures_data_years": 0.1,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 26-Aug-2026 to 28-Sep-2026 (23 trading days on record, 0.1 yr span). 5 cached NSE result date(s): 16-Jan-2024 (no price data before this date), 26-Apr-2024 (no price data before this date), 15-Jul-2024 (no price data before this date), 15-Oct-2024 (no price data before this date), 15-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 123,
@@ -3009,7 +3323,10 @@
     "n_hist_quarters": 4,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 5/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 124,
@@ -3035,7 +3352,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "30-May-2025 to 28-Sep-2026",
+    "futures_data_years": 1.3,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 30-May-2025 to 28-Sep-2026 (329 trading days on record, 1.3 yr span). 5 cached NSE result date(s): 31-Jan-2024 (no price data before this date), 15-May-2024 (no price data before this date), 31-Jul-2024 (no price data before this date), 05-Nov-2024 (no price data before this date), 24-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 125,
@@ -3061,7 +3382,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 2/2 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 126,
@@ -3127,7 +3451,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "30-May-2025 to 28-Sep-2026",
+    "futures_data_years": 1.3,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 30-May-2025 to 28-Sep-2026 (329 trading days on record, 1.3 yr span). 5 cached NSE result date(s): 12-Feb-2024 (no price data before this date), 29-May-2024 (no price data before this date), 14-Aug-2024 (no price data before this date), 05-Nov-2024 (no price data before this date), 07-Feb-2025 (no price data before this date)"
   },
   {
     "rank": 129,
@@ -3153,7 +3481,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 4,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (1434 trading days on record, 7.7 yr span). 0 cached NSE result date(s): "
   },
   {
     "rank": 130,
@@ -3179,7 +3511,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 4/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 131,
@@ -3205,7 +3540,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "09-Jun-2022 to 28-Sep-2026",
+    "futures_data_years": 4.3,
+    "result_history_count": 5
   },
   {
     "rank": 132,
@@ -3231,7 +3569,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "01-Apr-2026 to 28-Sep-2026",
+    "futures_data_years": 0.5,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Apr-2026 to 28-Sep-2026 (121 trading days on record, 0.5 yr span). 5 cached NSE result date(s): 24-Jan-2024 (no price data before this date), 26-Apr-2024 (no price data before this date), 25-Jul-2024 (no price data before this date), 28-Oct-2024 (no price data before this date), 29-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 133,
@@ -3257,7 +3599,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 4/3 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "26-Feb-2021 to 28-Sep-2026",
+    "futures_data_years": 5.6,
+    "result_history_count": 5
   },
   {
     "rank": 134,
@@ -3283,7 +3628,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 111,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (1908 trading days on record, 7.7 yr span). 0 cached NSE result date(s): "
   },
   {
     "rank": 135,
@@ -3309,7 +3658,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "26-Feb-2021 to 28-Sep-2026",
+    "futures_data_years": 5.6,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 26-Feb-2021 to 28-Sep-2026 (489 trading days on record, 5.6 yr span). 5 cached NSE result date(s): 29-Jan-2024 (522d gap), 24-Apr-2024 (608d gap), 19-Jul-2024 (694d gap), 24-Oct-2024 (791d gap), 23-Jan-2025 (882d gap)"
   },
   {
     "rank": 136,
@@ -3335,7 +3688,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 2/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 137,
@@ -3361,7 +3717,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 6/4 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "28-Feb-2020 to 28-Sep-2026",
+    "futures_data_years": 6.6,
+    "result_history_count": 5
   },
   {
     "rank": 138,
@@ -3387,7 +3746,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 7/4 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 7/4 T-n/T+m grid search",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (817 trading days on record, 7.7 yr span). 5 cached NSE result date(s): 14-Feb-2024 (566d gap), 29-May-2024 (671d gap), 14-Aug-2024 (748d gap), 14-Nov-2024 (840d gap), 12-Feb-2025 (0d gap (usable))"
   },
   {
     "rank": 139,
@@ -3433,7 +3796,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 4/2 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 4/2 T-n/T+m grid search",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (572 trading days on record, 7.7 yr span). 5 cached NSE result date(s): 12-Feb-2024 (1691d gap), 17-May-2024 (1786d gap), 07-Aug-2024 (1868d gap), 08-Nov-2024 (1961d gap), 07-Feb-2025 (0d gap (usable))"
   },
   {
     "rank": 141,
@@ -3459,7 +3826,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 6/6 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 142,
@@ -3505,7 +3875,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 5/8 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 5/8 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (450 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 06-Feb-2024 (no price data before this date), 22-May-2024 (no price data before this date), 13-Aug-2024 (no price data before this date), 12-Nov-2024 (no price data before this date), 11-Feb-2025 (0d gap (usable))"
   },
   {
     "rank": 144,
@@ -3531,7 +3905,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/2 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Oct-2021 to 28-Sep-2026",
+    "futures_data_years": 5.0,
+    "result_history_count": 5
   },
   {
     "rank": 145,
@@ -3557,7 +3934,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 7/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 146,
@@ -3583,7 +3963,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 1/5 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 1/5 T-n/T+m grid search",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (776 trading days on record, 7.7 yr span). 5 cached NSE result date(s): 14-Feb-2024 (1385d gap), 21-May-2024 (1482d gap), 09-Aug-2024 (1562d gap), 06-Nov-2024 (1651d gap), 08-Feb-2025 (1d gap (usable))"
   },
   {
     "rank": 147,
@@ -3629,7 +4013,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 2/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 149,
@@ -3655,7 +4042,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "28-Feb-2025 to 28-Sep-2026",
+    "futures_data_years": 1.6,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 28-Feb-2025 to 28-Sep-2026 (387 trading days on record, 1.6 yr span). 5 cached NSE result date(s): 08-Feb-2024 (no price data before this date), 14-May-2024 (no price data before this date), 19-Jul-2024 (no price data before this date), 24-Oct-2024 (no price data before this date), 10-Feb-2025 (no price data before this date)"
   },
   {
     "rank": 150,
@@ -3681,7 +4072,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 8/6 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 8/6 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (450 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 19-Jan-2024 (no price data before this date), 22-May-2024 (no price data before this date), 19-Jul-2024 (no price data before this date), 22-Oct-2024 (no price data before this date), 20-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 151,
@@ -3707,7 +4102,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 6/2 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Oct-2021 to 28-Sep-2026",
+    "futures_data_years": 5.0,
+    "result_history_count": 5
   },
   {
     "rank": 152,
@@ -3733,7 +4131,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/7 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 153,
@@ -3759,7 +4160,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 4/4 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 154,
@@ -3785,7 +4189,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "27-Jun-2025 to 28-Sep-2026",
+    "futures_data_years": 1.3,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 27-Jun-2025 to 28-Sep-2026 (308 trading days on record, 1.3 yr span). 5 cached NSE result date(s): 13-Feb-2024 (no price data before this date), 23-May-2024 (no price data before this date), 24-Jul-2024 (no price data before this date), 11-Nov-2024 (no price data before this date), 06-Feb-2025 (no price data before this date)"
   },
   {
     "rank": 155,
@@ -3811,7 +4219,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "31-Jan-2025 to 28-Sep-2026",
+    "futures_data_years": 1.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 31-Jan-2025 to 28-Sep-2026 (406 trading days on record, 1.7 yr span). 5 cached NSE result date(s): 13-Feb-2024 (no price data before this date), 18-May-2024 (no price data before this date), 01-Aug-2024 (no price data before this date), 26-Oct-2024 (no price data before this date), 31-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 156,
@@ -3837,7 +4249,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 5/5 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 157,
@@ -3863,7 +4278,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 4/6 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "26-Feb-2021 to 28-Sep-2026",
+    "futures_data_years": 5.6,
+    "result_history_count": 5
   },
   {
     "rank": 158,
@@ -3889,7 +4307,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 7/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 159,
@@ -3915,7 +4336,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "28-Mar-2025 to 28-Sep-2026",
+    "futures_data_years": 1.5,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 28-Mar-2025 to 28-Sep-2026 (368 trading days on record, 1.5 yr span). 5 cached NSE result date(s): 25-Jan-2024 (no price data before this date), 30-Apr-2024 (no price data before this date), 26-Jul-2024 (no price data before this date), 25-Oct-2024 (no price data before this date), 22-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 160,
@@ -3941,7 +4366,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 7/8 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 7/8 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (450 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 30-Jan-2024 (no price data before this date), 08-May-2024 (no price data before this date), 06-Aug-2024 (no price data before this date), 06-Nov-2024 (no price data before this date), 30-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 161,
@@ -3967,7 +4396,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/3 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "27-Aug-2021 to 28-Sep-2026",
+    "futures_data_years": 5.1,
+    "result_history_count": 5
   },
   {
     "rank": 162,
@@ -4013,7 +4445,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "01-Oct-2025 to 28-Sep-2026",
+    "futures_data_years": 1.0,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Oct-2025 to 28-Sep-2026 (242 trading days on record, 1.0 yr span). 5 cached NSE result date(s): 01-Feb-2024 (no price data before this date), 21-May-2024 (no price data before this date), 24-Jul-2024 (no price data before this date), 29-Oct-2024 (no price data before this date), 29-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 164,
@@ -4039,7 +4475,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "31-Dec-2025 to 28-Sep-2026",
+    "futures_data_years": 0.7,
+    "result_history_count": 2,
+    "data_duration": "Futures price history: 31-Dec-2025 to 28-Sep-2026 (181 trading days on record, 0.7 yr span). 2 cached NSE result date(s): 09-Nov-2024 (no price data before this date), 04-Feb-2025 (no price data before this date)"
   },
   {
     "rank": 165,
@@ -4065,7 +4505,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 8/8 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 8/8 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (450 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 14-Feb-2024 (no price data before this date), 29-May-2024 (no price data before this date), 01-Aug-2024 (no price data before this date), 30-Oct-2024 (no price data before this date), 31-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 166,
@@ -4091,7 +4535,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "27-May-2026 to 28-Sep-2026",
+    "futures_data_years": 0.3,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 27-May-2026 to 28-Sep-2026 (83 trading days on record, 0.3 yr span). 5 cached NSE result date(s): 06-Feb-2024 (no price data before this date), 14-May-2024 (no price data before this date), 07-Aug-2024 (no price data before this date), 24-Oct-2024 (no price data before this date), 29-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 167,
@@ -4117,7 +4565,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 2/6 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 168,
@@ -4143,7 +4594,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 142,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (1907 trading days on record, 7.7 yr span). 0 cached NSE result date(s): "
   },
   {
     "rank": 169,
@@ -4189,7 +4644,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "30-May-2025 to 28-Sep-2026",
+    "futures_data_years": 1.3,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 30-May-2025 to 28-Sep-2026 (328 trading days on record, 1.3 yr span). 5 cached NSE result date(s): 08-Feb-2024 (no price data before this date), 17-May-2024 (no price data before this date), 08-Aug-2024 (no price data before this date), 07-Nov-2024 (no price data before this date), 14-Feb-2025 (no price data before this date)"
   },
   {
     "rank": 171,
@@ -4215,7 +4674,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "26-Aug-2026 to 28-Sep-2026",
+    "futures_data_years": 0.1,
+    "result_history_count": 2,
+    "data_duration": "Futures price history: 26-Aug-2026 to 28-Sep-2026 (23 trading days on record, 0.1 yr span). 2 cached NSE result date(s): 25-Nov-2024 (no price data before this date), 05-Feb-2025 (no price data before this date)"
   },
   {
     "rank": 172,
@@ -4241,7 +4704,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 4/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 173,
@@ -4267,7 +4733,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 7/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "29-Oct-2021 to 28-Sep-2026",
+    "futures_data_years": 4.9,
+    "result_history_count": 5
   },
   {
     "rank": 174,
@@ -4333,7 +4802,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 8/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 177,
@@ -4379,7 +4851,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 2/5 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 179,
@@ -4405,7 +4880,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 3/8 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 3/8 T-n/T+m grid search",
+    "futures_data_range": "31-Jan-2025 to 28-Sep-2026",
+    "futures_data_years": 1.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 31-Jan-2025 to 28-Sep-2026 (406 trading days on record, 1.7 yr span). 5 cached NSE result date(s): 08-Feb-2024 (no price data before this date), 17-May-2024 (no price data before this date), 07-Aug-2024 (no price data before this date), 14-Nov-2024 (no price data before this date), 06-Feb-2025 (0d gap (usable))"
   },
   {
     "rank": 180,
@@ -4431,7 +4910,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 4/7 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 4/7 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (450 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 23-Jan-2024 (no price data before this date), 30-Apr-2024 (no price data before this date), 24-Jul-2024 (no price data before this date), 23-Oct-2024 (no price data before this date), 23-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 181,
@@ -4457,7 +4940,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 7/2 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 182,
@@ -4503,7 +4989,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 6/5 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 6/5 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (450 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 19-Jan-2024 (no price data before this date), 26-Apr-2024 (no price data before this date), 22-Jul-2024 (no price data before this date), 22-Oct-2024 (no price data before this date), 20-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 184,
@@ -4529,7 +5019,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (404 trading days on record, 7.7 yr span). 5 cached NSE result date(s): 31-Jan-2024 (1679d gap), 24-May-2024 (1793d gap), 22-Jul-2024 (1852d gap), 28-Oct-2024 (1950d gap), 28-Jan-2025 (2042d gap)"
   },
   {
     "rank": 185,
@@ -4555,7 +5049,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "31-Dec-2025 to 28-Sep-2026",
+    "futures_data_years": 0.7,
+    "result_history_count": 2,
+    "data_duration": "Futures price history: 31-Dec-2025 to 28-Sep-2026 (181 trading days on record, 0.7 yr span). 2 cached NSE result date(s): 04-Dec-2024 (no price data before this date), 05-Feb-2025 (no price data before this date)"
   },
   {
     "rank": 186,
@@ -4601,7 +5099,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 7/2 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 7/2 T-n/T+m grid search",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (691 trading days on record, 7.7 yr span). 5 cached NSE result date(s): 24-Jan-2024 (1490d gap), 24-Apr-2024 (1581d gap), 11-Jul-2024 (1659d gap), 11-Oct-2024 (1751d gap), 09-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 188,
@@ -4626,7 +5128,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 4/8 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 4/8 T-n/T+m grid search",
+    "futures_data_range": "01-Jan-2019 to 23-Oct-2025",
+    "futures_data_years": 6.8,
+    "result_history_count": 1,
+    "data_duration": "Futures price history: 01-Jan-2019 to 23-Oct-2025 (1679 trading days on record, 6.8 yr span). 1 cached NSE result date(s): 15-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 189,
@@ -4652,7 +5158,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 190,
@@ -4738,7 +5247,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 6/7 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 6/7 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (450 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 01-Feb-2024 (no price data before this date), 13-May-2024 (no price data before this date), 01-Aug-2024 (no price data before this date), 04-Nov-2024 (no price data before this date), 03-Feb-2025 (0d gap (usable))"
   },
   {
     "rank": 194,
@@ -4804,7 +5317,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/3 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 197,
@@ -4850,7 +5366,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 3/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 199,
@@ -4896,7 +5415,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 8/7 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 8/7 T-n/T+m grid search",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (691 trading days on record, 7.7 yr span). 5 cached NSE result date(s): 20-Jan-2024 (1486d gap), 10-May-2024 (1597d gap), 20-Jul-2024 (1668d gap), 22-Oct-2024 (1762d gap), 28-Jan-2025 (0d gap (usable))"
   },
   {
     "rank": 201,
@@ -4922,7 +5445,10 @@
     "n_hist_quarters": 3,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "07-Jun-2024 to 28-Sep-2026",
+    "futures_data_years": 2.3,
+    "result_history_count": 5
   },
   {
     "rank": 202,
@@ -4948,7 +5474,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "30-May-2025 to 28-Sep-2026",
+    "futures_data_years": 1.3,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 30-May-2025 to 28-Sep-2026 (328 trading days on record, 1.3 yr span). 5 cached NSE result date(s): 07-Feb-2024 (no price data before this date), 24-May-2024 (no price data before this date), 07-Aug-2024 (no price data before this date), 12-Nov-2024 (no price data before this date), 06-Feb-2025 (no price data before this date)"
   },
   {
     "rank": 203,
@@ -4974,7 +5504,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 6/8 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 204,
@@ -5000,7 +5533,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 3/6 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 3/6 T-n/T+m grid search",
+    "futures_data_range": "29-Nov-2024 to 28-Sep-2026",
+    "futures_data_years": 1.8,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 29-Nov-2024 to 28-Sep-2026 (450 trading days on record, 1.8 yr span). 5 cached NSE result date(s): 05-Feb-2024 (no price data before this date), 13-May-2024 (no price data before this date), 30-Jul-2024 (no price data before this date), 22-Oct-2024 (no price data before this date), 10-Feb-2025 (0d gap (usable))"
   },
   {
     "rank": 205,
@@ -5026,7 +5563,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 5/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 206,
@@ -5052,7 +5592,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "01-Apr-2026 to 28-Sep-2026",
+    "futures_data_years": 0.5,
+    "result_history_count": 1,
+    "data_duration": "Futures price history: 01-Apr-2026 to 28-Sep-2026 (120 trading days on record, 0.5 yr span). 1 cached NSE result date(s): 31-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 207,
@@ -5078,7 +5622,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 7/3 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 208,
@@ -5104,7 +5651,11 @@
     "n_hist_quarters": 0,
     "low_confidence": true,
     "announced": false,
-    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated."
+    "data_source": "No overlapping historical result dates and futures price data -- this stock's futures series starts too recently (or no NSE result history cached) to compute a real backtest. Price shown is real current spot where available; direction/window intentionally left unset rather than fabricated.",
+    "futures_data_range": "31-Dec-2025 to 28-Sep-2026",
+    "futures_data_years": 0.7,
+    "result_history_count": 2,
+    "data_duration": "Futures price history: 31-Dec-2025 to 28-Sep-2026 (181 trading days on record, 0.7 yr span). 2 cached NSE result date(s): 19-Nov-2024 (no price data before this date), 30-Jan-2025 (no price data before this date)"
   },
   {
     "rank": 209,
@@ -5130,7 +5681,10 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 1/5 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5
   },
   {
     "rank": 210,
@@ -5156,7 +5710,11 @@
     "n_hist_quarters": 1,
     "low_confidence": true,
     "announced": false,
-    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 8/8 T-n/T+m grid search"
+    "data_source": "Real backtest (LOW CONFIDENCE, only 1 usable historical quarter -- futures price history for this stock starts too recently to cover older results): 8/8 T-n/T+m grid search",
+    "futures_data_range": "01-Jan-2019 to 28-Sep-2026",
+    "futures_data_years": 7.7,
+    "result_history_count": 5,
+    "data_duration": "Futures price history: 01-Jan-2019 to 28-Sep-2026 (794 trading days on record, 7.7 yr span). 5 cached NSE result date(s): 27-Jan-2024 (1339d gap), 27-Apr-2024 (1430d gap), 20-Jul-2024 (1514d gap), 26-Oct-2024 (1612d gap), 25-Jan-2025 (1d gap (usable))"
   },
   {
     "rank": 211,
@@ -5182,6 +5740,9 @@
     "n_hist_quarters": 5,
     "announced": false,
     "data_source": "Real backtest: 5 historical quarters, 5/1 T-n/T+m grid search, direction chosen by win-rate then avg return (same methodology as the Nifty-50 quarterly model)",
-    "low_confidence": false
+    "low_confidence": false,
+    "futures_data_range": "07-Mar-2022 to 28-Sep-2026",
+    "futures_data_years": 4.6,
+    "result_history_count": 5
   }
 ]
