@@ -983,28 +983,67 @@
 
 
     <div id="tab-alerts" class="tab-content" style="display:none;">
-      <div class="card" style="padding: 1rem 1.15rem; margin-bottom: 1.25rem;">
-        <div class="card-title-group" style="margin-bottom: 0.85rem;">
-          <h2>🔔 Entry / Exit Alerts &mdash; FY27_Q3</h2>
-          <p>All announced stocks for the active quarter, sorted by entry date (soonest first). Unannounced ("Yet to come") stocks are listed last.</p>
-        </div>
-        <div class="table-container">
-          <table class="event-master-table">
-            <thead>
-              <tr>
-                <th>Symbol</th>
-                <th>Direction</th>
-                <th>Window</th>
-                <th>Result Date</th>
-                <th>Entry Date</th>
-                <th>Exit Date</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody id="alerts-tbody"></tbody>
-          </table>
+
+      <!-- Alerts sub-tabs: Quarterly / Holiday Events -->
+      <div class="tabs-nav" style="grid-template-columns: repeat(auto-fit, minmax(180px, 220px)); margin-bottom: 1rem;">
+        <button class="tab-btn active" id="alerts-subtab-btn-quarterly" onclick="switchAlertsSubtab('quarterly')">
+          <span>📊 Quarterly (FY27_Q3)</span>
+        </button>
+        <button class="tab-btn" id="alerts-subtab-btn-holiday" onclick="switchAlertsSubtab('holiday')" style="background:rgba(16,185,129,0.08); border-top:2px solid #10B981;">
+          <span>🏖️ Holiday Events</span>
+        </button>
+      </div>
+
+      <div id="alerts-subtab-quarterly">
+        <div class="card" style="padding: 1rem 1.15rem; margin-bottom: 1.25rem;">
+          <div class="card-title-group" style="margin-bottom: 0.85rem;">
+            <h2>🔔 Entry / Exit Alerts &mdash; FY27_Q3</h2>
+            <p>All announced stocks for the active quarter, sorted by entry date (soonest first). Unannounced ("Yet to come") stocks are listed last.</p>
+          </div>
+          <div class="table-container">
+            <table class="event-master-table">
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Direction</th>
+                  <th>Window</th>
+                  <th>Result Date</th>
+                  <th>Entry Date</th>
+                  <th>Exit Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="alerts-tbody"></tbody>
+            </table>
+          </div>
         </div>
       </div>
+
+      <div id="alerts-subtab-holiday" style="display:none;">
+        <div class="card" style="padding: 1rem 1.15rem; margin-bottom: 1.25rem;">
+          <div class="card-title-group" style="margin-bottom: 0.85rem;">
+            <h2>🔔 Entry / Exit Alerts &mdash; All Holiday Events</h2>
+            <p>Every stock across Gandhi Jayanti, Dussehra, Diwali, and Christmas, sorted by entry date (soonest first).</p>
+          </div>
+          <div class="table-container">
+            <table class="event-master-table">
+              <thead>
+                <tr>
+                  <th>Holiday</th>
+                  <th>Symbol</th>
+                  <th>Direction</th>
+                  <th>Window</th>
+                  <th>Entry Date</th>
+                  <th>Exit Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="holiday-alerts-tbody-main"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div id="tab-quarterly" class="tab-content" style="display:none;">
@@ -2916,6 +2955,7 @@
           renderQuarterTable();
         } else if (tabId === 'alerts') {
           renderAlertsTab();
+          renderHolidayAlertsTab('holiday-alerts-tbody-main');
         } else if (tabId === 'equity') {
           renderEquityTable();
         } else if (tabId === 'rbi') {
@@ -3199,6 +3239,26 @@
       if (currentHolidaySubtab === 'fo') { loadHolidaysDataset().then(renderFoHolidayTable); }
     }
 
+    function switchAlertsSubtab(which) {
+      const quarterly = document.getElementById('alerts-subtab-quarterly');
+      const holiday = document.getElementById('alerts-subtab-holiday');
+      const btnQuarterly = document.getElementById('alerts-subtab-btn-quarterly');
+      const btnHoliday = document.getElementById('alerts-subtab-btn-holiday');
+      if (which === 'holiday') {
+        if (quarterly) quarterly.style.display = 'none';
+        if (holiday) holiday.style.display = 'block';
+        if (btnQuarterly) btnQuarterly.classList.remove('active');
+        if (btnHoliday) btnHoliday.classList.add('active');
+        renderHolidayAlertsTab('holiday-alerts-tbody-main');
+      } else {
+        if (quarterly) quarterly.style.display = 'block';
+        if (holiday) holiday.style.display = 'none';
+        if (btnQuarterly) btnQuarterly.classList.add('active');
+        if (btnHoliday) btnHoliday.classList.remove('active');
+        renderAlertsTab();
+      }
+    }
+
     function switchHolidaySubtab(which) {
       const overview = document.getElementById('holiday-subtab-overview');
       const alerts = document.getElementById('holiday-subtab-alerts');
@@ -3218,9 +3278,9 @@
       }
     }
 
-    function renderHolidayAlertsTab() {
+    function renderHolidayAlertsTab(tbodyId) {
       if (!dashboardData || !dashboardData.holidays) return;
-      const tbody = document.getElementById('holiday-alerts-tbody');
+      const tbody = document.getElementById(tbodyId || 'holiday-alerts-tbody');
       if (!tbody) return;
       tbody.innerHTML = '';
 
