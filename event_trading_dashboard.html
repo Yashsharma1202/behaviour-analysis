@@ -1485,18 +1485,6 @@
     <!-- TAB 2: HOLIDAY TRADING -->
     <div id="tab-holidays" class="tab-content" style="display:none;">
 
-      <!-- Holiday sub-tabs: Overview / Entry-Exit Alerts -->
-      <div class="tabs-nav" style="grid-template-columns: repeat(auto-fit, minmax(180px, 220px)); margin-bottom: 1rem;">
-        <button class="tab-btn active" id="holiday-subtab-btn-overview" onclick="switchHolidaySubtab('overview')">
-          <span>📋 Holiday Overview</span>
-        </button>
-        <button class="tab-btn" id="holiday-subtab-btn-alerts" onclick="switchHolidaySubtab('alerts')" style="background:rgba(245,158,11,0.08); border-top:2px solid #F59E0B;">
-          <span>🔔 Entry/Exit Alerts</span>
-        </button>
-      </div>
-
-      <div id="holiday-subtab-overview">
-
       <div class="timing-banner">
         <div>
           <strong id="alert-banner-header">⚠️ Immediate Trading Alert: Mahatma Gandhi Jayanti (2-Oct) Window Active</strong>
@@ -1675,34 +1663,6 @@
                 </tr>
               </thead>
               <tbody id="fo-holiday-tbody"></tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      </div>
-      <!-- /holiday-subtab-overview -->
-
-      <div id="holiday-subtab-alerts" style="display:none;">
-        <div class="card" style="padding: 1rem 1.15rem; margin-bottom: 1.25rem;">
-          <div class="card-title-group" style="margin-bottom: 0.85rem;">
-            <h2>🔔 Entry / Exit Alerts &mdash; All Holiday Events</h2>
-            <p>Every stock across Gandhi Jayanti, Dussehra, Diwali, and Christmas, sorted by entry date (soonest first).</p>
-          </div>
-          <div class="table-container">
-            <table class="event-master-table">
-              <thead>
-                <tr>
-                  <th>Holiday</th>
-                  <th>Symbol</th>
-                  <th>Direction</th>
-                  <th>Window</th>
-                  <th>Entry Date</th>
-                  <th>Exit Date</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody id="holiday-alerts-tbody"></tbody>
             </table>
           </div>
         </div>
@@ -3256,25 +3216,6 @@
         if (btnQuarterly) btnQuarterly.classList.add('active');
         if (btnHoliday) btnHoliday.classList.remove('active');
         renderAlertsTab();
-      }
-    }
-
-    function switchHolidaySubtab(which) {
-      const overview = document.getElementById('holiday-subtab-overview');
-      const alerts = document.getElementById('holiday-subtab-alerts');
-      const btnOverview = document.getElementById('holiday-subtab-btn-overview');
-      const btnAlerts = document.getElementById('holiday-subtab-btn-alerts');
-      if (which === 'alerts') {
-        if (overview) overview.style.display = 'none';
-        if (alerts) alerts.style.display = 'block';
-        if (btnOverview) btnOverview.classList.remove('active');
-        if (btnAlerts) btnAlerts.classList.add('active');
-        renderHolidayAlertsTab();
-      } else {
-        if (overview) overview.style.display = 'block';
-        if (alerts) alerts.style.display = 'none';
-        if (btnOverview) btnOverview.classList.add('active');
-        if (btnAlerts) btnAlerts.classList.remove('active');
       }
     }
 
