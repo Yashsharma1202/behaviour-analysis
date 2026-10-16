@@ -54462,8 +54462,8 @@
       "category": "Festival Holiday",
       "status": "UPCOMING (Oct 2026)",
       "badge": "UPCOMING",
-      "bias": "Diwali -- per-stock best side & window (>=7 valid yrs, walk-forward checked): 37 LONG / 0 SHORT (17 STRONG)",
-      "stocks_count": 37,
+      "bias": "Diwali -- per-stock best side & window (walk-forward checked): 37 positions (37 LONG / 0 SHORT, 17 STRONG) + 13 flagged LOW CONFIDENCE / DATA INSUFFICIENT shown at the bottom",
+      "stocks_count": 50,
       "top_pick": "TECHM (90.0% WR) & M&M (88.5% WR)",
       "stocks": [
         {
@@ -54491,7 +54491,9 @@
           "n_years": 20,
           "conviction": "STRONG",
           "wf_oos_win_rate": 92.3,
-          "wf_oos_trades": 13
+          "wf_oos_trades": 13,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "M&M",
@@ -54518,7 +54520,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 63.2,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "MARUTI",
@@ -54545,7 +54549,9 @@
           "n_years": 23,
           "conviction": "STRONG",
           "wf_oos_win_rate": 68.8,
-          "wf_oos_trades": 16
+          "wf_oos_trades": 16,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "TITAN",
@@ -54572,7 +54578,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 73.7,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "EICHERMOT",
@@ -54599,7 +54607,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 63.2,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "SBIN",
@@ -54626,7 +54636,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 63.2,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "HINDALCO",
@@ -54653,7 +54665,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 73.7,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "ITC",
@@ -54680,7 +54694,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 63.2,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "LT",
@@ -54707,7 +54723,9 @@
           "n_years": 24,
           "conviction": "STRONG",
           "wf_oos_win_rate": 70.6,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "TATASTEEL",
@@ -54734,7 +54752,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 68.4,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "INFY",
@@ -54761,7 +54781,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 68.4,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "ADANIENT",
@@ -54788,7 +54810,9 @@
           "n_years": 24,
           "conviction": "STRONG",
           "wf_oos_win_rate": 64.7,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -54815,7 +54839,9 @@
           "n_years": 24,
           "conviction": "STRONG",
           "wf_oos_win_rate": 64.7,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "ICICIBANK",
@@ -54842,7 +54868,9 @@
           "n_years": 24,
           "conviction": "STRONG",
           "wf_oos_win_rate": 64.7,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "JSWSTEEL",
@@ -54869,7 +54897,9 @@
           "n_years": 23,
           "conviction": "STRONG",
           "wf_oos_win_rate": 68.8,
-          "wf_oos_trades": 16
+          "wf_oos_trades": 16,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "DRREDDY",
@@ -54896,7 +54926,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 63.2,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "TATACONSUM",
@@ -54923,7 +54955,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 63.2,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "BSE",
@@ -54950,7 +54984,9 @@
           "n_years": 9,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 100.0,
-          "wf_oos_trades": 2
+          "wf_oos_trades": 2,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "HDFCLIFE",
@@ -54977,7 +55013,9 @@
           "n_years": 8,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 100.0,
-          "wf_oos_trades": 1
+          "wf_oos_trades": 1,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "COALINDIA",
@@ -55004,7 +55042,9 @@
           "n_years": 15,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 55.6,
-          "wf_oos_trades": 9
+          "wf_oos_trades": 9,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "SBILIFE",
@@ -55031,7 +55071,9 @@
           "n_years": 9,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 50.0,
-          "wf_oos_trades": 2
+          "wf_oos_trades": 2,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "NTPC",
@@ -55058,7 +55100,9 @@
           "n_years": 22,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 53.3,
-          "wf_oos_trades": 15
+          "wf_oos_trades": 15,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "HDFCBANK",
@@ -55085,7 +55129,9 @@
           "n_years": 26,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 52.6,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "INDIGO",
@@ -55112,7 +55158,9 @@
           "n_years": 10,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 50.0,
-          "wf_oos_trades": 4
+          "wf_oos_trades": 4,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "BEL",
@@ -55139,7 +55187,9 @@
           "n_years": 24,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 58.8,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "TMPV",
@@ -55166,7 +55216,9 @@
           "n_years": 24,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 52.9,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "POWERGRID",
@@ -55193,7 +55245,9 @@
           "n_years": 19,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 50.0,
-          "wf_oos_trades": 12
+          "wf_oos_trades": 12,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "AXISBANK",
@@ -55220,7 +55274,9 @@
           "n_years": 26,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 57.9,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "BHARTIARTL",
@@ -55247,7 +55303,9 @@
           "n_years": 24,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 58.8,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "APOLLOHOSP",
@@ -55274,7 +55332,9 @@
           "n_years": 24,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 58.8,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "SUNPHARMA",
@@ -55301,7 +55361,9 @@
           "n_years": 26,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 57.9,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "CIPLA",
@@ -55328,7 +55390,9 @@
           "n_years": 26,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 52.6,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "KOTAKBANK",
@@ -55355,7 +55419,9 @@
           "n_years": 25,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 55.6,
-          "wf_oos_trades": 18
+          "wf_oos_trades": 18,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "BAJAJFINSV",
@@ -55382,7 +55448,9 @@
           "n_years": 24,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 58.8,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "GRASIM",
@@ -55409,7 +55477,9 @@
           "n_years": 24,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 52.9,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "BAJFINANCE",
@@ -55436,7 +55506,9 @@
           "n_years": 24,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 52.9,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "HINDUNILVR",
@@ -55463,7 +55535,386 @@
           "n_years": 26,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 52.6,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
+        },
+        {
+          "symbol": "ADANIPORTS",
+          "name": "Adani Ports & SEZ Ltd",
+          "direction": "LONG",
+          "window": "T-5 to T+1",
+          "lead": 5,
+          "hold": 1,
+          "entry_date": "02-Nov-2026 (Monday)",
+          "exit_date": "09-Nov-2026 (Monday)",
+          "total_years": 18,
+          "full_19y_wr": 77.8,
+          "full_19y_avg_ret": 1.03,
+          "last_4y_wr": 100.0,
+          "last_4y_avg_ret": 1.68,
+          "lot": 475,
+          "margin": 165604.0,
+          "fut_action": "BUY FUTURES (LONG 475 qty)",
+          "opt_action": "BUY NOV CALL OPTION",
+          "sector": "Telecom & Logistics",
+          "direction_basis": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-5 to T+1 scored 77.8% in-sample but only 36.4% walk-forward.",
+          "long_win_rate_26y": 77.8,
+          "short_win_rate_26y": 22.2,
+          "n_years": 18,
+          "conviction": "NO TRADE",
+          "wf_oos_win_rate": 36.4,
+          "wf_oos_trades": 11,
+          "confidence_flag": "LOW CONFIDENCE",
+          "confidence_note": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-5 to T+1 scored 77.8% in-sample but only 36.4% walk-forward."
+        },
+        {
+          "symbol": "HCLTECH",
+          "name": "HCL Technologies Ltd",
+          "direction": "LONG",
+          "window": "T-1 to T+6",
+          "lead": 1,
+          "hold": 6,
+          "entry_date": "06-Nov-2026 (Friday)",
+          "exit_date": "17-Nov-2026 (Tuesday)",
+          "total_years": 24,
+          "full_19y_wr": 75.0,
+          "full_19y_avg_ret": 4.46,
+          "last_4y_wr": 100.0,
+          "last_4y_avg_ret": 4.2,
+          "lot": 400,
+          "margin": 108800.0,
+          "fut_action": "BUY FUTURES (LONG 400 qty)",
+          "opt_action": "BUY NOV CALL OPTION",
+          "sector": "Information Technology",
+          "direction_basis": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-1 to T+6 scored 75.0% in-sample but only 47.1% walk-forward.",
+          "long_win_rate_26y": 75.0,
+          "short_win_rate_26y": 25.0,
+          "n_years": 24,
+          "conviction": "NO TRADE",
+          "wf_oos_win_rate": 47.1,
+          "wf_oos_trades": 17,
+          "confidence_flag": "LOW CONFIDENCE",
+          "confidence_note": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-1 to T+6 scored 75.0% in-sample but only 47.1% walk-forward."
+        },
+        {
+          "symbol": "BAJAJ-AUTO",
+          "name": "Bajaj Auto Ltd",
+          "direction": "LONG",
+          "window": "T-8 to T+3",
+          "lead": 8,
+          "hold": 3,
+          "entry_date": "28-Oct-2026 (Wednesday)",
+          "exit_date": "12-Nov-2026 (Thursday)",
+          "total_years": 24,
+          "full_19y_wr": 75.0,
+          "full_19y_avg_ret": 1.16,
+          "last_4y_wr": 75.0,
+          "last_4y_avg_ret": 1.25,
+          "lot": 75,
+          "margin": 155775.0,
+          "fut_action": "BUY FUTURES (LONG 75 qty)",
+          "opt_action": "BUY NOV CALL OPTION",
+          "sector": "Automobile & Auto Components",
+          "direction_basis": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-8 to T+3 scored 75.0% in-sample but only 41.2% walk-forward.",
+          "long_win_rate_26y": 75.0,
+          "short_win_rate_26y": 25.0,
+          "n_years": 24,
+          "conviction": "NO TRADE",
+          "wf_oos_win_rate": 41.2,
+          "wf_oos_trades": 17,
+          "confidence_flag": "LOW CONFIDENCE",
+          "confidence_note": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-8 to T+3 scored 75.0% in-sample but only 41.2% walk-forward."
+        },
+        {
+          "symbol": "RELIANCE",
+          "name": "Reliance Industries Ltd",
+          "direction": "LONG",
+          "window": "T-3 to T+3",
+          "lead": 3,
+          "hold": 3,
+          "entry_date": "04-Nov-2026 (Wednesday)",
+          "exit_date": "12-Nov-2026 (Thursday)",
+          "total_years": 26,
+          "full_19y_wr": 73.1,
+          "full_19y_avg_ret": 3.06,
+          "last_4y_wr": 75.0,
+          "last_4y_avg_ret": 1.85,
+          "lot": 500,
+          "margin": 121500.0,
+          "fut_action": "BUY FUTURES (LONG 500 qty)",
+          "opt_action": "BUY NOV CALL OPTION",
+          "sector": "Oil, Gas & Energy",
+          "direction_basis": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-3 to T+3 scored 73.1% in-sample but only 47.4% walk-forward.",
+          "long_win_rate_26y": 73.1,
+          "short_win_rate_26y": 26.9,
+          "n_years": 26,
+          "conviction": "NO TRADE",
+          "wf_oos_win_rate": 47.4,
+          "wf_oos_trades": 19,
+          "confidence_flag": "LOW CONFIDENCE",
+          "confidence_note": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-3 to T+3 scored 73.1% in-sample but only 47.4% walk-forward."
+        },
+        {
+          "symbol": "TRENT",
+          "name": "Trent Ltd",
+          "direction": "LONG",
+          "window": "T-9 to T+2",
+          "lead": 9,
+          "hold": 2,
+          "entry_date": "27-Oct-2026 (Tuesday)",
+          "exit_date": "11-Nov-2026 (Wednesday)",
+          "total_years": 24,
+          "full_19y_wr": 70.8,
+          "full_19y_avg_ret": 2.94,
+          "last_4y_wr": 75.0,
+          "last_4y_avg_ret": 4.16,
+          "lot": 225,
+          "margin": 132736.0,
+          "fut_action": "BUY FUTURES (LONG 225 qty)",
+          "opt_action": "BUY NOV CALL OPTION",
+          "sector": "Other / Diversified",
+          "direction_basis": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-9 to T+2 scored 70.8% in-sample but only 47.1% walk-forward.",
+          "long_win_rate_26y": 70.8,
+          "short_win_rate_26y": 29.2,
+          "n_years": 24,
+          "conviction": "NO TRADE",
+          "wf_oos_win_rate": 47.1,
+          "wf_oos_trades": 17,
+          "confidence_flag": "LOW CONFIDENCE",
+          "confidence_note": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-9 to T+2 scored 70.8% in-sample but only 47.1% walk-forward."
+        },
+        {
+          "symbol": "ASIANPAINT",
+          "name": "Asian Paints Ltd",
+          "direction": "LONG",
+          "window": "T-3 to T+10",
+          "lead": 3,
+          "hold": 10,
+          "entry_date": "04-Nov-2026 (Wednesday)",
+          "exit_date": "23-Nov-2026 (Monday)",
+          "total_years": 24,
+          "full_19y_wr": 70.8,
+          "full_19y_avg_ret": 0.47,
+          "last_4y_wr": 50.0,
+          "last_4y_avg_ret": -2.77,
+          "lot": 250,
+          "margin": 117235.0,
+          "fut_action": "BUY FUTURES (LONG 250 qty)",
+          "opt_action": "BUY NOV CALL OPTION",
+          "sector": "Consumer Durables & Retail",
+          "direction_basis": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-3 to T+10 scored 70.8% in-sample but only 23.5% walk-forward.",
+          "long_win_rate_26y": 70.8,
+          "short_win_rate_26y": 29.2,
+          "n_years": 24,
+          "conviction": "NO TRADE",
+          "wf_oos_win_rate": 23.5,
+          "wf_oos_trades": 17,
+          "confidence_flag": "LOW CONFIDENCE",
+          "confidence_note": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-3 to T+10 scored 70.8% in-sample but only 23.5% walk-forward."
+        },
+        {
+          "symbol": "ONGC",
+          "name": "Oil & Natural Gas Corp Ltd",
+          "direction": "LONG",
+          "window": "T-8 to T+8",
+          "lead": 8,
+          "hold": 8,
+          "entry_date": "28-Oct-2026 (Wednesday)",
+          "exit_date": "19-Nov-2026 (Thursday)",
+          "total_years": 26,
+          "full_19y_wr": 69.2,
+          "full_19y_avg_ret": 2.32,
+          "last_4y_wr": 75.0,
+          "last_4y_avg_ret": 2.3,
+          "lot": 2250,
+          "margin": 101088.0,
+          "fut_action": "BUY FUTURES (LONG 2250 qty)",
+          "opt_action": "BUY NOV CALL OPTION",
+          "sector": "Oil, Gas & Energy",
+          "direction_basis": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-8 to T+8 scored 69.2% in-sample but only 42.1% walk-forward.",
+          "long_win_rate_26y": 69.2,
+          "short_win_rate_26y": 30.8,
+          "n_years": 26,
+          "conviction": "NO TRADE",
+          "wf_oos_win_rate": 42.1,
+          "wf_oos_trades": 19,
+          "confidence_flag": "LOW CONFIDENCE",
+          "confidence_note": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-8 to T+8 scored 69.2% in-sample but only 42.1% walk-forward."
+        },
+        {
+          "symbol": "ULTRACEMCO",
+          "name": "UltraTech Cement Ltd",
+          "direction": "LONG",
+          "window": "T-8 to T+5",
+          "lead": 8,
+          "hold": 5,
+          "entry_date": "28-Oct-2026 (Wednesday)",
+          "exit_date": "16-Nov-2026 (Monday)",
+          "total_years": 24,
+          "full_19y_wr": 66.7,
+          "full_19y_avg_ret": 2.88,
+          "last_4y_wr": 75.0,
+          "last_4y_avg_ret": 3.55,
+          "lot": 50,
+          "margin": 107950.0,
+          "fut_action": "BUY FUTURES (LONG 50 qty)",
+          "opt_action": "BUY NOV CALL OPTION",
+          "sector": "Cement & Construction",
+          "direction_basis": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-8 to T+5 scored 66.7% in-sample but only 35.3% walk-forward.",
+          "long_win_rate_26y": 66.7,
+          "short_win_rate_26y": 33.3,
+          "n_years": 24,
+          "conviction": "NO TRADE",
+          "wf_oos_win_rate": 35.3,
+          "wf_oos_trades": 17,
+          "confidence_flag": "LOW CONFIDENCE",
+          "confidence_note": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-8 to T+5 scored 66.7% in-sample but only 35.3% walk-forward."
+        },
+        {
+          "symbol": "TCS",
+          "name": "Tata Consultancy Services Ltd",
+          "direction": "LONG",
+          "window": "T-7 to T+6",
+          "lead": 7,
+          "hold": 6,
+          "entry_date": "29-Oct-2026 (Thursday)",
+          "exit_date": "17-Nov-2026 (Tuesday)",
+          "total_years": 24,
+          "full_19y_wr": 66.7,
+          "full_19y_avg_ret": 1.92,
+          "last_4y_wr": 100.0,
+          "last_4y_avg_ret": 3.26,
+          "lot": 225,
+          "margin": 105750.0,
+          "fut_action": "BUY FUTURES (LONG 225 qty)",
+          "opt_action": "BUY NOV CALL OPTION",
+          "sector": "Information Technology",
+          "direction_basis": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-7 to T+6 scored 66.7% in-sample but only 47.1% walk-forward.",
+          "long_win_rate_26y": 66.7,
+          "short_win_rate_26y": 33.3,
+          "n_years": 24,
+          "conviction": "NO TRADE",
+          "wf_oos_win_rate": 47.1,
+          "wf_oos_trades": 17,
+          "confidence_flag": "LOW CONFIDENCE",
+          "confidence_note": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-7 to T+6 scored 66.7% in-sample but only 47.1% walk-forward."
+        },
+        {
+          "symbol": "NESTLEIND",
+          "name": "Nestle India Ltd",
+          "direction": "LONG",
+          "window": "T-6 to T+5",
+          "lead": 6,
+          "hold": 5,
+          "entry_date": "30-Oct-2026 (Friday)",
+          "exit_date": "16-Nov-2026 (Monday)",
+          "total_years": 24,
+          "full_19y_wr": 54.2,
+          "full_19y_avg_ret": 1.76,
+          "last_4y_wr": 100.0,
+          "last_4y_avg_ret": 4.87,
+          "lot": 500,
+          "margin": 127580.0,
+          "fut_action": "BUY FUTURES (LONG 500 qty)",
+          "opt_action": "BUY NOV CALL OPTION",
+          "sector": "FMCG & Consumption",
+          "direction_basis": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-6 to T+5 scored 54.2% in-sample but only 41.2% walk-forward.",
+          "long_win_rate_26y": 54.2,
+          "short_win_rate_26y": 45.8,
+          "n_years": 24,
+          "conviction": "NO TRADE",
+          "wf_oos_win_rate": 41.2,
+          "wf_oos_trades": 17,
+          "confidence_flag": "LOW CONFIDENCE",
+          "confidence_note": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-6 to T+5 scored 54.2% in-sample but only 41.2% walk-forward."
+        },
+        {
+          "symbol": "JIOFIN",
+          "name": "Jio Financial Services Ltd",
+          "direction": "LONG",
+          "window": "T-2 to T+2",
+          "lead": 2,
+          "hold": 2,
+          "entry_date": "05-Nov-2026 (Thursday)",
+          "exit_date": "11-Nov-2026 (Wednesday)",
+          "total_years": 3,
+          "full_19y_wr": 66.7,
+          "full_19y_avg_ret": 1.24,
+          "last_4y_wr": 66.7,
+          "last_4y_avg_ret": 1.24,
+          "lot": 2350,
+          "margin": 102935.0,
+          "fut_action": "BUY FUTURES (LONG 2350 qty)",
+          "opt_action": "BUY NOV CALL OPTION",
+          "sector": "Other / Diversified",
+          "direction_basis": "DATA INSUFFICIENT: only 3 valid Diwali year(s) (<7). Event-wide default LONG T-2 to T+2 shown as a placeholder -- not a per-stock backtested call.",
+          "long_win_rate_26y": 66.7,
+          "short_win_rate_26y": 33.3,
+          "n_years": 3,
+          "conviction": "DATA INSUFFICIENT",
+          "wf_oos_win_rate": null,
+          "wf_oos_trades": 0,
+          "confidence_flag": "DATA INSUFFICIENT",
+          "confidence_note": "DATA INSUFFICIENT: only 3 valid Diwali year(s) (<7). Event-wide default LONG T-2 to T+2 shown as a placeholder -- not a per-stock backtested call."
+        },
+        {
+          "symbol": "MAXHEALTH",
+          "name": "Max Healthcare Institute Ltd",
+          "direction": "LONG",
+          "window": "T-2 to T+2",
+          "lead": 2,
+          "hold": 2,
+          "entry_date": "05-Nov-2026 (Thursday)",
+          "exit_date": "11-Nov-2026 (Wednesday)",
+          "total_years": 6,
+          "full_19y_wr": 66.7,
+          "full_19y_avg_ret": 1.04,
+          "last_4y_wr": 75.0,
+          "last_4y_avg_ret": 1.5,
+          "lot": 525,
+          "margin": 90090.0,
+          "fut_action": "BUY FUTURES (LONG 525 qty)",
+          "opt_action": "BUY NOV CALL OPTION",
+          "sector": "Healthcare & Pharma",
+          "direction_basis": "DATA INSUFFICIENT: only 6 valid Diwali year(s) (<7). Event-wide default LONG T-2 to T+2 shown as a placeholder -- not a per-stock backtested call.",
+          "long_win_rate_26y": 66.7,
+          "short_win_rate_26y": 33.3,
+          "n_years": 6,
+          "conviction": "DATA INSUFFICIENT",
+          "wf_oos_win_rate": null,
+          "wf_oos_trades": 0,
+          "confidence_flag": "DATA INSUFFICIENT",
+          "confidence_note": "DATA INSUFFICIENT: only 6 valid Diwali year(s) (<7). Event-wide default LONG T-2 to T+2 shown as a placeholder -- not a per-stock backtested call."
+        },
+        {
+          "symbol": "ETERNAL",
+          "name": "Eternal Ltd (Zomato)",
+          "direction": "LONG",
+          "window": "T-2 to T+2",
+          "lead": 2,
+          "hold": 2,
+          "entry_date": "05-Nov-2026 (Thursday)",
+          "exit_date": "11-Nov-2026 (Wednesday)",
+          "total_years": 5,
+          "full_19y_wr": 40.0,
+          "full_19y_avg_ret": 0.42,
+          "last_4y_wr": 25.0,
+          "last_4y_avg_ret": -0.45,
+          "lot": 2425,
+          "margin": 156655.0,
+          "fut_action": "BUY FUTURES (LONG 2425 qty)",
+          "opt_action": "BUY NOV CALL OPTION",
+          "sector": "Consumer Durables & Retail",
+          "direction_basis": "DATA INSUFFICIENT: only 5 valid Diwali year(s) (<7). Event-wide default LONG T-2 to T+2 shown as a placeholder -- not a per-stock backtested call.",
+          "long_win_rate_26y": 40.0,
+          "short_win_rate_26y": 60.0,
+          "n_years": 5,
+          "conviction": "DATA INSUFFICIENT",
+          "wf_oos_win_rate": null,
+          "wf_oos_trades": 0,
+          "confidence_flag": "DATA INSUFFICIENT",
+          "confidence_note": "DATA INSUFFICIENT: only 5 valid Diwali year(s) (<7). Event-wide default LONG T-2 to T+2 shown as a placeholder -- not a per-stock backtested call."
         }
       ],
       "date_str": "08-Nov-2026 (Sunday)",
@@ -55471,57 +55922,57 @@
       "data_pending_symbols": [
         {
           "symbol": "ETERNAL",
-          "reason": "Only 5 valid Diwali event year(s) in price history -- minimum 7 required; no position given."
+          "reason": "Only 5 valid Diwali event year(s) in price history -- minimum 7 required; shown with the event-wide side/window as a placeholder, NOT a backtested call."
         },
         {
           "symbol": "JIOFIN",
-          "reason": "Only 3 valid Diwali event year(s) in price history -- minimum 7 required; no position given."
+          "reason": "Only 3 valid Diwali event year(s) in price history -- minimum 7 required; shown with the event-wide side/window as a placeholder, NOT a backtested call."
         },
         {
           "symbol": "MAXHEALTH",
-          "reason": "Only 6 valid Diwali event year(s) in price history -- minimum 7 required; no position given."
+          "reason": "Only 6 valid Diwali event year(s) in price history -- minimum 7 required; shown with the event-wide side/window as a placeholder, NOT a backtested call."
         }
       ],
       "no_trade_symbols": [
         {
           "symbol": "ADANIPORTS",
-          "reason": "LONG best win rate 77.8% over 18 yrs but walk-forward 36.4% -- below the bar; no position."
+          "reason": "LONG best win rate 77.8% over 18 yrs but walk-forward 36.4% -- below the bar; shown as LOW CONFIDENCE."
         },
         {
           "symbol": "HCLTECH",
-          "reason": "LONG best win rate 75.0% over 24 yrs but walk-forward 47.1% -- below the bar; no position."
+          "reason": "LONG best win rate 75.0% over 24 yrs but walk-forward 47.1% -- below the bar; shown as LOW CONFIDENCE."
         },
         {
           "symbol": "BAJAJ-AUTO",
-          "reason": "LONG best win rate 75.0% over 24 yrs but walk-forward 41.2% -- below the bar; no position."
+          "reason": "LONG best win rate 75.0% over 24 yrs but walk-forward 41.2% -- below the bar; shown as LOW CONFIDENCE."
         },
         {
           "symbol": "RELIANCE",
-          "reason": "LONG best win rate 73.1% over 26 yrs but walk-forward 47.4% -- below the bar; no position."
+          "reason": "LONG best win rate 73.1% over 26 yrs but walk-forward 47.4% -- below the bar; shown as LOW CONFIDENCE."
         },
         {
           "symbol": "TRENT",
-          "reason": "LONG best win rate 70.8% over 24 yrs but walk-forward 47.1% -- below the bar; no position."
+          "reason": "LONG best win rate 70.8% over 24 yrs but walk-forward 47.1% -- below the bar; shown as LOW CONFIDENCE."
         },
         {
           "symbol": "ASIANPAINT",
-          "reason": "LONG best win rate 70.8% over 24 yrs but walk-forward 23.5% -- below the bar; no position."
+          "reason": "LONG best win rate 70.8% over 24 yrs but walk-forward 23.5% -- below the bar; shown as LOW CONFIDENCE."
         },
         {
           "symbol": "ONGC",
-          "reason": "LONG best win rate 69.2% over 26 yrs but walk-forward 42.1% -- below the bar; no position."
+          "reason": "LONG best win rate 69.2% over 26 yrs but walk-forward 42.1% -- below the bar; shown as LOW CONFIDENCE."
         },
         {
           "symbol": "ULTRACEMCO",
-          "reason": "LONG best win rate 66.7% over 24 yrs but walk-forward 35.3% -- below the bar; no position."
+          "reason": "LONG best win rate 66.7% over 24 yrs but walk-forward 35.3% -- below the bar; shown as LOW CONFIDENCE."
         },
         {
           "symbol": "TCS",
-          "reason": "LONG best win rate 66.7% over 24 yrs but walk-forward 47.1% -- below the bar; no position."
+          "reason": "LONG best win rate 66.7% over 24 yrs but walk-forward 47.1% -- below the bar; shown as LOW CONFIDENCE."
         },
         {
           "symbol": "NESTLEIND",
-          "reason": "LONG best win rate 54.2% over 24 yrs but walk-forward 41.2% -- below the bar; no position."
+          "reason": "LONG best win rate 54.2% over 24 yrs but walk-forward 41.2% -- below the bar; shown as LOW CONFIDENCE."
         }
       ]
     },
@@ -55532,8 +55983,8 @@
       "category": "Year-End Event",
       "status": "UPCOMING (Dec 2026)",
       "badge": "UPCOMING",
-      "bias": "Christmas -- per-stock best side & window (>=7 valid yrs, walk-forward checked): 42 LONG / 0 SHORT (27 STRONG)",
-      "stocks_count": 42,
+      "bias": "Christmas -- per-stock best side & window (walk-forward checked): 42 positions (42 LONG / 0 SHORT, 27 STRONG) + 8 flagged LOW CONFIDENCE / DATA INSUFFICIENT shown at the bottom",
+      "stocks_count": 50,
       "top_pick": "TRENT (95.8% WR) & TMPV (92.3% WR)",
       "stocks": [
         {
@@ -55561,7 +56012,9 @@
           "n_years": 24,
           "conviction": "STRONG",
           "wf_oos_win_rate": 88.2,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "TMPV",
@@ -55588,7 +56041,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 78.9,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "EICHERMOT",
@@ -55615,7 +56070,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 73.7,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "GRASIM",
@@ -55642,7 +56099,9 @@
           "n_years": 24,
           "conviction": "STRONG",
           "wf_oos_win_rate": 76.5,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "TATACONSUM",
@@ -55669,7 +56128,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 73.7,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "SUNPHARMA",
@@ -55696,7 +56157,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 63.2,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "TATASTEEL",
@@ -55723,7 +56186,9 @@
           "n_years": 25,
           "conviction": "STRONG",
           "wf_oos_win_rate": 77.8,
-          "wf_oos_trades": 18
+          "wf_oos_trades": 18,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "BAJFINANCE",
@@ -55750,7 +56215,9 @@
           "n_years": 24,
           "conviction": "STRONG",
           "wf_oos_win_rate": 82.4,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "JSWSTEEL",
@@ -55777,7 +56244,9 @@
           "n_years": 23,
           "conviction": "STRONG",
           "wf_oos_win_rate": 68.8,
-          "wf_oos_trades": 16
+          "wf_oos_trades": 16,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "NTPC",
@@ -55804,7 +56273,9 @@
           "n_years": 22,
           "conviction": "STRONG",
           "wf_oos_win_rate": 60.0,
-          "wf_oos_trades": 15
+          "wf_oos_trades": 15,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "ONGC",
@@ -55831,7 +56302,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 73.7,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "AXISBANK",
@@ -55858,7 +56331,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 68.4,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "HDFCBANK",
@@ -55885,7 +56360,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 73.7,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "POWERGRID",
@@ -55912,7 +56389,9 @@
           "n_years": 19,
           "conviction": "STRONG",
           "wf_oos_win_rate": 83.3,
-          "wf_oos_trades": 12
+          "wf_oos_trades": 12,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -55939,7 +56418,9 @@
           "n_years": 24,
           "conviction": "STRONG",
           "wf_oos_win_rate": 64.7,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "BEL",
@@ -55966,7 +56447,9 @@
           "n_years": 24,
           "conviction": "STRONG",
           "wf_oos_win_rate": 64.7,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "HCLTECH",
@@ -55993,7 +56476,9 @@
           "n_years": 24,
           "conviction": "STRONG",
           "wf_oos_win_rate": 82.4,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "ASIANPAINT",
@@ -56020,7 +56505,9 @@
           "n_years": 24,
           "conviction": "STRONG",
           "wf_oos_win_rate": 64.7,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "LT",
@@ -56047,7 +56534,9 @@
           "n_years": 24,
           "conviction": "STRONG",
           "wf_oos_win_rate": 64.7,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "HINDALCO",
@@ -56074,7 +56563,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 63.2,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "TITAN",
@@ -56101,7 +56592,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 68.4,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "INFY",
@@ -56128,7 +56621,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 63.2,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "CIPLA",
@@ -56155,7 +56650,9 @@
           "n_years": 25,
           "conviction": "STRONG",
           "wf_oos_win_rate": 66.7,
-          "wf_oos_trades": 18
+          "wf_oos_trades": 18,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "ADANIENT",
@@ -56182,7 +56679,9 @@
           "n_years": 24,
           "conviction": "STRONG",
           "wf_oos_win_rate": 70.6,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "TCS",
@@ -56209,7 +56708,9 @@
           "n_years": 24,
           "conviction": "STRONG",
           "wf_oos_win_rate": 64.7,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "BHARTIARTL",
@@ -56236,7 +56737,9 @@
           "n_years": 24,
           "conviction": "STRONG",
           "wf_oos_win_rate": 70.6,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "DRREDDY",
@@ -56263,7 +56766,9 @@
           "n_years": 26,
           "conviction": "STRONG",
           "wf_oos_win_rate": 68.4,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "SBILIFE",
@@ -56290,7 +56795,9 @@
           "n_years": 9,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 100.0,
-          "wf_oos_trades": 2
+          "wf_oos_trades": 2,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "INDIGO",
@@ -56317,7 +56824,38 @@
           "n_years": 11,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 25.0,
-          "wf_oos_trades": 4
+          "wf_oos_trades": 4,
+          "confidence_flag": "OK",
+          "confidence_note": ""
+        },
+        {
+          "symbol": "BSE",
+          "name": "BSE Ltd",
+          "direction": "SHORT",
+          "window": "T-9 to T+2",
+          "lead": 9,
+          "hold": 2,
+          "entry_date": "14-Dec-2026 (Monday)",
+          "exit_date": "29-Dec-2026 (Tuesday)",
+          "total_years": 9,
+          "full_19y_wr": 88.9,
+          "full_19y_avg_ret": 4.54,
+          "last_4y_wr": 100.0,
+          "last_4y_avg_ret": 4.94,
+          "lot": 200,
+          "margin": 137120.0,
+          "fut_action": "SELL FUTURES (SHORT 200 qty)",
+          "opt_action": "BUY DEC PUT OPTION",
+          "sector": "Capital Markets & Exchanges",
+          "direction_basis": "LOW CONFIDENCE (SHORT rule not met): needs >=15 yrs and walk-forward >=60%; has 9 yrs / WF 50.0%.",
+          "long_win_rate_26y": 11.1,
+          "short_win_rate_26y": 88.9,
+          "n_years": 9,
+          "conviction": "MODERATE",
+          "wf_oos_win_rate": 50.0,
+          "wf_oos_trades": 2,
+          "confidence_flag": "LOW CONFIDENCE",
+          "confidence_note": "LOW CONFIDENCE (SHORT rule not met): needs >=15 yrs and walk-forward >=60%; has 9 yrs / WF 50.0%."
         },
         {
           "symbol": "HDFCLIFE",
@@ -56344,7 +56882,9 @@
           "n_years": 9,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 0.0,
-          "wf_oos_trades": 2
+          "wf_oos_trades": 2,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "COALINDIA",
@@ -56371,7 +56911,9 @@
           "n_years": 16,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 55.6,
-          "wf_oos_trades": 9
+          "wf_oos_trades": 9,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "SBIN",
@@ -56398,7 +56940,9 @@
           "n_years": 26,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 57.9,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "ULTRACEMCO",
@@ -56425,7 +56969,9 @@
           "n_years": 24,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 58.8,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "M&M",
@@ -56452,7 +56998,9 @@
           "n_years": 26,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 57.9,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "APOLLOHOSP",
@@ -56479,7 +57027,9 @@
           "n_years": 24,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 58.8,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "ICICIBANK",
@@ -56506,7 +57056,9 @@
           "n_years": 24,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 52.9,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "ADANIPORTS",
@@ -56533,7 +57085,9 @@
           "n_years": 19,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 50.0,
-          "wf_oos_trades": 12
+          "wf_oos_trades": 12,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "KOTAKBANK",
@@ -56560,7 +57114,9 @@
           "n_years": 25,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 50.0,
-          "wf_oos_trades": 18
+          "wf_oos_trades": 18,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "BAJAJ-AUTO",
@@ -56587,7 +57143,9 @@
           "n_years": 24,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 52.9,
-          "wf_oos_trades": 17
+          "wf_oos_trades": 17,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "MARUTI",
@@ -56614,7 +57172,9 @@
           "n_years": 23,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 56.2,
-          "wf_oos_trades": 16
+          "wf_oos_trades": 16,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "HINDUNILVR",
@@ -56641,7 +57201,9 @@
           "n_years": 26,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 57.9,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
         },
         {
           "symbol": "ITC",
@@ -56668,43 +57230,248 @@
           "n_years": 26,
           "conviction": "MODERATE",
           "wf_oos_win_rate": 52.6,
-          "wf_oos_trades": 19
+          "wf_oos_trades": 19,
+          "confidence_flag": "OK",
+          "confidence_note": ""
+        },
+        {
+          "symbol": "TECHM",
+          "name": "Tech Mahindra Ltd",
+          "direction": "LONG",
+          "window": "T-1 to T+3",
+          "lead": 1,
+          "hold": 3,
+          "entry_date": "24-Dec-2026 (Thursday)",
+          "exit_date": "30-Dec-2026 (Wednesday)",
+          "total_years": 20,
+          "full_19y_wr": 85.0,
+          "full_19y_avg_ret": 1.34,
+          "last_4y_wr": 75.0,
+          "last_4y_avg_ret": 0.84,
+          "lot": 600,
+          "margin": 198000.0,
+          "fut_action": "BUY FUTURES (LONG 600 qty)",
+          "opt_action": "BUY DEC CALL OPTION",
+          "sector": "Information Technology",
+          "direction_basis": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-1 to T+3 scored 85.0% in-sample but only 46.2% walk-forward.",
+          "long_win_rate_26y": 85.0,
+          "short_win_rate_26y": 15.0,
+          "n_years": 20,
+          "conviction": "NO TRADE",
+          "wf_oos_win_rate": 46.2,
+          "wf_oos_trades": 13,
+          "confidence_flag": "LOW CONFIDENCE",
+          "confidence_note": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-1 to T+3 scored 85.0% in-sample but only 46.2% walk-forward."
+        },
+        {
+          "symbol": "BAJAJFINSV",
+          "name": "Bajaj Finserv Ltd",
+          "direction": "LONG",
+          "window": "T-1 to T+7",
+          "lead": 1,
+          "hold": 7,
+          "entry_date": "24-Dec-2026 (Thursday)",
+          "exit_date": "05-Jan-2027 (Tuesday)",
+          "total_years": 24,
+          "full_19y_wr": 75.0,
+          "full_19y_avg_ret": 3.59,
+          "last_4y_wr": 100.0,
+          "last_4y_avg_ret": 3.41,
+          "lot": 300,
+          "margin": 103920.0,
+          "fut_action": "BUY FUTURES (LONG 300 qty)",
+          "opt_action": "BUY JAN CALL OPTION",
+          "sector": "Banking & Financials",
+          "direction_basis": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-1 to T+7 scored 75.0% in-sample but only 41.2% walk-forward.",
+          "long_win_rate_26y": 75.0,
+          "short_win_rate_26y": 25.0,
+          "n_years": 24,
+          "conviction": "NO TRADE",
+          "wf_oos_win_rate": 41.2,
+          "wf_oos_trades": 17,
+          "confidence_flag": "LOW CONFIDENCE",
+          "confidence_note": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-1 to T+7 scored 75.0% in-sample but only 41.2% walk-forward."
+        },
+        {
+          "symbol": "RELIANCE",
+          "name": "Reliance Industries Ltd",
+          "direction": "LONG",
+          "window": "T-4 to T+7",
+          "lead": 4,
+          "hold": 7,
+          "entry_date": "21-Dec-2026 (Monday)",
+          "exit_date": "05-Jan-2027 (Tuesday)",
+          "total_years": 26,
+          "full_19y_wr": 73.1,
+          "full_19y_avg_ret": 2.13,
+          "last_4y_wr": 75.0,
+          "last_4y_avg_ret": 0.26,
+          "lot": 500,
+          "margin": 121500.0,
+          "fut_action": "BUY FUTURES (LONG 500 qty)",
+          "opt_action": "BUY JAN CALL OPTION",
+          "sector": "Oil, Gas & Energy",
+          "direction_basis": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-4 to T+7 scored 73.1% in-sample but only 47.4% walk-forward.",
+          "long_win_rate_26y": 73.1,
+          "short_win_rate_26y": 26.9,
+          "n_years": 26,
+          "conviction": "NO TRADE",
+          "wf_oos_win_rate": 47.4,
+          "wf_oos_trades": 19,
+          "confidence_flag": "LOW CONFIDENCE",
+          "confidence_note": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-4 to T+7 scored 73.1% in-sample but only 47.4% walk-forward."
+        },
+        {
+          "symbol": "NESTLEIND",
+          "name": "Nestle India Ltd",
+          "direction": "LONG",
+          "window": "T-6 to T+10",
+          "lead": 6,
+          "hold": 10,
+          "entry_date": "17-Dec-2026 (Thursday)",
+          "exit_date": "08-Jan-2027 (Friday)",
+          "total_years": 23,
+          "full_19y_wr": 56.5,
+          "full_19y_avg_ret": 1.4,
+          "last_4y_wr": 100.0,
+          "last_4y_avg_ret": 3.72,
+          "lot": 500,
+          "margin": 127580.0,
+          "fut_action": "BUY FUTURES (LONG 500 qty)",
+          "opt_action": "BUY JAN CALL OPTION",
+          "sector": "FMCG & Consumption",
+          "direction_basis": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-6 to T+10 scored 56.5% in-sample but only 43.8% walk-forward.",
+          "long_win_rate_26y": 56.5,
+          "short_win_rate_26y": 43.5,
+          "n_years": 23,
+          "conviction": "NO TRADE",
+          "wf_oos_win_rate": 43.8,
+          "wf_oos_trades": 16,
+          "confidence_flag": "LOW CONFIDENCE",
+          "confidence_note": "LOW CONFIDENCE (NO TRADE grade): own best LONG T-6 to T+10 scored 56.5% in-sample but only 43.8% walk-forward."
+        },
+        {
+          "symbol": "MAXHEALTH",
+          "name": "Max Healthcare Institute Ltd",
+          "direction": "LONG",
+          "window": "T-1 to T+7",
+          "lead": 1,
+          "hold": 7,
+          "entry_date": "24-Dec-2026 (Thursday)",
+          "exit_date": "05-Jan-2027 (Tuesday)",
+          "total_years": 6,
+          "full_19y_wr": 83.3,
+          "full_19y_avg_ret": 2.37,
+          "last_4y_wr": 75.0,
+          "last_4y_avg_ret": 2.58,
+          "lot": 525,
+          "margin": 90090.0,
+          "fut_action": "BUY FUTURES (LONG 525 qty)",
+          "opt_action": "BUY JAN CALL OPTION",
+          "sector": "Healthcare & Pharma",
+          "direction_basis": "DATA INSUFFICIENT: only 6 valid Christmas year(s) (<7). Event-wide default LONG T-1 to T+7 shown as a placeholder -- not a per-stock backtested call.",
+          "long_win_rate_26y": 83.3,
+          "short_win_rate_26y": 16.7,
+          "n_years": 6,
+          "conviction": "DATA INSUFFICIENT",
+          "wf_oos_win_rate": null,
+          "wf_oos_trades": 0,
+          "confidence_flag": "DATA INSUFFICIENT",
+          "confidence_note": "DATA INSUFFICIENT: only 6 valid Christmas year(s) (<7). Event-wide default LONG T-1 to T+7 shown as a placeholder -- not a per-stock backtested call."
+        },
+        {
+          "symbol": "JIOFIN",
+          "name": "Jio Financial Services Ltd",
+          "direction": "LONG",
+          "window": "T-1 to T+7",
+          "lead": 1,
+          "hold": 7,
+          "entry_date": "24-Dec-2026 (Thursday)",
+          "exit_date": "05-Jan-2027 (Tuesday)",
+          "total_years": 3,
+          "full_19y_wr": 66.7,
+          "full_19y_avg_ret": 0.15,
+          "last_4y_wr": 66.7,
+          "last_4y_avg_ret": 0.15,
+          "lot": 2350,
+          "margin": 102935.0,
+          "fut_action": "BUY FUTURES (LONG 2350 qty)",
+          "opt_action": "BUY JAN CALL OPTION",
+          "sector": "Other / Diversified",
+          "direction_basis": "DATA INSUFFICIENT: only 3 valid Christmas year(s) (<7). Event-wide default LONG T-1 to T+7 shown as a placeholder -- not a per-stock backtested call.",
+          "long_win_rate_26y": 66.7,
+          "short_win_rate_26y": 33.3,
+          "n_years": 3,
+          "conviction": "DATA INSUFFICIENT",
+          "wf_oos_win_rate": null,
+          "wf_oos_trades": 0,
+          "confidence_flag": "DATA INSUFFICIENT",
+          "confidence_note": "DATA INSUFFICIENT: only 3 valid Christmas year(s) (<7). Event-wide default LONG T-1 to T+7 shown as a placeholder -- not a per-stock backtested call."
+        },
+        {
+          "symbol": "ETERNAL",
+          "name": "Eternal Ltd (Zomato)",
+          "direction": "LONG",
+          "window": "T-1 to T+7",
+          "lead": 1,
+          "hold": 7,
+          "entry_date": "24-Dec-2026 (Thursday)",
+          "exit_date": "05-Jan-2027 (Tuesday)",
+          "total_years": 5,
+          "full_19y_wr": 40.0,
+          "full_19y_avg_ret": 2.52,
+          "last_4y_wr": 25.0,
+          "last_4y_avg_ret": 1.84,
+          "lot": 2425,
+          "margin": 156655.0,
+          "fut_action": "BUY FUTURES (LONG 2425 qty)",
+          "opt_action": "BUY JAN CALL OPTION",
+          "sector": "Consumer Durables & Retail",
+          "direction_basis": "DATA INSUFFICIENT: only 5 valid Christmas year(s) (<7). Event-wide default LONG T-1 to T+7 shown as a placeholder -- not a per-stock backtested call.",
+          "long_win_rate_26y": 40.0,
+          "short_win_rate_26y": 60.0,
+          "n_years": 5,
+          "conviction": "DATA INSUFFICIENT",
+          "wf_oos_win_rate": null,
+          "wf_oos_trades": 0,
+          "confidence_flag": "DATA INSUFFICIENT",
+          "confidence_note": "DATA INSUFFICIENT: only 5 valid Christmas year(s) (<7). Event-wide default LONG T-1 to T+7 shown as a placeholder -- not a per-stock backtested call."
         }
       ],
       "data_pending_symbols": [
         {
           "symbol": "ETERNAL",
-          "reason": "Only 5 valid Christmas event year(s) in price history -- minimum 7 required; no position given."
+          "reason": "Only 5 valid Christmas event year(s) in price history -- minimum 7 required; shown with the event-wide side/window as a placeholder, NOT a backtested call."
         },
         {
           "symbol": "JIOFIN",
-          "reason": "Only 3 valid Christmas event year(s) in price history -- minimum 7 required; no position given."
+          "reason": "Only 3 valid Christmas event year(s) in price history -- minimum 7 required; shown with the event-wide side/window as a placeholder, NOT a backtested call."
         },
         {
           "symbol": "MAXHEALTH",
-          "reason": "Only 6 valid Christmas event year(s) in price history -- minimum 7 required; no position given."
+          "reason": "Only 6 valid Christmas event year(s) in price history -- minimum 7 required; shown with the event-wide side/window as a placeholder, NOT a backtested call."
         }
       ],
       "no_trade_symbols": [
         {
           "symbol": "TECHM",
-          "reason": "LONG best win rate 85.0% over 20 yrs but walk-forward 46.2% -- below the bar; no position."
+          "reason": "LONG best win rate 85.0% over 20 yrs but walk-forward 46.2% -- below the bar; shown as LOW CONFIDENCE."
         },
         {
           "symbol": "BAJAJFINSV",
-          "reason": "LONG best win rate 75.0% over 24 yrs but walk-forward 41.2% -- below the bar; no position."
+          "reason": "LONG best win rate 75.0% over 24 yrs but walk-forward 41.2% -- below the bar; shown as LOW CONFIDENCE."
         },
         {
           "symbol": "RELIANCE",
-          "reason": "LONG best win rate 73.1% over 26 yrs but walk-forward 47.4% -- below the bar; no position."
+          "reason": "LONG best win rate 73.1% over 26 yrs but walk-forward 47.4% -- below the bar; shown as LOW CONFIDENCE."
         },
         {
           "symbol": "NESTLEIND",
-          "reason": "LONG best win rate 56.5% over 23 yrs but walk-forward 43.8% -- below the bar; no position."
+          "reason": "LONG best win rate 56.5% over 23 yrs but walk-forward 43.8% -- below the bar; shown as LOW CONFIDENCE."
         },
         {
           "symbol": "BSE",
-          "reason": "SHORT needs >=15 valid yrs and walk-forward >=60%; has 9 yrs / WF 50.0% -- no position."
+          "reason": "SHORT needs >=15 valid yrs and walk-forward >=60%; has 9 yrs / WF 50.0% -- shown as LOW CONFIDENCE."
         }
       ]
     }

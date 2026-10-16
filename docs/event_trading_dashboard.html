@@ -3825,10 +3825,18 @@
         const wrVal = (s.full_19y_wr !== undefined && s.full_19y_wr !== null) ? Number(s.full_19y_wr) : 75.0;
         const retVal = (s.full_19y_avg_ret !== undefined && s.full_19y_avg_ret !== null) ? Number(s.full_19y_avg_ret) : 2.5;
 
+        // Diwali/Christmas per-stock rebuild: stocks that did not clear the confidence bar (or have <7 valid
+        // years) are still given a position but are tagged so nobody mistakes them for a validated call.
+        const cfFlag = (s.confidence_flag && s.confidence_flag !== 'OK') ? s.confidence_flag : '';
+        const cfBadge = cfFlag
+          ? `<br><span title="${(s.confidence_note || '').replace(/"/g, '&quot;')}" style="display:inline-block;margin-top:3px;padding:1px 7px;border-radius:8px;font-size:0.68rem;font-weight:800;letter-spacing:0.3px;${cfFlag === 'DATA INSUFFICIENT' ? 'background:rgba(148,163,184,0.18);color:#CBD5E1;border:1px solid #64748B;' : 'background:rgba(245,158,11,0.15);color:#FBBF24;border:1px solid #F59E0B;'}">⚠ ${cfFlag}</span>`
+          : '';
+        if (cfFlag) tr.style.opacity = '0.78';
+
         tr.innerHTML = `
           <td><strong>Rank ${renderedIdx}</strong></td>
           <td><strong>${s.symbol}</strong></td>
-          <td style="color:#CBD5E1">${s.name}</td>
+          <td style="color:#CBD5E1">${s.name}${cfBadge}</td>
           <td>${niftyBadge(s.symbol)}</td>
           <td>${dirBadge}</td>
           <td><span class="window-pill">${winPill}</span></td>
