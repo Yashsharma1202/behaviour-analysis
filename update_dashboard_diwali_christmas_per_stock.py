@@ -12,7 +12,7 @@ import json, copy, sys
 import numpy as np, pandas as pd
 
 ROOT = r"D:\behaviour analysis"
-XL = ROOT + r"\Nifty50_Diwali_Christmas_Report_v3.xlsx"
+XL = ROOT + r"\Nifty50_Diwali_Christmas_Report_v4.xlsx"   # v4 = corrected Diwali anchors + real market calendar
 JS = ROOT + r"\dashboard_data\event_dashboard_data.json"
 BK = ROOT + r"\dashboard_data\diwali_christmas_pre_per_stock_backup.json"
 HOL = pd.read_csv(ROOT + r"\NSE_BSE_Historical_Trading_Holidays_2000_2026.csv", parse_dates=["Holiday_Date"])
@@ -22,19 +22,28 @@ EV = {"diwali_2026": "Diwali", "christmas_2026": "Christmas"}
 MIN_SHORT_YEARS, MIN_SHORT_WF = 15, 60.0
 
 DEFAULT_SIDE = "LONG"      # event-wide verdict from the 213-stock basket study (both events LONG)
-DEFAULT_WIN = {"diwali_2026": ("T-2 to T+2",), "christmas_2026": ("T-1 to T+7",)}
+_EW = json.load(open(ROOT + r"\Diwali_Christmas_event_windows_v4.json"))      # written by build_diwali_christmas_perstock_reports_v4.py
+DEFAULT_WIN = {"diwali_2026": (_EW["Diwali"]["window"],), "christmas_2026": (_EW["Christmas"]["window"],)}
+assert _EW["Diwali"]["side"] == DEFAULT_SIDE and _EW["Christmas"]["side"] == DEFAULT_SIDE
 YEARS = list(range(2000, 2026))
-_px = pd.read_parquet(ROOT + r"\Stock_Data_213\all_stocks_daily_ohlc.parquet", columns=["Symbol", "Date", "Adj Close"]).dropna()
+_px = pd.read_parquet(ROOT + r"\Stock_Data_213\all_stocks_daily_ohlc.parquet", columns=["Symbol", "Date", "Adj Close", "Volume"]).dropna()
+_act = _px.groupby("Date").agg(n=("Symbol", "size"), pos=("Volume", lambda v: (v > 0).sum()))
+CAL = _act.index[(_act.n >= 5) & (_act.pos / _act.n >= 0.30)].values.astype("datetime64[D]")   # real market days (placeholder rows excluded)
+LAXMI_PUJAN = {2000: "10-26", 2001: "11-14", 2002: "11-04", 2003: "10-25", 2004: "11-12", 2005: "11-01", 2006: "10-21", 2007: "11-09",
+               2008: "10-28", 2009: "10-17", 2010: "11-05", 2011: "10-26", 2012: "11-13", 2013: "11-03", 2014: "10-23", 2015: "11-11",
+               2016: "10-30", 2017: "10-19", 2018: "11-07", 2019: "10-27", 2020: "11-14", 2021: "11-04", 2022: "10-24", 2023: "11-12",
+               2024: "11-01", 2025: "10-21", 2026: "11-08"}      # identical to the v4 backtest builder
 
 def anchor(ev_id, y):
     if ev_id == "christmas_2026": return pd.Timestamp(y, 12, 25)
-    g = HOL[HOL.Holiday_Name.str.contains("Diwali", case=False) & (HOL.Year == y)]; lp = g[g.Is_Trading_Holiday == "SPECIAL_SESSION"]
-    return (lp.iloc[0] if len(lp) else g.iloc[0]).Holiday_Date
+    return pd.Timestamp(f"{y}-{LAXMI_PUJAN[y]}")
 
 def default_stats(sym, ev_id):
     """LONG stats of one stock at the event-wide default window (same rules as the backtest: T row dropped, 7-day gap, 40-day span, 35% daily-move guard)."""
     lead, hold = [int(v) for v in DEFAULT_WIN[ev_id][0].replace("T-", "").replace("T+", "").split(" to ")]
-    g = _px[_px.Symbol == sym].sort_values("Date"); d = g.Date.values.astype("datetime64[D]"); a = g["Adj Close"].values.astype(float)
+    g = _px[_px.Symbol == sym].drop_duplicates("Date").set_index("Date")["Adj Close"]; g.index = g.index.values.astype("datetime64[D]")
+    g = g[g.index.isin(CAL)]; cal_s = CAL[(CAL >= g.index.min()) & (CAL <= g.index.max())]; g = g.reindex(cal_s).ffill()
+    d = cal_s; a = g.values.astype(float)
     if ev_id == "diwali_2026":
         keep = ~np.isin(d, [np.datetime64(anchor(ev_id, y), "D") for y in YEARS]); d, a = d[keep], a[keep]
     out = {}

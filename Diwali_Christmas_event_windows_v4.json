@@ -1,0 +1,16 @@
+{
+ "Diwali": {
+  "window": "T-3 to T+3",
+  "side": "LONG",
+  "t": 4.78,
+  "basket_wr": 84.6,
+  "n": 26
+ },
+ "Christmas": {
+  "window": "T-1 to T+7",
+  "side": "LONG",
+  "t": 8.17,
+  "basket_wr": 100.0,
+  "n": 26
+ }
+}
