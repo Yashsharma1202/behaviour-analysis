@@ -651,6 +651,40 @@
     }
     .timing-banner strong { color: #FCA5A5; font-size: 0.9rem; }
     .timing-banner p { font-size: 0.8rem; color: #E2E8F0; }
+
+    /* ---- Excel-style column filters (Holidays tab stock tables) ---- */
+    th.xf-th { position: relative; white-space: nowrap; padding-right: 1.6rem; }
+    .xf-btn {
+      position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+      cursor: pointer; font-size: 0.72rem; line-height: 1; padding: 3px 4px; border-radius: 4px;
+      color: var(--text-muted); border: 1px solid transparent; user-select: none;
+    }
+    .xf-btn:hover { background: rgba(99,102,241,0.18); color: var(--text-main); }
+    th.xf-active .xf-btn { color: #FBBF24; border-color: #F59E0B; background: rgba(245,158,11,0.15); }
+    th.xf-sorted::after { content: attr(data-xf-arrow); margin-left: 4px; color: #60A5FA; font-size: 0.7rem; }
+    #xf-panel {
+      position: fixed; z-index: 99999; width: 240px; max-height: 420px; display: none; flex-direction: column;
+      background: var(--surface); color: var(--text-main); border: 1px solid var(--surface-border);
+      border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.55); font-size: 0.8rem; text-transform: none; font-weight: 500;
+    }
+    #xf-panel .xf-row { padding: 0.35rem 0.6rem; display: flex; gap: 0.4rem; align-items: center; }
+    #xf-panel button.xf-act {
+      flex: 1; cursor: pointer; padding: 0.3rem 0.4rem; border-radius: 5px; font-size: 0.74rem;
+      background: var(--surface-light); color: var(--text-main); border: 1px solid var(--surface-border);
+    }
+    #xf-panel button.xf-act:hover { border-color: var(--accent); }
+    #xf-panel input.xf-search {
+      width: 100%; padding: 0.35rem 0.5rem; border-radius: 5px; background: var(--surface-light);
+      color: var(--text-main); border: 1px solid var(--surface-border); font-size: 0.78rem;
+    }
+    #xf-panel .xf-list { overflow-y: auto; flex: 1; border-top: 1px solid var(--surface-border); border-bottom: 1px solid var(--surface-border); padding: 0.25rem 0; }
+    #xf-panel label.xf-item { display: flex; gap: 0.45rem; align-items: center; padding: 0.22rem 0.7rem; cursor: pointer; }
+    #xf-panel label.xf-item:hover { background: rgba(99,102,241,0.12); }
+    #xf-panel .xf-count { margin-left: auto; color: var(--text-muted); font-size: 0.7rem; }
+    .xf-bar { display: flex; align-items: center; gap: 0.75rem; margin: 0.4rem 0 0.5rem; font-size: 0.78rem; color: var(--text-muted); flex-wrap: wrap; }
+    .xf-bar button { cursor: pointer; padding: 0.25rem 0.7rem; border-radius: 14px; font-size: 0.74rem; font-weight: 700;
+      background: rgba(245,158,11,0.12); color: #FBBF24; border: 1px solid #F59E0B; }
+    .xf-bar button[disabled] { opacity: 0.4; cursor: default; }
   </style>
 </head>
 <body>
@@ -936,6 +970,13 @@
         </div>
       </div>
 
+      <!-- Sub-tabs: Quarterly Trades (existing, unchanged) | Holiday Performance (new, separate) -->
+      <div class="filter-bar" id="ss-subtabs" style="margin-bottom: 1rem;">
+        <button id="sssub-q" class="filter-pill active" onclick="setStockSubtab('q', this)">📊 Quarterly Trades</button>
+        <button id="sssub-h" class="filter-pill" onclick="setStockSubtab('h', this)">🎉 Holiday Performance (17 holidays &middot; 26 yrs)</button>
+      </div>
+
+      <div id="ss-quarterly-view">
       <!-- Stock Performance Summary Metric Cards -->
       <div id="stock-perf-summary-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
         <!-- Populated by JavaScript -->
@@ -977,6 +1018,53 @@
               <!-- Populated by JavaScript -->
             </tbody>
           </table>
+        </div>
+      </div>
+      </div><!-- /ss-quarterly-view -->
+
+      <!-- ===== HOLIDAY PERFORMANCE SUB-TAB (separate from quarterly; 17 holidays x 26 yrs, per-stock best side + window) ===== -->
+      <div id="ss-holiday-view" style="display:none;">
+        <div id="hp-msg" style="display:none; padding:1rem; border:1px dashed var(--surface-border); border-radius:10px; color:var(--text-muted); margin-bottom:1rem;"></div>
+
+        <div id="hp-summary" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; margin-bottom:1.5rem;"></div>
+
+        <!-- Position per holiday -->
+        <div style="background: var(--surface-bg); border: 1px solid var(--surface-border); border-radius: 12px; padding: 1.5rem; margin-bottom:1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+          <h3 style="margin:0 0 0.3rem 0; font-size:1.15rem; font-weight:800; color:#FFF;">🎯 Best Position per Holiday for <span id="hp-pos-title" style="color:#38BDF8;"></span></h3>
+          <p style="margin:0 0 0.8rem 0; font-size:0.78rem; color:var(--text-muted);">Each holiday: this stock's own best side (LONG/SHORT) and entry/exit window, chosen on 2000-2025 history (min 7 valid years), with a forward test (window re-picked every year using only earlier years). <b>DATA INSUFFICIENT</b> = fewer than 7 valid years: no pick, shown at the holiday's event-wide window.</p>
+          <div class="table-container" style="max-height:520px; overflow-y:auto;">
+            <table class="event-master-table" id="hp-pos-table">
+              <thead><tr>
+                <th>Holiday</th><th>Position</th><th>Window</th><th>Confidence</th><th>Win Rate %</th><th>Valid Years</th><th>Avg Ret %</th><th>Fwd-Test Win %</th><th>Fwd Trades</th>
+              </tr></thead>
+              <tbody id="hp-pos-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- All past holiday trades -->
+        <div style="background: var(--surface-bg); border: 1px solid var(--surface-border); border-radius: 12px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.8rem; flex-wrap:wrap; gap:0.5rem;">
+            <h3 style="margin:0; font-size:1.2rem; font-weight:800; color:#FFF;">🎉 Holiday Trade Log for <span id="hp-title" style="color:#38BDF8;"></span></h3>
+            <div id="hp-count" style="font-size:0.85rem; color:#94A3B8; font-weight:700; background:var(--surface-light); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--surface-border);"></div>
+          </div>
+          <div class="filter-bar" style="margin-bottom:0.6rem;">
+            <select id="hp-holiday-filter" class="search-input" style="padding:0.4rem 0.8rem; background:var(--surface); color:var(--text-main); border:1px solid var(--surface-border); border-radius:6px;" onchange="hpSetFilter('holiday', this.value)"></select>
+            <button id="hpo-all" class="filter-pill active" onclick="hpSetFilter('outcome','ALL', this)">All</button>
+            <button id="hpo-win" class="filter-pill" onclick="hpSetFilter('outcome','WIN', this)">✔ Wins</button>
+            <button id="hpo-loss" class="filter-pill" onclick="hpSetFilter('outcome','LOSS', this)">✖ Losses</button>
+            <button class="filter-pill" onclick="hpExportCSV()" style="margin-left:auto;">⬇ Export CSV</button>
+          </div>
+          <div class="table-container" style="max-height:650px; overflow-y:auto;">
+            <table class="event-master-table" id="hp-table">
+              <thead><tr>
+                <th>Holiday</th><th>Year</th><th>Holiday Date (T)</th><th>Position</th><th>Window</th><th>Entry Date @ 09:20 AM</th><th>Entry Price (Adj &#8377;)</th>
+                <th>Exit Date @ 03:15 PM</th><th>Exit Price (Adj &#8377;)</th><th>Stock Move %</th><th>Return We Get %</th><th>1-Lot P&amp;L (&#8377;)</th><th>Outcome</th><th>Confidence</th>
+              </tr></thead>
+              <tbody id="hp-tbody"></tbody>
+            </table>
+          </div>
+          <p style="margin:0.6rem 0 0 0; font-size:0.74rem; color:var(--text-muted);">Entry = close of T-lead, exit = close of T+hold (Adj Close, so P&amp;L is approximate and ignores costs). T = the exchange holiday date; years when the market traded normally on the recorded date are excluded. <b>2026*</b> = completed this year and NOT used to pick the window (a true out-of-sample trade).</p>
         </div>
       </div>
     </div>
@@ -1666,6 +1754,7 @@
                 <th>19Y Avg Ret</th>
                 <th>Lot Size</th>
                 <th>Recommended Action</th>
+                <th>Confidence</th>
               </tr>
             </thead>
             <tbody id="holiday-tbody">
@@ -3832,6 +3921,11 @@
           ? `<br><span title="${(s.confidence_note || '').replace(/"/g, '&quot;')}" style="display:inline-block;margin-top:3px;padding:1px 7px;border-radius:8px;font-size:0.68rem;font-weight:800;letter-spacing:0.3px;${cfFlag === 'DATA INSUFFICIENT' ? 'background:rgba(148,163,184,0.18);color:#CBD5E1;border:1px solid #64748B;' : 'background:rgba(245,158,11,0.15);color:#FBBF24;border:1px solid #F59E0B;'}">⚠ ${cfFlag}</span>`
           : '';
         if (cfFlag) tr.style.opacity = '0.78';
+        // Confidence column (filterable): Diwali/Christmas carry conviction + flag; other events have none.
+        const confText = cfFlag ? cfFlag : (s.conviction || '—');
+        const confColor = cfFlag ? (cfFlag === 'DATA INSUFFICIENT' ? '#94A3B8' : '#FBBF24')
+                                 : (s.conviction === 'STRONG' ? '#34D399' : (s.conviction === 'MODERATE' ? '#60A5FA' : '#64748B'));
+        const confLabel = `<span style="color:${confColor}; font-weight:700; font-size:0.78rem;">${confText}</span>`;
 
         tr.innerHTML = `
           <td><strong>Rank ${renderedIdx}</strong></td>
@@ -3846,6 +3940,7 @@
           <td style="color:${retVal > 0 ? '#34D399' : '#F87171'}">${retVal > 0 ? '+' : ''}${retVal.toFixed(2)}%</td>
           <td style="color:#94A3B8">${Number(s.lot).toLocaleString()}</td>
           <td>${actionTag}</td>
+          <td>${confLabel}</td>
         `;
         tbody.appendChild(tr);
       });
@@ -6064,6 +6159,322 @@
 
 </script>
 
+<!-- Stock Deep Dive -> Holiday Performance sub-tab (17 holidays x 26 yrs; per-stock files lazy-loaded from dashboard_data/holiday_trades/) -->
+<script>
+(function () {
+  let ACTIVE = false, INDEX = null, CUR = null, ROWS = [];
+  const F = { holiday: 'ALL', outcome: 'ALL' };
+  const CACHE = {};
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const fileFor = s => s.replace(/&/g, '_AND_') + '.json';
+  const fmtD = iso => { const p = iso.split('-').map(Number); const dt = new Date(p[0], p[1] - 1, p[2]);
+    return String(p[2]).padStart(2, '0') + '-' + MON[p[1] - 1] + '-' + p[0] + ' (' + DOW[dt.getDay()] + ')'; };
+  const inr = n => (n < 0 ? '-' : '') + '₹' + Math.abs(Math.round(n)).toLocaleString('en-IN');
+  const pct = (n, d) => (n > 0 ? '+' : '') + n.toFixed(d === undefined ? 2 : d) + '%';
+  const $ = id => document.getElementById(id);
+
+  async function getIndex() {
+    if (INDEX) return INDEX;
+    try { const r = await fetch('dashboard_data/holiday_trades_index.json?t=' + Date.now()); INDEX = await r.json(); } catch (e) { INDEX = { holidays: [] }; }
+    return INDEX;
+  }
+  async function getStock(sym) {
+    if (CACHE[sym]) return CACHE[sym];
+    const r = await fetch('dashboard_data/holiday_trades/' + fileFor(sym) + '?t=' + Date.now());
+    if (!r.ok) throw new Error('missing');
+    return (CACHE[sym] = await r.json());
+  }
+  const confStyle = c => c === 'STRONG' ? '#34D399' : c === 'MODERATE' ? '#60A5FA' : c === 'NO TRADE' ? '#FBBF24' : '#94A3B8';
+  const confLabel = c => c === 'NO TRADE' ? 'LOW CONFIDENCE' : c;
+  const sideBadge = (pos, ph) => ph ? '<span style="color:#94A3B8;font-weight:700;">NO CALL</span>'
+    : (pos === 'LONG' ? '<span class="badge-long">▲ LONG</span>' : '<span class="badge-short">▼ SHORT</span>');
+
+  function card(title, big, sub, color) {
+    return '<div style="background:var(--surface-bg);border:1px solid var(--surface-border);border-radius:10px;padding:1.1rem;box-shadow:0 4px 12px rgba(0,0,0,0.2);">' +
+      '<div style="font-size:0.7rem;font-weight:800;color:var(--text-muted);text-transform:uppercase;margin-bottom:0.5rem;">' + title + '</div>' +
+      '<div style="font-size:1.7rem;font-weight:800;color:' + (color || '#FFF') + ';">' + big + '</div>' +
+      '<div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.35rem;">' + sub + '</div></div>';
+  }
+
+  function flatten(d) {
+    const out = [];
+    d.h.forEach(h => h.t.forEach(t => {
+      const sg = h.pos === 'LONG' ? 1 : -1, ph = h.flag !== 'OK';
+      out.push({ hid: h.id, hname: h.name, y: t[0], T: t[1], en: t[2], ex: t[3], ep: t[4], xp: t[5], lr: t[6], sr: t[7], pos: h.pos, win: h.win, conv: h.conv, ph,
+                 pnl: d.lot ? sg * (t[5] - t[4]) * d.lot : null, outcome: t[7] > 0 ? 'WIN' : 'LOSS' });
+    }));
+    return out;
+  }
+
+  function draw(sym, d, idx) {
+    ROWS = flatten(d);
+    const sel = $('hp-holiday-filter');
+    if (sel && sel.options.length <= 1) {
+      sel.innerHTML = '<option value="ALL">All holidays</option>' + (idx.holidays || []).map(h => '<option value="' + h.id + '">' + h.name + '</option>').join('');
+    }
+    if (sel) sel.value = F.holiday;
+    const title = sym + ' (' + d.n + ')'; $('hp-title').textContent = title; $('hp-pos-title').textContent = sym;
+
+    // ---- position per holiday
+    $('hp-pos-tbody').innerHTML = d.h.map(h => {
+      const ph = h.flag !== 'OK';
+      return '<tr' + (ph ? ' style="opacity:0.78;"' : '') + '><td><strong>' + h.name + '</strong></td><td>' + sideBadge(h.pos, ph) + (ph ? ' <small style="color:#94A3B8;">(placeholder ' + h.pos + ')</small>' : '') + '</td>' +
+        '<td><span class="window-pill">' + h.win + '</span></td><td><span style="color:' + confStyle(h.conv) + ';font-weight:700;font-size:0.78rem;">' + confLabel(h.conv) + '</span></td>' +
+        '<td>' + h.wr.toFixed(1) + '</td><td>' + h.yrs + '</td><td style="color:' + (h.avg > 0 ? '#34D399' : '#F87171') + '">' + pct(h.avg) + '</td>' +
+        '<td>' + (h.wf === null || h.wf === undefined ? '—' : h.wf.toFixed(1)) + '</td><td>' + (h.wft || 0) + '</td></tr>';
+    }).join('');
+
+    // ---- trade rows with filters
+    let rows = ROWS.filter(r => (F.holiday === 'ALL' || r.hid === F.holiday) && (F.outcome === 'ALL' || r.outcome === F.outcome));
+    rows.sort((a, b) => a.hname.localeCompare(b.hname) || a.y - b.y);
+    $('hp-tbody').innerHTML = rows.map(r => {
+      const oc = r.outcome === 'WIN' ? '<span style="background:rgba(16,185,129,0.15);color:#34D399;border:1px solid #10B981;padding:2px 10px;border-radius:12px;font-size:0.75rem;font-weight:800;">WIN ✔</span>'
+                                     : '<span style="background:rgba(239,68,68,0.15);color:#F87171;border:1px solid #EF4444;padding:2px 10px;border-radius:12px;font-size:0.75rem;font-weight:800;">LOSS ✖</span>';
+      return '<tr' + (r.ph ? ' style="opacity:0.78;"' : '') + '><td><strong>' + r.hname + '</strong></td><td>' + (r.y === 2026 ? '2026*' : r.y) + '</td><td>' + fmtD(r.T) + '</td><td>' + sideBadge(r.pos, false) + '</td>' +
+        '<td><span class="window-pill">' + r.win + '</span></td><td>' + fmtD(r.en) + '</td><td style="text-align:right;">₹' + r.ep.toLocaleString('en-IN', { minimumFractionDigits: 2 }) + '</td>' +
+        '<td>' + fmtD(r.ex) + '</td><td style="text-align:right;">₹' + r.xp.toLocaleString('en-IN', { minimumFractionDigits: 2 }) + '</td>' +
+        '<td style="color:' + (r.lr > 0 ? '#34D399' : '#F87171') + '">' + pct(r.lr) + '</td><td style="color:' + (r.sr > 0 ? '#34D399' : '#F87171') + ';font-weight:700;">' + pct(r.sr) + '</td>' +
+        '<td style="color:' + (r.pnl === null ? '#94A3B8' : r.pnl > 0 ? '#34D399' : '#F87171') + '">' + (r.pnl === null ? 'n/a' : inr(r.pnl)) + '</td><td>' + oc + '</td>' +
+        '<td><span style="color:' + confStyle(r.conv) + ';font-weight:700;font-size:0.78rem;">' + confLabel(r.conv) + '</span></td></tr>';
+    }).join('');
+
+    // ---- KPI cards (validated picks only; placeholder windows excluded) + coverage
+    const k = rows.filter(r => !r.ph), n = k.length, w = k.filter(r => r.outcome === 'WIN').length;
+    const tot = k.reduce((a, r) => a + (r.pnl || 0), 0), avg = n ? k.reduce((a, r) => a + r.sr, 0) / n : 0;
+    let best = null, worst = null; k.forEach(r => { if (!best || r.sr > best.sr) best = r; if (!worst || r.sr < worst.sr) worst = r; });
+    const withPick = d.h.filter(h => h.flag === 'OK').length;
+    $('hp-summary').innerHTML =
+      card('Stock Profile', sym, d.n + '<br>Lot size: <b>' + (d.lot ? d.lot.toLocaleString('en-IN') + ' qty' : 'n/a') + '</b> &middot; ' + (d.nifty50 ? 'NIFTY 50' : 'F&amp;O'), '#FFF') +
+      card('Holiday Win Rate', n ? (w / n * 100).toFixed(1) + '%' : '—', w + ' wins / ' + (n - w) + ' losses (' + n + ' trades)<br><small>in-sample: each window was picked on this same history - see Fwd-Test Win % below</small>', '#FBBF24') +
+      card('Total Futures P&amp;L (1 Lot)', inr(tot), 'Avg P&amp;L / trade: ' + (n ? inr(tot / n) : '—'), tot >= 0 ? '#34D399' : '#F87171') +
+      card('Average Return per Trade', n ? pct(avg) : '—', 'Each holiday at its own best side &amp; window', avg >= 0 ? '#34D399' : '#F87171') +
+      card('Best vs Worst Trade', best ? pct(best.sr) : '—', best ? 'Best: ' + best.hname + ' ' + best.y + '<br>Worst: ' + pct(worst.sr) + ' (' + worst.hname + ' ' + worst.y + ')' : '', '#34D399') +
+      card('Holiday Coverage', withPick + ' / ' + d.h.length, 'holidays with a validated pick (&ge;7 yrs).<br>' + (d.h.length - withPick) + ' flagged DATA INSUFFICIENT', '#60A5FA');
+    $('hp-count').textContent = 'Showing ' + rows.length + ' trades across ' + new Set(rows.map(r => r.hid)).size + ' holidays';
+    $('hp-msg').style.display = 'none';
+  }
+
+  // TATAMOTORS no longer trades under that symbol (demerged; the listed company is TMPV with the same continuous price history)
+  const ALIAS = { TATAMOTORS: 'TMPV' };
+
+  window.renderHolidayPerf = async function (sym) {
+    CUR = sym; const msg = $('hp-msg');
+    try {
+      let data, via = null;
+      try { data = await getStock(sym); }
+      catch (e0) { if (ALIAS[sym]) { data = await getStock(ALIAS[sym]); via = ALIAS[sym]; } else throw e0; }
+      const idx = await getIndex();
+      if (CUR !== sym) return;
+      draw(sym, data, idx);
+      if (via) {
+        $('hp-title').textContent = sym + ' (shown from ' + via + ' history)';
+        msg.style.display = 'block';
+        msg.textContent = sym + ' no longer trades under that symbol after the Tata Motors demerger. The holiday history below is the continuous price history of ' + via + ' (Tata Motors passenger vehicles).';
+      }
+    } catch (e) {
+      $('hp-summary').innerHTML = ''; $('hp-tbody').innerHTML = ''; $('hp-pos-tbody').innerHTML = ''; $('hp-count').textContent = '';
+      msg.style.display = 'block'; msg.textContent = 'No holiday backtest data for ' + sym + ' (it is not in the 213-stock holiday backtest).';
+    }
+  };
+
+  window.setStockSubtab = function (which, btn) {
+    ACTIVE = which === 'h';
+    $('ss-quarterly-view').style.display = ACTIVE ? 'none' : '';
+    $('ss-holiday-view').style.display = ACTIVE ? '' : 'none';
+    ['sssub-q', 'sssub-h'].forEach(id => $(id).classList.toggle('active', id === (ACTIVE ? 'sssub-h' : 'sssub-q')));
+    if (ACTIVE) { const s = (typeof currentSearchSymbol !== 'undefined' && currentSearchSymbol) ? currentSearchSymbol : null; if (s) window.renderHolidayPerf(s); }
+  };
+
+  window.hpSetFilter = function (key, val, btn) {
+    F[key] = val;
+    if (key === 'outcome') ['hpo-all', 'hpo-win', 'hpo-loss'].forEach(id => $(id).classList.toggle('active', $(id) === btn));
+    if (CUR && CACHE[CUR]) draw(CUR, CACHE[CUR], INDEX || { holidays: [] });
+  };
+
+  window.hpExportCSV = function () {
+    if (!CUR) return;
+    const rows = ROWS.filter(r => (F.holiday === 'ALL' || r.hid === F.holiday) && (F.outcome === 'ALL' || r.outcome === F.outcome));
+    const head = ['Holiday', 'Year', 'Holiday Date', 'Position', 'Window', 'Entry Date', 'Entry Price', 'Exit Date', 'Exit Price', 'Stock Move %', 'Return We Get %', '1-Lot PnL', 'Outcome', 'Confidence'];
+    const csv = [head].concat(rows.map(r => [r.hname, r.y, r.T, r.pos, r.win, r.en, r.ep, r.ex, r.xp, r.lr, r.sr, r.pnl === null ? '' : Math.round(r.pnl), r.outcome, confLabel(r.conv)]))
+      .map(a => a.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(',')).join('\n');
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' })); a.download = CUR + '_holiday_trades.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  };
+
+  // Make EVERY stock in the holiday backtest searchable in the Deep Dive. The Deep Dive list is built from the 211-stock file,
+  // which lacks a few current F&O names (e.g. ANANDRATHI, ENRIN, UJJIVANSFB); add them (no quarterly trades -> the quarterly view shows N/A).
+  async function augmentSearch() {
+    try {
+      if (typeof stockTradesMap === 'undefined' || !Object.keys(stockTradesMap).length) return false;
+      const idx = await getIndex(); let added = 0;
+      (idx.symbols || []).forEach(x => {
+        if (!stockTradesMap[x.s]) {
+          stockTradesMap[x.s] = { symbol: x.s, name: x.n, is_nifty50: x.nifty50 ? 'YES' : 'NO', spot_ltp: 0, lot: 0, margin: 0, trades: [] }; added++;
+        }
+      });
+      if (added && typeof populateStockSearchDropdown === 'function') populateStockSearchDropdown('');
+      return true;
+    } catch (e) { return false; }
+  }
+  const _init = window.initStockSearchEngine;
+  if (typeof _init === 'function') window.initStockSearchEngine = async function () { const r = await _init.apply(this, arguments); await augmentSearch(); return r; };
+  let tries = 0; const iv = setInterval(async () => { if (await augmentSearch() || ++tries > 40) clearInterval(iv); }, 500);
+
+  // follow stock selection made in the Deep Dive (search box, dropdown, quick pills)
+  const _sel = window.selectSearchStock;
+  if (typeof _sel === 'function') window.selectSearchStock = function (sym, fromInput) { _sel(sym, fromInput); if (ACTIVE) window.renderHolidayPerf(sym); };
+})();
+</script>
+
+<!-- Excel-style column filters for the Holidays tab stock tables (Nifty 50 playbook + F&O). DOM-based, so it works on whatever the
+     existing renderers output and is re-applied automatically after every re-render (event switch, search, pills, sub-tab). -->
+<div id="xf-panel"></div>
+<script>
+(function () {
+  const TABLES = [
+    { table: 'holiday-table',    tbody: 'holiday-tbody' },
+    { table: 'fo-holiday-table', tbody: 'fo-holiday-tbody' },
+    { table: 'hp-pos-table',     tbody: 'hp-pos-tbody' },      // Stock Deep Dive -> Holiday Performance
+    { table: 'hp-table',         tbody: 'hp-tbody' }
+  ];
+  const ST = {};            // per table: { excl: {col:Set}, sort: {col,dir}|null, applying:false }
+  let open = null;          // { key, col }
+  let opened = 0;           // timestamp of last panel open (ignore the scroll caused by focusing the search box)
+  const panel = document.getElementById('xf-panel');
+
+  // First visible line of a cell (stops at <br>/<small>, so sub-labels like "09:20 AM" or the confidence tag don't pollute the values)
+  function cellText(td) {
+    let out = '';
+    (function walk(n) {
+      for (const c of n.childNodes) {
+        if (c.nodeType === 3) out += c.nodeValue;
+        else if (c.nodeType === 1) { if (c.tagName === 'BR' || c.tagName === 'SMALL') return true; if (walk(c)) return true; }
+      }
+      return false;
+    })(td);
+    return out.replace(/\s+/g, ' ').trim();
+  }
+  const num = t => { const m = String(t).replace(/[,₹%+\s]/g, '').match(/^-?\d+(\.\d+)?$/); return m ? parseFloat(m[0]) : null; };
+  const dt  = t => /^\d{1,2}-[A-Za-z]{3}-\d{4}/.test(t) ? Date.parse(t.slice(0, 11).replace(/-/g, ' ')) : null;
+  const rows = key => Array.from(document.getElementById(key.tbody).querySelectorAll(':scope > tr')).filter(r => r.children.length > 1);
+
+  function colValues(key, col) {
+    const m = new Map();
+    rows(key).forEach(r => { const td = r.children[col]; if (!td) return; const v = cellText(td); m.set(v, (m.get(v) || 0) + 1); });
+    return m;
+  }
+
+  function apply(key) {
+    const s = ST[key.table]; if (!s) return;
+    const tb = document.getElementById(key.tbody); s.applying = true;
+    let rs = rows(key);
+    // sort
+    if (s.sort) {
+      const { col, dir } = s.sort;
+      const vals = rs.map(r => cellText(r.children[col] || document.createElement('td')));
+      const allNum = vals.every(v => num(v) !== null || v === '' || v === '—'), allDt = vals.every(v => dt(v) !== null || v === '');
+      const keyOf = v => allNum ? (num(v) === null ? -Infinity : num(v)) : (allDt ? (dt(v) || 0) : v.toLowerCase());
+      const idx = rs.map((r, i) => [r, keyOf(vals[i]), i]);
+      idx.sort((a, b) => (a[1] < b[1] ? -1 : a[1] > b[1] ? 1 : a[2] - b[2]) * dir);
+      idx.forEach(x => tb.appendChild(x[0])); rs = idx.map(x => x[0]);
+    }
+    // filter
+    let shown = 0;
+    rs.forEach(r => {
+      let ok = true;
+      for (const c in s.excl) { if (s.excl[c].size && r.children[c] && s.excl[c].has(cellText(r.children[c]))) { ok = false; break; } }
+      r.style.display = ok ? '' : 'none'; if (ok) shown++;
+    });
+    // header state + status bar
+    const th = document.querySelectorAll('#' + key.table + ' thead th');
+    th.forEach((h, i) => {
+      h.classList.toggle('xf-active', !!(s.excl[i] && s.excl[i].size));
+      h.classList.toggle('xf-sorted', !!(s.sort && s.sort.col === i));
+      if (s.sort && s.sort.col === i) h.setAttribute('data-xf-arrow', s.sort.dir === 1 ? '▲' : '▼');
+    });
+    const nAct = Object.values(s.excl).filter(x => x.size).length + (s.sort ? 1 : 0);
+    s.info.textContent = 'Showing ' + shown + ' of ' + rs.length + ' rows' + (nAct ? '  •  ' + nAct + ' column filter/sort active' : '');
+    s.clear.disabled = !nAct;
+    s.mo && s.mo.takeRecords();   // discard the mutations caused by our own sort/hide
+    s.applying = false;
+  }
+
+  function closePanel() { panel.style.display = 'none'; open = null; }
+
+  // keep the panel glued under its header button; close only if the header scrolls out of view
+  function place() {
+    if (!open || !open.anchor) return;
+    const r = open.anchor.getBoundingClientRect(), pw = 240;
+    if (r.bottom < 0 || r.top > window.innerHeight) { closePanel(); return; }
+    panel.style.left = Math.max(6, Math.min(window.innerWidth - pw - 10, r.left - 120 + r.width / 2)) + 'px';
+    panel.style.top = Math.max(6, Math.min(window.innerHeight - 440, r.bottom + 6)) + 'px';
+  }
+
+  function openPanel(key, col, anchor) {
+    const s = ST[key.table]; open = { key, col };
+    const vals = Array.from(colValues(key, col).entries()).sort((a, b) => {
+      const na = num(a[0]), nb = num(b[0]); return (na !== null && nb !== null) ? na - nb : a[0].localeCompare(b[0]);
+    });
+    const excl = s.excl[col] = s.excl[col] || new Set();
+    panel.innerHTML =
+      '<div class="xf-row"><button class="xf-act" data-a="asc">▲ Sort A→Z / low→high</button></div>' +
+      '<div class="xf-row"><button class="xf-act" data-a="desc">▼ Sort Z→A / high→low</button></div>' +
+      '<div class="xf-row"><input class="xf-search" placeholder="Search values…"></div>' +
+      '<div class="xf-list"></div>' +
+      '<div class="xf-row"><button class="xf-act" data-a="clear">Clear this column</button><button class="xf-act" data-a="close">Close</button></div>';
+    const list = panel.querySelector('.xf-list');
+    function draw(q) {
+      q = (q || '').toLowerCase();
+      const vis = vals.filter(v => v[0].toLowerCase().includes(q));
+      const allOn = vis.length && vis.every(v => !excl.has(v[0]));
+      list.innerHTML = '<label class="xf-item"><input type="checkbox" data-all="1" ' + (allOn ? 'checked' : '') + '> <b>(Select All)</b></label>' +
+        vis.map((v, i) => '<label class="xf-item"><input type="checkbox" data-i="' + i + '" ' + (excl.has(v[0]) ? '' : 'checked') + '> <span>' +
+          (v[0] === '' ? '(blank)' : v[0].replace(/</g, '&lt;')) + '</span><span class="xf-count">' + v[1] + '</span></label>').join('');
+      list.querySelectorAll('input[data-all]').forEach(cb => cb.onchange = () => { vis.forEach(v => cb.checked ? excl.delete(v[0]) : excl.add(v[0])); apply(key); draw(q); });
+      list.querySelectorAll('input[data-i]').forEach(cb => cb.onchange = () => { const v = vis[+cb.dataset.i][0]; cb.checked ? excl.delete(v) : excl.add(v); apply(key); draw(q); });
+    }
+    draw('');
+    panel.querySelector('.xf-search').oninput = e => draw(e.target.value);
+    panel.querySelectorAll('button[data-a]').forEach(b => b.onclick = () => {
+      const a = b.dataset.a;
+      if (a === 'asc' || a === 'desc') { s.sort = { col, dir: a === 'asc' ? 1 : -1 }; apply(key); }
+      else if (a === 'clear') { excl.clear(); if (s.sort && s.sort.col === col) s.sort = null; apply(key); draw(''); }
+      else closePanel();
+    });
+    panel.style.display = 'flex';
+    open.anchor = anchor; place();
+    opened = Date.now();
+    panel.querySelector('.xf-search').focus({ preventScroll: true });
+  }
+
+  function setup(key) {
+    const table = document.getElementById(key.table), tb = document.getElementById(key.tbody);
+    if (!table || !tb || ST[key.table]) return;
+    const s = ST[key.table] = { excl: {}, sort: null, applying: false };
+    table.querySelectorAll('thead th').forEach((th, i) => {
+      th.classList.add('xf-th');
+      const b = document.createElement('span'); b.className = 'xf-btn'; b.title = 'Filter / sort'; b.textContent = '▾';
+      b.onclick = e => { e.stopPropagation(); (open && open.key === key && open.col === i) ? closePanel() : openPanel(key, i, b); };
+      th.appendChild(b);
+    });
+    const bar = document.createElement('div'); bar.className = 'xf-bar';
+    s.info = document.createElement('span'); s.clear = document.createElement('button'); s.clear.textContent = '✕ Clear all column filters';
+    s.clear.onclick = () => { s.excl = {}; s.sort = null; apply(key); closePanel(); };
+    bar.appendChild(s.clear); bar.appendChild(s.info);
+    (table.closest('.table-container') || table).insertAdjacentElement('beforebegin', bar);
+    s.mo = new MutationObserver(() => { if (!s.applying) apply(key); });
+    s.mo.observe(tb, { childList: true });
+    apply(key);
+  }
+
+  document.addEventListener('click', e => { if (open && !e.composedPath().includes(panel)) closePanel(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
+  window.addEventListener('scroll', e => { if (open && !panel.contains(e.target)) place(); }, true);
+  window.addEventListener('resize', place);
+  const boot = () => TABLES.forEach(setup);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
+})();
+</script>
 
 </body>
 </html>
