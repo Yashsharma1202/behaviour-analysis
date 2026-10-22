@@ -20,8 +20,8 @@
       "avg_win_rate": null,
       "win_rate_avg": "Yet to come",
       "total_pnl": 0.0,
-      "announced_count": 39,
-      "pending_count": 12,
+      "announced_count": 40,
+      "pending_count": 11,
       "stocks": [
         {
           "symbol": "ETERNAL",
@@ -124,14 +124,14 @@
           "window": "T-1 to T+7",
           "lead": 1,
           "hold": 7,
-          "result_date": "Yet to come",
-          "result_declaration_date": "Yet to come",
-          "entry_date": "Yet to come",
-          "exit_date": "Yet to come",
-          "announced": false,
-          "result_status": "Yet to come",
+          "result_date": "29-Oct-2026",
+          "result_declaration_date": "29-Oct-2026",
+          "entry_date": "28-Oct-2026 (Wed)",
+          "exit_date": "09-Nov-2026 (Mon)",
+          "announced": true,
+          "result_status": "Announced",
           "purpose": "Awaiting NSE Announcement",
-          "source": "Awaiting NSE Announcement",
+          "source": "NSE board-meetings API (notice filed 22-Oct-2026 11:48 IST)",
           "entry_px": 428.2,
           "exit_px": null,
           "ltp": 428.2,
@@ -154,8 +154,8 @@
           "exit_hold_days": 7,
           "taking_window_raw": "T-1 to T+7",
           "pos_window": "T-1 to T+7",
-          "taking_window_full": "Entry: T-1 trading days (T-1 to T+7) ➔ Exit: T+7 trading days (result not yet announced)",
-          "window_fix_note": "Window computed via per-stock T-n/T+m backtest grid search on 09-Oct-2026 (direction held fixed, not re-selected) -- replaces the generic T-2/T+4 placeholder that was never individually verified for this still-unannounced stock."
+          "taking_window_full": "Entry: 28-Oct-2026 (Wed) (T-1 to T+7) ➔ Exit: 09-Nov-2026 (Mon)",
+          "window_fix_note": "Result date announced 22-Oct-2026 (meeting 29-Oct). Best REACHABLE window (entry from 23-Oct) from the walk-forward grid on 16 prior quarters: SHORT T-1 to T+7, win 68.8%, avg +1.05%. The historically best window (LONG T-8 to T+2, entry 16-Oct) is no longer reachable."
         },
         {
           "symbol": "WIPRO",
