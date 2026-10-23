@@ -1,0 +1,275 @@
+Symbol,Action,Date,Detail
+ABB,RESCALE_HISTORY,2007-06-28,move +443%; history before scaled x5.4339 (split/demerger/basis break)
+ADANIENT,BAD_ROW,2002-07-01,close=1.3626
+ADANIENT,BAD_ROW,2002-07-02,close=1.3733
+ADANIENT,BAD_ROW,2002-07-03,close=1.3733
+ADANIENT,BAD_ROW,2002-07-04,close=1.3810
+ADANIENT,BAD_ROW,2002-07-05,close=1.3779
+ADANIENT,BAD_ROW,2002-07-08,close=1.4385
+ADANIENT,BAD_ROW,2002-07-09,close=1.4009
+ADANIENT,BAD_ROW,2002-07-10,close=1.3994
+ADANIENT,BAD_ROW,2002-07-11,close=1.3764
+ADANIENT,BAD_ROW,2002-07-12,close=1.3871
+ADANIENT,BAD_ROW,2002-07-15,close=1.3588
+ADANIENT,BAD_ROW,2002-07-16,close=1.3710
+ADANIENT,BAD_ROW,2002-07-17,close=1.3603
+ADANIENT,BAD_ROW,2002-07-18,close=1.3764
+ADANIENT,BAD_ROW,2002-07-19,close=1.3710
+ADANIENT,BAD_ROW,2002-07-22,close=1.3389
+ADANIENT,BAD_ROW,2002-07-23,close=1.3389
+ADANIENT,BAD_ROW,2002-07-24,close=1.3036
+ADANIENT,BAD_ROW,2002-07-25,close=1.3159
+ADANIENT,BAD_ROW,2002-07-26,close=1.2752
+ADANIENT,BAD_ROW,2002-07-29,close=1.2438
+ADANIENT,BAD_ROW,2002-07-30,close=1.2300
+ADANIENT,BAD_ROW,2002-07-31,close=1.2185
+ADANIENT,BAD_ROW,2002-08-01,close=1.2331
+ADANIENT,BAD_ROW,2002-08-02,close=1.2208
+ADANIENT,BAD_ROW,2002-08-05,close=1.2185
+ADANIENT,BAD_ROW,2002-08-06,close=1.2017
+ADANIENT,BAD_ROW,2002-08-07,close=1.2239
+ADANIENT,BAD_ROW,2002-08-08,close=1.2055
+ADANIENT,BAD_ROW,2002-08-09,close=1.2147
+ADANIENT,BAD_ROW,2002-08-12,close=1.2201
+ADANIENT,BAD_ROW,2002-08-13,close=1.2155
+ADANIENT,BAD_ROW,2002-08-14,close=1.2032
+ADANIENT,BAD_ROW,2002-08-15,close=1.2032
+ADANIENT,BAD_ROW,2002-08-16,close=1.1840
+ADANIENT,BAD_ROW,2002-08-19,close=1.1833
+ADANIENT,BAD_ROW,2002-08-20,close=1.1825
+ADANIENT,BAD_ROW,2002-08-21,close=1.1940
+ADANIENT,BAD_ROW,2002-08-22,close=1.1978
+ADANIENT,BAD_ROW,2002-08-23,close=1.2017
+ADANIENT,BAD_ROW,2002-08-26,close=1.1978
+ADANIENT,BAD_ROW,2002-08-27,close=1.1909
+ADANIENT,BAD_ROW,2002-08-28,close=1.1932
+ADANIENT,BAD_ROW,2002-08-29,close=1.1863
+ADANIENT,BAD_ROW,2002-08-30,close=1.1894
+ADANIENT,BAD_ROW,2002-09-02,close=1.2024
+ADANIENT,BAD_ROW,2002-09-03,close=1.1994
+ADANIENT,RESCALE_HISTORY,2003-09-04,move +744%; history before scaled x8.4400 (split/demerger/basis break)
+ADANIENT,RESCALE_HISTORY,2004-06-28,move +109%; history before scaled x2.0944 (split/demerger/basis break)
+ADANIENT,DROP_SPIKE,2005-07-28,"1 bar(s), move +84%"
+ADANIENT,KEEP_REAL,2015-06-03,"move -39% on volume 89673759, kept"
+AMBUJACEM,DROP_SPIKE,2004-10-13,"1 bar(s), move -87%"
+ASHOKLEY,RESCALE_HISTORY,2002-07-04,move +63%; history before scaled x1.6330 (split/demerger/basis break)
+ASHOKLEY,KEEP_PERSISTENT,2003-06-30,move +56% kept as real (flagged)
+ASHOKLEY,RESCALE_HISTORY,2004-06-28,move +60%; history before scaled x1.6003 (split/demerger/basis break)
+ASHOKLEY,DROP_SPIKE,2005-07-28,"1 bar(s), move +100%"
+AUROPHARMA,KEEP_PERSISTENT,1998-10-22,move -42% kept as real (flagged)
+AUROPHARMA,KEEP_PERSISTENT,2000-03-08,move -47% kept as real (flagged)
+AUROPHARMA,DROP_SPIKE,2003-04-14,"1 bar(s), move -50%"
+AUROPHARMA,DROP_SPIKE,2003-10-23,"2 bar(s), move +88%"
+BAJAJ-AUTO,KEEP_PERSISTENT,2008-05-26,move -42% kept as real (flagged)
+BAJAJFINSV,RESCALE_HISTORY,2008-03-14,move -64%; history before scaled x0.3621 (split/demerger/basis break)
+BAJAJFINSV,RESCALE_HISTORY,2008-05-26,move -93%; history before scaled x0.0735 (split/demerger/basis break)
+BAJAJHLDNG,RESCALE_HISTORY,2008-03-14,move -64%; history before scaled x0.3621 (split/demerger/basis break)
+BAJFINANCE,DROP_SPIKE,2005-07-28,"1 bar(s), move +10849%"
+BANDHANBNK,KEEP_REAL,2020-03-26,"move +39% on volume 20248650, kept"
+BANKINDIA,BAD_ROW,2009-07-01,close=345.5500
+BEL,DROP_SPIKE,2005-07-28,"1 bar(s), move +3200%"
+BHARATFORG,DROP_SPIKE,2005-07-28,"1 bar(s), move +100%"
+BHEL,RESCALE_HISTORY,1996-11-12,move +50%; history before scaled x1.5000 (split/demerger/basis break)
+BHEL,DROP_SPIKE,1997-03-07,"1 bar(s), move +50%"
+BHEL,RESCALE_HISTORY,1997-04-14,move +50%; history before scaled x1.5000 (split/demerger/basis break)
+BHEL,DROP_SEGMENT,1998-11-04,16 bars
+BHEL,DROP_SEGMENT,1998-12-25,87 bars
+BHEL,RESCALE_HISTORY,1999-11-08,move +50%; history before scaled x1.5000 (split/demerger/basis break)
+BHEL,RESCALE_HISTORY,1999-11-23,move +50%; history before scaled x1.5000 (split/demerger/basis break)
+BHEL,KEEP_PERSISTENT,2003-12-26,move +36% kept as real (flagged)
+BHEL,RESCALE_HISTORY,2005-07-28,move +50%; history before scaled x1.5000 (split/demerger/basis break)
+BIOCON,DROP_SPIKE,2005-07-28,"1 bar(s), move +500%"
+BLUESTARCO,DROP_SPIKE,2005-07-28,"1 bar(s), move +100%"
+BPCL,DROP_SPIKE,2005-07-28,"1 bar(s), move +500%"
+BRITANNIA,RESCALE_HISTORY,1999-09-24,move +45%; history before scaled x1.4502 (split/demerger/basis break)
+CANBK,DROP_SPIKE,2005-07-28,"1 bar(s), move +414%"
+CANBK,KEEP_REAL,2017-10-25,"move +39% on volume 177050685, kept"
+CDSL,KEEP_REAL,2017-07-03,"move -50% on volume 28891226, kept"
+CGPOWER,RESCALE_HISTORY,2003-11-20,move +78%; history before scaled x1.7766 (split/demerger/basis break)
+CGPOWER,RESCALE_HISTORY,2004-07-08,move +107%; history before scaled x2.0665 (split/demerger/basis break)
+CGPOWER,KEEP_PERSISTENT,2004-12-02,move +45% kept as real (flagged)
+CGPOWER,RESCALE_HISTORY,2006-08-10,move +426%; history before scaled x5.2599 (split/demerger/basis break)
+CGPOWER,RESCALE_HISTORY,2006-12-14,move +44%; history before scaled x1.4416 (split/demerger/basis break)
+CHOLAFIN,DROP_SPIKE,2005-07-28,"1 bar(s), move +400%"
+CIPLA,DROP_SPIKE,2003-04-14,"1 bar(s), move -92%"
+CIPLA,DROP_SPIKE,2003-11-26,"1 bar(s), move -92%"
+CIPLA,DROP_SPIKE,2003-12-25,"1 bar(s), move -92%"
+CIPLA,DROP_SPIKE,2004-04-26,"1 bar(s), move -92%"
+CIPLA,DROP_SPIKE,2004-05-11,"1 bar(s), move +386%"
+CONCOR,DROP_SPIKE,2005-07-28,"1 bar(s), move +212%"
+DABUR,DROP_SPIKE,2007-01-25,"1 bar(s), move -53%"
+DRREDDY,DROP_SPIKE,2001-10-10,"3 bar(s), move +105%"
+DRREDDY,DROP_SPIKE,2005-07-28,"1 bar(s), move +400%"
+EICHERMOT,RESCALE_HISTORY,1997-07-21,move +68%; history before scaled x1.6766 (split/demerger/basis break)
+EICHERMOT,KEEP_PERSISTENT,1998-10-23,move +39% kept as real (flagged)
+EICHERMOT,DROP_SPIKE,2005-07-28,"1 bar(s), move +900%"
+GAIL,DROP_SPIKE,2005-07-28,"1 bar(s), move +433%"
+GLENMARK,RESCALE_HISTORY,2002-09-12,move +114%; history before scaled x2.1379 (split/demerger/basis break)
+GLENMARK,DROP_SPIKE,2003-04-02,"1 bar(s), move +1900%"
+GLENMARK,RESCALE_HISTORY,2003-06-10,move +89%; history before scaled x1.8936 (split/demerger/basis break)
+GLENMARK,RESCALE_HISTORY,2003-10-23,move +404%; history before scaled x5.0378 (split/demerger/basis break)
+GLENMARK,DROP_SPIKE,2003-11-26,"1 bar(s), move +300%"
+GLENMARK,DROP_SPIKE,2003-12-25,"1 bar(s), move +300%"
+GLENMARK,DROP_SPIKE,2004-04-26,"1 bar(s), move +300%"
+GLENMARK,DROP_SPIKE,2004-10-13,"1 bar(s), move +300%"
+GLENMARK,DROP_SPIKE,2005-07-28,"1 bar(s), move +300%"
+GLENMARK,RESCALE_HISTORY,2007-09-10,move +107%; history before scaled x2.0719 (split/demerger/basis break)
+GODFRYPHLP,DROP_SPIKE,2005-07-28,"1 bar(s), move +200%"
+GRASIM,DROP_SPIKE,2005-07-28,"1 bar(s), move +548%"
+GVT&D,RESCALE_HISTORY,2008-04-15,move +57%; history before scaled x1.5678 (split/demerger/basis break)
+GVT&D,RESCALE_HISTORY,2008-06-30,move +4934%; history before scaled x50.3421 (split/demerger/basis break)
+HAVELLS,KEEP_PERSISTENT,2009-05-06,move +36% kept as real (flagged)
+HINDPETRO,DROP_SPIKE,2005-07-28,"1 bar(s), move +575%"
+HINDZINC,RESCALE_HISTORY,2006-11-21,move +5575%; history before scaled x56.7492 (split/demerger/basis break)
+IDEA,KEEP_REAL,2019-11-19,"move +36% on volume 1030107961, kept"
+IDEA,KEEP_REAL,2020-02-19,"move +40% on volume 1015559671, kept"
+IDEA,KEEP_REAL,2020-03-18,"move -35% on volume 1073741823, kept"
+INDUSINDBK,KEEP_REAL,2020-03-26,"move +45% on volume 42326717, kept"
+IOC,DROP_SPIKE,1996-11-12,"1 bar(s), move +500%"
+IOC,DROP_SPIKE,1998-11-04,"1 bar(s), move +500%"
+IOC,DROP_SPIKE,1998-11-25,"1 bar(s), move +500%"
+IOC,DROP_SPIKE,1998-12-25,"1 bar(s), move +500%"
+IOC,DROP_SPIKE,1999-03-02,"1 bar(s), move +500%"
+IOC,DROP_SPIKE,1999-03-29,"1 bar(s), move +500%"
+IOC,DROP_SPIKE,1999-04-27,"1 bar(s), move +500%"
+IOC,DROP_SPIKE,1999-11-08,"1 bar(s), move +500%"
+IOC,DROP_SPIKE,1999-11-23,"1 bar(s), move +500%"
+IOC,DROP_SPIKE,2005-07-28,"1 bar(s), move +500%"
+KEI,BAD_ROW,2010-01-27,close=36.4500
+KOTAKBANK,DROP_SPIKE,2004-04-26,"1 bar(s), move +381%"
+KOTAKBANK,DROP_SPIKE,2004-10-13,"1 bar(s), move +370%"
+KOTAKBANK,DROP_SPIKE,2005-07-28,"1 bar(s), move +379%"
+LT,RESCALE_HISTORY,2004-05-19,move -45%; history before scaled x0.5489 (split/demerger/basis break)
+LT,DROP_SPIKE,2006-09-27,"1 bar(s), move -51%"
+LUPIN,DROP_SPIKE,2003-04-14,"1 bar(s), move -50%"
+LUPIN,KEEP_PERSISTENT,2003-09-26,move -49% kept as real (flagged)
+LUPIN,RESCALE_HISTORY,2004-03-25,move +101%; history before scaled x2.0073 (split/demerger/basis break)
+M&M,DROP_SEGMENT,1996-01-03,225 bars
+M&M,DROP_SPIKE,1997-03-07,"1 bar(s), move +100%"
+M&M,DROP_SPIKE,1997-04-14,"1 bar(s), move +100%"
+M&M,DROP_SPIKE,1998-11-04,"1 bar(s), move +100%"
+M&M,DROP_SPIKE,1998-11-25,"1 bar(s), move +100%"
+M&M,DROP_SPIKE,1998-12-25,"1 bar(s), move +100%"
+M&M,DROP_SPIKE,1999-03-02,"1 bar(s), move +100%"
+M&M,DROP_SPIKE,1999-03-29,"1 bar(s), move +100%"
+M&M,DROP_SPIKE,1999-04-27,"1 bar(s), move +100%"
+M&M,DROP_SPIKE,1999-11-08,"1 bar(s), move +100%"
+M&M,DROP_SPIKE,1999-11-23,"1 bar(s), move +100%"
+M&M,DROP_SPIKE,2005-07-28,"1 bar(s), move +101%"
+MARICO,KEEP_PERSISTENT,2001-07-02,move +45% kept as real (flagged)
+MFSL,KEEP_PERSISTENT,1998-06-17,move -45% kept as real (flagged)
+MFSL,KEEP_PERSISTENT,2000-05-10,move -49% kept as real (flagged)
+MFSL,RESCALE_SEGMENT,2005-04-08,"64 bars to 2005-07-07, factor 5.0703"
+MOTHERSON,BAD_ROW,2002-07-01,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-02,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-03,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-04,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-05,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-08,close=0.0959
+MOTHERSON,BAD_ROW,2002-07-09,close=0.0959
+MOTHERSON,BAD_ROW,2002-07-10,close=0.0959
+MOTHERSON,BAD_ROW,2002-07-11,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-12,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-15,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-16,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-17,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-18,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-19,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-22,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-23,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-24,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-25,close=0.0800
+MOTHERSON,BAD_ROW,2002-07-26,close=0.0640
+MOTHERSON,BAD_ROW,2002-07-29,close=0.0640
+MOTHERSON,BAD_ROW,2002-07-30,close=0.0640
+MOTHERSON,BAD_ROW,2002-07-31,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-01,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-02,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-05,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-06,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-07,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-08,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-09,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-12,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-13,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-14,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-15,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-16,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-19,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-20,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-21,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-22,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-23,close=0.0640
+MOTHERSON,BAD_ROW,2002-08-26,close=0.0800
+MOTHERSON,BAD_ROW,2002-08-27,close=0.0640
+MOTHERSON,KEEP_PERSISTENT,2003-09-09,move +51% kept as real (flagged)
+MOTHERSON,RESCALE_HISTORY,2005-02-24,move +132%; history before scaled x2.3182 (split/demerger/basis break)
+MOTHERSON,DROP_SPIKE,2005-07-28,"1 bar(s), move +724%"
+MOTILALOFS,RESCALE_HISTORY,2024-01-01,move -75%; history before scaled x0.2539 (split/demerger/basis break)
+NESTLEIND,RESCALE_HISTORY,2010-01-08,move -76%; history before scaled x0.2367 (split/demerger/basis break)
+ONGC,RESCALE_HISTORY,1996-11-12,move +50%; history before scaled x1.5000 (split/demerger/basis break)
+ONGC,RESCALE_SEGMENT,1997-03-07,"26 bars to 1997-04-11, factor 0.6667"
+ONGC,RESCALE_HISTORY,1997-04-14,move +125%; history before scaled x2.2500 (split/demerger/basis break)
+ONGC,DROP_SEGMENT,1998-11-25,69 bars
+ONGC,DROP_SPIKE,1999-03-29,"1 bar(s), move +50%"
+ONGC,RESCALE_HISTORY,1999-04-27,move +50%; history before scaled x1.5000 (split/demerger/basis break)
+ONGC,RESCALE_HISTORY,1999-11-08,move +50%; history before scaled x1.5000 (split/demerger/basis break)
+ONGC,RESCALE_HISTORY,1999-11-23,move +50%; history before scaled x1.5000 (split/demerger/basis break)
+ONGC,DROP_SPIKE,2005-07-28,"1 bar(s), move +50%"
+PATANJALI,DROP_SPIKE,2005-07-28,"1 bar(s), move -97%"
+PATANJALI,RESCALE_HISTORY,2020-01-27,move -95%; history before scaled x0.0507 (split/demerger/basis break)
+PIDILITIND,DROP_SPIKE,2003-11-26,"1 bar(s), move -60%"
+PIDILITIND,DROP_SPIKE,2003-12-25,"1 bar(s), move -60%"
+PIDILITIND,DROP_SPIKE,2005-07-28,"1 bar(s), move +300%"
+PIDILITIND,RESCALE_HISTORY,2005-09-20,move +114%; history before scaled x2.1354 (split/demerger/basis break)
+PNB,KEEP_REAL,2017-10-25,"move +46% on volume 166547247, kept"
+POLICYBZR,KEEP_REAL,2026-09-24,"move -36% on volume 27348784, kept"
+RADICO,RESCALE_HISTORY,2006-01-06,move -79%; history before scaled x0.2059 (split/demerger/basis break)
+RELIANCE,RESCALE_SEGMENT,1997-10-27,"7 bars to 1997-11-04, factor 0.5232"
+RELIANCE,DROP_SPIKE,2005-07-28,"1 bar(s), move +337%"
+SRF,DROP_SPIKE,2005-07-28,"1 bar(s), move +400%"
+SUPREMEIND,DROP_SPIKE,2005-07-28,"1 bar(s), move +100%"
+SUPREMEIND,RESCALE_HISTORY,2006-11-13,move +105%; history before scaled x2.0512 (split/demerger/basis break)
+SUZLON,KEEP_PERSISTENT,2008-10-24,move -40% kept as real (flagged)
+TATAELXSI,DROP_SPIKE,2005-07-28,"1 bar(s), move +100%"
+TATASTEEL,DROP_SPIKE,1996-11-12,"1 bar(s), move +950%"
+TATASTEEL,DROP_SPIKE,1997-03-07,"1 bar(s), move +950%"
+TATASTEEL,DROP_SPIKE,1997-04-14,"1 bar(s), move +950%"
+TATASTEEL,DROP_SPIKE,1998-11-04,"1 bar(s), move +950%"
+TATASTEEL,DROP_SPIKE,1998-11-25,"1 bar(s), move +950%"
+TATASTEEL,DROP_SPIKE,1998-12-25,"1 bar(s), move +950%"
+TATASTEEL,DROP_SPIKE,1999-03-02,"1 bar(s), move +950%"
+TATASTEEL,DROP_SPIKE,1999-03-29,"1 bar(s), move +950%"
+TATASTEEL,DROP_SPIKE,1999-04-27,"1 bar(s), move +950%"
+TATASTEEL,DROP_SPIKE,1999-11-08,"1 bar(s), move +950%"
+TATASTEEL,DROP_SPIKE,1999-11-23,"1 bar(s), move +950%"
+TATASTEEL,DROP_SPIKE,2003-04-14,"1 bar(s), move +600%"
+TATASTEEL,DROP_SPIKE,2003-11-26,"1 bar(s), move +600%"
+TATASTEEL,DROP_SPIKE,2003-12-25,"1 bar(s), move +600%"
+TATASTEEL,DROP_SPIKE,2004-04-26,"1 bar(s), move +600%"
+TCS,RESCALE_HISTORY,2004-05-06,move +202%; history before scaled x3.0189 (split/demerger/basis break)
+TCS,DROP_SPIKE,2005-07-28,"1 bar(s), move +100%"
+TMPV,DROP_SPIKE,1993-02-03,"1 bar(s), move -41%"
+TMPV,RESCALE_HISTORY,2025-10-14,move -40%; history before scaled x0.5985 (split/demerger/basis break)
+TORNTPHARM,BAD_ROW,2009-05-18,close=37.3750
+TRENT,DROP_SPIKE,2005-07-28,"1 bar(s), move +959%"
+ULTRACEMCO,RESCALE_HISTORY,2004-08-24,move -76%; history before scaled x0.2436 (split/demerger/basis break)
+UNITDSPR,DROP_SPIKE,2005-07-28,"1 bar(s), move +400%"
+UPL,DROP_SPIKE,2005-07-28,"1 bar(s), move -40%"
+VEDL,KEEP_PERSISTENT,1998-03-11,move +58% kept as real (flagged)
+VEDL,DROP_SPIKE,2003-04-14,"1 bar(s), move -50%"
+VEDL,DROP_SPIKE,2003-11-26,"1 bar(s), move -50%"
+VEDL,DROP_SPIKE,2003-12-25,"1 bar(s), move -50%"
+VEDL,DROP_SPIKE,2004-04-26,"1 bar(s), move -50%"
+VEDL,DROP_SPIKE,2004-10-13,"1 bar(s), move -50%"
+VEDL,RESCALE_HISTORY,2026-04-30,move -65%; history before scaled x0.3510 (split/demerger/basis break)
+VOLTAS,KEEP_PERSISTENT,2002-07-11,move +38% kept as real (flagged)
+VOLTAS,KEEP_PERSISTENT,2003-07-18,move +45% kept as real (flagged)
+VOLTAS,RESCALE_HISTORY,2006-09-22,move +932%; history before scaled x10.3195 (split/demerger/basis break)
+WIPRO,DROP_SPIKE,1997-10-20,"2 bar(s), move +215%"
+WIPRO,DROP_SPIKE,1999-09-22,"3 bar(s), move -78%"
+YESBANK,KEEP_REAL,2020-03-06,"move -56% on volume 191175895, kept"
+YESBANK,KEEP_REAL,2020-03-11,"move +36% on volume 413642132, kept"
+YESBANK,KEEP_REAL,2020-03-16,"move +45% on volume 166519072, kept"
+YESBANK,KEEP_REAL,2020-03-17,"move +58% on volume 223459530, kept"
+ZYDUSLIFE,KEEP_PERSISTENT,2006-08-30,move -49% kept as real (flagged)
