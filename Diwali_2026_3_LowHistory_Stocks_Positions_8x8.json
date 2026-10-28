@@ -1,0 +1,53 @@
+{
+  "event": "Diwali 2026 - positions for 3 low-history Nifty stocks (8x8 grid)",
+  "event_date": "08-Nov-2026 (Sunday)",
+  "generated": "2026-10-27",
+  "warning": "These stocks have fewer than the 7 valid Diwali years required for a call. Picks come from 3-6 data points and are indicative only.",
+  "stocks": [
+    {
+      "symbol": "MAXHEALTH",
+      "name": "MAXHEALTH Ltd",
+      "direction": "LONG",
+      "window": "T-8 to T+5",
+      "lead": 8,
+      "hold": 5,
+      "entry_date": "28-Oct-2026 (Wednesday)",
+      "exit_date": "16-Nov-2026 (Monday)",
+      "valid_years": 6,
+      "win_rate": 100.0,
+      "avg_signed_ret": 8.48,
+      "conviction": "EXPERIMENTAL - NOT BACKTESTED TO BAR",
+      "reason": "Only 6 Diwali years of data (min 7 required); best of LONG windows over those years."
+    },
+    {
+      "symbol": "ETERNAL",
+      "name": "ETERNAL Ltd",
+      "direction": "LONG",
+      "window": "T-1 to T+4",
+      "lead": 1,
+      "hold": 4,
+      "entry_date": "06-Nov-2026 (Friday)",
+      "exit_date": "13-Nov-2026 (Friday)",
+      "valid_years": 5,
+      "win_rate": 80.0,
+      "avg_signed_ret": 3.43,
+      "conviction": "EXPERIMENTAL - NOT BACKTESTED TO BAR",
+      "reason": "Only 5 Diwali years of data (min 7 required); best of LONG windows over those years."
+    },
+    {
+      "symbol": "JIOFIN",
+      "name": "Jio Financial Services Ltd",
+      "direction": "SHORT",
+      "window": "T-1 to T+8",
+      "lead": 1,
+      "hold": 8,
+      "entry_date": "06-Nov-2026 (Friday)",
+      "exit_date": "19-Nov-2026 (Thursday)",
+      "valid_years": 3,
+      "win_rate": 100.0,
+      "avg_signed_ret": 2.89,
+      "conviction": "EXPERIMENTAL - NOT BACKTESTED TO BAR",
+      "reason": "Only 3 Diwali years of data (min 7 required); best of SHORT windows over those years."
+    }
+  ]
+}
