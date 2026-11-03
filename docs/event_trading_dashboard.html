@@ -974,6 +974,7 @@
       <div class="filter-bar" id="ss-subtabs" style="margin-bottom: 1rem;">
         <button id="sssub-q" class="filter-pill active" onclick="setStockSubtab('q', this)">📊 Quarterly Trades</button>
         <button id="sssub-h" class="filter-pill" onclick="setStockSubtab('h', this)">🎉 Holiday Performance (17 holidays &middot; 26 yrs)</button>
+        <button id="sssub-g" class="filter-pill" onclick="setStockSubtab('g', this)">🪔 Gurunanak Jayanti (24-Nov-2026 &middot; all F&amp;O)</button>
       </div>
 
       <div id="ss-quarterly-view">
@@ -1065,6 +1066,50 @@
             </table>
           </div>
           <p style="margin:0.6rem 0 0 0; font-size:0.74rem; color:var(--text-muted);">Entry = close of T-lead, exit = close of T+hold (Adj Close, so P&amp;L is approximate and ignores costs). T = the exchange holiday date; years when the market traded normally on the recorded date are excluded. <b>2026*</b> = completed this year and NOT used to pick the window (a true out-of-sample trade).</p>
+        </div>
+      </div>
+
+      <!-- ===== GURUNANAK JAYANTI SUB-TAB (24-Nov-2026): position + entry/exit dates for ALL 213 F&O stocks; data = dashboard_data/gurunanak_2026_fo_positions.json ===== -->
+      <div id="ss-gurunanak-view" style="display:none;">
+        <div id="gn-msg" style="display:none; padding:1rem; border:1px dashed var(--surface-border); border-radius:10px; color:var(--text-muted); margin-bottom:1rem;"></div>
+        <div id="gn-summary" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:1rem; margin-bottom:1.5rem;"></div>
+
+        <div style="background: var(--surface-bg); border: 1px solid var(--surface-border); border-radius: 12px; padding: 1.5rem; margin-bottom:1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+          <h3 style="margin:0 0 0.3rem 0; font-size:1.15rem; font-weight:800; color:#FFF;">📅 Entry Calendar &mdash; when positions are taken</h3>
+          <p style="margin:0 0 0.8rem 0; font-size:0.78rem; color:var(--text-muted);">Number of STRONG / MODERATE positions entered on each date (entry at 09:20 AM IST). Click a date to filter the table below to that entry date.</p>
+          <div id="gn-calendar" style="display:flex; flex-wrap:wrap; gap:0.6rem;"></div>
+        </div>
+
+        <div style="background: var(--surface-bg); border: 1px solid var(--surface-border); border-radius: 12px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.8rem; flex-wrap:wrap; gap:0.5rem;">
+            <h3 style="margin:0; font-size:1.2rem; font-weight:800; color:#FFF;">🪔 Gurunanak Jayanti Position Taking &mdash; all F&amp;O stocks</h3>
+            <span style="font-size:0.74rem;font-weight:800;color:#38BDF8;background:rgba(56,189,248,0.12);border:1px solid #38BDF8;border-radius:12px;padding:3px 12px;">8&times;8 GRID &middot; entry T-1&hellip;T-8 &times; exit T+1&hellip;T+8 (64 windows per stock)</span>
+            <div id="gn-count" style="font-size:0.85rem; color:#94A3B8; font-weight:700; background:var(--surface-light); padding:0.4rem 0.8rem; border-radius:6px; border:1px solid var(--surface-border);"></div>
+          </div>
+          <div class="filter-bar" style="margin-bottom:0.6rem;">
+            <input id="gn-search" class="search-input" type="text" placeholder="Search symbol / name..." oninput="gnSet('q', this.value)" style="padding:0.4rem 0.8rem; background:var(--surface); color:var(--text-main); border:1px solid var(--surface-border); border-radius:6px; min-width:200px;">
+            <button id="gnf-pos" class="filter-pill active" onclick="gnSet('view','POS', this)">✔ In position</button>
+            <button id="gnf-all" class="filter-pill" onclick="gnSet('view','ALL', this)">All 213</button>
+            <button id="gnf-low" class="filter-pill" onclick="gnSet('view','LOW', this)">Low confidence</button>
+            <button id="gnf-nc" class="filter-pill" onclick="gnSet('view','NC', this)">No call (insufficient data)</button>
+            <select id="gn-side" class="search-input" onchange="gnSet('side', this.value)" style="padding:0.4rem 0.8rem; background:var(--surface); color:var(--text-main); border:1px solid var(--surface-border); border-radius:6px;"><option value="ALL">Long + Short</option><option value="LONG">Long only</option><option value="SHORT">Short only</option></select>
+            <select id="gn-grade" class="search-input" onchange="gnSet('grade', this.value)" style="padding:0.4rem 0.8rem; background:var(--surface); color:var(--text-main); border:1px solid var(--surface-border); border-radius:6px;"><option value="ALL">All grades</option><option value="STRONG">Strong</option><option value="MODERATE">Moderate</option></select>
+            <select id="gn-grp" class="search-input" onchange="gnSet('grp', this.value)" style="padding:0.4rem 0.8rem; background:var(--surface); color:var(--text-main); border:1px solid var(--surface-border); border-radius:6px;"><option value="ALL">Nifty 50 + F&amp;O</option><option value="N50">Nifty 50 only</option><option value="FNO">Other F&amp;O only</option></select>
+            <button id="gn-clear-date" class="filter-pill" onclick="gnSet('date','')" style="display:none;">✖ clear entry-date filter</button>
+            <button class="filter-pill" onclick="gnExportCSV()" style="margin-left:auto;">⬇ Export CSV</button>
+          </div>
+          <div class="table-container" style="max-height:700px; overflow:auto;">
+            <table class="event-master-table" id="gn-table">
+              <thead><tr>
+                <th data-k="rank">#</th><th data-k="s">Symbol</th><th data-k="n50">Index</th><th data-k="grade">Grade</th><th data-k="side">Position</th><th data-k="lead">Window</th>
+                <th data-k="en">Entry date @ 09:20 AM</th><th data-k="ex">Exit date @ 03:15 PM</th><th data-k="days">Days held</th><th data-k="stat">Entry status</th>
+                <th data-k="wr">Win rate %</th><th data-k="yrs">Valid yrs</th><th data-k="avg">Avg ret %</th><th data-k="l4">Last-4 win %</th><th data-k="wf">Fwd-test win %</th>
+                <th data-k="lot">Lot</th><th data-k="mg">Margin 20% (&#8377;)</th><th data-k="opt">Option play</th>
+              </tr></thead>
+              <tbody id="gn-tbody"></tbody>
+            </table>
+          </div>
+          <p id="gn-foot" style="margin:0.6rem 0 0 0; font-size:0.74rem; color:var(--text-muted);"></p>
         </div>
       </div>
     </div>
@@ -1617,6 +1662,7 @@
         <div>
           <strong id="alert-banner-header">⚠️ Immediate Trading Alert: Mahatma Gandhi Jayanti (2-Oct) Window Active</strong>
           <p id="alert-banner-text">The 19-year full-history backtest shows 30 LONG / 20 SHORT setups. Position taking window is currently active.</p>
+          <div id="alert-banner-extra" style="margin-top:0.55rem; display:flex; flex-direction:column; gap:0.4rem;"></div>
         </div>
         <button class="filter-pill active" style="background:#EF4444; color:#FFF; border:none;" onclick="selectHolidayRow('gandhi_2026')">View 2-Oct Setups</button>
       </div>
@@ -1668,6 +1714,15 @@
                 <td><strong style="color:#38BDF8;">Wednesday, 28-Oct (T-8)</strong></td>
                 <td><span class="badge-long">50 LONG</span></td>
                 <td><button class="btn-select-event" onclick="event.stopPropagation(); selectHolidayRow('diwali_2026', this.closest('tr'))">View Playbook</button></td>
+              </tr>
+              <tr class="event-master-row" id="hrow-gurunanak_2026" onclick="selectHolidayRow('gurunanak_2026', this)">
+                <td><strong>Gurunanak Jayanti (Prakash Gurpurb)</strong></td>
+                <td><span class="date-badge">24-Nov-2026 (Tuesday)</span></td>
+                <td>Festival Holiday</td>
+                <td><span style="color:#94A3B8; font-size:0.75rem;">UPCOMING IN NOV</span></td>
+                <td><strong style="color:#38BDF8;">Thursday, 12-Nov (T-8)</strong></td>
+                <td><span class="badge-long">LONG</span> / <span class="badge-short">SHORT</span></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectHolidayRow('gurunanak_2026', this.closest('tr'))">View Playbook</button></td>
               </tr>
               <tr class="event-master-row" id="hrow-christmas_2026" onclick="selectHolidayRow('christmas_2026', this)">
                 <td><strong>Christmas & Year-End</strong></td>
@@ -2772,7 +2827,7 @@
     }
     function renderHolidayMasterSummaryRows() {
       if (!dashboardData || !dashboardData.holidays) return;
-      ['gandhi_2026', 'dussehra_2026', 'diwali_2026', 'christmas_2026'].forEach(hid => {
+      ['gandhi_2026', 'dussehra_2026', 'diwali_2026', 'gurunanak_2026', 'christmas_2026'].forEach(hid => {
         const h = dashboardData.holidays.find(x => x.id === hid);
         const row = document.getElementById('hrow-' + hid);
         if (!h || !row || !Array.isArray(h.stocks) || !h.stocks.length) return;
@@ -4680,6 +4735,7 @@
         { id: 'gandhi_2026', closureDate: '02-Oct-2026', entryDate: '22-Sep-2026', name: 'Mahatma Gandhi Jayanti' },
         { id: 'dussehra_2026', closureDate: '20-Oct-2026', entryDate: '08-Oct-2026', name: 'Dussehra / Vijayadashami' },
         { id: 'diwali_2026', closureDate: '08-Nov-2026', entryDate: '28-Oct-2026', name: 'Diwali (Laxmi Pujan & Muhurat)' },
+        { id: 'gurunanak_2026', closureDate: '24-Nov-2026', entryDate: '12-Nov-2026', name: 'Gurunanak Jayanti (Prakash Gurpurb)' },
         { id: 'christmas_2026', closureDate: '25-Dec-2026', entryDate: '15-Dec-2026', name: 'Christmas & Year-End' }
       ];
 
@@ -4797,6 +4853,8 @@
           if (tickerTrigger) tickerTrigger.innerHTML = `<strong>${hName} Playbook</strong>: Triggers on <strong>${activeOrUpcoming.entryDate}</strong>`;
         }
       }
+
+      try { if (window.renderExtraHolidayAlerts) window.renderExtraHolidayAlerts(holidayRows, activeOrUpcoming, today); } catch (e) { console.error(e); }
 
       // 5. Update Comparison Tab KPI Card & Matrix Badge
       const kpiHolidayStatus = document.getElementById('kpi-holiday-status');
@@ -6323,6 +6381,188 @@
   // follow stock selection made in the Deep Dive (search box, dropdown, quick pills)
   const _sel = window.selectSearchStock;
   if (typeof _sel === 'function') window.selectSearchStock = function (sym, fromInput) { _sel(sym, fromInput); if (ACTIVE) window.renderHolidayPerf(sym); };
+})();
+</script>
+
+<!-- Extra position-taking alerts under the Holidays-tab banner: every holiday that is in progress / about to start / starting within 21 days, besides the headline one.
+     Gurunanak Jayanti additionally shows its all-F&O position count (dashboard_data/gurunanak_2026_fo_positions.json) and a link to the F&O table. -->
+<script>
+(function () {
+  let GN = null, GNTRY = false;
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const short = iso => { const p = iso.split('-').map(Number); return String(p[2]).padStart(2, '0') + '-' + MON[p[1] - 1]; };
+  let last = null;
+  window.renderExtraHolidayAlerts = function (rows, primary, today) {
+    last = [rows, primary, today];
+    const box = document.getElementById('alert-banner-extra'); if (!box) return;
+    if (!GN && !GNTRY) { GNTRY = true; fetch('dashboard_data/gurunanak_2026_fo_positions.json?t=' + Date.now()).then(r => r.json()).then(j => { GN = j; if (last) window.renderExtraHolidayAlerts.apply(null, last); }).catch(() => {}); }
+    const out = [];
+    if (primary && primary.id === 'gurunanak_2026' && GN) {   // Gurunanak is the headline: still show its all-F&O summary + link
+      const m = GN.meta;
+      out.push({ dE: -2000, html: '<div style="font-size:0.82rem;display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;"><span style="font-weight:800;color:#FBBF24;">🪔 ALL F&amp;O</span><span><b>' + m.position_count + ' F&amp;O positions</b> (' + m.positions_by_grade.STRONG + ' STRONG &middot; ' + m.positions_by_side.LONG + ' LONG / ' + m.positions_by_side.SHORT + ' SHORT), entries ' + short(m.first_entry) + ' &rarr; ' + short(m.last_entry) + ', last exit ' + short(m.last_exit) + '</span>' +
+        '<button class="filter-pill" style="padding:0.15rem 0.6rem;font-size:0.72rem;" onclick="switchTab(\'stock-search\'); setStockSubtab(\'g\')">All F&amp;O table with dates</button></div>' });
+    }
+    rows.forEach(h => {
+      if (primary && primary.id === h.id) return;
+      const e = parseEventDate(h.entryDate), c = parseEventDate(h.closureDate); if (!e || !c) return;
+      const dE = Math.round((e - today) / 86400000), dC = Math.round((c - today) / 86400000);
+      let tag, col, msg;
+      if (dE === 0) { tag = '🔥 ENTRY TODAY'; col = '#F59E0B'; msg = 'first entry wave opens today at 09:20 AM'; }
+      else if (dE === 1) { tag = '🚨 STARTS TOMORROW'; col = '#EF4444'; msg = 'first entry wave opens tomorrow (' + h.entryDate + ') at 09:20 AM'; }
+      else if (dE < 0 && dC >= 0) { tag = '🟢 IN PROGRESS'; col = '#34D399'; msg = 'position window active (day ' + (Math.abs(dE) + 1) + '), market closed ' + h.closureDate; }
+      else if (dE > 1 && dE <= 21) { tag = '⏳ IN ' + dE + ' DAYS'; col = '#38BDF8'; msg = 'first entry ' + h.entryDate + ' at 09:20 AM, market closed ' + h.closureDate; }
+      else return;
+      let extra = '', btn = '<button class="filter-pill" style="padding:0.15rem 0.6rem;font-size:0.72rem;" onclick="selectHolidayRow(\'' + h.id + '\')">View playbook</button>';
+      if (h.id === 'gurunanak_2026' && GN) {
+        const m = GN.meta;
+        extra = ' &middot; <b>' + m.position_count + ' F&amp;O positions</b> (' + m.positions_by_grade.STRONG + ' STRONG &middot; ' + m.positions_by_side.LONG + ' LONG / ' + m.positions_by_side.SHORT + ' SHORT), entries ' + short(m.first_entry) + ' &rarr; ' + short(m.last_entry) + ', last exit ' + short(m.last_exit);
+        btn += ' <button class="filter-pill" style="padding:0.15rem 0.6rem;font-size:0.72rem;" onclick="switchTab(\'stock-search\'); setStockSubtab(\'g\')">All F&amp;O table with dates</button>';
+      }
+      out.push({ dE: Math.min(dE, 0) === dE && dE < 0 ? -1000 + dE : dE, html: '<div style="font-size:0.82rem;display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;"><span style="font-weight:800;color:' + col + ';">' + tag + '</span><span><b>' + h.name + '</b>: ' + msg + extra + '</span>' + btn + '</div>' });
+    });
+    out.sort((a, b) => a.dE - b.dE);
+    box.innerHTML = out.map(o => o.html).join('');
+  };
+})();
+</script>
+
+<!-- Stock Deep Dive -> Gurunanak Jayanti sub-tab (24-Nov-2026): every F&O stock's position with entry/exit DATES; data: dashboard_data/gurunanak_2026_fo_positions.json -->
+<script>
+(function () {
+  const $ = id => document.getElementById(id);
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const P = iso => { const p = iso.split('-').map(Number); return new Date(p[0], p[1] - 1, p[2]); };
+  const fd = iso => { if (!iso) return '—'; const d = P(iso); return String(d.getDate()).padStart(2, '0') + '-' + MON[d.getMonth()] + '-' + d.getFullYear() + ' (' + DOW[d.getDay()] + ')'; };
+  const inr = n => (n === null || n === undefined) ? '—' : '₹' + Math.round(n).toLocaleString('en-IN');
+  const num = n => (n === null || n === undefined) ? '—' : n.toLocaleString('en-IN');
+  const pct = (n, d) => (n > 0 ? '+' : '') + n.toFixed(d === undefined ? 2 : d) + '%';
+  const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+  const F = { q: '', view: 'POS', side: 'ALL', grade: 'ALL', grp: 'ALL', date: '' };
+  const SORT = { k: 'rank', dir: 1 }; const OPEN = new Set();
+  let DATA = null, LOADING = null;
+
+  const today0 = () => { const t = new Date(); return new Date(t.getFullYear(), t.getMonth(), t.getDate()); };
+  function entryStatus(s) {
+    const d = Math.round((P(s.en) - today0()) / 86400000);
+    if (d < 0) return { t: 'ENTRY PASSED', c: '#94A3B8', d };
+    if (d === 0) return { t: 'ENTRY TODAY', c: '#FBBF24', d };
+    return { t: 'UPCOMING (' + d + 'd)', c: '#34D399', d };
+  }
+  const gradeColor = g => g === 'STRONG' ? '#34D399' : g === 'MODERATE' ? '#60A5FA' : g === 'NO TRADE' ? '#FBBF24' : '#94A3B8';
+  const kind = s => s.pos ? 'POS' : (s.status === 'NO_CALL_DATA_INSUFFICIENT' ? 'NC' : 'LOW');
+  const gradeLabel = s => s.pos ? s.grade : (s.status === 'NO_CALL_DATA_INSUFFICIENT' ? 'NO CALL' : 'LOW CONFIDENCE');
+  const sideBadge = s => s.status === 'NO_CALL_DATA_INSUFFICIENT' ? '<span style="color:#94A3B8;font-weight:700;">NO CALL</span> <small style="color:#94A3B8;">(placeholder ' + s.side + ')</small>'
+    : (s.side === 'LONG' ? '<span class="badge-long">▲ LONG</span>' : '<span class="badge-short">▼ SHORT</span>') + (!s.pos ? ' <small style="color:#94A3B8;">(not a position)</small>' : '');
+
+  function card(title, big, sub, color) {
+    return '<div style="background:var(--surface-bg);border:1px solid var(--surface-border);border-radius:10px;padding:1.1rem;box-shadow:0 4px 12px rgba(0,0,0,0.2);">' +
+      '<div style="font-size:0.7rem;font-weight:800;color:var(--text-muted);text-transform:uppercase;margin-bottom:0.5rem;">' + title + '</div>' +
+      '<div style="font-size:1.6rem;font-weight:800;color:' + (color || '#FFF') + ';">' + big + '</div>' +
+      '<div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.35rem;">' + sub + '</div></div>';
+  }
+
+  async function load() {
+    if (DATA) return DATA;
+    if (!LOADING) LOADING = fetch('dashboard_data/gurunanak_2026_fo_positions.json?t=' + Date.now()).then(r => { if (!r.ok) throw new Error('missing'); return r.json(); });
+    return (DATA = await LOADING);
+  }
+
+  function visible() {
+    const q = F.q.trim().toLowerCase();
+    return DATA.stocks.filter(s =>
+      (F.view === 'ALL' || kind(s) === F.view) &&
+      (F.side === 'ALL' || s.side === F.side) && (F.grade === 'ALL' || s.grade === F.grade) &&
+      (F.grp === 'ALL' || (F.grp === 'N50' ? s.nifty50 : !s.nifty50)) && (!F.date || s.en === F.date) &&
+      (!q || s.s.toLowerCase().includes(q) || (s.n || '').toLowerCase().includes(q)));
+  }
+  const val = (s, k) => ({ rank: s.rank, s: s.s, n50: s.nifty50 ? 0 : 1, grade: s.grade, side: s.side, lead: s.lead * 10 + s.hold, en: s.en, ex: s.ex, days: s.days, stat: s.en, wr: s.wr, yrs: s.yrs, avg: s.avg, l4: s.l4 === null ? -1 : s.l4,
+    wf: s.wf === null ? -1 : s.wf, lot: s.lot === null ? -1 : s.lot, mg: s.mg === null ? -1 : s.mg, opt: s.opt })[k];
+
+  function detail(s) {
+    const h = s.h || [], wins = h.filter(x => x[4] > 0).length;
+    const rows = h.slice().reverse().map(x => '<tr><td>' + x[0] + '</td><td>' + fd(x[3]) + '</td><td>' + fd(x[1]) + '</td><td>' + fd(x[2]) + '</td><td style="color:' + (x[4] > 0 ? '#34D399' : '#F87171') + ';font-weight:700;">' + pct(x[4]) + '</td><td>' +
+      (x[4] > 0 ? '<span style="color:#34D399;font-weight:800;">WIN ✔</span>' : '<span style="color:#F87171;font-weight:800;">LOSS ✖</span>') + '</td></tr>').join('');
+    return '<td colspan="18" style="background:rgba(15,23,42,0.55);padding:0.9rem 1.1rem;">' +
+      '<div style="display:flex;flex-wrap:wrap;gap:1.6rem;font-size:0.8rem;margin-bottom:0.7rem;">' +
+      '<div><b style="color:#38BDF8;">' + esc(s.s) + '</b> &mdash; ' + esc(s.n || '(name not in source data)') + (s.note ? '<br><span style="color:#FBBF24;">' + esc(s.note) + '</span>' : '') + '</div>' +
+      '<div>Futures: <b>' + (s.act || 'n/a') + '</b> &middot; lot <b>' + (s.lot === null ? 'n/a (not in lot-size file)' : num(s.lot)) + '</b> &middot; last close <b>' + inr(s.px) + '</b> &middot; contract value <b>' + inr(s.cv) + '</b> &middot; margin 20% <b>' + inr(s.mg) + '</b></div>' +
+      '<div>Option play: <b>' + esc(s.opt) + '</b> &middot; expiry <b>' + fd(s.oexp) + '</b>' + (s.oexpA ? ' <small style="color:#FBBF24;">(assumed)</small>' : '') + '</div>' +
+      '<div>Window <b>T-' + s.lead + ' to T+' + s.hold + '</b>: enter close of the ' + s.lead + (s.lead === 1 ? 'st' : s.lead === 2 ? 'nd' : s.lead === 3 ? 'rd' : 'th') + ' trading day before the holiday, exit close of the ' + s.hold + (s.hold === 1 ? 'st' : s.hold === 2 ? 'nd' : s.hold === 3 ? 'rd' : 'th') + ' trading day after.</div></div>' +
+      (h.length ? '<div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.4rem;">Past Gurunanak Jayanti trades at this stock\'s chosen side &amp; window (' + h.length + ' valid years: ' + wins + ' wins / ' + (h.length - wins) + ' losses; in-sample). Return = signed return we get.</div>' +
+        '<div style="max-height:260px;overflow:auto;"><table class="event-master-table"><thead><tr><th>Year</th><th>Holiday (T)</th><th>Entry (close)</th><th>Exit (close)</th><th>Return we get</th><th>Outcome</th></tr></thead><tbody>' + rows + '</tbody></table></div>'
+        : '<div style="font-size:0.8rem;color:#94A3B8;">No past trades listed: fewer than 7 valid years, so no validated window (placeholder event-wide window shown).</div>') + '</td>';
+  }
+
+  function render() {
+    if (!DATA) return;
+    let rows = visible();
+    rows.sort((a, b) => { const x = val(a, SORT.k), y = val(b, SORT.k); return (x < y ? -1 : x > y ? 1 : a.rank - b.rank) * SORT.dir; });
+    $('gn-tbody').innerHTML = rows.map(s => {
+      const st = entryStatus(s), ph = s.status === 'NO_CALL_DATA_INSUFFICIENT', dim = (!s.pos) ? 'opacity:0.72;' : '';
+      const main = '<tr class="gn-row" data-s="' + esc(s.s) + '" style="cursor:pointer;' + dim + '"><td>' + s.rank + '</td><td><strong>' + esc(s.s) + '</strong><br><small style="color:var(--text-muted);">' + esc(s.n || '') + '</small></td>' +
+        '<td>' + (s.nifty50 ? 'NIFTY 50' : 'F&amp;O') + '</td><td><span style="color:' + gradeColor(s.grade) + ';font-weight:700;font-size:0.78rem;">' + gradeLabel(s) + '</span></td><td>' + sideBadge(s) + '</td>' +
+        '<td><span class="window-pill">T-' + s.lead + ' to T+' + s.hold + '</span></td><td>' + fd(s.en) + (ph ? '<br><small style="color:#94A3B8;">placeholder window</small>' : '') + '</td><td>' + fd(s.ex) + '</td><td style="text-align:center;">' + s.days + '</td>' +
+        '<td><span style="color:' + st.c + ';font-weight:700;font-size:0.76rem;">' + st.t + '</span></td>' +
+        '<td>' + s.wr.toFixed(1) + '</td><td>' + s.yrs + '</td><td style="color:' + (s.avg > 0 ? '#34D399' : '#F87171') + '">' + pct(s.avg) + '</td><td>' + (s.l4 === null ? '—' : s.l4.toFixed(0)) + '</td>' +
+        '<td>' + (s.wf === null ? '—' : s.wf.toFixed(1) + '<br><small style="color:var(--text-muted);">' + s.wft + ' trades</small>') + '</td><td>' + num(s.lot) + '</td><td>' + inr(s.mg) + '</td>' +
+        '<td><small>' + esc(s.opt) + '</small></td></tr>';
+      return main + (OPEN.has(s.s) ? '<tr class="gn-detail">' + detail(s) + '</tr>' : '');
+    }).join('');
+    document.querySelectorAll('#gn-tbody .gn-row').forEach(tr => tr.onclick = () => { const k = tr.dataset.s; OPEN.has(k) ? OPEN.delete(k) : OPEN.add(k); render(); });
+    const pos = rows.filter(s => s.pos).length;
+    $('gn-count').textContent = 'Showing ' + rows.length + ' of ' + DATA.stocks.length + ' stocks (' + pos + ' in position)';
+    $('gn-clear-date').style.display = F.date ? '' : 'none';
+    document.querySelectorAll('#gn-calendar button').forEach(b => b.style.outline = (b.dataset.d === F.date) ? '2px solid #38BDF8' : 'none');
+    document.querySelectorAll('#gn-table thead th').forEach(th => { th.style.cursor = 'pointer'; th.onclick = () => { const k = th.dataset.k; SORT.dir = SORT.k === k ? -SORT.dir : 1; SORT.k = k; render(); };
+      th.textContent = th.textContent.replace(/ [▲▼]$/, '') + (th.dataset.k === SORT.k ? (SORT.dir === 1 ? ' ▲' : ' ▼') : ''); });
+  }
+
+  function summary() {
+    const m = DATA.meta, st = DATA.stocks, pos = st.filter(s => s.pos);
+    const n50 = pos.filter(s => s.nifty50).length, sh = pos.filter(s => s.side === 'SHORT').length, strong = pos.filter(s => s.grade === 'STRONG').length;
+    const mg = pos.reduce((a, s) => a + (s.mg || 0), 0), c = m.counts_by_status;
+    $('gn-summary').innerHTML =
+      card('Event', fd(m.event_date).slice(0, 11), m.event_weekday + ' &middot; ' + esc(m.event_note) + '<br>Gurunanak Jayanti (Prakash Gurpurb)', '#FBBF24') +
+      card('Positions', pos.length + ' <span style="font-size:0.9rem;color:var(--text-muted);">of ' + st.length + '</span>', strong + ' STRONG &middot; ' + (pos.length - strong) + ' MODERATE<br>' + (pos.length - sh) + ' LONG &middot; ' + sh + ' SHORT &middot; ' + n50 + ' in Nifty 50', '#34D399') +
+      card('Entry window', fd(m.first_entry).slice(0, 6) + ' &rarr; ' + fd(m.last_entry).slice(0, 6), 'last exit ' + fd(m.last_exit) + '<br>entry 09:20 AM &middot; exit 03:15 PM IST', '#60A5FA') +
+      card('Not positions', (st.length - pos.length) + '', c.LOW_CONFIDENCE_NO_TRADE + ' no trade &middot; ' + c.LOW_CONFIDENCE_SHORT_RULE + ' short rule not met<br>' + c.NO_CALL_DATA_INSUFFICIENT + ' no call (&lt;7 valid years)', '#94A3B8') +
+      card('Margin (20%) of all positions', inr(mg), 'one lot each, futures; options play on the card of each stock', '#F87171') +
+      card('Event-wide basket', m.event_wide_window.side + ' ' + m.event_wide_window.window, 'basket win rate ' + m.event_wide_window.basket_wr + '% over ' + m.event_wide_window.n + ' yrs<br>(placeholder for no-call stocks)', '#A78BFA');
+    $('gn-calendar').innerHTML = DATA.entry_calendar.map(e => '<button class="filter-pill" data-d="' + e.entry_date + '" title="' + e.symbols.join(', ') + '" onclick="gnSet(\'date\',\'' + e.entry_date + '\')" style="display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:0.5rem 0.9rem;">' +
+      '<span style="font-weight:800;">' + fd(e.entry_date).slice(0, 6) + ' ' + e.weekday.slice(0, 3) + '</span><span style="font-size:0.78rem;color:#34D399;">' + e.positions + ' positions</span></button>').join('');
+    $('gn-foot').innerHTML = 'Window T-N to T+M: enter at the close of the N-th trading day before the exchange holiday (' + fd(m.event_date) + '), exit at the close of the M-th trading day after it. Each stock has its own best side and window on 2000-2025 ' +
+      '(project 8x8 grid: entry 1-8 trading days before the holiday x exit 1-8 trading days after = 64 windows tested LONG and SHORT, min 7 valid years), win rate then avg return, with a walk-forward forward test. <b>POSITION</b> = STRONG/MODERATE (a SHORT also needs &ge;5 forward trades with win &ge;60%). Win rates are in-sample. Dates are the NSE trading calendar (10-Nov-2026 closed). ' +
+      'Click a row for the past-year trades, futures and option details. Data generated ' + m.generated_on + '.';
+  }
+
+  window.gnSet = function (k, v, btn) {
+    F[k] = v;
+    if (k === 'view') ['gnf-pos', 'gnf-all', 'gnf-low', 'gnf-nc'].forEach(id => $(id).classList.toggle('active', $(id) === btn));
+    if (k === 'date' && v === F._lastDate) { F.date = ''; }
+    F._lastDate = F.date; render();
+  };
+  window.gnExportCSV = function () {
+    if (!DATA) return;
+    const head = ['Rank', 'Symbol', 'Name', 'Index', 'Status', 'Grade', 'Side', 'Window', 'Entry Date', 'Entry Time', 'Exit Date', 'Exit Time', 'Days Held', 'Win Rate %', 'Valid Years', 'Avg Ret %', 'Last-4 Win %', 'Fwd Win %', 'Fwd Trades', 'Lot', 'Margin 20%', 'Futures Action', 'Option Play', 'Option Expiry'];
+    const csv = [head].concat(visible().map(s => [s.rank, s.s, s.n || '', s.nifty50 ? 'NIFTY 50' : 'F&O', gradeLabel(s), s.grade, s.side, 'T-' + s.lead + ' to T+' + s.hold, s.en, s.ent, s.ex, s.ext, s.days, s.wr, s.yrs, s.avg, s.l4 === null ? '' : s.l4, s.wf === null ? '' : s.wf, s.wft, s.lot === null ? '' : s.lot, s.mg === null ? '' : s.mg, s.act || '', s.opt, s.oexp]))
+      .map(a => a.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(',')).join('\n');
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' })); a.download = 'Gurunanak_Jayanti_2026_FO_positions.csv'; document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  };
+
+  async function show() {
+    try { await load(); summary(); render(); $('gn-msg').style.display = 'none'; }
+    catch (e) { $('gn-msg').style.display = 'block'; $('gn-msg').textContent = 'Gurunanak Jayanti data could not be loaded (dashboard_data/gurunanak_2026_fo_positions.json).'; }
+  }
+
+  const _prev = window.setStockSubtab;
+  window.setStockSubtab = function (which, btn) {
+    const G = which === 'g';
+    if (typeof _prev === 'function') _prev(G ? 'q' : which, btn);
+    $('ss-gurunanak-view').style.display = G ? '' : 'none';
+    if (G) { $('ss-quarterly-view').style.display = 'none'; $('ss-holiday-view').style.display = 'none'; }
+    ['sssub-q', 'sssub-h', 'sssub-g'].forEach(id => { const el = $(id); if (el) el.classList.toggle('active', id === (G ? 'sssub-g' : which === 'h' ? 'sssub-h' : 'sssub-q')); });
+    if (G) show();
+  };
 })();
 </script>
 
