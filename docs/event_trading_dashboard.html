@@ -1830,7 +1830,7 @@
             <button id="fosort-rank" class="filter-pill active" onclick="setFoHolidaySort('rank', this)">↕ Rank (model)</button>
             <button id="fosort-wr" class="filter-pill" onclick="setFoHolidaySort('winrate', this)">🏆 Rank by Win Rate</button>
           </div>
-          <div class="table-container">
+          <div class="table-container" id="fo-std-wrap">
             <table id="fo-holiday-table">
               <thead>
                 <tr>
@@ -1848,6 +1848,28 @@
               </thead>
               <tbody id="fo-holiday-tbody"></tbody>
             </table>
+          </div>
+          <!-- Gurunanak Jayanti: 8x8 per-stock positions with entry/exit dates (shown instead of the table above when Gurunanak is the selected event) -->
+          <div id="fo-gn-wrap" style="display:none;">
+            <div style="display:flex; flex-wrap:wrap; gap:0.6rem; align-items:center; margin:0 0 0.6rem 0;">
+              <span style="font-size:0.74rem;font-weight:800;color:#38BDF8;background:rgba(56,189,248,0.12);border:1px solid #38BDF8;border-radius:12px;padding:3px 12px;">8&times;8 GRID &middot; entry T-1&hellip;T-8 &times; exit T+1&hellip;T+8</span>
+              <button id="fogn-pos" class="filter-pill active" onclick="setFoGnView('POS', this)">&#10004; In position only</button>
+              <button id="fogn-all" class="filter-pill" onclick="setFoGnView('ALL', this)">Show all 213 (incl. low confidence / no call)</button>
+              <span id="fo-gn-count" style="font-size:0.8rem;color:#94A3B8;font-weight:700;"></span>
+            </div>
+            <div class="table-container">
+              <table id="fo-gn-table">
+                <thead>
+                  <tr>
+                    <th>Rank</th><th>Symbol</th><th>Company</th><th>Nifty 50</th><th>Direction</th><th>Window</th>
+                    <th>Entry Date (09:20 AM)</th><th>Exit Date (03:15 PM)</th><th>Days Held</th><th>Entry Status</th>
+                    <th>Win Rate (26Y)</th><th>Valid Yrs</th><th>Avg Ret</th><th>Fwd-Test Win</th><th>Lot Size</th><th>Recommended Action</th>
+                  </tr>
+                </thead>
+                <tbody id="fo-gn-tbody"></tbody>
+              </table>
+            </div>
+            <p style="margin:0.6rem 0 0 0; font-size:0.74rem; color:var(--text-muted);">Each stock has its own best side and window on 2000-2025 (project 8x8 grid: entry 1-8 trading days before the holiday x exit 1-8 trading days after, min 7 valid years, win rate then avg return) with a walk-forward forward test. Entry = close of T-N at 09:20 AM, exit = close of T+M at 03:15 PM; T = the 24-Nov-2026 NSE holiday (10-Nov closed). Win rates are in-sample. Low-confidence / no-call stocks are not positions.</p>
           </div>
         </div>
       </div>
@@ -3809,9 +3831,79 @@
       return String(holidayId || '').replace(/_20\d\d$/, '');
     }
 
+    // ---- Gurunanak Jayanti F&O view (8x8, with entry / exit dates) ----
+    let GN_FO = null, GN_FO_LOADING = null, foGnPosOnly = true;
+    function foIsGurunanak() { return String(currentHolidayId) === 'gurunanak_2026'; }
+    function loadGnFo() {
+      if (GN_FO) return Promise.resolve(GN_FO);
+      if (!GN_FO_LOADING) GN_FO_LOADING = fetch('dashboard_data/gurunanak_2026_fo_positions.json?t=' + Date.now()).then(r => { if (!r.ok) throw new Error('missing'); return r.json(); }).then(j => (GN_FO = j));
+      return GN_FO_LOADING;
+    }
+    function setFoGnView(v, el) {
+      foGnPosOnly = (v === 'POS');
+      document.querySelectorAll('#fogn-pos,#fogn-all').forEach(b => b.classList.remove('active'));
+      if (el) el.classList.add('active');
+      renderFoHolidayTable();
+    }
+    function foStdBar(show) {   // the Excel-filter status bar that belongs to the (hidden) standard table
+      const apply = () => { const w = document.getElementById('fo-std-wrap'), b = w && w.previousElementSibling; if (b && b.classList && b.classList.contains('xf-bar')) b.style.display = show ? '' : 'none'; };
+      apply(); setTimeout(apply, 400);
+    }
+    function setFoPillCounts(gn) {
+      const set = (id, txt) => { const e = document.getElementById(id); if (e) e.textContent = txt; };
+      set('fopill-all', gn ? 'All (213)' : 'All (211)');
+      set('fopill-nifty', '🎯 Nifty 50 (50)');
+      set('fopill-nonnifty', gn ? 'Non-Nifty F&O (163)' : 'Non-Nifty F&O (161)');
+      const si = document.getElementById('fo-h-search'); if (si) si.placeholder = gn ? 'Search any F&O symbol (213 stocks)...' : 'Search any F&O symbol (211 stocks)...';
+    }
+    function gnFoDate(iso) {
+      if (!iso) return '—';
+      const p = iso.split('-').map(Number), d = new Date(p[0], p[1] - 1, p[2]), M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], W = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+      return String(p[2]).padStart(2, '0') + '-' + M[p[1] - 1] + '-' + p[0] + ' (' + W[d.getDay()] + ')';
+    }
+    function renderFoGurunanak() {
+      const tb = document.getElementById('fo-gn-tbody'); if (!tb || !GN_FO) return;
+      const q = (document.getElementById('fo-h-search')?.value || '').toUpperCase(), now = new Date(), today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      let rows = GN_FO.stocks.filter(s => {
+        if (foGnPosOnly && !s.pos) return false;
+        if (currentFoHolidayFilter === 'nifty50' && !s.nifty50) return false;
+        if (currentFoHolidayFilter === 'nonnifty' && s.nifty50) return false;
+        if ((currentFoHolidayFilter === 'LONG' || currentFoHolidayFilter === 'SHORT') && s.side !== currentFoHolidayFilter) return false;
+        if (q && !String(s.s).toUpperCase().includes(q) && !String(s.n || '').toUpperCase().includes(q)) return false;
+        return true;
+      });
+      if (currentFoHolidaySort === 'winrate') rows.sort((a, b) => (b.wr - a.wr) || (b.avg - a.avg)); else rows.sort((a, b) => a.rank - b.rank);
+      const cnt = document.getElementById('fo-gn-count'); if (cnt) cnt.textContent = 'Showing ' + rows.length + ' stocks (' + rows.filter(s => s.pos).length + ' in position)';
+      if (!rows.length) { tb.innerHTML = '<tr><td colspan="16" style="text-align:center; color:#94A3B8; padding:1rem;">No F&amp;O stocks match this filter.</td></tr>'; return; }
+      tb.innerHTML = rows.map((s, idx) => {
+        const ph = s.status === 'NO_CALL_DATA_INSUFFICIENT';
+        const dirBadge = ph ? '<span style="color:#94A3B8;font-weight:700;">NO CALL</span> <small style="color:#94A3B8;">(placeholder ' + s.side + ')</small>'
+          : (s.side === 'LONG' ? '<span class="badge-long">▲ LONG</span>' : '<span class="badge-short">▼ SHORT</span>') + (s.pos ? '' : ' <small style="color:#94A3B8;">(low confidence)</small>');
+        const action = s.pos ? (s.side === 'LONG' ? '<span class="action-tag action-buy-call">BUY CALL (Risk Capped)</span>' : '<span class="action-tag action-buy-put">BUY PUT (Risk Capped)</span>') : '<span style="color:#94A3B8;">— not a position</span>';
+        const p = s.en.split('-').map(Number), dd = Math.round((new Date(p[0], p[1] - 1, p[2]) - today) / 86400000);
+        const st = dd < 0 ? ['ENTRY PASSED', '#94A3B8'] : dd === 0 ? ['ENTRY TODAY', '#FBBF24'] : ['UPCOMING (' + dd + 'd)', '#34D399'];
+        const gc = s.grade === 'STRONG' ? '#34D399' : s.grade === 'MODERATE' ? '#60A5FA' : '#94A3B8';
+        return '<tr' + (s.pos ? '' : ' style="opacity:0.72;"') + '><td><strong>Rank ' + (currentFoHolidaySort === 'winrate' ? idx + 1 : s.rank) + '</strong></td><td><strong>' + s.s + '</strong></td><td style="color:#CBD5E1">' + (s.n || '') + '</td><td>' + niftyBadge(s.s) + '</td>' +
+          '<td>' + dirBadge + '<br><small style="color:' + gc + ';font-weight:700;">' + (s.pos ? s.grade : (ph ? 'DATA INSUFFICIENT' : s.grade)) + '</small></td><td><span class="window-pill">T-' + s.lead + ' to T+' + s.hold + '</span></td>' +
+          '<td><strong>' + gnFoDate(s.en) + '</strong>' + (ph ? '<br><small style="color:#94A3B8;">placeholder window</small>' : '') + '</td><td><strong>' + gnFoDate(s.ex) + '</strong></td><td style="text-align:center;">' + s.days + '</td>' +
+          '<td><span style="color:' + st[1] + ';font-weight:700;font-size:0.76rem;">' + st[0] + '</span></td>' +
+          '<td><strong style="color:' + (s.wr >= 80 ? '#FBBF24' : '#E2E8F0') + '">' + s.wr.toFixed(1) + '%</strong></td><td>' + s.yrs + '</td><td style="color:' + (s.avg >= 0 ? '#34D399' : '#F87171') + '">' + (s.avg >= 0 ? '+' : '') + s.avg.toFixed(2) + '%</td>' +
+          '<td>' + (s.wf === null ? '—' : s.wf.toFixed(1) + '%<br><small style="color:#94A3B8;">' + s.wft + ' trades</small>') + '</td><td style="color:#94A3B8">' + (s.lot === null ? '—' : Number(s.lot).toLocaleString('en-IN')) + '</td><td>' + action + '</td></tr>';
+      }).join('');
+    }
+
     function renderFoHolidayTable() {
       const tbody = document.getElementById('fo-holiday-tbody');
       if (!tbody) return;
+      { // Gurunanak Jayanti selected -> 8x8 positions with entry/exit dates; every other event keeps the standard table
+        const stdWrap = document.getElementById('fo-std-wrap'), gnWrap = document.getElementById('fo-gn-wrap');
+        if (foIsGurunanak()) {
+          if (stdWrap) stdWrap.style.display = 'none'; if (gnWrap) gnWrap.style.display = ''; setFoPillCounts(true); foStdBar(false);
+          loadGnFo().then(renderFoGurunanak).catch(() => { const tb = document.getElementById('fo-gn-tbody'); if (tb) tb.innerHTML = '<tr><td colspan="16" style="text-align:center;color:#94A3B8;padding:1rem;">Gurunanak Jayanti F&amp;O data could not be loaded.</td></tr>'; });
+          return;
+        }
+        if (stdWrap) stdWrap.style.display = ''; if (gnWrap) gnWrap.style.display = 'none'; setFoPillCounts(false); foStdBar(true);
+      }
       if (!HOLIDAYS_DATASET) {
         tbody.innerHTML = '<tr><td colspan="10" style="text-align:center; color:#94A3B8; padding:1rem;">Loading 211 F&amp;O stocks…</td></tr>';
         return;
@@ -6574,6 +6666,7 @@
   const TABLES = [
     { table: 'holiday-table',    tbody: 'holiday-tbody' },
     { table: 'fo-holiday-table', tbody: 'fo-holiday-tbody' },
+    { table: 'fo-gn-table',      tbody: 'fo-gn-tbody' },      // Holidays -> F&O -> Gurunanak (8x8 + dates)
     { table: 'hp-pos-table',     tbody: 'hp-pos-tbody' },      // Stock Deep Dive -> Holiday Performance
     { table: 'hp-table',         tbody: 'hp-tbody' }
   ];
