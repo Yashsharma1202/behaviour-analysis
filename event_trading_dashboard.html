@@ -685,6 +685,14 @@
     .xf-bar button { cursor: pointer; padding: 0.25rem 0.7rem; border-radius: 14px; font-size: 0.74rem; font-weight: 700;
       background: rgba(245,158,11,0.12); color: #FBBF24; border: 1px solid #F59E0B; }
     .xf-bar button[disabled] { opacity: 0.4; cursor: default; }
+
+    /* Date-wise Play: frozen heading row (from .table-container) + frozen Date/Rank/Stock columns */
+    #dw-table th:nth-child(1), #dw-table td:nth-child(1) { position: sticky; left: 0; z-index: 3; background: #0E1626; min-width: 92px; }
+    #dw-table th:nth-child(2), #dw-table td:nth-child(2) { position: sticky; left: 92px; z-index: 3; background: #0E1626; min-width: 44px; text-align: center; }
+    #dw-table th:nth-child(3), #dw-table td:nth-child(3) { position: sticky; left: 136px; z-index: 3; background: #0E1626; box-shadow: 3px 0 6px -2px rgba(0,0,0,.5); font-weight: 700; }
+    #dw-table th:nth-child(1), #dw-table th:nth-child(2), #dw-table th:nth-child(3) { top: 0; z-index: 7; }
+    #dw-table tr.dw-first td { border-top: 2px solid rgba(16,185,129,.45); }
+    .xf-bar button.dw-on { background: #10B981; color: #04281c; border-color: #10B981; }
   </style>
 </head>
 <body>
@@ -785,6 +793,10 @@
       <button class="tab-btn" id="tab-btn-comparison" onclick="switchTab('comparison')">
         <span>⚖️ Performance Comparison</span>
         <span class="tab-badge" style="background:#8b5cf6; color:#fff;">MULTI-SYSTEM</span>
+      </button>
+      <button class="tab-btn" id="tab-btn-datewise" onclick="switchTab('datewise')" style="background:rgba(16,185,129,0.08); border-top:2px solid #10B981;">
+        <span>📅 Date-wise Play</span>
+        <span class="tab-badge" style="background:#10B981; color:#fff; font-weight:800;">16–30 NOV 2026</span>
       </button>
       <button class="tab-btn" id="tab-btn-custom" onclick="switchTab('custom')">
         <span>➕ Custom Events Hub</span>
@@ -2562,6 +2574,33 @@
   </div>
 
 
+    <!-- TAB: DATE-WISE PLAY (forward picks 16-30 Nov 2026) -->
+    <div id="tab-datewise" class="tab-content" style="display:none;">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2>Date-wise Play &mdash; 16 to 30 Nov 2026</h2>
+            <p id="dw-sub">Walk-forward picks per calendar date (8&times;8 grid). Historical pattern, not a forecast.</p>
+          </div>
+        </div>
+        <div class="xf-bar" style="gap:0.5rem;">
+          <span>Mode:</span>
+          <button id="dw-mode-A" onclick="dwSet('mode','A')">A &middot; best window</button>
+          <button id="dw-mode-B" onclick="dwSet('mode','B')">B &middot; still takeable</button>
+          <span style="margin-left:0.8rem;">Show:</span>
+          <button id="dw-n-3" onclick="dwSet('n',3)">Top 3</button>
+          <button id="dw-n-10" onclick="dwSet('n',10)">Top 10</button>
+          <span id="dw-count" style="margin-left:0.8rem;"></span>
+        </div>
+        <div class="table-container">
+          <table class="event-master-table" id="dw-table">
+            <thead><tr><th>Date (T)</th><th>Rank</th><th>Stock</th><th>Side</th><th>Window</th><th>Entry (close)</th><th>Exit (close)</th><th>Hold d</th><th>Train win %</th><th>Train avg %</th><th>Events</th><th>Status</th></tr></thead>
+            <tbody id="dw-tbody"><tr><td colspan="12">Loading&hellip;</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
     <!-- TAB: REAL-TIME NSE CORPORATE EVENTS & UPCOMING FEED -->
     <div id="tab-live-feed" class="tab-content" style="display:none;">
       
@@ -3071,6 +3110,36 @@
       }).join('');
     }
 
+    // ---- Date-wise Play tab (data: dashboard_data/forward_picks_nov2026.json) ----
+    var DW = { data: null, loading: null, mode: 'A', n: 3 };
+    function dwSet(k, v) { DW[k] = v; renderDatewise(); }
+    function renderDatewise() {
+      var tb = document.getElementById('dw-tbody'); if (!tb) return;
+      ['A', 'B'].forEach(function (m) { document.getElementById('dw-mode-' + m).classList.toggle('dw-on', DW.mode === m); });
+      [3, 10].forEach(function (m) { document.getElementById('dw-n-' + m).classList.toggle('dw-on', DW.n === m); });
+      if (!DW.data) {
+        if (!DW.loading) DW.loading = fetch('dashboard_data/forward_picks_nov2026.json?t=' + Date.now()).then(function (r) { if (!r.ok) throw new Error('missing'); return r.json(); })
+          .then(function (j) { DW.data = j; renderDatewise(); }).catch(function () { tb.innerHTML = '<tr><td colspan="12">Could not load forward_picks_nov2026.json</td></tr>'; });
+        return;
+      }
+      var fmt = function (d) { var x = new Date(d + 'T00:00:00'); return x.toLocaleDateString('en-GB', { day: '2-digit', month: 'short' }); };
+      var html = '', cnt = 0, ds = DW.data.dates;
+      Object.keys(ds).sort().forEach(function (day) {
+        var L = (ds[day]['mode_' + DW.mode] || {})[DW.n === 3 ? 'top3' : 'top10'] || [];
+        if (!L.length) { html += '<tr class="dw-first"><td>' + fmt(day) + '</td><td colspan="11" style="color:var(--text-muted)">No qualifying picks (fewer than 15 eligible stocks)</td></tr>'; return; }
+        L.forEach(function (x, i) {
+          cnt++;
+          var long = x.Side === 'LONG', st = x.Status;
+          var stc = st === 'PASSED' ? '#94a3b8' : (st === 'FUTURE' ? '#10B981' : '#F59E0B');
+          html += '<tr' + (i === 0 ? ' class="dw-first"' : '') + '><td>' + fmt(day) + '</td><td>' + x.Rank + '</td><td>' + x.Symbol + '</td>' +
+            '<td style="color:' + (long ? '#10B981' : '#F43F5E') + ';font-weight:700">' + x.Side + '</td><td>' + x.Window + '</td><td>' + fmt(x.Entry) + '</td><td>' + fmt(x.Exit) + '</td><td>' + x.Hold_days + '</td>' +
+            '<td>' + x.Train_win.toFixed(1) + '</td><td>' + x.Train_avg.toFixed(2) + '</td><td>' + x.Events + '</td><td style="color:' + stc + ';font-weight:700">' + st + '</td></tr>';
+        });
+      });
+      tb.innerHTML = html;
+      document.getElementById('dw-count').textContent = cnt + ' picks';
+    }
+
     function switchTab(tabId) {
       if (!tabId) return;
 
@@ -3133,6 +3202,8 @@
           renderComparisonTab();
         } else if (tabId === 'live-feed') {
           renderLiveFeedTab();
+        } else if (tabId === 'datewise') {
+          renderDatewise();
         } else if (tabId === 'conflicts') {
           renderConflictRadar();
         } else if (tabId === 'stock-search') {
