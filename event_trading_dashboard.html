@@ -687,11 +687,11 @@
     .xf-bar button[disabled] { opacity: 0.4; cursor: default; }
 
     /* Date-wise Play: frozen heading row (from .table-container) + frozen Date/Rank/Stock columns */
-    #dw-table th:nth-child(1), #dw-table td:nth-child(1) { position: sticky; left: 0; z-index: 3; background: #0E1626; min-width: 92px; }
-    #dw-table th:nth-child(2), #dw-table td:nth-child(2) { position: sticky; left: 92px; z-index: 3; background: #0E1626; min-width: 44px; text-align: center; }
-    #dw-table th:nth-child(3), #dw-table td:nth-child(3) { position: sticky; left: 136px; z-index: 3; background: #0E1626; box-shadow: 3px 0 6px -2px rgba(0,0,0,.5); font-weight: 700; }
-    #dw-table th:nth-child(1), #dw-table th:nth-child(2), #dw-table th:nth-child(3) { top: 0; z-index: 7; }
-    #dw-table tr.dw-first td { border-top: 2px solid rgba(16,185,129,.45); }
+    .dw-tbl th:nth-child(1), .dw-tbl td:nth-child(1) { position: sticky; left: 0; z-index: 3; background: #0E1626; min-width: 92px; }
+    .dw-tbl th:nth-child(2), .dw-tbl td:nth-child(2) { position: sticky; left: 92px; z-index: 3; background: #0E1626; min-width: 44px; text-align: center; }
+    .dw-tbl th:nth-child(3), .dw-tbl td:nth-child(3) { position: sticky; left: 136px; z-index: 3; background: #0E1626; box-shadow: 3px 0 6px -2px rgba(0,0,0,.5); font-weight: 700; }
+    .dw-tbl th:nth-child(1), .dw-tbl th:nth-child(2), .dw-tbl th:nth-child(3) { top: 0; z-index: 7; }
+    .dw-tbl tr.dw-first td { border-top: 2px solid rgba(16,185,129,.45); }
     .xf-bar button.dw-on { background: #10B981; color: #04281c; border-color: #10B981; }
   </style>
 </head>
@@ -1137,6 +1137,9 @@
         <button class="tab-btn" id="alerts-subtab-btn-holiday" onclick="switchAlertsSubtab('holiday')" style="background:rgba(16,185,129,0.08); border-top:2px solid #10B981;">
           <span>🏖️ Holiday Events</span>
         </button>
+        <button class="tab-btn" id="alerts-subtab-btn-datewise" onclick="switchAlertsSubtab('datewise')" style="background:rgba(16,185,129,0.08); border-top:2px solid #10B981;">
+          <span>📅 Date-wise Play</span>
+        </button>
       </div>
 
       <div id="alerts-subtab-quarterly">
@@ -1159,6 +1162,32 @@
                 </tr>
               </thead>
               <tbody id="alerts-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="alerts-subtab-datewise" style="display:none;">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h2>📅 Entry / Exit Alerts &mdash; Date-wise Play (16&ndash;30 Nov 2026)</h2>
+              <p>Walk-forward picks per calendar date on the 8&times;8 grid, sorted by date. Status shows whether the entry close has PASSED, is TODAY, or is still in the FUTURE. Historical pattern, not a forecast.</p>
+            </div>
+          </div>
+        <div class="xf-bar" style="gap:0.5rem;">
+          <span>Mode:</span>
+          <button id="dw-mode-A-a" onclick="dwSet('mode','A')">A &middot; best window</button>
+          <button id="dw-mode-B-a" onclick="dwSet('mode','B')">B &middot; still takeable</button>
+          <span style="margin-left:0.8rem;">Show:</span>
+          <button id="dw-n-3-a" onclick="dwSet('n',3)">Top 3</button>
+          <button id="dw-n-10-a" onclick="dwSet('n',10)">Top 10</button>
+          <span id="dw-count-a" style="margin-left:0.8rem;"></span>
+        </div>
+          <div class="table-container">
+            <table class="event-master-table dw-tbl" id="dw-table-a">
+              <thead><tr><th>Date (T)</th><th>Rank</th><th>Stock</th><th>Side</th><th>Window</th><th>Entry (close)</th><th>Exit (close)</th><th>Hold d</th><th>Train win %</th><th>Train avg %</th><th>Events</th><th>Status</th></tr></thead>
+              <tbody id="dw-tbody-a"><tr><td colspan="12">Loading&hellip;</td></tr></tbody>
             </table>
           </div>
         </div>
@@ -2593,7 +2622,7 @@
           <span id="dw-count" style="margin-left:0.8rem;"></span>
         </div>
         <div class="table-container">
-          <table class="event-master-table" id="dw-table">
+          <table class="event-master-table dw-tbl" id="dw-table">
             <thead><tr><th>Date (T)</th><th>Rank</th><th>Stock</th><th>Side</th><th>Window</th><th>Entry (close)</th><th>Exit (close)</th><th>Hold d</th><th>Train win %</th><th>Train avg %</th><th>Events</th><th>Status</th></tr></thead>
             <tbody id="dw-tbody"><tr><td colspan="12">Loading&hellip;</td></tr></tbody>
           </table>
@@ -3114,9 +3143,12 @@
     var DW = { data: null, loading: null, mode: 'A', n: 3 };
     function dwSet(k, v) { DW[k] = v; renderDatewise(); }
     function renderDatewise() {
-      var tb = document.getElementById('dw-tbody'); if (!tb) return;
-      ['A', 'B'].forEach(function (m) { document.getElementById('dw-mode-' + m).classList.toggle('dw-on', DW.mode === m); });
-      [3, 10].forEach(function (m) { document.getElementById('dw-n-' + m).classList.toggle('dw-on', DW.n === m); });
+      ['', '-a'].forEach(function (sfx) { dwRenderOne(sfx); });
+    }
+    function dwRenderOne(sfx) {
+      var tb = document.getElementById('dw-tbody' + sfx); if (!tb) return;
+      ['A', 'B'].forEach(function (m) { document.getElementById('dw-mode-' + m + sfx).classList.toggle('dw-on', DW.mode === m); });
+      [3, 10].forEach(function (m) { document.getElementById('dw-n-' + m + sfx).classList.toggle('dw-on', DW.n === m); });
       if (!DW.data) {
         if (!DW.loading) DW.loading = fetch('dashboard_data/forward_picks_nov2026.json?t=' + Date.now()).then(function (r) { if (!r.ok) throw new Error('missing'); return r.json(); })
           .then(function (j) { DW.data = j; renderDatewise(); }).catch(function () { tb.innerHTML = '<tr><td colspan="12">Could not load forward_picks_nov2026.json</td></tr>'; });
@@ -3137,7 +3169,7 @@
         });
       });
       tb.innerHTML = html;
-      document.getElementById('dw-count').textContent = cnt + ' picks';
+      document.getElementById('dw-count' + sfx).textContent = cnt + ' picks';
     }
 
     function switchTab(tabId) {
@@ -3523,23 +3555,14 @@
     }
 
     function switchAlertsSubtab(which) {
-      const quarterly = document.getElementById('alerts-subtab-quarterly');
-      const holiday = document.getElementById('alerts-subtab-holiday');
-      const btnQuarterly = document.getElementById('alerts-subtab-btn-quarterly');
-      const btnHoliday = document.getElementById('alerts-subtab-btn-holiday');
-      if (which === 'holiday') {
-        if (quarterly) quarterly.style.display = 'none';
-        if (holiday) holiday.style.display = 'block';
-        if (btnQuarterly) btnQuarterly.classList.remove('active');
-        if (btnHoliday) btnHoliday.classList.add('active');
-        renderHolidayAlertsTab('holiday-alerts-tbody-main');
-      } else {
-        if (quarterly) quarterly.style.display = 'block';
-        if (holiday) holiday.style.display = 'none';
-        if (btnQuarterly) btnQuarterly.classList.add('active');
-        if (btnHoliday) btnHoliday.classList.remove('active');
-        renderAlertsTab();
-      }
+      ['quarterly', 'holiday', 'datewise'].forEach(function (k) {
+        var panel = document.getElementById('alerts-subtab-' + k), btn = document.getElementById('alerts-subtab-btn-' + k);
+        if (panel) panel.style.display = (k === which) ? 'block' : 'none';
+        if (btn) btn.classList.toggle('active', k === which);
+      });
+      if (which === 'holiday') renderHolidayAlertsTab('holiday-alerts-tbody-main');
+      else if (which === 'datewise') renderDatewise();
+      else renderAlertsTab();
     }
 
     function renderHolidayAlertsTab(tbodyId) {
