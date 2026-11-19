@@ -1776,6 +1776,15 @@
                 <td><span class="badge-long">50 LONG</span> <span style="font-size:0.62rem; color:#94A3B8;">(Index 85% WR)</span></td>
                 <td><button class="btn-select-event" onclick="event.stopPropagation(); selectHolidayRow('christmas_2026', this.closest('tr'))">View Playbook</button></td>
               </tr>
+              <tr class="event-master-row" id="hrow-newyear_2027" onclick="selectHolidayRow('newyear_2027', this)">
+                <td><strong>New Year (1-Jan)</strong></td>
+                <td><span class="date-badge">01-Jan-2027 (Friday)</span></td>
+                <td>Year-End Event</td>
+                <td><span style="color:#94A3B8; font-size:0.75rem;">UPCOMING IN JAN</span></td>
+                <td><strong style="color:#38BDF8;">Tuesday, 22-Dec (T-7)</strong></td>
+                <td><span class="badge-long">50 LONG</span> / <span class="badge-short">0 SHORT</span> <span style="font-size:0.62rem; color:#94A3B8;">(15-yr walk-forward)</span></td>
+                <td><button class="btn-select-event" onclick="event.stopPropagation(); selectHolidayRow('newyear_2027', this.closest('tr'))">View Playbook</button></td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -2921,7 +2930,7 @@
     }
     function renderHolidayMasterSummaryRows() {
       if (!dashboardData || !dashboardData.holidays) return;
-      ['gandhi_2026', 'dussehra_2026', 'diwali_2026', 'gurunanak_2026', 'christmas_2026'].forEach(hid => {
+      ['gandhi_2026', 'dussehra_2026', 'diwali_2026', 'gurunanak_2026', 'christmas_2026', 'newyear_2027'].forEach(hid => {
         const h = dashboardData.holidays.find(x => x.id === hid);
         const row = document.getElementById('hrow-' + hid);
         if (!h || !row || !Array.isArray(h.stocks) || !h.stocks.length) return;
@@ -4930,7 +4939,8 @@
         { id: 'dussehra_2026', closureDate: '20-Oct-2026', entryDate: '08-Oct-2026', name: 'Dussehra / Vijayadashami' },
         { id: 'diwali_2026', closureDate: '08-Nov-2026', entryDate: '28-Oct-2026', name: 'Diwali (Laxmi Pujan & Muhurat)' },
         { id: 'gurunanak_2026', closureDate: '24-Nov-2026', entryDate: '12-Nov-2026', name: 'Gurunanak Jayanti (Prakash Gurpurb)' },
-        { id: 'christmas_2026', closureDate: '25-Dec-2026', entryDate: '15-Dec-2026', name: 'Christmas & Year-End' }
+        { id: 'christmas_2026', closureDate: '25-Dec-2026', entryDate: '15-Dec-2026', name: 'Christmas & Year-End' },
+        { id: 'newyear_2027', closureDate: '01-Jan-2027', entryDate: '22-Dec-2026', name: 'New Year (1-Jan)' }
       ];
 
       let todayEvent = null;
