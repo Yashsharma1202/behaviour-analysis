@@ -19,6 +19,7 @@ for h in d["holidays"]:
     for s in h["stocks"]:
         other.setdefault(s["symbol"], s)
 
+ST = pd.read_csv(os.path.join(os.path.dirname(os.path.abspath(PB)), "New_Year_live_15yr_stats.csv")).set_index("Symbol")
 pb = pd.read_excel(PB, sheet_name="Position_Book", header=3).dropna(subset=["Symbol"])
 pb = pb.sort_values("Rank")
 
@@ -40,8 +41,10 @@ for _, r in pb.iterrows():
     direction = r["Direction"]
     lot = int(f.get("lot_size") or o.get("lot") or 0)
     margin = float(f.get("margin_20pct") or o.get("margin") or 0)
-    wr = round(float(r["Hist Win pct"]), 1)
-    avg = round(float(r["Hist Avg Net pct"]), 2)
+    st = ST.loc[sym]
+    wr = round(float(st.WR15), 1)          # 15-yr (2012-2026) win rate, NET of 0.10% cost, at the live window
+    avg = round(float(st.AVG15), 2)
+    oos_n = int(st.OOS_n); oos_wr = None if pd.isna(st.OOS_wr) else round(float(st.OOS_wr), 1)
     t = float(r["Hist t"])
     conv = "STRONG" if t >= 3 else ("MODERATE" if t >= 2 else "WEAK")
     mon = "JAN" if pd.Timestamp(r["Exit Date"]).month == 1 else "DEC"
@@ -54,7 +57,7 @@ for _, r in pb.iterrows():
         "hold": after,
         "entry_date": fmt(r["Entry Date"]),
         "exit_date": fmt(r["Exit Date"]),
-        "total_years": int(r["Years of data"]),
+        "total_years": int(st.N15), "hist_years": 15,
         "full_19y_wr": wr,
         "full_19y_avg_ret": avg,
         "last_4y_wr": None,
@@ -64,10 +67,13 @@ for _, r in pb.iterrows():
         "fut_action": f"{'BUY' if direction == 'LONG' else 'SELL'} FUTURES ({direction} {lot} qty)",
         "opt_action": f"BUY {mon} {'CALL' if direction == 'LONG' else 'PUT'} OPTION",
         "sector": o.get("sector") or "Unclassified",
-        "direction_basis": (f"New Year 1-Jan-2027: per-stock best window ({win}) over {int(r['Years of data'])} yrs; "
-                            f"hist avg net {avg:+.2f}%, win {wr:.0f}%, t={t:.1f}; walk-forward 15-yr book +1.83%/yr (14/15 yrs +)"),
-        "n_years": int(r["Years of data"]),
+        "direction_basis": (f"New Year 1-Jan-2027: best window {win}. Last 15 yrs (2012-2026), net of 0.10% cost: win {wr:.0f}% over {int(st.N15)} yrs, avg {avg:+.2f}% (in-sample for this window). "
+                            f"Genuine out-of-sample (walk-forward, window chosen only from earlier years): "
+                            + (f"{oos_wr:.0f}% win over {oos_n} traded yrs." if oos_wr is not None else "not selected in any test year.")),
+        "n_years": int(st.N15),
         "conviction": conv,
+        "wf_oos_win_rate": oos_wr,
+        "wf_oos_trades": oos_n,
         "confidence_flag": "OK",
         "confidence_note": "",
     })
@@ -85,6 +91,7 @@ entry = {
     "bias": (f"New Year 1-Jan-2027 -- top-50 F&O, per-stock best window, long/short on a 15-yr walk-forward: "
              f"{len(stocks)} positions ({nl} LONG / {ns} SHORT). Book backtest +1.83%/yr, 14 of 15 years positive, "
              f"max drawdown -0.29%. T = Fri 1-Jan-2027 (25-Dec holiday)."),
+    "hist_years": 15,
     "stocks_count": len(stocks),
     "top_pick": " & ".join(f"{s['symbol']} ({s['full_19y_avg_ret']:+.2f}% avg)" for s in top),
     "stocks": stocks,
@@ -126,6 +133,29 @@ newr = ("{ id: 'christmas_2026', closureDate: '25-Dec-2026', entryDate: '15-Dec-
         "        { id: 'newyear_2027', closureDate: '01-Jan-2027', entryDate: '22-Dec-2026', name: 'New Year (1-Jan)' }\n")
 if oldr in h and "id: 'newyear_2027'" not in h:
     h = h.replace(oldr, newr)
+
+def rep(a, b):
+    global h
+    if a in h and b not in h:
+        h = h.replace(a, b, 1)
+    elif a not in h and b not in h:
+        print("WARN anchor missing:", a[:60])
+
+
+rep("<th>19Y Win Rate</th>", '<th id="h-th-wr">19Y Win Rate</th>')
+rep("<th>19Y Avg Ret</th>", '<th id="h-th-ret">19Y Avg Ret</th>')
+rep("      updateHolidayFilterPills(h);\n    }\n\n    let currentRbiCatFilter",
+    "      const _thw = document.getElementById('h-th-wr'), _thr = document.getElementById('h-th-ret');\n"
+    "      if (_thw) _thw.textContent = (h.hist_years || 19) + 'Y Win Rate' + (h.hist_years ? ' (net)' : '');\n"
+    "      if (_thr) _thr.textContent = (h.hist_years || 19) + 'Y Avg Ret';\n"
+    "      updateHolidayFilterPills(h);\n    }\n\n    let currentRbiCatFilter")
+rep("""<td><strong style="color:${wrVal >= 80 ? '#FBBF24' : '#E2E8F0'}">${wrVal.toFixed(1)}%</strong></td>""",
+    """<td><strong style="color:${wrVal >= 80 ? '#FBBF24' : '#E2E8F0'}">${wrVal.toFixed(1)}%</strong>${(h.hist_years && s.wf_oos_win_rate !== null && s.wf_oos_win_rate !== undefined) ? `<br><small style="color:#94A3B8;" title="Walk-forward out-of-sample: window chosen only from earlier years">OOS ${Number(s.wf_oos_win_rate).toFixed(0)}% (${s.wf_oos_trades}y)</small>` : ''}</td>""")
+rep("""<strong>📈 19-Year Model Win Rate:</strong> <strong style="color:#FBBF24;">${stock.full_19y_wr}%</strong> (${stock.total_years || 19} Years Backtested)""",
+    """<strong>📈 ${stock.hist_years || 19}-Year ${stock.hist_years ? 'Net Win Rate' : 'Model Win Rate'}:</strong> <strong style="color:#FBBF24;">${stock.full_19y_wr}%</strong> (${stock.total_years || 19} Years Backtested)${(stock.hist_years && stock.wf_oos_win_rate !== null && stock.wf_oos_win_rate !== undefined) ? ` &bull; genuine out-of-sample ${stock.wf_oos_win_rate}% (${stock.wf_oos_trades} yrs)` : ''}""")
+rep("""<strong>🎯 19-Year Avg Return %:</strong>""", """<strong>🎯 ${stock.hist_years || 19}-Year Avg Return %:</strong>""")
+rep("""if (subheading) subheading.innerHTML = `Empirically Derived""",
+    """if (subheading) subheading.innerHTML = hObj.hist_years ? `Last ${hObj.hist_years} years (2012&ndash;2026) of daily bars &bull; win rate is NET of 0.10% round-trip cost; "OOS" = genuine walk-forward out-of-sample win rate (window chosen only from earlier years). Book backtest +1.83%/yr, 14 of 15 years positive.` : `Empirically Derived""")
 
 if crlf:
     h = h.replace("\n", "\r\n")

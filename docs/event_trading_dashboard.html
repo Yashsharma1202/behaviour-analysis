@@ -1857,8 +1857,8 @@
                 <th>Window</th>
                 <th>Entry Date (09:20 AM)</th>
                 <th>Exit Date (03:15 PM)</th>
-                <th>19Y Win Rate</th>
-                <th>19Y Avg Ret</th>
+                <th id="h-th-wr">19Y Win Rate</th>
+                <th id="h-th-ret">19Y Avg Ret</th>
                 <th>Lot Size</th>
                 <th>Recommended Action</th>
                 <th>Confidence</th>
@@ -3504,7 +3504,7 @@
         const hObj = dashboardData.holidays.find(x => x.id === hId);
         if (hObj) {
           if (heading) heading.innerHTML = `${hObj.name} (${hObj.date || '2026'}) &mdash; 50-Stock Position Taking Playbook`;
-          if (subheading) subheading.innerHTML = `Empirically Derived Optimal Position Taking Windows (T-n to T+m) &bull; Lead / Lag Historical Behaviour Model.`;
+          if (subheading) subheading.innerHTML = hObj.hist_years ? `Last ${hObj.hist_years} years (2012&ndash;2026) of daily bars &bull; win rate is NET of 0.10% round-trip cost; "OOS" = genuine walk-forward out-of-sample win rate (window chosen only from earlier years). Book backtest +1.83%/yr, 14 of 15 years positive.` : `Empirically Derived Optimal Position Taking Windows (T-n to T+m) &bull; Lead / Lag Historical Behaviour Model.`;
           updateHolidayFilterPills(hObj);
         }
       }
@@ -4194,7 +4194,7 @@
           <td><span class="window-pill">${winPill}</span></td>
           <td>${enDateBadge}</td>
           <td>${exDateBadge}</td>
-          <td><strong style="color:${wrVal >= 80 ? '#FBBF24' : '#E2E8F0'}">${wrVal.toFixed(1)}%</strong></td>
+          <td><strong style="color:${wrVal >= 80 ? '#FBBF24' : '#E2E8F0'}">${wrVal.toFixed(1)}%</strong>${(h.hist_years && s.wf_oos_win_rate !== null && s.wf_oos_win_rate !== undefined) ? `<br><small style="color:#94A3B8;" title="Walk-forward out-of-sample: window chosen only from earlier years">OOS ${Number(s.wf_oos_win_rate).toFixed(0)}% (${s.wf_oos_trades}y)</small>` : ''}</td>
           <td style="color:${retVal > 0 ? '#34D399' : '#F87171'}">${retVal > 0 ? '+' : ''}${retVal.toFixed(2)}%</td>
           <td style="color:#94A3B8">${Number(s.lot).toLocaleString()}</td>
           <td>${actionTag}</td>
@@ -4202,6 +4202,9 @@
         `;
         tbody.appendChild(tr);
       });
+      const _thw = document.getElementById('h-th-wr'), _thr = document.getElementById('h-th-ret');
+      if (_thw) _thw.textContent = (h.hist_years || 19) + 'Y Win Rate' + (h.hist_years ? ' (net)' : '');
+      if (_thr) _thr.textContent = (h.hist_years || 19) + 'Y Avg Ret';
       updateHolidayFilterPills(h);
     }
 
@@ -5503,8 +5506,8 @@
             <p><strong>📅 Entry Date:</strong> <span style="color:#60A5FA; font-weight:700;">${stock.entry_date} (Entry: 9:20 AM)</span></p>
             <p><strong>🏁 Exit Date:</strong> ${stock.exit_date} (Exit: 3:10 PM - 3:25 PM)</p>
             <p><strong>📦 Lot Size:</strong> ${stock.lot} shares</p>
-            <p><strong>📈 19-Year Model Win Rate:</strong> <strong style="color:#FBBF24;">${stock.full_19y_wr}%</strong> (${stock.total_years || 19} Years Backtested)</p>
-            <p><strong>🎯 19-Year Avg Return %:</strong> <span style="color:${stock.full_19y_avg_ret >= 0 ? '#34D399' : '#F87171'}; font-weight:700;">${stock.full_19y_avg_ret > 0 ? '+' : ''}${stock.full_19y_avg_ret}%</span></p>
+            <p><strong>📈 ${stock.hist_years || 19}-Year ${stock.hist_years ? 'Net Win Rate' : 'Model Win Rate'}:</strong> <strong style="color:#FBBF24;">${stock.full_19y_wr}%</strong> (${stock.total_years || 19} Years Backtested)${(stock.hist_years && stock.wf_oos_win_rate !== null && stock.wf_oos_win_rate !== undefined) ? ` &bull; genuine out-of-sample ${stock.wf_oos_win_rate}% (${stock.wf_oos_trades} yrs)` : ''}</p>
+            <p><strong>🎯 ${stock.hist_years || 19}-Year Avg Return %:</strong> <span style="color:${stock.full_19y_avg_ret >= 0 ? '#34D399' : '#F87171'}; font-weight:700;">${stock.full_19y_avg_ret > 0 ? '+' : ''}${stock.full_19y_avg_ret}%</span></p>
             <p><strong>⚡ Recent 4-Year Win Rate:</strong> ${stock.last_4y_wr}%</p>
             <p><strong>🛡️ Required SPAN Margin:</strong> ₹${Number(stock.margin || 0).toLocaleString('en-IN')}</p>
           </div>
