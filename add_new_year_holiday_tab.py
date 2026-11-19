@@ -22,6 +22,10 @@ for h in d["holidays"]:
 ST = pd.read_csv(os.path.join(os.path.dirname(os.path.abspath(PB)), "New_Year_live_15yr_stats.csv")).set_index("Symbol")
 pb = pd.read_excel(PB, sheet_name="Position_Book", header=3).dropna(subset=["Symbol"])
 pb = pb.sort_values("Rank")
+MIN_YRS = 12   # only stocks with enough New Year history at the live window (15 possible)
+N_ALL = len(pb)
+pb = pb[pb["Symbol"].map(lambda x: int(ST.loc[x].N15) >= MIN_YRS)]
+print("kept", len(pb), "of", N_ALL, "dropped", sorted(set(ST.index) - set(pb["Symbol"])))
 
 
 def fmt(ts):
@@ -44,7 +48,7 @@ for _, r in pb.iterrows():
     st = ST.loc[sym]
     wr = round(float(st.WR15), 1)          # 15-yr (2012-2026) win rate, NET of 0.10% cost, at the live window
     avg = round(float(st.AVG15), 2)
-    oos_n = int(st.OOS_n); oos_wr = None if pd.isna(st.OOS_wr) else round(float(st.OOS_wr), 1)
+    oos_n = int(st.OOS_n); oos_wr = None if (pd.isna(st.OOS_wr) or oos_n < 6) else round(float(st.OOS_wr), 1)
     t = float(r["Hist t"])
     conv = "STRONG" if t >= 3 else ("MODERATE" if t >= 2 else "WEAK")
     mon = "JAN" if pd.Timestamp(r["Exit Date"]).month == 1 else "DEC"
@@ -69,7 +73,7 @@ for _, r in pb.iterrows():
         "sector": o.get("sector") or "Unclassified",
         "direction_basis": (f"New Year 1-Jan-2027: best window {win}. Last 15 yrs (2012-2026), net of 0.10% cost: win {wr:.0f}% over {int(st.N15)} yrs, avg {avg:+.2f}% (in-sample for this window). "
                             f"Genuine out-of-sample (walk-forward, window chosen only from earlier years): "
-                            + (f"{oos_wr:.0f}% win over {oos_n} traded yrs." if oos_wr is not None else "not selected in any test year.")),
+                            + (f"{oos_wr:.0f}% win over {oos_n} traded yrs." if oos_wr is not None else "n/a (fewer than 6 test years).")),
         "n_years": int(st.N15),
         "conviction": conv,
         "wf_oos_win_rate": oos_wr,
@@ -88,7 +92,7 @@ entry = {
     "category": "Year-End Event",
     "status": "UPCOMING (Dec 2026 - Jan 2027)",
     "badge": "UPCOMING",
-    "bias": (f"New Year 1-Jan-2027 -- top-50 F&O, per-stock best window, long/short on a 15-yr walk-forward: "
+    "bias": (f"New Year 1-Jan-2027 -- {len(stocks)} of the top-50 F&O stocks that have enough history (>= {MIN_YRS} of 15 yrs), per-stock best window, long/short, 15-yr walk-forward: "
              f"{len(stocks)} positions ({nl} LONG / {ns} SHORT). Book backtest +1.83%/yr, 14 of 15 years positive, "
              f"max drawdown -0.29%. T = Fri 1-Jan-2027 (25-Dec holiday)."),
     "hist_years": 15,
