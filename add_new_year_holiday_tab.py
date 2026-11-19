@@ -92,7 +92,7 @@ entry = {
     "category": "Year-End Event",
     "status": "UPCOMING (Dec 2026 - Jan 2027)",
     "badge": "UPCOMING",
-    "bias": (f"New Year 1-Jan-2027 -- top-{len(stocks)} F&O stocks, each with enough history (>= {MIN_YRS} valid New Years), per-stock best window, long/short: "
+    "bias": (f"New Year 1-Jan-2027 -- top-{len(stocks)} F&O stocks, each with enough history (min {min(s['total_years'] for s in stocks)} of 15 New Years valid, 15-yr net win rate min {min(s['full_19y_wr'] for s in stocks):.0f}%), per-stock best window, long/short: "
              f"{len(stocks)} positions ({nl} LONG / {ns} SHORT). 15-yr walk-forward book (min-6-yr rule) +1.83%/yr, 14 of 15 years positive, "
              f"max drawdown -0.29%. T = Fri 1-Jan-2027 (25-Dec holiday)."),
     "hist_years": 15,
