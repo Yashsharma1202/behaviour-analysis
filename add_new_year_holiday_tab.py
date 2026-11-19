@@ -1,6 +1,6 @@
 """Add a 'New Year 2027' event (hrow-newyear_2027) to the Stock Holidays tab.
 
-Usage: python add_new_year_holiday_tab.py <ROOT> <POSITION_BOOK_XLSX>
+Usage: python add_new_year_holiday_tab.py <ROOT> <POSITION_BOOK_XLSX> [STATS_CSV]
 Idempotent, additive only: inserts a new holiday entry into
 dashboard_data/event_dashboard_data.json and anchors-inserts a master-table row
 plus the id into the three hard-coded id lists of event_trading_dashboard.html.
@@ -19,7 +19,7 @@ for h in d["holidays"]:
     for s in h["stocks"]:
         other.setdefault(s["symbol"], s)
 
-ST = pd.read_csv(os.path.join(os.path.dirname(os.path.abspath(PB)), "New_Year_live_15yr_stats.csv")).set_index("Symbol")
+ST = pd.read_csv(sys.argv[3] if len(sys.argv) > 3 else os.path.join(os.path.dirname(os.path.abspath(PB)), "New_Year_live_15yr_stats.csv")).set_index("Symbol")
 pb = pd.read_excel(PB, sheet_name="Position_Book", header=3).dropna(subset=["Symbol"])
 pb = pb.sort_values("Rank")
 MIN_YRS = 12   # only stocks with enough New Year history at the live window (15 possible)
@@ -92,8 +92,8 @@ entry = {
     "category": "Year-End Event",
     "status": "UPCOMING (Dec 2026 - Jan 2027)",
     "badge": "UPCOMING",
-    "bias": (f"New Year 1-Jan-2027 -- {len(stocks)} of the top-50 F&O stocks that have enough history (>= {MIN_YRS} of 15 yrs), per-stock best window, long/short, 15-yr walk-forward: "
-             f"{len(stocks)} positions ({nl} LONG / {ns} SHORT). Book backtest +1.83%/yr, 14 of 15 years positive, "
+    "bias": (f"New Year 1-Jan-2027 -- top-{len(stocks)} F&O stocks, each with enough history (>= {MIN_YRS} valid New Years), per-stock best window, long/short: "
+             f"{len(stocks)} positions ({nl} LONG / {ns} SHORT). 15-yr walk-forward book (min-6-yr rule) +1.83%/yr, 14 of 15 years positive, "
              f"max drawdown -0.29%. T = Fri 1-Jan-2027 (25-Dec holiday)."),
     "hist_years": 15,
     "stocks_count": len(stocks),
