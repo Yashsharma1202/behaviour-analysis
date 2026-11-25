@@ -2651,7 +2651,7 @@
         <div id="dw-pdfbox" style="display:none;"><p style="font-size:0.8rem;margin:0.2rem 0 0.5rem;"><a href="Forward_Picks_16_30_Nov_2026_Full_Report.pdf" target="_blank" style="color:#38bdf8;">Open / download the PDF</a> &mdash; Forward_Picks_16_30_Nov_2026_Full_Report.pdf (8 pages: summary, expected win rate &amp; return, stock-wise win rates, Top 3 per date, position calendar, overlap, appendix).</p><iframe src="" data-src="Forward_Picks_16_30_Nov_2026_Full_Report.pdf" style="width:100%;height:78vh;border:1px solid var(--surface-border);border-radius:8px;background:#fff;"></iframe></div>
         <div class="table-container" id="dw-wrap">
           <table class="event-master-table dw-tbl" id="dw-table">
-            <thead><tr><th>Date (T)</th><th>Rank</th><th>Stock</th><th>Side</th><th>Window</th><th>Entry (close)</th><th>Exit (close)</th><th>Hold d</th><th>Train win %</th><th>Train avg %</th><th>Events</th><th>Lot</th><th>Status</th></tr></thead>
+            <thead><tr><th>Date (T)</th><th id="dw-th-rank">Rank</th><th>Stock</th><th>Side</th><th>Window</th><th>Entry (close)</th><th>Exit (close)</th><th>Hold d</th><th>Win rate %</th><th>Avg return %</th><th>Events</th><th>Lot</th><th>Status</th></tr></thead>
             <tbody id="dw-tbody"><tr><td colspan="13">Loading&hellip;</td></tr></tbody>
           </table>
         </div>
@@ -2686,7 +2686,7 @@
         </div>
                 <div class="table-container" id="dd-wrap">
           <table class="event-master-table dw-tbl" id="dd-table">
-            <thead><tr><th>Date (T)</th><th>Rank</th><th>Stock</th><th>Side</th><th>Window</th><th>Entry (close)</th><th>Exit (close)</th><th>Hold d</th><th>Train win %</th><th>Train avg %</th><th>Events</th><th>Lot</th><th>Status</th></tr></thead>
+            <thead><tr><th>Date (T)</th><th id="dd-th-rank">Rank</th><th>Stock</th><th>Side</th><th>Window</th><th>Entry (close)</th><th>Exit (close)</th><th>Hold d</th><th>Win rate %</th><th>Avg return %</th><th>Events</th><th>Lot</th><th>Status</th></tr></thead>
             <tbody id="dd-tbody"><tr><td colspan="13">Loading&hellip;</td></tr></tbody>
           </table>
         </div>
@@ -3245,17 +3245,18 @@
       if (DW.exit) rows = rows.filter(function (r) { return r.x.Exit === DW.exit; });
       if (DW.q) rows = rows.filter(function (r) { return r.x.Symbol.indexOf(DW.q.trim().toUpperCase()) >= 0; });
       [['side', DW.side], ['status', DW.status], ['minwin', String(DW.minwin)]].forEach(function (c) { var e = document.getElementById('dw-' + c[0] + sfx); if (e) e.value = c[1]; });
-      if (DW.sort === 'entry') rows.sort(function (p, q) { return p.x.Entry < q.x.Entry ? -1 : p.x.Entry > q.x.Entry ? 1 : (p.day < q.day ? -1 : p.day > q.day ? 1 : p.x.Rank - q.x.Rank); });
+      if (DW.sort === 'entry') rows.sort(function (p, q) { return p.x.Entry < q.x.Entry ? -1 : p.x.Entry > q.x.Entry ? 1 : (q.x.Train_win - p.x.Train_win) || (q.x.Train_avg - p.x.Train_avg) || (q.x.Events - p.x.Events) || (p.x.Symbol < q.x.Symbol ? -1 : p.x.Symbol > q.x.Symbol ? 1 : (p.day < q.day ? -1 : 1)); });
+      var rkTh = document.getElementById('dw-th-rank' + sfx); if (rkTh) rkTh.textContent = DW.sort === 'entry' ? 'Rank (in entry date)' : 'Rank (in play date)';
       if (DW.sort !== 'entry' && !DW.entry && !DW.side && !DW.status && !DW.minwin && !DW.exit && !DW.q) emp.forEach(function (day) { rows.push({ day: day, empty: true }); });
       if (DW.sort !== 'entry') rows.sort(function (p, q) { return p.day < q.day ? -1 : p.day > q.day ? 1 : (p.empty ? -1 : q.empty ? 1 : p.i - q.i); });
-      var prevKey = null;
+      var prevKey = null, rk = 0;
       rows.forEach(function (r) {
         if (r.empty) { html += '<tr class="dw-first"><td>' + fmt(r.day) + '</td><td colspan="12" style="color:var(--text-muted)">No qualifying picks (fewer than 15 eligible stocks)</td></tr>'; return; }
-        var x = r.x, day = r.day, key = DW.sort === 'entry' ? x.Entry : day, first = key !== prevKey; prevKey = key;
+        var x = r.x, day = r.day, key = DW.sort === 'entry' ? x.Entry : day, first = key !== prevKey; prevKey = key; rk = first ? 1 : rk + 1;
         cnt++;
         var long = x.Side === 'LONG', st = x.Status;
         var stc = st === 'PASSED' ? '#94a3b8' : (st === 'FUTURE' ? '#10B981' : '#F59E0B');
-        html += '<tr' + (first ? ' class="dw-first"' : '') + '><td>' + fmt(day) + '</td><td>' + x.Rank + '</td><td>' + x.Symbol + '</td>' +
+        html += '<tr' + (first ? ' class="dw-first"' : '') + '><td>' + fmt(day) + '</td><td>' + (DW.sort === 'entry' ? rk : x.Rank) + '</td><td>' + x.Symbol + '</td>' +
           '<td style="color:' + (long ? '#10B981' : '#F43F5E') + ';font-weight:700">' + x.Side + '</td><td>' + x.Window + '</td><td>' + fmt(x.Entry) + '</td><td>' + fmt(x.Exit) + '</td><td>' + x.Hold_days + '</td>' +
           '<td>' + x.Train_win.toFixed(0) + '</td><td>' + x.Train_avg.toFixed(1) + '</td><td>' + x.Events + '</td><td>' + (x.Lot || '-') + '</td><td style="color:' + stc + ';font-weight:700">' + st + '</td></tr>';
       });
@@ -3301,17 +3302,18 @@
       if (DD.exit) rows = rows.filter(function (r) { return r.x.Exit === DD.exit; });
       if (DD.q) rows = rows.filter(function (r) { return r.x.Symbol.indexOf(DD.q.trim().toUpperCase()) >= 0; });
       [['side', DD.side], ['status', DD.status], ['minwin', String(DD.minwin)]].forEach(function (c) { var e = document.getElementById('dd-' + c[0] + sfx); if (e) e.value = c[1]; });
-      if (DD.sort === 'entry') rows.sort(function (p, q) { return p.x.Entry < q.x.Entry ? -1 : p.x.Entry > q.x.Entry ? 1 : (p.day < q.day ? -1 : p.day > q.day ? 1 : p.x.Rank - q.x.Rank); });
+      if (DD.sort === 'entry') rows.sort(function (p, q) { return p.x.Entry < q.x.Entry ? -1 : p.x.Entry > q.x.Entry ? 1 : (q.x.Train_win - p.x.Train_win) || (q.x.Train_avg - p.x.Train_avg) || (q.x.Events - p.x.Events) || (p.x.Symbol < q.x.Symbol ? -1 : p.x.Symbol > q.x.Symbol ? 1 : (p.day < q.day ? -1 : 1)); });
+      var rkTh = document.getElementById('dd-th-rank' + sfx); if (rkTh) rkTh.textContent = DD.sort === 'entry' ? 'Rank (in entry date)' : 'Rank (in play date)';
       if (DD.sort !== 'entry' && !DD.entry && !DD.side && !DD.status && !DD.minwin && !DD.exit && !DD.q) emp.forEach(function (day) { rows.push({ day: day, empty: true }); });
       if (DD.sort !== 'entry') rows.sort(function (p, q) { return p.day < q.day ? -1 : p.day > q.day ? 1 : (p.empty ? -1 : q.empty ? 1 : p.i - q.i); });
-      var prevKey = null;
+      var prevKey = null, rk = 0;
       rows.forEach(function (r) {
         if (r.empty) { html += '<tr class="dw-first"><td>' + fmt(r.day) + '</td><td colspan="12" style="color:var(--text-muted)">No qualifying picks (fewer than 15 eligible stocks)</td></tr>'; return; }
-        var x = r.x, day = r.day, key = DD.sort === 'entry' ? x.Entry : day, first = key !== prevKey; prevKey = key;
+        var x = r.x, day = r.day, key = DD.sort === 'entry' ? x.Entry : day, first = key !== prevKey; prevKey = key; rk = first ? 1 : rk + 1;
         cnt++;
         var long = x.Side === 'LONG', st = x.Status;
         var stc = st === 'PASSED' ? '#94a3b8' : (st === 'FUTURE' ? '#10B981' : '#F59E0B');
-        html += '<tr' + (first ? ' class="dw-first"' : '') + '><td>' + fmt(day) + '</td><td>' + x.Rank + '</td><td>' + x.Symbol + '</td>' +
+        html += '<tr' + (first ? ' class="dw-first"' : '') + '><td>' + fmt(day) + '</td><td>' + (DD.sort === 'entry' ? rk : x.Rank) + '</td><td>' + x.Symbol + '</td>' +
           '<td style="color:' + (long ? '#10B981' : '#F43F5E') + ';font-weight:700">' + x.Side + '</td><td>' + x.Window + '</td><td>' + fmt(x.Entry) + '</td><td>' + fmt(x.Exit) + '</td><td>' + x.Hold_days + '</td>' +
           '<td>' + x.Train_win.toFixed(0) + '</td><td>' + x.Train_avg.toFixed(1) + '</td><td>' + x.Events + '</td><td>' + (x.Lot || '-') + '</td><td style="color:' + stc + ';font-weight:700">' + st + '</td></tr>';
       });
