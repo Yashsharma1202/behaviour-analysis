@@ -796,7 +796,7 @@
       </button>
       <button class="tab-btn" id="tab-btn-datewise" onclick="switchTab('datewise')" style="background:rgba(16,185,129,0.08); border-top:2px solid #10B981;">
         <span>📅 Date-wise Play</span>
-        <span class="tab-badge" style="background:#10B981; color:#fff; font-weight:800;">16–30 NOV 2026</span>
+        <span class="tab-badge" style="background:#10B981; color:#fff; font-weight:800;">NOV &amp; DEC 2026</span>
       </button>
       <button class="tab-btn" id="tab-btn-custom" onclick="switchTab('custom')">
         <span>➕ Custom Events Hub</span>
@@ -2616,6 +2616,11 @@
 
     <!-- TAB: DATE-WISE PLAY (forward picks 16-30 Nov 2026) -->
     <div id="tab-datewise" class="tab-content" style="display:none;">
+      <div class="xf-bar" style="gap:0.5rem;margin-bottom:0.6rem;">
+        <button id="dwsub-btn-nov" onclick="dwSubSwitch('nov')">&#128197; Nov 16&ndash;30</button>
+        <button id="dwsub-btn-dec" onclick="dwSubSwitch('dec')">&#128197; Dec 01&ndash;31</button>
+      </div>
+      <div id="dwsub-nov">
       <div class="card">
         <div class="card-header">
           <div class="card-title-group">
@@ -2631,7 +2636,17 @@
           <button id="dw-n-3" onclick="dwSet('n',3)">Top 3</button>
           <button id="dw-n-10" onclick="dwSet('n',10)">Top 10</button>
           <button id="dw-pdf-btn" onclick="dwSet('pdf',!DW.pdf)" style="margin-left:0.8rem;">&#128196; Full report (PDF)</button>
+          <span style="margin-left:0.8rem;">Sort:</span><button id="dw-sort-date" onclick="dwSet('sort','date')">Play date</button><button id="dw-sort-entry" onclick="dwSet('sort','entry')">Entry date &#9650;</button><span style="margin-left:0.8rem;">Entry date:</span><select id="dw-entry" onchange="dwSet('entry',this.value)" style="background:var(--bg-card,#0f172a);color:inherit;border:1px solid rgba(148,163,184,.4);border-radius:6px;padding:0.2rem 0.4rem;"><option value="">All</option></select>
           <span id="dw-count" style="margin-left:0.8rem;"></span>
+        </div>
+        <div class="xf-bar" style="gap:0.5rem;">
+          <span>&#128269; Filters:</span>
+          <select id="dw-side" onchange="dwSet('side',this.value)" style="background:var(--bg-card,#0f172a);color:inherit;border:1px solid rgba(148,163,184,.4);border-radius:6px;padding:0.2rem 0.4rem;"><option value="">Side: All</option><option value="LONG">LONG</option><option value="SHORT">SHORT</option></select>
+          <select id="dw-status" onchange="dwSet('status',this.value)" style="background:var(--bg-card,#0f172a);color:inherit;border:1px solid rgba(148,163,184,.4);border-radius:6px;padding:0.2rem 0.4rem;"><option value="">Status: All</option><option value="PASSED">PASSED</option><option value="TODAY close">TODAY close</option><option value="FUTURE">FUTURE</option></select>
+          <select id="dw-minwin" onchange="dwSet('minwin',+this.value)" style="background:var(--bg-card,#0f172a);color:inherit;border:1px solid rgba(148,163,184,.4);border-radius:6px;padding:0.2rem 0.4rem;"><option value="0">Train win: any</option><option value="60">&ge; 60%</option><option value="70">&ge; 70%</option><option value="80">&ge; 80%</option><option value="90">&ge; 90%</option></select>
+          <select id="dw-exit" onchange="dwSet('exit',this.value)" style="background:var(--bg-card,#0f172a);color:inherit;border:1px solid rgba(148,163,184,.4);border-radius:6px;padding:0.2rem 0.4rem;"><option value="">Exit date: All</option></select>
+          <input id="dw-q" type="text" placeholder="Stock..." oninput="dwSet('q',this.value)" style="background:var(--bg-card,#0f172a);color:inherit;border:1px solid rgba(148,163,184,.4);border-radius:6px;padding:0.2rem 0.4rem;width:110px;">
+          <button onclick="dwReset()">Reset filters</button>
         </div>
         <div id="dw-pdfbox" style="display:none;"><p style="font-size:0.8rem;margin:0.2rem 0 0.5rem;"><a href="Forward_Picks_16_30_Nov_2026_Full_Report.pdf" target="_blank" style="color:#38bdf8;">Open / download the PDF</a> &mdash; Forward_Picks_16_30_Nov_2026_Full_Report.pdf (8 pages: summary, expected win rate &amp; return, stock-wise win rates, Top 3 per date, position calendar, overlap, appendix).</p><iframe src="" data-src="Forward_Picks_16_30_Nov_2026_Full_Report.pdf" style="width:100%;height:78vh;border:1px solid var(--surface-border);border-radius:8px;background:#fff;"></iframe></div>
         <div class="table-container" id="dw-wrap">
@@ -2640,6 +2655,42 @@
             <tbody id="dw-tbody"><tr><td colspan="13">Loading&hellip;</td></tr></tbody>
           </table>
         </div>
+      </div>
+      </div>
+      <div id="dwsub-dec" style="display:none;">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2>Date-wise Play &mdash; 01 to 31 Dec 2026</h2>
+            <p id="dd-sub">Position-taking picks per calendar date, 1&ndash;31 Dec 2026 (8&times;8 grid, 2000&ndash;2025 history). Historical pattern, not a forecast.</p>
+          </div>
+        </div>
+        <div class="xf-bar" style="gap:0.5rem;">
+          <span>Mode:</span>
+          <button id="dd-mode-A" onclick="ddSet('mode','A')">A &middot; best window (unrestricted)</button>
+          <button id="dd-mode-B" onclick="ddSet('mode','B')">B &middot; takeable (entry still ahead)</button>
+          <span style="margin-left:0.8rem;">Show:</span>
+          <button id="dd-n-3" onclick="ddSet('n',3)">Top 3</button>
+          <button id="dd-n-10" onclick="ddSet('n',10)">Top 10</button>
+          <span style="margin-left:0.8rem;">Sort:</span><button id="dd-sort-date" onclick="ddSet('sort','date')">Play date</button><button id="dd-sort-entry" onclick="ddSet('sort','entry')">Entry date &#9650;</button><span style="margin-left:0.8rem;">Entry date:</span><select id="dd-entry" onchange="ddSet('entry',this.value)" style="background:var(--bg-card,#0f172a);color:inherit;border:1px solid rgba(148,163,184,.4);border-radius:6px;padding:0.2rem 0.4rem;"><option value="">All</option></select>
+          <span id="dd-count" style="margin-left:0.8rem;"></span>
+        </div>
+        <div class="xf-bar" style="gap:0.5rem;">
+          <span>&#128269; Filters:</span>
+          <select id="dd-side" onchange="ddSet('side',this.value)" style="background:var(--bg-card,#0f172a);color:inherit;border:1px solid rgba(148,163,184,.4);border-radius:6px;padding:0.2rem 0.4rem;"><option value="">Side: All</option><option value="LONG">LONG</option><option value="SHORT">SHORT</option></select>
+          <select id="dd-status" onchange="ddSet('status',this.value)" style="background:var(--bg-card,#0f172a);color:inherit;border:1px solid rgba(148,163,184,.4);border-radius:6px;padding:0.2rem 0.4rem;"><option value="">Status: All</option><option value="PASSED">PASSED</option><option value="TODAY close">TODAY close</option><option value="FUTURE">FUTURE</option></select>
+          <select id="dd-minwin" onchange="ddSet('minwin',+this.value)" style="background:var(--bg-card,#0f172a);color:inherit;border:1px solid rgba(148,163,184,.4);border-radius:6px;padding:0.2rem 0.4rem;"><option value="0">Train win: any</option><option value="60">&ge; 60%</option><option value="70">&ge; 70%</option><option value="80">&ge; 80%</option><option value="90">&ge; 90%</option></select>
+          <select id="dd-exit" onchange="ddSet('exit',this.value)" style="background:var(--bg-card,#0f172a);color:inherit;border:1px solid rgba(148,163,184,.4);border-radius:6px;padding:0.2rem 0.4rem;"><option value="">Exit date: All</option></select>
+          <input id="dd-q" type="text" placeholder="Stock..." oninput="ddSet('q',this.value)" style="background:var(--bg-card,#0f172a);color:inherit;border:1px solid rgba(148,163,184,.4);border-radius:6px;padding:0.2rem 0.4rem;width:110px;">
+          <button onclick="ddReset()">Reset filters</button>
+        </div>
+                <div class="table-container" id="dd-wrap">
+          <table class="event-master-table dw-tbl" id="dd-table">
+            <thead><tr><th>Date (T)</th><th>Rank</th><th>Stock</th><th>Side</th><th>Window</th><th>Entry (close)</th><th>Exit (close)</th><th>Hold d</th><th>Train win %</th><th>Train avg %</th><th>Events</th><th>Lot</th><th>Status</th></tr></thead>
+            <tbody id="dd-tbody"><tr><td colspan="13">Loading&hellip;</td></tr></tbody>
+          </table>
+        </div>
+      </div>
       </div>
     </div>
 
@@ -3153,7 +3204,8 @@
     }
 
     // ---- Date-wise Play tab (data: dashboard_data/forward_picks_nov2026.json) ----
-    var DW = { data: null, loading: null, mode: 'B', n: 3, pdf: false };
+    var DW = { data: null, loading: null, mode: 'B', n: 3, pdf: false, sort: 'date', entry: '', side: '', status: '', minwin: 0, exit: '', q: '' };
+    function dwReset() { DW.entry = ''; DW.side = ''; DW.status = ''; DW.minwin = 0; DW.exit = ''; DW.q = ''; var q = document.getElementById('dw-q'); if (q) q.value = ''; renderDatewise(); }
     function dwSet(k, v) { DW[k] = v; renderDatewise(); }
     function renderDatewise() {
       ['', '-a'].forEach(function (sfx) { dwRenderOne(sfx); });
@@ -3163,6 +3215,7 @@
       ['A', 'B'].forEach(function (m) { document.getElementById('dw-mode-' + m + sfx).classList.toggle('dw-on', DW.mode === m); });
       [3, 10].forEach(function (m) { document.getElementById('dw-n-' + m + sfx).classList.toggle('dw-on', DW.n === m); });
       document.getElementById('dw-pdf-btn' + sfx).classList.toggle('dw-on', DW.pdf);
+      ['date', 'entry'].forEach(function (m) { var b = document.getElementById('dw-sort-' + m + sfx); if (b) b.classList.toggle('dw-on', DW.sort === m); });
       document.getElementById('dw-wrap' + sfx).style.display = DW.pdf ? 'none' : '';
       var pb = document.getElementById('dw-pdfbox' + sfx); pb.style.display = DW.pdf ? 'block' : 'none';
       if (DW.pdf) { var fr = pb.querySelector('iframe'); if (!fr.getAttribute('src')) fr.setAttribute('src', fr.getAttribute('data-src')); }
@@ -3172,21 +3225,105 @@
         return;
       }
       var fmt = function (d) { var x = new Date(d + 'T00:00:00'); return x.toLocaleDateString('en-GB', { weekday: 'short' }) + ' ' + x.toLocaleDateString('en-GB', { day: '2-digit', month: 'short' }).replace(' ', '-'); };
-      var html = '', cnt = 0, ds = DW.data.dates;
+      var html = '', cnt = 0, ds = DW.data.dates, rows = [], emp = [];
       Object.keys(ds).sort().forEach(function (day) {
         var L = (ds[day]['mode_' + DW.mode] || {})[DW.n === 3 ? 'top3' : 'top10'] || [];
-        if (!L.length) { html += '<tr class="dw-first"><td>' + fmt(day) + '</td><td colspan="12" style="color:var(--text-muted)">No qualifying picks (fewer than 15 eligible stocks)</td></tr>'; return; }
-        L.forEach(function (x, i) {
-          cnt++;
-          var long = x.Side === 'LONG', st = x.Status;
-          var stc = st === 'PASSED' ? '#94a3b8' : (st === 'FUTURE' ? '#10B981' : '#F59E0B');
-          html += '<tr' + (i === 0 ? ' class="dw-first"' : '') + '><td>' + fmt(day) + '</td><td>' + x.Rank + '</td><td>' + x.Symbol + '</td>' +
-            '<td style="color:' + (long ? '#10B981' : '#F43F5E') + ';font-weight:700">' + x.Side + '</td><td>' + x.Window + '</td><td>' + fmt(x.Entry) + '</td><td>' + fmt(x.Exit) + '</td><td>' + x.Hold_days + '</td>' +
-            '<td>' + x.Train_win.toFixed(0) + '</td><td>' + x.Train_avg.toFixed(1) + '</td><td>' + x.Events + '</td><td>' + (x.Lot || '-') + '</td><td style="color:' + stc + ';font-weight:700">' + st + '</td></tr>';
-        });
+        if (!L.length) { emp.push(day); return; }
+        L.forEach(function (x, i) { rows.push({ day: day, i: i, x: x }); });
+      });
+      var ents = Array.from(new Set(rows.map(function (r) { return r.x.Entry; }))).sort();
+      if (DW.entry && ents.indexOf(DW.entry) < 0) DW.entry = '';
+      var sel = document.getElementById('dw-entry' + sfx);
+      if (sel) { sel.innerHTML = '<option value="">All (' + ents.length + ')</option>' + ents.map(function (e) { return '<option value="' + e + '">' + fmt(e) + '</option>'; }).join(''); sel.value = DW.entry; }
+      if (DW.entry) rows = rows.filter(function (r) { return r.x.Entry === DW.entry; });
+      var exs = Array.from(new Set(rows.map(function (r) { return r.x.Exit; }))).sort();
+      var xs = document.getElementById('dw-exit' + sfx);
+      if (xs) { xs.innerHTML = '<option value="">Exit date: All (' + exs.length + ')</option>' + exs.map(function (e) { return '<option value="' + e + '">' + fmt(e) + '</option>'; }).join(''); xs.value = exs.indexOf(DW.exit) >= 0 ? DW.exit : ''; if (!xs.value) DW.exit = ''; }
+      if (DW.side) rows = rows.filter(function (r) { return r.x.Side === DW.side; });
+      if (DW.status) rows = rows.filter(function (r) { return r.x.Status === DW.status; });
+      if (DW.minwin) rows = rows.filter(function (r) { return r.x.Train_win >= DW.minwin; });
+      if (DW.exit) rows = rows.filter(function (r) { return r.x.Exit === DW.exit; });
+      if (DW.q) rows = rows.filter(function (r) { return r.x.Symbol.indexOf(DW.q.trim().toUpperCase()) >= 0; });
+      [['side', DW.side], ['status', DW.status], ['minwin', String(DW.minwin)]].forEach(function (c) { var e = document.getElementById('dw-' + c[0] + sfx); if (e) e.value = c[1]; });
+      if (DW.sort === 'entry') rows.sort(function (p, q) { return p.x.Entry < q.x.Entry ? -1 : p.x.Entry > q.x.Entry ? 1 : (p.day < q.day ? -1 : p.day > q.day ? 1 : p.x.Rank - q.x.Rank); });
+      if (DW.sort !== 'entry' && !DW.entry && !DW.side && !DW.status && !DW.minwin && !DW.exit && !DW.q) emp.forEach(function (day) { rows.push({ day: day, empty: true }); });
+      if (DW.sort !== 'entry') rows.sort(function (p, q) { return p.day < q.day ? -1 : p.day > q.day ? 1 : (p.empty ? -1 : q.empty ? 1 : p.i - q.i); });
+      var prevKey = null;
+      rows.forEach(function (r) {
+        if (r.empty) { html += '<tr class="dw-first"><td>' + fmt(r.day) + '</td><td colspan="12" style="color:var(--text-muted)">No qualifying picks (fewer than 15 eligible stocks)</td></tr>'; return; }
+        var x = r.x, day = r.day, key = DW.sort === 'entry' ? x.Entry : day, first = key !== prevKey; prevKey = key;
+        cnt++;
+        var long = x.Side === 'LONG', st = x.Status;
+        var stc = st === 'PASSED' ? '#94a3b8' : (st === 'FUTURE' ? '#10B981' : '#F59E0B');
+        html += '<tr' + (first ? ' class="dw-first"' : '') + '><td>' + fmt(day) + '</td><td>' + x.Rank + '</td><td>' + x.Symbol + '</td>' +
+          '<td style="color:' + (long ? '#10B981' : '#F43F5E') + ';font-weight:700">' + x.Side + '</td><td>' + x.Window + '</td><td>' + fmt(x.Entry) + '</td><td>' + fmt(x.Exit) + '</td><td>' + x.Hold_days + '</td>' +
+          '<td>' + x.Train_win.toFixed(0) + '</td><td>' + x.Train_avg.toFixed(1) + '</td><td>' + x.Events + '</td><td>' + (x.Lot || '-') + '</td><td style="color:' + stc + ';font-weight:700">' + st + '</td></tr>';
       });
       tb.innerHTML = html;
       document.getElementById('dw-count' + sfx).textContent = cnt + ' picks';
+    }
+
+    // ---- Dec Date-wise Play tab (data: dashboard_data/forward_picks_dec2026.json) ----
+    var DD = { data: null, loading: null, mode: 'B', n: 3, pdf: false, sort: 'date', entry: '', side: '', status: '', minwin: 0, exit: '', q: '' };
+    function ddReset() { DD.entry = ''; DD.side = ''; DD.status = ''; DD.minwin = 0; DD.exit = ''; DD.q = ''; var q = document.getElementById('dd-q'); if (q) q.value = ''; renderDecDatewise(); }
+    function ddSet(k, v) { DD[k] = v; renderDecDatewise(); }
+    function renderDecDatewise() {
+      [''].forEach(function (sfx) { ddRenderOne(sfx); });
+    }
+    function ddRenderOne(sfx) {
+      var tb = document.getElementById('dd-tbody' + sfx); if (!tb) return;
+      ['A', 'B'].forEach(function (m) { document.getElementById('dd-mode-' + m + sfx).classList.toggle('dd-on', DD.mode === m); });
+      [3, 10].forEach(function (m) { document.getElementById('dd-n-' + m + sfx).classList.toggle('dd-on', DD.n === m); });
+      ['date', 'entry'].forEach(function (m) { var b = document.getElementById('dd-sort-' + m + sfx); if (b) b.classList.toggle('dd-on', DD.sort === m); });
+      if (!DD.data) {
+        if (!DD.loading) DD.loading = fetch('dashboard_data/forward_picks_dec2026.json?t=' + Date.now()).then(function (r) { if (!r.ok) throw new Error('missing'); return r.json(); })
+          .then(function (j) { DD.data = j; renderDecDatewise(); }).catch(function () { tb.innerHTML = '<tr><td colspan="13">Could not load forward_picks_dec2026.json</td></tr>'; });
+        return;
+      }
+      var fmt = function (d) { var x = new Date(d + 'T00:00:00'); return x.toLocaleDateString('en-GB', { weekday: 'short' }) + ' ' + x.toLocaleDateString('en-GB', { day: '2-digit', month: 'short' }).replace(' ', '-'); };
+      var html = '', cnt = 0, ds = DD.data.dates, rows = [], emp = [];
+      Object.keys(ds).sort().forEach(function (day) {
+        var L = (ds[day]['mode_' + DD.mode] || {})[DD.n === 3 ? 'top3' : 'top10'] || [];
+        if (!L.length) { emp.push(day); return; }
+        L.forEach(function (x, i) { rows.push({ day: day, i: i, x: x }); });
+      });
+      var ents = Array.from(new Set(rows.map(function (r) { return r.x.Entry; }))).sort();
+      if (DD.entry && ents.indexOf(DD.entry) < 0) DD.entry = '';
+      var sel = document.getElementById('dd-entry' + sfx);
+      if (sel) { sel.innerHTML = '<option value="">All (' + ents.length + ')</option>' + ents.map(function (e) { return '<option value="' + e + '">' + fmt(e) + '</option>'; }).join(''); sel.value = DD.entry; }
+      if (DD.entry) rows = rows.filter(function (r) { return r.x.Entry === DD.entry; });
+      var exs = Array.from(new Set(rows.map(function (r) { return r.x.Exit; }))).sort();
+      var xs = document.getElementById('dd-exit' + sfx);
+      if (xs) { xs.innerHTML = '<option value="">Exit date: All (' + exs.length + ')</option>' + exs.map(function (e) { return '<option value="' + e + '">' + fmt(e) + '</option>'; }).join(''); xs.value = exs.indexOf(DD.exit) >= 0 ? DD.exit : ''; if (!xs.value) DD.exit = ''; }
+      if (DD.side) rows = rows.filter(function (r) { return r.x.Side === DD.side; });
+      if (DD.status) rows = rows.filter(function (r) { return r.x.Status === DD.status; });
+      if (DD.minwin) rows = rows.filter(function (r) { return r.x.Train_win >= DD.minwin; });
+      if (DD.exit) rows = rows.filter(function (r) { return r.x.Exit === DD.exit; });
+      if (DD.q) rows = rows.filter(function (r) { return r.x.Symbol.indexOf(DD.q.trim().toUpperCase()) >= 0; });
+      [['side', DD.side], ['status', DD.status], ['minwin', String(DD.minwin)]].forEach(function (c) { var e = document.getElementById('dd-' + c[0] + sfx); if (e) e.value = c[1]; });
+      if (DD.sort === 'entry') rows.sort(function (p, q) { return p.x.Entry < q.x.Entry ? -1 : p.x.Entry > q.x.Entry ? 1 : (p.day < q.day ? -1 : p.day > q.day ? 1 : p.x.Rank - q.x.Rank); });
+      if (DD.sort !== 'entry' && !DD.entry && !DD.side && !DD.status && !DD.minwin && !DD.exit && !DD.q) emp.forEach(function (day) { rows.push({ day: day, empty: true }); });
+      if (DD.sort !== 'entry') rows.sort(function (p, q) { return p.day < q.day ? -1 : p.day > q.day ? 1 : (p.empty ? -1 : q.empty ? 1 : p.i - q.i); });
+      var prevKey = null;
+      rows.forEach(function (r) {
+        if (r.empty) { html += '<tr class="dw-first"><td>' + fmt(r.day) + '</td><td colspan="12" style="color:var(--text-muted)">No qualifying picks (fewer than 15 eligible stocks)</td></tr>'; return; }
+        var x = r.x, day = r.day, key = DD.sort === 'entry' ? x.Entry : day, first = key !== prevKey; prevKey = key;
+        cnt++;
+        var long = x.Side === 'LONG', st = x.Status;
+        var stc = st === 'PASSED' ? '#94a3b8' : (st === 'FUTURE' ? '#10B981' : '#F59E0B');
+        html += '<tr' + (first ? ' class="dw-first"' : '') + '><td>' + fmt(day) + '</td><td>' + x.Rank + '</td><td>' + x.Symbol + '</td>' +
+          '<td style="color:' + (long ? '#10B981' : '#F43F5E') + ';font-weight:700">' + x.Side + '</td><td>' + x.Window + '</td><td>' + fmt(x.Entry) + '</td><td>' + fmt(x.Exit) + '</td><td>' + x.Hold_days + '</td>' +
+          '<td>' + x.Train_win.toFixed(0) + '</td><td>' + x.Train_avg.toFixed(1) + '</td><td>' + x.Events + '</td><td>' + (x.Lot || '-') + '</td><td style="color:' + stc + ';font-weight:700">' + st + '</td></tr>';
+      });
+      tb.innerHTML = html;
+      document.getElementById('dd-count' + sfx).textContent = cnt + ' picks';
+    }
+
+    function dwSubSwitch(w) {
+      var n = document.getElementById('dwsub-nov'), d = document.getElementById('dwsub-dec'); if (!n || !d) return;
+      n.style.display = w === 'nov' ? '' : 'none'; d.style.display = w === 'dec' ? '' : 'none';
+      ['nov', 'dec'].forEach(function (k) { var b = document.getElementById('dwsub-btn-' + k); if (b) b.classList.toggle('dw-on', k === w); });
+      if (w === 'dec') renderDecDatewise(); else renderDatewise();
     }
 
     function switchTab(tabId) {
@@ -3252,7 +3389,7 @@
         } else if (tabId === 'live-feed') {
           renderLiveFeedTab();
         } else if (tabId === 'datewise') {
-          renderDatewise();
+          dwSubSwitch('nov');
         } else if (tabId === 'conflicts') {
           renderConflictRadar();
         } else if (tabId === 'stock-search') {
