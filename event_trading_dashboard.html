@@ -788,7 +788,7 @@
       </button>
       <button class="tab-btn" id="tab-btn-stock-search" onclick="switchTab('stock-search')">
         <span>🔍 Stock Search & History</span>
-        <span class="tab-badge" style="background:linear-gradient(135deg, #f59e0b, #d97706); color:#fff; font-weight:700;">211 STOCKS</span>
+        <span class="tab-badge" style="background:linear-gradient(135deg, #f59e0b, #d97706); color:#fff; font-weight:700;">218 STOCKS</span>
       </button>
       <button class="tab-btn" id="tab-btn-comparison" onclick="switchTab('comparison')">
         <span>⚖️ Performance Comparison</span>
@@ -947,7 +947,7 @@
               <span style="background: linear-gradient(135deg, #F59E0B, #D97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🔍 Stock Deep Dive & All Past Trades</span>
             </h2>
             <p style="margin: 0.3rem 0 0 0; font-size: 0.85rem; color: var(--text-muted);">
-              Search any stock symbol across all 211 F&O & Nifty 50 stocks to view all past quarterly trades in one single consolidated sheet and measure overall performance.
+              Search any stock symbol across all 218 F&O & Nifty 50 stocks to view all past quarterly trades in one single consolidated sheet and measure overall performance.
             </p>
           </div>
 
@@ -1398,7 +1398,7 @@
           <div class="filter-bar">
             <input type="text" id="q-search" class="search-input" placeholder="Search Futures Symbol (e.g. INFY, TCS, RELIANCE)..." oninput="renderQuarterTable()">
             <button class="filter-pill active" id="qpill-nifty50" onclick="setQuarterFilter('nifty50', this)">🎯 Nifty 50 Only (50)</button>
-            <button class="filter-pill" id="qpill-all" onclick="setQuarterFilter('all_fo', this)">📊 All F&O Stocks (211)</button>
+            <button class="filter-pill" id="qpill-all" onclick="setQuarterFilter('all_fo', this)">📊 All F&O Stocks (218)</button>
             <button class="filter-pill" id="qpill-long" onclick="setQuarterFilter('LONG', this)">🟢 LONG Only</button>
             <button class="filter-pill" id="qpill-short" onclick="setQuarterFilter('SHORT', this)">🔴 SHORT Only</button>
             <span style="display:flex; align-items:center; gap:0.35rem; font-size:0.75rem; color:#94A3B8;">
@@ -1817,7 +1817,7 @@
           </div>
           <div class="filter-bar" style="margin-bottom:0.6rem;">
             <button id="hsub-nifty" class="filter-pill active" onclick="setHolidaySubtab('nifty50', this)">🎯 Nifty 50 (50)</button>
-            <button id="hsub-fo" class="filter-pill" onclick="setHolidaySubtab('fo', this)">📊 F&amp;O — All (211)</button>
+            <button id="hsub-fo" class="filter-pill" onclick="setHolidaySubtab('fo', this)">📊 F&amp;O — All (218)</button>
           </div>
           <div class="filter-bar">
             <input type="text" id="h-search" class="search-input" placeholder="Search Holiday Symbol..." oninput="filterHolidayTable()">
@@ -1873,10 +1873,10 @@
         <!-- F&O ALL (211) VIEW -->
         <div id="fo-holiday-view" style="display:none;">
           <div class="filter-bar" style="margin-bottom:0.6rem;">
-            <input type="text" id="fo-h-search" class="search-input" placeholder="Search any F&amp;O symbol (211 stocks)..." oninput="renderFoHolidayTable()">
-            <button id="fopill-all" class="filter-pill" onclick="setFoHolidayFilter('all', this)">All (211)</button>
+            <input type="text" id="fo-h-search" class="search-input" placeholder="Search any F&amp;O symbol (218 stocks)..." oninput="renderFoHolidayTable()">
+            <button id="fopill-all" class="filter-pill" onclick="setFoHolidayFilter('all', this)">All (218)</button>
             <button id="fopill-nifty" class="filter-pill active" onclick="setFoHolidayFilter('nifty50', this)">🎯 Nifty 50 (50)</button>
-            <button id="fopill-nonnifty" class="filter-pill" onclick="setFoHolidayFilter('nonnifty', this)">Non-Nifty F&amp;O (161)</button>
+            <button id="fopill-nonnifty" class="filter-pill" onclick="setFoHolidayFilter('nonnifty', this)">Non-Nifty F&amp;O (168)</button>
             <button id="fopill-long" class="filter-pill" onclick="setFoHolidayFilter('LONG', this)">🟢 LONG</button>
             <button id="fopill-short" class="filter-pill" onclick="setFoHolidayFilter('SHORT', this)">🔴 SHORT</button>
             <button id="fosort-rank" class="filter-pill active" onclick="setFoHolidaySort('rank', this)">↕ Rank (model)</button>
@@ -4101,10 +4101,10 @@
     }
     function setFoPillCounts(gn) {
       const set = (id, txt) => { const e = document.getElementById(id); if (e) e.textContent = txt; };
-      set('fopill-all', gn ? 'All (213)' : 'All (211)');
+      set('fopill-all', gn ? 'All (220)' : 'All (218)');
       set('fopill-nifty', '🎯 Nifty 50 (50)');
-      set('fopill-nonnifty', gn ? 'Non-Nifty F&O (163)' : 'Non-Nifty F&O (161)');
-      const si = document.getElementById('fo-h-search'); if (si) si.placeholder = gn ? 'Search any F&O symbol (213 stocks)...' : 'Search any F&O symbol (211 stocks)...';
+      set('fopill-nonnifty', gn ? 'Non-Nifty F&O (170)' : 'Non-Nifty F&O (168)');
+      const si = document.getElementById('fo-h-search'); if (si) si.placeholder = gn ? 'Search any F&O symbol (220 stocks)...' : 'Search any F&O symbol (218 stocks)...';
     }
     function gnFoDate(iso) {
       if (!iso) return '—';
@@ -4155,7 +4155,7 @@
         if (stdWrap) stdWrap.style.display = ''; if (gnWrap) gnWrap.style.display = 'none'; setFoPillCounts(false); foStdBar(true);
       }
       if (!HOLIDAYS_DATASET) {
-        tbody.innerHTML = '<tr><td colspan="10" style="text-align:center; color:#94A3B8; padding:1rem;">Loading 211 F&amp;O stocks…</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="10" style="text-align:center; color:#94A3B8; padding:1rem;">Loading 218 F&amp;O stocks…</td></tr>';
         return;
       }
       const wantId = foDatasetIdFor(currentHolidayId);
