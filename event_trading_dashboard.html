@@ -2202,6 +2202,33 @@
             </table>
           </div>
         </div>
+
+        <!-- PART 3: ALL F&O REPORT (pool the Top 50 is chosen from) -->
+        <div class="card" style="margin-top:1.5rem;">
+          <div class="card-header" style="flex-direction:column; align-items:flex-start; gap:0.75rem;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; width:100%; flex-wrap:wrap; gap:0.5rem;">
+              <div class="card-title-group">
+                <div style="margin-bottom:0.25rem;"><span class="badge" style="background:#8B5CF6; color:#FFF; font-weight:800;">ALL F&amp;O REPORT</span>
+                  <span class="badge" style="background:rgba(56,189,248,0.2); color:#38BDF8; font-weight:700;">04-DEC-2026 MPC</span></div>
+                <h2 style="font-size:1.15rem; font-weight:700;">&#128202; All F&amp;O Stocks &mdash; pool the Top 50 is chosen from</h2>
+                <p>Every F&amp;O stock with a valid window on the 8x8 grid. Top 50 are tagged. Entries falling on today are shifted to the next trading day.</p>
+              </div>
+              <div id="rbi-allfo-count" style="font-size:0.8rem; color:#93C5FD; font-weight:700; background:rgba(37,99,235,0.15); padding:0.35rem 0.8rem; border-radius:6px; border:1px solid rgba(59,130,246,0.3);"></div>
+            </div>
+            <div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center;">
+              <select id="rbi-allfo-filter" class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.35rem 0.75rem; font-size:0.8rem;" onchange="renderRbiAllFo()">
+                <option value="ALL">All stocks</option><option value="TOP50">Top 50 only</option><option value="LONG">LONG only</option><option value="SHORT">SHORT only</option><option value="TODAY">Entry today (shifted)</option><option value="PASSED">Entry already passed</option>
+              </select>
+              <input type="text" id="rbi-allfo-search" placeholder="Search stock or sector..." class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.35rem 0.75rem; font-size:0.8rem;" oninput="renderRbiAllFo()">
+            </div>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="data-table" style="width:100%;">
+              <thead><tr><th>#</th><th>Symbol</th><th>Sector</th><th style="text-align:center;">Bias</th><th style="text-align:center;">Window</th><th>Entry</th><th>Exit</th><th>Win Rate (Ratio)</th><th>Avg Return %</th><th>Lot &amp; Margin</th><th style="text-align:center;">Top 50</th></tr></thead>
+              <tbody id="rbi-allfo-tbody"></tbody>
+            </table>
+          </div>
+        </div>
       </div>
 
       <!-- SUB-TAB PANEL 1: NIFTY FUTURES INDEX (HISTORICAL) -->
@@ -4450,6 +4477,7 @@
 
       // 2. Render 50 Stocks Table
       renderRbiUpcomingStockTable();
+      renderRbiAllFo();
     }
 
     function setRbiUpcomingDirFilter(dir, el) {
@@ -4498,6 +4526,13 @@
     function rbiParseWindow(w) {
       const m = String(w).match(/T-?(\d+)\s*to\s*T\+?(\d+)/i);
       return m ? { lead: +m[1], hold: +m[2] } : { lead: 2, hold: 3 };
+    }
+    // An entry that falls on today is rolled to the next trading day (tomorrow).
+    function rbiRollEntry(anchor, lead) {
+      const en = rbiShiftTradingDays(anchor, -lead);
+      const now = new Date(); const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      if (en.getTime() === today.getTime()) return { dt: rbiShiftTradingDays(today, 1), shifted: true };
+      return { dt: en, shifted: false };
     }
     function rbiStatusBadge(entryDt, exitDt) {
       const now = new Date();
@@ -4579,9 +4614,10 @@
         // Recompute entry/exit from the window + MPC decision day (source dates were off by one
         // trading day) and derive the live position-taking status.
         const rbiWin = rbiParseWindow(s.window);
-        const rbiEnDt = rbiShiftTradingDays(rbiAnchor, -rbiWin.lead);
+        const rbiRoll = rbiRollEntry(rbiAnchor, rbiWin.lead);
+        const rbiEnDt = rbiRoll.dt;
         const rbiExDt = rbiShiftTradingDays(rbiAnchor, rbiWin.hold);
-        const rbiEntryStr = rbiFmtDMY(rbiEnDt);
+        const rbiEntryStr = rbiFmtDMY(rbiEnDt) + (rbiRoll.shifted ? ' \u27F3 shifted to tomorrow' : '');
         const rbiExitStr = rbiFmtDMY(rbiExDt);
         const rbiSt = rbiStatusBadge(rbiEnDt, rbiExDt);
 
@@ -4639,6 +4675,43 @@
             </td>
           </tr>
         `;
+      }).join('');
+    }
+
+    function renderRbiAllFo() {
+      const tb = document.getElementById('rbi-allfo-tbody'); if (!tb) return;
+      const d = (dashboardData && dashboardData.rbi_policy && dashboardData.rbi_policy[0]) ? dashboardData.rbi_policy[0] : null;
+      if (!d || !d.all_stocks) { tb.innerHTML = '<tr><td colspan="11" style="text-align:center;padding:2rem;color:var(--text-muted);">No data.</td></tr>'; return; }
+      const anchor = rbiParseDMY(d.decision_day) || new Date(2026, 11, 4);
+      const now = new Date(); const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      const q = (document.getElementById('rbi-allfo-search')?.value || '').toLowerCase().trim();
+      const f = document.getElementById('rbi-allfo-filter')?.value || 'ALL';
+      const rows = d.all_stocks.map(s => {
+        const w = rbiParseWindow(s.window), r = rbiRollEntry(anchor, w.lead), ex = rbiShiftTradingDays(anchor, w.hold);
+        return Object.assign({}, s, { _en: r.dt, _sh: r.shifted, _ex: ex, _passed: r.dt < today });
+      }).filter(s => {
+        if (q && !(s.symbol.toLowerCase().includes(q) || (s.sector || '').toLowerCase().includes(q))) return false;
+        if (f === 'TOP50') return s.top50 > 0; if (f === 'LONG' || f === 'SHORT') return s.direction === f;
+        if (f === 'TODAY') return s._sh; if (f === 'PASSED') return s._passed; return true;
+      });
+      const cnt = document.getElementById('rbi-allfo-count'); if (cnt) cnt.textContent = `Showing ${rows.length} of ${d.all_stocks.length} F&O stocks \u2022 ${d.all_stocks.filter(s => s.top50 > 0).length} in Top 50`;
+      tb.innerHTML = rows.map((s, i) => {
+        const L = s.direction === 'LONG';
+        const st = s._sh ? '<span style="color:#F59E0B;font-size:0.66rem;font-weight:800;border:1px solid #F59E0B;border-radius:4px;padding:1px 5px;">\u27F3 SHIFTED TO TOMORROW</span>'
+                 : (s._passed ? '<span style="color:#94A3B8;font-size:0.66rem;font-weight:800;border:1px solid #475569;border-radius:4px;padding:1px 5px;">ENTRY PASSED</span>' : '<span style="color:#60A5FA;font-size:0.66rem;font-weight:800;border:1px solid #334155;border-radius:4px;padding:1px 5px;">UPCOMING</span>');
+        const wc = s.win_rate >= 75 ? '#34D399' : (s.win_rate >= 60 ? '#FBBF24' : '#F87171');
+        return `<tr style="${s.top50 ? 'background:rgba(139,92,246,0.07);' : ''}">
+          <td style="text-align:center;color:var(--text-muted);font-size:0.75rem;">${i + 1}</td>
+          <td><strong style="font-family:'JetBrains Mono';color:#FFF;">${s.symbol}</strong></td>
+          <td style="font-size:0.75rem;color:#CBD5E1;">${s.sector || ''}</td>
+          <td style="text-align:center;"><span class="badge ${L ? 'badge-long' : 'badge-short'}" style="font-weight:700;">${s.direction}</span></td>
+          <td style="text-align:center;"><span style="font-family:'JetBrains Mono';font-size:0.78rem;font-weight:700;color:#38BDF8;">${s.window}</span></td>
+          <td><span style="color:#93C5FD;font-size:0.78rem;font-weight:600;">${rbiFmtDMY(s._en)}</span><div style="margin-top:3px;">${st}</div></td>
+          <td style="color:#CBD5E1;font-size:0.78rem;">${rbiFmtDMY(s._ex)}</td>
+          <td><strong style="color:${wc};font-family:'JetBrains Mono';">${s.win_rate}%</strong><div style="font-size:0.68rem;color:var(--text-muted);">${s.win_ratio}</div></td>
+          <td><strong style="color:${s.avg_ret >= 0 ? '#34D399' : '#F87171'};font-family:'JetBrains Mono';">${s.avg_ret > 0 ? '+' : ''}${s.avg_ret}%</strong></td>
+          <td style="font-size:0.74rem;color:#94A3B8;"><div>Lot: <strong style="color:#FFF;">${s.lot ?? '-'}</strong></div><div>${s.margin ? '\u20B9' + Number(s.margin).toLocaleString('en-IN') : ''}</div></td>
+          <td style="text-align:center;">${s.top50 ? `<span class="badge" style="background:#8B5CF6;color:#FFF;font-weight:800;">#${s.top50}</span>` : ''}</td></tr>`;
       }).join('');
     }
 
