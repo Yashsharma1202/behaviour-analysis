@@ -2215,13 +2215,13 @@
                 <div style="margin-bottom:0.25rem;"><span class="badge" style="background:#8B5CF6; color:#FFF; font-weight:800;">ALL F&amp;O REPORT</span>
                   <span class="badge" style="background:rgba(56,189,248,0.2); color:#38BDF8; font-weight:700;">04-DEC-2026 MPC</span></div>
                 <h2 style="font-size:1.15rem; font-weight:700;">&#128202; All F&amp;O Stocks &mdash; pool the Top 50 is chosen from</h2>
-                <p>Every F&amp;O stock with a valid window on the 8x8 grid. Top 50 are tagged. Entries falling on today are shifted to the next trading day.</p>
+                <p>Every F&amp;O stock with a valid window on the 8x8 grid. Top 50 are tagged.</p>
               </div>
               <div id="rbi-allfo-count" style="font-size:0.8rem; color:#93C5FD; font-weight:700; background:rgba(37,99,235,0.15); padding:0.35rem 0.8rem; border-radius:6px; border:1px solid rgba(59,130,246,0.3);"></div>
             </div>
             <div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center;">
               <select id="rbi-allfo-filter" class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.35rem 0.75rem; font-size:0.8rem;" onchange="renderRbiAllFo()">
-                <option value="ALL">All stocks</option><option value="TOP50">Top 50 only</option><option value="LONG">LONG only</option><option value="SHORT">SHORT only</option><option value="TODAY">Entry today (shifted)</option><option value="PASSED">Entry already passed</option>
+                <option value="ALL">All stocks</option><option value="TOP50">Top 50 only</option><option value="LONG">LONG only</option><option value="SHORT">SHORT only</option><option value="PASSED">Entry already passed</option>
               </select>
               <input type="text" id="rbi-allfo-search" placeholder="Search stock or sector..." class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.35rem 0.75rem; font-size:0.8rem;" oninput="renderRbiAllFo()">
             </div>
@@ -2244,7 +2244,7 @@
                 <div style="margin-bottom:0.25rem;"><span class="badge" style="background:#EF4444; color:#FFF; font-weight:800;">LIVE ALERTS</span>
                   <span class="badge" style="background:rgba(56,189,248,0.2); color:#38BDF8; font-weight:700;">RBI MPC 04-DEC-2026</span></div>
                 <h2 style="font-size:1.15rem; font-weight:700;">&#128276; RBI Policy &mdash; Entry / Exit Alerts</h2>
-                <p>NIFTY, BANK NIFTY and the Top 50 F&amp;O positions. Entries and exits are at the 03:15 PM close. Entries missed on 26-Nov are shifted to 27-Nov.</p>
+                <p>NIFTY, BANK NIFTY and the Top 50 F&amp;O positions. Entries and exits are at the 03:15 PM close.</p>
               </div>
               <button class="filter-pill" id="rbi-alert-notify-btn" style="background:#2563EB; color:#FFF; border:none; padding:0.4rem 0.9rem; font-weight:700; cursor:pointer;" onclick="rbiEnableNotifications()">&#128276; Enable browser alerts</button>
             </div>
@@ -4665,7 +4665,7 @@
         const rbiRoll = rbiRollEntry(rbiAnchor, rbiWin.lead);
         const rbiEnDt = rbiRoll.dt;
         const rbiExDt = rbiShiftTradingDays(rbiAnchor, rbiWin.hold);
-        const rbiEntryStr = rbiFmtDMY(rbiEnDt) + (rbiRoll.shifted ? ' \u27F3 shifted to tomorrow' : '');
+        const rbiEntryStr = rbiFmtDMY(rbiEnDt);
         const rbiExitStr = rbiFmtDMY(rbiExDt);
         const rbiSt = rbiStatusBadge(rbiEnDt, rbiExDt);
 
@@ -4745,7 +4745,7 @@
         else if (dX === 0) { kind = 'EXIT'; label = 'EXIT TODAY'; color = '#F59E0B'; pri = 0; }
         else if (dX === 1 && dE <= 0) { kind = 'EXIT'; label = 'EXIT TOMORROW'; color = '#F87171'; pri = 1; }
         else if (dE === 0) { kind = 'ENTRY'; label = 'ENTER TODAY'; color = '#F59E0B'; pri = 2; }
-        else if (dE === 1) { kind = 'ENTRY'; label = 'ENTER TOMORROW' + (r.shifted ? ' (shifted)' : ''); color = '#F87171'; pri = 3; }
+        else if (dE === 1) { kind = 'ENTRY'; label = 'ENTER TOMORROW' + ''; color = '#F87171'; pri = 3; }
         else if (dE < 0) { kind = 'ACTIVE'; label = 'IN POSITION (exit in ' + dX + 'd)'; color = '#34D399'; pri = 5; }
         else { kind = 'UPCOMING'; label = 'ENTRY IN ' + dE + ' DAYS'; color = '#60A5FA'; pri = 6; }
         return Object.assign({}, s, { _en: r.dt, _ex: ex, _sh: r.shifted, kind, label, color, pri, dE, dX });
@@ -4780,7 +4780,7 @@
         <td><strong style="font-family:'JetBrains Mono';color:#FFF;">${s.symbol}</strong></td>
         <td style="text-align:center;"><span class="badge ${s.direction === 'LONG' ? 'badge-long' : 'badge-short'}" style="font-weight:700;">${s.direction}</span></td>
         <td style="text-align:center;"><span style="font-family:'JetBrains Mono';font-size:0.78rem;font-weight:700;color:#38BDF8;">${s.window}</span></td>
-        <td style="font-size:0.78rem;color:#93C5FD;">${rbiFmtDMY(s._en)}${s._sh ? ' ⟳' : ''}</td>
+        <td style="font-size:0.78rem;color:#93C5FD;">${rbiFmtDMY(s._en)}</td>
         <td style="font-size:0.78rem;color:#CBD5E1;">${rbiFmtDMY(s._ex)}</td>
         <td style="font-size:0.78rem;color:#E2E8F0;">${rbiActionText(s)}</td></tr>`).join('')
         : '<tr><td colspan="7" style="text-align:center;padding:1.5rem;color:var(--text-muted);">No alerts for this filter.</td></tr>';
@@ -4836,13 +4836,12 @@
       }).filter(s => {
         if (q && !(s.symbol.toLowerCase().includes(q) || (s.sector || '').toLowerCase().includes(q))) return false;
         if (f === 'TOP50') return s.top50 > 0; if (f === 'LONG' || f === 'SHORT') return s.direction === f;
-        if (f === 'TODAY') return s._sh; if (f === 'PASSED') return s._passed; return true;
+        if (f === 'PASSED') return s._passed; return true;
       });
       const cnt = document.getElementById('rbi-allfo-count'); if (cnt) cnt.textContent = `Showing ${rows.length} of ${d.all_stocks.length} F&O stocks \u2022 ${d.all_stocks.filter(s => s.top50 > 0).length} in Top 50`;
       tb.innerHTML = rows.map((s, i) => {
         const L = s.direction === 'LONG';
-        const st = s._sh ? '<span style="color:#F59E0B;font-size:0.66rem;font-weight:800;border:1px solid #F59E0B;border-radius:4px;padding:1px 5px;">\u27F3 SHIFTED TO TOMORROW</span>'
-                 : (s._passed ? '<span style="color:#94A3B8;font-size:0.66rem;font-weight:800;border:1px solid #475569;border-radius:4px;padding:1px 5px;">ENTRY PASSED</span>' : '<span style="color:#60A5FA;font-size:0.66rem;font-weight:800;border:1px solid #334155;border-radius:4px;padding:1px 5px;">UPCOMING</span>');
+        const st = (s._passed ? '<span style="color:#94A3B8;font-size:0.66rem;font-weight:800;border:1px solid #475569;border-radius:4px;padding:1px 5px;">ENTRY PASSED</span>' : '<span style="color:#60A5FA;font-size:0.66rem;font-weight:800;border:1px solid #334155;border-radius:4px;padding:1px 5px;">UPCOMING</span>');
         const wc = s.win_rate >= 75 ? '#34D399' : (s.win_rate >= 60 ? '#FBBF24' : '#F87171');
         return `<tr style="${s.top50 ? 'background:rgba(139,92,246,0.07);' : ''}">
           <td style="text-align:center;color:var(--text-muted);font-size:0.75rem;">${i + 1}</td>
