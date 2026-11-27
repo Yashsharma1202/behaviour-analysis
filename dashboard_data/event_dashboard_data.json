@@ -61385,7 +61385,12 @@
           "avg_ret": 4.611,
           "lot": 850.0,
           "margin": 343145.0,
-          "top50": 1
+          "top50": 1,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 26,
+          "oos_wr": 80.8,
+          "oos_avg": 2.706
         },
         {
           "symbol": "VBL",
@@ -61398,7 +61403,12 @@
           "avg_ret": 2.232,
           "lot": 1275.0,
           "margin": 109459.0,
-          "top50": 2
+          "top50": 2,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 27,
+          "oos_wr": 77.8,
+          "oos_avg": 1.858
         },
         {
           "symbol": "HAL",
@@ -61411,7 +61421,12 @@
           "avg_ret": 3.446,
           "lot": 150.0,
           "margin": 147300.0,
-          "top50": 3
+          "top50": 3,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 20,
+          "oos_wr": 75.0,
+          "oos_avg": 3.538
         },
         {
           "symbol": "NAM-INDIA",
@@ -61424,7 +61439,12 @@
           "avg_ret": 2.57,
           "lot": 625.0,
           "margin": 136100.0,
-          "top50": 4
+          "top50": 4,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 22,
+          "oos_wr": 68.2,
+          "oos_avg": 2.814
         },
         {
           "symbol": "IEX",
@@ -61437,7 +61457,12 @@
           "avg_ret": 1.507,
           "lot": 4350.0,
           "margin": 93612.0,
-          "top50": 5
+          "top50": 5,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 22,
+          "oos_wr": 68.2,
+          "oos_avg": 1.19
         },
         {
           "symbol": "IDFCFIRSTB",
@@ -61450,7 +61475,12 @@
           "avg_ret": 2.736,
           "lot": 9275.0,
           "margin": 146675.0,
-          "top50": 6
+          "top50": 6,
+          "nifty50": false,
+          "banknifty": true,
+          "oos_trades": 34,
+          "oos_wr": 67.6,
+          "oos_avg": 3.611
         },
         {
           "symbol": "NAUKRI",
@@ -61463,7 +61493,12 @@
           "avg_ret": 1.558,
           "lot": 550.0,
           "margin": 134200.0,
-          "top50": 7
+          "top50": 7,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 92,
+          "oos_wr": 65.2,
+          "oos_avg": 1.852
         },
         {
           "symbol": "M&M",
@@ -61476,7 +61511,12 @@
           "avg_ret": 1.969,
           "lot": 200.0,
           "margin": 114468.0,
-          "top50": 8
+          "top50": 8,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 64.5,
+          "oos_avg": 1.861
         },
         {
           "symbol": "AUROPHARMA",
@@ -61489,7 +61529,12 @@
           "avg_ret": 1.665,
           "lot": 550.0,
           "margin": 184569.0,
-          "top50": 9
+          "top50": 9,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 64.5,
+          "oos_avg": 1.657
         },
         {
           "symbol": "TITAN",
@@ -61502,7 +61547,12 @@
           "avg_ret": 1.958,
           "lot": 175.0,
           "margin": 155953.0,
-          "top50": 10
+          "top50": 10,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 64.5,
+          "oos_avg": 1.11
         },
         {
           "symbol": "APLAPOLLO",
@@ -61515,7 +61565,12 @@
           "avg_ret": 2.741,
           "lot": 350.0,
           "margin": 151200.0,
-          "top50": 11
+          "top50": 11,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 57,
+          "oos_wr": 63.2,
+          "oos_avg": 2.777
         },
         {
           "symbol": "ADANIENT",
@@ -61528,7 +61583,12 @@
           "avg_ret": 2.436,
           "lot": 309.0,
           "margin": 166860.0,
-          "top50": 12
+          "top50": 12,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 62.7,
+          "oos_avg": 2.355
         },
         {
           "symbol": "VOLTAS",
@@ -61541,7 +61601,12 @@
           "avg_ret": 1.962,
           "lot": 375.0,
           "margin": 77985.0,
-          "top50": 13
+          "top50": 13,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 62.7,
+          "oos_avg": 1.309
         },
         {
           "symbol": "PATANJALI",
@@ -61554,7 +61619,12 @@
           "avg_ret": 0.489,
           "lot": 1075.0,
           "margin": 79281.0,
-          "top50": 14
+          "top50": 14,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 109,
+          "oos_wr": 62.4,
+          "oos_avg": 1.157
         },
         {
           "symbol": "SUZLON",
@@ -61567,7 +61637,12 @@
           "avg_ret": 1.853,
           "lot": 12700.0,
           "margin": 104013.0,
-          "top50": 15
+          "top50": 15,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 98,
+          "oos_wr": 62.2,
+          "oos_avg": 0.497
         },
         {
           "symbol": "APOLLOHOSP",
@@ -61580,7 +61655,12 @@
           "avg_ret": 1.588,
           "lot": 125.0,
           "margin": 197238.0,
-          "top50": 16
+          "top50": 16,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 61.8,
+          "oos_avg": 1.53
         },
         {
           "symbol": "DIXON",
@@ -61593,7 +61673,12 @@
           "avg_ret": 4.291,
           "lot": 50.0,
           "margin": 126660.0,
-          "top50": 17
+          "top50": 17,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 23,
+          "oos_wr": 60.9,
+          "oos_avg": 6.598
         },
         {
           "symbol": "PRESTIGE",
@@ -61606,7 +61691,12 @@
           "avg_ret": 3.075,
           "lot": 450.0,
           "margin": 131670.0,
-          "top50": 18
+          "top50": 18,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 66,
+          "oos_wr": 60.6,
+          "oos_avg": 2.828
         },
         {
           "symbol": "CUMMINSIND",
@@ -61619,7 +61709,12 @@
           "avg_ret": 1.937,
           "lot": 200.0,
           "margin": 185560.0,
-          "top50": 19
+          "top50": 19,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 60.0,
+          "oos_avg": 0.894
         },
         {
           "symbol": "HEROMOTOCO",
@@ -61632,7 +61727,12 @@
           "avg_ret": 0.969,
           "lot": 150.0,
           "margin": 150585.0,
-          "top50": 20
+          "top50": 20,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 60.0,
+          "oos_avg": 0.822
         },
         {
           "symbol": "CROMPTON",
@@ -61645,7 +61745,12 @@
           "avg_ret": 0.562,
           "lot": 2150.0,
           "margin": 92687.0,
-          "top50": 21
+          "top50": 21,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 30,
+          "oos_wr": 60.0,
+          "oos_avg": 0.165
         },
         {
           "symbol": "ALKEM",
@@ -61658,7 +61763,12 @@
           "avg_ret": 0.118,
           "lot": 125.0,
           "margin": 128012.0,
-          "top50": 22
+          "top50": 22,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 32,
+          "oos_wr": 59.4,
+          "oos_avg": 0.455
         },
         {
           "symbol": "TATAPOWER",
@@ -61671,7 +61781,12 @@
           "avg_ret": 1.168,
           "lot": 1450.0,
           "margin": 101442.0,
-          "top50": 23
+          "top50": 23,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 59.1,
+          "oos_avg": 1.178
         },
         {
           "symbol": "INDUSINDBK",
@@ -61684,7 +61799,12 @@
           "avg_ret": 0.929,
           "lot": 700.0,
           "margin": 121240.0,
-          "top50": 24
+          "top50": 24,
+          "nifty50": false,
+          "banknifty": true,
+          "oos_trades": 110,
+          "oos_wr": 59.1,
+          "oos_avg": 0.365
         },
         {
           "symbol": "LTM",
@@ -61697,7 +61817,12 @@
           "avg_ret": 2.257,
           "lot": 150.0,
           "margin": 126783.0,
-          "top50": 25
+          "top50": 25,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 29,
+          "oos_wr": 58.6,
+          "oos_avg": 1.623
         },
         {
           "symbol": "AUBANK",
@@ -61710,7 +61835,12 @@
           "avg_ret": 1.996,
           "lot": 1000.0,
           "margin": 199900.0,
-          "top50": 26
+          "top50": 26,
+          "nifty50": false,
+          "banknifty": true,
+          "oos_trades": 24,
+          "oos_wr": 58.3,
+          "oos_avg": 1.827
         },
         {
           "symbol": "HINDZINC",
@@ -61723,7 +61853,12 @@
           "avg_ret": 1.637,
           "lot": 1225.0,
           "margin": 130095.0,
-          "top50": 27
+          "top50": 27,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 58.2,
+          "oos_avg": 0.882
         },
         {
           "symbol": "BAJFINANCE",
@@ -61736,7 +61871,12 @@
           "avg_ret": 1.714,
           "lot": 750.0,
           "margin": 144788.0,
-          "top50": 28
+          "top50": 28,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 58.2,
+          "oos_avg": 0.73
         },
         {
           "symbol": "MARICO",
@@ -61749,7 +61889,12 @@
           "avg_ret": 1.125,
           "lot": 1200.0,
           "margin": 189180.0,
-          "top50": 29
+          "top50": 29,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 58.2,
+          "oos_avg": 0.725
         },
         {
           "symbol": "DRREDDY",
@@ -61762,7 +61907,12 @@
           "avg_ret": 0.557,
           "lot": 625.0,
           "margin": 152000.0,
-          "top50": 30
+          "top50": 30,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 58.2,
+          "oos_avg": 0.652
         },
         {
           "symbol": "KOTAKBANK",
@@ -61775,7 +61925,12 @@
           "avg_ret": 1.153,
           "lot": 2000.0,
           "margin": 179180.0,
-          "top50": 31
+          "top50": 31,
+          "nifty50": true,
+          "banknifty": true,
+          "oos_trades": 110,
+          "oos_wr": 58.2,
+          "oos_avg": 0.453
         },
         {
           "symbol": "IDEA",
@@ -61788,7 +61943,12 @@
           "avg_ret": 0.358,
           "lot": 71475.0,
           "margin": 178973.0,
-          "top50": 32
+          "top50": 32,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 91,
+          "oos_wr": 58.2,
+          "oos_avg": 0.323
         },
         {
           "symbol": "ONGC",
@@ -61801,7 +61961,12 @@
           "avg_ret": 1.026,
           "lot": 2250.0,
           "margin": 101088.0,
-          "top50": 33
+          "top50": 33,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 58.2,
+          "oos_avg": -0.139
         },
         {
           "symbol": "DMART",
@@ -61814,7 +61979,12 @@
           "avg_ret": 2.909,
           "lot": 150.0,
           "margin": 101352.0,
-          "top50": 34
+          "top50": 34,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 26,
+          "oos_wr": 57.7,
+          "oos_avg": 2.324
         },
         {
           "symbol": "EICHERMOT",
@@ -61827,7 +61997,12 @@
           "avg_ret": 1.674,
           "lot": 100.0,
           "margin": 144500.0,
-          "top50": 35
+          "top50": 35,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 57.3,
+          "oos_avg": 1.495
         },
         {
           "symbol": "TORNTPHARM",
@@ -61840,7 +62015,12 @@
           "avg_ret": 2.107,
           "lot": 125.0,
           "margin": 114603.0,
-          "top50": 36
+          "top50": 36,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 57.3,
+          "oos_avg": 1.395
         },
         {
           "symbol": "MPHASIS",
@@ -61853,7 +62033,12 @@
           "avg_ret": 1.558,
           "lot": 275.0,
           "margin": 133942.0,
-          "top50": 37
+          "top50": 37,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 57.3,
+          "oos_avg": 1.244
         },
         {
           "symbol": "GRASIM",
@@ -61866,7 +62051,12 @@
           "avg_ret": 1.072,
           "lot": 250.0,
           "margin": 143650.0,
-          "top50": 38
+          "top50": 38,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 57.3,
+          "oos_avg": 1.146
         },
         {
           "symbol": "SUNPHARMA",
@@ -61879,7 +62069,12 @@
           "avg_ret": 0.84,
           "lot": 350.0,
           "margin": 123480.0,
-          "top50": 39
+          "top50": 39,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 57.3,
+          "oos_avg": 0.555
         },
         {
           "symbol": "PERSISTENT",
@@ -61892,7 +62087,12 @@
           "avg_ret": 0.996,
           "lot": 125.0,
           "margin": 146000.0,
-          "top50": 40
+          "top50": 40,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 70,
+          "oos_wr": 57.1,
+          "oos_avg": 0.795
         },
         {
           "symbol": "SBILIFE",
@@ -61905,7 +62105,12 @@
           "avg_ret": 1.041,
           "lot": 375.0,
           "margin": 124635.0,
-          "top50": 41
+          "top50": 41,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 23,
+          "oos_wr": 56.5,
+          "oos_avg": 0.07
         },
         {
           "symbol": "COCHINSHIP",
@@ -61918,7 +62123,12 @@
           "avg_ret": -1.049,
           "lot": 400.0,
           "margin": 100320.0,
-          "top50": 42
+          "top50": 42,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 23,
+          "oos_wr": 56.5,
+          "oos_avg": -1.746
         },
         {
           "symbol": "BANKBARODA",
@@ -61931,7 +62141,12 @@
           "avg_ret": 0.978,
           "lot": 2925.0,
           "margin": 133380.0,
-          "top50": 43
+          "top50": 43,
+          "nifty50": false,
+          "banknifty": true,
+          "oos_trades": 110,
+          "oos_wr": 56.4,
+          "oos_avg": 0.798
         },
         {
           "symbol": "LUPIN",
@@ -61944,7 +62159,12 @@
           "avg_ret": 1.064,
           "lot": 425.0,
           "margin": 166022.0,
-          "top50": 44
+          "top50": 44,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 56.4,
+          "oos_avg": 0.668
         },
         {
           "symbol": "INDUSTOWER",
@@ -61957,7 +62177,12 @@
           "avg_ret": 0.363,
           "lot": 1700.0,
           "margin": 129744.0,
-          "top50": 45
+          "top50": 45,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 48,
+          "oos_wr": 56.2,
+          "oos_avg": -0.714
         },
         {
           "symbol": "MUTHOOTFIN",
@@ -61970,7 +62195,12 @@
           "avg_ret": 1.242,
           "lot": 275.0,
           "margin": 141900.0,
-          "top50": 46
+          "top50": 46,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 61,
+          "oos_wr": 55.7,
+          "oos_avg": 1.119
         },
         {
           "symbol": "NBCC",
@@ -61983,7 +62213,12 @@
           "avg_ret": 0.011,
           "lot": 6500.0,
           "margin": 98111.0,
-          "top50": 47
+          "top50": 47,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 54,
+          "oos_wr": 55.6,
+          "oos_avg": 0.271
         },
         {
           "symbol": "PNBHOUSING",
@@ -61996,7 +62231,12 @@
           "avg_ret": 0.764,
           "lot": 650.0,
           "margin": 156000.0,
-          "top50": 48
+          "top50": 48,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 27,
+          "oos_wr": 55.6,
+          "oos_avg": -0.182
         },
         {
           "symbol": "ZYDUSLIFE",
@@ -62009,7 +62249,12 @@
           "avg_ret": 1.463,
           "lot": 900.0,
           "margin": 202446.0,
-          "top50": 49
+          "top50": 49,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 55.5,
+          "oos_avg": 1.591
         },
         {
           "symbol": "SAIL",
@@ -62022,7 +62267,12 @@
           "avg_ret": 0.959,
           "lot": 4700.0,
           "margin": 160073.0,
-          "top50": 50
+          "top50": 50,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 55.5,
+          "oos_avg": 1.395
         },
         {
           "symbol": "POLYCAB",
@@ -62035,7 +62285,12 @@
           "avg_ret": 3.376,
           "lot": 125.0,
           "margin": 205175.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 15,
+          "oos_wr": 60.0,
+          "oos_avg": 2.541
         },
         {
           "symbol": "ETERNAL",
@@ -62048,7 +62303,12 @@
           "avg_ret": 6.278,
           "lot": 2425.0,
           "margin": 156655.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 4,
+          "oos_wr": 75.0,
+          "oos_avg": 7.288
         },
         {
           "symbol": "ANANDRATHI",
@@ -62061,7 +62321,12 @@
           "avg_ret": 2.974,
           "lot": null,
           "margin": null,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 1,
+          "oos_wr": 100.0,
+          "oos_avg": 4.871
         },
         {
           "symbol": "POWERINDIA",
@@ -62074,7 +62339,12 @@
           "avg_ret": 6.232,
           "lot": 25.0,
           "margin": 143850.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 11,
+          "oos_wr": 63.6,
+          "oos_avg": 5.472
         },
         {
           "symbol": "PAYTM",
@@ -62087,7 +62357,12 @@
           "avg_ret": 4.554,
           "lot": 725.0,
           "margin": 248298.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 2,
+          "oos_wr": 100.0,
+          "oos_avg": 12.607
         },
         {
           "symbol": "SBICARD",
@@ -62100,7 +62375,12 @@
           "avg_ret": 1.397,
           "lot": 800.0,
           "margin": 90880.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 11,
+          "oos_wr": 72.7,
+          "oos_avg": 2.012
         },
         {
           "symbol": "MAXHEALTH",
@@ -62113,7 +62393,12 @@
           "avg_ret": 2.591,
           "lot": 525.0,
           "margin": 90090.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 9,
+          "oos_wr": 55.6,
+          "oos_avg": 1.051
         },
         {
           "symbol": "HDFCAMC",
@@ -62126,7 +62411,12 @@
           "avg_ret": 1.021,
           "lot": 300.0,
           "margin": 144900.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 17,
+          "oos_wr": 52.9,
+          "oos_avg": 1.241
         },
         {
           "symbol": "360ONE",
@@ -62139,7 +62429,12 @@
           "avg_ret": 2.985,
           "lot": 500.0,
           "margin": 107300.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 13,
+          "oos_wr": 61.5,
+          "oos_avg": 3.955
         },
         {
           "symbol": "KPITTECH",
@@ -62152,7 +62447,12 @@
           "avg_ret": 3.224,
           "lot": 775.0,
           "margin": 81530.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 15,
+          "oos_wr": 53.3,
+          "oos_avg": -1.169
         },
         {
           "symbol": "POLICYBZR",
@@ -62165,7 +62465,12 @@
           "avg_ret": 1.002,
           "lot": 350.0,
           "margin": 75558.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 2,
+          "oos_wr": 50.0,
+          "oos_avg": 3.473
         },
         {
           "symbol": "KALYANKJIL",
@@ -62178,7 +62483,12 @@
           "avg_ret": 5.974,
           "lot": 1350.0,
           "margin": 150889.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 6,
+          "oos_wr": 66.7,
+          "oos_avg": 6.551
         },
         {
           "symbol": "CAMS",
@@ -62191,7 +62501,12 @@
           "avg_ret": 1.416,
           "lot": 825.0,
           "margin": 116300.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 9,
+          "oos_wr": 66.7,
+          "oos_avg": 3.005
         },
         {
           "symbol": "ANGELONE",
@@ -62204,7 +62519,12 @@
           "avg_ret": 4.227,
           "lot": 2500.0,
           "margin": 156500.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 9,
+          "oos_wr": 55.6,
+          "oos_avg": 3.476
         },
         {
           "symbol": "UJJIVANSFB",
@@ -62217,7 +62537,12 @@
           "avg_ret": 3.496,
           "lot": null,
           "margin": null,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 11,
+          "oos_wr": 63.6,
+          "oos_avg": 4.101
         },
         {
           "symbol": "IRFC",
@@ -62230,7 +62555,12 @@
           "avg_ret": 0.279,
           "lot": 5425.0,
           "margin": 85607.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 7,
+          "oos_wr": 57.1,
+          "oos_avg": -1.134
         },
         {
           "symbol": "SONACOMS",
@@ -62243,7 +62573,12 @@
           "avg_ret": -1.263,
           "lot": 1225.0,
           "margin": 196245.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 4,
+          "oos_wr": 0.0,
+          "oos_avg": -5.742
         },
         {
           "symbol": "INDIGO",
@@ -62256,7 +62591,12 @@
           "avg_ret": 1.768,
           "lot": 150.0,
           "margin": 141555.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 33,
+          "oos_wr": 54.5,
+          "oos_avg": 0.228
         },
         {
           "symbol": "BANDHANBNK",
@@ -62269,7 +62609,12 @@
           "avg_ret": 1.423,
           "lot": 3600.0,
           "margin": 122645.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": true,
+          "oos_trades": 20,
+          "oos_wr": 50.0,
+          "oos_avg": 1.066
         },
         {
           "symbol": "LODHA",
@@ -62282,7 +62627,12 @@
           "avg_ret": 2.392,
           "lot": 625.0,
           "margin": 132450.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 5,
+          "oos_wr": 40.0,
+          "oos_avg": 2.433
         },
         {
           "symbol": "NYKAA",
@@ -62295,7 +62645,12 @@
           "avg_ret": 1.052,
           "lot": 3125.0,
           "margin": 211500.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 2,
+          "oos_wr": 100.0,
+          "oos_avg": 1.803
         },
         {
           "symbol": "TIINDIA",
@@ -62308,7 +62663,12 @@
           "avg_ret": 2.215,
           "lot": 200.0,
           "margin": 87384.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 22,
+          "oos_wr": 50.0,
+          "oos_avg": 0.765
         },
         {
           "symbol": "INFY",
@@ -62321,7 +62681,12 @@
           "avg_ret": 1.283,
           "lot": 400.0,
           "margin": 88800.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 55.5,
+          "oos_avg": 0.385
         },
         {
           "symbol": "BLUESTARCO",
@@ -62334,7 +62699,12 @@
           "avg_ret": 0.991,
           "lot": 325.0,
           "margin": 103480.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 53.6,
+          "oos_avg": 0.601
         },
         {
           "symbol": "BDL",
@@ -62347,7 +62717,12 @@
           "avg_ret": 0.376,
           "lot": 425.0,
           "margin": 95736.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 20,
+          "oos_wr": 55.0,
+          "oos_avg": 0.015
         },
         {
           "symbol": "JINDALSTEL",
@@ -62360,7 +62735,12 @@
           "avg_ret": 1.868,
           "lot": 625.0,
           "margin": 128750.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 55.5,
+          "oos_avg": 0.834
         },
         {
           "symbol": "VEDL",
@@ -62373,7 +62753,12 @@
           "avg_ret": 1.972,
           "lot": 1150.0,
           "margin": 56557.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 51.8,
+          "oos_avg": 0.712
         },
         {
           "symbol": "MCX",
@@ -62386,7 +62771,12 @@
           "avg_ret": 1.699,
           "lot": 225.0,
           "margin": 144738.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 55,
+          "oos_wr": 52.7,
+          "oos_avg": 0.911
         },
         {
           "symbol": "HDFCLIFE",
@@ -62399,7 +62789,12 @@
           "avg_ret": 0.093,
           "lot": 1100.0,
           "margin": 121121.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 22,
+          "oos_wr": 40.9,
+          "oos_avg": -0.617
         },
         {
           "symbol": "MAHABANK",
@@ -62412,7 +62807,12 @@
           "avg_ret": 1.279,
           "lot": 6500.0,
           "margin": 104208.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 101,
+          "oos_wr": 50.5,
+          "oos_avg": 0.105
         },
         {
           "symbol": "PIIND",
@@ -62425,7 +62825,12 @@
           "avg_ret": 1.586,
           "lot": 175.0,
           "margin": 77133.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 61,
+          "oos_wr": 54.1,
+          "oos_avg": 0.418
         },
         {
           "symbol": "MAZDOCK",
@@ -62438,7 +62843,12 @@
           "avg_ret": 4.283,
           "lot": 225.0,
           "margin": 94725.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 8,
+          "oos_wr": 37.5,
+          "oos_avg": 0.658
         },
         {
           "symbol": "HCLTECH",
@@ -62451,7 +62861,12 @@
           "avg_ret": 1.751,
           "lot": 400.0,
           "margin": 108800.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 55.5,
+          "oos_avg": 0.641
         },
         {
           "symbol": "TATASTEEL",
@@ -62464,7 +62879,12 @@
           "avg_ret": 1.27,
           "lot": 2750.0,
           "margin": 97020.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 52.7,
+          "oos_avg": 0.916
         },
         {
           "symbol": "AMBER",
@@ -62477,7 +62897,12 @@
           "avg_ret": 0.585,
           "lot": 100.0,
           "margin": 132900.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 21,
+          "oos_wr": 38.1,
+          "oos_avg": -2.428
         },
         {
           "symbol": "MANAPPURAM",
@@ -62490,7 +62915,12 @@
           "avg_ret": 0.207,
           "lot": 3000.0,
           "margin": 194400.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 69,
+          "oos_wr": 55.1,
+          "oos_avg": -0.275
         },
         {
           "symbol": "BSE",
@@ -62503,7 +62933,12 @@
           "avg_ret": 4.771,
           "lot": 200.0,
           "margin": 137120.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 26,
+          "oos_wr": 46.2,
+          "oos_avg": -0.439
         },
         {
           "symbol": "ABCAPITAL",
@@ -62516,7 +62951,12 @@
           "avg_ret": 1.62,
           "lot": 3100.0,
           "margin": 234918.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 23,
+          "oos_wr": 52.2,
+          "oos_avg": -0.197
         },
         {
           "symbol": "MARUTI",
@@ -62529,7 +62969,12 @@
           "avg_ret": 0.535,
           "lot": 50.0,
           "margin": 114450.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 105,
+          "oos_wr": 50.5,
+          "oos_avg": 0.604
         },
         {
           "symbol": "JSWSTEEL",
@@ -62542,7 +62987,12 @@
           "avg_ret": 0.985,
           "lot": 675.0,
           "margin": 162054.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 105,
+          "oos_wr": 46.7,
+          "oos_avg": -0.31
         },
         {
           "symbol": "RVNL",
@@ -62555,7 +63005,12 @@
           "avg_ret": 0.186,
           "lot": 1925.0,
           "margin": 75745.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 15,
+          "oos_wr": 46.7,
+          "oos_avg": -1.324
         },
         {
           "symbol": "TVSMOTOR",
@@ -62568,7 +63023,12 @@
           "avg_ret": 1.241,
           "lot": 175.0,
           "margin": 140700.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 55.5,
+          "oos_avg": 0.073
         },
         {
           "symbol": "AMBUJACEM",
@@ -62581,7 +63041,12 @@
           "avg_ret": 1.564,
           "lot": 1200.0,
           "margin": 83760.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 54.5,
+          "oos_avg": 1.004
         },
         {
           "symbol": "RBLBANK",
@@ -62594,7 +63059,12 @@
           "avg_ret": 1.081,
           "lot": 3175.0,
           "margin": 237585.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 28,
+          "oos_wr": 53.6,
+          "oos_avg": -0.417
         },
         {
           "symbol": "OFSS",
@@ -62607,7 +63077,12 @@
           "avg_ret": 1.539,
           "lot": 100.0,
           "margin": 208400.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 52.7,
+          "oos_avg": 1.241
         },
         {
           "symbol": "ASIANPAINT",
@@ -62620,7 +63095,12 @@
           "avg_ret": 1.701,
           "lot": 250.0,
           "margin": 117235.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 50.9,
+          "oos_avg": 0.647
         },
         {
           "symbol": "ASTRAL",
@@ -62633,7 +63113,12 @@
           "avg_ret": 1.599,
           "lot": 425.0,
           "margin": 122681.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 91,
+          "oos_wr": 53.8,
+          "oos_avg": 1.083
         },
         {
           "symbol": "DIVISLAB",
@@ -62646,7 +63131,12 @@
           "avg_ret": 2.547,
           "lot": 100.0,
           "margin": 180600.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 107,
+          "oos_wr": 52.3,
+          "oos_avg": 1.181
         },
         {
           "symbol": "SOLARINDS",
@@ -62659,7 +63149,12 @@
           "avg_ret": 1.648,
           "lot": 50.0,
           "margin": 198660.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 96,
+          "oos_wr": 55.2,
+          "oos_avg": 1.393
         },
         {
           "symbol": "TECHM",
@@ -62672,7 +63167,12 @@
           "avg_ret": 0.465,
           "lot": 600.0,
           "margin": 198000.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 93,
+          "oos_wr": 53.8,
+          "oos_avg": -0.143
         },
         {
           "symbol": "LTF",
@@ -62685,7 +63185,12 @@
           "avg_ret": 0.118,
           "lot": 2250.0,
           "margin": 117900.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 59,
+          "oos_wr": 52.5,
+          "oos_avg": -0.66
         },
         {
           "symbol": "PETRONET",
@@ -62698,7 +63203,12 @@
           "avg_ret": 1.347,
           "lot": 1900.0,
           "margin": 112176.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 103,
+          "oos_wr": 50.5,
+          "oos_avg": -0.101
         },
         {
           "symbol": "ADANIGREEN",
@@ -62711,7 +63221,12 @@
           "avg_ret": -1.546,
           "lot": 600.0,
           "margin": 156852.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 18,
+          "oos_wr": 38.9,
+          "oos_avg": -3.494
         },
         {
           "symbol": "BAJAJFINSV",
@@ -62724,7 +63239,12 @@
           "avg_ret": 1.412,
           "lot": 300.0,
           "margin": 103920.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 55.5,
+          "oos_avg": 0.087
         },
         {
           "symbol": "WIPRO",
@@ -62737,7 +63257,12 @@
           "avg_ret": 1.453,
           "lot": 3000.0,
           "margin": 104430.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 54.5,
+          "oos_avg": 0.867
         },
         {
           "symbol": "ULTRACEMCO",
@@ -62750,7 +63275,12 @@
           "avg_ret": 1.172,
           "lot": 50.0,
           "margin": 107950.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 53.6,
+          "oos_avg": 0.856
         },
         {
           "symbol": "HINDALCO",
@@ -62763,7 +63293,12 @@
           "avg_ret": 0.775,
           "lot": 700.0,
           "margin": 125139.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 53.6,
+          "oos_avg": -0.746
         },
         {
           "symbol": "BOSCHLTD",
@@ -62776,7 +63311,12 @@
           "avg_ret": 0.71,
           "lot": 25.0,
           "margin": 225000.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 52.7,
+          "oos_avg": 0.706
         },
         {
           "symbol": "GODREJCP",
@@ -62789,7 +63329,12 @@
           "avg_ret": 0.356,
           "lot": 500.0,
           "margin": 87130.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 52.7,
+          "oos_avg": 0.172
         },
         {
           "symbol": "GAIL",
@@ -62802,7 +63347,12 @@
           "avg_ret": 1.121,
           "lot": 3550.0,
           "margin": 120239.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 50.9,
+          "oos_avg": 0.268
         },
         {
           "symbol": "LICHSGFIN",
@@ -62815,7 +63365,12 @@
           "avg_ret": 1.453,
           "lot": 1000.0,
           "margin": 107000.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 50.9,
+          "oos_avg": -0.015
         },
         {
           "symbol": "TMPV",
@@ -62828,7 +63383,12 @@
           "avg_ret": 0.715,
           "lot": 1600.0,
           "margin": 91856.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 50.9,
+          "oos_avg": -0.493
         },
         {
           "symbol": "SIEMENS",
@@ -62841,7 +63401,12 @@
           "avg_ret": 0.929,
           "lot": 175.0,
           "margin": 131771.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 48.2,
+          "oos_avg": 0.227
         },
         {
           "symbol": "PHOENIXLTD",
@@ -62854,7 +63419,12 @@
           "avg_ret": 1.012,
           "lot": 350.0,
           "margin": 134204.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 90,
+          "oos_wr": 45.6,
+          "oos_avg": 0.079
         },
         {
           "symbol": "ADANIPOWER",
@@ -62867,7 +63437,12 @@
           "avg_ret": 0.126,
           "lot": 3550.0,
           "margin": 139515.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 72,
+          "oos_wr": 54.2,
+          "oos_avg": -1.802
         },
         {
           "symbol": "NHPC",
@@ -62880,7 +63455,12 @@
           "avg_ret": 0.23,
           "lot": 6950.0,
           "margin": 101053.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 73,
+          "oos_wr": 47.9,
+          "oos_avg": -0.679
         },
         {
           "symbol": "COALINDIA",
@@ -62893,7 +63473,12 @@
           "avg_ret": 0.297,
           "lot": 1350.0,
           "margin": 112860.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 65,
+          "oos_wr": 52.3,
+          "oos_avg": -0.362
         },
         {
           "symbol": "CDSL",
@@ -62906,7 +63491,12 @@
           "avg_ret": 2.384,
           "lot": 475.0,
           "margin": 122835.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 24,
+          "oos_wr": 50.0,
+          "oos_avg": -1.719
         },
         {
           "symbol": "FORCEMOT",
@@ -62919,7 +63509,12 @@
           "avg_ret": 2.24,
           "lot": 25.0,
           "margin": 87890.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 12,
+          "oos_wr": 50.0,
+          "oos_avg": -2.006
         },
         {
           "symbol": "RADICO",
@@ -62932,7 +63527,12 @@
           "avg_ret": 1.615,
           "lot": 150.0,
           "margin": 133470.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 105,
+          "oos_wr": 54.3,
+          "oos_avg": -0.012
         },
         {
           "symbol": "RELIANCE",
@@ -62945,7 +63545,12 @@
           "avg_ret": 0.969,
           "lot": 500.0,
           "margin": 121500.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 53.6,
+          "oos_avg": 0.254
         },
         {
           "symbol": "BPCL",
@@ -62958,7 +63563,12 @@
           "avg_ret": 0.712,
           "lot": 1975.0,
           "margin": 116012.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 52.7,
+          "oos_avg": 0.753
         },
         {
           "symbol": "BAJAJ-AUTO",
@@ -62971,7 +63581,12 @@
           "avg_ret": 0.617,
           "lot": 75.0,
           "margin": 155775.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 52.7,
+          "oos_avg": 0.51
         },
         {
           "symbol": "ADANIPORTS",
@@ -62984,7 +63599,12 @@
           "avg_ret": 1.319,
           "lot": 475.0,
           "margin": 165604.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 87,
+          "oos_wr": 51.7,
+          "oos_avg": 0.684
         },
         {
           "symbol": "BHARATFORG",
@@ -62997,7 +63617,12 @@
           "avg_ret": 1.19,
           "lot": 500.0,
           "margin": 185240.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 50.9,
+          "oos_avg": 0.683
         },
         {
           "symbol": "PIDILITIND",
@@ -63010,7 +63635,12 @@
           "avg_ret": 0.731,
           "lot": 500.0,
           "margin": 149950.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 50.9,
+          "oos_avg": 0.345
         },
         {
           "symbol": "HAVELLS",
@@ -63023,7 +63653,12 @@
           "avg_ret": 0.887,
           "lot": 500.0,
           "margin": 111990.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 47.3,
+          "oos_avg": 0.217
         },
         {
           "symbol": "BIOCON",
@@ -63036,7 +63671,12 @@
           "avg_ret": 0.637,
           "lot": 2500.0,
           "margin": 176000.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 102,
+          "oos_wr": 52.0,
+          "oos_avg": 0.153
         },
         {
           "symbol": "FORTIS",
@@ -63049,7 +63689,12 @@
           "avg_ret": 1.504,
           "lot": 775.0,
           "margin": 115669.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 89,
+          "oos_wr": 51.7,
+          "oos_avg": 0.494
         },
         {
           "symbol": "ICICIGI",
@@ -63062,7 +63707,12 @@
           "avg_ret": -0.277,
           "lot": 325.0,
           "margin": 111345.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 23,
+          "oos_wr": 43.5,
+          "oos_avg": -0.921
         },
         {
           "symbol": "PAGEIND",
@@ -63075,7 +63725,12 @@
           "avg_ret": 1.345,
           "lot": 20.0,
           "margin": 146520.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 91,
+          "oos_wr": 51.6,
+          "oos_avg": 0.875
         },
         {
           "symbol": "SHREECEM",
@@ -63088,7 +63743,12 @@
           "avg_ret": 0.802,
           "lot": 25.0,
           "margin": 110925.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 55.5,
+          "oos_avg": 0.637
         },
         {
           "symbol": "TRENT",
@@ -63101,7 +63761,12 @@
           "avg_ret": 1.687,
           "lot": 225.0,
           "margin": 132736.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 54.5,
+          "oos_avg": -0.286
         },
         {
           "symbol": "AXISBANK",
@@ -63114,7 +63779,12 @@
           "avg_ret": 1.137,
           "lot": 625.0,
           "margin": 161000.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": true,
+          "oos_trades": 110,
+          "oos_wr": 50.9,
+          "oos_avg": 0.632
         },
         {
           "symbol": "SRF",
@@ -63127,7 +63797,12 @@
           "avg_ret": 1.777,
           "lot": 200.0,
           "margin": 99988.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 50.0,
+          "oos_avg": -0.097
         },
         {
           "symbol": "YESBANK",
@@ -63140,7 +63815,12 @@
           "avg_ret": 1.581,
           "lot": 31100.0,
           "margin": 112706.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": true,
+          "oos_trades": 99,
+          "oos_wr": 50.5,
+          "oos_avg": 0.643
         },
         {
           "symbol": "DLF",
@@ -63153,7 +63833,12 @@
           "avg_ret": 0.295,
           "lot": 950.0,
           "margin": 127395.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 89,
+          "oos_wr": 44.9,
+          "oos_avg": -0.343
         },
         {
           "symbol": "ADANIENSOL",
@@ -63166,7 +63851,12 @@
           "avg_ret": 2.523,
           "lot": 675.0,
           "margin": 182817.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 34,
+          "oos_wr": 47.1,
+          "oos_avg": -0.667
         },
         {
           "symbol": "INOXWIND",
@@ -63179,7 +63869,12 @@
           "avg_ret": 2.039,
           "lot": 6400.0,
           "margin": 87782.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 34,
+          "oos_wr": 44.1,
+          "oos_avg": -1.188
         },
         {
           "symbol": "CIPLA",
@@ -63192,7 +63887,12 @@
           "avg_ret": 1.054,
           "lot": 425.0,
           "margin": 111741.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 51.8,
+          "oos_avg": 0.555
         },
         {
           "symbol": "IOC",
@@ -63205,7 +63905,12 @@
           "avg_ret": 1.15,
           "lot": 4875.0,
           "margin": 125609.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 50.9,
+          "oos_avg": 0.077
         },
         {
           "symbol": "BANKINDIA",
@@ -63218,7 +63923,12 @@
           "avg_ret": 0.179,
           "lot": 5200.0,
           "margin": 135616.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 50.0,
+          "oos_avg": -0.679
         },
         {
           "symbol": "CONCOR",
@@ -63231,7 +63941,12 @@
           "avg_ret": -0.102,
           "lot": 1250.0,
           "margin": 111625.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 49.1,
+          "oos_avg": -0.121
         },
         {
           "symbol": "MOTILALOFS",
@@ -63244,7 +63959,12 @@
           "avg_ret": 2.231,
           "lot": 775.0,
           "margin": 164757.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 88,
+          "oos_wr": 48.9,
+          "oos_avg": -0.156
         },
         {
           "symbol": "FEDERALBNK",
@@ -63257,7 +63977,12 @@
           "avg_ret": 0.867,
           "lot": 2500.0,
           "margin": 167500.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": true,
+          "oos_trades": 110,
+          "oos_wr": 48.2,
+          "oos_avg": 0.025
         },
         {
           "symbol": "BRITANNIA",
@@ -63270,7 +63995,12 @@
           "avg_ret": 0.216,
           "lot": 125.0,
           "margin": 121250.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 48.2,
+          "oos_avg": -0.365
         },
         {
           "symbol": "PFC",
@@ -63283,7 +64013,12 @@
           "avg_ret": 1.13,
           "lot": 1300.0,
           "margin": 88998.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 91,
+          "oos_wr": 48.4,
+          "oos_avg": 0.156
         },
         {
           "symbol": "CGPOWER",
@@ -63296,7 +64031,12 @@
           "avg_ret": 1.867,
           "lot": 850.0,
           "margin": 139060.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 54.5,
+          "oos_avg": 0.655
         },
         {
           "symbol": "DABUR",
@@ -63309,7 +64049,12 @@
           "avg_ret": 0.371,
           "lot": 1250.0,
           "margin": 97100.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 52.7,
+          "oos_avg": 0.219
         },
         {
           "symbol": "ASHOKLEY",
@@ -63322,7 +64067,12 @@
           "avg_ret": 1.45,
           "lot": 5000.0,
           "margin": 148180.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 51.8,
+          "oos_avg": 1.002
         },
         {
           "symbol": "HDFCBANK",
@@ -63335,7 +64085,12 @@
           "avg_ret": 0.278,
           "lot": 650.0,
           "margin": 94490.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": true,
+          "oos_trades": 110,
+          "oos_wr": 51.8,
+          "oos_avg": 0.276
         },
         {
           "symbol": "NMDC",
@@ -63348,7 +64103,12 @@
           "avg_ret": 1.365,
           "lot": 6750.0,
           "margin": 95607.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 86,
+          "oos_wr": 50.0,
+          "oos_avg": 0.078
         },
         {
           "symbol": "SUPREMEIND",
@@ -63361,7 +64121,12 @@
           "avg_ret": 1.672,
           "lot": 175.0,
           "margin": 126560.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 49.1,
+          "oos_avg": 1.169
         },
         {
           "symbol": "BEL",
@@ -63374,7 +64139,12 @@
           "avg_ret": 1.02,
           "lot": 1425.0,
           "margin": 108414.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 48.2,
+          "oos_avg": -0.065
         },
         {
           "symbol": "BHEL",
@@ -63387,7 +64157,12 @@
           "avg_ret": -0.095,
           "lot": 2625.0,
           "margin": 227981.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 47.3,
+          "oos_avg": -0.111
         },
         {
           "symbol": "SBIN",
@@ -63400,7 +64175,12 @@
           "avg_ret": 0.799,
           "lot": 750.0,
           "margin": 144000.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": true,
+          "oos_trades": 110,
+          "oos_wr": 43.6,
+          "oos_avg": -0.616
         },
         {
           "symbol": "NTPC",
@@ -63413,7 +64193,12 @@
           "avg_ret": 0.82,
           "lot": 1500.0,
           "margin": 94395.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 100,
+          "oos_wr": 54.0,
+          "oos_avg": 0.173
         },
         {
           "symbol": "POWERGRID",
@@ -63426,7 +64211,12 @@
           "avg_ret": 0.014,
           "lot": 1900.0,
           "margin": 94943.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 88,
+          "oos_wr": 51.1,
+          "oos_avg": -0.741
         },
         {
           "symbol": "JUBLFOOD",
@@ -63439,7 +64229,12 @@
           "avg_ret": 1.153,
           "lot": 1250.0,
           "margin": 106425.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 71,
+          "oos_wr": 45.1,
+          "oos_avg": -0.935
         },
         {
           "symbol": "OBEROIRLTY",
@@ -63452,7 +64247,12 @@
           "avg_ret": 1.13,
           "lot": 350.0,
           "margin": 119420.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 66,
+          "oos_wr": 40.9,
+          "oos_avg": -1.352
         },
         {
           "symbol": "PGEL",
@@ -63465,7 +64265,12 @@
           "avg_ret": 3.218,
           "lot": 950.0,
           "margin": 99512.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 58,
+          "oos_wr": 50.0,
+          "oos_avg": -0.513
         },
         {
           "symbol": "COFORGE",
@@ -63478,7 +64283,12 @@
           "avg_ret": 0.343,
           "lot": 475.0,
           "margin": 183759.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 101,
+          "oos_wr": 49.5,
+          "oos_avg": -0.514
         },
         {
           "symbol": "MOTHERSON",
@@ -63491,7 +64301,12 @@
           "avg_ret": 0.604,
           "lot": 6150.0,
           "margin": 197612.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 52.7,
+          "oos_avg": -0.521
         },
         {
           "symbol": "MFSL",
@@ -63504,7 +64319,12 @@
           "avg_ret": 1.254,
           "lot": 400.0,
           "margin": 102720.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 49.1,
+          "oos_avg": 1.044
         },
         {
           "symbol": "TATACONSUM",
@@ -63517,7 +64337,12 @@
           "avg_ret": 1.175,
           "lot": 550.0,
           "margin": 108669.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 48.2,
+          "oos_avg": 0.242
         },
         {
           "symbol": "CHOLAFIN",
@@ -63530,7 +64355,12 @@
           "avg_ret": 1.147,
           "lot": 625.0,
           "margin": 198250.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 48.2,
+          "oos_avg": -0.834
         },
         {
           "symbol": "COLPAL",
@@ -63543,7 +64373,12 @@
           "avg_ret": 0.793,
           "lot": 275.0,
           "margin": 97960.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 47.3,
+          "oos_avg": 0.189
         },
         {
           "symbol": "LT",
@@ -63556,7 +64391,12 @@
           "avg_ret": 0.346,
           "lot": 175.0,
           "margin": 127120.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 47.3,
+          "oos_avg": 0.048
         },
         {
           "symbol": "ICICIBANK",
@@ -63569,7 +64409,12 @@
           "avg_ret": 1.411,
           "lot": 700.0,
           "margin": 194516.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": true,
+          "oos_trades": 110,
+          "oos_wr": 44.5,
+          "oos_avg": -0.681
         },
         {
           "symbol": "HINDUNILVR",
@@ -63582,7 +64427,12 @@
           "avg_ret": 0.439,
           "lot": 300.0,
           "margin": 113826.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 43.6,
+          "oos_avg": -0.079
         },
         {
           "symbol": "RECLTD",
@@ -63595,7 +64445,12 @@
           "avg_ret": 0.775,
           "lot": 1575.0,
           "margin": 97571.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 86,
+          "oos_wr": 48.8,
+          "oos_avg": 0.989
         },
         {
           "symbol": "GODREJPROP",
@@ -63608,7 +64463,12 @@
           "avg_ret": -0.585,
           "lot": 325.0,
           "margin": 105099.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 72,
+          "oos_wr": 45.8,
+          "oos_avg": -2.396
         },
         {
           "symbol": "JSWENERGY",
@@ -63621,7 +64481,12 @@
           "avg_ret": 0.713,
           "lot": 1075.0,
           "margin": 102974.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 72,
+          "oos_wr": 43.1,
+          "oos_avg": -2.924
         },
         {
           "symbol": "TATAELXSI",
@@ -63634,7 +64499,12 @@
           "avg_ret": 0.702,
           "lot": 125.0,
           "margin": 92500.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 51.8,
+          "oos_avg": -0.184
         },
         {
           "symbol": "OIL",
@@ -63647,7 +64517,12 @@
           "avg_ret": -0.108,
           "lot": 1400.0,
           "margin": 124712.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 73,
+          "oos_wr": 37.0,
+          "oos_avg": -0.442
         },
         {
           "symbol": "GODFRYPHLP",
@@ -63660,7 +64535,12 @@
           "avg_ret": 2.31,
           "lot": 275.0,
           "margin": 102300.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 50.9,
+          "oos_avg": -1.297
         },
         {
           "symbol": "HINDPETRO",
@@ -63673,7 +64553,12 @@
           "avg_ret": 0.92,
           "lot": 2025.0,
           "margin": 141142.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 50.0,
+          "oos_avg": 0.006
         },
         {
           "symbol": "NATIONALUM",
@@ -63686,7 +64571,12 @@
           "avg_ret": 1.645,
           "lot": 1875.0,
           "margin": 119400.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 50.0,
+          "oos_avg": -0.354
         },
         {
           "symbol": "SHRIRAMFIN",
@@ -63699,7 +64589,12 @@
           "avg_ret": 0.547,
           "lot": 825.0,
           "margin": 155727.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 50.0,
+          "oos_avg": -1.217
         },
         {
           "symbol": "ABB",
@@ -63712,7 +64607,12 @@
           "avg_ret": 0.576,
           "lot": 125.0,
           "margin": 170400.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 49.1,
+          "oos_avg": -1.104
         },
         {
           "symbol": "BHARTIARTL",
@@ -63725,7 +64625,12 @@
           "avg_ret": 0.487,
           "lot": 475.0,
           "margin": 176130.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 48.2,
+          "oos_avg": -0.205
         },
         {
           "symbol": "UPL",
@@ -63738,7 +64643,12 @@
           "avg_ret": 0.316,
           "lot": 1355.0,
           "margin": 146625.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 43.6,
+          "oos_avg": -0.686
         },
         {
           "symbol": "TCS",
@@ -63751,7 +64661,12 @@
           "avg_ret": 0.351,
           "lot": 225.0,
           "margin": 105750.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 47.3,
+          "oos_avg": -0.928
         },
         {
           "symbol": "ITC",
@@ -63764,7 +64679,12 @@
           "avg_ret": 0.245,
           "lot": 1725.0,
           "margin": 91045.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 43.6,
+          "oos_avg": -0.449
         },
         {
           "symbol": "KEI",
@@ -63777,7 +64697,12 @@
           "avg_ret": 0.346,
           "lot": 175.0,
           "margin": 159992.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 96,
+          "oos_wr": 45.8,
+          "oos_avg": -0.182
         },
         {
           "symbol": "CANBK",
@@ -63790,7 +64715,12 @@
           "avg_ret": 0.936,
           "lot": 6750.0,
           "margin": 158112.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": true,
+          "oos_trades": 108,
+          "oos_wr": 47.2,
+          "oos_avg": -0.382
         },
         {
           "symbol": "GLENMARK",
@@ -63803,7 +64733,12 @@
           "avg_ret": 0.799,
           "lot": 375.0,
           "margin": 168788.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 49.1,
+          "oos_avg": -0.289
         },
         {
           "symbol": "INDHOTEL",
@@ -63816,7 +64751,12 @@
           "avg_ret": 0.805,
           "lot": 1000.0,
           "margin": 148290.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 48.2,
+          "oos_avg": -0.612
         },
         {
           "symbol": "UNITDSPR",
@@ -63829,7 +64769,12 @@
           "avg_ret": 1.04,
           "lot": 400.0,
           "margin": 110528.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 38.2,
+          "oos_avg": -0.348
         },
         {
           "symbol": "INDIANB",
@@ -63842,7 +64787,12 @@
           "avg_ret": 0.29,
           "lot": 1000.0,
           "margin": 167000.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 91,
+          "oos_wr": 45.1,
+          "oos_avg": -0.676
         },
         {
           "symbol": "UNOMINDA",
@@ -63855,7 +64805,12 @@
           "avg_ret": 1.451,
           "lot": 550.0,
           "margin": 121440.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 90,
+          "oos_wr": 44.4,
+          "oos_avg": -1.532
         },
         {
           "symbol": "GMRAIRPORT",
@@ -63868,7 +64823,12 @@
           "avg_ret": -0.925,
           "lot": 6975.0,
           "margin": 126206.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 93,
+          "oos_wr": 49.5,
+          "oos_avg": -0.755
         },
         {
           "symbol": "UNIONBANK",
@@ -63881,7 +64841,12 @@
           "avg_ret": -0.651,
           "lot": 4425.0,
           "margin": 152822.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 44.5,
+          "oos_avg": -0.594
         },
         {
           "symbol": "PNB",
@@ -63894,7 +64859,12 @@
           "avg_ret": 0.712,
           "lot": 8000.0,
           "margin": 184080.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": true,
+          "oos_trades": 110,
+          "oos_wr": 40.0,
+          "oos_avg": -1.06
         },
         {
           "symbol": "GVT&D",
@@ -63907,7 +64877,12 @@
           "avg_ret": -0.189,
           "lot": 125.0,
           "margin": 98725.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 49.1,
+          "oos_avg": -1.346
         },
         {
           "symbol": "NESTLEIND",
@@ -63920,10 +64895,433 @@
           "avg_ret": 0.474,
           "lot": 500.0,
           "margin": 127580.0,
-          "top50": 0
+          "top50": 0,
+          "nifty50": true,
+          "banknifty": false,
+          "oos_trades": 110,
+          "oos_wr": 43.6,
+          "oos_avg": 0.151
+        },
+        {
+          "symbol": "ATHERENERG",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-2 to T+6",
+          "win_rate": 100.0,
+          "win_ratio": "10 Wins / 10 Events",
+          "events": 10,
+          "avg_ret": 6.687,
+          "lot": 375,
+          "margin": 110250,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "COROMANDEL",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-2 to T+1",
+          "win_rate": 59.3,
+          "win_ratio": "83 Wins / 140 Events",
+          "events": 140,
+          "avg_ret": 1.168,
+          "lot": 300,
+          "margin": 105918,
+          "top50": 0,
+          "low_sample": false,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "CUB",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-2 to T+6",
+          "win_rate": 60.7,
+          "win_ratio": "85 Wins / 140 Events",
+          "events": 140,
+          "avg_ret": 0.915,
+          "lot": 2325,
+          "margin": 104169,
+          "top50": 0,
+          "low_sample": false,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "DATAPATTNS",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-6 to T+3",
+          "win_rate": 61.3,
+          "win_ratio": "19 Wins / 31 Events",
+          "events": 31,
+          "avg_ret": 1.288,
+          "lot": 125,
+          "margin": 100972,
+          "top50": 0,
+          "low_sample": false,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "DELHIVERY",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-5 to T+3",
+          "win_rate": 71.4,
+          "win_ratio": "20 Wins / 28 Events",
+          "events": 28,
+          "avg_ret": 1.636,
+          "lot": 2075,
+          "margin": 170316,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "ENRIN",
+          "sector": "F&O",
+          "direction": "SHORT",
+          "window": "T-1 to T+1",
+          "win_rate": 77.8,
+          "win_ratio": "7 Wins / 9 Events",
+          "events": 9,
+          "avg_ret": 1.231,
+          "lot": 175,
+          "margin": 103495,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "HYUNDAI",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-7 to T+8",
+          "win_rate": 69.2,
+          "win_ratio": "9 Wins / 13 Events",
+          "events": 13,
+          "avg_ret": 4.139,
+          "lot": 275,
+          "margin": 108108,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "ICICILIFE",
+          "sector": "F&O",
+          "direction": "SHORT",
+          "window": "T-8 to T+1",
+          "win_rate": 59.6,
+          "win_ratio": "34 Wins / 57 Events",
+          "events": 57,
+          "avg_ret": -0.205,
+          "lot": 925,
+          "margin": 83065,
+          "top50": 0,
+          "low_sample": false,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "IREDA",
+          "sector": "F&O",
+          "direction": "SHORT",
+          "window": "T-6 to T+1",
+          "win_rate": 63.2,
+          "win_ratio": "12 Wins / 19 Events",
+          "events": 19,
+          "avg_ret": -1.449,
+          "lot": 4525,
+          "margin": 97975,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "JIOFIN",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-5 to T+6",
+          "win_rate": 80.0,
+          "win_ratio": "16 Wins / 20 Events",
+          "events": 20,
+          "avg_ret": 2.332,
+          "lot": 2350,
+          "margin": 102935,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "KARURVYSYA",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-3 to T+8",
+          "win_rate": 57.9,
+          "win_ratio": "81 Wins / 140 Events",
+          "events": 140,
+          "avg_ret": 1.464,
+          "lot": 1550,
+          "margin": 107151,
+          "top50": 0,
+          "low_sample": false,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "KAYNES",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-7 to T+4",
+          "win_rate": 72.0,
+          "win_ratio": "18 Wins / 25 Events",
+          "events": 25,
+          "avg_ret": 3.759,
+          "lot": 150,
+          "margin": 97800,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "KFINTECH",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-3 to T+8",
+          "win_rate": 75.0,
+          "win_ratio": "18 Wins / 24 Events",
+          "events": 24,
+          "avg_ret": 2.615,
+          "lot": 575,
+          "margin": 101142,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "LICI",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-2 to T+1",
+          "win_rate": 64.3,
+          "win_ratio": "18 Wins / 28 Events",
+          "events": 28,
+          "avg_ret": 0.866,
+          "lot": 1400,
+          "margin": 110320,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "MANKIND",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-3 to T+7",
+          "win_rate": 63.6,
+          "win_ratio": "14 Wins / 22 Events",
+          "events": 22,
+          "avg_ret": 2.141,
+          "lot": 250,
+          "margin": 117380,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "NAVINFLUOR",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-3 to T+8",
+          "win_rate": 56.3,
+          "win_ratio": "67 Wins / 119 Events",
+          "events": 119,
+          "avg_ret": 1.383,
+          "lot": 75,
+          "margin": 123712,
+          "top50": 0,
+          "low_sample": false,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "PREMIERENE",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-1 to T+1",
+          "win_rate": 78.6,
+          "win_ratio": "11 Wins / 14 Events",
+          "events": 14,
+          "avg_ret": 1.071,
+          "lot": 650,
+          "margin": 118950,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "SAGILITY",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-8 to T+7",
+          "win_rate": 76.9,
+          "win_ratio": "10 Wins / 13 Events",
+          "events": 13,
+          "avg_ret": 4.078,
+          "lot": 12000,
+          "margin": 109440,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "SWIGGY",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-7 to T+8",
+          "win_rate": 84.6,
+          "win_ratio": "11 Wins / 13 Events",
+          "events": 13,
+          "avg_ret": 3.955,
+          "lot": 1825,
+          "margin": 83585,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "SYRMA",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-1 to T+8",
+          "win_rate": 73.1,
+          "win_ratio": "19 Wins / 26 Events",
+          "events": 26,
+          "avg_ret": 2.719,
+          "lot": 325,
+          "margin": 109675,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "VMM",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-7 to T+3",
+          "win_rate": 75.0,
+          "win_ratio": "9 Wins / 12 Events",
+          "events": 12,
+          "avg_ret": 2.251,
+          "lot": 4850,
+          "margin": 93362,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
+        },
+        {
+          "symbol": "WAAREEENER",
+          "sector": "F&O",
+          "direction": "LONG",
+          "window": "T-4 to T+8",
+          "win_rate": 69.2,
+          "win_ratio": "9 Wins / 13 Events",
+          "events": 13,
+          "avg_ret": 3.808,
+          "lot": 175,
+          "margin": 87290,
+          "top50": 0,
+          "low_sample": true,
+          "nifty50": false,
+          "banknifty": false,
+          "oos_trades": null,
+          "oos_wr": null,
+          "oos_avg": null
         }
       ],
-      "all_stocks_count": 196
+      "all_stocks_count": 218
     },
     {
       "id": "rbi_oct_2026",

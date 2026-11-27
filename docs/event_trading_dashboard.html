@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   
   <!-- Standalone Data Bundles (Guarantees 100% offline & file:// protocol execution) -->
-  <script src="dashboard_data/event_dashboard_data.js?v=8x8-20261028"></script>
+  <script src="dashboard_data/event_dashboard_data.js?v=218fo-20261127"></script>
   <script src="dashboard_data/fo_stocks_211.js"></script>
   <script src="dashboard_data/nifty_futures_holiday_behaviour.js"></script>
   <script src="dashboard_data/rbi_policy_behaviour.js"></script>
@@ -2223,9 +2223,12 @@
               <select id="rbi-allfo-filter" class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.35rem 0.75rem; font-size:0.8rem;" onchange="renderRbiAllFo()">
                 <option value="ALL">All stocks</option><option value="TOP50">Top 50 only</option><option value="LONG">LONG only</option><option value="SHORT">SHORT only</option><option value="PASSED">Entry already passed</option>
               </select>
+              <select id="rbi-allfo-univ" class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.35rem 0.75rem; font-size:0.8rem;" onchange="renderRbiAllFo()"><option value="ALL">Universe: All F&amp;O</option><option value="N50">Nifty 50 stocks</option><option value="BN">Bank Nifty stocks</option></select>
+              <select id="rbi-allfo-wr" class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.35rem 0.75rem; font-size:0.8rem;" onchange="renderRbiAllFo()"><option value="0">Win rate: any</option><option value="55">Win rate &ge; 55%</option><option value="60">Win rate &ge; 60%</option><option value="65">Win rate &ge; 65%</option><option value="70">Win rate &ge; 70%</option><option value="75">Win rate &ge; 75%</option><option value="80">Win rate &ge; 80%</option></select>
               <input type="text" id="rbi-allfo-search" placeholder="Search stock or sector..." class="filter-pill" style="background:var(--surface-light); color:#FFF; border:1px solid var(--surface-border); padding:0.35rem 0.75rem; font-size:0.8rem;" oninput="renderRbiAllFo()">
             </div>
           </div>
+          <div id="rbi-allfo-bt" style="margin:0 0 0.75rem 0; padding:0.6rem 0.9rem; border:1px solid var(--surface-border); border-radius:8px; font-size:0.78rem; color:#CBD5E1; line-height:1.6;"></div>
           <div style="overflow-x:auto;">
             <table class="data-table" style="width:100%;">
               <thead><tr><th>#</th><th>Symbol</th><th>Sector</th><th style="text-align:center;">Bias</th><th style="text-align:center;">Window</th><th>Entry</th><th>Exit</th><th>Win Rate (Ratio)</th><th>Avg Return %</th><th>Lot &amp; Margin</th><th style="text-align:center;">Top 50</th></tr></thead>
@@ -4830,15 +4833,32 @@
       const now = new Date(); const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
       const q = (document.getElementById('rbi-allfo-search')?.value || '').toLowerCase().trim();
       const f = document.getElementById('rbi-allfo-filter')?.value || 'ALL';
+      const uv = document.getElementById('rbi-allfo-univ')?.value || 'ALL';
+      const mw = Number(document.getElementById('rbi-allfo-wr')?.value || 0);
       const rows = d.all_stocks.map(s => {
         const w = rbiParseWindow(s.window), r = rbiRollEntry(anchor, w.lead), ex = rbiShiftTradingDays(anchor, w.hold);
         return Object.assign({}, s, { _en: r.dt, _sh: r.shifted, _ex: ex, _passed: r.dt < today });
       }).filter(s => {
         if (q && !(s.symbol.toLowerCase().includes(q) || (s.sector || '').toLowerCase().includes(q))) return false;
+        if (uv === 'N50' && !s.nifty50) return false; if (uv === 'BN' && !s.banknifty) return false;
+        if (s.win_rate < mw) return false;
         if (f === 'TOP50') return s.top50 > 0; if (f === 'LONG' || f === 'SHORT') return s.direction === f;
         if (f === 'PASSED') return s._passed; return true;
       });
       const cnt = document.getElementById('rbi-allfo-count'); if (cnt) cnt.textContent = `Showing ${rows.length} of ${d.all_stocks.length} F&O stocks \u2022 ${d.all_stocks.filter(s => s.top50 > 0).length} in Top 50`;
+      const bt = document.getElementById('rbi-allfo-bt');
+      if (bt) {
+        const n = rows.length, avg = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : 0;
+        const nl = rows.filter(s => s.direction === 'LONG').length;
+        const oo = rows.filter(s => s.oos_trades > 0 && s.oos_wr != null);
+        const ot = oo.reduce((x, s) => x + s.oos_trades, 0);
+        const owr = ot ? oo.reduce((x, s) => x + s.oos_wr * s.oos_trades, 0) / ot : null;
+        const oav = ot ? oo.reduce((x, s) => x + s.oos_avg * s.oos_trades, 0) / ot : null;
+        bt.innerHTML = n ? `<strong style="color:#FFF;">Backtest of position taking — ${n} selected stocks</strong> (${nl} LONG / ${n - nl} SHORT)<br>
+          In-sample (best window per stock): avg win rate <strong style="color:#FBBF24;">${avg(rows.map(s => s.win_rate)).toFixed(1)}%</strong>, avg return/trade <strong style="color:#34D399;">${avg(rows.map(s => s.avg_ret)).toFixed(2)}%</strong>, ${rows.reduce((x, s) => x + (s.events || 0), 0)} historical trades.<br>
+          Walk-forward out-of-sample (window picked from earlier events only): ${ot ? `win rate <strong style="color:${owr >= 55 ? '#34D399' : '#F87171'};">${owr.toFixed(1)}%</strong>, avg return/trade <strong style="color:${oav >= 0 ? '#34D399' : '#F87171'};">${oav.toFixed(2)}%</strong> over ${ot} trades (${oo.length} stocks; recent listings have no OOS)` : 'not available for this selection'}.<br>
+          <span style="color:#94A3B8;">In-sample figures are optimistic because the window is chosen with hindsight; the out-of-sample line is the honest estimate. Raising the win-rate filter selects on in-sample win rate, so expect OOS to be lower.</span>` : 'No stocks match the filters.';
+      }
       tb.innerHTML = rows.map((s, i) => {
         const L = s.direction === 'LONG';
         const st = (s._passed ? '<span style="color:#94A3B8;font-size:0.66rem;font-weight:800;border:1px solid #475569;border-radius:4px;padding:1px 5px;">ENTRY PASSED</span>' : '<span style="color:#60A5FA;font-size:0.66rem;font-weight:800;border:1px solid #334155;border-radius:4px;padding:1px 5px;">UPCOMING</span>');
@@ -4851,7 +4871,7 @@
           <td style="text-align:center;"><span style="font-family:'JetBrains Mono';font-size:0.78rem;font-weight:700;color:#38BDF8;">${s.window}</span></td>
           <td><span style="color:#93C5FD;font-size:0.78rem;font-weight:600;">${rbiFmtDMY(s._en)}</span><div style="margin-top:3px;">${st}</div></td>
           <td style="color:#CBD5E1;font-size:0.78rem;">${rbiFmtDMY(s._ex)}</td>
-          <td><strong style="color:${wc};font-family:'JetBrains Mono';">${s.win_rate}%</strong><div style="font-size:0.68rem;color:var(--text-muted);">${s.win_ratio}</div></td>
+          <td><strong style="color:${wc};font-family:'JetBrains Mono';">${s.win_rate}%</strong><div style="font-size:0.68rem;color:var(--text-muted);">${s.win_ratio}</div>${s.low_sample ? '<div style="font-size:0.62rem;color:#FBBF24;font-weight:800;">LOW SAMPLE (&lt;30 events)</div>' : ''}</td>
           <td><strong style="color:${s.avg_ret >= 0 ? '#34D399' : '#F87171'};font-family:'JetBrains Mono';">${s.avg_ret > 0 ? '+' : ''}${s.avg_ret}%</strong></td>
           <td style="font-size:0.74rem;color:#94A3B8;"><div>Lot: <strong style="color:#FFF;">${s.lot ?? '-'}</strong></div><div>${s.margin ? '\u20B9' + Number(s.margin).toLocaleString('en-IN') : ''}</div></td>
           <td style="text-align:center;">${s.top50 ? `<span class="badge" style="background:#8B5CF6;color:#FFF;font-weight:800;">#${s.top50}</span>` : ''}</td></tr>`;
